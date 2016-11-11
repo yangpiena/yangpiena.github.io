@@ -8,7 +8,7 @@ fs.readdir(path, function (err, files) {
     var arr = [];
     (function iterator(index) {
         if (index == files.length) {
-            fs.writeFile("./source/photo/data.json", JSON.stringify(arr, null, "\t"));
+            fs.writeFile("./source/photos/data.json", JSON.stringify(arr, null, "\t"));
             console.log('get img success!');
             return;
         }
