@@ -14,15 +14,6 @@ $(document).ready(function(){
         }
         $(".img-box-ul").append(li);
         // $(".img-box-ul").lazyload();
-        // $("a[rel=example_group]").fancybox();
-
-//         $("a[rel=example_group]").fancybox({ 
-//         'titlePosition' : 'over', 
-//         'cyclic'        : true, 
-//         'titleFormat'    : function(title, currentArray, currentIndex, currentOpts) { 
-//                     return '<span id="fancybox-title-over">' + (currentIndex + 1) + 
-//  ' / ' + currentArray.length + (title.length ? '   ' + title : '') + '</span>'; 
-//                 } 
-//          });
+        $("a[rel=example_group]").fancybox();
     }
 })
