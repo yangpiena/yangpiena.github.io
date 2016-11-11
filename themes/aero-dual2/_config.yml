@@ -1,0 +1,45 @@
+# Header Menu
+menu:
+  主页: /
+  归类: /archives
+  链接: /links
+  相册: /photos
+  关于: /about
+  # change github and email values to your own addresses
+  # Github: https://github.com/yangpiena
+  # Email: mailto:yangpiena@163.com
+rss: /atom.xml
+
+# Set to false to disable banner
+use_header_cover: true
+
+# URL of the banner image
+# Put your custom banner image under
+# the theme's img folder: your-blog/themes/minimal-dual/source/img/
+# and modify index_cover's value like so:
+# index_cover: /img/your-custom-banner.jpg
+# or
+# Put your custom banner image under
+# your blog's images folder: your-blog/source/images/
+# and modify index_cover's value like so:
+# index_cover: /images/your-custom-banner.jpg
+# or
+# Specify an online resource like so:
+# index_cover: http://somewhere.com/path/to/banner.jpg  # /img/default-banner-dark.jpg
+index_cover: /img/yangpiena-banner.jpg
+
+widgets:
+- category
+- tag
+- archive
+
+# widget behavior
+archive_type: 'monthly'
+show_count: false
+
+# favicon
+favicon: /favicon.ico
+
+# Google Analytics Tracking ID
+google_analytics:
+
