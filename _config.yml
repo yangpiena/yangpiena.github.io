@@ -3,11 +3,11 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: 昜丿捺的个人主页
-subtitle:
+title: 昜丿捺
+subtitle: 
 description: 没有阳光，沉默而居
-author: 昜丿捺
-language:
+author: yangpiena
+language: zh-CN
 timezone:
 
 # URL
@@ -28,11 +28,11 @@ i18n_dir: :lang
 skip_render:
 
 # Writing
-new_post_name: :title.md # File name of new posts
-default_layout: post
+new_post_name: :title.md # 新建文章默认文件名
+default_layout: post # 默认布局
 titlecase: false # Transform title into titlecase
 external_link: true # Open external links in new tab
-filename_case: 0
+filename_case: 0 #转换文件名，1代表小写；2代表大写；默认为0，意思就是创建文章的时候，是否自动帮你转换文件名，默认就行，意义不大。
 render_drafts: false
 post_asset_folder: false
 relative_link: false
@@ -63,7 +63,10 @@ pagination_dir: page
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-theme: yilia
+theme: aero-dual
+
+# theme_style is default to 'light' # dark or light
+# theme_style: dark
 
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
