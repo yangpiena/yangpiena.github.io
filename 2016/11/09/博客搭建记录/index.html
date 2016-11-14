@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="生命在于折腾">
-  <meta name="author" content="yangpiena">
+  <meta name="author" content="昜丿捺">
   <!-- Open Graph Data -->
   <meta property="og:title" content="博客搭建记录"/>
   <meta property="og:description" content="生命在于折腾" />
@@ -108,25 +108,31 @@
         <div class="post-info text-muted">
           
             <!-- Author -->
-            <span class="author info">By yangpiena</span>
+            <span class="author info">作者 昜丿捺</span>
           
           <!-- Date -->
-          <span class="date-time info">On
+          <span class="date-time info">发表于
             <span class="date">2016-11-09</span>
-            <span class="time">18:02:05</span>
+            <span class="time">17:47:30</span>
           </span>
           
           <!--  Categories  -->
-            <span class="categories info">Under 
+            <span class="categories info">分类于 
 
 <a href="/categories/Blog/">Blog</a>
 </span>
           
+
+          <!-- YPN Add 2016-11-14 增加热度 -->
+          <span id="busuanzi_container_page_pv">
+            &nbsp;&nbsp; 热度&nbsp; <span id="busuanzi_value_page_pv"></span>°C
+          </span>
+
         </div>
         <!-- Tags -->
         
           <div class="post-tags text-muted">
-            Tags: 
+            标签: 
 
 <a class="tag" href="/tags/hexo/">#hexo</a>
 
@@ -142,6 +148,38 @@
 </ul>
 
         </div>
+
+        <!-- YPN Add 2016-11-14 增加打赏 start -->
+        <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center">
+          <div>坚持原创技术分享，您的支持将鼓励我继续创作！</div>
+          <button id="rewardButton", disable="enable", onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}", style="cursor: pointer; border: 0; outline: 0; border-radius: 100%; padding: 0; margin: 0; letter-spacing: normal; text-transform: none; text-indent: 0px; text-shadow: none">
+            <span onmouseover="this.style.color='rgb(236,96,0)';this.style.background='rgb(204,204,204)'" onmouseout="this.style.color='#fff';this.style.background='rgb(236,96,0)'" style="display: inline-block; width: 70px; height: 70px; border-radius: 100%; line-height: 81px; color: #fff; font: 400 35px/75px 'microsofty'; background: rgb(236,96,0)">赏</span>
+          </button>
+          <div id="QR" style="display: none;">
+            
+              <div id="wechat" style="display: inline-block">
+                <img id="wechat_qr" src="/assets/blogImg/YPN.wechatpay-32x32.png" alt="昜丿捺 WeChat Pay" style="width: 200px; max-width: 100%; display: inline-block"/>
+                <p>微信打赏</p>
+              </div>
+            
+          
+            <div id="alipay" style="display: inline-block">
+              <img id="alipay_qr" src="/assets/blogImg/YPN.alipay-32x32.jpg" alt="昜丿捺 Alipay" style="width: 200px; max-width: 100%; display: inline-block"/>
+              <p>支付宝打赏</p>
+            </div>
+          
+          </div>
+        </div>
+        <!-- YPN Add 2016-11-14 增加打赏 end -->
+
+        <!-- 多说最近访客 start -->
+        <div class="ds-recent-visitors" data-num-items="28" data-avatar-size="42" id="ds-recent-visitors"></div>
+        <!-- 多说最近访客 end -->
+        <!-- 多说评论框 start -->
+        <div class="ds-thread" data-thread-key="2016/11/09/博客搭建记录/" data-title="博客搭建记录" data-url="http://yoursite.com/2016/11/09/博客搭建记录/">
+        </div>
+        <!-- 多说评论框 end -->
+
       </div>
     </div>
   </div>
@@ -159,12 +197,14 @@
           Inspired By <a target="_blank" href="https://github.com/klugjo/hexo-theme-clean-blog">Clean Blog.</a>
         <p class="copyright text-muted">
           Powered By <a target="_blank" href="https://hexo.io/">Hexo.</a>
+        <p class="copyright text-muted">
+          本站总访问量 <span id="busuanzi_value_site_pv"></span> 次, 访客数 <span id="busuanzi_value_site_uv"></span> 人次, 本文总阅读量 <span id="busuanzi_value_page_pv"></span> 次
         </p>
       </div>
     </div>
   </div>
 </footer>
-
+<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 
     <!-- After Footer Scripts -->
 <script src="/js/highlight.pack.js"></script>
@@ -176,6 +216,20 @@
     });
   });
 </script>
+
+<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+<script type="text/javascript">
+var duoshuoQuery = {short_name:"yangpiena"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '/js/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+<!-- 多说公共JS代码 end -->
 
   </body>
 </html>
