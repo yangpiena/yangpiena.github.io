@@ -4,7 +4,8 @@ layout:
 date: 2016-11-11 12:31:37
 ---
 ## 常用
-[在线图床](http://qiniupicbed.sinaapp.com/http://qiniupicbed.sinaapp.com/)
+[贴图库](http://www.tietuku.com/)
+[在线图床](http://qiniupicbed.sinaapp.com)
 [Windows在线markdown工具](https://www.zybuluo.com/mdeditor)
 [维基百科](https://www.wikipedia.org/)
 [VeryCD 电驴大全](http://www.verycd.com/)

@@ -1,18 +1,22 @@
 $(document).ready(function(){
     var that = this;
+    var page = 1;
+    var offset = 20;
+
     $.getJSON("/photos/data.json", function (data) {
-        render(that.page, data);
+        render(data);
         // that.scroll(data);
     });
-    function render(page, data) {
-        var begin = (page - 1) * this.offset;
-        var end = page * this.offset;
-        if (begin >= data.length) return;
+    function render(data) {
+        // var begin = (page - 1) * this.offset;
+        // var end = page * this.offset;
+        // if (begin < data.length) return;
         var html, li = "";
-        for (var i = begin; i < end && i < data.length; i++) {
-            li += '<li><div class="img-box">' + '<a class="img-bg" rel="example_group" href="https://raw.githubusercontent.com/yangpiena/yangpiena.github.io/blob/source/photos/' + data[i] + '"></a>' + '<img lazy-src="https://raw.githubusercontent.com/yangpiena/yangpiena.github.io/blob/source/photos/' + data[i] + '" />' + '</li>';
+        // for (var i = begin; i < end && i < data.length; i++) {
+        for (var i = 0; i < data.length; i++) {
+            li += '<a class="img-bg" rel="example_group" href="' + data[i] + '"><img src="' + data[i] + '" /></a>';
         }
-        $(".img-box-ul").append(li);
+        $(".instagram").append(li);
         // $(".img-box-ul").lazyload();
         $("a[rel=example_group]").fancybox();
     }
