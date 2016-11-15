@@ -99,13 +99,28 @@
       </div>
     </div>
   </div>
-</header>
 
+  
+    <form class="search" action="/search/index.html" method="get" accept-charset="utf-8" style="text-align:right">
+    <label>Search</label>
+    <input type="text" id="search" class="st-default-search-input" maxlength="20" placeholder="Search" />
+    </form>
+  
+
+</header>
 
 <!-- Archive List -->
 <div class="container">
   <div class="row">
     <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+      
+        <div class="archive-item">
+  <a href="/2016/11/09/hello-world/" class="post-title">
+    Hello World
+  </a>
+  <div class="date text-muted">发表于 2016-11-09 00:00:00</div>
+</div>
+
       
         <div class="archive-item">
   <a href="/2016/11/09/博客搭建记录/" class="post-title">
@@ -150,7 +165,17 @@
     </div>
   </div>
 </footer>
+
 <script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+<script type="text/javascript">
+  (function(w,d,t,u,n,s,e){w['SwiftypeObject']=n;w[n]=w[n]||function(){
+  (w[n].q=w[n].q||[]).push(arguments);};s=d.createElement(t);
+  e=d.getElementsByTagName(t)[0];s.async=1;s.src=u;e.parentNode.insertBefore(s,e);
+  })(window,document,'script','//s.swiftypecdn.com/install/v2/st.js','_st');
+  
+  _st('install','Bw13BEeK5ASKzfM4WzMC','2.0.0');
+</script>
 
     <!-- After Footer Scripts -->
 <script src="/js/highlight.pack.js"></script>
@@ -177,6 +202,10 @@ var duoshuoQuery = {short_name:"yangpiena"};
 	</script>
 <!-- 多说公共JS代码 end -->
 
+<div id="totop" style="position:fixed;bottom:50px;right:30px;cursor: pointer;">
+<a title="返回顶部"><img src="/img/scrollup.png"/></a>
+</div>
+<script src="/js/totop.js"></script>
   </body>
 </html>
 

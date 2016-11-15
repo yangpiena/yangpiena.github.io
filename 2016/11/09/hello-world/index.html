@@ -5,11 +5,11 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="">
+  <meta name="description" content="生命在于折腾">
   <meta name="author" content="昜丿捺">
   <!-- Open Graph Data -->
   <meta property="og:title" content="Hello World"/>
-  <meta property="og:description" content="没有阳光，沉默而居" />
+  <meta property="og:description" content="生命在于折腾" />
   <meta property="og:site_name" content="昜丿捺"/>
   <meta property="og:type" content="article" />
   <meta property="og:image" content="http://yoursite.comundefined"/>
@@ -98,8 +98,15 @@
       </div>
     </div>
   </div>
-</header>
 
+  
+    <form class="search" action="/search/index.html" method="get" accept-charset="utf-8" style="text-align:right">
+    <label>Search</label>
+    <input type="text" id="search" class="st-default-search-input" maxlength="20" placeholder="Search" />
+    </form>
+  
+
+</header>
 
 <article>
   <div class="container typo">
@@ -112,9 +119,15 @@
           
           <!-- Date -->
           <span class="date-time info">发表于
-            <span class="date">2016-11-10</span>
-            <span class="time">17:47:30</span>
+            <span class="date">2016-11-09</span>
+            <span class="time">11:26:59</span>
           </span>
+          
+          <!--  Categories  -->
+            <span class="categories info">分类于 
+
+<a href="/categories/Blog/">Blog</a>
+</span>
           
 
           <!-- YPN Add 2016-11-14 增加热度 -->
@@ -124,6 +137,14 @@
 
         </div>
         <!-- Tags -->
+        
+          <div class="post-tags text-muted">
+            标签: 
+
+<a class="tag" href="/tags/hexo/">#hexo</a>
+
+
+          </div>
         
         <!-- Post Main Content -->
         <div class="post-content">
@@ -166,7 +187,7 @@
         <div class="ds-recent-visitors" data-num-items="28" data-avatar-size="42" id="ds-recent-visitors"></div>
         <!-- 多说最近访客 end -->
         <!-- 多说评论框 start -->
-        <div class="ds-thread" data-thread-key="2016/11/10/hello-world/" data-title="Hello World" data-url="http://yoursite.com/2016/11/10/hello-world/">
+        <div class="ds-thread" data-thread-key="2016/11/09/hello-world/" data-title="Hello World" data-url="http://yoursite.com/2016/11/09/hello-world/">
         </div>
         <!-- 多说评论框 end -->
 
@@ -194,7 +215,17 @@
     </div>
   </div>
 </footer>
+
 <script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+<script type="text/javascript">
+  (function(w,d,t,u,n,s,e){w['SwiftypeObject']=n;w[n]=w[n]||function(){
+  (w[n].q=w[n].q||[]).push(arguments);};s=d.createElement(t);
+  e=d.getElementsByTagName(t)[0];s.async=1;s.src=u;e.parentNode.insertBefore(s,e);
+  })(window,document,'script','//s.swiftypecdn.com/install/v2/st.js','_st');
+  
+  _st('install','Bw13BEeK5ASKzfM4WzMC','2.0.0');
+</script>
 
     <!-- After Footer Scripts -->
 <script src="/js/highlight.pack.js"></script>
@@ -221,6 +252,10 @@ var duoshuoQuery = {short_name:"yangpiena"};
 	</script>
 <!-- 多说公共JS代码 end -->
 
+<div id="totop" style="position:fixed;bottom:50px;right:30px;cursor: pointer;">
+<a title="返回顶部"><img src="/img/scrollup.png"/></a>
+</div>
+<script src="/js/totop.js"></script>
   </body>
 </html>
 
