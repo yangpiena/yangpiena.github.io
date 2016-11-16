@@ -1,6 +1,6 @@
 ---
 title: 链接
-layout: 
+layout: links
 date: 2016-11-11 12:31:37
 ---
 ## 常用
@@ -69,6 +69,8 @@ date: 2016-11-11 12:31:37
 [LB 负载均衡的层次结构](http://www.cnblogs.com/mindwind/p/5339657.html)
 [GitHub上优秀的开源项目](http://blog.csdn.net/ren1027538427/article/details/52450294)
 
+## IT-jQuery
+[jQuery插件库](http://www.jq22.com/)
 
 ## Hexo
 [Windows下使用Hexo+GithubPage搭建博客](http://blog.csdn.net/wx_jin/article/details/51027783)

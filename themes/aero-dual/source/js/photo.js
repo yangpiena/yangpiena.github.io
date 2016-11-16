@@ -14,7 +14,7 @@ $(document).ready(function(){
         var html, li = "";
         // for (var i = begin; i < end && i < data.length; i++) {
         for (var i = 0; i < data.length; i++) {
-            li += '<a class="img-bg" rel="example_group" href="' + data[i] + '"><img src="' + data[i] + '" /></a>';
+            li += '<a class="img-bg" rel="example_group" href="' + data[i] + '"><img src="' + data[i] + '" style="width: 300px;height: 200px"/></a><span>&nbsp;&nbsp</span>';
         }
         $(".instagram").append(li);
         // $(".img-box-ul").lazyload();
