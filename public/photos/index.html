@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html>
+  <!-- Html Head Tag-->
+  <head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="昜丿捺">
+  <!-- Open Graph Data -->
+  <meta property="og:title" content="相册"/>
+  <meta property="og:description" content="没有阳光，沉默而居" />
+  <meta property="og:site_name" content="昜丿捺"/>
+  <meta property="og:type" content="article" />
+  <meta property="og:image" content="http://yoursite.comundefined"/>
+  
+    <link rel="alternate" href="/atom.xml" title="昜丿捺" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.ico">
+  
+
+  <!-- Site Title -->
+  <title>昜丿捺</title>
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="/css/bootstrap.min.css">
+  <!-- Custom CSS -->
+  <!-- YPN Edit 2016-11-11 增加根据时间自动切换主题风格 -->
+  <!-- 
+       <link rel="stylesheet" href="/css/style.light.css"> -->
+  
+  
+  <link rel="stylesheet" href="/css/style.light.css">
+
+  <script type="text/javascript" src="/js/jquery-1.11.3.min.js"></script>
+</head>
+
+  <body>
+    
+        <link rel="stylesheet" type="text/css" href="/css/style.css" />
+		<link href='http://fonts.googleapis.com/css?family=PT+Sans+Narrow' rel='stylesheet' type='text/css' />
+		<link href='http://fonts.googleapis.com/css?family=Wire+One' rel='stylesheet' type='text/css' />
+
+		<header class="site-header header-background" style="background-image: url(http://ogoh2gimk.bkt.clouddn.com/yangpiena-banner.jpg)">
+			<div class="container">
+		    	<div class="row">
+		      		<div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+		        		<div class="page-title with-background-image">
+		          			<p class="title">博客归类</p>
+		          			<p class="subtitle"></p>
+		        		</div>
+		        		<div class="site-menu with-background-image">
+		          			<ul>
+								<li>
+									<a href="/">主页</a>
+								</li>
+								<li>
+									<a href="/archives">归类</a>
+								</li>
+								<li>
+									<a href="/links">链接</a>
+								</li>
+								<li>
+									<a href="/photos">相册</a>
+								</li>
+								<li>
+									<a href="/about">关于</a>
+								</li>		            
+			          		</ul>
+			        	</div>
+			      	</div>
+			    </div>
+			</div>	  
+		    <form class="search" action="/search/index.html" method="get" accept-charset="utf-8" style="text-align:right">
+		    <label>Search</label>
+		    <input type="text" id="search" class="st-default-search-input" maxlength="20" placeholder="Search" />
+		    </form>
+		</header>
+
+		<div class="content">
+			<div class="iw_wrapper">
+				<ul class="iw_thumbs" id="iw_thumbs">
+					<!-- <li><img src="/img/thumbs/1.jpg" data-img="/img/full/1.jpg" alt="Thumb1"/><div><h2>Serenity</h2><p>Far far away, behind the word mountains there live the blind texts.</p></div></li> -->
+				</ul>
+			</div>
+			<div id="iw_ribbon" class="iw_ribbon">
+				<span class="iw_close"></span>
+				<span class="iw_zoom">Click thumb to zoom</span>
+			</div>
+		</div>
+
+		<script type="text/javascript" src="/js/addphoto.js"></script>
+		<script type="text/javascript" src="/js/jquery.min.js"></script>
+		<script type="text/javascript" src="/js/jquery.masonry.min.js"></script>
+		<script type="text/javascript" src="/js/jquery.easing.1.3.js"></script>
+		<script type="text/javascript">
+			$(window).load(function(){
+				var $iw_thumbs			= $('#iw_thumbs'),
+					$iw_ribbon			= $('#iw_ribbon'),
+					$iw_ribbon_close	= $iw_ribbon.children('span.iw_close'),
+					$iw_ribbon_zoom		= $iw_ribbon.children('span.iw_zoom');
+					
+					ImageWall	= (function() {
+							// window width and height
+						var w_dim,
+						    // index of current image
+							current				= -1,
+							isRibbonShown		= false,
+							isFullMode			= false,
+							// ribbon / images animation settings
+							ribbonAnim			= {speed : 500, easing : 'easeOutExpo'},
+							imgAnim				= {speed : 400, easing : 'jswing'},
+							// init function : call masonry, calculate window dimentions, initialize some events
+							init				= function() {
+								$iw_thumbs.imagesLoaded(function(){
+									$iw_thumbs.masonry({
+										isAnimated	: true
+									});
+								});
+								getWindowsDim();
+								initEventsHandler();
+							},
+							// calculate window dimentions
+							getWindowsDim		= function() {
+								w_dim = {
+									width	: $(window).width(),
+									height	: $(window).height()
+								};
+							},
+							// initialize some events
+							initEventsHandler	= function() {
+								
+								// click on a image
+								$iw_thumbs.delegate('li', 'click', function() {
+									if($iw_ribbon.is(':animated')) return false;
+									
+									var $el = $(this);
+									
+									if($el.data('ribbon')) {
+										showFullImage($el);
+									}
+									else if(!isRibbonShown) {
+										isRibbonShown = true;
+										
+										$el.data('ribbon',true);
+										
+										// set the current
+										current = $el.index();
+									
+										showRibbon($el);
+									}
+								});
+								
+								// click ribbon close
+								$iw_ribbon_close.bind('click', closeRibbon);
+								
+								// on window resize we need to recalculate the window dimentions
+								$(window).bind('resize', function() {
+											getWindowsDim();
+											if($iw_ribbon.is(':animated'))
+												return false;
+											closeRibbon();
+										 })
+								         .bind('scroll', function() {
+											if($iw_ribbon.is(':animated'))
+												return false;
+											closeRibbon();
+										 });
+								
+							},
+							showRibbon			= function($el) {
+								var	$img	= $el.children('img'),
+									$descrp	= $img.next();
+								
+								// fadeOut all the other images
+								$iw_thumbs.children('li').not($el).animate({opacity : 0.2}, imgAnim.speed);
+								
+								// increase the image z-index, and set the height to 100px (default height)
+								$img.css('z-index', 100)
+									.data('originalHeight',$img.height())
+									.stop()
+									.animate({
+										height 		: '100px'
+									}, imgAnim.speed, imgAnim.easing);
+								
+								// the ribbon will animate from the left or right
+								// depending on the position of the image
+								var ribbonCssParam 		= {
+										top	: $el.offset().top - $(window).scrollTop() - 6 + 'px'
+									},
+									descriptionCssParam,
+									dir;
+								
+								if( $el.offset().left < (w_dim.width / 2) ) {
+									dir = 'left';
+									ribbonCssParam.left 	= 0;
+									ribbonCssParam.right 	= 'auto';
+								}
+								else {
+									dir = 'right';
+									ribbonCssParam.right 	= 0;
+									ribbonCssParam.left 	= 'auto';
+								}
+								
+								$iw_ribbon.css(ribbonCssParam)
+								          .show()
+										  .stop()
+										  .animate({width : '100%'}, ribbonAnim.speed, ribbonAnim.easing, function() {
+												switch(dir) {
+													case 'left' :
+														descriptionCssParam		= {
+															'left' 			: $img.outerWidth(true) + 'px',
+															'text-align' 	: 'left'
+														};
+														break;
+													case 'right' :	
+														descriptionCssParam		= {
+															'left' 			: '-200px',
+															'text-align' 	: 'right'
+														};
+														break;
+												};
+												$descrp.css(descriptionCssParam).fadeIn();
+												// show close button and zoom
+												$iw_ribbon_close.show();
+												$iw_ribbon_zoom.show();
+										  });
+								
+							},
+							// close the ribbon
+							// when in full mode slides in the middle of the page
+							// when not slides left
+							closeRibbon			= function() {
+								isRibbonShown 	= false
+								
+								$iw_ribbon_close.hide();
+								$iw_ribbon_zoom.hide();
+								
+								if(!isFullMode) {
+								
+									// current wall image
+									var $el	 		= $iw_thumbs.children('li').eq(current);
+									
+									resetWall($el);
+									
+									// slide out ribbon
+									$iw_ribbon.stop()
+											  .animate({width : '0%'}, ribbonAnim.speed, ribbonAnim.easing); 
+										  
+								}
+								else {
+									$iw_ribbon.stop().animate({
+										opacity		: 0.8,
+										height 		: '0px',
+										marginTop	: w_dim.height/2 + 'px' // half of window height
+									}, ribbonAnim.speed, function() {
+										$iw_ribbon.css({
+											'width'		: '0%',
+											'height'	: '126px',
+											'margin-top': '0px'
+										}).children('img').remove();
+									});
+									
+									isFullMode	= false;
+								}
+							},
+							resetWall			= function($el) {
+								var $img		= $el.children('img'),
+									$descrp		= $img.next();
+									
+								$el.data('ribbon',false);
+								
+								// reset the image z-index and height
+								$img.css('z-index',1).stop().animate({
+									height 		: $img.data('originalHeight')
+								}, imgAnim.speed,imgAnim.easing);
+								
+								// fadeOut the description
+								$descrp.fadeOut();
+
+								// fadeIn all the other images
+								$iw_thumbs.children('li').not($el).animate({opacity : 1}, imgAnim.speed);								
+							},
+							showFullImage		= function($el) {
+								isFullMode	= true;
+								
+								$iw_ribbon_close.hide();
+								
+								var	$img	= $el.children('img'),
+									large	= $img.data('img'),
+								
+									// add a loading image on top of the image
+									$loading = $('<span class="iw_loading"></span>');
+								
+								$el.append($loading);
+								
+								// preload large image
+								$('<img/>').load(function() {
+									var $largeImage	= $(this);
+									
+									$loading.remove();
+									
+									$iw_ribbon_zoom.hide();
+									
+									resizeImage($largeImage);
+									
+									// reset the current image in the wall
+									resetWall($el);
+									
+									// animate ribbon in and out
+									$iw_ribbon.stop().animate({
+										opacity		: 1,
+										height 		: '0px',
+										marginTop	: '63px' // half of ribbons height
+									}, ribbonAnim.speed, function() {
+										// add the large image to the DOM
+										$iw_ribbon.prepend($largeImage);
+										
+										$iw_ribbon_close.show();
+										
+										$iw_ribbon.animate({
+											height 		: '100%',
+											marginTop	: '0px',
+											top			: '0px'
+										}, ribbonAnim.speed);
+									});
+								}).attr('src',large);
+									
+							},
+							resizeImage			= function($image) {
+								var widthMargin		= 100,
+									heightMargin 	= 100,
+								
+									windowH      	= w_dim.height - heightMargin,
+									windowW      	= w_dim.width - widthMargin,
+									theImage     	= new Image();
+									
+								theImage.src     	= $image.attr("src");
+								
+								var imgwidth     	= theImage.width,
+									imgheight    	= theImage.height;
+
+								if((imgwidth > windowW) || (imgheight > windowH)) {
+									if(imgwidth > imgheight) {
+										var newwidth 	= windowW,
+											ratio 		= imgwidth / windowW,
+											newheight 	= imgheight / ratio;
+											
+										theImage.height = newheight;
+										theImage.width	= newwidth;
+										
+										if(newheight > windowH) {
+											var newnewheight 	= windowH,
+												newratio 		= newheight/windowH,
+												newnewwidth 	= newwidth/newratio;
+										
+											theImage.width 		= newnewwidth;
+											theImage.height		= newnewheight;
+										}
+									}
+									else {
+										var newheight 	= windowH,
+											ratio 		= imgheight / windowH,
+											newwidth 	= imgwidth / ratio;
+										
+										theImage.height = newheight;
+										theImage.width	= newwidth;
+										
+										if(newwidth > windowW) {
+											var newnewwidth 	= windowW,
+											    newratio 		= newwidth/windowW,
+												newnewheight 	= newheight/newratio;
+									
+											theImage.height 	= newnewheight;
+											theImage.width		= newnewwidth;
+										}
+									}
+								}
+									
+								$image.css({
+									'width'			: theImage.width + 'px',
+									'height'		: theImage.height + 'px',
+									'margin-left'	: -theImage.width / 2 + 'px',
+									'margin-top'	: -theImage.height / 2 + 'px'
+								});							
+							};
+							
+						return {init : init};	
+					})();
+				
+				ImageWall.init();
+			});
+		</script>
+
+
+    <!-- Footer -->
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <p class="copyright text-muted">
+          Theme By <a target="_blank" href="https://github.com/levblanc">Levblanc.</a>
+          Inspired By <a target="_blank" href="https://github.com/klugjo/hexo-theme-clean-blog">Clean Blog.</a>
+        <p class="copyright text-muted">
+          Powered By <a target="_blank" href="https://hexo.io/">Hexo.</a>
+        <p class="copyright text-muted">
+          本站总访问量 <span id="busuanzi_value_site_pv"></span> 次, 访客数 <span id="busuanzi_value_site_uv"></span> 人次, 本文总阅读量 <span id="busuanzi_value_page_pv"></span> 次
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+<script type="text/javascript">
+  (function(w,d,t,u,n,s,e){w['SwiftypeObject']=n;w[n]=w[n]||function(){
+  (w[n].q=w[n].q||[]).push(arguments);};s=d.createElement(t);
+  e=d.getElementsByTagName(t)[0];s.async=1;s.src=u;e.parentNode.insertBefore(s,e);
+  })(window,document,'script','//s.swiftypecdn.com/install/v2/st.js','_st');
+  
+  _st('install','Bw13BEeK5ASKzfM4WzMC','2.0.0');
+</script>
+
+    <!-- After Footer Scripts -->
+<script src="/js/highlight.pack.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function(event) {
+    var codeBlocks = Array.prototype.slice.call(document.getElementsByTagName('pre'))
+    codeBlocks.forEach(function(block, index) {
+      hljs.highlightBlock(block);
+    });
+  });
+</script>
+
+<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+<script type="text/javascript">
+var duoshuoQuery = {short_name:"yangpiena"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '/js/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+<!-- 多说公共JS代码 end -->
+
+<div id="totop" style="position:fixed;bottom:50px;right:30px;cursor: pointer;">
+	<a title="返回顶部"><img src="/img/scrollup.png"/></a>
+</div>
+<script src="/js/totop.js"></script>
+  </body>
+</html>
+

@@ -1,0 +1,52 @@
+# Header Menu
+menu:
+  主页: /
+  归类: /archives
+  链接: /links
+  相册: /photos
+  关于: /about
+  # change github and email values to your own addresses
+  # Github: https://github.com/yangpiena
+  # Email: mailto:yangpiena@163.com
+rss: /atom.xml
+
+# Set to false to disable banner
+use_header_cover: true
+
+# URL of the banner image
+# Put your custom banner image under
+# the theme's img folder: your-blog/themes/minimal-dual/source/img/
+# and modify index_cover's value like so:
+# index_cover: /img/your-custom-banner.jpg
+# or
+# Put your custom banner image under
+# your blog's images folder: your-blog/source/images/
+# and modify index_cover's value like so:
+# index_cover: /images/your-custom-banner.jpg
+# or
+# Specify an online resource like so:
+# index_cover: http://somewhere.com/path/to/banner.jpg  # /img/default-banner-dark.jpg  # /img/yangpiena-banner.jpg
+index_cover: http://ogoh2gimk.bkt.clouddn.com/yangpiena-banner.jpg
+
+widgets:
+- category
+- tag
+- archive
+
+# widget behavior
+archive_type: 'monthly'
+show_count: true
+
+# favicon
+favicon: /favicon.ico
+
+# Google Analytics Tracking ID
+# google_analytics:
+
+# Donate 文章末尾显示打赏按钮
+reward_comment: 坚持原创技术分享，您的支持将鼓励我继续创作！
+wechatpay: /assets/blogImg/YPN.wechatpay-32x32.png
+alipay: /assets/blogImg/YPN.alipay-32x32.jpg
+
+swift_search:
+  enable: true
