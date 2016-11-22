@@ -4,13 +4,11 @@ layout: links
 date: 2016-11-11 12:31:37
 ---
 ## 常用
-[贴图库](http://www.tietuku.com/)
-[在线图床](http://qiniupicbed.sinaapp.com)
+[七牛云存储](https://portal.qiniu.com/create)
 [Windows在线markdown工具](https://www.zybuluo.com/mdeditor)
 [维基百科](https://www.wikipedia.org/)
 [VeryCD 电驴大全](http://www.verycd.com/)
 [360doc个人图书馆](http://www.360doc.com/)
-[hexo常用命令笔记](https://segmentfault.com/a/1190000002632530)
 
 ## 音乐
 [SongTaste](http://www.songtaste.com/)
@@ -79,3 +77,5 @@ date: 2016-11-11 12:31:37
 [Hexo主题](https://github.com/hexojs/hexo/wiki/Themes)
 [Hexo博客优化](http://xwartz.xyz/blog/2016/09/reduce-blog-load-time/)
 [Hexo博客主题从Jacman切换到NexT.Mist ](http://codepub.cn/2016/03/20/Hexo-blog-theme-switching-from-Jacman-to-NexT-Mist/)
+[hexo常用命令笔记](https://segmentfault.com/a/1190000002632530)
+[贴图库](http://www.tietuku.com/)
