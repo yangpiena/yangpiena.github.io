@@ -5,11 +5,11 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="生命在于折腾">
+  <meta name="description" content="">
   <meta name="author" content="昜丿捺">
   <!-- Open Graph Data -->
-  <meta property="og:title" content="博客搭建记录"/>
-  <meta property="og:description" content="生命在于折腾" />
+  <meta property="og:title" content="Windows命令学习"/>
+  <meta property="og:description" content="没有阳光，沉默而居" />
   <meta property="og:site_name" content="昜丿捺"/>
   <meta property="og:type" content="article" />
   <meta property="og:image" content="http://yoursite.comundefined"/>
@@ -45,7 +45,7 @@
     <div class="row">
       <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
         <div class="page-title with-background-image">
-          <p class="title">博客搭建记录</p>
+          <p class="title">Windows命令学习</p>
           <p class="subtitle"></p>
         </div>
         <div class="site-menu with-background-image">
@@ -117,14 +117,14 @@
           
           <!-- Date -->
           <span class="date-time info">发表于
-            <span class="date">2016-11-09</span>
+            <span class="date">2016-11-24</span>
             <span class="time">12:38:40</span>
           </span>
           
           <!--  Categories  -->
             <span class="categories info">分类于 
 
-<a href="/categories/Blog/">Blog</a>
+<a href="/categories/OS/">OS</a>
 </span>
           
 
@@ -139,20 +139,136 @@
           <div class="post-tags text-muted">
             标签: 
 
-<a class="tag" href="/tags/hexo/">#hexo</a>
+<a class="tag" href="/tags/Windows/">#Windows</a>
 
 
           </div>
         
         <!-- Post Main Content -->
         <div class="post-content">
-          <p>今天终于有了自己的博客，下面记录一下搭建步骤。<br>搭建步骤主要参考WX_JIN的博文<a href="http://blog.csdn.net/wx_jin/article/details/51027783" target="_blank" rel="external">Windows下使用Hexo+GithubPage搭建博客</a>搭建的，感谢WX_JIN的分享。<br><a id="more"></a><br>博客主题来源于<a href="https://github.com/levblanc/hexo-theme-aero-dual" target="_blank" rel="external">Aero Dual Hexo Theme</a></p>
-<h5 id="另附其它主题链接："><a href="#另附其它主题链接：" class="headerlink" title="另附其它主题链接："></a>另附其它主题链接：</h5><p>博客主题大全：<a href="https://github.com/hexojs/hexo/wiki/Themes" target="_blank" rel="external">https://github.com/hexojs/hexo/wiki/Themes</a><br>Hexo官方主题：<a href="https://hexo.io/themes/" target="_blank" rel="external">https://hexo.io/themes/</a></p>
-<h5 id="使用工具"><a href="#使用工具" class="headerlink" title="使用工具"></a>使用工具</h5><ul>
-<li>Node.js  v6.9.1</li>
-<li>Git      v2.10.1</li>
-<li>hexo     v3.2.2</li>
-</ul>
+          <h2 id="系统"><a href="#系统" class="headerlink" title="系统"></a>系统</h2><table>
+<thead>
+<tr>
+<th>命令</th>
+<th style="text-align:left">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>shutdown</td>
+<td style="text-align:left">重启</td>
+</tr>
+<tr>
+<td>nbtstat -a 192.168.0.5</td>
+<td style="text-align:left">通过IP查找主机名</td>
+</tr>
+<tr>
+<td>ipconfig /flushdns</td>
+<td style="text-align:left">刷新DNS解析缓存（一般修改hosts后在cmd中执行下。hosts路径：C:\Windows\System32\drivers\etc）</td>
+</tr>
+<tr>
+<td>tskill PID</td>
+<td style="text-align:left">找到占用端口的PID</td>
+</tr>
+<tr>
+<td>netstat -ab</td>
+<td style="text-align:left">杀死进程</td>
+</tr>
+</tbody>
+</table>
+<a id="more"></a>
+<h3 id="Dos命令"><a href="#Dos命令" class="headerlink" title="Dos命令"></a>Dos命令</h3><table>
+<thead>
+<tr>
+<th>命令</th>
+<th style="text-align:left">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>dir</td>
+<td style="text-align:left">列出当前目录下的文件以及文件夹</td>
+</tr>
+<tr>
+<td>del</td>
+<td style="text-align:left">删除文件</td>
+</tr>
+<tr>
+<td>ren</td>
+<td style="text-align:left">重命名,例如：ren 旧文件 新文件名</td>
+</tr>
+<tr>
+<td>md</td>
+<td style="text-align:left">创建目录</td>
+</tr>
+<tr>
+<td>rd</td>
+<td style="text-align:left">删除目录</td>
+</tr>
+<tr>
+<td>cd</td>
+<td style="text-align:left">进入指定目录</td>
+</tr>
+<tr>
+<td>cd..</td>
+<td style="text-align:left">退回到上一级目录</td>
+</tr>
+<tr>
+<td>cd/</td>
+<td style="text-align:left">退回到根目录</td>
+</tr>
+<tr>
+<td>exit</td>
+<td style="text-align:left">退出dos命令行</td>
+</tr>
+</tbody>
+</table>
+<h3 id="快捷键"><a href="#快捷键" class="headerlink" title="快捷键"></a>快捷键</h3><table>
+<thead>
+<tr>
+<th>命令</th>
+<th style="text-align:left">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>notepad</td>
+<td style="text-align:left">记事本</td>
+</tr>
+<tr>
+<td>clipbrd</td>
+<td style="text-align:left">剪切板</td>
+</tr>
+<tr>
+<td>systeminfo</td>
+<td style="text-align:left">查看系统信息</td>
+</tr>
+<tr>
+<td>gpedit.msc</td>
+<td style="text-align:left">组策略（关闭自动播放）</td>
+</tr>
+<tr>
+<td>odbcad32.exe</td>
+<td style="text-align:left">数据源，若系统是64bit的，则新建dsn要用64bit的ODBC，即在运行中输入：C:\Windows\SysWOW64\odbcad32.exe</td>
+</tr>
+<tr>
+<td>arp -a</td>
+<td style="text-align:left">查看IP对应的MAC地址</td>
+</tr>
+<tr>
+<td>arp -s</td>
+<td style="text-align:left">添加IP对应的MAC地址</td>
+</tr>
+<tr>
+<td>dxdiag</td>
+<td style="text-align:left">查看系统DirectX</td>
+</tr>
+<tr>
+<td>psr</td>
+<td style="text-align:left">问题步骤记录器</td>
+</tr>
+</tbody>
+</table>
 
         </div>
 
@@ -183,7 +299,7 @@
         <div class="ds-recent-visitors" data-num-items="28" data-avatar-size="42" id="ds-recent-visitors"></div>
         <!-- 多说最近访客 end -->
         <!-- 多说评论框 start -->
-        <div class="ds-thread" data-thread-key="2016/11/09/博客搭建记录/" data-title="博客搭建记录" data-url="http://yoursite.com/2016/11/09/博客搭建记录/">
+        <div class="ds-thread" data-thread-key="2016/11/24/Windows命令学习/" data-title="Windows命令学习" data-url="http://yoursite.com/2016/11/24/Windows命令学习/">
         </div>
         <!-- 多说评论框 end -->
 

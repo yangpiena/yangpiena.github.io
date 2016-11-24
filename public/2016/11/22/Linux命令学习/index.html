@@ -118,13 +118,13 @@
           <!-- Date -->
           <span class="date-time info">发表于
             <span class="date">2016-11-22</span>
-            <span class="time">08:47:42</span>
+            <span class="time">12:38:40</span>
           </span>
           
           <!--  Categories  -->
             <span class="categories info">分类于 
 
-<a href="/categories/Linux/">Linux</a>
+<a href="/categories/OS/">OS</a>
 </span>
           
 
@@ -300,6 +300,232 @@
 <tr>
 <td>&gt;</td>
 <td style="text-align:left">重定向：将文件内容输出到指定的文件或位置。如cat /etc/services &gt; a.txt</td>
+</tr>
+</tbody>
+</table>
+<h3 id="vi"><a href="#vi" class="headerlink" title="vi"></a>vi</h3><table>
+<thead>
+<tr>
+<th>命令</th>
+<th style="text-align:left">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>i</td>
+<td style="text-align:left">进入Insert mode，表示插入，从当前光标处插入文字</td>
+</tr>
+<tr>
+<td>a</td>
+<td style="text-align:left">进入Insert mode，表示增加，从当前光标所在的下一个字开始输入文字</td>
+</tr>
+<tr>
+<td>o</td>
+<td style="text-align:left">进入Insert mode，表示插入新的一行，从行首开始输入文字</td>
+</tr>
+<tr>
+<td>Esc</td>
+<td style="text-align:left">Insert mode切换到Command mode</td>
+</tr>
+<tr>
+<td>:</td>
+<td style="text-align:left">进入Last line mode</td>
+</tr>
+<tr>
+<td>:w filename</td>
+<td style="text-align:left">将文章存入指定的文件名filename</td>
+</tr>
+<tr>
+<td>:wq</td>
+<td style="text-align:left">写入当前指定文件名并离开vi</td>
+</tr>
+<tr>
+<td>:q!</td>
+<td style="text-align:left">强制离开并放弃编辑的文件</td>
+</tr>
+<tr>
+<td>h、j、k、l</td>
+<td style="text-align:left">分别控制光标左、下、上、右移一格</td>
+</tr>
+<tr>
+<td>Ctrl+B</td>
+<td style="text-align:left">屏幕往后移动一页</td>
+</tr>
+<tr>
+<td>Ctrl+F</td>
+<td style="text-align:left">屏幕往前移动一页</td>
+</tr>
+<tr>
+<td>Ctrl+U</td>
+<td style="text-align:left">屏幕往后移动半页</td>
+</tr>
+<tr>
+<td>Ctrl+D</td>
+<td style="text-align:left">屏幕往前移动半页</td>
+</tr>
+<tr>
+<td>0</td>
+<td style="text-align:left">移动到文章的开头</td>
+</tr>
+<tr>
+<td>G</td>
+<td style="text-align:left">移动到文章的最后</td>
+</tr>
+<tr>
+<td>w</td>
+<td style="text-align:left">光标跳到下个word的开头</td>
+</tr>
+<tr>
+<td>e</td>
+<td style="text-align:left">光标跳到下个word的字尾</td>
+</tr>
+<tr>
+<td>b</td>
+<td style="text-align:left">光标回到上个word的开头</td>
+</tr>
+<tr>
+<td>$</td>
+<td style="text-align:left">移到光标所在行的行尾</td>
+</tr>
+<tr>
+<td>^</td>
+<td style="text-align:left">移到该行第一个非空白的字符</td>
+</tr>
+<tr>
+<td>o</td>
+<td style="text-align:left">移到该行的开头位置</td>
+</tr>
+<tr>
+<td>#</td>
+<td style="text-align:left">移到该行的第#个位置</td>
+</tr>
+<tr>
+<td>x</td>
+<td style="text-align:left">每按一次删除光标所在位置的后面一个字符</td>
+</tr>
+<tr>
+<td>#x</td>
+<td style="text-align:left">例如，6x 表删除光标所在位置的后面6个字符</td>
+</tr>
+<tr>
+<td>X</td>
+<td style="text-align:left">大字的X，每按一次删除光标所在位置的前面一个字符</td>
+</tr>
+<tr>
+<td>#X</td>
+<td style="text-align:left">例如，20X 表删除光标所在位置的前面20个字符</td>
+</tr>
+<tr>
+<td>dd</td>
+<td style="text-align:left">删除光标所在行</td>
+</tr>
+<tr>
+<td>#dd</td>
+<td style="text-align:left">例如，6dd表删除从光标所在的该行往下数6行之文字</td>
+</tr>
+<tr>
+<td>yw</td>
+<td style="text-align:left">将光标所在处到字尾的字符复制到缓冲区中</td>
+</tr>
+<tr>
+<td>p</td>
+<td style="text-align:left">将缓冲区内的字符粘贴到光标所在位置</td>
+</tr>
+<tr>
+<td>yy</td>
+<td style="text-align:left">复制光标所在行</td>
+</tr>
+<tr>
+<td>p</td>
+<td style="text-align:left">复制单行到您想粘贴之处</td>
+</tr>
+<tr>
+<td>#yy</td>
+<td style="text-align:left">例如：6yy表示拷贝从光标所在的该行往下数6行之文字</td>
+</tr>
+<tr>
+<td>p</td>
+<td style="text-align:left">复制多行到您想粘贴之处</td>
+</tr>
+<tr>
+<td>“ayy</td>
+<td style="text-align:left">将复制行放入buffer a, vi提供buffer功能，可将常用的数据存在buffer</td>
+</tr>
+<tr>
+<td>“ap</td>
+<td style="text-align:left">将放在buffer a的数据粘贴</td>
+</tr>
+<tr>
+<td>“b3yy</td>
+<td style="text-align:left">将三行数据存入buffer b</td>
+</tr>
+<tr>
+<td>“b3p</td>
+<td style="text-align:left">将存在buffer b的资料粘贴</td>
+</tr>
+<tr>
+<td>r</td>
+<td style="text-align:left">取代光标所在处的字符</td>
+</tr>
+<tr>
+<td>R</td>
+<td style="text-align:left">取代字符直到按Esc为止</td>
+</tr>
+<tr>
+<td>u</td>
+<td style="text-align:left">假如您误操作一个指令，可以马上按u，回复到上一个操作</td>
+</tr>
+<tr>
+<td>.</td>
+<td style="text-align:left">可以重复执行上一次的指令</td>
+</tr>
+<tr>
+<td>Ctrl+G</td>
+<td style="text-align:left">列出光标所在行的行号</td>
+</tr>
+<tr>
+<td>#G</td>
+<td style="text-align:left">例如，15G，表示移动光标至文章的第15行行首</td>
+</tr>
+<tr>
+<td>set nu</td>
+<td style="text-align:left">在文章的每一行前面列出行号</td>
+</tr>
+<tr>
+<td>set number</td>
+<td style="text-align:left">在文章的每一行前面列出行号</td>
+</tr>
+<tr>
+<td>set nonu</td>
+<td style="text-align:left">取消行号</td>
+</tr>
+<tr>
+<td>set nonumber</td>
+<td style="text-align:left">取消行号</td>
+</tr>
+<tr>
+<td>#</td>
+<td style="text-align:left">井号代表一个数字，在Last line mode提示符号“：”前输入数字，再按Enter就会跳到该行了。例如：15[Enter]就会跳到文章的第15行</td>
+</tr>
+<tr>
+<td>/关键字</td>
+<td style="text-align:left">先按/，再输入您想寻找的字，如果第一次找的关键字不是您相尽可能的，可以一直按n会往下寻找到您要的关键字为止。自上而下进行搜索</td>
+</tr>
+<tr>
+<td>?关键字</td>
+<td style="text-align:left">先按？，再输入您想寻找的字，如果第一次找的关键字不是您想要的，可以按n会往前寻找到您要的关键字为止。自下而上搜索</td>
+</tr>
+<tr>
+<td>1,$s/string/replae/g</td>
+<td style="text-align:left">在last line mode输入“1，$s/string/replace/g”会将全文的string字符串取代为replace字符串，其中1,$s就是指搜寻区间为文章从头至尾的意思，g则是表示全部取代不必确认</td>
+</tr>
+<tr>
+<td>%s/string/replace/c</td>
+<td style="text-align:left">同样会将全文的string字符串取代为replace字符串，和上面指令不同的地方是，%s和1,$s是相同的功能，c则是表示要替代之前必须再次确认是否取代。例如：1,20s/string/replace/g：将1至20行间的string替代为relpace字符串</td>
+</tr>
+<tr>
+<td>#,# w filename</td>
+<td style="text-align:left">如果您想摘取文章的某一段，存成另一个文件，可用这个指令#代表行号，例如30,50 w nice，将您正在编辑文章的第30~50行存成nice这个文件。或者是30,50 w &gt;&gt; nice ,表示把内容附加到nice文件，不覆盖</td>
 </tr>
 </tbody>
 </table>

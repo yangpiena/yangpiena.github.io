@@ -26,6 +26,11 @@ date: 2016-11-11 12:31:37
 [it.me](http://www.topit.me/)
 [笔记本桌面壁纸下载](http://bbs.zol.com.cn/nbbbs/d33943.html)
 
+## 操作系统
+[Win10怎么把批处理文件固定到开始菜单](http://www.jb51.net/os/win10/483729.html)
+[Linux删除乱码文件](http://www.cnblogs.com/quanweiru/p/3764003.html)
+[SUSE Linux启用SSH](http://tophandxing.blog.163.com/blog/static/109714820124123438513/)
+
 ## 系统软件下载
 [绿盟](http://www.xdowns.com/)
 [系统之家](http://www.xitongzhijia.net/)
