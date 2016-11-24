@@ -8,7 +8,7 @@
   <meta name="description" content="">
   <meta name="author" content="昜丿捺">
   <!-- Open Graph Data -->
-  <meta property="og:title" content="日志书写规范"/>
+  <meta property="og:title" content="Windows命令学习"/>
   <meta property="og:description" content="没有阳光，沉默而居" />
   <meta property="og:site_name" content="昜丿捺"/>
   <meta property="og:type" content="article" />
@@ -45,7 +45,7 @@
     <div class="row">
       <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
         <div class="page-title with-background-image">
-          <p class="title">日志书写规范</p>
+          <p class="title">Windows命令学习</p>
           <p class="subtitle"></p>
         </div>
         <div class="site-menu with-background-image">
@@ -118,14 +118,8 @@
           <!-- Date -->
           <span class="date-time info">发表于
             <span class="date">2016-11-24</span>
-            <span class="time">12:35:48</span>
+            <span class="time">12:35:49</span>
           </span>
-          
-          <!--  Categories  -->
-            <span class="categories info">分类于 
-
-<a href="/categories/运维/">运维</a>
-</span>
           
 
           <!-- YPN Add 2016-11-14 增加热度 -->
@@ -136,22 +130,132 @@
         </div>
         <!-- Tags -->
         
-          <div class="post-tags text-muted">
-            标签: 
-
-<a class="tag" href="/tags/日志/">#日志</a>
-
-
-          </div>
-        
         <!-- Post Main Content -->
         <div class="post-content">
-          <ul>
-<li>日志类型：新增、修复、优化、删除</li>
-<li>版本类型：稳定版、开发版、体验版</li>
-<li>更新日志暖语：没有惊天动地的改变，只有处处为您着想的细节调整。</li>
-</ul>
+          <h2 id="系统"><a href="#系统" class="headerlink" title="系统"></a>系统</h2><table>
+<thead>
+<tr>
+<th>命令</th>
+<th style="text-align:left">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>shutdown</td>
+<td style="text-align:left">重启</td>
+</tr>
+<tr>
+<td>nbtstat -a 192.168.0.5</td>
+<td style="text-align:left">通过IP查找主机名</td>
+</tr>
+<tr>
+<td>ipconfig /flushdns</td>
+<td style="text-align:left">刷新DNS解析缓存（一般修改hosts后在cmd中执行下。hosts路径：C:\Windows\System32\drivers\etc）</td>
+</tr>
+<tr>
+<td>tskill PID</td>
+<td style="text-align:left">找到占用端口的PID</td>
+</tr>
+<tr>
+<td>netstat -ab</td>
+<td style="text-align:left">杀死进程</td>
+</tr>
+</tbody>
+</table>
 <a id="more"></a>
+<h3 id="Dos命令"><a href="#Dos命令" class="headerlink" title="Dos命令"></a>Dos命令</h3><table>
+<thead>
+<tr>
+<th>命令</th>
+<th style="text-align:left">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>dir</td>
+<td style="text-align:left">列出当前目录下的文件以及文件夹</td>
+</tr>
+<tr>
+<td>del</td>
+<td style="text-align:left">删除文件</td>
+</tr>
+<tr>
+<td>ren</td>
+<td style="text-align:left">重命名,例如：ren 旧文件 新文件名</td>
+</tr>
+<tr>
+<td>md</td>
+<td style="text-align:left">创建目录</td>
+</tr>
+<tr>
+<td>rd</td>
+<td style="text-align:left">删除目录</td>
+</tr>
+<tr>
+<td>cd</td>
+<td style="text-align:left">进入指定目录</td>
+</tr>
+<tr>
+<td>cd..</td>
+<td style="text-align:left">退回到上一级目录</td>
+</tr>
+<tr>
+<td>cd/</td>
+<td style="text-align:left">退回到根目录</td>
+</tr>
+<tr>
+<td>exit</td>
+<td style="text-align:left">退出dos命令行</td>
+</tr>
+</tbody>
+</table>
+<h3 id="快捷键"><a href="#快捷键" class="headerlink" title="快捷键"></a>快捷键</h3><table>
+<thead>
+<tr>
+<th>命令</th>
+<th style="text-align:left">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>notepad</td>
+<td style="text-align:left">记事本</td>
+</tr>
+<tr>
+<td>clipbrd</td>
+<td style="text-align:left">剪切板</td>
+</tr>
+<tr>
+<td>systeminfo</td>
+<td style="text-align:left">查看系统信息</td>
+</tr>
+<tr>
+<td>gpedit.msc</td>
+<td style="text-align:left">组策略（关闭自动播放）</td>
+</tr>
+<tr>
+<td>odbcad32.exe</td>
+<td style="text-align:left">数据源，若系统是64bit的，则新建dsn要用64bit的ODBC，即在运行中输入：C:\Windows\SysWOW64\odbcad32.exe</td>
+</tr>
+<tr>
+<td>arp -a</td>
+<td style="text-align:left">查看IP对应的MAC地址</td>
+</tr>
+<tr>
+<td>arp -s</td>
+<td style="text-align:left">添加IP对应的MAC地址</td>
+</tr>
+<tr>
+<td>dxdiag</td>
+<td style="text-align:left">查看系统DirectX</td>
+</tr>
+<tr>
+<td>psr</td>
+<td style="text-align:left">问题步骤记录器</td>
+</tr>
+</tbody>
+</table>
+
         </div>
 
         <!-- YPN Add 2016-11-14 增加打赏 start -->
@@ -181,7 +285,7 @@
         <div class="ds-recent-visitors" data-num-items="28" data-avatar-size="42" id="ds-recent-visitors"></div>
         <!-- 多说最近访客 end -->
         <!-- 多说评论框 start -->
-        <div class="ds-thread" data-thread-key="2016/11/24/日志书写规范/" data-title="日志书写规范" data-url="http://yoursite.com/2016/11/24/日志书写规范/">
+        <div class="ds-thread" data-thread-key="2016/11/24/Windows命令学习/" data-title="Windows命令学习" data-url="http://yoursite.com/2016/11/24/Windows命令学习/">
         </div>
         <!-- 多说评论框 end -->
 
