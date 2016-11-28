@@ -4,11 +4,14 @@ layout: links
 date: 2016-11-11 12:31:37
 ---
 ## 常用
+[谷歌搜索](https://www.google.com/ncr)
+[谷歌香港](https://www.google.com.hk/ncr)
 [七牛云存储](https://portal.qiniu.com/create)
 [Windows在线markdown工具](https://www.zybuluo.com/mdeditor)
 [维基百科](https://www.wikipedia.org/)
 [VeryCD 电驴大全](http://www.verycd.com/)
 [360doc个人图书馆](http://www.360doc.com/)
+[2016 Google hosts 持续更新](https://laod.cn/hosts/2016-google-hosts.html)
 
 ## 音乐
 [SongTaste](http://www.songtaste.com/)
@@ -51,8 +54,10 @@ date: 2016-11-11 12:31:37
 [Android酷炫实用的开源框架（UI框架）](http://www.runoob.com/w3cnote/android-ui-framework.html)
 
 ## IT-工具
+[MD5解密](http://www.cmd5.com/)
 [png在线转ico](http://www.easyicon.net/covert/)
 [Markdown在线编辑](http://www.ctrlshift.net/project/markdowneditor/)
+[正则表达式在线测试](http://tool.chinaz.com/regex/)
 
 ## IT-前端UI
 [蓝蓝设计](http://www.lanlanwork.com/)
