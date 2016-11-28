@@ -18,3 +18,5 @@ str   =   str.replace(/^\s+|\s+$/g,"");
 str=str.replace( /^\s*/, '');
 - 去除右空格：
 str=str.replace(/(\s*$)/g, "");
+
+<!-- more -->
