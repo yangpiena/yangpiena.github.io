@@ -11,9 +11,7 @@ description:
 ### 1. 删除表空间和用户
 ```
 DROP USER XCBA CASCADE;
-
 DROP tablespace XCBA_temp including contents AND datafiles;
-
 DROP tablespace XCBA including contents AND datafiles;
 ```
 <!-- more -->
@@ -47,10 +45,7 @@ TEMPORARY tablespace XCBA_TEMP;
 ### 5. 给用户授予权限
 ```
 GRANT CONNECT, resource TO XCBA;
-
 ALTER USER XCBA ACCOUNT UNLOCK;
-
 GRANT dba TO XCBA;
-
 ALTER USER XCBA DEFAULT role DBA
 ```
