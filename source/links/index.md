@@ -59,7 +59,7 @@ date: 2016-11-11 12:31:37
 [Markdown在线编辑](http://www.ctrlshift.net/project/markdowneditor/)
 [正则表达式在线测试](http://tool.chinaz.com/regex/)
 
-## IT-前端UI
+## IT-前端
 [蓝蓝设计](http://www.lanlanwork.com/)
 [公司某项目前端技术积累](http://blog.csdn.net/sunyingyuan/article/details/38237139)
 [10个顶级的CSS UI开源框架](http://www.codeceo.com/article/top-10-css-ui-framework.html)
@@ -76,6 +76,10 @@ date: 2016-11-11 12:31:37
 [博客园](http://www.cnblogs.com/cmt/)
 [LB 负载均衡的层次结构](http://www.cnblogs.com/mindwind/p/5339657.html)
 [GitHub上优秀的开源项目](http://blog.csdn.net/ren1027538427/article/details/52450294)
+
+## IT-SQL
+[SQL Server 2008(R2)支持将数据导出为脚本](http://xcc313.iteye.com/blog/1331468)
+[【SQL Server备份恢复】维护计划实现备份：每周数据库完整备份、每天差异备份、每小时日志备份 ](http://blog.csdn.net/sqlserverdiscovery/article/details/11020057)
 
 ## IT-jQuery
 [jQuery插件库](http://www.jq22.com/)
