@@ -8,7 +8,7 @@
   <meta name="description" content="">
   <meta name="author" content="昜丿捺">
   <!-- Open Graph Data -->
-  <meta property="og:title" content="Linux发展史"/>
+  <meta property="og:title" content="Oracle之imp和exp语句"/>
   <meta property="og:description" content="没有阳光，沉默而居" />
   <meta property="og:site_name" content="昜丿捺"/>
   <meta property="og:type" content="article" />
@@ -45,7 +45,7 @@
     <div class="row">
       <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
         <div class="page-title with-background-image">
-          <p class="title">Linux发展史</p>
+          <p class="title">Oracle之imp和exp语句</p>
           <p class="subtitle"></p>
         </div>
         <div class="site-menu with-background-image">
@@ -117,14 +117,14 @@
           
           <!-- Date -->
           <span class="date-time info">发表于
-            <span class="date">2016-11-22</span>
-            <span class="time">11:34:57</span>
+            <span class="date">2016-11-29</span>
+            <span class="time">11:34:58</span>
           </span>
           
           <!--  Categories  -->
             <span class="categories info">分类于 
 
-<a href="/categories/Linux/">Linux</a>
+<a href="/categories/Oracle/">Oracle</a>
 </span>
           
 
@@ -139,14 +139,31 @@
           <div class="post-tags text-muted">
             标签: 
 
-<a class="tag" href="/tags/Linux/">#Linux</a>
+<a class="tag" href="/tags/导入导出/">#导入导出</a>
 
 
           </div>
         
         <!-- Post Main Content -->
         <div class="post-content">
-          <p><img src="http://ogoh2gimk.bkt.clouddn.com/Linux%E5%8F%91%E5%B1%95%E5%8F%B2.png" alt=""></p>
+          <h2 id="exp-imp命令详解"><a href="#exp-imp命令详解" class="headerlink" title="exp/imp命令详解"></a>exp/imp命令详解</h2><p>exp        导出命令<br>imp        导入命令</p>
+<p><strong>exp导出模式</strong><br>full模式：导出整个数据库<br>user模式：导出指定的用户<br>table模式：导出指定的表<br>tablespace模式：导出表空间</p>
+<p><strong>exp导出参数</strong><br>owner：指定要导出的用户列表<br>full=y：表示要导出整个数据库<br>tables：指定要导出的表<br>tablepaces：指定要导出的表空间<br>rows=y：表示导出表数据,否则只导出表的结构.<br>help=y：表示要获取帮助<br>indexs：指定是否导出索引<br>grants：表示是否导出授权<br>query：定查询条件,允许用户导出表的一部分数据<br>triggers：指定是否导出触发器</p>
+<h2 id="exp-imp使用方法"><a href="#exp-imp使用方法" class="headerlink" title="exp/imp使用方法"></a>exp/imp使用方法</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">imp username/password@connect_string param=value …</div><div class="line">exp username/password@connect_string param=value …</div></pre></td></tr></table></figure>
+<p>例如：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">exp xcba/xcba@orcl file=C:\xcba.dmp log=C:\xcba.log owner=(xcba)</div><div class="line">imp xcba/xcba@orcl file=C:\xcba.dmp log=C:\xcba.log full=y ignore=y</div></pre></td></tr></table></figure></p>
+<blockquote>
+<p>导出备份为dmp时，需要将Oracle在注册表里的编码设置为UTF8，否则会出现中文乱码。<br>具体作法：将“HKEY_LOCAL_MACHINE\SOFTWARE\ORACLE\KEY_OraDb10g_home1”下的“NLS_LANG”设置为“SIMPLIFIED CHINESE_CHINA.UTF8”</p>
+</blockquote>
+<h2 id="exp-imp导入导出方式"><a href="#exp-imp导入导出方式" class="headerlink" title="exp/imp导入导出方式"></a>exp/imp导入导出方式</h2><h3 id="1-表方式，将指定表的数据导出-导入。"><a href="#1-表方式，将指定表的数据导出-导入。" class="headerlink" title="1. 表方式，将指定表的数据导出/导入。"></a>1. 表方式，将指定表的数据导出/导入。</h3><p><strong>导出：</strong><br>导出一张或几张表：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$ exp user/pwd file=/dir/xxx.dmp log=xxx.log tables=table1,table2 </div><div class="line">$ exp user/pwd file=/dir/xxx.dmp log=xxx.log tables=table1,table2</div></pre></td></tr></table></figure></p>
+<p>如果是分区表<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$ exp user/pwd file=/dir/xxx.dmp log=xxx.log tables=table1:tablespaces1,table2:tablespaces2 </div><div class="line">$ exp user/pwd file=/dir/xxx.dmp log=xxx.log tables=table1:tablespaces1,table2:tablespaces2</div></pre></td></tr></table></figure></p>
+<p>导出某张表的部分数据<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$ exp user/pwd file=/dir/xxx.dmp log=xxx.log tables=table1 query=\”where col1=\’…\’ and col2 \&lt;…\” </div><div class="line">$ exp user/pwd file=/dir/xxx.dmp log=xxx.log tables=table1 query=\”where col1=\’…\’ and col2 \&lt;…\”</div></pre></td></tr></table></figure></p>
+<p><strong>导入：</strong><br>导入一张或几张表<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$  imp  user/pwd  file=/dir/xxx.dmp  log=xxx.log  tables=table1,table2  fromuser=dbuser touser=dbuser2 commit=y ignore=y </div><div class="line">$  imp  user/pwd  file=/dir/xxx.dmp  log=xxx.log  tables=table1,table2  fromuser=dbuser touser=dbuser2 commit=y ignore=y</div></pre></td></tr></table></figure></p>
+<p>如果是分区表<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$  imp  user/pwd  file=/dir/xxx.dmp  log=xxx.log  tables=table1:tablespaces1,table2:tablespaces2  fromuser=dbuser touser=dbuser2 commit=y ignore=y </div><div class="line">$  imp  user/pwd  file=/dir/xxx.dmp  log=xxx.log  tables=table1:tablespaces1,table2:tablespaces2  fromuser=dbuser touser=dbuser2 commit=y ignore=y</div></pre></td></tr></table></figure></p>
+<h3 id="2-用户方式，将指定用户的所有对象及数据导出-导入。"><a href="#2-用户方式，将指定用户的所有对象及数据导出-导入。" class="headerlink" title="2. 用户方式，将指定用户的所有对象及数据导出/导入。"></a>2. 用户方式，将指定用户的所有对象及数据导出/导入。</h3><p><strong>导出：</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$ exp user/pwd file=/dir/xxx.dmp log=xxx.log owner=(xx, yy) </div><div class="line">$ exp user/pwd file=/dir/xxx.dmp log=xxx.log owner=(xx, yy)</div></pre></td></tr></table></figure></p>
+<p>只导出数据对象，不导出数据  (rows=n )<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ exp user/pwd file=/dir/xxx.dmp log=xxx.log owner=user rows=n</div></pre></td></tr></table></figure></p>
+<p><strong>导入：</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">imp  user/pwd  file=/dir/xxx.dmp  log=xxx.log  fromuser=dbuser  touser=dbuser2  mmit=y     ignore=y </div><div class="line">imp  user/pwd  file=/dir/xxx.dmp  log=xxx.log  fromuser=dbuser  touser=dbuser2  commit=y  ignore=y</div></pre></td></tr></table></figure></p>
+<h3 id="3-全库方式，将数据库中的所有对象导出-导入"><a href="#3-全库方式，将数据库中的所有对象导出-导入" class="headerlink" title="3. 全库方式，将数据库中的所有对象导出/导入"></a>3. 全库方式，将数据库中的所有对象导出/导入</h3><p><strong>导出：</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$ exp user/pwd file=/dir/xxx.dmp log=xxx.log full=y commit=y ignore=y </div><div class="line">$ exp user/pwd file=/dir/xxx.dmp log=xxx.log full=y commit=y ignore=y</div></pre></td></tr></table></figure></p>
+<p><strong>导入：</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ imp user/pwd file=/dir/xxx.dmp log=xxx.log fromuser=dbuser touser=dbuser2</div></pre></td></tr></table></figure></p>
 
         </div>
 
@@ -177,7 +194,7 @@
         <div class="ds-recent-visitors" data-num-items="28" data-avatar-size="42" id="ds-recent-visitors"></div>
         <!-- 多说最近访客 end -->
         <!-- 多说评论框 start -->
-        <div class="ds-thread" data-thread-key="2016/11/22/Linux发展史/" data-title="Linux发展史" data-url="http://yoursite.com/2016/11/22/Linux发展史/">
+        <div class="ds-thread" data-thread-key="2016/11/29/Oracle之imp和exp语句/" data-title="Oracle之imp和exp语句" data-url="http://yoursite.com/2016/11/29/Oracle之imp和exp语句/">
         </div>
         <!-- 多说评论框 end -->
 
