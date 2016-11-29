@@ -118,7 +118,7 @@
           <!-- Date -->
           <span class="date-time info">发表于
             <span class="date">2016-11-29</span>
-            <span class="time">11:34:58</span>
+            <span class="time">11:37:51</span>
           </span>
           
           <!--  Categories  -->
@@ -148,7 +148,7 @@
         <div class="post-content">
           <h2 id="exp-imp命令详解"><a href="#exp-imp命令详解" class="headerlink" title="exp/imp命令详解"></a>exp/imp命令详解</h2><p>exp        导出命令<br>imp        导入命令</p>
 <p><strong>exp导出模式</strong><br>full模式：导出整个数据库<br>user模式：导出指定的用户<br>table模式：导出指定的表<br>tablespace模式：导出表空间</p>
-<p><strong>exp导出参数</strong><br>owner：指定要导出的用户列表<br>full=y：表示要导出整个数据库<br>tables：指定要导出的表<br>tablepaces：指定要导出的表空间<br>rows=y：表示导出表数据,否则只导出表的结构.<br>help=y：表示要获取帮助<br>indexs：指定是否导出索引<br>grants：表示是否导出授权<br>query：定查询条件,允许用户导出表的一部分数据<br>triggers：指定是否导出触发器</p>
+<p><strong>exp导出参数</strong><br>owner：指定要导出的用户列表<br>full=y：表示要导出整个数据库<br>tables：指定要导出的表<br>tablepaces：指定要导出的表空间<br>rows=y：表示导出表数据,否则只导出表的结构.<br>help=y：表示要获取帮助<br>indexs：指定是否导出索引<br>grants：表示是否导出授权<br>query：定查询条件,允许用户导出表的一部分数据<br>triggers：指定是否导出触发器<br><a id="more"></a></p>
 <h2 id="exp-imp使用方法"><a href="#exp-imp使用方法" class="headerlink" title="exp/imp使用方法"></a>exp/imp使用方法</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">imp username/password@connect_string param=value …</div><div class="line">exp username/password@connect_string param=value …</div></pre></td></tr></table></figure>
 <p>例如：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">exp xcba/xcba@orcl file=C:\xcba.dmp log=C:\xcba.log owner=(xcba)</div><div class="line">imp xcba/xcba@orcl file=C:\xcba.dmp log=C:\xcba.log full=y ignore=y</div></pre></td></tr></table></figure></p>
 <blockquote>

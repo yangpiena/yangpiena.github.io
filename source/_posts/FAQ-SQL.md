@@ -25,6 +25,7 @@ ORDER BY
 	gz;
 ```
 在Access里执行没问题，但放到代码里就报错：FROM子句语法错误。此时，只需将from子语句用[]括起来，后面跟一个.即可，正确SQL如下：
+<!-- more -->
 ```
 SELECT
 	gz,

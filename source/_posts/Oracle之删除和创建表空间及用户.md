@@ -16,7 +16,7 @@ DROP tablespace XCBA_temp including contents AND datafiles;
 
 DROP tablespace XCBA including contents AND datafiles;
 ```
-
+<!-- more -->
 ### 2. 创建临时表空间
 ```
 CREATE TEMPORARY tablespace XCBA_TEMP 
