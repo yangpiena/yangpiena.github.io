@@ -112,6 +112,114 @@
     <div class="col-lg-10 col-md-10 col-md-offset-1">
       
         <div class="post-item-wrapper">
+  <a href="/2016/11/29/SQL之经典语句/" class="post-title">
+      SQL之经典语句
+  </a>
+  <div class="post-excerpt">
+    <!-- Post Date and Categories -->
+    <div class="date-and-category">
+      <div class="date">2016-11-29</div>
+      <div class="categories">
+        
+          
+
+<a href="/categories/SQL/">SQL</a>
+
+        
+      </div>
+    </div>
+    <!-- Post Excerpt -->
+    <div class="excerpt typo"><h1 id="一、基础篇"><a href="#一、基础篇" class="headerlink" title="一、基础篇"></a>一、基础篇</h1><h2 id="1、创建数据库"><a href="#1、创建数据库" class="headerlink" title="1、创建数据库"></a>1、创建数据库</h2><pre><code>CREATE DATABASE database-name
+</code></pre><h2 id="2、删除数据库"><a href="#2、删除数据库" class="headerlink" title="2、删除数据库"></a>2、删除数据库</h2><pre><code>drop database dbname
+</code></pre><h2 id="3、备份sql-server"><a href="#3、备份sql-server" class="headerlink" title="3、备份sql server"></a>3、备份sql server</h2><pre><code>创建 备份数据的 device
+USE master
+EXEC sp_addumpdevice &apos;disk&apos;, &apos;testBack&apos;, &apos;c:\mssql7backup\MyNwind_1.dat&apos;
+开始 备份
+BACKUP DATABASE pubs TO testBack 
+</code></pre></div>
+    <!-- Post Tags -->
+    <div class="tags">
+      
+        
+
+<a class="tag" href="/tags/经典语句/">经典语句</a>
+
+
+      
+    </div>
+  </div>
+</div>
+
+      
+        <div class="post-item-wrapper">
+  <a href="/2016/11/29/SQL之获取字符串最后出现的位置/" class="post-title">
+      SQL之获取字符串最后出现的位置
+  </a>
+  <div class="post-excerpt">
+    <!-- Post Date and Categories -->
+    <div class="date-and-category">
+      <div class="date">2016-11-29</div>
+      <div class="categories">
+        
+          
+
+<a href="/categories/SQL/">SQL</a>
+
+        
+      </div>
+    </div>
+    <!-- Post Excerpt -->
+    <div class="excerpt typo"><h4 id="1-如：’6-7-8-2-3-4-x’得到最后一个’-’在字符串的位置："><a href="#1-如：’6-7-8-2-3-4-x’得到最后一个’-’在字符串的位置：" class="headerlink" title="1. 如：’6.7.8.2.3.4.x’得到最后一个’.’在字符串的位置："></a>1. 如：’6.7.8.2.3.4.x’得到最后一个’.’在字符串的位置：</h4><figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">DECLARE</span> @str3 <span class="built_in">VARCHAR</span> (<span class="number">50</span>)</div><div class="line"><span class="keyword">SET</span> @str3 = <span class="string">'6.7.8.2.3.4.x'</span> </div><div class="line"><span class="keyword">SELECT</span> <span class="keyword">LEN</span>(@str3) - <span class="keyword">CHARINDEX</span>(<span class="string">'.'</span>, <span class="keyword">REVERSE</span>(@str3)) + <span class="number">1</span></div></pre></td></tr></table></figure>
+<pre><code>Integer:12
+</code></pre></div>
+    <!-- Post Tags -->
+    <div class="tags">
+      
+        
+
+<a class="tag" href="/tags/字符串/">字符串</a>
+
+
+      
+    </div>
+  </div>
+</div>
+
+      
+        <div class="post-item-wrapper">
+  <a href="/2016/11/29/SQL之查询死锁和阻塞/" class="post-title">
+      SQL之查询死锁和阻塞
+  </a>
+  <div class="post-excerpt">
+    <!-- Post Date and Categories -->
+    <div class="date-and-category">
+      <div class="date">2016-11-29</div>
+      <div class="categories">
+        
+          
+
+<a href="/categories/SQL/">SQL</a>
+
+        
+      </div>
+    </div>
+    <!-- Post Excerpt -->
+    <div class="excerpt typo"><h3 id="每秒死锁数量"><a href="#每秒死锁数量" class="headerlink" title="每秒死锁数量"></a>每秒死锁数量</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">SELECT  *</div><div class="line">FROM    sys.dm_os_performance_counters</div><div class="line">WHERE   counter_name LIKE &apos;Number of Deadlocksc%&apos;;</div></pre></td></tr></table></figure></div>
+    <!-- Post Tags -->
+    <div class="tags">
+      
+        
+
+<a class="tag" href="/tags/死锁/">死锁</a>
+
+
+      
+    </div>
+  </div>
+</div>
+
+      
+        <div class="post-item-wrapper">
   <a href="/2016/11/29/Oracle之imp和exp语句/" class="post-title">
       Oracle之imp和exp语句
   </a>
@@ -232,8 +340,7 @@
       </div>
     </div>
     <!-- Post Excerpt -->
-    <div class="excerpt typo"><h1 id="常见中文字体的英文名"><a href="#常见中文字体的英文名" class="headerlink" title="常见中文字体的英文名"></a>常见中文字体的英文名</h1><hr>
-<p>考虑到文件编码问题，在CSS中推荐使用中文字体的英文表示法，以下附常见中文字体的英文名：</p>
+    <div class="excerpt typo"><p>考虑到文件编码问题，在CSS中推荐使用中文字体的英文表示法，以下附常见中文字体的英文名：</p>
 <h3 id="Mac-OS"><a href="#Mac-OS" class="headerlink" title="Mac OS"></a>Mac OS</h3><p>华文细黑：STHeiti Light [STXihei]<br>华文黑体：STHeiti<br>华文楷体：STKaiti<br>华文宋体：STSong<br>华文仿宋：STFangsong<br>儷黑 Pro：LiHei Pro Medium<br>儷宋 Pro：LiSong Pro Light<br>標楷體：BiauKai<br>蘋果儷中黑：Apple LiGothic Medium<br>蘋果儷細宋：Apple LiSung Light<br></div>
     <!-- Post Tags -->
     <div class="tags">
@@ -267,7 +374,45 @@
       </div>
     </div>
     <!-- Post Excerpt -->
-    <div class="excerpt typo"><h1 id="JavaScript字符串去除空格"><a href="#JavaScript字符串去除空格" class="headerlink" title="JavaScript字符串去除空格"></a>JavaScript字符串去除空格</h1><ul>
+    <div class="excerpt typo"><ul>
+<li>去除所有空格:<br>str   =   str.replace(/\s+/g,””);       </li>
+<li>去除两边空格:<br>str   =   str.replace(/^\s+|\s+$/g,””);</li>
+<li>去除左空格：<br>str=str.replace( /^\s*/, ‘’);</li>
+<li>去除右空格：<br>str=str.replace(/(\s*$)/g, “”);</li>
+</ul></div>
+    <!-- Post Tags -->
+    <div class="tags">
+      
+        
+
+<a class="tag" href="/tags/字符串/">字符串</a>
+
+
+      
+    </div>
+  </div>
+</div>
+
+      
+        <div class="post-item-wrapper">
+  <a href="/2016/11/28/JavaScript之字符串去除空格/" class="post-title">
+      JavaScript之字符串去除空格
+  </a>
+  <div class="post-excerpt">
+    <!-- Post Date and Categories -->
+    <div class="date-and-category">
+      <div class="date">2016-11-28</div>
+      <div class="categories">
+        
+          
+
+<a href="/categories/JavaScript/">JavaScript</a>
+
+        
+      </div>
+    </div>
+    <!-- Post Excerpt -->
+    <div class="excerpt typo"><ul>
 <li>去除所有空格:<br>str   =   str.replace(/\s+/g,””);       </li>
 <li>去除两边空格:<br>str   =   str.replace(/^\s+|\s+$/g,””);</li>
 <li>去除左空格：<br>str=str.replace( /^\s*/, ‘’);</li>
@@ -329,173 +474,6 @@
         
 
 <a class="tag" href="/tags/虚拟化/">虚拟化</a>
-
-
-      
-    </div>
-  </div>
-</div>
-
-      
-        <div class="post-item-wrapper">
-  <a href="/2016/11/24/Windows命令学习/" class="post-title">
-      Windows命令学习
-  </a>
-  <div class="post-excerpt">
-    <!-- Post Date and Categories -->
-    <div class="date-and-category">
-      <div class="date">2016-11-24</div>
-      <div class="categories">
-        
-          
-
-<a href="/categories/OS/">OS</a>
-
-        
-      </div>
-    </div>
-    <!-- Post Excerpt -->
-    <div class="excerpt typo"><h2 id="系统"><a href="#系统" class="headerlink" title="系统"></a>系统</h2><table>
-<thead>
-<tr>
-<th>命令</th>
-<th style="text-align:left">说明</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>shutdown</td>
-<td style="text-align:left">重启</td>
-</tr>
-<tr>
-<td>nbtstat -a 192.168.0.5</td>
-<td style="text-align:left">通过IP查找主机名</td>
-</tr>
-<tr>
-<td>ipconfig /flushdns</td>
-<td style="text-align:left">刷新DNS解析缓存（一般修改hosts后在cmd中执行下。hosts路径：C:\Windows\System32\drivers\etc）</td>
-</tr>
-<tr>
-<td>tskill PID</td>
-<td style="text-align:left">找到占用端口的PID</td>
-</tr>
-<tr>
-<td>netstat -ab</td>
-<td style="text-align:left">杀死进程</td>
-</tr>
-</tbody>
-</table></div>
-    <!-- Post Tags -->
-    <div class="tags">
-      
-        
-
-<a class="tag" href="/tags/Windows/">Windows</a>
-
-
-      
-    </div>
-  </div>
-</div>
-
-      
-        <div class="post-item-wrapper">
-  <a href="/2016/11/24/日志书写规范/" class="post-title">
-      日志书写规范
-  </a>
-  <div class="post-excerpt">
-    <!-- Post Date and Categories -->
-    <div class="date-and-category">
-      <div class="date">2016-11-24</div>
-      <div class="categories">
-        
-          
-
-<a href="/categories/运维/">运维</a>
-
-        
-      </div>
-    </div>
-    <!-- Post Excerpt -->
-    <div class="excerpt typo"><ul>
-<li>日志类型：新增、修复、优化、删除</li>
-<li>版本类型：稳定版、开发版、体验版</li>
-<li>更新日志暖语：没有惊天动地的改变，只有处处为您着想的细节调整。</li>
-</ul></div>
-    <!-- Post Tags -->
-    <div class="tags">
-      
-        
-
-<a class="tag" href="/tags/日志/">日志</a>
-
-
-      
-    </div>
-  </div>
-</div>
-
-      
-        <div class="post-item-wrapper">
-  <a href="/2016/11/22/更换电脑后如何修改博客/" class="post-title">
-      更换电脑后如何修改博客
-  </a>
-  <div class="post-excerpt">
-    <!-- Post Date and Categories -->
-    <div class="date-and-category">
-      <div class="date">2016-11-22</div>
-      <div class="categories">
-        
-          
-
-<a href="/categories/Blog/">Blog</a>
-
-        
-      </div>
-    </div>
-    <!-- Post Excerpt -->
-    <div class="excerpt typo"><h1 id="当重装电脑，或者想在其它电脑上修改博客，可以使用下列步骤："><a href="#当重装电脑，或者想在其它电脑上修改博客，可以使用下列步骤：" class="headerlink" title="当重装电脑，或者想在其它电脑上修改博客，可以使用下列步骤："></a>当重装电脑，或者想在其它电脑上修改博客，可以使用下列步骤：</h1><ol>
-<li>使用git clone git@github.com:yangpiena/yangpiena.github.io.git拷贝仓库（默认分支为source）；</li>
-<li>在本地新拷贝的yangpiena.github.io文件夹下通过Git bash依次执行下列指令：<br> npm install hexo<br> npm install<br> npm install hexo-deployer-git –save<br> （切记不要执行hexo init这条指令，否则会删除.git文件夹）</div>
-    <!-- Post Tags -->
-    <div class="tags">
-      
-        
-
-<a class="tag" href="/tags/hexo/">hexo</a>
-
-
-      
-    </div>
-  </div>
-</div>
-
-      
-        <div class="post-item-wrapper">
-  <a href="/2016/11/22/Linux发展史/" class="post-title">
-      Linux发展史
-  </a>
-  <div class="post-excerpt">
-    <!-- Post Date and Categories -->
-    <div class="date-and-category">
-      <div class="date">2016-11-22</div>
-      <div class="categories">
-        
-          
-
-<a href="/categories/Linux/">Linux</a>
-
-        
-      </div>
-    </div>
-    <!-- Post Excerpt -->
-    <div class="excerpt typo">暂无文章摘要</div>
-    <!-- Post Tags -->
-    <div class="tags">
-      
-        
-
-<a class="tag" href="/tags/Linux/">Linux</a>
 
 
       

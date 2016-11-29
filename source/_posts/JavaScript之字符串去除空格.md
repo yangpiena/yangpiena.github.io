@@ -1,5 +1,5 @@
 ---
-title: JavaScript字符串去除空格
+title: JavaScript之字符串去除空格
 layout: post
 comments: true
 date: 2016-11-28 16:50:37

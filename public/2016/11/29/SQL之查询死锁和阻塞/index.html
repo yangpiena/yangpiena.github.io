@@ -8,10 +8,10 @@
   <meta name="description" content="">
   <meta name="author" content="昜丿捺">
   <!-- Open Graph Data -->
-  <meta property="og:title" content="昜丿捺"/>
+  <meta property="og:title" content="SQL之查询死锁和阻塞"/>
   <meta property="og:description" content="没有阳光，沉默而居" />
   <meta property="og:site_name" content="昜丿捺"/>
-  <meta property="og:type" content="website" />
+  <meta property="og:type" content="article" />
   <meta property="og:image" content="http://yoursite.comundefined"/>
   
     <link rel="alternate" href="/atom.xml" title="昜丿捺" type="application/atom+xml">
@@ -45,7 +45,7 @@
     <div class="row">
       <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
         <div class="page-title with-background-image">
-          <p class="title">无标题文章</p>
+          <p class="title">SQL之查询死锁和阻塞</p>
           <p class="subtitle"></p>
         </div>
         <div class="site-menu with-background-image">
@@ -118,8 +118,14 @@
           <!-- Date -->
           <span class="date-time info">发表于
             <span class="date">2016-11-29</span>
-            <span class="time">14:29:37</span>
+            <span class="time">17:12:43</span>
           </span>
+          
+          <!--  Categories  -->
+            <span class="categories info">分类于 
+
+<a href="/categories/SQL/">SQL</a>
+</span>
           
 
           <!-- YPN Add 2016-11-14 增加热度 -->
@@ -130,10 +136,19 @@
         </div>
         <!-- Tags -->
         
+          <div class="post-tags text-muted">
+            标签: 
+
+<a class="tag" href="/tags/死锁/">#死锁</a>
+
+
+          </div>
+        
         <!-- Post Main Content -->
         <div class="post-content">
-          <p>READE ME</p>
-
+          <h3 id="每秒死锁数量"><a href="#每秒死锁数量" class="headerlink" title="每秒死锁数量"></a>每秒死锁数量</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">SELECT  *</div><div class="line">FROM    sys.dm_os_performance_counters</div><div class="line">WHERE   counter_name LIKE &apos;Number of Deadlocksc%&apos;;</div></pre></td></tr></table></figure>
+<a id="more"></a>
+<h3 id="查询当前阻塞"><a href="#查询当前阻塞" class="headerlink" title="查询当前阻塞"></a>查询当前阻塞</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div></pre></td><td class="code"><pre><div class="line">WITH    CTE_SID ( BSID, SID, sql_handle )</div><div class="line">          AS ( SELECT   blocking_session_id ,</div><div class="line">                        session_id ,</div><div class="line">                        sql_handle</div><div class="line">               FROM     sys.dm_exec_requests</div><div class="line">               WHERE    blocking_session_id &lt;&gt; 0</div><div class="line">               UNION ALL</div><div class="line">               SELECT   A.blocking_session_id ,</div><div class="line">                        A.session_id ,</div><div class="line">                        A.sql_handle</div><div class="line">               FROM     sys.dm_exec_requests A</div><div class="line">                        JOIN CTE_SID B ON A.SESSION_ID = B.BSID</div><div class="line">             )</div><div class="line">    SELECT  C.BSID ,</div><div class="line">            C.SID ,</div><div class="line">            S.login_name ,</div><div class="line">            S.host_name ,</div><div class="line">            S.status ,</div><div class="line">            S.cpu_time ,</div><div class="line">            S.memory_usage ,</div><div class="line">            S.last_request_start_time ,</div><div class="line">            S.last_request_end_time ,</div><div class="line">            S.logical_reads ,</div><div class="line">            S.row_count ,</div><div class="line">            q.text</div><div class="line">    FROM    CTE_SID C </div><div class="line">            JOIN sys.dm_exec_sessions S ON C.sid = s.session_id</div><div class="line">            CROSS APPLY sys.dm_exec_sql_text(C.sql_handle) Q</div><div class="line">    ORDER BY sid</div></pre></td></tr></table></figure>
         </div>
 
         <!-- YPN Add 2016-11-14 增加打赏 start -->
@@ -163,7 +178,7 @@
         <div class="ds-recent-visitors" data-num-items="28" data-avatar-size="42" id="ds-recent-visitors"></div>
         <!-- 多说最近访客 end -->
         <!-- 多说评论框 start -->
-        <div class="ds-thread" data-thread-key="READEME.html" data-title="" data-url="http://yoursite.com/READEME.html">
+        <div class="ds-thread" data-thread-key="2016/11/29/SQL之查询死锁和阻塞/" data-title="SQL之查询死锁和阻塞" data-url="http://yoursite.com/2016/11/29/SQL之查询死锁和阻塞/">
         </div>
         <!-- 多说评论框 end -->
 

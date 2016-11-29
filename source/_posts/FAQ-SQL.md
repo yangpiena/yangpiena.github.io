@@ -35,3 +35,6 @@ FROM
 ORDER BY
 	gz;
 ```
+
+## 2. SQL Server安装提示暂挂项目
+打开注册表编辑器，在`HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Session Manager`中找到`PendingFileRenameOperations`项目，并删除它。这样就可以清除安装暂挂项目。
