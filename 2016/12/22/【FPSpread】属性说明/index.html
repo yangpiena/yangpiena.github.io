@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html>
+  <!-- Html Head Tag-->
+  <head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="昜丿捺">
+  <!-- Open Graph Data -->
+  <meta property="og:title" content="【FPSpread】属性说明"/>
+  <meta property="og:description" content="没有阳光，沉默而居" />
+  <meta property="og:site_name" content="昜丿捺"/>
+  <meta property="og:type" content="article" />
+  <meta property="og:image" content="http://yoursite.comundefined"/>
+  
+    <link rel="alternate" href="/atom.xml" title="昜丿捺" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.ico">
+  
+
+  <!-- Site Title -->
+  <title>昜丿捺</title>
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="/css/bootstrap.min.css">
+  <!-- Custom CSS -->
+  <!-- YPN Edit 2016-11-11 增加根据时间自动切换主题风格 -->
+  <!-- 
+       <link rel="stylesheet" href="/css/style.light.css"> -->
+  
+  
+  <link rel="stylesheet" href="/css/style.light.css">
+
+  <script type="text/javascript" src="/js/jquery-1.11.3.min.js"></script>
+</head>
+
+  <body>
+    <!-- Page Header -->
+
+
+<header class="site-header header-background" style="background-image: url(http://ogoh2gimk.bkt.clouddn.com/yangpiena-banner.jpg)">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <div class="page-title with-background-image">
+          <p class="title">【FPSpread】属性说明</p>
+          <p class="subtitle"></p>
+        </div>
+        <div class="site-menu with-background-image">
+          <ul>
+            
+              <li>
+                <a href="/">
+                  
+                  主页
+                  
+                </a>
+              </li>
+            
+              <li>
+                <a href="/archives">
+                  
+                  归类
+                  
+                </a>
+              </li>
+            
+              <li>
+                <a href="/links">
+                  
+                  链接
+                  
+                </a>
+              </li>
+            
+              <li>
+                <a href="/photos">
+                  
+                  相册
+                  
+                </a>
+              </li>
+            
+              <li>
+                <a href="/about">
+                  
+                  关于
+                  
+                </a>
+              </li>
+            
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  
+    <form class="search" action="/search/index.html" method="get" accept-charset="utf-8" style="text-align:right">
+    <label>Search</label>
+    <input type="text" id="search" class="st-default-search-input" maxlength="20" placeholder="Search" />
+    </form>
+  
+
+</header>
+
+<article>
+  <div class="container typo">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <div class="post-info text-muted">
+          
+            <!-- Author -->
+            <span class="author info">作者 昜丿捺</span>
+          
+          <!-- Date -->
+          <span class="date-time info">发表于
+            <span class="date">2016-12-22</span>
+            <span class="time">16:58:32</span>
+          </span>
+          
+          <!--  Categories  -->
+            <span class="categories info">分类于 
+
+<a href="/categories/FPSpread/">FPSpread</a>
+</span>
+          
+
+          <!-- YPN Add 2016-11-14 增加热度 -->
+          <span id="busuanzi_container_page_pv">
+            &nbsp;&nbsp; 热度&nbsp; <span id="busuanzi_value_page_pv"></span>°C
+          </span>
+
+        </div>
+        <!-- Tags -->
+        
+          <div class="post-tags text-muted">
+            标签: 
+
+<a class="tag" href="/tags/属性/">#属性</a>
+
+
+          </div>
+        
+        <!-- Post Main Content -->
+        <div class="post-content">
+          <p>以下记录一些常用的fpSpread控件属性，按字母排序：<br><a id="more"></a></p>
+<table>
+<thead>
+<tr>
+<th><strong>属性</strong></th>
+<th style="text-align:left"><strong>说明</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>ActiveRow</code></td>
+<td style="text-align:left">获取当前活动行号</td>
+</tr>
+<tr>
+<td><code>AddCellSpan</code> 3, 4, 2, 1</td>
+<td style="text-align:left">从第3列第4行起合并单元格，跨度为2列1行</td>
+</tr>
+<tr>
+<td><code>Backcolor</code></td>
+<td style="text-align:left">设置指定范围（行和列）的背景颜色</td>
+</tr>
+<tr>
+<td><code>CellType</code> = CellTypeNumber</td>
+<td style="text-align:left">设置为数字类型</td>
+</tr>
+<tr>
+<td><code>Col</code> = 2</td>
+<td style="text-align:left">定位到第2列</td>
+</tr>
+<tr>
+<td><code>ColHeaderRows</code> = 2</td>
+<td style="text-align:left">表头（列标题）行数为2</td>
+</tr>
+<tr>
+<td><code>ColHeadersShow</code> = False</td>
+<td style="text-align:left">隐藏列标题</td>
+</tr>
+<tr>
+<td><code>ColWidth(</code>1<code>)</code> = 16</td>
+<td style="text-align:left">设置第1列的列宽为16</td>
+</tr>
+<tr>
+<td><code>ColsFrozen</code> = 3</td>
+<td style="text-align:left">冻结前三列</td>
+</tr>
+<tr>
+<td><code>DataSource</code> = Rs</td>
+<td style="text-align:left">设置Spread的数据源为Rs记录集</td>
+</tr>
+<tr>
+<td><code>DeleteCols</code> 2, 1</td>
+<td style="text-align:left">在第2列前删除1列</td>
+</tr>
+<tr>
+<td><code>DeleteRows</code> 2, 1</td>
+<td style="text-align:left">在第2行前删除1行（如果Spread是通过设置数据源取得数据的话，则必须设置.DataSource = Nothing才能删除</td>
+</tr>
+<tr>
+<td><code>FontSize</code> = 10</td>
+<td style="text-align:left">设置当前栏位的字体大小为10（如果.Row = -1，则设置整列，下同</td>
+</tr>
+<tr>
+<td><code>Formula = &quot;SUM(A1:A&quot; &amp; MaxRows &amp; &quot;)&quot;</code></td>
+<td style="text-align:left">合计：对第1列从第1行到最大行求和</td>
+</tr>
+<tr>
+<td><code>GetText</code> 2, 3, MyText</td>
+<td style="text-align:left">将第2列第3行的值赋给变量MyText</td>
+</tr>
+<tr>
+<td><code>InsertCols</code> 2, 1</td>
+<td style="text-align:left">在第2列前插入1列</td>
+</tr>
+<tr>
+<td><code>InsertRows</code> 2, 1</td>
+<td style="text-align:left">在第2行前插入1行</td>
+</tr>
+<tr>
+<td><code>MaxCols</code> = 5</td>
+<td style="text-align:left">设置总列数为5列</td>
+</tr>
+<tr>
+<td><code>MaxRows</code> = 10</td>
+<td style="text-align:left">设置总行数为10行</td>
+</tr>
+<tr>
+<td><code>OperationMode</code> = OperationModeRow</td>
+<td style="text-align:left">设置Spread的操作模式为行定位（共有6种模式）</td>
+</tr>
+<tr>
+<td><code>PrintMarginLeft</code> = 1000</td>
+<td style="text-align:left">打印时左边距=1000（包括预览）</td>
+</tr>
+<tr>
+<td><code>PrintMarginTop</code> = 1000</td>
+<td style="text-align:left">打印时上边距=1000（包括预览）</td>
+</tr>
+<tr>
+<td><code>Row</code> = SpreadHeader</td>
+<td style="text-align:left">定位到表头（列标题）</td>
+</tr>
+<tr>
+<td><code>Row</code> = -1</td>
+<td style="text-align:left">定位到行头（在设置列格式时使用）</td>
+</tr>
+<tr>
+<td><code>Row</code> = 3</td>
+<td style="text-align:left">定位到第3行</td>
+</tr>
+<tr>
+<td><code>RowHeadersShow</code> = False</td>
+<td style="text-align:left">隐藏行标题</td>
+</tr>
+<tr>
+<td><code>RowHeight(</code>1<code>)</code> = 12</td>
+<td style="text-align:left">设置第1行的行高为12</td>
+</tr>
+<tr>
+<td><code>RowsFrozen</code> = 2</td>
+<td style="text-align:left">冻结前两行</td>
+</tr>
+<tr>
+<td><code>SetActiveCell</code> 1,2</td>
+<td style="text-align:left">设置第1列第2行单元格为焦点</td>
+</tr>
+<tr>
+<td><code>SetEnhancedColumnHeaderColors</code> vbRed, vbYellow, vbBlue, vbGreen, vbBlack, vbWhite, vbMagenta, &amp;H80FF&amp;, vbBlue, vbRed</td>
+<td style="text-align:left">设置列头颜色</td>
+</tr>
+<tr>
+<td><code>SetOddEvenRowColor</code> vbWhite, &amp;H80000008, &amp;HF7ECE4, &amp;H80000008</td>
+<td style="text-align:left">设置奇偶行背景色</td>
+</tr>
+<tr>
+<td><code>SetText</code> 2, 3, “test”</td>
+<td style="text-align:left">设置第2列第3行的文本为”test”</td>
+</tr>
+<tr>
+<td><code>Text</code> = “test”</td>
+<td style="text-align:left">设置当前栏位的文本为”test”</td>
+</tr>
+<tr>
+<td><code>TypeHAlign</code> = TypeHAlignRight</td>
+<td style="text-align:left">设置文字水平对齐方式为右对齐</td>
+</tr>
+<tr>
+<td><code>TypeVAlign</code> = TypeVAlignCenter</td>
+<td style="text-align:left">设置文字垂直对齐方式为居中</td>
+</tr>
+<tr>
+<td><code>TypeNumberDecPlaces</code> = 2</td>
+<td style="text-align:left">设置小数位数</td>
+</tr>
+<tr>
+<td><code>TypeNumberShowSep</code> = True</td>
+<td style="text-align:left">设置千位分隔</td>
+</tr>
+<tr>
+<td><code>/n</code></td>
+<td style="text-align:left">打印属性：换行</td>
+</tr>
+<tr>
+<td><code>/fn</code></td>
+<td style="text-align:left">打印属性：font name字体</td>
+</tr>
+<tr>
+<td><code>/fz</code></td>
+<td style="text-align:left">打印属性：font size大小</td>
+</tr>
+<tr>
+<td><code>/fb1</code></td>
+<td style="text-align:left">打印属性：font bold粗体</td>
+</tr>
+<tr>
+<td><code>/fb0</code></td>
+<td style="text-align:left">打印属性：非粗体</td>
+</tr>
+<tr>
+<td><code>/fi1</code></td>
+<td style="text-align:left">打印属性：font italic斜体</td>
+</tr>
+<tr>
+<td><code>/fi0</code></td>
+<td style="text-align:left">打印属性：非斜体</td>
+</tr>
+<tr>
+<td><code>/fu1</code></td>
+<td style="text-align:left">打印属性：font underline有下划线</td>
+</tr>
+<tr>
+<td><code>/fu0</code></td>
+<td style="text-align:left">打印属性：无下划线</td>
+</tr>
+<tr>
+<td><code>/fk1</code></td>
+<td style="text-align:left">打印属性：font strikethru有删除线</td>
+</tr>
+<tr>
+<td><code>/fk0</code></td>
+<td style="text-align:left">打印属性：无删除线</td>
+</tr>
+<tr>
+<td><code>/l</code></td>
+<td style="text-align:left">打印属性：居左</td>
+</tr>
+<tr>
+<td><code>/c</code></td>
+<td style="text-align:left">打印属性：居中</td>
+</tr>
+<tr>
+<td><code>/r</code></td>
+<td style="text-align:left">打印属性：居右</td>
+</tr>
+<tr>
+<td><code>/p</code></td>
+<td style="text-align:left">打印属性：页码</td>
+</tr>
+<tr>
+<td><code>/date</code></td>
+<td style="text-align:left">打印属性：日期</td>
+</tr>
+<tr>
+<td><code>/time</code></td>
+<td style="text-align:left">打印属性：时间</td>
+</tr>
+</tbody>
+</table>
+<p>打印实例<br><figure class="highlight vb"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">With</span> Sg2</div><div class="line">    Sg2.MaxRows = Mrec.RecordCount</div><div class="line">    <span class="keyword">Set</span> Sg2.DataSource = Mrec</div><div class="line">    .ColWidth(<span class="number">1</span>) = <span class="number">9</span></div><div class="line">    .ColWidth(<span class="number">2</span>) = <span class="number">8</span></div><div class="line">    .ColWidth(<span class="number">3</span>) = <span class="number">8</span></div><div class="line">    .ColWidth(<span class="number">4</span>) = <span class="number">33</span></div><div class="line">    .ColWidth(<span class="number">5</span>) = <span class="number">33</span></div><div class="line"><span class="keyword">End</span> <span class="keyword">With</span></div><div class="line"></div><div class="line"><span class="keyword">Private</span> <span class="keyword">Sub</span> fpSpreadPrint()</div><div class="line">    <span class="keyword">Dim</span> Tsbj, Txbj, Tzbj, Tybj, Ti <span class="keyword">As</span> <span class="built_in">Long</span></div><div class="line">    <span class="keyword">Dim</span> tableHead, tableBodyRow1, tableBodyRow2, tableFoot <span class="keyword">As</span> <span class="built_in">String</span></div><div class="line">    </div><div class="line">    <span class="keyword">With</span> Sg2</div><div class="line">        <span class="keyword">Dim</span> customerName, f_orderNo, code, <span class="keyword">operator</span>, operatDate, repealReason</div><div class="line">        Sg1.GetText <span class="number">1</span>, Sg1.activeRow, code</div><div class="line">        Sg1.GetText <span class="number">2</span>, Sg1.activeRow, f_orderNo</div><div class="line">        Sg1.GetText <span class="number">3</span>, Sg1.activeRow, customerName</div><div class="line">        Sg1.GetText <span class="number">4</span>, Sg1.activeRow, <span class="keyword">operator</span></div><div class="line">        Sg1.GetText <span class="number">5</span>, Sg1.activeRow, operatDate</div><div class="line">        Sg1.GetText <span class="number">6</span>, Sg1.activeRow, repealReason</div><div class="line">        </div><div class="line">        .MaxRows = .MaxRows + <span class="number">1</span></div><div class="line">        .SetText <span class="number">2</span>, .MaxRows, <span class="string">"撤销依据"</span></div><div class="line">        .TypeHAlign = TypeHAlignCenter</div><div class="line">        .AddCellSpan <span class="number">3</span>, .MaxRows, <span class="number">4</span>, <span class="number">1</span></div><div class="line">        .RowHeight(.MaxRows) = <span class="number">30</span></div><div class="line">        .SetText <span class="number">3</span>, .MaxRows, repealReason</div><div class="line">        </div><div class="line">        .Col = <span class="number">2</span></div><div class="line">        .Col2 = <span class="number">5</span></div><div class="line">        .Row = <span class="number">1</span></div><div class="line">        .PrintType = PrintTypeCellRange</div><div class="line">        </div><div class="line">        Tsbj = <span class="number">9</span></div><div class="line">        Txbj = <span class="number">5</span></div><div class="line">        Tzbj = <span class="number">8</span></div><div class="line">        Tybj = <span class="number">6</span></div><div class="line">        Ti = <span class="number">56.7</span></div><div class="line">        .PrintMarginTop = Tsbj * Ti</div><div class="line">        .PrintMarginBottom = Txbj * Ti</div><div class="line">        .PrintMarginLeft = Tzbj * Ti</div><div class="line">        .PrintMarginRight = Tybj * Ti</div><div class="line">        </div><div class="line">        tableHead = <span class="string">"合同撤销通知单/n/n"</span></div><div class="line">        tableBodyRow1 = <span class="string">"单据编号："</span> &amp; code &amp; <span class="string">"      "</span> &amp; <span class="string">"份合同号："</span> &amp; f_orderNo &amp; <span class="string">"      "</span> &amp; <span class="string">"订货单位名称："</span> &amp; customerName &amp; <span class="string">""</span> &amp; <span class="string">"/n/n"</span></div><div class="line">        tableBodyRow2 = <span class="string">"部门领导："</span> &amp; <span class="string">"                "</span> &amp; <span class="string">"经办人："</span> &amp; <span class="keyword">operator</span> &amp; <span class="string">"            "</span> &amp; <span class="string">"撤销日期："</span> &amp; operatDate &amp; <span class="string">"/n"</span></div><div class="line">        </div><div class="line">        .PrintHeader = <span class="string">"/c/fb1/fz""20"""</span> &amp; tableHead &amp; <span class="string">"/l/fb0/fz""10"""</span> &amp; tableBodyRow1 &amp; tableBodyRow2</div><div class="line">        .PrintFooter = <span class="string">"/n/c/p//"</span> &amp; .PrintPageCount</div><div class="line">                </div><div class="line">        FormPrint.PrintState = <span class="literal">False</span></div><div class="line">        FormPrint.PrintCount = <span class="number">0</span></div><div class="line">        FormPrint.SSP.hWndSpread = .hwnd</div><div class="line">        FormPrint.PrintCount = .PrintPageCount</div><div class="line">        FormPrint.Show <span class="number">1</span></div><div class="line">        </div><div class="line">        <span class="keyword">If</span> FormPrint.PrintState = <span class="literal">True</span> <span class="keyword">Then</span></div><div class="line">            .PrintSheet</div><div class="line">            FormPrint.PrintState = <span class="literal">False</span></div><div class="line">        <span class="keyword">End</span> <span class="keyword">If</span></div><div class="line">    <span class="keyword">End</span> <span class="keyword">With</span></div><div class="line">    <span class="keyword">Call</span> SG1_Click(Sg1.Col, Sg1.activeRow)</div><div class="line"><span class="keyword">End</span> <span class="keyword">Sub</span></div></pre></td></tr></table></figure></p>
+
+        </div>
+
+        <!-- YPN Add 2016-11-14 增加打赏 start -->
+        <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center">
+          <div>如果觉得我的文章对您有用，请随意打赏。您的支持将鼓励我继续创作！</div>
+          <button id="rewardButton", disable="enable", onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}", style="cursor: pointer; border: 0; outline: 0; border-radius: 100%; padding: 0; margin: 0; letter-spacing: normal; text-transform: none; text-indent: 0px; text-shadow: none">
+            <span onmouseover="this.style.color='rgb(236,96,0)';this.style.background='rgb(204,204,204)'" onmouseout="this.style.color='#fff';this.style.background='rgb(236,96,0)'" style="display: inline-block; width: 70px; height: 70px; border-radius: 100%; line-height: 81px; color: #fff; font: 400 35px/75px 'microsofty'; background: rgb(236,96,0)">赏</span>
+          </button>
+          <div id="QR" style="display: none;">
+            
+              <div id="wechat" style="display: inline-block">
+                <img id="wechat_qr" src="/assets/blogImg/YPN_wechatpay-32x32.png" alt="昜丿捺 WeChat Pay" style="width: 200px; max-width: 100%; display: inline-block"/>
+                <p>微信打赏</p>
+              </div>
+            
+          
+            <div id="alipay" style="display: inline-block">
+              <img id="alipay_qr" src="/assets/blogImg/YPN_alipay-32x32.jpg" alt="昜丿捺 Alipay" style="width: 200px; max-width: 100%; display: inline-block"/>
+              <p>支付宝打赏</p>
+            </div>
+          
+          </div>
+        </div>
+        <!-- YPN Add 2016-11-14 增加打赏 end -->
+
+        <!-- 多说最近访客 start -->
+        <div class="ds-recent-visitors" data-num-items="28" data-avatar-size="42" id="ds-recent-visitors"></div>
+        <!-- 多说最近访客 end -->
+        <!-- 多说评论框 start -->
+        <div class="ds-thread" data-thread-key="2016/12/22/【FPSpread】属性说明/" data-title="【FPSpread】属性说明" data-url="http://yoursite.com/2016/12/22/【FPSpread】属性说明/">
+        </div>
+        <!-- 多说评论框 end -->
+
+      </div>
+    </div>
+  </div>
+</article>
+
+
+
+    <!-- Footer -->
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <p class="copyright text-muted">
+          Theme By <a target="_blank" href="https://github.com/levblanc">Levblanc.</a>
+          Inspired By <a target="_blank" href="https://github.com/klugjo/hexo-theme-clean-blog">Clean Blog.</a>
+        <p class="copyright text-muted">
+          Powered By <a target="_blank" href="https://hexo.io/">Hexo.</a>
+        <p class="copyright text-muted">
+          本站总访问量 <span id="busuanzi_value_site_pv"></span> 次, 访客数 <span id="busuanzi_value_site_uv"></span> 人次, 本文总阅读量 <span id="busuanzi_value_page_pv"></span> 次
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+<script type="text/javascript">
+  (function(w,d,t,u,n,s,e){w['SwiftypeObject']=n;w[n]=w[n]||function(){
+  (w[n].q=w[n].q||[]).push(arguments);};s=d.createElement(t);
+  e=d.getElementsByTagName(t)[0];s.async=1;s.src=u;e.parentNode.insertBefore(s,e);
+  })(window,document,'script','//s.swiftypecdn.com/install/v2/st.js','_st');
+  
+  _st('install','Bw13BEeK5ASKzfM4WzMC','2.0.0');
+</script>
+
+    <!-- After Footer Scripts -->
+<script src="/js/highlight.pack.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function(event) {
+    var codeBlocks = Array.prototype.slice.call(document.getElementsByTagName('pre'))
+    codeBlocks.forEach(function(block, index) {
+      hljs.highlightBlock(block);
+    });
+  });
+</script>
+
+<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+<script type="text/javascript">
+var duoshuoQuery = {short_name:"yangpiena"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '/js/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+<!-- 多说公共JS代码 end -->
+
+<div id="totop" style="position:fixed;bottom:50px;right:30px;cursor: pointer;">
+	<a title="返回顶部"><img src="/img/scrollup.png"/></a>
+</div>
+<script src="/js/totop.js"></script>
+  </body>
+</html>
+

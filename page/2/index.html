@@ -112,8 +112,268 @@
     <div class="col-lg-10 col-md-10 col-md-offset-1">
       
         <div class="post-item-wrapper">
-  <a href="/2016/11/24/Windows命令学习/" class="post-title">
-      Windows命令学习
+  <a href="/2016/11/29/【SQL】查询死锁和阻塞/" class="post-title">
+      【SQL】查询死锁和阻塞
+  </a>
+  <div class="post-excerpt">
+    <!-- Post Date and Categories -->
+    <div class="date-and-category">
+      <div class="date">2016-11-29</div>
+      <div class="categories">
+        
+          
+
+<a href="/categories/SQL/">SQL</a>
+
+        
+      </div>
+    </div>
+    <!-- Post Excerpt -->
+    <div class="excerpt typo"><h3 id="查询死锁进程"><a href="#查询死锁进程" class="headerlink" title="查询死锁进程"></a>查询死锁进程</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">SELECT</div><div class="line">	request_session_id spid,</div><div class="line">	OBJECT_NAME(</div><div class="line">		resource_associated_entity_id</div><div class="line">	) tableName</div><div class="line">FROM</div><div class="line">	sys.dm_tran_locks</div><div class="line">WHERE</div><div class="line">	resource_type = &apos;OBJECT&apos;;</div></pre></td></tr></table></figure>
+<h3 id="杀死死锁进程"><a href="#杀死死锁进程" class="headerlink" title="杀死死锁进程"></a>杀死死锁进程</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">KILL spid;</div></pre></td></tr></table></figure>
+<h3 id="每秒死锁数量"><a href="#每秒死锁数量" class="headerlink" title="每秒死锁数量"></a>每秒死锁数量</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">SELECT  *</div><div class="line">FROM    sys.dm_os_performance_counters</div><div class="line">WHERE   counter_name LIKE &apos;Number of Deadlocksc%&apos;;</div></pre></td></tr></table></figure></div>
+    <!-- Post Tags -->
+    <div class="tags">
+      
+        
+
+<a class="tag" href="/tags/死锁/">死锁</a>
+
+
+      
+    </div>
+  </div>
+</div>
+
+      
+        <div class="post-item-wrapper">
+  <a href="/2016/11/29/【Oracle】imp和exp语句/" class="post-title">
+      【Oracle】imp和exp语句
+  </a>
+  <div class="post-excerpt">
+    <!-- Post Date and Categories -->
+    <div class="date-and-category">
+      <div class="date">2016-11-29</div>
+      <div class="categories">
+        
+          
+
+<a href="/categories/Oracle/">Oracle</a>
+
+        
+      </div>
+    </div>
+    <!-- Post Excerpt -->
+    <div class="excerpt typo"><h2 id="exp-imp命令详解"><a href="#exp-imp命令详解" class="headerlink" title="exp/imp命令详解"></a>exp/imp命令详解</h2><p>exp        导出命令<br>imp        导入命令</p>
+<p><strong>exp导出模式</strong><br>full模式：导出整个数据库<br>user模式：导出指定的用户<br>table模式：导出指定的表<br>tablespace模式：导出表空间</p>
+<p><strong>exp导出参数</strong><br>owner：指定要导出的用户列表<br>full=y：表示要导出整个数据库<br>tables：指定要导出的表<br>tablepaces：指定要导出的表空间<br>rows=y：表示导出表数据,否则只导出表的结构.<br>help=y：表示要获取帮助<br>indexs：指定是否导出索引<br>grants：表示是否导出授权<br>query：定查询条件,允许用户导出表的一部分数据<br>triggers：指定是否导出触发器<br></div>
+    <!-- Post Tags -->
+    <div class="tags">
+      
+        
+
+<a class="tag" href="/tags/导入导出/">导入导出</a>
+
+
+      
+    </div>
+  </div>
+</div>
+
+      
+        <div class="post-item-wrapper">
+  <a href="/2016/11/29/【Oracle】删除和创建表空间及用户/" class="post-title">
+      【Oracle】删除和创建表空间及用户
+  </a>
+  <div class="post-excerpt">
+    <!-- Post Date and Categories -->
+    <div class="date-and-category">
+      <div class="date">2016-11-29</div>
+      <div class="categories">
+        
+          
+
+<a href="/categories/Oracle/">Oracle</a>
+
+        
+      </div>
+    </div>
+    <!-- Post Excerpt -->
+    <div class="excerpt typo"><h3 id="1-删除表空间和用户"><a href="#1-删除表空间和用户" class="headerlink" title="1. 删除表空间和用户"></a>1. 删除表空间和用户</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">DROP USER XCBA CASCADE;</div><div class="line">DROP tablespace XCBA_temp including contents AND datafiles;</div><div class="line">DROP tablespace XCBA including contents AND datafiles;</div></pre></td></tr></table></figure></div>
+    <!-- Post Tags -->
+    <div class="tags">
+      
+        
+
+<a class="tag" href="/tags/创建表空间/">创建表空间</a>
+
+
+      
+    </div>
+  </div>
+</div>
+
+      
+        <div class="post-item-wrapper">
+  <a href="/2016/11/29/【FAQ】SQL/" class="post-title">
+      【FAQ】SQL
+  </a>
+  <div class="post-excerpt">
+    <!-- Post Date and Categories -->
+    <div class="date-and-category">
+      <div class="date">2016-11-29</div>
+      <div class="categories">
+        
+          
+
+<a href="/categories/FAQ/">FAQ</a>
+
+        
+      </div>
+    </div>
+    <!-- Post Excerpt -->
+    <div class="excerpt typo"><h1 id="关于SQL的常见问题解答"><a href="#关于SQL的常见问题解答" class="headerlink" title="关于SQL的常见问题解答"></a>关于SQL的常见问题解答</h1><hr>
+<h2 id="1-SQL句在Access里可正常执行，但在VB程序里报“FROM子句语法错误”"><a href="#1-SQL句在Access里可正常执行，但在VB程序里报“FROM子句语法错误”" class="headerlink" title="1. SQL句在Access里可正常执行，但在VB程序里报“FROM子句语法错误”"></a>1. SQL句在Access里可正常执行，但在VB程序里报“FROM子句语法错误”</h2><p>例如，报错SQL:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">SELECT</div><div class="line">	gz,</div><div class="line">	yz</div><div class="line">FROM</div><div class="line">	(SELECT DISTINCT gz, yz FROM dg LEFT JOIN dgdw ON dg.dg = dgdw.gz WHERE cpxh = &apos;abc&apos;) AS a</div><div class="line">ORDER BY</div><div class="line">	gz;</div></pre></td></tr></table></figure></p>
+<p>在Access里执行没问题，但放到代码里就<code>FROM子句语法错误</code>。此时，只需将from子语句用[]括起来，后面跟一个.即可，正确SQL如下：<br></div>
+    <!-- Post Tags -->
+    <div class="tags">
+      
+        
+
+<a class="tag" href="/tags/SQL/">SQL</a>
+
+
+      
+    </div>
+  </div>
+</div>
+
+      
+        <div class="post-item-wrapper">
+  <a href="/2016/11/28/【CSS】常见中文字体的英文名/" class="post-title">
+      【CSS】常见中文字体的英文名
+  </a>
+  <div class="post-excerpt">
+    <!-- Post Date and Categories -->
+    <div class="date-and-category">
+      <div class="date">2016-11-28</div>
+      <div class="categories">
+        
+          
+
+<a href="/categories/CSS/">CSS</a>
+
+        
+      </div>
+    </div>
+    <!-- Post Excerpt -->
+    <div class="excerpt typo"><p>考虑到文件编码问题，在CSS中推荐使用中文字体的英文表示法，以下附常见中文字体的英文名：</p>
+<h3 id="Mac-OS"><a href="#Mac-OS" class="headerlink" title="Mac OS"></a>Mac OS</h3><p>华文细黑：STHeiti Light [STXihei]<br>华文黑体：STHeiti<br>华文楷体：STKaiti<br>华文宋体：STSong<br>华文仿宋：STFangsong<br>儷黑 Pro：LiHei Pro Medium<br>儷宋 Pro：LiSong Pro Light<br>標楷體：BiauKai<br>蘋果儷中黑：Apple LiGothic Medium<br>蘋果儷細宋：Apple LiSung Light<br></div>
+    <!-- Post Tags -->
+    <div class="tags">
+      
+        
+
+<a class="tag" href="/tags/字体/">字体</a>
+
+
+      
+    </div>
+  </div>
+</div>
+
+      
+        <div class="post-item-wrapper">
+  <a href="/2016/11/28/【JavaScript】字符串去除空格/" class="post-title">
+      【JavaScript】字符串去除空格
+  </a>
+  <div class="post-excerpt">
+    <!-- Post Date and Categories -->
+    <div class="date-and-category">
+      <div class="date">2016-11-28</div>
+      <div class="categories">
+        
+          
+
+<a href="/categories/JavaScript/">JavaScript</a>
+
+        
+      </div>
+    </div>
+    <!-- Post Excerpt -->
+    <div class="excerpt typo"><ul>
+<li>去除所有空格:<br>str   =   str.replace(/\s+/g,””);       </li>
+<li>去除两边空格:<br>str   =   str.replace(/^\s+|\s+$/g,””);</li>
+<li>去除左空格：<br>str=str.replace( /^\s*/, ‘’);</li>
+<li>去除右空格：<br>str=str.replace(/(\s*$)/g, “”);</li>
+</ul></div>
+    <!-- Post Tags -->
+    <div class="tags">
+      
+        
+
+<a class="tag" href="/tags/字符串/">字符串</a>
+
+
+      
+    </div>
+  </div>
+</div>
+
+      
+        <div class="post-item-wrapper">
+  <a href="/2016/11/28/【思考】服务器虚拟化的好处/" class="post-title">
+      【思考】服务器虚拟化的好处
+  </a>
+  <div class="post-excerpt">
+    <!-- Post Date and Categories -->
+    <div class="date-and-category">
+      <div class="date">2016-11-28</div>
+      <div class="categories">
+        
+          
+
+<a href="/categories/思考/">思考</a>
+
+        
+      </div>
+    </div>
+    <!-- Post Excerpt -->
+    <div class="excerpt typo"><h1 id="服务器虚拟化的好处"><a href="#服务器虚拟化的好处" class="headerlink" title="服务器虚拟化的好处"></a>服务器虚拟化的好处</h1><hr>
+<ul>
+<li><p>整合服务器，通过将物理服务器变成虚拟服务器减少物理服务器的数量，可以在电力和冷却成本上获得巨大节省。此外，还可以减少数据中心UPS和网络设备费用、所占用的空间等等。</p>
+</li>
+<li><p>避免过多部署，在实施服务器虚拟化之前，管理员通常需要额外部署一下服务器来满足不时之需。利用服务器虚拟化，可以避免这种额外部署工作，而且它支持虚拟机的完美分割。</p>
+</li>
+<li><p>事半功倍，在经济不景气的情况下，IT部门和管理员更需要有事半功倍的理想方式来实现。服务器虚拟化可以帮助管理员更灵活、更高效地实现IT管理工作。</p>
+</li>
+<li><p>节省开支，通过服务器虚拟化，公司不仅能享受到物理服务器、电源和散热系统带来的成本节约，而且还可以大幅减少管理物理服务器的宝贵时间。终端用户也会因高效稳定运行而更具有忠诚度。</p>
+</li>
+<li><p>迁移虚拟机，服务器虚拟化的一大功能是支持将运行中的虚拟机从一个主机迁移到另一个主机上，而且这个过程中不会出现宕机事件。VMware的 vMotion能为你实现这一点，使得像分布式资源调度（DRS）和分布式电源管理（DPM）一样去实现。</p>
+</li>
+<li><p>减少宕机，事件类似vMotion，storage vMotion（svMotion）、DRS和VMware高可用性（VMHA），都有助于虚拟化服务器实现比物理服务器更长的运行时间。</p>
+</li>
+</ul>
+<blockquote>
+<p>高可用：降低故障出现的概率；缩小故障影响的范围；出现故障快速恢复。</p>
+</blockquote></div>
+    <!-- Post Tags -->
+    <div class="tags">
+      
+        
+
+<a class="tag" href="/tags/虚拟化/">虚拟化</a>
+
+
+      
+    </div>
+  </div>
+</div>
+
+      
+        <div class="post-item-wrapper">
+  <a href="/2016/11/24/【Windows】命令学习/" class="post-title">
+      【Windows】命令学习
   </a>
   <div class="post-excerpt">
     <!-- Post Date and Categories -->
@@ -174,8 +434,8 @@
 
       
         <div class="post-item-wrapper">
-  <a href="/2016/11/24/日志书写规范/" class="post-title">
-      日志书写规范
+  <a href="/2016/11/24/【程序员】日志书写规范/" class="post-title">
+      【程序员】日志书写规范
   </a>
   <div class="post-excerpt">
     <!-- Post Date and Categories -->
@@ -185,7 +445,7 @@
         
           
 
-<a href="/categories/运维/">运维</a>
+<a href="/categories/程序员/">程序员</a>
 
         
       </div>
@@ -211,8 +471,8 @@
 
       
         <div class="post-item-wrapper">
-  <a href="/2016/11/22/更换电脑后如何修改博客/" class="post-title">
-      更换电脑后如何修改博客
+  <a href="/2016/11/22/【Hexo】更换电脑后如何修改博客/" class="post-title">
+      【Hexo】更换电脑后如何修改博客
   </a>
   <div class="post-excerpt">
     <!-- Post Date and Categories -->
@@ -236,220 +496,7 @@
       
         
 
-<a class="tag" href="/tags/hexo/">hexo</a>
-
-
-      
-    </div>
-  </div>
-</div>
-
-      
-        <div class="post-item-wrapper">
-  <a href="/2016/11/22/Linux发展史/" class="post-title">
-      Linux发展史
-  </a>
-  <div class="post-excerpt">
-    <!-- Post Date and Categories -->
-    <div class="date-and-category">
-      <div class="date">2016-11-22</div>
-      <div class="categories">
-        
-          
-
-<a href="/categories/Linux/">Linux</a>
-
-        
-      </div>
-    </div>
-    <!-- Post Excerpt -->
-    <div class="excerpt typo">暂无文章摘要</div>
-    <!-- Post Tags -->
-    <div class="tags">
-      
-        
-
-<a class="tag" href="/tags/Linux/">Linux</a>
-
-
-      
-    </div>
-  </div>
-</div>
-
-      
-        <div class="post-item-wrapper">
-  <a href="/2016/11/22/Linux命令学习/" class="post-title">
-      Linux命令学习
-  </a>
-  <div class="post-excerpt">
-    <!-- Post Date and Categories -->
-    <div class="date-and-category">
-      <div class="date">2016-11-22</div>
-      <div class="categories">
-        
-          
-
-<a href="/categories/OS/">OS</a>
-
-        
-      </div>
-    </div>
-    <!-- Post Excerpt -->
-    <div class="excerpt typo"><h2 id="基础命令"><a href="#基础命令" class="headerlink" title="基础命令"></a>基础命令</h2><h3 id="系统"><a href="#系统" class="headerlink" title="系统"></a>系统</h3><table>
-<thead>
-<tr>
-<th>命令</th>
-<th style="text-align:left">说明</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>reboot</td>
-<td style="text-align:left">重启系统</td>
-</tr>
-<tr>
-<td>shutdown -r now</td>
-<td style="text-align:left">重启系统</td>
-</tr>
-<tr>
-<td>shutdown -c</td>
-<td style="text-align:left">取消重启</td>
-</tr>
-<tr>
-<td>halt</td>
-<td style="text-align:left">立刻关机</td>
-</tr>
-<tr>
-<td>poweroff</td>
-<td style="text-align:left">立刻关机</td>
-</tr>
-<tr>
-<td>shutdown -h now</td>
-<td style="text-align:left">立刻关机（root用户使用）</td>
-</tr>
-<tr>
-<td>shutdown -h 10</td>
-<td style="text-align:left">10分钟后自动关机</td>
-</tr>
-<tr>
-<td></td>
-<td style="text-align:left"></td>
-</tr>
-<tr>
-<td>cat /proc/version</td>
-<td style="text-align:left">查看Linux内核版本</td>
-</tr>
-<tr>
-<td>uname -a</td>
-<td style="text-align:left">查看Linux内核版本</td>
-</tr>
-<tr>
-<td>lsb_release -a</td>
-<td style="text-align:left">查看Linux系统版本</td>
-</tr>
-<tr>
-<td>cat /etc/issue</td>
-<td style="text-align:left">查看Linux系统版本</td>
-</tr>
-<tr>
-<td>cat /etc/redhat-release</td>
-<td style="text-align:left">查看Linux系统版本（只适合Redhat系）</td>
-</tr>
-<tr>
-<td></td>
-<td style="text-align:left"></td>
-</tr>
-<tr>
-<td>yum update</td>
-<td style="text-align:left">升级Linux，升级所有包同时也升级软件和系统内核</td>
-</tr>
-<tr>
-<td>yum upgrade</td>
-<td style="text-align:left">升级Linux，只升级所有包，不升级软件和系统内核</td>
-</tr>
-</tbody>
-</table></div>
-    <!-- Post Tags -->
-    <div class="tags">
-      
-        
-
-<a class="tag" href="/tags/Linux/">Linux</a>
-
-
-      
-    </div>
-  </div>
-</div>
-
-      
-        <div class="post-item-wrapper">
-  <a href="/2016/11/09/hello-world/" class="post-title">
-      Hello World
-  </a>
-  <div class="post-excerpt">
-    <!-- Post Date and Categories -->
-    <div class="date-and-category">
-      <div class="date">2016-11-09</div>
-      <div class="categories">
-        
-          
-
-<a href="/categories/Blog/">Blog</a>
-
-        
-      </div>
-    </div>
-    <!-- Post Excerpt -->
-    <div class="excerpt typo"><p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html">Deployment</a><br></div>
-    <!-- Post Tags -->
-    <div class="tags">
-      
-        
-
-<a class="tag" href="/tags/hexo/">hexo</a>
-
-
-      
-    </div>
-  </div>
-</div>
-
-      
-        <div class="post-item-wrapper">
-  <a href="/2016/11/09/博客搭建记录/" class="post-title">
-      博客搭建记录
-  </a>
-  <div class="post-excerpt">
-    <!-- Post Date and Categories -->
-    <div class="date-and-category">
-      <div class="date">2016-11-09</div>
-      <div class="categories">
-        
-          
-
-<a href="/categories/Blog/">Blog</a>
-
-        
-      </div>
-    </div>
-    <!-- Post Excerpt -->
-    <div class="excerpt typo"><p>今天终于有了自己的博客，下面记录一下搭建步骤。<br>搭建步骤主要参考WX_JIN的博文<a href="http://blog.csdn.net/wx_jin/article/details/51027783">Windows下使用Hexo+GithubPage搭建博客</a>搭建的，感谢WX_JIN的分享。<br></div>
-    <!-- Post Tags -->
-    <div class="tags">
-      
-        
-
-<a class="tag" href="/tags/hexo/">hexo</a>
+<a class="tag" href="/tags/Hexo/">Hexo</a>
 
 
       
@@ -475,6 +522,13 @@
                 </a>
               </li>
           
+          
+            <li class="next">
+              <a href="/page/3/">
+                <span>下一页</span>
+                <span class="symbol-right">&gt;</span>
+              </a>
+            </li>
           
       </ul>
     </div>
