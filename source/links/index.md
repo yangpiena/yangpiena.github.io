@@ -5,14 +5,13 @@ date: 2016-11-11 12:31:37
 ---
 
 ## **常用**
-[谷歌搜索](https://www.google.com/ncr)
-[谷歌香港](https://www.google.com.hk/ncr)
-[维基百科](https://www.wikipedia.org/)
+[谷歌搜索](https://www.google.com/ncr)	|	[谷歌香港](https://www.google.com.hk/ncr)	|	[维基百科](https://www.wikipedia.org/)
 [七牛云存储](https://portal.qiniu.com/create)
+[CSDN.NET](http://www.csdn.net/)
 [VeryCD 电驴大全](http://www.verycd.com/)
 [360doc个人图书馆](http://www.360doc.com/)
 [2016 Google hosts 持续更新](https://laod.cn/hosts/2016-google-hosts.html)
-[Windows在线markdown工具](https://www.zybuluo.com/mdeditor)
+[Windows在线markdown工具](https://www.zybuluo.com/mdeditor)	|	[Markdown支持的语言](http://blog.csdn.net/peng_hong_fu/article/details/52805408)
 
 ## **音乐**
 [SongTaste](http://www.songtaste.com/)
@@ -34,11 +33,9 @@ date: 2016-11-11 12:31:37
 [SUSE Linux启用SSH](http://tophandxing.blog.163.com/blog/static/109714820124123438513/)
 [Win10怎么把批处理文件固定到开始菜单](http://www.jb51.net/os/win10/483729.html)
 
-## **系统软件下载**
+## **系统/软件下载**
 [绿盟](http://www.xdowns.com/)
-[系统之家](http://www.xitongzhijia.net/)
-[Win10之家](http://www.iwin10.com/)[Win10之家](http://www.62hx.com/)[Win10之家](http://www.xh52.com/)
-[IT Win10之家](http://win10.ithome.com/win10xiazai/)
+[系统之家](http://www.xitongzhijia.net/)	|	[Win10之家](http://www.iwin10.com/)	|	[Win10之家](http://www.62hx.com/)	|	[Win10之家](http://www.xh52.com/)	|	[IT Win10之家](http://win10.ithome.com/win10xiazai/)
 [最新迅雷(xunlei)会员账号天天更新同享](http://www.win10.name/news/193.html)
 
 ## **IT-社区**
@@ -58,6 +55,7 @@ date: 2016-11-11 12:31:37
 [png在线转ico](http://www.easyicon.net/covert/)
 [Markdown在线编辑](http://www.ctrlshift.net/project/markdowneditor/)
 [正则表达式在线测试](http://tool.chinaz.com/regex/)
+[Sublime Text 2/3安装使用及常用插件](http://www.cnblogs.com/dudumao/p/4054086.html)	|	[Sublime Text PackageControl](https://packagecontrol.io/)
 
 ## **IT-教程**
 [sass入门教程](http://www.w3cplus.com/sassguide/)
@@ -78,40 +76,32 @@ date: 2016-11-11 12:31:37
 ## **IT-jQuery**
 [jQuery插件库](http://www.jq22.com/)
 
-## **IT-jQuery**
-[AngularJS官网](https://angularjs.org/)
-[AngularJS中文官网](https://angular.cn/)
+## **IT-Angular**
+[AngularJS官网](https://angularjs.org/)			|	[AngularJS中文官网](https://angular.cn/)				|	[AngularUI官网](http://angular-ui.github.io/)
 [AngularJS所有版本下载](https://code.angularjs.org/)
-[AngularUI官网](http://angular-ui.github.io/)
-[NgNice站点是由一批AngularJS爱好者发起的，致力于打造一个AngularJS的学习和经验分享平台。](http://www.ngnice.com/)
+[Angularjs 中文版 API](http://www.ngnice.com)	|	[Angularjs English API](https://docs.angularjs.org/api)	|	[Angularjs 中文版 API v1.3.9](http://www.angularjsapi.cn/#/index)
 [AngularJS实例](http://showcase.ngnice.com/#/home/home)
+[Angular Modules](http://ngmodules.org/)
+[Angular Script](http://angularscript.com/)
+[CSDN知识库：AngularJS](http://lib.csdn.net/base/23)
 [伯乐在线：AngularJS](http://blog.jobbole.com/tag/angularjs/)
 [RIA爱好者：学习AngularJS](http://www.riafan.com/angularjs-learning/)
 [2013年度最强AngularJS资源合集](http://www.iteye.com/news/28651-AngularJS-Google-resource)
-[Angularjs 中文版 API v1.3.9](http://www.angularjsapi.cn/#/index)
-[Angularjs 中文版 API](http://www.ngnice.com)
-[Angularjs English API](https://docs.angularjs.org/api)
-[Angular Script](http://angularscript.com/)
-[Angular Modules](http://ngmodules.org/)
-[CSDN知识库：AngularJS](http://lib.csdn.net/base/23)
 [20个免费的 AngularJS 资源和开发教程](http://www.html5cn.org/article-9473-1.html)
+[NgNice站点是由一批AngularJS爱好者发起的，致力于打造一个AngularJS的学习和经验分享平台。](http://www.ngnice.com/)
 
 ## **IT-Flex**
+[Flex下载地址](http://www.adobe.com/support/flashplayer/downloads.html)
+[访问网址查看浏览器FLash版本、Debug Player](http://kb2.adobe.com/cps/155/tn_15507.html)
 [Flex成功案例](http://keren.iteye.com/blog/377733)
-[Flex学习视频748-798](http://www.riameeting.com/node/748)
-[flex学习笔记](http://blog.csdn.net/wugouzi/article/details/5598392)
+[flex学习笔记](http://blog.csdn.net/wugouzi/article/details/5598392)	|	[Flex学习视频748-798](http://www.riameeting.com/node/748)
 [Flex 3 advancedDataGrid的使用](http://www.cnblogs.com/xuehai/archive/2009/09/26/1574531.html)
-[Flex 性能优化](https://my.oschina.net/return/blog/208294#navbar-header)
-[Flex进阶持续学习——性能优化](http://coffeelover.iteye.com/blog/1163906)
-[flex应用程序性能优化十个方法](http://www.wangqi.com/html/2010-12/12796.htm)
+[Flex性能优化](https://my.oschina.net/return/blog/208294#navbar-header)	|	[Flex进阶持续学习——性能优化](http://coffeelover.iteye.com/blog/1163906)	|	[flex应用程序性能优化十个方法](http://www.wangqi.com/html/2010-12/12796.htm)
 
 ## **IT-Java**
-[spring-mvc与jquery-easyui整合](http://blog.csdn.net/cfl20121314/article/details/42160035)
-[基于Spring + Spring MVC + Mybatis 高性能web构建](http://blog.csdn.net/zoutongyuan/article/details/41379851)
-[SpringMVC+Hibernate +MySql+ EasyUI实现CRUD](http://my.oschina.net/xshuai/blog/345117)
 [SSM框架——详细整合教程（Spring+SpringMVC+MyBatis）](http://blog.csdn.net/zhshulin/article/details/37956105)
-[Maven环境搭建和介绍](http://blog.csdn.net/fengshizty/article/details/43019561)
-[Maven搭建SpringMVC+Mybatis项目详解](http://doc.okbase.net/fengshizty/archive/126397.html)
+[spring-mvc与jquery-easyui整合](http://blog.csdn.net/cfl20121314/article/details/42160035)	|	[SpringMVC+Hibernate +MySql+ EasyUI实现CRUD](http://my.oschina.net/xshuai/blog/345117)	|	[基于Spring + Spring MVC + Mybatis 高性能web构建](http://blog.csdn.net/zoutongyuan/article/details/41379851)
+[Maven环境搭建和介绍](http://blog.csdn.net/fengshizty/article/details/43019561)	|	[Maven搭建SpringMVC+Mybatis项目详解](http://doc.okbase.net/fengshizty/archive/126397.html)
 [配置简单功能强大的excel工具类搞定excel导入导出工具类](http://blog.csdn.net/lk_blog/article/details/8007777)
 
 ## **IT-SQL**
@@ -124,6 +114,5 @@ date: 2016-11-11 12:31:37
 [hexo常用命令笔记](https://segmentfault.com/a/1190000002632530)
 [Hexo博客优化](http://xwartz.xyz/blog/2016/09/reduce-blog-load-time/)
 [Hexo常见问题](http://wp.huangshiyang.com/hexo%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88)
-[Hexo官方主题](https://hexo.io/themes/)
-[Hexo主题](https://github.com/hexojs/hexo/wiki/Themes)
+[Hexo官方主题](https://hexo.io/themes/)	|	[Hexo主题](https://github.com/hexojs/hexo/wiki/Themes)
 [贴图库](http://www.tietuku.com/)
