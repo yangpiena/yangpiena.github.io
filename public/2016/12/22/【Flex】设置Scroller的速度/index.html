@@ -68,6 +68,14 @@
               </li>
             
               <li>
+                <a href="/tags">
+                  
+                  标签
+                  
+                </a>
+              </li>
+            
+              <li>
                 <a href="/links">
                   
                   链接
@@ -118,7 +126,7 @@
           <!-- Date -->
           <span class="date-time info">发表于
             <span class="date">2016-12-22</span>
-            <span class="time">16:58:32</span>
+            <span class="time">15:13:09</span>
           </span>
           
           <!--  Categories  -->
@@ -146,7 +154,7 @@
         
         <!-- Post Main Content -->
         <div class="post-content">
-          <p>Flex每个Scroller都有一个mouseWheelChanging方法,当滚动鼠标中轮的时候会调用，而后就可以在这个函数中进行判断，如下:<br><a id="more"></a><br>假设我的滚动条id = mainScroller<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line">protected function mainScroller _mouseWheelChangingHandler(event:FlexMouseEvent):void</div><div class="line">&#123;</div><div class="line">        event.preventDefault();</div><div class="line">        var modifier:int       = 5;</div><div class="line">        var delta:Number       = Number(event.delta) * modifier;</div><div class="line">        var viewport:IViewport = mainScroller.verticalScrollBar.viewport;</div><div class="line">        var vPos:Number        = viewport.verticalScrollPosition;</div><div class="line">        var maximum:Number     = mainScroller.verticalScrollBar.maximum;</div><div class="line">                                </div><div class="line">        if (delta &lt; 0) </div><div class="line">        &#123;</div><div class="line">        	mainScroller.verticalScrollBar.viewport.verticalScrollPosition = Math.min(vPos - delta, maximum) ;        </div><div class="line">        &#125;</div><div class="line">        else</div><div class="line">        &#123;</div><div class="line">        	mainScroller.verticalScrollBar.viewport.verticalScrollPosition = Math.max(vPos - delta, 0);</div><div class="line">        &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+          <p>Flex每个Scroller都有一个mouseWheelChanging方法,当滚动鼠标中轮的时候会调用，而后就可以在这个函数中进行判断，如下:<br><a id="more"></a><br>假设我的滚动条id = mainScroller<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line">protected function mainScroller _mouseWheelChangingHandler(event:FlexMouseEvent):void</div><div class="line">&#123;</div><div class="line">	event.preventDefault();</div><div class="line">	var modifier:int       = 5;</div><div class="line">	var delta:Number       = Number(event.delta) * modifier;</div><div class="line">	var viewport:IViewport = mainScroller.verticalScrollBar.viewport;</div><div class="line">	var vPos:Number        = viewport.verticalScrollPosition;</div><div class="line">	var maximum:Number     = mainScroller.verticalScrollBar.maximum;</div><div class="line">	</div><div class="line">	if (delta &lt; 0) </div><div class="line">	&#123;</div><div class="line">		mainScroller.verticalScrollBar.viewport.verticalScrollPosition = Math.min(vPos - delta, maximum) ;        </div><div class="line">	&#125;</div><div class="line">	else</div><div class="line">	&#123;</div><div class="line">		mainScroller.verticalScrollBar.viewport.verticalScrollPosition = Math.max(vPos - delta, 0);</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
 
         </div>
 

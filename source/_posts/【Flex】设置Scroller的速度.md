@@ -14,20 +14,20 @@ Flex每个Scroller都有一个mouseWheelChanging方法,当滚动鼠标中轮的�
 ```as3
 protected function mainScroller _mouseWheelChangingHandler(event:FlexMouseEvent):void
 {
-        event.preventDefault();
-        var modifier:int       = 5;
-        var delta:Number       = Number(event.delta) * modifier;
-        var viewport:IViewport = mainScroller.verticalScrollBar.viewport;
-        var vPos:Number        = viewport.verticalScrollPosition;
-        var maximum:Number     = mainScroller.verticalScrollBar.maximum;
-                                
-        if (delta < 0) 
-        {
-        	mainScroller.verticalScrollBar.viewport.verticalScrollPosition = Math.min(vPos - delta, maximum) ;        
-        }
-        else
-        {
-        	mainScroller.verticalScrollBar.viewport.verticalScrollPosition = Math.max(vPos - delta, 0);
-        }
+	event.preventDefault();
+	var modifier:int       = 5;
+	var delta:Number       = Number(event.delta) * modifier;
+	var viewport:IViewport = mainScroller.verticalScrollBar.viewport;
+	var vPos:Number        = viewport.verticalScrollPosition;
+	var maximum:Number     = mainScroller.verticalScrollBar.maximum;
+	
+	if (delta < 0) 
+	{
+		mainScroller.verticalScrollBar.viewport.verticalScrollPosition = Math.min(vPos - delta, maximum) ;        
+	}
+	else
+	{
+		mainScroller.verticalScrollBar.viewport.verticalScrollPosition = Math.max(vPos - delta, 0);
+	}
 }
 ```

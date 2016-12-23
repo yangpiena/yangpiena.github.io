@@ -22,10 +22,12 @@
     pageTitle = post.title || __('untitled_post');
   } else if (headerType === 'archive') {
     pageTitle = __('archive_title');
+  } else if (headerType === 'tags') {
+    pageTitle = '标签';
   } else if (headerType === 'links') {
-    pageTitle = '链接'
+    pageTitle = '链接';
   } else if (headerType === 'blank') {
-    pageTitle = '关于'
+    pageTitle = '关于';
   }
 %>
 

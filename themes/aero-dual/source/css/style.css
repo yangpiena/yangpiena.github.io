@@ -2,7 +2,8 @@
 .content{
 	background:#f7f7f7 url(../img/pinstripe.gif) repeat top left;
 	color:#000;
-	font-family: Georgia, "Times New Roman",sans-serif;
+	/*font-family: Georgia, "Times New Roman",sans-serif;*/
+	font-family: -apple-system, "Helvetica Neue", "Arial", "PingFang SC", "Hiragino Sans GB", "STHeiti", "Microsoft YaHei", "Microsoft JhengHei", "Source Han Sans SC", "Noto Sans CJK SC", "Source Han Sans CN", "Noto Sans SC", "Source Han Sans TC", "Noto Sans CJK TC", "WenQuanYi Micro Hei", SimSun, sans-serif;
 	font-size:12px;
 }
 .content a{
@@ -44,8 +45,10 @@ ul.iw_thumbs li div{
 	z-index:100;
 }
 ul.iw_thumbs li div h2{
-	font-family: 'Wire One', arial, serif;
+	/*font-family: 'Wire One', arial, serif;*/
+	font-family: -apple-system, "Helvetica Neue", "Arial", "PingFang SC", "Hiragino Sans GB", "STHeiti", "Microsoft YaHei", "Microsoft JhengHei", "Source Han Sans SC", "Noto Sans CJK SC", "Source Han Sans CN", "Noto Sans SC", "Source Han Sans TC", "Noto Sans CJK TC", "WenQuanYi Micro Hei", SimSun, sans-serif;
 	font-size:38px;
+	font-weight: 800;
 	text-transform:uppercase;
 	text-shadow:0px 0px 1px #fff;
 }
@@ -116,7 +119,8 @@ ul.iw_thumbs li:nth-child(7n) img{
 .iw_zoom{
 	color:white;
 	font-size:8px;
-	font-family:Arial, sans-serif;
+	/*font-family:Arial, sans-serif;*/
+	font-family: -apple-system, "Helvetica Neue", "Arial", "PingFang SC", "Hiragino Sans GB", "STHeiti", "Microsoft YaHei", "Microsoft JhengHei", "Source Han Sans SC", "Noto Sans CJK SC", "Source Han Sans CN", "Noto Sans SC", "Source Han Sans TC", "Noto Sans CJK TC", "WenQuanYi Micro Hei", SimSun, sans-serif;
 	text-transform:uppercase;
 	padding:14px;
 	display:none;
@@ -171,3 +175,6 @@ ul.iw_thumbs li:nth-child(7n) img{
 .footer a.left{
 	float:left;
 } */
+
+
+/*YPN Add 2016-12-23*/
