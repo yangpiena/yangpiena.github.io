@@ -104,20 +104,163 @@
       </div>
     </div>
   </div>
-
+<!-- YPN Del 2016-12-27 因swiftype不能免费使用了，固已注销账号，停止使用搜索功能。
   
     <form class="search" action="/search/index.html" method="get" accept-charset="utf-8" style="text-align:right">
     <label>Search</label>
     <input type="text" id="search" class="st-default-search-input" maxlength="20" placeholder="Search" />
     </form>
   
-
+-->
 </header>
 
 <!-- Home Page Post List -->
 <div class="container">
   <div class="row">
     <div class="col-lg-10 col-md-10 col-md-offset-1">
+      
+        <div class="post-item-wrapper">
+  <a href="/2016/12/27/【FAQ】Flash Builder/" class="post-title">
+      【FAQ】Flash Builder
+  </a>
+  <div class="post-excerpt">
+    <!-- Post Date and Categories -->
+    <div class="date-and-category">
+      <div class="date">2016-12-27</div>
+      <div class="categories">
+        
+          
+
+<a href="/categories/FAQ/">FAQ</a>
+
+        
+      </div>
+    </div>
+    <!-- Post Excerpt -->
+    <div class="excerpt typo">暂无文章摘要</div>
+    <!-- Post Tags -->
+    <div class="tags">
+      
+        
+
+<a class="tag" href="/tags/Flash-Builder/">Flash Builder</a> <a class="tag" href="/tags/FAQ/">FAQ</a>
+
+
+      
+    </div>
+  </div>
+</div>
+
+      
+        <div class="post-item-wrapper">
+  <a href="/2016/12/27/【Flash Builder】4.6效率优化方法/" class="post-title">
+      【Flash Builder】4.6效率优化方法
+  </a>
+  <div class="post-excerpt">
+    <!-- Post Date and Categories -->
+    <div class="date-and-category">
+      <div class="date">2016-12-27</div>
+      <div class="categories">
+        
+          
+
+<a href="/categories/Flash-Builder/">Flash Builder</a>
+
+        
+      </div>
+    </div>
+    <!-- Post Excerpt -->
+    <div class="excerpt typo"><p>Flash Builder 4.6编译慢、报java heap space堆空间异常错误的优化方法：</p>
+<ol>
+<li>在安装路径下找到<code>FlexBuilder.ini</code>文件，进行编辑，加入以下参数：<pre><code>-vmargs
+-Xms128m
+-Xmx512m
+-XX:MaxPermSize=256m
+-XX:PermSize=64m                    #不要设置太高，否则会更加慢
+-Djava.net.preferIPv4Stack=true
+</code></pre>加入后可以明显加快编译速度数倍，第3条可以明显减低FB挂掉的几率。</div>
+    <!-- Post Tags -->
+    <div class="tags">
+      
+        
+
+<a class="tag" href="/tags/Flash-Builder/">Flash Builder</a> <a class="tag" href="/tags/优化/">优化</a>
+
+
+      
+    </div>
+  </div>
+</div>
+
+      
+        <div class="post-item-wrapper">
+  <a href="/2016/12/27/【Flash Builder】4.6免费使用方法/" class="post-title">
+      【Flash Builder】4.6免费使用方法
+  </a>
+  <div class="post-excerpt">
+    <!-- Post Date and Categories -->
+    <div class="date-and-category">
+      <div class="date">2016-12-27</div>
+      <div class="categories">
+        
+          
+
+<a href="/categories/Flash-Builder/">Flash Builder</a>
+
+        
+      </div>
+    </div>
+    <!-- Post Excerpt -->
+    <div class="excerpt typo"><p>Flash Builder 4.6免费使用具体步骤如下：</p>
+<ol>
+<li>到Adobe官网下载FlashBuilder 4.6，有简体中文版；</div>
+    <!-- Post Tags -->
+    <div class="tags">
+      
+        
+
+<a class="tag" href="/tags/Flash-Builder/">Flash Builder</a> <a class="tag" href="/tags/注册/">注册</a>
+
+
+      
+    </div>
+  </div>
+</div>
+
+      
+        <div class="post-item-wrapper">
+  <a href="/2016/12/27/【Eclipse】Java注释模板设置/" class="post-title">
+      【Eclipse】Java注释模板设置
+  </a>
+  <div class="post-excerpt">
+    <!-- Post Date and Categories -->
+    <div class="date-and-category">
+      <div class="date">2016-12-27</div>
+      <div class="categories">
+        
+          
+
+<a href="/categories/Eclipse/">Eclipse</a>
+
+        
+      </div>
+    </div>
+    <!-- Post Excerpt -->
+    <div class="excerpt typo"><p>设置注释模板的入口： Window-&gt;Preference-&gt;Java-&gt;Code Style-&gt;Code Template  ，然后展开Comments节点就是所有需设置注释的元素。现就每一元素逐一介绍：</p>
+<h4 id="文件-Files-注释标签："><a href="#文件-Files-注释标签：" class="headerlink" title="文件(Files)注释标签："></a>文件(Files)注释标签：</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">/**</div><div class="line"> * @Title       : $&#123;file_name&#125;</div><div class="line"> * @Package     : $&#123;package_name&#125;</div><div class="line"> * @Description : $&#123;todo&#125;</div><div class="line"> * @author      : YPN</div><div class="line"> * @date        : $&#123;date&#125; $&#123;time&#125;</div><div class="line"> * @version     : V1.0</div><div class="line"> */</div></pre></td></tr></table></figure></div>
+    <!-- Post Tags -->
+    <div class="tags">
+      
+        
+
+<a class="tag" href="/tags/Eclipse/">Eclipse</a> <a class="tag" href="/tags/Java/">Java</a>
+
+
+      
+    </div>
+  </div>
+</div>
+
       
         <div class="post-item-wrapper">
   <a href="/2016/12/22/【Flex】属性说明/" class="post-title">
@@ -309,147 +452,6 @@
         
 
 <a class="tag" href="/tags/log4j/">log4j</a>
-
-
-      
-    </div>
-  </div>
-</div>
-
-      
-        <div class="post-item-wrapper">
-  <a href="/2016/12/22/【FPSpread】fpComboAdo的初始化/" class="post-title">
-      【FPSpread】fpComboAdo的初始化
-  </a>
-  <div class="post-excerpt">
-    <!-- Post Date and Categories -->
-    <div class="date-and-category">
-      <div class="date">2016-12-22</div>
-      <div class="categories">
-        
-          
-
-<a href="/categories/FPSpread/">FPSpread</a>
-
-        
-      </div>
-    </div>
-    <!-- Post Excerpt -->
-    <div class="excerpt typo"><p>初始化具有2列内容的下拉框，如下实例：<br></div>
-    <!-- Post Tags -->
-    <div class="tags">
-      
-        
-
-<a class="tag" href="/tags/fpComboAdo/">fpComboAdo</a>
-
-
-      
-    </div>
-  </div>
-</div>
-
-      
-        <div class="post-item-wrapper">
-  <a href="/2016/12/22/【FPSpread】属性说明/" class="post-title">
-      【FPSpread】属性说明
-  </a>
-  <div class="post-excerpt">
-    <!-- Post Date and Categories -->
-    <div class="date-and-category">
-      <div class="date">2016-12-22</div>
-      <div class="categories">
-        
-          
-
-<a href="/categories/FPSpread/">FPSpread</a>
-
-        
-      </div>
-    </div>
-    <!-- Post Excerpt -->
-    <div class="excerpt typo"><p>以下记录一些常用的fpSpread控件属性，按字母排序：<br></div>
-    <!-- Post Tags -->
-    <div class="tags">
-      
-        
-
-<a class="tag" href="/tags/属性/">属性</a>
-
-
-      
-    </div>
-  </div>
-</div>
-
-      
-        <div class="post-item-wrapper">
-  <a href="/2016/11/29/【SQL】经典语句/" class="post-title">
-      【SQL】经典语句
-  </a>
-  <div class="post-excerpt">
-    <!-- Post Date and Categories -->
-    <div class="date-and-category">
-      <div class="date">2016-11-29</div>
-      <div class="categories">
-        
-          
-
-<a href="/categories/SQL/">SQL</a>
-
-        
-      </div>
-    </div>
-    <!-- Post Excerpt -->
-    <div class="excerpt typo"><h1 id="一、基础篇"><a href="#一、基础篇" class="headerlink" title="一、基础篇"></a>一、基础篇</h1><h2 id="1、创建数据库"><a href="#1、创建数据库" class="headerlink" title="1、创建数据库"></a>1、创建数据库</h2><pre><code>CREATE DATABASE database-name
-</code></pre><h2 id="2、删除数据库"><a href="#2、删除数据库" class="headerlink" title="2、删除数据库"></a>2、删除数据库</h2><pre><code>drop database dbname
-</code></pre><h2 id="3、备份sql-server"><a href="#3、备份sql-server" class="headerlink" title="3、备份sql server"></a>3、备份sql server</h2><pre><code>创建 备份数据的 device
-USE master
-EXEC sp_addumpdevice &apos;disk&apos;, &apos;testBack&apos;, &apos;c:\mssql7backup\MyNwind_1.dat&apos;
-开始 备份
-BACKUP DATABASE pubs TO testBack 
-</code></pre></div>
-    <!-- Post Tags -->
-    <div class="tags">
-      
-        
-
-<a class="tag" href="/tags/经典语句/">经典语句</a>
-
-
-      
-    </div>
-  </div>
-</div>
-
-      
-        <div class="post-item-wrapper">
-  <a href="/2016/11/29/【SQL】获取字符串最后出现的位置/" class="post-title">
-      【SQL】获取字符串最后出现的位置
-  </a>
-  <div class="post-excerpt">
-    <!-- Post Date and Categories -->
-    <div class="date-and-category">
-      <div class="date">2016-11-29</div>
-      <div class="categories">
-        
-          
-
-<a href="/categories/SQL/">SQL</a>
-
-        
-      </div>
-    </div>
-    <!-- Post Excerpt -->
-    <div class="excerpt typo"><h4 id="1-如：’6-7-8-2-3-4-x’得到最后一个’-’在字符串的位置："><a href="#1-如：’6-7-8-2-3-4-x’得到最后一个’-’在字符串的位置：" class="headerlink" title="1. 如：’6.7.8.2.3.4.x’得到最后一个’.’在字符串的位置："></a>1. 如：’6.7.8.2.3.4.x’得到最后一个’.’在字符串的位置：</h4><figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">DECLARE</span> @str3 <span class="built_in">VARCHAR</span> (<span class="number">50</span>)</div><div class="line"><span class="keyword">SET</span> @str3 = <span class="string">'6.7.8.2.3.4.x'</span> </div><div class="line"><span class="keyword">SELECT</span> <span class="keyword">LEN</span>(@str3) - <span class="keyword">CHARINDEX</span>(<span class="string">'.'</span>, <span class="keyword">REVERSE</span>(@str3)) + <span class="number">1</span></div></pre></td></tr></table></figure>
-<pre><code>Integer:12
-</code></pre></div>
-    <!-- Post Tags -->
-    <div class="tags">
-      
-        
-
-<a class="tag" href="/tags/字符串/">字符串</a>
 
 
       
