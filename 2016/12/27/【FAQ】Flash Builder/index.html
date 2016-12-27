@@ -126,7 +126,7 @@
           <!-- Date -->
           <span class="date-time info">发表于
             <span class="date">2016-12-27</span>
-            <span class="time">15:57:08</span>
+            <span class="time">16:34:32</span>
           </span>
           
           <!--  Categories  -->
@@ -155,15 +155,17 @@
         <!-- Post Main Content -->
         <div class="post-content">
           <p>以下记录Flash Builder在使用过程中出现的问题和解决方法：</p>
-<ol>
-<li>重新连接“数据/服务”时，如果出现错误，如“数据类型重复”等问题，此时，可将数据服务彻底删除干净后重新连接即可。<br> 删除方法：<br> 1）删除文件夹services和valueObjects；<br> 2) 删除xx.fml文件的数据/服务内容。保留model标签和annotation标签内容，其它全删除。<pre><code>&lt;model xmlns=&quot;http://ns.adobe.com/Fiber/1.0&quot;&gt;
-      &lt;annotation name=&quot;ActionScriptGeneration&quot;&gt;
+<h4 id="1-重新连接“数据-服务”时，出现错误，如“数据类型重复”等问题"><a href="#1-重新连接“数据-服务”时，出现错误，如“数据类型重复”等问题" class="headerlink" title="1. 重新连接“数据/服务”时，出现错误，如“数据类型重复”等问题"></a>1. 重新连接“数据/服务”时，出现错误，如“数据类型重复”等问题</h4><p>此时，只需将数据服务彻底删除干净后再重新连接即可。删除方法：</p>
+<ul>
+<li>删除文件夹services和valueObjects；</li>
+<li>删除xx.fml文件中的数据/服务内容。保留model标签和annotation标签内容，其它全删除。<pre><code>&lt;model xmlns=&quot;http://ns.adobe.com/Fiber/1.0&quot;&gt;
+        &lt;annotation name=&quot;ActionScriptGeneration&quot;&gt;
         &lt;item name=&quot;FullyQualifyReferences&quot;&gt;true&lt;/item&gt;
-      &lt;/annotation&gt;
+        &lt;/annotation&gt;
     ...
 &lt;/model&gt;
 </code></pre></li>
-</ol>
+</ul>
 
         </div>
 
