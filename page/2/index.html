@@ -104,20 +104,55 @@
       </div>
     </div>
   </div>
-
+<!-- YPN Del 2016-12-27 因swiftype不能免费使用了，固已注销账号，停止使用搜索功能。
   
     <form class="search" action="/search/index.html" method="get" accept-charset="utf-8" style="text-align:right">
     <label>Search</label>
     <input type="text" id="search" class="st-default-search-input" maxlength="20" placeholder="Search" />
     </form>
   
-
+-->
 </header>
 
 <!-- Home Page Post List -->
 <div class="container">
   <div class="row">
     <div class="col-lg-10 col-md-10 col-md-offset-1">
+      
+        <div class="post-item-wrapper">
+  <a href="/2016/11/29/【SQL】获取字符串最后出现的位置/" class="post-title">
+      【SQL】获取字符串最后出现的位置
+  </a>
+  <div class="post-excerpt">
+    <!-- Post Date and Categories -->
+    <div class="date-and-category">
+      <div class="date">2016-11-29</div>
+      <div class="categories">
+        
+          
+
+<a href="/categories/SQL/">SQL</a>
+
+        
+      </div>
+    </div>
+    <!-- Post Excerpt -->
+    <div class="excerpt typo"><h4 id="1-如：’6-7-8-2-3-4-x’得到最后一个’-’在字符串的位置："><a href="#1-如：’6-7-8-2-3-4-x’得到最后一个’-’在字符串的位置：" class="headerlink" title="1. 如：’6.7.8.2.3.4.x’得到最后一个’.’在字符串的位置："></a>1. 如：’6.7.8.2.3.4.x’得到最后一个’.’在字符串的位置：</h4><figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">DECLARE</span> @str3 <span class="built_in">VARCHAR</span> (<span class="number">50</span>)</div><div class="line"><span class="keyword">SET</span> @str3 = <span class="string">'6.7.8.2.3.4.x'</span> </div><div class="line"><span class="keyword">SELECT</span> <span class="keyword">LEN</span>(@str3) - <span class="keyword">CHARINDEX</span>(<span class="string">'.'</span>, <span class="keyword">REVERSE</span>(@str3)) + <span class="number">1</span></div></pre></td></tr></table></figure>
+<pre><code>Integer:12
+</code></pre></div>
+    <!-- Post Tags -->
+    <div class="tags">
+      
+        
+
+<a class="tag" href="/tags/字符串/">字符串</a>
+
+
+      
+    </div>
+  </div>
+</div>
+
       
         <div class="post-item-wrapper">
   <a href="/2016/11/29/【SQL】查询死锁和阻塞/" class="post-title">
@@ -470,41 +505,6 @@
         
 
 <a class="tag" href="/tags/日志/">日志</a>
-
-
-      
-    </div>
-  </div>
-</div>
-
-      
-        <div class="post-item-wrapper">
-  <a href="/2016/11/22/【Hexo】更换电脑后如何修改博客/" class="post-title">
-      【Hexo】更换电脑后如何修改博客
-  </a>
-  <div class="post-excerpt">
-    <!-- Post Date and Categories -->
-    <div class="date-and-category">
-      <div class="date">2016-11-22</div>
-      <div class="categories">
-        
-          
-
-<a href="/categories/Blog/">Blog</a>
-
-        
-      </div>
-    </div>
-    <!-- Post Excerpt -->
-    <div class="excerpt typo"><h1 id="当重装电脑，或者想在其它电脑上修改博客，可以使用下列步骤："><a href="#当重装电脑，或者想在其它电脑上修改博客，可以使用下列步骤：" class="headerlink" title="当重装电脑，或者想在其它电脑上修改博客，可以使用下列步骤："></a>当重装电脑，或者想在其它电脑上修改博客，可以使用下列步骤：</h1><ol>
-<li>使用git clone git@github.com:yangpiena/yangpiena.github.io.git拷贝仓库（默认分支为source）；</li>
-<li>在本地新拷贝的yangpiena.github.io文件夹下通过Git bash依次执行下列指令：<br> npm install hexo<br> npm install<br> npm install hexo-deployer-git –save<br> （切记不要执行hexo init这条指令，否则会删除.git文件夹）</div>
-    <!-- Post Tags -->
-    <div class="tags">
-      
-        
-
-<a class="tag" href="/tags/Hexo/">Hexo</a>
 
 
       
