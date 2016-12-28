@@ -47,6 +47,7 @@ date: 2016-11-11 12:31:37
 
 > **系统/软件下载**
 [绿盟](http://www.xdowns.com/)
+[浏览迷](http://liulanmi.com/)
 [系统之家](http://www.xitongzhijia.net/)	|	[Win10之家](http://www.iwin10.com/)	|	[Win10之家](http://www.62hx.com/)	|	[Win10之家](http://www.xh52.com/)	|	[IT Win10之家](http://win10.ithome.com/win10xiazai/)
 [最新迅雷(xunlei)会员账号天天更新同享](http://www.win10.name/news/193.html)
 
@@ -143,3 +144,17 @@ date: 2016-11-11 12:31:37
 [Hexo常见问题](http://wp.huangshiyang.com/hexo%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88)	|	[Hexo博客优化](http://xwartz.xyz/blog/2016/09/reduce-blog-load-time/)
 [Hexo官方主题](https://hexo.io/themes/)	|	[Hexo主题](https://github.com/hexojs/hexo/wiki/Themes)
 [贴图库](http://www.tietuku.com/)
+
+&nbsp;
+
+> **Git**
+[推荐！手把手教你使用Git](http://blog.jobbole.com/78960/)
+[Git服务器搭建全过程分步详解](http://developer.51cto.com/art/201507/483448.htm)
+
+&nbsp;
+
+> **Kettle**
+[Kettle官网下载](http://kettle.pentaho.org/)	|	[Kettle各版本下载](http://sourceforge.net/projects/pentaho/files/Data%20Integration/)
+[Kettle开源社区](http://www.ukettle.org/)
+[Kettle基本概念学习](http://www.cnblogs.com/hapjin/p/4578738.html)	|	[kettle使用命令行来运行ktr和kjb](http://www.cnblogs.com/wxjnew/p/3620792.html)
+[Kettle的一些常见问题](http://blog.csdn.net/iquicksandi/article/details/7635031)	|	[Kettle连接数据库超时的参数设置](http://www.ukettle.org/thread-502-1-4.html)

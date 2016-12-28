@@ -5,13 +5,13 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="整理自网络">
+  <meta name="description" content="">
   <meta name="author" content="昜丿捺">
   <!-- Open Graph Data -->
-  <meta property="og:title" content="【Flash Builder】4.6免费使用方法"/>
-  <meta property="og:description" content="整理自网络" />
+  <meta property="og:title" content="昜丿捺"/>
+  <meta property="og:description" content="没有阳光，沉默而居" />
   <meta property="og:site_name" content="昜丿捺"/>
-  <meta property="og:type" content="article" />
+  <meta property="og:type" content="website" />
   <meta property="og:image" content="http://yoursite.comundefined"/>
   
     <link rel="alternate" href="/atom.xml" title="昜丿捺" type="application/atom+xml">
@@ -37,7 +37,8 @@
 </head>
 
   <body>
-    <!-- Page Header -->
+    <!-- Archive Header -->
+<!-- Page Header -->
 
 
 <header class="site-header header-background" style="background-image: url(http://ogoh2gimk.bkt.clouddn.com/yangpiena-banner.jpg)">
@@ -45,7 +46,7 @@
     <div class="row">
       <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
         <div class="page-title with-background-image">
-          <p class="title">【Flash Builder】4.6免费使用方法</p>
+          <p class="title">博客归类</p>
           <p class="subtitle"></p>
         </div>
         <div class="site-menu with-background-image">
@@ -114,99 +115,48 @@
 -->
 </header>
 
-<article>
-  <div class="container typo">
-    <div class="row">
-      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-        <div class="post-info text-muted">
-          
-            <!-- Author -->
-            <span class="author info">作者 昜丿捺</span>
-          
-          <!-- Date -->
-          <span class="date-time info">发表于
-            <span class="date">2016-12-27</span>
-            <span class="time">16:34:32</span>
-          </span>
-          
-          <!--  Categories  -->
-            <span class="categories info">分类于 
 
-<a href="/categories/Flash-Builder/">Flash Builder</a>
-</span>
-          
+<!-- Archive List -->
+<div class="container">
+  <div class="row">
+    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+	    <!-- 归档列表 -->
+	    
 
-          <!-- YPN Add 2016-11-14 增加热度 -->
-          <span id="busuanzi_container_page_pv">
-            &nbsp;&nbsp; 热度&nbsp; <span id="busuanzi_value_page_pv"></span>°C
-          </span>
-
-        </div>
-        <!-- Tags -->
         
-          <div class="post-tags text-muted">
-            标签: 
+        <div class="one-tag-list">
+            <span class="fa fa-calendar-times-o listing-seperator" id="2016">
+                <span style="color: #F03838; font-size: 2rem;" class="tag-text">2016</span>
+            </span>
+            
+            	<div class="archive-item">
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	12-28
+	<a href="/2016/12/28/【Kettle】使用命令行来运行数据库Job/" class="post-title">
+		【Kettle】使用命令行来运行数据库Job
+	</a>
+	<!-- <div class="date text-muted">发表于 2016-12-28 10:48:13</div> -->
+</div>
 
-<a class="tag" href="/tags/Flash-Builder/">#Flash Builder</a> <a class="tag" href="/tags/注册/">#注册</a>
-
-
-          </div>
+            
+        </div>
         
-        <!-- Post Main Content -->
-        <div class="post-content">
-          <p>Flash Builder 4.6免费使用具体步骤如下：</p>
-<ol>
-<li>到Adobe官网下载FlashBuilder 4.6，有简体中文版；<a id="more"></a></li>
-<li>安装时，不用序列号，直接选择安装试用版；</li>
-<li>安装完成后在安装目录下依次修改下列3个文件：<br>(1)<code>.eclipse\plugins\com.adobe.flexbuilder.project_4.6.0.328916\META-INF</code>下面的<code>MANIFEST.MF</code>修改：<pre><code>Bundle-Version: 0.0.0
-</code></pre>(2)<code>.eclipse\features\com.adobe.flexide.feature_4.6.0.328916</code>下面的<code>feature.xml</code>修改：<pre><code>&lt;plugin
- id=&quot;com.adobe.flexbuilder.project&quot;
- download-size=&quot;0&quot;
- install-size=&quot;0&quot;
- version=&quot;0.0.0&quot;/&gt;
-</code></pre>(3)<code>.eclipse\plugins\com.adobe.flexbuilder.flex_4.6.0.328916</code>下面，复制<code>config.xml</code>并重命名为<code>config_builder.xml</code>即可。</li>
-</ol>
-<blockquote>
-<p>以上版本号请跟据实际版本号进行替换，修改完成之后，再启动Adobe Flash Builder 4.6，就可免费使用这款RIA工具了。</p>
-</blockquote>
 
-        </div>
-
-        <!-- YPN Add 2016-11-14 增加打赏 start -->
-        <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center">
-          <div>如果觉得我的文章对您有用，请随意打赏。您的支持将鼓励我继续创作！</div>
-          <button id="rewardButton", disable="enable", onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}", style="cursor: pointer; border: 0; outline: 0; border-radius: 100%; padding: 0; margin: 0; letter-spacing: normal; text-transform: none; text-indent: 0px; text-shadow: none">
-            <span onmouseover="this.style.color='rgb(236,96,0)';this.style.background='rgb(204,204,204)'" onmouseout="this.style.color='#fff';this.style.background='rgb(236,96,0)'" style="display: inline-block; width: 70px; height: 70px; border-radius: 100%; line-height: 81px; color: #fff; font: 400 35px/75px 'microsofty'; background: rgb(236,96,0)">赏</span>
-          </button>
-          <div id="QR" style="display: none;">
-            
-              <div id="wechat" style="display: inline-block">
-                <img id="wechat_qr" src="/assets/blogImg/YPN_wechatpay-32x32.png" alt="昜丿捺 WeChat Pay" style="width: 200px; max-width: 100%; display: inline-block"/>
-                <p>微信打赏</p>
-              </div>
-            
-          
-            <div id="alipay" style="display: inline-block">
-              <img id="alipay_qr" src="/assets/blogImg/YPN_alipay-32x32.jpg" alt="昜丿捺 Alipay" style="width: 200px; max-width: 100%; display: inline-block"/>
-              <p>支付宝打赏</p>
-            </div>
-          
-          </div>
-        </div>
-        <!-- YPN Add 2016-11-14 增加打赏 end -->
-
-        <!-- 多说最近访客 start -->
-        <div class="ds-recent-visitors" data-num-items="28" data-avatar-size="42" id="ds-recent-visitors"></div>
-        <!-- 多说最近访客 end -->
-        <!-- 多说评论框 start -->
-        <div class="ds-thread" data-thread-key="2016/12/27/【Flash Builder】4.6免费使用方法/" data-title="【Flash Builder】4.6免费使用方法" data-url="http://yoursite.com/2016/12/27/【Flash Builder】4.6免费使用方法/">
-        </div>
-        <!-- 多说评论框 end -->
-
-      </div>
     </div>
   </div>
-</article>
+</div>
+
+<!-- Pagination -->
+<div class="container">
+  <div class="row">
+    <div class="col-lg-10 col-md-10 col-md-offset-1">
+      <ul class="pagination">
+          
+          
+      </ul>
+    </div>
+  </div>
+</div>
 
 
 

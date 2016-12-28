@@ -1,9 +1,9 @@
 ---
-title: 【Flash Builder】4.6效率优化方法
+title: 【Flex】Flash Builder 4.6效率优化方法
 layout: post
 comments: true
 date: 2016-12-27 15:42:09
-categories: Flash Builder
+categories: Flex
 tags: [Flash Builder, 优化]
 keywords: 优化
 description: 整理自网络
