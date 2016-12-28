@@ -126,7 +126,7 @@
           <!-- Date -->
           <span class="date-time info">发表于
             <span class="date">2016-12-27</span>
-            <span class="time">16:34:32</span>
+            <span class="time">15:15:15</span>
           </span>
           
           <!--  Categories  -->
@@ -155,16 +155,57 @@
         <!-- Post Main Content -->
         <div class="post-content">
           <p>设置注释模板的入口： Window-&gt;Preference-&gt;Java-&gt;Code Style-&gt;Code Template  ，然后展开Comments节点就是所有需设置注释的元素。现就每一元素逐一介绍：</p>
-<h4 id="文件-Files-注释标签："><a href="#文件-Files-注释标签：" class="headerlink" title="文件(Files)注释标签："></a>文件(Files)注释标签：</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">/**</div><div class="line"> * @Title       : $&#123;file_name&#125;</div><div class="line"> * @Package     : $&#123;package_name&#125;</div><div class="line"> * @Description : $&#123;todo&#125;</div><div class="line"> * @author      : YPN</div><div class="line"> * @date        : $&#123;date&#125; $&#123;time&#125;</div><div class="line"> * @version     : V1.0</div><div class="line"> */</div></pre></td></tr></table></figure>
-<a id="more"></a>
-<h4 id="类型-Types-注释标签（类的注释）："><a href="#类型-Types-注释标签（类的注释）：" class="headerlink" title="类型(Types)注释标签（类的注释）："></a>类型(Types)注释标签（类的注释）：</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">/**</div><div class="line"> * @ClassName   : $&#123;type_name&#125;</div><div class="line"> * @Description : $&#123;todo&#125;</div><div class="line"> * @author      : YPN</div><div class="line"> * @date        : $&#123;date&#125; $&#123;time&#125;</div><div class="line"> * </div><div class="line"> * $&#123;tags&#125;</div><div class="line"> */</div></pre></td></tr></table></figure>
-<h4 id="字段-Fields-注释标签："><a href="#字段-Fields-注释标签：" class="headerlink" title="字段(Fields)注释标签："></a>字段(Fields)注释标签：</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">/**</div><div class="line"> * @Fields $&#123;field&#125; : $&#123;todo&#125;</div><div class="line"> */</div></pre></td></tr></table></figure>
-<h4 id="构造函数标签："><a href="#构造函数标签：" class="headerlink" title="构造函数标签："></a>构造函数标签：</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">/**</div><div class="line"> * &lt;p&gt;Title       : &lt;/p&gt;</div><div class="line"> * &lt;p&gt;Description : &lt;/p&gt;</div><div class="line"> * $&#123;tags&#125;</div><div class="line"> */</div></pre></td></tr></table></figure>
-<h4 id="方法-Constructor-amp-Methods-标签："><a href="#方法-Constructor-amp-Methods-标签：" class="headerlink" title="方法(Constructor &amp; Methods)标签："></a>方法(Constructor &amp; Methods)标签：</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">/**</div><div class="line"> * @Title       : $&#123;enclosing_method&#125;</div><div class="line"> * @Description : $&#123;todo&#125;</div><div class="line"> * @author      : YPN</div><div class="line"> * @date        : $&#123;date&#125; $&#123;time&#125;</div><div class="line"> * @param       : $&#123;tags&#125;</div><div class="line"> * @return      : $&#123;return_type&#125;</div><div class="line"> * @throws</div><div class="line"> */</div></pre></td></tr></table></figure>
-<h4 id="覆盖方法-Overriding-Methods-标签："><a href="#覆盖方法-Overriding-Methods-标签：" class="headerlink" title="覆盖方法(Overriding Methods)标签："></a>覆盖方法(Overriding Methods)标签：</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">/*</div><div class="line"> * &lt;p&gt;Title       : $&#123;enclosing_method&#125;&lt;/p&gt;</div><div class="line"> * &lt;p&gt;Description : &lt;/p&gt;</div><div class="line"> * $&#123;tags&#125;</div><div class="line"> * $&#123;see_to_overridden&#125;</div><div class="line"> */</div></pre></td></tr></table></figure>
-<h4 id="代表方法-Delegate-Methods-标签："><a href="#代表方法-Delegate-Methods-标签：" class="headerlink" title="代表方法(Delegate Methods)标签："></a>代表方法(Delegate Methods)标签：</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">/**</div><div class="line"> * $&#123;tags&#125;</div><div class="line"> * $&#123;see_to_target&#125;</div><div class="line"> */</div></pre></td></tr></table></figure>
-<h4 id="getter方法标签："><a href="#getter方法标签：" class="headerlink" title="getter方法标签："></a>getter方法标签：</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">/**</div><div class="line"> * @return $&#123;bare_field_name&#125;</div><div class="line"> */</div></pre></td></tr></table></figure>
-<h4 id="setter方法标签："><a href="#setter方法标签：" class="headerlink" title="setter方法标签："></a>setter方法标签：</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">/**</div><div class="line"> * @param $&#123;param&#125; 要设置的 $&#123;bare_field_name&#125;</div><div class="line"> */</div></pre></td></tr></table></figure>
+<h4 id="文件-Files-注释标签："><a href="#文件-Files-注释标签：" class="headerlink" title="文件(Files)注释标签："></a>文件(Files)注释标签：</h4><pre><code>/**
+ * @Title       : ${file_name}
+ * @Package     : ${package_name}
+ * @Description : ${todo}
+ * @author      : YPN
+ * @date        : ${date} ${time}
+ * @version     : V1.0
+ */
+</code></pre><a id="more"></a>
+<h4 id="类型-Types-注释标签（类的注释）："><a href="#类型-Types-注释标签（类的注释）：" class="headerlink" title="类型(Types)注释标签（类的注释）："></a>类型(Types)注释标签（类的注释）：</h4><pre><code>/**
+ * @ClassName   : ${type_name}
+ * @Description : ${todo}
+ * @author      : YPN
+ * @date        : ${date} ${time}
+ * 
+ * ${tags}
+ */
+</code></pre><h4 id="字段-Fields-注释标签："><a href="#字段-Fields-注释标签：" class="headerlink" title="字段(Fields)注释标签："></a>字段(Fields)注释标签：</h4><pre><code>/**
+ * @Fields ${field} : ${todo}
+ */
+</code></pre><h4 id="构造函数标签："><a href="#构造函数标签：" class="headerlink" title="构造函数标签："></a>构造函数标签：</h4><pre><code>/**
+ * &lt;p&gt;Title       : &lt;/p&gt;
+ * &lt;p&gt;Description : &lt;/p&gt;
+ * ${tags}
+ */
+</code></pre><h4 id="方法-Constructor-amp-Methods-标签："><a href="#方法-Constructor-amp-Methods-标签：" class="headerlink" title="方法(Constructor &amp; Methods)标签："></a>方法(Constructor &amp; Methods)标签：</h4><pre><code>/**
+ * @Title       : ${enclosing_method}
+ * @Description : ${todo}
+ * @author      : YPN
+ * @date        : ${date} ${time}
+ * @param       : ${tags}
+ * @return      : ${return_type}
+ * @throws
+ */
+</code></pre><h4 id="覆盖方法-Overriding-Methods-标签："><a href="#覆盖方法-Overriding-Methods-标签：" class="headerlink" title="覆盖方法(Overriding Methods)标签："></a>覆盖方法(Overriding Methods)标签：</h4><pre><code>/*
+ * &lt;p&gt;Title       : ${enclosing_method}&lt;/p&gt;
+ * &lt;p&gt;Description : &lt;/p&gt;
+ * ${tags}
+ * ${see_to_overridden}
+ */
+</code></pre><h4 id="代表方法-Delegate-Methods-标签："><a href="#代表方法-Delegate-Methods-标签：" class="headerlink" title="代表方法(Delegate Methods)标签："></a>代表方法(Delegate Methods)标签：</h4><pre><code>/**
+ * ${tags}
+ * ${see_to_target}
+ */
+</code></pre><h4 id="getter方法标签："><a href="#getter方法标签：" class="headerlink" title="getter方法标签："></a>getter方法标签：</h4><pre><code>/**
+ * @return ${bare_field_name}
+ */
+</code></pre><h4 id="setter方法标签："><a href="#setter方法标签：" class="headerlink" title="setter方法标签："></a>setter方法标签：</h4><pre><code>/**
+ * @param ${param} 要设置的 ${bare_field_name}
+ */
+</code></pre>
         </div>
 
         <!-- YPN Add 2016-11-14 增加打赏 start -->

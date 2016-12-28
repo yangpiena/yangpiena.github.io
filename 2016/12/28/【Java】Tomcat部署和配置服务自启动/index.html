@@ -5,11 +5,11 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="整理自网络">
+  <meta name="description" content="">
   <meta name="author" content="昜丿捺">
   <!-- Open Graph Data -->
-  <meta property="og:title" content="【Flash Builder】4.6效率优化方法"/>
-  <meta property="og:description" content="整理自网络" />
+  <meta property="og:title" content="【Java】Tomcat部署和配置服务自启动"/>
+  <meta property="og:description" content="没有阳光，沉默而居" />
   <meta property="og:site_name" content="昜丿捺"/>
   <meta property="og:type" content="article" />
   <meta property="og:image" content="http://yoursite.comundefined"/>
@@ -45,7 +45,7 @@
     <div class="row">
       <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
         <div class="page-title with-background-image">
-          <p class="title">【Flash Builder】4.6效率优化方法</p>
+          <p class="title">【Java】Tomcat部署和配置服务自启动</p>
           <p class="subtitle"></p>
         </div>
         <div class="site-menu with-background-image">
@@ -125,14 +125,14 @@
           
           <!-- Date -->
           <span class="date-time info">发表于
-            <span class="date">2016-12-27</span>
-            <span class="time">16:34:32</span>
+            <span class="date">2016-12-28</span>
+            <span class="time">15:15:15</span>
           </span>
           
           <!--  Categories  -->
             <span class="categories info">分类于 
 
-<a href="/categories/Flash-Builder/">Flash Builder</a>
+<a href="/categories/Java/">Java</a>
 </span>
           
 
@@ -147,26 +147,51 @@
           <div class="post-tags text-muted">
             标签: 
 
-<a class="tag" href="/tags/Flash-Builder/">#Flash Builder</a> <a class="tag" href="/tags/优化/">#优化</a>
+<a class="tag" href="/tags/Tomcat/">#Tomcat</a>
 
 
           </div>
         
         <!-- Post Main Content -->
         <div class="post-content">
-          <p>Flash Builder 4.6编译慢、报java heap space堆空间异常错误的优化方法：</p>
-<ol>
-<li>在安装路径下找到<code>FlexBuilder.ini</code>文件，进行编辑，加入以下参数：<pre><code>-vmargs
--Xms128m
--Xmx512m
--XX:MaxPermSize=256m
--XX:PermSize=64m                    #不要设置太高，否则会更加慢
--Djava.net.preferIPv4Stack=true
-</code></pre>加入后可以明显加快编译速度数倍，第3条可以明显减低FB挂掉的几率。<a id="more"></a></li>
-<li>由于Flex Builder compiler shell有memory leak的问题，而SDK默认的的 JVM heap size 只有312M，当compile比较大的project时内存容易不够，所以只要修改SDK的JVM参数就可以。即编辑<code>{Flex SDK}</code>安装路径<code>/bin/jvm.config</code>文件如下：<pre><code>java.args=-Xmx512m -Dsun.io.useCanonCaches=false
-</code></pre>如果还是有Error，可以增加到1024或者更多试试。<blockquote>
-<p>我的flex4.6安装路径中的sdk位置：D:\Adobe\Adobe Flash Builder 4\sdks\4.0.0\bin\jvm.config，只需在这里调整即可！</p>
-</blockquote>
+          <h4 id="配置Tomcat"><a href="#配置Tomcat" class="headerlink" title="配置Tomcat"></a>配置Tomcat</h4><ol>
+<li>将下载的apache-tomcat-6.0.35-windows-x86.zip压缩包解压。</li>
+<li>修改\bin\startup.bat文件，在第一行前面加入如下两行：<pre><code>SET JAVA_HOME=D:\Program Files\Java\jdk1.6.0_30   (JDK安装所在的路径)
+SET CATALINA_HOME=D:\Program Files\tomcat6.0.35   (免安装的Tomcat解压后的路径)
+</code></pre>如果需要使用shutdown.bat关闭服务器的话，也按照上面加入两行。</li>
+<li>这样，运行startup.bat就可以启动Tomcat，跑起应用，运行shutdown.bat就可以关闭服务器了。</li>
+<li>修改\conf\tomcat-users.xml文件，在<code>&lt;tomcat-users&gt;</code>标签内加入<pre><code>&lt;role rolename=&quot;manager&quot;/&gt;
+&lt;role rolename=&quot;admin&quot;/&gt;
+&lt;user username=&quot;admin&quot; password=&quot;admin&quot; roles=&quot;admin,manager&quot;/&gt;
+</code></pre>这样才可以使用Tomcat的管理界面。</li>
+</ol>
+<a id="more"></a>
+<h4 id="免安装版的Tomcat做成服务，随机器启动（windows环境）："><a href="#免安装版的Tomcat做成服务，随机器启动（windows环境）：" class="headerlink" title="免安装版的Tomcat做成服务，随机器启动（windows环境）："></a>免安装版的Tomcat做成服务，随机器启动（windows环境）：</h4><ol>
+<li><p>修改\bin目录中的service.bat</p>
+<pre><code>rem 在第一个if语句的前面一行添加下面的行：
+SET CATALINA_HOME=D:\Program Files\tomcat6.0.35
+rem 上面这一行是设置CATALINA_HOME变量指到解压后的Tomcat目录
+</code></pre><p>如果从来没有安装过Tomcat，或者保证Services.msc启动服务管理器检查没有Apache Tomcat系统服务，到此你就可以转到第2步了。否则继续往下走：<br>按照下面的描述修改下面的相应的几行，每行下面都附有文字说明设置的作用：</p>
+<pre><code>set SERVICE_NAME=tomcat6.0
+rem 上面一行，将tomcat6.0修改成你需要的服务名，这个将是以后使用net start/stop来操作的服务名称。
+
+set PR_DISPLAYNAME=Apache Tomcat
+rem 上面一行，Apache Tomcat改为你需要显示的服务名，这个将显示在服务管理器中。
+
+set PR_DESCRIPTION=Apache Tomcat Server - http://jakarta.apache.org/tomcat
+rem 这一行改不改无所谓，是服务的描述，根据自己的喜好决定吧。
+</code></pre></li>
+<li><p>运行cmd打开控制台，进入解压后的Tomat目录的/bin文件夹下，运行<code>service.bat install</code>命令：</p>
+<pre><code>D:\Program Files\tomcat6.0.35\bin&gt;service.bat install
+Installing the service  &apos;tomcat6.0&apos; ...
+Using CATALINA_HOME:    &quot;D:\Program Files\tomcat6.0.35&quot;
+Using CATALINA_BASE:    &quot;D:\Program Files\tomcat6.0.35&quot;
+Using JAVA_HOME:        &quot;D:\Program Files\Java\jdk1.6.0_30&quot;
+Using JVM:              &quot;D:\Program Files\Java\jdk1.6.0_30\jre\bin\server\jvm.dll&quot;
+The service &apos;tomcat6.0&apos; has been installed.
+</code></pre><p>程序提示：The service ‘tomcat6.0（你修改以后的SERVICE_NAME）’ has been installed说明服务Tomcat已经被安装成功。相应的，运行<code>service.bat remove</code>可以移除服务。</p>
+</li>
+<li><p>到这里，服务添加成功，运行services.msc，可以看到添加的服务，默认状态下该服务是手动运行的，在它的属性中，将启动类型更改为”自动”，以后机器启动以后Tomcat就在后台启动了。</p>
 </li>
 </ol>
 
@@ -199,7 +224,7 @@
         <div class="ds-recent-visitors" data-num-items="28" data-avatar-size="42" id="ds-recent-visitors"></div>
         <!-- 多说最近访客 end -->
         <!-- 多说评论框 start -->
-        <div class="ds-thread" data-thread-key="2016/12/27/【Flash Builder】4.6效率优化方法/" data-title="【Flash Builder】4.6效率优化方法" data-url="http://yoursite.com/2016/12/27/【Flash Builder】4.6效率优化方法/">
+        <div class="ds-thread" data-thread-key="2016/12/28/【Java】Tomcat部署和配置服务自启动/" data-title="【Java】Tomcat部署和配置服务自启动" data-url="http://yoursite.com/2016/12/28/【Java】Tomcat部署和配置服务自启动/">
         </div>
         <!-- 多说评论框 end -->
 
