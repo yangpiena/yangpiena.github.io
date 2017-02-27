@@ -8,7 +8,7 @@
   <meta name="description" content="">
   <meta name="author" content="昜丿捺">
   <!-- Open Graph Data -->
-  <meta property="og:title" content="【Java】Tomcat启动JVM内存设置"/>
+  <meta property="og:title" content="【Blog】更换电脑后如何修改Hexo博客"/>
   <meta property="og:description" content="没有阳光，沉默而居" />
   <meta property="og:site_name" content="昜丿捺"/>
   <meta property="og:type" content="article" />
@@ -45,7 +45,7 @@
     <div class="row">
       <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
         <div class="page-title with-background-image">
-          <p class="title">【Java】Tomcat启动JVM内存设置</p>
+          <p class="title">【Blog】更换电脑后如何修改Hexo博客</p>
           <p class="subtitle"></p>
         </div>
         <div class="site-menu with-background-image">
@@ -125,14 +125,14 @@
           
           <!-- Date -->
           <span class="date-time info">发表于
-            <span class="date">2016-12-28</span>
-            <span class="time">11:54:24</span>
+            <span class="date">2016-11-22</span>
+            <span class="time">11:54:25</span>
           </span>
           
           <!--  Categories  -->
             <span class="categories info">分类于 
 
-<a href="/categories/Java/">Java</a>
+<a href="/categories/Blog/">Blog</a>
 </span>
           
 
@@ -147,32 +147,17 @@
           <div class="post-tags text-muted">
             标签: 
 
-<a class="tag" href="/tags/Tomcat/">#Tomcat</a>
+<a class="tag" href="/tags/Hexo/">#Hexo</a>
 
 
           </div>
         
         <!-- Post Main Content -->
         <div class="post-content">
-          <h4 id="Linux"><a href="#Linux" class="headerlink" title="Linux"></a>Linux</h4><p>在/usr/local/apache-tomcat-7.0.57/bin目录下的catalina.sh中添加：</p>
-<pre><code>JAVA_OPTS=&apos;-Xms512m -Xmx1024m&apos;
-</code></pre><blockquote>
-<p>-Xms：初始值<br>-Xmx：最大值<br>-Xmn：最小值</p>
-</blockquote>
-<a id="more"></a>
-<h4 id="Windows"><a href="#Windows" class="headerlink" title="Windows"></a>Windows</h4><ul>
-<li><p>若使用startup.bat启动tomcat，则在C:\apache-tomcat-7.0.57\bin\catalina.bat最前面加入：</p>
-<pre><code>set JAVA_OPTS=-Xms512m -Xmx1024m
-</code></pre></li>
-<li><p>而如果利用windows的系统服务启动tomcat服务，那上面的设置就不生效了，windows服务执行的是bin/tomcat.exe。他读取注册表中的值，而不是catalina.bat的设置。<br><strong>解决办法：</strong><br>修改注册表HKEY_LOCAL_MACHINE/SOFTWARE/Apache Software Foundation/Tomcat Service Manager/Tomcat5/Parameters/JavaOptions<br>原值为</p>
-<pre><code>-Dcatalina.home=&quot;C:/ApacheGroup/Tomcat 5.0&quot;
--Djava.endorsed.dirs=&quot;C:/ApacheGroup/Tomcat 5.0/common/endorsed&quot;
--Xrs
-</code></pre><p>在最后加入</p>
-<pre><code>-Xms300m -Xmx350m  
-</code></pre><p>退出注册表，重起tomcat服务，设置生效。</p>
-</li>
-</ul>
+          <h1 id="当重装电脑，或者想在其它电脑上修改博客，可以使用下列步骤："><a href="#当重装电脑，或者想在其它电脑上修改博客，可以使用下列步骤：" class="headerlink" title="当重装电脑，或者想在其它电脑上修改博客，可以使用下列步骤："></a>当重装电脑，或者想在其它电脑上修改博客，可以使用下列步骤：</h1><ol>
+<li>使用git clone git@github.com:yangpiena/yangpiena.github.io.git拷贝仓库（默认分支为source）；</li>
+<li>在本地新拷贝的yangpiena.github.io文件夹下通过Git bash依次执行下列指令：<br> npm install hexo<br> npm install<br> npm install hexo-deployer-git –save<br> （切记不要执行hexo init这条指令，否则会删除.git文件夹）<a id="more"></a></li>
+</ol>
 
         </div>
 
@@ -203,7 +188,7 @@
         <div class="ds-recent-visitors" data-num-items="28" data-avatar-size="42" id="ds-recent-visitors"></div>
         <!-- 多说最近访客 end -->
         <!-- 多说评论框 start -->
-        <div class="ds-thread" data-thread-key="2016/12/28/【Java】Tomcat启动JVM内存设置/" data-title="【Java】Tomcat启动JVM内存设置" data-url="http://yoursite.com/2016/12/28/【Java】Tomcat启动JVM内存设置/">
+        <div class="ds-thread" data-thread-key="2016/11/22/【Blog】更换电脑后如何修改Hexo博客/" data-title="【Blog】更换电脑后如何修改Hexo博客" data-url="http://yoursite.com/2016/11/22/【Blog】更换电脑后如何修改Hexo博客/">
         </div>
         <!-- 多说评论框 end -->
 
