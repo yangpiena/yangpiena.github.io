@@ -120,13 +120,13 @@
     <div class="col-lg-10 col-md-10 col-md-offset-1">
       
         <div class="post-item-wrapper">
-  <a href="/2016/11/09/【Blog】hello-world/" class="post-title">
-      【Blog】Hello World
+  <a href="/2017/02/27/【Blog】更换电脑后如何修改hexo博客/" class="post-title">
+      【Blog】更换电脑后如何修改hexo博客
   </a>
   <div class="post-excerpt">
     <!-- Post Date and Categories -->
     <div class="date-and-category">
-      <div class="date">2016-11-09</div>
+      <div class="date">2017-02-27</div>
       <div class="categories">
         
           
@@ -137,21 +137,350 @@
       </div>
     </div>
     <!-- Post Excerpt -->
-    <div class="excerpt typo"><p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html">Deployment</a><br></div>
+    <div class="excerpt typo"><h1 id="当重装电脑，或者想在其它电脑上修改博客，可以使用下列步骤："><a href="#当重装电脑，或者想在其它电脑上修改博客，可以使用下列步骤：" class="headerlink" title="当重装电脑，或者想在其它电脑上修改博客，可以使用下列步骤："></a>当重装电脑，或者想在其它电脑上修改博客，可以使用下列步骤：</h1><ol>
+<li>使用git clone git@github.com:yangpiena/yangpiena.github.io.git拷贝仓库（默认分支为source）；</li>
+<li>在本地新拷贝的yangpiena.github.io文件夹下通过Git bash依次执行下列指令：<br> npm install hexo<br> npm install<br> npm install hexo-deployer-git –save<br> （切记不要执行hexo init这条指令，否则会删除.git文件夹）</div>
     <!-- Post Tags -->
     <div class="tags">
       
         
 
 <a class="tag" href="/tags/Blog/">Blog</a> <a class="tag" href="/tags/hexo/">hexo</a>
+
+
+      
+    </div>
+  </div>
+</div>
+
+      
+        <div class="post-item-wrapper">
+  <a href="/2016/12/28/【Kettle】使用命令行来运行数据库job/" class="post-title">
+      【Kettle】使用命令行来运行数据库job
+  </a>
+  <div class="post-excerpt">
+    <!-- Post Date and Categories -->
+    <div class="date-and-category">
+      <div class="date">2016-12-28</div>
+      <div class="categories">
+        
+          
+
+<a href="/categories/Kettle/">Kettle</a>
+
+        
+      </div>
+    </div>
+    <!-- Post Excerpt -->
+    <div class="excerpt typo"><p>当您的Job是在数据库中存储，并需要通过命令行（.bat）方式运行时，如下编辑.bat文件即可：</p>
+<pre><code>d:
+cd d:\data-integration
+kitchen /rep xxKettle /dir taby /user admin /pass admin /job tabyToXX_Job /level basic /logfile D:\KettleLog\kettlelog.log
+pause
+</code></pre></div>
+    <!-- Post Tags -->
+    <div class="tags">
+      
+        
+
+<a class="tag" href="/tags/Kettle/">Kettle</a> <a class="tag" href="/tags/job/">job</a>
+
+
+      
+    </div>
+  </div>
+</div>
+
+      
+        <div class="post-item-wrapper">
+  <a href="/2016/12/28/【Java】tomcat启动jvm内存设置/" class="post-title">
+      【Java】tomcat启动jvm内存设置
+  </a>
+  <div class="post-excerpt">
+    <!-- Post Date and Categories -->
+    <div class="date-and-category">
+      <div class="date">2016-12-28</div>
+      <div class="categories">
+        
+          
+
+<a href="/categories/Java/">Java</a>
+
+        
+      </div>
+    </div>
+    <!-- Post Excerpt -->
+    <div class="excerpt typo"><h4 id="Linux"><a href="#Linux" class="headerlink" title="Linux"></a>Linux</h4><p>在/usr/local/apache-tomcat-7.0.57/bin目录下的catalina.sh中添加：</p>
+<pre><code>JAVA_OPTS=&apos;-Xms512m -Xmx1024m&apos;
+</code></pre><blockquote>
+<p>-Xms：初始值<br>-Xmx：最大值<br>-Xmn：最小值</p>
+</blockquote></div>
+    <!-- Post Tags -->
+    <div class="tags">
+      
+        
+
+<a class="tag" href="/tags/Java/">Java</a> <a class="tag" href="/tags/tomcat/">tomcat</a>
+
+
+      
+    </div>
+  </div>
+</div>
+
+      
+        <div class="post-item-wrapper">
+  <a href="/2016/12/28/【Java】tomcat部署和配置服务自启动/" class="post-title">
+      【Java】tomcat部署和配置服务自启动
+  </a>
+  <div class="post-excerpt">
+    <!-- Post Date and Categories -->
+    <div class="date-and-category">
+      <div class="date">2016-12-28</div>
+      <div class="categories">
+        
+          
+
+<a href="/categories/Java/">Java</a>
+
+        
+      </div>
+    </div>
+    <!-- Post Excerpt -->
+    <div class="excerpt typo"><h4 id="配置Tomcat"><a href="#配置Tomcat" class="headerlink" title="配置Tomcat"></a>配置Tomcat</h4><ol>
+<li>将下载的apache-tomcat-6.0.35-windows-x86.zip压缩包解压。</li>
+<li>修改\bin\startup.bat文件，在第一行前面加入如下两行：<pre><code>SET JAVA_HOME=D:\Program Files\Java\jdk1.6.0_30   (JDK安装所在的路径)
+SET CATALINA_HOME=D:\Program Files\tomcat6.0.35   (免安装的Tomcat解压后的路径)
+</code></pre>如果需要使用shutdown.bat关闭服务器的话，也按照上面加入两行。</li>
+<li>这样，运行startup.bat就可以启动Tomcat，跑起应用，运行shutdown.bat就可以关闭服务器了。</li>
+<li>修改\conf\tomcat-users.xml文件，在<code>&lt;tomcat-users&gt;</code>标签内加入<pre><code>&lt;role rolename=&quot;manager&quot;/&gt;
+&lt;role rolename=&quot;admin&quot;/&gt;
+&lt;user username=&quot;admin&quot; password=&quot;admin&quot; roles=&quot;admin,manager&quot;/&gt;
+</code></pre>这样才可以使用Tomcat的管理界面。</li>
+</ol></div>
+    <!-- Post Tags -->
+    <div class="tags">
+      
+        
+
+<a class="tag" href="/tags/Java/">Java</a> <a class="tag" href="/tags/tomcat/">tomcat</a>
+
+
+      
+    </div>
+  </div>
+</div>
+
+      
+        <div class="post-item-wrapper">
+  <a href="/2016/12/28/【Java】jdk下载安装/" class="post-title">
+      【Java】jdk下载安装
+  </a>
+  <div class="post-excerpt">
+    <!-- Post Date and Categories -->
+    <div class="date-and-category">
+      <div class="date">2016-12-28</div>
+      <div class="categories">
+        
+          
+
+<a href="/categories/Java/">Java</a>
+
+        
+      </div>
+    </div>
+    <!-- Post Excerpt -->
+    <div class="excerpt typo"><h4 id="JDK官网下载"><a href="#JDK官网下载" class="headerlink" title="JDK官网下载"></a>JDK<a href="http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html">官网下载</a></h4></div>
+    <!-- Post Tags -->
+    <div class="tags">
+      
+        
+
+<a class="tag" href="/tags/Java/">Java</a> <a class="tag" href="/tags/jdk/">jdk</a>
+
+
+      
+    </div>
+  </div>
+</div>
+
+      
+        <div class="post-item-wrapper">
+  <a href="/2016/12/27/【FAQ】flash builder/" class="post-title">
+      【FAQ】flash builder
+  </a>
+  <div class="post-excerpt">
+    <!-- Post Date and Categories -->
+    <div class="date-and-category">
+      <div class="date">2016-12-27</div>
+      <div class="categories">
+        
+          
+
+<a href="/categories/FAQ/">FAQ</a>
+
+        
+      </div>
+    </div>
+    <!-- Post Excerpt -->
+    <div class="excerpt typo"><p>以下记录Flash Builder在使用过程中出现的问题和解决方法：<br></div>
+    <!-- Post Tags -->
+    <div class="tags">
+      
+        
+
+<a class="tag" href="/tags/FAQ/">FAQ</a> <a class="tag" href="/tags/flash-builder/">flash builder</a>
+
+
+      
+    </div>
+  </div>
+</div>
+
+      
+        <div class="post-item-wrapper">
+  <a href="/2016/12/27/【Flex】flash builder 4.6效率优化方法/" class="post-title">
+      【Flex】flash builder 4.6效率优化方法
+  </a>
+  <div class="post-excerpt">
+    <!-- Post Date and Categories -->
+    <div class="date-and-category">
+      <div class="date">2016-12-27</div>
+      <div class="categories">
+        
+          
+
+<a href="/categories/Flex/">Flex</a>
+
+        
+      </div>
+    </div>
+    <!-- Post Excerpt -->
+    <div class="excerpt typo"><p>Flash Builder 4.6编译慢、报java heap space堆空间异常错误的优化方法：</p>
+<ol>
+<li>在安装路径下找到<code>FlexBuilder.ini</code>文件，进行编辑，加入以下参数：<pre><code>-vmargs
+-Xms128m
+-Xmx512m
+-XX:MaxPermSize=256m
+-XX:PermSize=64m                    #不要设置太高，否则会更加慢
+-Djava.net.preferIPv4Stack=true
+</code></pre>加入后可以明显加快编译速度数倍，第3条可以明显减低FB挂掉的几率。</div>
+    <!-- Post Tags -->
+    <div class="tags">
+      
+        
+
+<a class="tag" href="/tags/flash-builder/">flash builder</a> <a class="tag" href="/tags/Flex/">Flex</a>
+
+
+      
+    </div>
+  </div>
+</div>
+
+      
+        <div class="post-item-wrapper">
+  <a href="/2016/12/27/【Flex】flash builder 4.6免费使用方法/" class="post-title">
+      【Flex】flash builder 4.6免费使用方法
+  </a>
+  <div class="post-excerpt">
+    <!-- Post Date and Categories -->
+    <div class="date-and-category">
+      <div class="date">2016-12-27</div>
+      <div class="categories">
+        
+          
+
+<a href="/categories/Flex/">Flex</a>
+
+        
+      </div>
+    </div>
+    <!-- Post Excerpt -->
+    <div class="excerpt typo"><p>Flash Builder 4.6免费使用具体步骤如下：</p>
+<ol>
+<li>到Adobe官网下载FlashBuilder 4.6，有简体中文版；</div>
+    <!-- Post Tags -->
+    <div class="tags">
+      
+        
+
+<a class="tag" href="/tags/flash-builder/">flash builder</a> <a class="tag" href="/tags/Flex/">Flex</a>
+
+
+      
+    </div>
+  </div>
+</div>
+
+      
+        <div class="post-item-wrapper">
+  <a href="/2016/12/27/【Eclipse】java注释模板设置/" class="post-title">
+      【Eclipse】java注释模板设置
+  </a>
+  <div class="post-excerpt">
+    <!-- Post Date and Categories -->
+    <div class="date-and-category">
+      <div class="date">2016-12-27</div>
+      <div class="categories">
+        
+          
+
+<a href="/categories/Eclipse/">Eclipse</a>
+
+        
+      </div>
+    </div>
+    <!-- Post Excerpt -->
+    <div class="excerpt typo"><p>设置注释模板的入口： Window-&gt;Preference-&gt;Java-&gt;Code Style-&gt;Code Template  ，然后展开Comments节点就是所有需设置注释的元素。现就每一元素逐一介绍：</p>
+<h4 id="文件-Files-注释标签："><a href="#文件-Files-注释标签：" class="headerlink" title="文件(Files)注释标签："></a>文件(Files)注释标签：</h4><pre><code>/**
+ * @Title       : ${file_name}
+ * @Package     : ${package_name}
+ * @Description : ${todo}
+ * @author      : YPN
+ * @date        : ${date} ${time}
+ * @version     : V1.0
+ */
+</code></pre></div>
+    <!-- Post Tags -->
+    <div class="tags">
+      
+        
+
+<a class="tag" href="/tags/Eclipse/">Eclipse</a> <a class="tag" href="/tags/java/">java</a>
+
+
+      
+    </div>
+  </div>
+</div>
+
+      
+        <div class="post-item-wrapper">
+  <a href="/2016/12/22/【Flex】属性说明/" class="post-title">
+      【Flex】属性说明
+  </a>
+  <div class="post-excerpt">
+    <!-- Post Date and Categories -->
+    <div class="date-and-category">
+      <div class="date">2016-12-22</div>
+      <div class="categories">
+        
+          
+
+<a href="/categories/Flex/">Flex</a>
+
+        
+      </div>
+    </div>
+    <!-- Post Excerpt -->
+    <div class="excerpt typo"><p>以下记录一些常用的Flex控件属性，按字母排序：<br></div>
+    <!-- Post Tags -->
+    <div class="tags">
+      
+        
+
+<a class="tag" href="/tags/Flex/">Flex</a> <a class="tag" href="/tags/属性/">属性</a>
 
 
       
@@ -170,6 +499,13 @@
     <div class="col-lg-10 col-md-10 col-md-offset-1">
       <ul class="pagination">
           
+          
+            <li class="next">
+              <a href="/page/2/">
+                <span>下一页</span>
+                <span class="symbol-right">&gt;</span>
+              </a>
+            </li>
           
       </ul>
     </div>
