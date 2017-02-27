@@ -4,7 +4,7 @@ layout: post
 comments: true
 date: 2016-12-22 11:06:35
 categories: FPSpread
-tags: 属性
+tags: [FPSpread, 属性]
 keywords:
 description:
 ---

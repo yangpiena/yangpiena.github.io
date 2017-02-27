@@ -4,7 +4,7 @@ layout: post
 comments: true
 date: 2016-12-22 16:42:48
 categories: Flex
-tags: 属性
+tags: [Flex, 属性]
 keywords:
 description:
 ---

@@ -2,7 +2,7 @@
 title: 【Linux】命令学习
 date: 2016-11-22 15:02:51
 categories: OS
-tags: [Linux]
+tags: [Linux, 命令]
 ---
 ## 基础命令
 ### 系统

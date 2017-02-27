@@ -1,10 +1,10 @@
 ---
-title: 【Java】Tomcat部署和配置服务自启动
+title: 【Java】tomcat部署和配置服务自启动
 layout: post
 comments: true
 date: 2016-12-28 09:49:28
 categories: Java
-tags: [Tomcat]
+tags: [Java, tomcat]
 keywords:
 description:
 ---

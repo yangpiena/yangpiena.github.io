@@ -4,7 +4,7 @@ layout: post
 comments: true
 date: 2016-11-29 10:33:32
 categories: Oracle
-tags: 导入导出
+tags: [Oracle, 导入导出]
 keywords: 备份
 description:
 ---

@@ -1,10 +1,10 @@
 ---
-title: 【FAQ】Flash Builder
+title: 【FAQ】flash builder
 layout: post
 comments: true
 date: 2016-12-27 15:54:04
 categories: FAQ
-tags: [Flash Builder, FAQ]
+tags: [FAQ, flash builder]
 keywords:
 description: 整理自YPN
 ---

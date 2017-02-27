@@ -1,10 +1,10 @@
 ---
-title: 【Flex】DataGrid设置列对齐方式
+title: 【Flex】dataGrid设置列对齐方式
 layout: post
 comments: true
 date: 2016-12-22 16:23:25
 categories: Flex
-tags: DataGrid
+tags: [Flex, dataGrid]
 keywords: 列对齐
 description:
 ---

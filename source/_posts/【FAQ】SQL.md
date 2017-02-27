@@ -1,10 +1,10 @@
 ---
-title: 【FAQ】SQL
+title: 【FAQ】sql
 layout: post
 comments: true
 date: 2016-11-29 09:53:02
 categories: FAQ
-tags: SQL
+tags: [FAQ, sql]
 keywords:
 description:
 ---

@@ -149,6 +149,7 @@ date: 2016-11-11 12:31:37
 &nbsp;
 
 > **Git**
+[常用 Git 命令清单](http://www.ruanyifeng.com/blog/2015/12/git-cheat-sheet.html)
 [推荐！手把手教你使用Git](http://blog.jobbole.com/78960/)
 [Git服务器搭建全过程分步详解](http://developer.51cto.com/art/201507/483448.htm)
 

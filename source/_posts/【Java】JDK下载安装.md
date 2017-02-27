@@ -1,10 +1,10 @@
 ---
-title: 【Java】JDK下载安装
+title: 【Java】jdk下载安装
 layout: post
 comments: true
 date: 2016-12-28 09:29:53
 categories: Java
-tags: JDK
+tags: [Java, jdk]
 keywords:
 description:
 ---

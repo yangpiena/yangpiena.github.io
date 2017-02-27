@@ -1,10 +1,10 @@
 ---
-title: 【Eclipse】Java注释模板设置
+title: 【Eclipse】java注释模板设置
 layout: post
 comments: true
 date: 2016-12-27 10:27:15
 categories: Eclipse
-tags: [Eclipse,Java]
+tags: [Eclipse, java]
 keywords: 注释
 description:
 ---

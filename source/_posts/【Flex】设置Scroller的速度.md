@@ -1,10 +1,10 @@
 ---
-title: 【Flex】设置Scroller的速度
+title: 【Flex】设置scroller的速度
 layout: post
 comments: true
 date: 2016-12-22 16:38:11
 categories: Flex
-tags: Scroller
+tags: [Flex, scroller]
 keywords: 速度
 description:
 ---

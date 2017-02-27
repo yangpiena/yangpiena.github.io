@@ -1,10 +1,10 @@
 ---
-title: 【Kettle】使用命令行来运行数据库Job
+title: 【Kettle】使用命令行来运行数据库job
 layout: post
 comments: true
 date: 2016-12-28 10:48:13
 categories: Kettle
-tags: [Job]
+tags: [Kettle, job]
 keywords:
 description:
 ---

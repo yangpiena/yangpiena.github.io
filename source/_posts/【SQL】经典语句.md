@@ -4,7 +4,7 @@ layout: post
 comments: true
 date: 2016-11-29 15:38:32
 categories: SQL
-tags: 经典语句
+tags: [SQL, 经典语句]
 keywords:
 description:
 ---

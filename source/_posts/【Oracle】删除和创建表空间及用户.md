@@ -4,7 +4,7 @@ layout: post
 comments: true
 date: 2016-11-29 10:23:08
 categories: Oracle
-tags: 创建表空间
+tags: [Oracle, 创建表空间]
 keywords:
 description:
 ---

@@ -4,7 +4,7 @@ layout: post
 comments: true
 date: 2016-12-22 11:53:28
 categories: FPSpread
-tags: fpComboAdo
+tags: [FPSpread, fpComboAdo]
 keywords: 初始化
 description:
 ---

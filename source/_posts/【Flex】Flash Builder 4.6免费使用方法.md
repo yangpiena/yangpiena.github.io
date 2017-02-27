@@ -1,10 +1,10 @@
 ---
-title: 【Flex】Flash Builder 4.6免费使用方法
+title: 【Flex】flash builder 4.6免费使用方法
 layout: post
 comments: true
 date: 2016-12-27 15:18:23
 categories: Flex
-tags: [Flash Builder, 注册]
+tags: [Flex, flash builder]
 keywords: 免费
 description: 整理自网络
 ---

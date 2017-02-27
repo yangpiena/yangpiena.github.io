@@ -1,10 +1,10 @@
 ---
-title: 【Flex】DataGrid自动生成序号
+title: 【Flex】dataGrid自动生成序号
 layout: post
 comments: true
 date: 2016-12-22 16:23:55
 categories: Flex
-tags: DataGrid
+tags: [Flex, dataGrid]
 keywords: 序号
 description:
 ---

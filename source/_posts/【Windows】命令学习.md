@@ -3,8 +3,8 @@ title: 【Windows】命令学习
 layout: post
 comments: true
 date: 2016-11-24 12:25:31
-categories: OS
-tags: [Windows]
+categories: Windows
+tags: [Windows, 命令]
 keywords:
 description:
 ---

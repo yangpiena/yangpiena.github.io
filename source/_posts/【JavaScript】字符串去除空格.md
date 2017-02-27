@@ -4,7 +4,7 @@ layout: post
 comments: true
 date: 2016-11-28 16:50:37
 categories: JavaScript
-tags: 字符串
+tags: [JavaScript, 字符串]
 keywords:
 description:
 ---

@@ -1,11 +1,11 @@
 ---
-title: 【Flex】Java与ActionScript类型对应表
+title: 【Flex】java与actionScript类型对应表
 layout: post
 comments: true
 date: 2016-12-22 15:55:28
 categories: Flex
-tags: 数据类型
-keywords: Java, ActionScript
+tags: [Flex, as数据类型]
+keywords: 
 description:
 ---
 采用Java+Flex架构，通过BlazeDS中间件技术，使服务端Java数据和客户端Flex数据进行互通时，底层数据类型是不一致的，BlazeDS对其进行了映射，具体映射关系如下：

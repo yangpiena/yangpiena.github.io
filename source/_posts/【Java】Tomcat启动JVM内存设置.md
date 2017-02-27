@@ -1,10 +1,10 @@
 ---
-title: 【Java】Tomcat启动JVM内存设置
+title: 【Java】tomcat启动jvm内存设置
 layout: post
 comments: true
 date: 2016-12-28 10:06:29
 categories: Java
-tags: [Tomcat]
+tags: [Java, tomcat]
 keywords:
 description:
 ---
