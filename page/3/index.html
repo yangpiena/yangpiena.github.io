@@ -554,27 +554,39 @@
 </tr>
 <tr>
 <td>cat /proc/version</td>
-<td style="text-align:left">查看Linux内核版本</td>
+<td style="text-align:left">查看内核版本</td>
 </tr>
 <tr>
 <td>uname -a</td>
-<td style="text-align:left">查看Linux内核版本</td>
+<td style="text-align:left">查看内核版本</td>
 </tr>
 <tr>
 <td>lsb_release -a</td>
-<td style="text-align:left">查看Linux系统版本</td>
+<td style="text-align:left">查看系统版本</td>
 </tr>
 <tr>
 <td>cat /etc/issue</td>
-<td style="text-align:left">查看Linux系统版本</td>
+<td style="text-align:left">查看系统版本</td>
 </tr>
 <tr>
 <td>cat /etc/redhat-release</td>
-<td style="text-align:left">查看Linux系统版本（只适合Redhat系）</td>
+<td style="text-align:left">查看系统版本（只适合Redhat系）</td>
 </tr>
 <tr>
-<td></td>
-<td style="text-align:left"></td>
+<td>getconf LONG_BIT</td>
+<td style="text-align:left">查看系统位数</td>
+</tr>
+<tr>
+<td>cat /proc/cpuinfo</td>
+<td style="text-align:left">查看CPU型号</td>
+</tr>
+<tr>
+<td>free -m</td>
+<td style="text-align:left">查看内存</td>
+</tr>
+<tr>
+<td>df -l</td>
+<td style="text-align:left">查看硬盘空间情况</td>
 </tr>
 <tr>
 <td>yum update</td>
