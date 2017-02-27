@@ -126,7 +126,7 @@
           <!-- Date -->
           <span class="date-time info">发表于
             <span class="date">2016-11-29</span>
-            <span class="time">12:32:26</span>
+            <span class="time">16:59:09</span>
           </span>
           
           <!--  Categories  -->
@@ -154,7 +154,11 @@
         
         <!-- Post Main Content -->
         <div class="post-content">
-          <h3 id="查询死锁进程"><a href="#查询死锁进程" class="headerlink" title="查询死锁进程"></a>查询死锁进程</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">SELECT</div><div class="line">	request_session_id spid,</div><div class="line">	OBJECT_NAME(</div><div class="line">		resource_associated_entity_id</div><div class="line">	) tableName</div><div class="line">FROM</div><div class="line">	sys.dm_tran_locks</div><div class="line">WHERE</div><div class="line">	resource_type = &apos;OBJECT&apos;;</div></pre></td></tr></table></figure>
+
+			<!-- YPN Add 2017-02-27 Table of Contents -->
+			
+			
+          	<h3 id="查询死锁进程"><a href="#查询死锁进程" class="headerlink" title="查询死锁进程"></a>查询死锁进程</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">SELECT</div><div class="line">	request_session_id spid,</div><div class="line">	OBJECT_NAME(</div><div class="line">		resource_associated_entity_id</div><div class="line">	) tableName</div><div class="line">FROM</div><div class="line">	sys.dm_tran_locks</div><div class="line">WHERE</div><div class="line">	resource_type = &apos;OBJECT&apos;;</div></pre></td></tr></table></figure>
 <h3 id="杀死死锁进程"><a href="#杀死死锁进程" class="headerlink" title="杀死死锁进程"></a>杀死死锁进程</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">KILL spid;</div></pre></td></tr></table></figure>
 <h3 id="每秒死锁数量"><a href="#每秒死锁数量" class="headerlink" title="每秒死锁数量"></a>每秒死锁数量</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">SELECT  *</div><div class="line">FROM    sys.dm_os_performance_counters</div><div class="line">WHERE   counter_name LIKE &apos;Number of Deadlocksc%&apos;;</div></pre></td></tr></table></figure>
 <a id="more"></a>
