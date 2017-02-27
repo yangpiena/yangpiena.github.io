@@ -17,6 +17,7 @@ date: 2016-11-11 12:31:37
 
 > **音乐**
 [SongTaste](http://www.songtaste.com/)
+[AeKun](https://www.aekun.com/)
 
 &nbsp;
 
@@ -53,7 +54,7 @@ date: 2016-11-11 12:31:37
 
 &nbsp;
 
-> **IT-社区**
+> **社区**
 [SDK.cn](https://www.sdk.cn/)
 [菜鸟教程](http://www.runoob.com/)
 [开源中国社区](http://www.oschina.net/)
@@ -61,7 +62,7 @@ date: 2016-11-11 12:31:37
 
 &nbsp;
 
-> **IT-资源**
+> **资源**
 [jarfire](http://cn.jarfire.org/)
 [矢量图标库](http://www.iconfont.cn/)
 [百度静态资源公共库](http://cdn.code.baidu.com/)
@@ -69,42 +70,42 @@ date: 2016-11-11 12:31:37
 
 &nbsp;
 
-> **IT-工具**
+> **工具**
 [MD5解密](http://www.cmd5.com/)
 [png在线转ico](http://www.easyicon.net/covert/)
 [Markdown在线编辑](http://www.ctrlshift.net/project/markdowneditor/)
 [正则表达式在线测试](http://tool.chinaz.com/regex/)
-[Sublime Text 2/3安装使用及常用插件](http://www.cnblogs.com/dudumao/p/4054086.html)	|	[Sublime Text PackageControl](https://packagecontrol.io/)
+[Sublime Text 2/3安装使用及常用插件](http://www.cnblogs.com/dudumao/p/4054086.html)	|	[Sublime Text PackageControl](https://packagecontrol.io/)	|	[Sublime Text 3 快捷键](https://segmentfault.com/a/1190000002570753)
 
 &nbsp;
 
-> **IT-教程**
+> **教程**
 [sass入门教程](http://www.w3cplus.com/sassguide/)
 [项目目录结构规范](https://segmentfault.com/a/1190000002471120)
 [Nginx 0.5.31 + PHP 5.2.4（FastCGI）搭建可承受3万以上并发连接数，胜过Apache 10倍的Web服务器[原创]](http://zyan.cc/post/297/)
 
 &nbsp;
 
-> **IT-文章**
+> **文章**
 [博客园](http://www.cnblogs.com/cmt/)
 [LB 负载均衡的层次结构](http://www.cnblogs.com/mindwind/p/5339657.html)
 [GitHub上优秀的开源项目](http://blog.csdn.net/ren1027538427/article/details/52450294)
 
 &nbsp;
 
-> **IT-前端**
+> **前端**
 [蓝蓝设计](http://www.lanlanwork.com/)
 [公司某项目前端技术积累](http://blog.csdn.net/sunyingyuan/article/details/38237139)
 [10个顶级的CSS UI开源框架](http://www.codeceo.com/article/top-10-css-ui-framework.html)
 
 &nbsp;
 
-> **IT-jQuery**
+> **jQuery**
 [jQuery插件库](http://www.jq22.com/)
 
 &nbsp;
 
-> **IT-Angular**
+> **Angular**
 [AngularJS官网](https://angularjs.org/)			|	[AngularJS中文官网](https://angular.cn/)				|	[AngularUI官网](http://angular-ui.github.io/)
 [AngularJS所有版本下载](https://code.angularjs.org/)
 [Angularjs 中文版 API](http://www.ngnice.com)	|	[Angularjs English API](https://docs.angularjs.org/api)	|	[Angularjs 中文版 API v1.3.9](http://www.angularjsapi.cn/#/index)
@@ -115,7 +116,7 @@ date: 2016-11-11 12:31:37
 
 &nbsp;
 
-> **IT-Flex**
+> **Flex**
 [Flex下载地址](http://www.adobe.com/support/flashplayer/downloads.html)	|	[查看浏览器FLash版本、Debug Player](http://kb2.adobe.com/cps/155/tn_15507.html)
 [flex学习笔记](http://blog.csdn.net/wugouzi/article/details/5598392)	|	[Flex学习视频748-798](http://www.riameeting.com/node/748)
 [Flex成功案例](http://keren.iteye.com/blog/377733)	|	[中文Flex例子](http://blog.minidx.com/)
@@ -124,7 +125,7 @@ date: 2016-11-11 12:31:37
 
 &nbsp;
 
-> **IT-Java**
+> **Java**
 [SSM框架——详细整合教程（Spring+SpringMVC+MyBatis）](http://blog.csdn.net/zhshulin/article/details/37956105)
 [spring-mvc与jquery-easyui整合](http://blog.csdn.net/cfl20121314/article/details/42160035)	|	[SpringMVC+Hibernate +MySql+ EasyUI实现CRUD](http://my.oschina.net/xshuai/blog/345117)	|	[基于Spring + Spring MVC + Mybatis 高性能web构建](http://blog.csdn.net/zoutongyuan/article/details/41379851)
 [Maven环境搭建和介绍](http://blog.csdn.net/fengshizty/article/details/43019561)	|	[Maven搭建SpringMVC+Mybatis项目详解](http://doc.okbase.net/fengshizty/archive/126397.html)
@@ -132,7 +133,7 @@ date: 2016-11-11 12:31:37
 
 &nbsp;
 
-> **IT-SQL**
+> **SQL**
 [SQL Server 2008(R2)支持将数据导出为脚本](http://xcc313.iteye.com/blog/1331468)
 [【SQL Server备份恢复】维护计划实现备份：每周数据库完整备份、每天差异备份、每小时日志备份 ](http://blog.csdn.net/sqlserverdiscovery/article/details/11020057)
 

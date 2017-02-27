@@ -16,12 +16,15 @@ tags: [Linux]
 |shutdown -h now			|立刻关机（root用户使用）|
 |shutdown -h 10				|10分钟后自动关机|
 |||
-|cat /proc/version			|查看Linux内核版本|
-|uname -a					|查看Linux内核版本|
-|lsb_release -a				|查看Linux系统版本|
-|cat /etc/issue				|查看Linux系统版本|
-|cat /etc/redhat-release	|查看Linux系统版本（只适合Redhat系）|
-|||
+|cat /proc/version			|查看内核版本|
+|uname -a					|查看内核版本|
+|lsb_release -a				|查看系统版本|
+|cat /etc/issue				|查看系统版本|
+|cat /etc/redhat-release	|查看系统版本（只适合Redhat系）|
+|getconf LONG_BIT			|查看系统位数
+|cat /proc/cpuinfo			|查看CPU型号
+|free -m					|查看内存
+|df -l						|查看硬盘空间情况
 |yum update					|升级Linux，升级所有包同时也升级软件和系统内核|
 |yum upgrade				|升级Linux，只升级所有包，不升级软件和系统内核|
 
