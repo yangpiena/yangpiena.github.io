@@ -35,7 +35,16 @@
         <% } %>
         <!-- Post Main Content -->
         <div class="post-content">
-          <%- post.content %>
+
+			<!-- YPN Add 2017-02-27 Table of Contents -->
+			<% if (post.toc){ %>
+			<div id="toc" class="toc-article">
+				<strong class="toc-title">文章目录</strong>
+				<%- toc(post.content) %>
+			</div>
+			<% } %>
+			
+          	<%- post.content %>
         </div>
 
         <!-- YPN Add 2016-11-14 增加打赏 start -->

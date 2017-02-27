@@ -1,8 +1,16 @@
 <%- partial('_partial/header', {headerType: 'links'}) %>
 
+<!-- YPN Add 2017-02-27 Table of Contents -->
+<% if (page.toc){ %>
+<div id="toc-links" class="toc-article-links">
+	<strong class="toc-title-links">文章目录</strong>
+	<%- toc(page.content) %>
+</div>
+<% } %>
+
 <!-- Post Main Content -->
-<div class="post-content" style="text-align:center;">
-  <%- page.content %>
+<div class="post-content" style="text-align:left;padding:1.5em 0em 0 20%">
+	<%- page.content %>
 </div>
 
 <%- partial('_partial/pagination') %>

@@ -2,9 +2,10 @@
 title: 链接
 layout: links
 date: 2016-11-11 12:31:37
+toc: true
 ---
 
-> **常用**
+#### 常用
 [谷歌搜索](https://www.google.com/ncr)	|	[谷歌香港](https://www.google.com.hk/ncr)	|	[维基百科](https://www.wikipedia.org/)
 [七牛云存储](https://portal.qiniu.com/create)
 [CSDN.NET](http://www.csdn.net/)
@@ -15,38 +16,38 @@ date: 2016-11-11 12:31:37
 
 &nbsp;
 
-> **音乐**
+#### 音乐
 [SongTaste](http://www.songtaste.com/)
 [AeKun](https://www.aekun.com/)
 
 &nbsp;
 
-> **电影**
+#### 电影
 [BT下载](http://www.qinou.cn/)
 [破晓电影](http://www.poxiao.com)
 
 &nbsp;
 
-> **游戏**
+#### 游戏
 [三国杀](http://web.sanguosha.com/)
 [好蜀门私服](http://www.haosm.com/)
 
 &nbsp;
 
-> **美图**
+#### 美图
 [it.me](http://www.topit.me/)
 [笔记本桌面壁纸下载](http://bbs.zol.com.cn/nbbbs/d33943.html)
 
 &nbsp;
 
-> **操作系统**
+#### 操作系统
 [Linux删除乱码文件](http://www.cnblogs.com/quanweiru/p/3764003.html)
 [SUSE Linux启用SSH](http://tophandxing.blog.163.com/blog/static/109714820124123438513/)
 [Win10怎么把批处理文件固定到开始菜单](http://www.jb51.net/os/win10/483729.html)
 
 &nbsp;
 
-> **系统/软件下载**
+#### 系统/软件下载
 [绿盟](http://www.xdowns.com/)
 [浏览迷](http://liulanmi.com/)
 [系统之家](http://www.xitongzhijia.net/)	|	[Win10之家](http://www.iwin10.com/)	|	[Win10之家](http://www.62hx.com/)	|	[Win10之家](http://www.xh52.com/)	|	[IT Win10之家](http://win10.ithome.com/win10xiazai/)
@@ -54,7 +55,7 @@ date: 2016-11-11 12:31:37
 
 &nbsp;
 
-> **社区**
+#### 社区
 [SDK.cn](https://www.sdk.cn/)
 [菜鸟教程](http://www.runoob.com/)
 [开源中国社区](http://www.oschina.net/)
@@ -62,7 +63,7 @@ date: 2016-11-11 12:31:37
 
 &nbsp;
 
-> **资源**
+#### 资源
 [jarfire](http://cn.jarfire.org/)
 [矢量图标库](http://www.iconfont.cn/)
 [百度静态资源公共库](http://cdn.code.baidu.com/)
@@ -70,7 +71,7 @@ date: 2016-11-11 12:31:37
 
 &nbsp;
 
-> **工具**
+#### 工具
 [MD5解密](http://www.cmd5.com/)
 [png在线转ico](http://www.easyicon.net/covert/)
 [Markdown在线编辑](http://www.ctrlshift.net/project/markdowneditor/)
@@ -79,33 +80,33 @@ date: 2016-11-11 12:31:37
 
 &nbsp;
 
-> **教程**
+#### 教程
 [sass入门教程](http://www.w3cplus.com/sassguide/)
 [项目目录结构规范](https://segmentfault.com/a/1190000002471120)
 [Nginx 0.5.31 + PHP 5.2.4（FastCGI）搭建可承受3万以上并发连接数，胜过Apache 10倍的Web服务器[原创]](http://zyan.cc/post/297/)
 
 &nbsp;
 
-> **文章**
+#### 文章
 [博客园](http://www.cnblogs.com/cmt/)
 [LB 负载均衡的层次结构](http://www.cnblogs.com/mindwind/p/5339657.html)
 [GitHub上优秀的开源项目](http://blog.csdn.net/ren1027538427/article/details/52450294)
 
 &nbsp;
 
-> **前端**
+#### 前端
 [蓝蓝设计](http://www.lanlanwork.com/)
 [公司某项目前端技术积累](http://blog.csdn.net/sunyingyuan/article/details/38237139)
 [10个顶级的CSS UI开源框架](http://www.codeceo.com/article/top-10-css-ui-framework.html)
 
 &nbsp;
 
-> **jQuery**
+#### jQuery
 [jQuery插件库](http://www.jq22.com/)
 
 &nbsp;
 
-> **Angular**
+#### Angular
 [AngularJS官网](https://angularjs.org/)			|	[AngularJS中文官网](https://angular.cn/)				|	[AngularUI官网](http://angular-ui.github.io/)
 [AngularJS所有版本下载](https://code.angularjs.org/)
 [Angularjs 中文版 API](http://www.ngnice.com)	|	[Angularjs English API](https://docs.angularjs.org/api)	|	[Angularjs 中文版 API v1.3.9](http://www.angularjsapi.cn/#/index)
@@ -116,7 +117,7 @@ date: 2016-11-11 12:31:37
 
 &nbsp;
 
-> **Flex**
+#### Flex
 [Flex下载地址](http://www.adobe.com/support/flashplayer/downloads.html)	|	[查看浏览器FLash版本、Debug Player](http://kb2.adobe.com/cps/155/tn_15507.html)
 [flex学习笔记](http://blog.csdn.net/wugouzi/article/details/5598392)	|	[Flex学习视频748-798](http://www.riameeting.com/node/748)
 [Flex成功案例](http://keren.iteye.com/blog/377733)	|	[中文Flex例子](http://blog.minidx.com/)
@@ -125,7 +126,7 @@ date: 2016-11-11 12:31:37
 
 &nbsp;
 
-> **Java**
+#### Java
 [SSM框架——详细整合教程（Spring+SpringMVC+MyBatis）](http://blog.csdn.net/zhshulin/article/details/37956105)
 [spring-mvc与jquery-easyui整合](http://blog.csdn.net/cfl20121314/article/details/42160035)	|	[SpringMVC+Hibernate +MySql+ EasyUI实现CRUD](http://my.oschina.net/xshuai/blog/345117)	|	[基于Spring + Spring MVC + Mybatis 高性能web构建](http://blog.csdn.net/zoutongyuan/article/details/41379851)
 [Maven环境搭建和介绍](http://blog.csdn.net/fengshizty/article/details/43019561)	|	[Maven搭建SpringMVC+Mybatis项目详解](http://doc.okbase.net/fengshizty/archive/126397.html)
@@ -133,13 +134,13 @@ date: 2016-11-11 12:31:37
 
 &nbsp;
 
-> **SQL**
+#### SQL
 [SQL Server 2008(R2)支持将数据导出为脚本](http://xcc313.iteye.com/blog/1331468)
 [【SQL Server备份恢复】维护计划实现备份：每周数据库完整备份、每天差异备份、每小时日志备份 ](http://blog.csdn.net/sqlserverdiscovery/article/details/11020057)
 
 &nbsp;
 
-> **Hexo**
+#### Hexo
 [hexo常用命令笔记](https://segmentfault.com/a/1190000002632530)
 [Windows下使用Hexo+GithubPage搭建博客](http://blog.csdn.net/wx_jin/article/details/51027783)	|	[Hexo博客主题从Jacman切换到NexT.Mist ](http://codepub.cn/2016/03/20/Hexo-blog-theme-switching-from-Jacman-to-NexT-Mist/)
 [Hexo常见问题](http://wp.huangshiyang.com/hexo%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88)	|	[Hexo博客优化](http://xwartz.xyz/blog/2016/09/reduce-blog-load-time/)
@@ -148,14 +149,14 @@ date: 2016-11-11 12:31:37
 
 &nbsp;
 
-> **Git**
+#### Git
 [常用 Git 命令清单](http://www.ruanyifeng.com/blog/2015/12/git-cheat-sheet.html)
 [推荐！手把手教你使用Git](http://blog.jobbole.com/78960/)
 [Git服务器搭建全过程分步详解](http://developer.51cto.com/art/201507/483448.htm)
 
 &nbsp;
 
-> **Kettle**
+#### Kettle
 [Kettle官网下载](http://kettle.pentaho.org/)	|	[Kettle各版本下载](http://sourceforge.net/projects/pentaho/files/Data%20Integration/)
 [Kettle开源社区](http://www.ukettle.org/)
 [Kettle基本概念学习](http://www.cnblogs.com/hapjin/p/4578738.html)	|	[kettle使用命令行来运行ktr和kjb](http://www.cnblogs.com/wxjnew/p/3620792.html)

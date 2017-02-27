@@ -7,6 +7,7 @@ categories: Windows
 tags: [Windows, 命令]
 keywords:
 description:
+toc: true
 ---
 ## 系统
 |命令						|说明|
@@ -23,7 +24,7 @@ description:
 
 <!-- more -->
 
-### Dos命令
+## Dos命令
 |命令						|说明|
 | ------------------------- |:--|
 |dir						|列出当前目录下的文件以及文件夹
@@ -36,7 +37,7 @@ description:
 |cd/						|退回到根目录
 |exit						|退出dos命令行
 
-### 快捷键
+## 快捷键
 |命令						|说明|
 | ------------------------- |:--|
 |notepad					|记事本
