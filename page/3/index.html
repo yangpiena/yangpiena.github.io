@@ -408,6 +408,12 @@
 <td>taskkill /f /t /im tor.exe</td>
 <td style="text-align:left">结束该进程tor.exe</td>
 </tr>
+<tr>
+<td>for /f “skip=9 tokens=1,2 delims=:” %i in (‘netsh wlan show profiles’) do  @echo %j</td>
+<td style="text-align:left">findstr -i -v echo</td>
+<td>netsh wlan show profiles %j key=clear</td>
+<td>列出连接过的wifi信息、加密方式、包括密码</td>
+</tr>
 </tbody>
 </table></div>
     <!-- Post Tags -->
