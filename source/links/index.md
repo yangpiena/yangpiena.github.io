@@ -72,10 +72,13 @@ toc: true
 &nbsp;
 
 #### 工具
+[在线API](http://tool.oschina.net/)
 [MD5解密](http://www.cmd5.com/)
 [png在线转ico](http://www.easyicon.net/covert/)
 [Markdown在线编辑](http://www.ctrlshift.net/project/markdowneditor/)
 [正则表达式在线测试](http://tool.chinaz.com/regex/)
+[在线格式化/压缩Javascript工具](https://www.geeksss.com/pages/jsformat.php)
+[在线JSON代码检验、美化、格式化工具](https://www.geeksss.com/pages/jsoncheck.php)
 [Sublime Text 2/3安装使用及常用插件](http://www.cnblogs.com/dudumao/p/4054086.html)	|	[Sublime Text PackageControl](https://packagecontrol.io/)	|	[Sublime Text 3 快捷键](https://segmentfault.com/a/1190000002570753)
 
 &nbsp;
@@ -94,10 +97,13 @@ toc: true
 
 &nbsp;
 
-#### 前端
+#### 前端/案例
+[LayUI](https://www.layui.com/)
 [蓝蓝设计](http://www.lanlanwork.com/)
+[网络培训系统界面设计UI](http://www.th7.cn/Design/ui/201312/199261.shtml)
 [公司某项目前端技术积累](http://blog.csdn.net/sunyingyuan/article/details/38237139)
 [10个顶级的CSS UI开源框架](http://www.codeceo.com/article/top-10-css-ui-framework.html)
+[不落阁](http://www.lyblogs.cn/)
 
 &nbsp;
 
@@ -114,6 +120,12 @@ toc: true
 [CSDN知识库：AngularJS](http://lib.csdn.net/base/23)	|	[伯乐在线：AngularJS](http://blog.jobbole.com/tag/angularjs/)	|	[RIA爱好者：学习AngularJS](http://www.riafan.com/angularjs-learning/)
 [NgNice站点是由一批AngularJS爱好者发起的，致力于打造一个AngularJS的学习和经验分享平台。](http://www.ngnice.com/)
 [2013年度最强AngularJS资源合集](http://www.iteye.com/news/28651-AngularJS-Google-resource)	|	[20个免费的 AngularJS 资源和开发教程](http://www.html5cn.org/article-9473-1.html)
+
+&nbsp;
+
+#### Vue.js
+[Vue.js官网](http://cn.vuejs.org/)
+[JSFiddle Hello World](https://jsfiddle.net/chrisvfritz/50wL7mdz/)
 
 &nbsp;
 

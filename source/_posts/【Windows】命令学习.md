@@ -21,6 +21,7 @@ toc: true
 |netstat -aon|findstr "9050"|查看指定端口的占用情况
 |tasklist|findstr "2016" 	|查看PID对应的进程
 |taskkill /f /t /im tor.exe	|结束该进程tor.exe
+|for /f "skip=9 tokens=1,2 delims=:" %i in ('netsh wlan show profiles') do  @echo %j | findstr -i -v echo | netsh wlan show profiles %j key=clear		|列出连接过的wifi信息、加密方式、包括密码
 
 <!-- more -->
 
