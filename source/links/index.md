@@ -25,6 +25,7 @@ toc: true
 #### 电影
 [BT下载](http://www.qinou.cn/)
 [破晓电影](http://www.poxiao.com)
+[天天美剧](http://cn163.net/)
 
 &nbsp;
 
@@ -135,6 +136,7 @@ toc: true
 [Flex成功案例](http://keren.iteye.com/blog/377733)	|	[中文Flex例子](http://blog.minidx.com/)
 [Flex 3 advancedDataGrid的使用](http://www.cnblogs.com/xuehai/archive/2009/09/26/1574531.html)
 [Flex性能优化](https://my.oschina.net/return/blog/208294#navbar-header)	|	[Flex进阶持续学习——性能优化](http://coffeelover.iteye.com/blog/1163906)	|	[flex应用程序性能优化十个方法](http://www.wangqi.com/html/2010-12/12796.htm)
+[Flex 中的undefined类型](http://dudong0726.iteye.com/blog/1296195)
 
 &nbsp;
 
@@ -143,6 +145,7 @@ toc: true
 [spring-mvc与jquery-easyui整合](http://blog.csdn.net/cfl20121314/article/details/42160035)	|	[SpringMVC+Hibernate +MySql+ EasyUI实现CRUD](http://my.oschina.net/xshuai/blog/345117)	|	[基于Spring + Spring MVC + Mybatis 高性能web构建](http://blog.csdn.net/zoutongyuan/article/details/41379851)
 [Maven环境搭建和介绍](http://blog.csdn.net/fengshizty/article/details/43019561)	|	[Maven搭建SpringMVC+Mybatis项目详解](http://doc.okbase.net/fengshizty/archive/126397.html)
 [配置简单功能强大的excel工具类搞定excel导入导出工具类](http://blog.csdn.net/lk_blog/article/details/8007777)
+[POI操作Excel常用方法总结 ](http://blog.csdn.net/huazhangena/article/details/7587731)
 
 &nbsp;
 

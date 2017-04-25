@@ -25,6 +25,7 @@ tags: [Linux, 命令]
 |cat /proc/cpuinfo			|查看CPU型号
 |free -m					|查看内存
 |df -l						|查看硬盘空间情况
+|du -sh ./*					|查看当前目录下各文件/文件夹的大小
 |yum update					|升级Linux，升级所有包同时也升级软件和系统内核|
 |yum upgrade				|升级Linux，只升级所有包，不升级软件和系统内核|
 
@@ -51,6 +52,8 @@ tags: [Linux, 命令]
 |more						|让文件内容一屏一屏的显示|
 |cat XXX &#124; more		|管道：将cat显示出来的内容重新输出给more命令|
 |>							|重定向：将文件内容输出到指定的文件或位置。如cat /etc/services > a.txt|
+|ls -i                      |使用ls -i命令找到文件或文件夹的节点编号|
+|find -inum 2243223 -delete |使用find命令查询并且删除乱码文件或文件夹|
 
 ### vi
 |命令						|说明|
