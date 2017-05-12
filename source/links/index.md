@@ -11,7 +11,7 @@ toc: true
 [CSDN.NET](http://www.csdn.net/)
 [VeryCD 电驴大全](http://www.verycd.com/)
 [360doc个人图书馆](http://www.360doc.com/)
-[2016 Google hosts 持续更新](https://laod.cn/hosts/2016-google-hosts.html)
+[2017 Google hosts 持续更新](https://laod.cn/hosts/2017-google-hosts.html)
 [Windows在线markdown工具](https://www.zybuluo.com/mdeditor)	|	[Markdown 语法 示例 字体 字号 颜色](http://blog.csdn.net/u011419965/article/details/50536937)	|	[Markdown支持的语言](http://blog.csdn.net/peng_hong_fu/article/details/52805408)
 
 &nbsp;
@@ -26,6 +26,11 @@ toc: true
 [BT下载](http://www.qinou.cn/)
 [破晓电影](http://www.poxiao.com)
 [天天美剧](http://cn163.net/)
+[放电影网](http://www.fangdianying.tv/)
+[电影天堂](http://www.dy2018.com/)
+[面包网](http://www.mianbao99.com/)
+[迅雷电影下载](http://www.xlpu.cc/)
+[快播电影](http://www.bubulai.com/)
 
 &nbsp;
 
@@ -137,6 +142,7 @@ toc: true
 [Flex 3 advancedDataGrid的使用](http://www.cnblogs.com/xuehai/archive/2009/09/26/1574531.html)
 [Flex性能优化](https://my.oschina.net/return/blog/208294#navbar-header)	|	[Flex进阶持续学习——性能优化](http://coffeelover.iteye.com/blog/1163906)	|	[flex应用程序性能优化十个方法](http://www.wangqi.com/html/2010-12/12796.htm)
 [Flex 中的undefined类型](http://dudong0726.iteye.com/blog/1296195)
+[Flash Builder 提示与技巧](http://www.adobe.com/cn/devnet/flex/articles/tips-tricks.html)
 
 &nbsp;
 
