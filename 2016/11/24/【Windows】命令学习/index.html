@@ -126,7 +126,7 @@
           <!-- Date -->
           <span class="date-time info">发表于
             <span class="date">2016-11-24</span>
-            <span class="time">09:09:15</span>
+            <span class="time">08:25:12</span>
           </span>
           
           <!--  Categories  -->
@@ -159,7 +159,7 @@
 			
 			<div id="toc" class="toc-article">
 				<strong class="toc-title">文章目录</strong>
-				<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#系统"><span class="toc-number">1.</span> <span class="toc-text">系统</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Dos命令"><span class="toc-number">2.</span> <span class="toc-text">Dos命令</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#快捷键"><span class="toc-number">3.</span> <span class="toc-text">快捷键</span></a></li></ol>
+				<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#系统"><span class="toc-number">1.</span> <span class="toc-text">系统</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Dos命令"><span class="toc-number">2.</span> <span class="toc-text">Dos命令</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#其他命令"><span class="toc-number">3.</span> <span class="toc-text">其他命令</span></a></li></ol>
 			</div>
 			
 			
@@ -210,14 +210,195 @@
 <td style="text-align:left">结束该进程tor.exe</td>
 </tr>
 <tr>
-<td>for /f “skip=9 tokens=1,2 delims=:” %i in (‘netsh wlan show profiles’) do  @echo %j</td>
-<td style="text-align:left">findstr -i -v echo</td>
-<td>netsh wlan show profiles %j key=clear</td>
-<td>列出连接过的wifi信息、加密方式、包括密码</td>
+<td>notepad</td>
+<td style="text-align:left">记事本</td>
+</tr>
+<tr>
+<td>clipbrd</td>
+<td style="text-align:left">剪切板</td>
+</tr>
+<tr>
+<td>systeminfo</td>
+<td style="text-align:left">查看系统信息</td>
+</tr>
+<tr>
+<td>gpedit.msc</td>
+<td style="text-align:left">组策略（关闭自动播放）</td>
+</tr>
+<tr>
+<td>odbcad32.exe</td>
+<td style="text-align:left">数据源，若系统是64bit的，则新建dsn要用64bit的ODBC，即在运行中输入：C:\Windows\SysWOW64\odbcad32.exe</td>
+</tr>
+<tr>
+<td>arp -a</td>
+<td style="text-align:left">查看IP对应的MAC地址</td>
+</tr>
+<tr>
+<td>arp -s</td>
+<td style="text-align:left">添加IP对应的MAC地址</td>
+</tr>
+<tr>
+<td>dxdiag</td>
+<td style="text-align:left">查看系统DirectX</td>
+</tr>
+<tr>
+<td>psr</td>
+<td style="text-align:left">问题步骤记录器</td>
+</tr>
+<tr>
+<td>gpedit.msc</td>
+<td style="text-align:left">组策略</td>
+</tr>
+<tr>
+<td>sndrec32</td>
+<td style="text-align:left">录音机</td>
+</tr>
+<tr>
+<td>Nslookup</td>
+<td style="text-align:left">IP地址侦测器</td>
+</tr>
+<tr>
+<td>explorer</td>
+<td style="text-align:left">打开资源管理器</td>
+</tr>
+<tr>
+<td>logoff</td>
+<td style="text-align:left">注销命令</td>
+</tr>
+<tr>
+<td>tsshutdn</td>
+<td style="text-align:left">60秒倒计时关机命令</td>
+</tr>
+<tr>
+<td>lusrmgr.msc</td>
+<td style="text-align:left">本机用户和组</td>
+</tr>
+<tr>
+<td>services.msc</td>
+<td style="text-align:left">本地服务设置</td>
+</tr>
+<tr>
+<td>oobe/msoobe /a</td>
+<td style="text-align:left">检查XP是否激活</td>
+</tr>
+<tr>
+<td>notepad</td>
+<td style="text-align:left">打开记事本</td>
+</tr>
+<tr>
+<td>cleanmgr</td>
+<td style="text-align:left">垃圾整理</td>
+</tr>
+<tr>
+<td>net start messenger</td>
+<td style="text-align:left">开始信使服务</td>
+</tr>
+<tr>
+<td>compmgmt.msc</td>
+<td style="text-align:left">计算机管理</td>
+</tr>
+<tr>
+<td>net stop messenger</td>
+<td style="text-align:left">停止信使服务</td>
+</tr>
+<tr>
+<td>conf</td>
+<td style="text-align:left">启动 netmeeting</td>
+</tr>
+<tr>
+<td>dvdplay</td>
+<td style="text-align:left">DVD播放器</td>
+</tr>
+<tr>
+<td>charmap</td>
+<td style="text-align:left">启动字符映射表</td>
+</tr>
+<tr>
+<td>diskmgmt.msc</td>
+<td style="text-align:left">磁盘管理实用程序</td>
+</tr>
+<tr>
+<td>calc</td>
+<td style="text-align:left">启动计算器</td>
+</tr>
+<tr>
+<td>dfrg.msc</td>
+<td style="text-align:left">磁盘碎片整理程序</td>
+</tr>
+<tr>
+<td>chkdsk.exe</td>
+<td style="text-align:left">Chkdsk磁盘检查</td>
+</tr>
+<tr>
+<td>devmgmt.msc</td>
+<td style="text-align:left">设备管理器</td>
+</tr>
+<tr>
+<td>regsvr32 /u *.dll</td>
+<td style="text-align:left">停止dll文件运行</td>
+</tr>
+<tr>
+<td>drwtsn32</td>
+<td style="text-align:left">系统医生</td>
+</tr>
+<tr>
+<td>rononce -p</td>
+<td style="text-align:left">15秒关机</td>
+</tr>
+<tr>
+<td>dxdiag</td>
+<td style="text-align:left">检查DirectX信息</td>
+</tr>
+<tr>
+<td>regedt32</td>
+<td style="text-align:left">注册表编辑器</td>
+</tr>
+<tr>
+<td>Msconfig.exe</td>
+<td style="text-align:left">系统配置实用程序</td>
+</tr>
+<tr>
+<td>rsop.msc</td>
+<td style="text-align:left">组策略结果集</td>
+</tr>
+<tr>
+<td>mem.exe</td>
+<td style="text-align:left">显示内存使用情况</td>
+</tr>
+<tr>
+<td>regedit.exe</td>
+<td style="text-align:left">注册表</td>
+</tr>
+<tr>
+<td>winchat</td>
+<td style="text-align:left">XP自带局域网聊天</td>
+</tr>
+<tr>
+<td>progman</td>
+<td style="text-align:left">程序管理器</td>
+</tr>
+<tr>
+<td>winmsd</td>
+<td style="text-align:left">系统信息</td>
+</tr>
+<tr>
+<td>perfmon.msc</td>
+<td style="text-align:left">计算机性能监测程序</td>
+</tr>
+<tr>
+<td>winver</td>
+<td style="text-align:left">检查Windows版本</td>
+</tr>
+<tr>
+<td>sfc /scannow</td>
+<td style="text-align:left">扫描错误并复原</td>
+</tr>
+<tr>
+<td>taskmgr</td>
+<td style="text-align:left">任务管理器（2000／xp／2003）</td>
 </tr>
 </tbody>
 </table>
-<a id="more"></a>
 <h2 id="Dos命令"><a href="#Dos命令" class="headerlink" title="Dos命令"></a>Dos命令</h2><table>
 <thead>
 <tr>
@@ -262,9 +443,29 @@
 <td>exit</td>
 <td style="text-align:left">退出dos命令行</td>
 </tr>
+<tr>
+<td>open</td>
+<td style="text-align:left">与ftp服务器相连接</td>
+</tr>
+<tr>
+<td>send(put)</td>
+<td style="text-align:left">上传文件</td>
+</tr>
+<tr>
+<td>get</td>
+<td style="text-align:left">下载文件</td>
+</tr>
+<tr>
+<td>mget</td>
+<td style="text-align:left">下载多个文件</td>
+</tr>
+<tr>
+<td>bye</td>
+<td style="text-align:left">中断与服务器的连接</td>
+</tr>
 </tbody>
 </table>
-<h2 id="快捷键"><a href="#快捷键" class="headerlink" title="快捷键"></a>快捷键</h2><table>
+<h2 id="其他命令"><a href="#其他命令" class="headerlink" title="其他命令"></a>其他命令</h2><table>
 <thead>
 <tr>
 <th>命令</th>
@@ -273,40 +474,10 @@
 </thead>
 <tbody>
 <tr>
-<td>notepad</td>
-<td style="text-align:left">记事本</td>
-</tr>
-<tr>
-<td>clipbrd</td>
-<td style="text-align:left">剪切板</td>
-</tr>
-<tr>
-<td>systeminfo</td>
-<td style="text-align:left">查看系统信息</td>
-</tr>
-<tr>
-<td>gpedit.msc</td>
-<td style="text-align:left">组策略（关闭自动播放）</td>
-</tr>
-<tr>
-<td>odbcad32.exe</td>
-<td style="text-align:left">数据源，若系统是64bit的，则新建dsn要用64bit的ODBC，即在运行中输入：C:\Windows\SysWOW64\odbcad32.exe</td>
-</tr>
-<tr>
-<td>arp -a</td>
-<td style="text-align:left">查看IP对应的MAC地址</td>
-</tr>
-<tr>
-<td>arp -s</td>
-<td style="text-align:left">添加IP对应的MAC地址</td>
-</tr>
-<tr>
-<td>dxdiag</td>
-<td style="text-align:left">查看系统DirectX</td>
-</tr>
-<tr>
-<td>psr</td>
-<td style="text-align:left">问题步骤记录器</td>
+<td>for /f “skip=9 tokens=1,2 delims=:” %i in (‘netsh wlan show profiles’) do  @echo %j</td>
+<td style="text-align:left">findstr -i -v echo</td>
+<td>netsh wlan show profiles %j key=clear</td>
+<td>列出连接过的wifi信息、加密方式、包括密码</td>
 </tr>
 </tbody>
 </table>
