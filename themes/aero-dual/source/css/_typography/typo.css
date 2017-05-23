@@ -57,6 +57,11 @@ table {
   border-spacing: 0;
 }
 
+/* 表格标题加粗 YPN Add 2017年5月23日 */
+table th {
+  font-weight: bold;
+}
+
 /* 去除默认边框 */
 fieldset, img {
   border: 0;
