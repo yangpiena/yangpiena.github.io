@@ -1,8 +1,12 @@
 ---
 title: 【Blog】更换电脑后如何修改hexo博客
+layout: post
+date: 2016-11-09
+comments: true
 categories: Blog
 tags: [Blog, hexo]
 keywords: hexo,Blog
+description: 生命在于折腾
 ---
 # 当重装电脑，或者想在其它电脑上修改博客，可以使用下列步骤：
 1. 使用git clone git@github.com:yangpiena/yangpiena.github.io.git拷贝仓库（默认分支为source）；
