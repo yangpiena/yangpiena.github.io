@@ -164,9 +164,10 @@ toc: true
 
 #### Hexo
 [hexo常用命令笔记](https://segmentfault.com/a/1190000002632530)
-[Windows下使用Hexo+GithubPage搭建博客](http://blog.csdn.net/wx_jin/article/details/51027783)	|	[Hexo博客主题从Jacman切换到NexT.Mist ](http://codepub.cn/2016/03/20/Hexo-blog-theme-switching-from-Jacman-to-NexT-Mist/)
+[Windows下使用Hexo+GithubPage搭建博客](http://blog.csdn.net/wx_jin/article/details/51027783)
 [Hexo常见问题](http://wp.huangshiyang.com/hexo%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88)	|	[Hexo博客优化](http://xwartz.xyz/blog/2016/09/reduce-blog-load-time/)
 [Hexo官方主题](https://hexo.io/themes/)	|	[Hexo主题](https://github.com/hexojs/hexo/wiki/Themes)
+[Hexo博客主题从Jacman切换到NexT.Mist ](http://codepub.cn/2016/03/20/Hexo-blog-theme-switching-from-Jacman-to-NexT-Mist/)
 [贴图库](http://www.tietuku.com/)
 
 &nbsp;
