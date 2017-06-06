@@ -6,13 +6,13 @@ toc: true
 ---
 
 #### 常用
-[谷歌搜索](https://www.google.com/ncr)	|	[谷歌香港](https://www.google.com.hk/ncr)	|	[维基百科](https://www.wikipedia.org/)
-[七牛云存储](https://portal.qiniu.com/create)
+[谷歌搜索](https://www.google.com/ncr)  |  [谷歌香港](https://www.google.com.hk/ncr)     |  [维基百科](https://www.wikipedia.org/)
+[Coding](https://coding.net/)           |  [七牛云存储](https://portal.qiniu.com/create)
 [CSDN.NET](http://www.csdn.net/)
 [VeryCD 电驴大全](http://www.verycd.com/)
 [360doc个人图书馆](http://www.360doc.com/)
 [2017 Google hosts 持续更新](https://laod.cn/hosts/2017-google-hosts.html)
-[Windows在线markdown工具](https://www.zybuluo.com/mdeditor)	|	[Markdown 语法 示例 字体 字号 颜色](http://blog.csdn.net/u011419965/article/details/50536937)	|	[Markdown支持的语言](http://blog.csdn.net/peng_hong_fu/article/details/52805408)
+[Windows在线markdown工具](https://www.zybuluo.com/mdeditor)  |  [Markdown 语法 示例 字体 字号 颜色](http://blog.csdn.net/u011419965/article/details/50536937)                                    |  [Markdown支持的语言](http://blog.csdn.net/peng_hong_fu/article/details/52805408)
 
 &nbsp;
 
