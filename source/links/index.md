@@ -15,7 +15,7 @@ toc: true
 &nbsp;
 
 #### 音乐
-[SongTaste](http://www.songtaste.com/)                        |  [AeKun](https://www.aekun.com/)
+[SongTaste](http://www.songtaste.com/)                        |  [AeKun](https://www.aekun.com/)                                                              |  [网易云音乐](http://music.163.com)
 
 &nbsp;
 

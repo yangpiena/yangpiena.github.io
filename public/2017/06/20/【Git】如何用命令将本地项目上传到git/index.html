@@ -5,11 +5,11 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="生命在于折腾">
+  <meta name="description" content="">
   <meta name="author" content="昜丿捺">
   <!-- Open Graph Data -->
-  <meta property="og:title" content="【Blog】hexo博客搭建记录"/>
-  <meta property="og:description" content="生命在于折腾" />
+  <meta property="og:title" content="【Git】如何用命令将本地项目上传到git"/>
+  <meta property="og:description" content="没有阳光，沉默而居" />
   <meta property="og:site_name" content="昜丿捺"/>
   <meta property="og:type" content="article" />
   <meta property="og:image" content="http://yoursite.comundefined"/>
@@ -45,7 +45,7 @@
     <div class="row">
       <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
         <div class="page-title with-background-image">
-          <p class="title">【Blog】hexo博客搭建记录</p>
+          <p class="title">【Git】如何用命令将本地项目上传到git</p>
           <p class="subtitle"></p>
         </div>
         <div class="site-menu with-background-image">
@@ -125,14 +125,14 @@
           
           <!-- Date -->
           <span class="date-time info">发表于
-            <span class="date">2016-11-09</span>
+            <span class="date">2017-06-20</span>
             <span class="time">10:52:56</span>
           </span>
           
           <!--  Categories  -->
             <span class="categories info">分类于 
 
-<a href="/categories/Blog/">Blog</a>
+<a href="/categories/Git/">Git</a>
 </span>
           
 
@@ -147,7 +147,7 @@
           <div class="post-tags text-muted">
             标签: 
 
-<a class="tag" href="/tags/Blog/">#Blog</a> <a class="tag" href="/tags/hexo/">#hexo</a>
+<a class="tag" href="/tags/Git/">#Git</a>
 
 
           </div>
@@ -158,14 +158,17 @@
 			<!-- YPN Add 2017-02-27 Table of Contents -->
 			
 			
-          	<p>今天终于有了自己的博客，下面记录一下搭建步骤。<br>搭建步骤主要参考WX_JIN的博文<a href="http://blog.csdn.net/wx_jin/article/details/51027783" target="_blank" rel="external">Windows下使用Hexo+GithubPage搭建博客</a>搭建的，感谢WX_JIN的分享。<br><a id="more"></a><br>博客主题来源于<a href="https://github.com/levblanc/hexo-theme-aero-dual" target="_blank" rel="external">Aero Dual Hexo Theme</a></p>
-<h5 id="另附其它主题链接："><a href="#另附其它主题链接：" class="headerlink" title="另附其它主题链接："></a>另附其它主题链接：</h5><p>博客主题大全：<a href="https://github.com/hexojs/hexo/wiki/Themes" target="_blank" rel="external">https://github.com/hexojs/hexo/wiki/Themes</a><br>Hexo官方主题：<a href="https://hexo.io/themes/" target="_blank" rel="external">https://hexo.io/themes/</a></p>
-<h5 id="使用工具"><a href="#使用工具" class="headerlink" title="使用工具"></a>使用工具</h5><ul>
-<li>Node.js  v6.9.1</li>
-<li>Git      v2.10.1</li>
-<li>hexo     v3.2.2</li>
-</ul>
-
+          	<h1 id="如何用命令将本地项目上传到git"><a href="#如何用命令将本地项目上传到git" class="headerlink" title="如何用命令将本地项目上传到git"></a>如何用命令将本地项目上传到git</h1><hr>
+<h5 id="1-先在GitHub上-New-一个资源库，如-demo"><a href="#1-先在GitHub上-New-一个资源库，如-demo" class="headerlink" title="1. 先在GitHub上 New 一个资源库，如 demo"></a>1. 先在GitHub上 New 一个资源库，如 demo</h5><a id="more"></a>
+<h5 id="2-进入项目文件夹，通过命令-git-init-把这个目录变成Git可以管理的仓库"><a href="#2-进入项目文件夹，通过命令-git-init-把这个目录变成Git可以管理的仓库" class="headerlink" title="2. 进入项目文件夹，通过命令 git init 把这个目录变成Git可以管理的仓库"></a>2. 进入项目文件夹，通过命令 git init 把这个目录变成Git可以管理的仓库</h5><pre><code>git init
+</code></pre><h5 id="3-把文件添加到版本库中，使用命令-git-add-添加到暂存区里面去，不要忘记后面的小数点“-”，意为添加文件夹下的所有文件"><a href="#3-把文件添加到版本库中，使用命令-git-add-添加到暂存区里面去，不要忘记后面的小数点“-”，意为添加文件夹下的所有文件" class="headerlink" title="3. 把文件添加到版本库中，使用命令 git add .添加到暂存区里面去，不要忘记后面的小数点“.”，意为添加文件夹下的所有文件"></a>3. 把文件添加到版本库中，使用命令 git add .添加到暂存区里面去，不要忘记后面的小数点“.”，意为添加文件夹下的所有文件</h5><pre><code>git add .
+</code></pre><h5 id="4-用命令-git-commit-告诉Git，把文件提交到仓库。引号内为提交说明"><a href="#4-用命令-git-commit-告诉Git，把文件提交到仓库。引号内为提交说明" class="headerlink" title="4. 用命令 git commit 告诉Git，把文件提交到仓库。引号内为提交说明"></a>4. 用命令 git commit 告诉Git，把文件提交到仓库。引号内为提交说明</h5><pre><code>git commit -m &apos;first commit&apos;
+</code></pre><h5 id="5-关联到远程库"><a href="#5-关联到远程库" class="headerlink" title="5. 关联到远程库"></a>5. 关联到远程库</h5><pre><code>git remote add origin 你的远程库地址
+</code></pre><p>如：<br>    git remote add origin <a href="https://github.com/yangpiena/demo.git" target="_blank" rel="external">https://github.com/yangpiena/demo.git</a></p>
+<h5 id="6-获取远程库与本地同步合并（如果远程库不为空必须做这一步，否则后面的提交会失败）"><a href="#6-获取远程库与本地同步合并（如果远程库不为空必须做这一步，否则后面的提交会失败）" class="headerlink" title="6. 获取远程库与本地同步合并（如果远程库不为空必须做这一步，否则后面的提交会失败）"></a>6. 获取远程库与本地同步合并（如果远程库不为空必须做这一步，否则后面的提交会失败）</h5><pre><code>git pull --rebase origin master
+</code></pre><h5 id="7-把本地库的内容推送到远程，使用-git-push-命令，实际上是把当前分支master推送到远程。执行此命令后会要求输入用户名、密码，验证通过后即开始上传。"><a href="#7-把本地库的内容推送到远程，使用-git-push-命令，实际上是把当前分支master推送到远程。执行此命令后会要求输入用户名、密码，验证通过后即开始上传。" class="headerlink" title="7. 把本地库的内容推送到远程，使用 git push 命令，实际上是把当前分支master推送到远程。执行此命令后会要求输入用户名、密码，验证通过后即开始上传。"></a>7. 把本地库的内容推送到远程，使用 git push 命令，实际上是把当前分支master推送到远程。执行此命令后会要求输入用户名、密码，验证通过后即开始上传。</h5><pre><code>git push -u origin master
+</code></pre><h5 id="8-状态查询命令"><a href="#8-状态查询命令" class="headerlink" title="8. 状态查询命令"></a>8. 状态查询命令</h5><pre><code>git status
+</code></pre>
         </div>
 
         <!-- YPN Add 2016-11-14 增加打赏 start -->
@@ -195,7 +198,7 @@
         <div class="ds-recent-visitors" data-num-items="28" data-avatar-size="42" id="ds-recent-visitors"></div>
         <!-- 多说最近访客 end -->
         <!-- 多说评论框 start -->
-        <div class="ds-thread" data-thread-key="2016/11/09/【Blog】hexo博客搭建记录/" data-title="【Blog】hexo博客搭建记录" data-url="http://yoursite.com/2016/11/09/【Blog】hexo博客搭建记录/">
+        <div class="ds-thread" data-thread-key="2017/06/20/【Git】如何用命令将本地项目上传到git/" data-title="【Git】如何用命令将本地项目上传到git" data-url="http://yoursite.com/2017/06/20/【Git】如何用命令将本地项目上传到git/">
         </div>
         <!-- 多说评论框 end -->
 
