@@ -7,6 +7,7 @@ toc: true
 
 #### 常用
 [大马路](https://dama.lu/)                                    |  [谷歌搜索](https://www.google.com/ncr)                                                              |  [谷歌香港](https://www.google.com.hk/ncr)                                                              |  [维基百科](https://www.wikipedia.org/)
+                                                              |  [博客预览](http://localhost:4000)
 [网易公开课](https://open.163.com/)
 [CSDN.NET](http://www.csdn.net/)                              |  [VeryCD 电驴大全](http://www.verycd.com/)                                                              |  [360doc个人图书馆](http://www.360doc.com/)
 [cnBeta](http://www.cnbeta.com/)                              |  [果壳](http://www.guokr.com/)                                                              |  [少数派](https://sspai.com/)                                                              |  [数字尾巴](http://www.dgtle.com/)
@@ -38,6 +39,7 @@ toc: true
 &nbsp;
 
 #### 在线工具
+[ATOOL在线工具](http://www.atool.org/)
 [在线API](http://tool.oschina.net/)
 [MD5解密](http://www.cmd5.com/)
 [png在线转ico](http://www.easyicon.net/covert/)
