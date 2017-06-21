@@ -1,5 +1,28 @@
 <%- partial('_partial/header', {headerType: 'links'}) %>
 
+<!-- YPN Add 2017-06-20 新增搜索框 -->
+<div class="search-wrapper" style="padding:1.5em 0em 1.5em 30%">
+	<form id="search-form" action="https://www.baidu.com/baidu" target="_blank" _lpchecked="1" >
+		<input id="q-btn"  type="submit" name="btnG" value="谷歌一下" class="button2"            style="width: 100px;">
+		<input id="q-word" type="hidden" name="q" />
+		<input id="b-word" type="text"   name="word"                  class="input2"             size="40" > 
+		<input id="b-btn"  type="submit"             value="百度几下" class="button button-hook" style="width: 100px;">
+	</form>
+	<script>
+		$('#b-btn, #q-btn').focus(function() {
+			var id = this.id;
+			var urlArr = {
+				'b-btn': 'https://www.baidu.com/baidu',
+				'q-btn': 'https://www.google.com/search'
+			}
+			$('#search-form').attr('action', urlArr[id]);
+		});
+		$('#search-form').on('submit', function() {
+			$('#q-word').val($('#b-word').val());
+		});
+	</script>
+</div>  
+
 <!-- YPN Add 2017-02-27 Table of Contents -->
 <% if (page.toc){ %>
 <div id="toc-links" class="toc-article-links">
