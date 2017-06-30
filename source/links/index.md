@@ -6,11 +6,10 @@ toc: true
 ---
 
 #### 常用
-[大马路](https://dama.lu/)                                    |  [谷歌搜索](https://www.google.com/ncr)                                                              |  [谷歌香港](https://www.google.com.hk/ncr)                                                              |  [维基百科](https://www.wikipedia.org/)
-                                                              |  [博客预览](http://localhost:4000)
+[大马路](https://dama.lu/)                                    |  [谷歌搜索](https://www.google.com/ncr)                                                              |  [谷歌香港](https://www.google.com.hk/ncr)                                                              |  [维基百科](https://www.wikipedia.org/)                                                              |  [博客预览](http://localhost:4000)
 [网易公开课](https://open.163.com/)
 [CSDN.NET](http://www.csdn.net/)                              |  [VeryCD 电驴大全](http://www.verycd.com/)                                                              |  [360doc个人图书馆](http://www.360doc.com/)
-[cnBeta](http://www.cnbeta.com/)                              |  [果壳](http://www.guokr.com/)                                                              |  [少数派](https://sspai.com/)                                                              |  [数字尾巴](http://www.dgtle.com/)
+[cnBeta](http://www.cnbeta.com/)                              |  [果壳](http://www.guokr.com/)                                                              |  [少数派](https://sspai.com/)                                                              |  [数字尾巴](http://www.dgtle.com/)                                                              |  [老D博客](https://laod.cn/)
 [百度云](https://pan.baidu.com/)                              |  [七牛云存储](https://portal.qiniu.com/create)                                                              |  [贴图库](http://www.tietuku.com/)
 
 &nbsp;
@@ -70,7 +69,6 @@ toc: true
 [MSDN](http://msdn.itellyou.cn/?gytyzs=0z1zl)
 [常用的gif正在加载图](http://blog.sina.com.cn/s/blog_7c28bad401016j66.html)
 [2017 Google hosts 持续更新](https://laod.cn/hosts/2017-google-hosts.html)
-[VB函数大全](http://www10.zzu.edu.cn/ie_wangjunfeng/daquan/function/index.aspx)
 
 &nbsp;
 
@@ -194,6 +192,12 @@ toc: true
 [Sublime Text 2/3安装使用及常用插件](http://www.cnblogs.com/dudumao/p/4054086.html)
 [Sublime Text PackageControl](https://packagecontrol.io/)
 [Sublime Text 3 快捷键](https://segmentfault.com/a/1190000002570753)
+
+&nbsp;
+
+#### VB
+[VB源码](http://www.codesky.net/vb/)
+[VB函数大全](http://www10.zzu.edu.cn/ie_wangjunfeng/daquan/function/index.aspx)
 
 &nbsp;
 
