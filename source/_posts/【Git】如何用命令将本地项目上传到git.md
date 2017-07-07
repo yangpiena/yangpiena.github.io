@@ -26,6 +26,8 @@ description:
 	git remote add origin 你的远程库地址
 如：
 	git remote add origin https://github.com/yangpiena/demo.git
+	或
+	git remote add origin git@github.com:yangpiena/demo.git
 
 ##### 6. 获取远程库与本地同步合并（如果远程库不为空必须做这一步，否则后面的提交会失败）
 	git pull --rebase origin master
