@@ -126,7 +126,7 @@
           <!-- Date -->
           <span class="date-time info">发表于
             <span class="date">2017-06-20</span>
-            <span class="time">12:28:33</span>
+            <span class="time">17:23:43</span>
           </span>
           
           <!--  Categories  -->
@@ -164,7 +164,7 @@
 </code></pre><h5 id="3-把文件添加到版本库中，使用命令-git-add-添加到暂存区里面去，不要忘记后面的小数点“-”，意为添加文件夹下的所有文件"><a href="#3-把文件添加到版本库中，使用命令-git-add-添加到暂存区里面去，不要忘记后面的小数点“-”，意为添加文件夹下的所有文件" class="headerlink" title="3. 把文件添加到版本库中，使用命令 git add .添加到暂存区里面去，不要忘记后面的小数点“.”，意为添加文件夹下的所有文件"></a>3. 把文件添加到版本库中，使用命令 git add .添加到暂存区里面去，不要忘记后面的小数点“.”，意为添加文件夹下的所有文件</h5><pre><code>git add .
 </code></pre><h5 id="4-用命令-git-commit-告诉Git，把文件提交到仓库。引号内为提交说明"><a href="#4-用命令-git-commit-告诉Git，把文件提交到仓库。引号内为提交说明" class="headerlink" title="4. 用命令 git commit 告诉Git，把文件提交到仓库。引号内为提交说明"></a>4. 用命令 git commit 告诉Git，把文件提交到仓库。引号内为提交说明</h5><pre><code>git commit -m &apos;first commit&apos;
 </code></pre><h5 id="5-关联到远程库"><a href="#5-关联到远程库" class="headerlink" title="5. 关联到远程库"></a>5. 关联到远程库</h5><pre><code>git remote add origin 你的远程库地址
-</code></pre><p>如：<br>    git remote add origin <a href="https://github.com/yangpiena/demo.git" target="_blank" rel="external">https://github.com/yangpiena/demo.git</a></p>
+</code></pre><p>如：<br>    git remote add origin <a href="https://github.com/yangpiena/demo.git" target="_blank" rel="external">https://github.com/yangpiena/demo.git</a><br>    或<br>    git remote add origin git@github.com:yangpiena/demo.git</p>
 <h5 id="6-获取远程库与本地同步合并（如果远程库不为空必须做这一步，否则后面的提交会失败）"><a href="#6-获取远程库与本地同步合并（如果远程库不为空必须做这一步，否则后面的提交会失败）" class="headerlink" title="6. 获取远程库与本地同步合并（如果远程库不为空必须做这一步，否则后面的提交会失败）"></a>6. 获取远程库与本地同步合并（如果远程库不为空必须做这一步，否则后面的提交会失败）</h5><pre><code>git pull --rebase origin master
 </code></pre><h5 id="7-把本地库的内容推送到远程，使用-git-push-命令，实际上是把当前分支master推送到远程。执行此命令后会要求输入用户名、密码，验证通过后即开始上传。"><a href="#7-把本地库的内容推送到远程，使用-git-push-命令，实际上是把当前分支master推送到远程。执行此命令后会要求输入用户名、密码，验证通过后即开始上传。" class="headerlink" title="7. 把本地库的内容推送到远程，使用 git push 命令，实际上是把当前分支master推送到远程。执行此命令后会要求输入用户名、密码，验证通过后即开始上传。"></a>7. 把本地库的内容推送到远程，使用 git push 命令，实际上是把当前分支master推送到远程。执行此命令后会要求输入用户名、密码，验证通过后即开始上传。</h5><pre><code>git push -u origin master
 </code></pre><h5 id="8-状态查询命令"><a href="#8-状态查询命令" class="headerlink" title="8. 状态查询命令"></a>8. 状态查询命令</h5><pre><code>git status
