@@ -14,14 +14,17 @@ toc: true
 
 &nbsp;
 
+
 #### 音乐
 [SongTaste](http://www.songtaste.com/)                        |  [AeKun](https://www.aekun.com/)                                                              |  [网易云音乐](http://music.163.com)
 
 &nbsp;
 
+
 #### 电影
 [BT下载](http://www.qinou.cn/)                                |  [破晓电影](http://www.poxiao.com)                                                              |  [天天美剧](http://cn163.net/)                                                              |  [放电影网](http://www.fangdianying.tv/)                                                              |  [电影天堂](http://www.dy2018.com/)                                                              |  [面包网](http://www.mianbao99.com/)                                                              |  [迅雷电影下载](http://www.xlpu.cc/)                                                              |  [快播电影](http://www.bubulai.com/)
 [人人影视](http://www.yyets.com/)
+
 
 &nbsp;
 
@@ -30,12 +33,14 @@ toc: true
 [好蜀门私服](http://www.haosm.com/)
 [王者荣耀通用铭文推荐 通用全英雄四级五级铭文推荐](http://news.17173.com/z/pvp/content/02122017/153037729.shtml)
 
+
 &nbsp;
 
 #### 美图
 [it.me](http://www.topit.me/)                                 |  [Picever](http://www.picever.com/)                                                              |  [笔记本桌面壁纸下载](http://bbs.zol.com.cn/nbbbs/d33943.html)
 
 &nbsp;
+
 
 #### 在线工具
 [ATOOL在线工具](http://www.atool.org/)
@@ -46,6 +51,7 @@ toc: true
 
 &nbsp;
 
+
 #### 系统/软件下载
 [IT之家](https://www.ithome.com/)                             |  [系统之家](http://www.xitongzhijia.net/)                                                              |  [Win10之家](http://www.iwin10.com/)                                                              |  [Win10之家](http://www.62hx.com/)                                                              |  [Win10之家](http://www.xh52.com/)                                                              |  [系统圣地](http://www.285868.com/)
 [绿盟](http://www.xdowns.com/)                                |  [zd423](http://www.zdfans.com/)
@@ -53,6 +59,7 @@ toc: true
 [最新迅雷(xunlei)会员账号天天更新同享](http://www.win10.name/news/193.html)
 
 &nbsp;
+
 
 #### 社区
 [SDK.cn](https://www.sdk.cn/)
@@ -63,6 +70,7 @@ toc: true
 
 &nbsp;
 
+
 #### 资源
 [矢量图标库](http://www.iconfont.cn/)
 [百度静态资源公共库](http://cdn.code.baidu.com/)
@@ -71,6 +79,7 @@ toc: true
 [2017 Google hosts 持续更新](https://laod.cn/hosts/2017-google-hosts.html)
 
 &nbsp;
+
 
 #### 文章/教程
 [LB 负载均衡的层次结构](http://www.cnblogs.com/mindwind/p/5339657.html)
@@ -83,6 +92,7 @@ toc: true
 [Win10怎么把批处理文件固定到开始菜单](http://www.jb51.net/os/win10/483729.html)
 
 &nbsp;
+
 
 #### 前端/案例
 [前端网](http://www.qdfuns.com/)
@@ -97,6 +107,7 @@ toc: true
 
 &nbsp;
 
+
 #### Angular
 [AngularJS官网](https://angularjs.org/)                       |  [AngularJS中文官网](https://angular.cn/)                                                              |  [AngularUI官网](http://angular-ui.github.io/)
 [AngularJS所有版本下载](https://code.angularjs.org/)
@@ -107,6 +118,7 @@ toc: true
 [2013年度最强AngularJS资源合集](http://www.iteye.com/news/28651-AngularJS-Google-resource)                                                              |  [20个免费的 AngularJS 资源和开发教程](http://www.html5cn.org/article-9473-1.html)
 
 &nbsp;
+
 
 #### Flex
 [Flex下载地址](http://www.adobe.com/support/flashplayer/downloads.html)                                                              |  [查看浏览器FLash版本、Debug Player](http://kb2.adobe.com/cps/155/tn_15507.html)
@@ -120,6 +132,13 @@ toc: true
 [Flex 3 AdvancedDataGrid的使用(三)](http://www.cnblogs.com/xuehai/archive/2009/09/26/1574533.html)
 
 &nbsp;
+
+
+#### fpSpread
+[Spread for Windows Forms高级主题(7)---自定义打印的外观](http://www.cnblogs.com/powertoolsteam/archive/2011/08/22/2149009.html)
+
+&nbsp;
+
 
 #### Git
 [常用 Git 命令清单](http://www.ruanyifeng.com/blog/2015/12/git-cheat-sheet.html)
@@ -172,6 +191,8 @@ toc: true
 
 #### Linux
 [对 Linux 新手非常有用的 20 个命令](http://www.oschina.net/translate/useful-linux-commands-for-newbies)
+[linux数据盘，系统盘](http://blog.csdn.net/Truong/article/details/70171661)
+[数据盘分区以及格式化](http://blog.csdn.net/Truong/article/details/70171699)
 
 &nbsp;
 
