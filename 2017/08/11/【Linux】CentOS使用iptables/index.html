@@ -8,7 +8,7 @@
   <meta name="description" content="">
   <meta name="author" content="昜丿捺">
   <!-- Open Graph Data -->
-  <meta property="og:title" content="【Java】tomcat部署和配置服务自启动"/>
+  <meta property="og:title" content="【Linux】CentOS使用iptables"/>
   <meta property="og:description" content="没有阳光，沉默而居" />
   <meta property="og:site_name" content="昜丿捺"/>
   <meta property="og:type" content="article" />
@@ -45,7 +45,7 @@
     <div class="row">
       <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
         <div class="page-title with-background-image">
-          <p class="title">【Java】tomcat部署和配置服务自启动</p>
+          <p class="title">【Linux】CentOS使用iptables</p>
           <p class="subtitle"></p>
         </div>
         <div class="site-menu with-background-image">
@@ -125,14 +125,14 @@
           
           <!-- Date -->
           <span class="date-time info">发表于
-            <span class="date">2016-12-28</span>
-            <span class="time">17:23:43</span>
+            <span class="date">2017-08-11</span>
+            <span class="time">17:40:01</span>
           </span>
           
           <!--  Categories  -->
             <span class="categories info">分类于 
 
-<a href="/categories/Java/">Java</a>
+<a href="/categories/OS/">OS</a>
 </span>
           
 
@@ -147,7 +147,7 @@
           <div class="post-tags text-muted">
             标签: 
 
-<a class="tag" href="/tags/Java/">#Java</a> <a class="tag" href="/tags/tomcat/">#tomcat</a>
+<a class="tag" href="/tags/Linux/">#Linux</a>
 
 
           </div>
@@ -158,46 +158,52 @@
 			<!-- YPN Add 2017-02-27 Table of Contents -->
 			
 			
-          	<h4 id="配置Tomcat"><a href="#配置Tomcat" class="headerlink" title="配置Tomcat"></a>配置Tomcat</h4><ol>
-<li>将下载的apache-tomcat-6.0.35-windows-x86.zip压缩包解压。</li>
-<li>修改\bin\startup.bat文件，在第一行前面加入如下两行：<pre><code>SET JAVA_HOME=D:\Program Files\Java\jdk1.6.0_30   (JDK安装所在的路径)
-SET CATALINA_HOME=D:\Program Files\tomcat6.0.35   (免安装的Tomcat解压后的路径)
-</code></pre>如果需要使用shutdown.bat关闭服务器的话，也按照上面加入两行。</li>
-<li>这样，运行startup.bat就可以启动Tomcat，跑起应用，运行shutdown.bat就可以关闭服务器了。</li>
-<li>修改\conf\tomcat-users.xml文件，在<code>&lt;tomcat-users&gt;</code>标签内加入<pre><code>&lt;role rolename=&quot;manager&quot;/&gt;
-&lt;role rolename=&quot;admin&quot;/&gt;
-&lt;user username=&quot;admin&quot; password=&quot;admin&quot; roles=&quot;admin,manager&quot;/&gt;
-</code></pre>这样才可以使用Tomcat的管理界面。</li>
-</ol>
+          	<h3 id="CentOS-6-x"><a href="#CentOS-6-x" class="headerlink" title="CentOS 6.x"></a>CentOS 6.x</h3><h5 id="1-任意运行一条iptables防火墙规则配置命令"><a href="#1-任意运行一条iptables防火墙规则配置命令" class="headerlink" title="1. 任意运行一条iptables防火墙规则配置命令"></a>1. 任意运行一条iptables防火墙规则配置命令</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">iptables -P OUTPUT ACCEPT</div></pre></td></tr></table></figure>
+<h5 id="2-对iptables服务进行保存"><a href="#2-对iptables服务进行保存" class="headerlink" title="2. 对iptables服务进行保存"></a>2. 对iptables服务进行保存</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">service iptables save</div></pre></td></tr></table></figure>
+<h5 id="3-重启iptables服务"><a href="#3-重启iptables服务" class="headerlink" title="3. 重启iptables服务"></a>3. 重启iptables服务</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">service iptables restart</div></pre></td></tr></table></figure>
 <a id="more"></a>
-<h4 id="免安装版的Tomcat做成服务，随机器启动（windows环境）："><a href="#免安装版的Tomcat做成服务，随机器启动（windows环境）：" class="headerlink" title="免安装版的Tomcat做成服务，随机器启动（windows环境）："></a>免安装版的Tomcat做成服务，随机器启动（windows环境）：</h4><ol>
-<li><p>修改\bin目录中的service.bat</p>
-<pre><code>rem 在第一个if语句的前面一行添加下面的行：
-SET CATALINA_HOME=D:\Program Files\tomcat6.0.35
-rem 上面这一行是设置CATALINA_HOME变量指到解压后的Tomcat目录
-</code></pre><p>如果从来没有安装过Tomcat，或者保证Services.msc启动服务管理器检查没有Apache Tomcat系统服务，到此你就可以转到第2步了。否则继续往下走：<br>按照下面的描述修改下面的相应的几行，每行下面都附有文字说明设置的作用：</p>
-<pre><code>set SERVICE_NAME=tomcat6.0
-rem 上面一行，将tomcat6.0修改成你需要的服务名，这个将是以后使用net start/stop来操作的服务名称。
+<hr>
+<h3 id="CentOS-7-x"><a href="#CentOS-7-x" class="headerlink" title="CentOS 7.x"></a>CentOS 7.x</h3><h5 id="1-关闭firewall"><a href="#1-关闭firewall" class="headerlink" title="1. 关闭firewall"></a>1. 关闭firewall</h5><p>停止firewall服务：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">systemctl stop firewalld.service</div></pre></td></tr></table></figure></p>
+<p>禁止firewall开机启动：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">systemctl disable firewalld.service</div></pre></td></tr></table></figure></p>
+<h5 id="2-安装iptables防火墙"><a href="#2-安装iptables防火墙" class="headerlink" title="2. 安装iptables防火墙"></a>2. 安装iptables防火墙</h5><p>执行yum命令安装：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">yum install iptables-services</div></pre></td></tr></table></figure></p>
+<p>编辑防火墙配置文件：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">vi /etc/sysconfig/iptables</div></pre></td></tr></table></figure></p>
+<p>在配置文件加入以下内容后，保存并退出：</p>
+<pre><code># sample configuration for iptables service
+# you can edit this manually or use system-config-firewall
+# please do not ask us to add additional ports/services to this default configuration
+*filter
+:INPUT ACCEPT [0:0]
+:FORWARD ACCEPT [0:0]
+:OUTPUT ACCEPT [0:0]
+-A INPUT -m state --state RELATED,ESTABLISHED -j ACCEPT
+-A INPUT -p icmp -j ACCEPT
+-A INPUT -i lo -j ACCEPT
 
-set PR_DISPLAYNAME=Apache Tomcat
-rem 上面一行，Apache Tomcat改为你需要显示的服务名，这个将显示在服务管理器中。
+-A INPUT -p tcp -m state --state NEW -m tcp --dport 22 -j ACCEPT
+-A INPUT -p tcp -m state --state NEW -m tcp --dport 21 -j ACCEPT
+-A INPUT -p tcp -m state --state NEW -m tcp --dport 20 -j ACCEPT
+-A INPUT -m state --state NEW -m tcp -p tcp --dport 80  -j ACCEPT
+-A INPUT -m state --state NEW -m tcp -p tcp --dport 3306 -j ACCEPT
 
-set PR_DESCRIPTION=Apache Tomcat Server - http://jakarta.apache.org/tomcat
-rem 这一行改不改无所谓，是服务的描述，根据自己的喜好决定吧。
-</code></pre></li>
-<li><p>运行cmd打开控制台，进入解压后的Tomat目录的/bin文件夹下，运行<code>service.bat install</code>命令：</p>
-<pre><code>D:\Program Files\tomcat6.0.35\bin&gt;service.bat install
-Installing the service  &apos;tomcat6.0&apos; ...
-Using CATALINA_HOME:    &quot;D:\Program Files\tomcat6.0.35&quot;
-Using CATALINA_BASE:    &quot;D:\Program Files\tomcat6.0.35&quot;
-Using JAVA_HOME:        &quot;D:\Program Files\Java\jdk1.6.0_30&quot;
-Using JVM:              &quot;D:\Program Files\Java\jdk1.6.0_30\jre\bin\server\jvm.dll&quot;
-The service &apos;tomcat6.0&apos; has been installed.
-</code></pre><p>程序提示：The service ‘tomcat6.0（你修改以后的SERVICE_NAME）’ has been installed说明服务Tomcat已经被安装成功。相应的，运行<code>service.bat remove</code>可以移除服务。</p>
-</li>
-<li><p>到这里，服务添加成功，运行services.msc，可以看到添加的服务，默认状态下该服务是手动运行的，在它的属性中，将启动类型更改为”自动”，以后机器启动以后Tomcat就在后台启动了。</p>
-</li>
-</ol>
+-A INPUT -j REJECT --reject-with icmp-host-prohibited
+-A FORWARD -j REJECT --reject-with icmp-host-prohibited
+COMMIT
+</code></pre><p>最后重启防火墙使配置生效<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">systemctl restart iptables.service</div></pre></td></tr></table></figure></p>
+<h5 id="3-设置防火墙开机启动"><a href="#3-设置防火墙开机启动" class="headerlink" title="3. 设置防火墙开机启动"></a>3. 设置防火墙开机启动</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">systemctl enable iptables.service</div></pre></td></tr></table></figure>
+<h5 id="4-关闭SELinux"><a href="#4-关闭SELinux" class="headerlink" title="4. 关闭SELinux"></a>4. 关闭SELinux</h5><p>编辑SELinux的配置文件：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">vi /etc/selinux/config</div></pre></td></tr></table></figure></p>
+<p>如下图，注释掉<code>SELINUX=enforcing</code>和<code>SELINUXTYPE=targeted</code>。</p>
+<pre><code># This file controls the state of SELinux on the system.
+# SELINUX= can take one of these three values:
+#     enforcing - SELinux security policy is enforced.
+#     permissive - SELinux prints warnings instead of enforcing.
+#     disabled - No SELinux policy is loaded.
+SELINUX=disabled
+# SELINUXTYPE= can take one of three two values:
+#     targeted - Targeted processes are protected,
+#     minimum - Modification of targeted policy. Only selected processes are protected.
+#     mls - Multi Level Security protection.
+#SELINUXTYPE=targeted
+</code></pre><p>最后执行以下命令，使配置立即生效<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">setenforce 0</div></pre></td></tr></table></figure></p>
 
         </div>
 
@@ -228,7 +234,7 @@ The service &apos;tomcat6.0&apos; has been installed.
         <div class="ds-recent-visitors" data-num-items="28" data-avatar-size="42" id="ds-recent-visitors"></div>
         <!-- 多说最近访客 end -->
         <!-- 多说评论框 start -->
-        <div class="ds-thread" data-thread-key="2016/12/28/【Java】tomcat部署和配置服务自启动/" data-title="【Java】tomcat部署和配置服务自启动" data-url="http://yoursite.com/2016/12/28/【Java】tomcat部署和配置服务自启动/">
+        <div class="ds-thread" data-thread-key="2017/08/11/【Linux】CentOS使用iptables/" data-title="【Linux】CentOS使用iptables" data-url="http://yoursite.com/2017/08/11/【Linux】CentOS使用iptables/">
         </div>
         <!-- 多说评论框 end -->
 

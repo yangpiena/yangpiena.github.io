@@ -126,7 +126,7 @@
           <!-- Date -->
           <span class="date-time info">发表于
             <span class="date">2016-12-28</span>
-            <span class="time">17:23:43</span>
+            <span class="time">17:40:01</span>
           </span>
           
           <!--  Categories  -->
@@ -158,16 +158,88 @@
 			<!-- YPN Add 2017-02-27 Table of Contents -->
 			
 			
-          	<h4 id="JDK官网下载"><a href="#JDK官网下载" class="headerlink" title="JDK官网下载"></a>JDK<a href="http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html" target="_blank" rel="external">官网下载</a></h4><a id="more"></a>
-<h4 id="配置环境变量"><a href="#配置环境变量" class="headerlink" title="配置环境变量"></a>配置环境变量</h4><p>新建变量名：<code>JAVA_HOME</code>       变量值：C:\Java\jdk1.7.0_80<br>编辑变量名：<code>Path</code>          追加值：%JAVA_HOME%\bin;%JAVA_HOME%\jre\bin<br>新建变量名：<code>CLASSPATH</code>     变量值：.;%JAVA_HOME%\lib;%JAVA_HOME%\lib\dt.jar;%JAVA_HOME%\lib\tools.jar</p>
+          	<h3 id="JDK官网下载"><a href="#JDK官网下载" class="headerlink" title="JDK官网下载"></a>JDK<a href="http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html" target="_blank" rel="external">官网下载</a></h3><a id="more"></a>
+<hr>
+<h3 id="JDK安装"><a href="#JDK安装" class="headerlink" title="JDK安装"></a>JDK安装</h3><h4 id="1-Windows下"><a href="#1-Windows下" class="headerlink" title="1. Windows下"></a>1. Windows下</h4><h5 id="1-1-安装"><a href="#1-1-安装" class="headerlink" title="1.1 安装"></a>1.1 安装</h5><p>安装目录建议自定义为C:\Java下，其它按默认安装即可。</p>
+<h5 id="1-2-配置环境变量"><a href="#1-2-配置环境变量" class="headerlink" title="1.2 配置环境变量"></a>1.2 配置环境变量</h5><p>新建变量名：<code>JAVA_HOME</code>       变量值：C:\Java\jdk1.7.0_80<br>编辑变量名：<code>Path</code>          追加值：%JAVA_HOME%\bin;%JAVA_HOME%\jre\bin<br>新建变量名：<code>CLASSPATH</code>     变量值：.;%JAVA_HOME%\lib;%JAVA_HOME%\lib\dt.jar;%JAVA_HOME%\lib\tools.jar</p>
 <blockquote>
 <p>注意：在设置变量的末尾不要加上“；”）</p>
 </blockquote>
-<p>设置完成之后我们需要测试，打开<code>运行</code>，输入<code>CMD</code>，在命令行上输入<code>java -version</code>，然后回车，如果出现以下内容，那么JDK配置成功，否则就需要检查环境变量的配置。</p>
-<pre><code>java version &quot;1.7.0_80&quot;
+<h5 id="1-3-测试"><a href="#1-3-测试" class="headerlink" title="1.3 测试"></a>1.3 测试</h5><p>设置完成之后我们需要测试，打开<code>运行</code>，输入<code>CMD</code>，在命令行上输入<code>java -version</code>，然后回车，如果出现以下内容，那么JDK配置成功，否则就需要检查环境变量的配置。</p>
+<pre><code>C:\Users\Administrator&gt;java -version
+java version &quot;1.7.0_80&quot;
 Java(TM) SE Runtime Environment (build 1.7.0_80-b15)
 Java HotSpot(TM) Client VM (build 24.80-b11, mixed mode, sharing)
-</code></pre>
+
+C:\Users\Administrator&gt;
+</code></pre><hr>
+<h4 id="2-Linux下"><a href="#2-Linux下" class="headerlink" title="2. Linux下"></a>2. Linux下</h4><h5 id="2-1-在-usr-目录下创建java目录"><a href="#2-1-在-usr-目录下创建java目录" class="headerlink" title="2.1 在/usr/目录下创建java目录"></a>2.1 在/usr/目录下创建java目录</h5><pre><code>[root@izwe12zdi799668qfxdm5oz ~]# mkdir /usr/java
+[root@izwe12zdi799668qfxdm5oz ~]# cd /usr/java
+[root@izwe12zdi799668qfxdm5oz java]# 
+</code></pre><h5 id="2-2-下载或拷贝jdk到java目录下，然后解压"><a href="#2-2-下载或拷贝jdk到java目录下，然后解压" class="headerlink" title="2.2 下载或拷贝jdk到java目录下，然后解压"></a>2.2 下载或拷贝jdk到java目录下，然后解压</h5><pre><code>[root@izwe12zdi799668qfxdm5oz java]# ls
+jdk-7u80-linux-x64.gz
+[root@izwe12zdi799668qfxdm5oz java]# tar -zxvf jdk-7u80-linux-x64.gz 
+jdk1.7.0_80/
+jdk1.7.0_80/LICENSE
+jdk1.7.0_80/release
+jdk1.7.0_80/jre/
+.
+.
+.
+jdk1.7.0_80/db/NOTICE
+jdk1.7.0_80/README.html
+jdk1.7.0_80/THIRDPARTYLICENSEREADME.txt
+[root@izwe12zdi799668qfxdm5oz java]# ls
+jdk1.7.0_80  jdk-7u80-linux-x64.gz
+[root@izwe12zdi799668qfxdm5oz java]# 
+</code></pre><blockquote>
+<p>安装包也可以使用命令<code>curl -O http://download.Oracle.com/otn-pub/java/jdk/7u80-b15/jdk-7u80-linux-x64.tar.gz</code>下载，这里我直接拷贝了已下载好的。</p>
+</blockquote>
+<h5 id="2-3-设置环境变量"><a href="#2-3-设置环境变量" class="headerlink" title="2.3 设置环境变量"></a>2.3 设置环境变量</h5><pre><code>[root@izwe12zdi799668qfxdm5oz java]# vi /etc/profile
+</code></pre><p>在profile中最后的<code>done</code>和<code>unset i</code>之间添加如下内容:</p>
+<pre><code>#set java environment
+JAVA_HOME=/usr/java/jdk1.7.0_80
+JRE_HOME=/usr/java/jdk1.7.0_80/jre
+CLASS_PATH=.:$JAVA_HOME/lib/dt.jar:$JAVA_HOME/lib/tools.jar:$JRE_HOME/lib
+PATH=$PATH:$JAVA_HOME/bin:$JRE_HOME/bin
+export JAVA_HOME JRE_HOME CLASS_PATH PATH
+</code></pre><p>添加后如下：</p>
+<pre><code>[root@izwe12zdi799668qfxdm5oz java]# cat /etc/profile 
+.
+.
+.
+for i in /etc/profile.d/*.sh ; do
+    if [ -r &quot;$i&quot; ]; then
+        if [ &quot;${-#*i}&quot; != &quot;$-&quot; ]; then 
+            . &quot;$i&quot;
+        else
+            . &quot;$i&quot; &gt;/dev/null
+        fi
+    fi
+done
+
+#set java environment
+JAVA_HOME=/usr/java/jdk1.7.0_80
+JRE_HOME=/usr/java/jdk1.7.0_80/jre
+CLASS_PATH=.:$JAVA_HOME/lib/dt.jar:$JAVA_HOME/lib/tools.jar:$JRE_HOME/lib
+PATH=$PATH:$JAVA_HOME/bin:$JRE_HOME/bin
+export JAVA_HOME JRE_HOME CLASS_PATH PATH
+
+unset i
+unset -f pathmunge
+[root@izwe12zdi799668qfxdm5oz java]# 
+</code></pre><p>再执行以下命令，使修改生效：</p>
+<pre><code>[root@izwe12zdi799668qfxdm5oz java]# source /etc/profile
+</code></pre><h5 id="2-4-测试"><a href="#2-4-测试" class="headerlink" title="2.4 测试"></a>2.4 测试</h5><p>如下，表示安装成功。</p>
+<pre><code>[root@izwe12zdi799668qfxdm5oz java]# java -version
+java version &quot;1.7.0_80&quot;
+Java(TM) SE Runtime Environment (build 1.7.0_80-b15)
+Java HotSpot(TM) 64-Bit Server VM (build 24.80-b11, mixed mode)
+[root@izwe12zdi799668qfxdm5oz java]# 
+</code></pre><hr>
+<h3 id="可能出现的错误信息"><a href="#可能出现的错误信息" class="headerlink" title="可能出现的错误信息"></a>可能出现的错误信息</h3><p><code>bash: ./java: cannot execute binary file</code><br>出现这个错误的原因可能是在32位的操作系统上安装了64位的jdk，请检查jdk版本和Linux版本位数是否一致。<br>查看linux是32位还是64位系统用如下命令<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo uname --m</div></pre></td></tr></table></figure></p>
+<p>i686   //表示是32位<br>x86_64 // 表示是64位</p>
+
         </div>
 
         <!-- YPN Add 2016-11-14 增加打赏 start -->

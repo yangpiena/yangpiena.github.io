@@ -120,6 +120,41 @@
     <div class="col-lg-10 col-md-10 col-md-offset-1">
       
         <div class="post-item-wrapper">
+  <a href="/2017/08/11/【Linux】CentOS使用iptables/" class="post-title">
+      【Linux】CentOS使用iptables
+  </a>
+  <div class="post-excerpt">
+    <!-- Post Date and Categories -->
+    <div class="date-and-category">
+      <div class="date">2017-08-11</div>
+      <div class="categories">
+        
+          
+
+<a href="/categories/OS/">OS</a>
+
+        
+      </div>
+    </div>
+    <!-- Post Excerpt -->
+    <div class="excerpt typo"><h3 id="CentOS-6-x"><a href="#CentOS-6-x" class="headerlink" title="CentOS 6.x"></a>CentOS 6.x</h3><h5 id="1-任意运行一条iptables防火墙规则配置命令"><a href="#1-任意运行一条iptables防火墙规则配置命令" class="headerlink" title="1. 任意运行一条iptables防火墙规则配置命令"></a>1. 任意运行一条iptables防火墙规则配置命令</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">iptables -P OUTPUT ACCEPT</div></pre></td></tr></table></figure>
+<h5 id="2-对iptables服务进行保存"><a href="#2-对iptables服务进行保存" class="headerlink" title="2. 对iptables服务进行保存"></a>2. 对iptables服务进行保存</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">service iptables save</div></pre></td></tr></table></figure>
+<h5 id="3-重启iptables服务"><a href="#3-重启iptables服务" class="headerlink" title="3. 重启iptables服务"></a>3. 重启iptables服务</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">service iptables restart</div></pre></td></tr></table></figure></div>
+    <!-- Post Tags -->
+    <div class="tags">
+      
+        
+
+<a class="tag" href="/tags/Linux/">Linux</a>
+
+
+      
+    </div>
+  </div>
+</div>
+
+      
+        <div class="post-item-wrapper">
   <a href="/2017/08/10/【Linux】[天翼云]数据盘分区以及格式化/" class="post-title">
       【Linux】[天翼云]数据盘分区以及格式化
   </a>
@@ -374,8 +409,8 @@ pause
 
       
         <div class="post-item-wrapper">
-  <a href="/2016/12/28/【Java】tomcat部署和配置服务自启动/" class="post-title">
-      【Java】tomcat部署和配置服务自启动
+  <a href="/2016/12/28/【Java】tomcat下载和安装/" class="post-title">
+      【Java】tomcat下载和安装
   </a>
   <div class="post-excerpt">
     <!-- Post Date and Categories -->
@@ -391,17 +426,16 @@ pause
       </div>
     </div>
     <!-- Post Excerpt -->
-    <div class="excerpt typo"><h4 id="配置Tomcat"><a href="#配置Tomcat" class="headerlink" title="配置Tomcat"></a>配置Tomcat</h4><ol>
-<li>将下载的apache-tomcat-6.0.35-windows-x86.zip压缩包解压。</li>
-<li>修改\bin\startup.bat文件，在第一行前面加入如下两行：<pre><code>SET JAVA_HOME=D:\Program Files\Java\jdk1.6.0_30   (JDK安装所在的路径)
-SET CATALINA_HOME=D:\Program Files\tomcat6.0.35   (免安装的Tomcat解压后的路径)
-</code></pre>如果需要使用shutdown.bat关闭服务器的话，也按照上面加入两行。</li>
-<li>这样，运行startup.bat就可以启动Tomcat，跑起应用，运行shutdown.bat就可以关闭服务器了。</li>
-<li>修改\conf\tomcat-users.xml文件，在<code>&lt;tomcat-users&gt;</code>标签内加入<pre><code>&lt;role rolename=&quot;manager&quot;/&gt;
+    <div class="excerpt typo"><h3 id="Tomcat官网下载"><a href="#Tomcat官网下载" class="headerlink" title="Tomcat官网下载"></a>Tomcat<a href="https://tomcat.apache.org/">官网下载</a></h3><hr>
+<h3 id="Tomcat安装"><a href="#Tomcat安装" class="headerlink" title="Tomcat安装"></a>Tomcat安装</h3><h4 id="1-Windows下"><a href="#1-Windows下" class="headerlink" title="1. Windows下"></a>1. Windows下</h4><h5 id="1-1-将下载的apache-tomcat-6-0-35-windows-x86-zip压缩包解压。"><a href="#1-1-将下载的apache-tomcat-6-0-35-windows-x86-zip压缩包解压。" class="headerlink" title="1.1 将下载的apache-tomcat-6.0.35-windows-x86.zip压缩包解压。"></a>1.1 将下载的apache-tomcat-6.0.35-windows-x86.zip压缩包解压。</h5><h5 id="1-2-修改-bin-startup-bat文件，在第一行前面加入以下内容："><a href="#1-2-修改-bin-startup-bat文件，在第一行前面加入以下内容：" class="headerlink" title="1.2 修改\bin\startup.bat文件，在第一行前面加入以下内容："></a>1.2 修改\bin\startup.bat文件，在第一行前面加入以下内容：</h5><pre><code>REM JDK安装所在的路径
+SET JAVA_HOME=D:\Program Files\Java\jdk1.6.0_30
+REM 免安装的Tomcat解压后的路径
+SET CATALINA_HOME=D:\Program Files\tomcat6.0.35
+</code></pre><p>如果需要使用shutdown.bat关闭服务器的话，也按照上面加入。</p>
+<h5 id="1-3-这样，运行startup-bat就可以启动Tomcat，运行shutdown-bat就可以关闭服务器了。"><a href="#1-3-这样，运行startup-bat就可以启动Tomcat，运行shutdown-bat就可以关闭服务器了。" class="headerlink" title="1.3 这样，运行startup.bat就可以启动Tomcat，运行shutdown.bat就可以关闭服务器了。"></a>1.3 这样，运行startup.bat就可以启动Tomcat，运行shutdown.bat就可以关闭服务器了。</h5><h5 id="1-4-修改-conf-tomcat-users-xml文件，在-lt-tomcat-users-gt-标签内加入"><a href="#1-4-修改-conf-tomcat-users-xml文件，在-lt-tomcat-users-gt-标签内加入" class="headerlink" title="1.4 修改\conf\tomcat-users.xml文件，在&lt;tomcat-users&gt;标签内加入"></a>1.4 修改\conf\tomcat-users.xml文件，在<code>&lt;tomcat-users&gt;</code>标签内加入</h5><pre><code>&lt;role rolename=&quot;manager&quot;/&gt;
 &lt;role rolename=&quot;admin&quot;/&gt;
 &lt;user username=&quot;admin&quot; password=&quot;admin&quot; roles=&quot;admin,manager&quot;/&gt;
-</code></pre>这样才可以使用Tomcat的管理界面。</li>
-</ol></div>
+</code></pre><p>这样才可以使用Tomcat的管理界面。</p></div>
     <!-- Post Tags -->
     <div class="tags">
       
@@ -434,46 +468,13 @@ SET CATALINA_HOME=D:\Program Files\tomcat6.0.35   (免安装的Tomcat解压后�
       </div>
     </div>
     <!-- Post Excerpt -->
-    <div class="excerpt typo"><h4 id="JDK官网下载"><a href="#JDK官网下载" class="headerlink" title="JDK官网下载"></a>JDK<a href="http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html">官网下载</a></h4></div>
+    <div class="excerpt typo"><h3 id="JDK官网下载"><a href="#JDK官网下载" class="headerlink" title="JDK官网下载"></a>JDK<a href="http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html">官网下载</a></h3></div>
     <!-- Post Tags -->
     <div class="tags">
       
         
 
 <a class="tag" href="/tags/Java/">Java</a> <a class="tag" href="/tags/jdk/">jdk</a>
-
-
-      
-    </div>
-  </div>
-</div>
-
-      
-        <div class="post-item-wrapper">
-  <a href="/2016/12/27/【FAQ】flash builder/" class="post-title">
-      【FAQ】flash builder
-  </a>
-  <div class="post-excerpt">
-    <!-- Post Date and Categories -->
-    <div class="date-and-category">
-      <div class="date">2016-12-27</div>
-      <div class="categories">
-        
-          
-
-<a href="/categories/FAQ/">FAQ</a>
-
-        
-      </div>
-    </div>
-    <!-- Post Excerpt -->
-    <div class="excerpt typo"><p>以下记录Flash Builder在使用过程中出现的问题和解决方法：<br></div>
-    <!-- Post Tags -->
-    <div class="tags">
-      
-        
-
-<a class="tag" href="/tags/FAQ/">FAQ</a> <a class="tag" href="/tags/flash-builder/">flash builder</a>
 
 
       
