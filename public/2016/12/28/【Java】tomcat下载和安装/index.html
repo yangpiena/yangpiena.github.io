@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html>
+  <!-- Html Head Tag-->
+  <head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="昜丿捺">
+  <!-- Open Graph Data -->
+  <meta property="og:title" content="【Java】tomcat下载和安装"/>
+  <meta property="og:description" content="没有阳光，沉默而居" />
+  <meta property="og:site_name" content="昜丿捺"/>
+  <meta property="og:type" content="article" />
+  <meta property="og:image" content="http://yoursite.comundefined"/>
+  
+    <link rel="alternate" href="/atom.xml" title="昜丿捺" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.ico">
+  
+
+  <!-- Site Title -->
+  <title>昜丿捺</title>
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="/css/bootstrap.min.css">
+  <!-- Custom CSS -->
+  <!-- YPN Edit 2016-11-11 增加根据时间自动切换主题风格 -->
+  <!-- 
+       <link rel="stylesheet" href="/css/style.light.css"> -->
+  
+  
+  <link rel="stylesheet" href="/css/style.light.css">
+
+  <script type="text/javascript" src="/js/jquery-1.11.3.min.js"></script>
+</head>
+
+  <body>
+    <!-- Page Header -->
+
+
+<header class="site-header header-background" style="background-image: url(http://ogoh2gimk.bkt.clouddn.com/yangpiena-banner.jpg)">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <div class="page-title with-background-image">
+          <p class="title">【Java】tomcat下载和安装</p>
+          <p class="subtitle"></p>
+        </div>
+        <div class="site-menu with-background-image">
+          <ul>
+            
+              <li>
+                <a href="/">
+                  
+                  主页
+                  
+                </a>
+              </li>
+            
+              <li>
+                <a href="/archives">
+                  
+                  归类
+                  
+                </a>
+              </li>
+            
+              <li>
+                <a href="/tags">
+                  
+                  标签
+                  
+                </a>
+              </li>
+            
+              <li>
+                <a href="/links">
+                  
+                  链接
+                  
+                </a>
+              </li>
+            
+              <li>
+                <a href="/photos">
+                  
+                  相册
+                  
+                </a>
+              </li>
+            
+              <li>
+                <a href="/about">
+                  
+                  关于
+                  
+                </a>
+              </li>
+            
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+<!-- YPN Del 2016-12-27 因swiftype不能免费使用了，固已注销账号，停止使用搜索功能。
+  
+    <form class="search" action="/search/index.html" method="get" accept-charset="utf-8" style="text-align:right">
+    <label>Search</label>
+    <input type="text" id="search" class="st-default-search-input" maxlength="20" placeholder="Search" />
+    </form>
+  
+-->
+</header>
+
+<article>
+  <div class="container typo">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <div class="post-info text-muted">
+          
+            <!-- Author -->
+            <span class="author info">作者 昜丿捺</span>
+          
+          <!-- Date -->
+          <span class="date-time info">发表于
+            <span class="date">2016-12-28</span>
+            <span class="time">17:40:01</span>
+          </span>
+          
+          <!--  Categories  -->
+            <span class="categories info">分类于 
+
+<a href="/categories/Java/">Java</a>
+</span>
+          
+
+          <!-- YPN Add 2016-11-14 增加热度 -->
+          <span id="busuanzi_container_page_pv">
+            &nbsp;&nbsp; 热度&nbsp; <span id="busuanzi_value_page_pv"></span>°C
+          </span>
+
+        </div>
+        <!-- Tags -->
+        
+          <div class="post-tags text-muted">
+            标签: 
+
+<a class="tag" href="/tags/Java/">#Java</a> <a class="tag" href="/tags/tomcat/">#tomcat</a>
+
+
+          </div>
+        
+        <!-- Post Main Content -->
+        <div class="post-content">
+
+			<!-- YPN Add 2017-02-27 Table of Contents -->
+			
+			
+          	<h3 id="Tomcat官网下载"><a href="#Tomcat官网下载" class="headerlink" title="Tomcat官网下载"></a>Tomcat<a href="https://tomcat.apache.org/" target="_blank" rel="external">官网下载</a></h3><hr>
+<h3 id="Tomcat安装"><a href="#Tomcat安装" class="headerlink" title="Tomcat安装"></a>Tomcat安装</h3><h4 id="1-Windows下"><a href="#1-Windows下" class="headerlink" title="1. Windows下"></a>1. Windows下</h4><h5 id="1-1-将下载的apache-tomcat-6-0-35-windows-x86-zip压缩包解压。"><a href="#1-1-将下载的apache-tomcat-6-0-35-windows-x86-zip压缩包解压。" class="headerlink" title="1.1 将下载的apache-tomcat-6.0.35-windows-x86.zip压缩包解压。"></a>1.1 将下载的apache-tomcat-6.0.35-windows-x86.zip压缩包解压。</h5><h5 id="1-2-修改-bin-startup-bat文件，在第一行前面加入以下内容："><a href="#1-2-修改-bin-startup-bat文件，在第一行前面加入以下内容：" class="headerlink" title="1.2 修改\bin\startup.bat文件，在第一行前面加入以下内容："></a>1.2 修改\bin\startup.bat文件，在第一行前面加入以下内容：</h5><pre><code>REM JDK安装所在的路径
+SET JAVA_HOME=D:\Program Files\Java\jdk1.6.0_30
+REM 免安装的Tomcat解压后的路径
+SET CATALINA_HOME=D:\Program Files\tomcat6.0.35
+</code></pre><p>如果需要使用shutdown.bat关闭服务器的话，也按照上面加入。</p>
+<h5 id="1-3-这样，运行startup-bat就可以启动Tomcat，运行shutdown-bat就可以关闭服务器了。"><a href="#1-3-这样，运行startup-bat就可以启动Tomcat，运行shutdown-bat就可以关闭服务器了。" class="headerlink" title="1.3 这样，运行startup.bat就可以启动Tomcat，运行shutdown.bat就可以关闭服务器了。"></a>1.3 这样，运行startup.bat就可以启动Tomcat，运行shutdown.bat就可以关闭服务器了。</h5><h5 id="1-4-修改-conf-tomcat-users-xml文件，在-lt-tomcat-users-gt-标签内加入"><a href="#1-4-修改-conf-tomcat-users-xml文件，在-lt-tomcat-users-gt-标签内加入" class="headerlink" title="1.4 修改\conf\tomcat-users.xml文件，在&lt;tomcat-users&gt;标签内加入"></a>1.4 修改\conf\tomcat-users.xml文件，在<code>&lt;tomcat-users&gt;</code>标签内加入</h5><pre><code>&lt;role rolename=&quot;manager&quot;/&gt;
+&lt;role rolename=&quot;admin&quot;/&gt;
+&lt;user username=&quot;admin&quot; password=&quot;admin&quot; roles=&quot;admin,manager&quot;/&gt;
+</code></pre><p>这样才可以使用Tomcat的管理界面。</p>
+<a id="more"></a>
+<hr>
+<h4 id="2-Linux下"><a href="#2-Linux下" class="headerlink" title="2. Linux下"></a>2. Linux下</h4><h5 id="2-1-在-usr-目录下创建download目录"><a href="#2-1-在-usr-目录下创建download目录" class="headerlink" title="2.1 在/usr/目录下创建download目录"></a>2.1 在/usr/目录下创建download目录</h5><pre><code>[root@izwe12zdi799668qfxdm5oz ~]# mkdir /usr/download
+[root@izwe12zdi799668qfxdm5oz ~]# cd /usr/download
+[root@izwe12zdi799668qfxdm5oz download]# 
+</code></pre><h5 id="2-2-下载或拷贝tomcat安装包到download目录下，然后解压"><a href="#2-2-下载或拷贝tomcat安装包到download目录下，然后解压" class="headerlink" title="2.2 下载或拷贝tomcat安装包到download目录下，然后解压"></a>2.2 下载或拷贝tomcat安装包到download目录下，然后解压</h5><pre><code>[root@izwe12zdi799668qfxdm5oz download]# ls
+apache-tomcat-7.0.65.tar.gz
+[root@izwe12zdi799668qfxdm5oz download]# tar -zxvf apache-tomcat-7.0.65.tar.gz 
+apache-tomcat-7.0.65/bin/catalina.sh
+apache-tomcat-7.0.65/bin/configtest.sh
+apache-tomcat-7.0.65/bin/daemon.sh
+.
+.
+.
+apache-tomcat-7.0.65/webapps/manager/index.jsp
+apache-tomcat-7.0.65/webapps/manager/status.xsd
+apache-tomcat-7.0.65/webapps/manager/xform.xsl
+[root@izwe12zdi799668qfxdm5oz download]# ls
+apache-tomcat-7.0.65  apache-tomcat-7.0.65.tar.gz
+[root@izwe12zdi799668qfxdm5oz download]# 
+</code></pre><h5 id="2-3-解压之后，重命名为tomcat并移动到-usr-目录下"><a href="#2-3-解压之后，重命名为tomcat并移动到-usr-目录下" class="headerlink" title="2.3 解压之后，重命名为tomcat并移动到/usr/目录下"></a>2.3 解压之后，重命名为tomcat并移动到/usr/目录下</h5><pre><code>[root@izwe12zdi799668qfxdm5oz download]# mv apache-tomcat-7.0.65 /usr/tomcat
+[root@izwe12zdi799668qfxdm5oz download]# ls
+apache-tomcat-7.0.65.tar.gz
+[root@izwe12zdi799668qfxdm5oz download]# cd /usr/tomcat/
+[root@izwe12zdi799668qfxdm5oz tomcat]# ls
+bin  conf  lib  LICENSE  logs  NOTICE  RELEASE-NOTES  RUNNING.txt  temp  webapps  work
+[root@izwe12zdi799668qfxdm5oz tomcat]# 
+</code></pre><h5 id="2-4-启动tomcat"><a href="#2-4-启动tomcat" class="headerlink" title="2.4 启动tomcat"></a>2.4 启动tomcat</h5><p>执行startup.sh启动tomcat，如下表示启动成功：</p>
+<pre><code>[root@izwe12zdi799668qfxdm5oz tomcat]# bin/startup.sh 
+Using CATALINA_BASE:   /usr/tomcat
+Using CATALINA_HOME:   /usr/tomcat
+Using CATALINA_TMPDIR: /usr/tomcat/temp
+Using JRE_HOME:        /usr/java/jdk1.7.0_80/jre
+Using CLASSPATH:       /usr/tomcat/bin/bootstrap.jar:/usr/tomcat/bin/tomcat-juli.jar
+Tomcat started.
+[root@izwe12zdi799668qfxdm5oz tomcat]# 
+</code></pre><h5 id="2-5-查看log信息"><a href="#2-5-查看log信息" class="headerlink" title="2.5 查看log信息"></a>2.5 查看log信息</h5><pre><code>[root@izwe12zdi799668qfxdm5oz tomcat]# tail -f logs/catalina.out
+Aug 11, 2017 12:29:19 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deploying web application directory /usr/tomcat/webapps/ROOT
+Aug 11, 2017 12:29:19 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deployment of web application directory /usr/tomcat/webapps/ROOT has finished in 39 ms
+Aug 11, 2017 12:29:19 PM org.apache.coyote.AbstractProtocol start
+INFO: Starting ProtocolHandler [&quot;http-bio-8080&quot;]
+Aug 11, 2017 12:29:19 PM org.apache.coyote.AbstractProtocol start
+INFO: Starting ProtocolHandler [&quot;ajp-bio-8009&quot;]
+Aug 11, 2017 12:29:19 PM org.apache.catalina.startup.Catalina start
+INFO: Server startup in 77809 ms
+</code></pre><h5 id="2-6-防火墙开放8080端口"><a href="#2-6-防火墙开放8080端口" class="headerlink" title="2.6 防火墙开放8080端口"></a>2.6 防火墙开放8080端口</h5><p>打开防火墙配置文件：</p>
+<pre><code>[root@izwe12zdi799668qfxdm5oz tomcat]# vi /etc/sysconfig/iptables
+</code></pre><blockquote>
+<p>部分系统没有iptables文件，请参考<a href="http://yangpiena.coding.me/2017/08/11/%E3%80%90Linux%E3%80%91CentOS%E4%BD%BF%E7%94%A8iptables/" target="_blank" rel="external">CentOS使用iptables</a></p>
+</blockquote>
+<p>增加以下代码：</p>
+<pre><code>-A INPUT -m state --state NEW -m tcp -p tcp --dport 8080 -j ACCEPT
+</code></pre><p>重启防火墙</p>
+<pre><code>[root@izwe12zdi799668qfxdm5oz tomcat]# service iptables restart
+</code></pre><h5 id="2-7-访问tomcat"><a href="#2-7-访问tomcat" class="headerlink" title="2.7 访问tomcat"></a>2.7 访问tomcat</h5><p>在浏览器访问地址：<a href="http://IP:8080" target="_blank" rel="external">http://IP:8080</a></p>
+<h5 id="2-8-停止tomcat"><a href="#2-8-停止tomcat" class="headerlink" title="2.8 停止tomcat"></a>2.8 停止tomcat</h5><pre><code>[root@izwe12zdi799668qfxdm5oz tomcat]# bin/shutdown.sh 
+Using CATALINA_BASE:   /usr/tomcat
+Using CATALINA_HOME:   /usr/tomcat
+Using CATALINA_TMPDIR: /usr/tomcat/temp
+Using JRE_HOME:        /usr/java/jdk1.7.0_80/jre
+Using CLASSPATH:       /usr/tomcat/bin/bootstrap.jar:/usr/tomcat/bin/tomcat-juli.jar
+[root@izwe12zdi799668qfxdm5oz tomcat]# 
+</code></pre><hr>
+<h3 id="Tomcat设置服务"><a href="#Tomcat设置服务" class="headerlink" title="Tomcat设置服务"></a>Tomcat设置服务</h3><h4 id="1-Windows下-1"><a href="#1-Windows下-1" class="headerlink" title="1. Windows下"></a>1. Windows下</h4><h5 id="1-1-修改-bin目录中的service-bat"><a href="#1-1-修改-bin目录中的service-bat" class="headerlink" title="1.1 修改\bin目录中的service.bat"></a>1.1 修改\bin目录中的service.bat</h5><pre><code>rem 在第一个if语句的前面一行添加下面的行：
+SET CATALINA_HOME=D:\Program Files\tomcat6.0.35
+rem 上面这一行是设置CATALINA_HOME变量指到解压后的Tomcat目录
+</code></pre><p>如果从来没有安装过Tomcat，或者保证Services.msc启动服务管理器检查没有Apache Tomcat系统服务，到此你就可以转到第2步了。否则继续往下走：<br>按照下面的描述修改下面的相应的几行，每行下面都附有文字说明设置的作用：</p>
+<pre><code>set SERVICE_NAME=tomcat6.0
+rem 上面一行，将tomcat6.0修改成你需要的服务名，这个将是以后使用net start/stop来操作的服务名称。
+
+set PR_DISPLAYNAME=Apache Tomcat
+rem 上面一行，Apache Tomcat改为你需要显示的服务名，这个将显示在服务管理器中。
+
+set PR_DESCRIPTION=Apache Tomcat Server - http://jakarta.apache.org/tomcat
+rem 这一行改不改无所谓，是服务的描述，根据自己的喜好决定吧。
+</code></pre><h5 id="1-2-运行cmd打开控制台，进入解压后的Tomat的-bin目录下，运行service-bat-install命令"><a href="#1-2-运行cmd打开控制台，进入解压后的Tomat的-bin目录下，运行service-bat-install命令" class="headerlink" title="1.2 运行cmd打开控制台，进入解压后的Tomat的/bin目录下，运行service.bat install命令"></a>1.2 运行cmd打开控制台，进入解压后的Tomat的/bin目录下，运行<code>service.bat install</code>命令</h5><pre><code>D:\Program Files\tomcat6.0.35\bin&gt;service.bat install
+Installing the service  &apos;tomcat6.0&apos; ...
+Using CATALINA_HOME:    &quot;D:\Program Files\tomcat6.0.35&quot;
+Using CATALINA_BASE:    &quot;D:\Program Files\tomcat6.0.35&quot;
+Using JAVA_HOME:        &quot;D:\Program Files\Java\jdk1.6.0_30&quot;
+Using JVM:              &quot;D:\Program Files\Java\jdk1.6.0_30\jre\bin\server\jvm.dll&quot;
+The service &apos;tomcat6.0&apos; has been installed.
+</code></pre><p>程序提示：The service ‘tomcat6.0（你修改以后的SERVICE_NAME）’ has been installed说明服务Tomcat已经被安装成功。相应的，运行<code>service.bat remove</code>可以移除服务。</p>
+<h5 id="1-3-到这里，服务添加成功，运行services-msc，可以看到添加的服务，默认状态下该服务是手动运行的，在它的属性中，将启动类型更改为”自动”，以后机器启动以后Tomcat就在后台启动了。"><a href="#1-3-到这里，服务添加成功，运行services-msc，可以看到添加的服务，默认状态下该服务是手动运行的，在它的属性中，将启动类型更改为”自动”，以后机器启动以后Tomcat就在后台启动了。" class="headerlink" title="1.3 到这里，服务添加成功，运行services.msc，可以看到添加的服务，默认状态下该服务是手动运行的，在它的属性中，将启动类型更改为”自动”，以后机器启动以后Tomcat就在后台启动了。"></a>1.3 到这里，服务添加成功，运行services.msc，可以看到添加的服务，默认状态下该服务是手动运行的，在它的属性中，将启动类型更改为”自动”，以后机器启动以后Tomcat就在后台启动了。</h5><hr>
+<h4 id="2-Linux下-1"><a href="#2-Linux下-1" class="headerlink" title="2. Linux下"></a>2. Linux下</h4><h5 id="2-1-执行下面命令，创建脚本文件，"><a href="#2-1-执行下面命令，创建脚本文件，" class="headerlink" title="2.1 执行下面命令，创建脚本文件，"></a>2.1 执行下面命令，创建脚本文件，</h5><pre><code>vim /etc/rc.d/init.d/tomcat
+</code></pre><p>在文件中写入如下代码，保存并且退出。</p>
+<pre><code>#!/bin/bash
+# /etc/rc.d/init.d/tomcat
+# init script for tomcat precesses
+# processname: tomcat
+# description: tomcat is a j2se server
+# chkconfig: 2345 86 16
+# description: Start up the Tomcat servlet engine.
+
+if [ -f /etc/init.d/functions ]; then
+. /etc/init.d/functions
+elif [ -f /etc/rc.d/init.d/functions ]; then
+. /etc/rc.d/init.d/functions
+else
+echo -e &quot;\atomcat: unable to locate functions lib. Cannot continue.&quot;
+exit -1
+fi
+RETVAL=$?
+CATALINA_HOME=&quot;/usr/tomcat&quot;   #tomcat安装目录，你安装在什么目录下就复制什么目录
+case &quot;$1&quot; in
+start)
+if [ -f $CATALINA_HOME/bin/startup.sh ];
+then
+echo $&quot;Starting Tomcat&quot;
+$CATALINA_HOME/bin/startup.sh
+fi
+;;
+stop)
+if [ -f $CATALINA_HOME/bin/shutdown.sh ];
+then
+echo $&quot;Stopping Tomcat&quot;
+$CATALINA_HOME/bin/shutdown.sh
+fi
+;;
+*)
+echo $&quot;Usage: $0 {start|stop}&quot;
+exit 1
+;;
+esac
+exit $RETVAL
+
+Linux
+</code></pre><h5 id="2-2-给文件添加权限，使得脚本文件可以执行，命令为"><a href="#2-2-给文件添加权限，使得脚本文件可以执行，命令为" class="headerlink" title="2.2 给文件添加权限，使得脚本文件可以执行，命令为"></a>2.2 给文件添加权限，使得脚本文件可以执行，命令为</h5><pre><code>chmod 755 /etc/rc.d/init.d/tomcat
+</code></pre><h5 id="2-3-将其添加到服务中，命令为"><a href="#2-3-将其添加到服务中，命令为" class="headerlink" title="2.3 将其添加到服务中，命令为"></a>2.3 将其添加到服务中，命令为</h5><pre><code>chkconfig --add /etc/rc.d/init.d/tomcat
+</code></pre><blockquote>
+<p>删除服务使用命令：<code>chkconfig --del /etc/rc.d/init.d/tomcat</code></p>
+</blockquote>
+<h5 id="2-4-然后将下面的配置文件加到tomcat中的catalina-sh文件中的最后面，命令为"><a href="#2-4-然后将下面的配置文件加到tomcat中的catalina-sh文件中的最后面，命令为" class="headerlink" title="2.4 然后将下面的配置文件加到tomcat中的catalina.sh文件中的最后面，命令为"></a>2.4 然后将下面的配置文件加到tomcat中的catalina.sh文件中的最后面，命令为</h5><pre><code>vim /usr/tomcat/bin/catalina.sh
+</code></pre><p>配置文件：</p>
+<pre><code>export JAVA_HOME=/usr/java/jdk1.7.0_80   #javajdk的安装路径，使用echo $JAVA_HOME命令可以读取
+export CATALINA_HOME=/usr/tomcat
+export CATALINA_BASE=/usr/tomcat
+export CATALINA_TMPDIR=/usr/tomcat/temp
+</code></pre><hr>
+<h3 id="Tomcat设置开机启动（Linux）"><a href="#Tomcat设置开机启动（Linux）" class="headerlink" title="Tomcat设置开机启动（Linux）"></a>Tomcat设置开机启动（Linux）</h3><p>打开linux设置开启启动的文件，将下面的配置文件写入此文件的最后</p>
+<pre><code>vim /etc/rc.d/rc.local
+</code></pre><p>配置文件：</p>
+<pre><code>export JAVA_HOME=/usr/java/jdk1.7.0_80
+export CLASSPATH=.:$JAVA_HOME/jre/lib/rt.jar:$JAVA_HOME/lib/dt.jar:$JAVA_HOME/lib/tools.jar
+export PATH=$PATH:$JAVA_HOME/bin
+export CATALINA_HOME=/usr/tomcat/
+#tomcat自启动
+/usr/tomcat/bin/startup.
+</code></pre><p>tomcat依赖于java的jdk，所以设置的时将jdk也同步导入。至此配置完成。</p>
+
+        </div>
+
+        <!-- YPN Add 2016-11-14 增加打赏 start -->
+        <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center">
+          <div>如果觉得我的文章对您有用，请随意打赏。您的支持将鼓励我继续创作！</div>
+          <button id="rewardButton", disable="enable", onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}", style="cursor: pointer; border: 0; outline: 0; border-radius: 100%; padding: 0; margin: 0; letter-spacing: normal; text-transform: none; text-indent: 0px; text-shadow: none">
+            <span onmouseover="this.style.color='rgb(236,96,0)';this.style.background='rgb(204,204,204)'" onmouseout="this.style.color='#fff';this.style.background='rgb(236,96,0)'" style="display: inline-block; width: 70px; height: 70px; border-radius: 100%; line-height: 81px; color: #fff; font: 400 35px/75px 'microsofty'; background: rgb(236,96,0)">赏</span>
+          </button>
+          <div id="QR" style="display: none;">
+            
+              <div id="wechat" style="display: inline-block">
+                <img id="wechat_qr" src="/assets/blogImg/YPN_wechatpay-32x32.png" alt="昜丿捺 WeChat Pay" style="width: 200px; max-width: 100%; display: inline-block"/>
+                <p>微信打赏</p>
+              </div>
+            
+          
+            <div id="alipay" style="display: inline-block">
+              <img id="alipay_qr" src="/assets/blogImg/YPN_alipay-32x32.jpg" alt="昜丿捺 Alipay" style="width: 200px; max-width: 100%; display: inline-block"/>
+              <p>支付宝打赏</p>
+            </div>
+          
+          </div>
+        </div>
+        <!-- YPN Add 2016-11-14 增加打赏 end -->
+
+        <!-- 多说最近访客 start -->
+        <div class="ds-recent-visitors" data-num-items="28" data-avatar-size="42" id="ds-recent-visitors"></div>
+        <!-- 多说最近访客 end -->
+        <!-- 多说评论框 start -->
+        <div class="ds-thread" data-thread-key="2016/12/28/【Java】tomcat下载和安装/" data-title="【Java】tomcat下载和安装" data-url="http://yoursite.com/2016/12/28/【Java】tomcat下载和安装/">
+        </div>
+        <!-- 多说评论框 end -->
+
+      </div>
+    </div>
+  </div>
+</article>
+
+
+
+    <!-- Footer -->
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <p class="copyright text-muted">
+          Theme By <a target="_blank" href="https://github.com/levblanc">Levblanc.</a>
+          Inspired By <a target="_blank" href="https://github.com/klugjo/hexo-theme-clean-blog">Clean Blog.</a>
+        <p class="copyright text-muted">
+          Powered By <a target="_blank" href="https://hexo.io/">Hexo.</a>
+        <p class="copyright text-muted">
+          本站总访问量 <span id="busuanzi_value_site_pv"></span> 次, 访客数 <span id="busuanzi_value_site_uv"></span> 人次, 本文总阅读量 <span id="busuanzi_value_page_pv"></span> 次
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<script type="text/javascript">
+  (function(w,d,t,u,n,s,e){w['SwiftypeObject']=n;w[n]=w[n]||function(){
+  (w[n].q=w[n].q||[]).push(arguments);};s=d.createElement(t);
+  e=d.getElementsByTagName(t)[0];s.async=1;s.src=u;e.parentNode.insertBefore(s,e);
+  })(window,document,'script','//s.swiftypecdn.com/install/v2/st.js','_st');
+  
+  _st('install','Bw13BEeK5ASKzfM4WzMC','2.0.0');
+</script>
+
+    <!-- After Footer Scripts -->
+<script src="/js/highlight.pack.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function(event) {
+    var codeBlocks = Array.prototype.slice.call(document.getElementsByTagName('pre'))
+    codeBlocks.forEach(function(block, index) {
+      hljs.highlightBlock(block);
+    });
+  });
+</script>
+
+<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+<script type="text/javascript">
+var duoshuoQuery = {short_name:"yangpiena"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '/js/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+<!-- 多说公共JS代码 end -->
+
+<div id="totop" style="position:fixed;bottom:50px;right:30px;cursor: pointer;">
+	<a title="返回顶部"><img src="/img/scrollup.png"/></a>
+</div>
+<script src="/js/totop.js"></script>
+
+<script type="text/javascript" src="https://cdn.bootcss.com/canvas-nest.js/1.0.1/canvas-nest.min.js"></script>
+  </body>
+</html>
+
