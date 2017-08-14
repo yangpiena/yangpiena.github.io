@@ -39,87 +39,90 @@ description:
 ---
 
 #### 2. Linux下
-##### 2.1 在/usr/目录下创建download目录
+##### 2.1 下载或拷贝tomcat安装包到user目录下，然后解压
+```
+[root@iZwe13xjwyedbm0tjgmez1Z usr]# ls
+apache-tomcat-7.0.65.tar.gz  bin  etc  games  include  java  lib  lib64  libexec  local  sbin  share  src  tmp
+[root@iZwe13xjwyedbm0tjgmez1Z usr]#  tar -zxvf apache-tomcat-7.0.65.tar.gz
+apache-tomcat-7.0.65/bin/catalina.sh
+apache-tomcat-7.0.65/bin/configtest.sh
+apache-tomcat-7.0.65/bin/daemon.sh
+.
+.
+.
+apache-tomcat-7.0.65/webapps/manager/index.jsp
+apache-tomcat-7.0.65/webapps/manager/status.xsd
+apache-tomcat-7.0.65/webapps/manager/xform.xsl
+[root@iZwe13xjwyedbm0tjgmez1Z usr]# ls
+apache-tomcat-7.0.65  apache-tomcat-7.0.65.tar.gz  bin  etc  games  include  java  lib  lib64  libexec  local  sbin  share  src  tmp
+[root@iZwe13xjwyedbm0tjgmez1Z usr]# 
+```
 
-	[root@izwe12zdi799668qfxdm5oz ~]# mkdir /usr/download
-	[root@izwe12zdi799668qfxdm5oz ~]# cd /usr/download
-	[root@izwe12zdi799668qfxdm5oz download]# 
-##### 2.2 下载或拷贝tomcat安装包到download目录下，然后解压
+##### 2.2 删除安装包，并重命名解压后的文件夹为tomcat
+```
+[root@iZwe13xjwyedbm0tjgmez1Z usr]# rm -fr apache-tomcat-7.0.65.tar.gz 
+[root@iZwe13xjwyedbm0tjgmez1Z usr]# mv apache-tomcat-7.0.65/ tomcat
+[root@iZwe13xjwyedbm0tjgmez1Z usr]# ls
+bin  etc  games  include  java  lib  lib64  libexec  local  sbin  share  src  tmp  tomcat
+[root@iZwe13xjwyedbm0tjgmez1Z usr]# 
+```
 
-	[root@izwe12zdi799668qfxdm5oz download]# ls
-	apache-tomcat-7.0.65.tar.gz
-	[root@izwe12zdi799668qfxdm5oz download]# tar -zxvf apache-tomcat-7.0.65.tar.gz 
-	apache-tomcat-7.0.65/bin/catalina.sh
-	apache-tomcat-7.0.65/bin/configtest.sh
-	apache-tomcat-7.0.65/bin/daemon.sh
-	.
-	.
-	.
-	apache-tomcat-7.0.65/webapps/manager/index.jsp
-	apache-tomcat-7.0.65/webapps/manager/status.xsd
-	apache-tomcat-7.0.65/webapps/manager/xform.xsl
-	[root@izwe12zdi799668qfxdm5oz download]# ls
-	apache-tomcat-7.0.65  apache-tomcat-7.0.65.tar.gz
-	[root@izwe12zdi799668qfxdm5oz download]# 
-##### 2.3 解压之后，重命名为tomcat并移动到/usr/目录下
-
-	[root@izwe12zdi799668qfxdm5oz download]# mv apache-tomcat-7.0.65 /usr/tomcat
-	[root@izwe12zdi799668qfxdm5oz download]# ls
-	apache-tomcat-7.0.65.tar.gz
-	[root@izwe12zdi799668qfxdm5oz download]# cd /usr/tomcat/
-	[root@izwe12zdi799668qfxdm5oz tomcat]# ls
-	bin  conf  lib  LICENSE  logs  NOTICE  RELEASE-NOTES  RUNNING.txt  temp  webapps  work
-	[root@izwe12zdi799668qfxdm5oz tomcat]# 
-##### 2.4 启动tomcat
+##### 2.3 启动tomcat
 执行startup.sh启动tomcat，如下表示启动成功：
+```
+[root@izwe12zdi799668qfxdm5oz tomcat]# bin/startup.sh 
+Using CATALINA_BASE:   /usr/tomcat
+Using CATALINA_HOME:   /usr/tomcat
+Using CATALINA_TMPDIR: /usr/tomcat/temp
+Using JRE_HOME:        /usr/java/jdk1.7.0_80/jre
+Using CLASSPATH:       /usr/tomcat/bin/bootstrap.jar:/usr/tomcat/bin/tomcat-juli.jar
+Tomcat started.
+[root@izwe12zdi799668qfxdm5oz tomcat]# 
+```
 
-	[root@izwe12zdi799668qfxdm5oz tomcat]# bin/startup.sh 
-	Using CATALINA_BASE:   /usr/tomcat
-	Using CATALINA_HOME:   /usr/tomcat
-	Using CATALINA_TMPDIR: /usr/tomcat/temp
-	Using JRE_HOME:        /usr/java/jdk1.7.0_80/jre
-	Using CLASSPATH:       /usr/tomcat/bin/bootstrap.jar:/usr/tomcat/bin/tomcat-juli.jar
-	Tomcat started.
-	[root@izwe12zdi799668qfxdm5oz tomcat]# 
-##### 2.5 查看log信息
+##### 2.4 查看log信息
+```
+[root@izwe12zdi799668qfxdm5oz tomcat]# tail -f logs/catalina.out
+Aug 11, 2017 12:29:19 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deploying web application directory /usr/tomcat/webapps/ROOT
+Aug 11, 2017 12:29:19 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deployment of web application directory /usr/tomcat/webapps/ROOT has finished in 39 ms
+Aug 11, 2017 12:29:19 PM org.apache.coyote.AbstractProtocol start
+INFO: Starting ProtocolHandler ["http-bio-8080"]
+Aug 11, 2017 12:29:19 PM org.apache.coyote.AbstractProtocol start
+INFO: Starting ProtocolHandler ["ajp-bio-8009"]
+Aug 11, 2017 12:29:19 PM org.apache.catalina.startup.Catalina start
+INFO: Server startup in 77809 ms
+```
 
-	[root@izwe12zdi799668qfxdm5oz tomcat]# tail -f logs/catalina.out
-	Aug 11, 2017 12:29:19 PM org.apache.catalina.startup.HostConfig deployDirectory
-	INFO: Deploying web application directory /usr/tomcat/webapps/ROOT
-	Aug 11, 2017 12:29:19 PM org.apache.catalina.startup.HostConfig deployDirectory
-	INFO: Deployment of web application directory /usr/tomcat/webapps/ROOT has finished in 39 ms
-	Aug 11, 2017 12:29:19 PM org.apache.coyote.AbstractProtocol start
-	INFO: Starting ProtocolHandler ["http-bio-8080"]
-	Aug 11, 2017 12:29:19 PM org.apache.coyote.AbstractProtocol start
-	INFO: Starting ProtocolHandler ["ajp-bio-8009"]
-	Aug 11, 2017 12:29:19 PM org.apache.catalina.startup.Catalina start
-	INFO: Server startup in 77809 ms
-
-##### 2.6 防火墙开放8080端口
+##### 2.5 防火墙开放8080端口
 打开防火墙配置文件：
-
-	[root@izwe12zdi799668qfxdm5oz tomcat]# vi /etc/sysconfig/iptables
+```
+[root@izwe12zdi799668qfxdm5oz tomcat]# vi /etc/sysconfig/iptables
+```
 > 部分系统没有iptables文件，请参考[CentOS使用iptables](http://yangpiena.coding.me/2017/08/11/%E3%80%90Linux%E3%80%91CentOS%E4%BD%BF%E7%94%A8iptables/)
 
 增加以下代码：
 
 	-A INPUT -m state --state NEW -m tcp -p tcp --dport 8080 -j ACCEPT
 重启防火墙
+```
+[root@izwe12zdi799668qfxdm5oz tomcat]# service iptables restart
+```
 
-	[root@izwe12zdi799668qfxdm5oz tomcat]# service iptables restart
-
-##### 2.7 访问tomcat
+##### 2.6 访问tomcat
 在浏览器访问地址：http://IP:8080
 
-##### 2.8 停止tomcat
-
-	[root@izwe12zdi799668qfxdm5oz tomcat]# bin/shutdown.sh 
-	Using CATALINA_BASE:   /usr/tomcat
-	Using CATALINA_HOME:   /usr/tomcat
-	Using CATALINA_TMPDIR: /usr/tomcat/temp
-	Using JRE_HOME:        /usr/java/jdk1.7.0_80/jre
-	Using CLASSPATH:       /usr/tomcat/bin/bootstrap.jar:/usr/tomcat/bin/tomcat-juli.jar
-	[root@izwe12zdi799668qfxdm5oz tomcat]# 
+##### 2.7 停止tomcat
+```
+[root@izwe12zdi799668qfxdm5oz tomcat]# bin/shutdown.sh 
+Using CATALINA_BASE:   /usr/tomcat
+Using CATALINA_HOME:   /usr/tomcat
+Using CATALINA_TMPDIR: /usr/tomcat/temp
+Using JRE_HOME:        /usr/java/jdk1.7.0_80/jre
+Using CLASSPATH:       /usr/tomcat/bin/bootstrap.jar:/usr/tomcat/bin/tomcat-juli.jar
+[root@izwe12zdi799668qfxdm5oz tomcat]# 
+```
 
 ---
 
@@ -144,14 +147,15 @@ description:
 		rem 这一行改不改无所谓，是服务的描述，根据自己的喜好决定吧。
 
 ##### 1.2 运行cmd打开控制台，进入解压后的Tomat的/bin目录下，运行`service.bat install`命令
-
-		D:\Program Files\tomcat6.0.35\bin>service.bat install
-		Installing the service  'tomcat6.0' ...
-		Using CATALINA_HOME:    "D:\Program Files\tomcat6.0.35"
-		Using CATALINA_BASE:    "D:\Program Files\tomcat6.0.35"
-		Using JAVA_HOME:        "D:\Program Files\Java\jdk1.6.0_30"
-		Using JVM:              "D:\Program Files\Java\jdk1.6.0_30\jre\bin\server\jvm.dll"
-		The service 'tomcat6.0' has been installed.
+```
+D:\Program Files\tomcat6.0.35\bin>service.bat install
+Installing the service  'tomcat6.0' ...
+Using CATALINA_HOME:    "D:\Program Files\tomcat6.0.35"
+Using CATALINA_BASE:    "D:\Program Files\tomcat6.0.35"
+Using JAVA_HOME:        "D:\Program Files\Java\jdk1.6.0_30"
+Using JVM:              "D:\Program Files\Java\jdk1.6.0_30\jre\bin\server\jvm.dll"
+The service 'tomcat6.0' has been installed.
+```
 程序提示：The service 'tomcat6.0（你修改以后的SERVICE_NAME）' has been installed说明服务Tomcat已经被安装成功。相应的，运行`service.bat remove`可以移除服务。
 
 ##### 1.3 到这里，服务添加成功，运行services.msc，可以看到添加的服务，默认状态下该服务是手动运行的，在它的属性中，将启动类型更改为"自动"，以后机器启动以后Tomcat就在后台启动了。
@@ -160,8 +164,9 @@ description:
 
 #### 2. Linux下
 ##### 2.1 执行下面命令，创建脚本文件，
-
-	vim /etc/rc.d/init.d/tomcat
+```
+vim /etc/rc.d/init.d/tomcat
+```
 在文件中写入如下代码，保存并且退出。
 
 	#!/bin/bash
@@ -205,17 +210,23 @@ description:
 	exit $RETVAL
 
 	Linux
+
 ##### 2.2 给文件添加权限，使得脚本文件可以执行，命令为
+```
+chmod 755 /etc/rc.d/init.d/tomcat
+```
 
-	chmod 755 /etc/rc.d/init.d/tomcat
 ##### 2.3 将其添加到服务中，命令为
-
-	chkconfig --add /etc/rc.d/init.d/tomcat
+```
+chkconfig --add /etc/rc.d/init.d/tomcat
+```
 > 删除服务使用命令：`chkconfig --del /etc/rc.d/init.d/tomcat`
 
 ##### 2.4 然后将下面的配置文件加到tomcat中的catalina.sh文件中的最后面，命令为
+```
+vim /usr/tomcat/bin/catalina.sh
+```
 
-	vim /usr/tomcat/bin/catalina.sh
 配置文件：
 
 	export JAVA_HOME=/usr/java/jdk1.7.0_80   #javajdk的安装路径，使用echo $JAVA_HOME命令可以读取
@@ -227,8 +238,9 @@ description:
 
 ### Tomcat设置开机启动（Linux）
 打开linux设置开启启动的文件，将下面的配置文件写入此文件的最后
-
-	vim /etc/rc.d/rc.local
+```
+vim /etc/rc.d/rc.local
+```
 配置文件：
 
 	export JAVA_HOME=/usr/java/jdk1.7.0_80

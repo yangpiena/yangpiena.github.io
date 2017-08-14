@@ -126,7 +126,7 @@
           <!-- Date -->
           <span class="date-time info">发表于
             <span class="date">2017-08-10</span>
-            <span class="time">17:40:01</span>
+            <span class="time">14:19:49</span>
           </span>
           
           <!--  Categories  -->
@@ -158,7 +158,7 @@
 			<!-- YPN Add 2017-02-27 Table of Contents -->
 			
 			
-          	<h4 id="1-首先切换到root账户下。"><a href="#1-首先切换到root账户下。" class="headerlink" title="1. 首先切换到root账户下。"></a>1. 首先切换到root账户下。</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo -i</div></pre></td></tr></table></figure>
+          	<h4 id="1-首先切换到root账户下"><a href="#1-首先切换到root账户下" class="headerlink" title="1. 首先切换到root账户下"></a>1. 首先切换到root账户下</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo -i</div></pre></td></tr></table></figure>
 <a id="more"></a>
 <h4 id="2-查看数据盘信息"><a href="#2-查看数据盘信息" class="headerlink" title="2. 查看数据盘信息"></a>2. 查看数据盘信息</h4><p>登录Linux云主机后，使用命令<code>fdisk -l</code>查看数据盘相关信息。</p>
 <blockquote>
@@ -246,6 +246,7 @@ Disk identifier: 0x6ea9e5ce
 <blockquote>
 <p>在进行分区格式化时，开发者可自行决定文件系统的格式，如ext2、ext3等，这里我们选择ext3。</p>
 </blockquote>
+<p>格式化完成后如下：</p>
 <pre><code>[root@iZwe12zdi799668qfxdm5oZ ~]# mkfs.ext3 /dev/vdb1
 mke2fs 1.42.9 (28-Dec-2013)
 Filesystem label=
@@ -270,7 +271,7 @@ Creating journal (32768 blocks): done
 Writing superblocks and filesystem accounting information: done   
 
 [root@iZwe12zdi799668qfxdm5oZ ~]# 
-</code></pre><h4 id="6-挂载新分区"><a href="#6-挂载新分区" class="headerlink" title="6. 挂载新分区"></a>6. 挂载新分区</h4><p>使用下面的命令，先创建fimeson目录（目录名自定义），再手动挂载新分区，最后查看挂载结果。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">mkdir /fimeson</div><div class="line">mount /dev/vdb1 /fimeson</div><div class="line">df -h</div></pre></td></tr></table></figure></p>
+</code></pre><h4 id="6-挂载新分区"><a href="#6-挂载新分区" class="headerlink" title="6. 挂载新分区"></a>6. 挂载新分区</h4><p>使用下面的命令，先创建fimeson目录（目录名可自定义），再手动挂载新分区，最后查看挂载结果。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">mkdir /fimeson</div><div class="line">mount /dev/vdb1 /fimeson</div><div class="line">df -h</div></pre></td></tr></table></figure></p>
 <p>出现以下信息说明挂载成功，即可以查看到数据盘了。</p>
 <pre><code>[root@iZwe12zdi799668qfxdm5oZ ~]# mkdir /fimeson
 [root@iZwe12zdi799668qfxdm5oZ ~]# mount /dev/vdb1 /fimeson

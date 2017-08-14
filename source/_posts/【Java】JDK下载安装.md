@@ -25,46 +25,50 @@ description:
 >注意：在设置变量的末尾不要加上“；”）
 
 ##### 1.3 测试
-设置完成之后我们需要测试，打开`运行`，输入`CMD`，在命令行上输入`java -version`，然后回车，如果出现以下内容，那么JDK配置成功，否则就需要检查环境变量的配置。
+设置完成之后我们需要测试，打开`运行`，输入`CMD`，在命令行上执行以下命令：
+```
+java -version
+```
+如果出现以下内容，那么JDK配置成功，否则就需要检查环境变量的配置。
 
-	C:\Users\Administrator>java -version
 	java version "1.7.0_80"
 	Java(TM) SE Runtime Environment (build 1.7.0_80-b15)
 	Java HotSpot(TM) Client VM (build 24.80-b11, mixed mode, sharing)
-
-	C:\Users\Administrator>
 
 ---
 
 #### 2. Linux下
 ##### 2.1 在/usr/目录下创建java目录
-
-	[root@izwe12zdi799668qfxdm5oz ~]# mkdir /usr/java
-	[root@izwe12zdi799668qfxdm5oz ~]# cd /usr/java
-	[root@izwe12zdi799668qfxdm5oz java]# 
+```
+[root@izwe12zdi799668qfxdm5oz ~]# mkdir /usr/java
+[root@izwe12zdi799668qfxdm5oz ~]# cd /usr/java
+[root@izwe12zdi799668qfxdm5oz java]# 
+```
 ##### 2.2 下载或拷贝jdk到java目录下，然后解压
-
-	[root@izwe12zdi799668qfxdm5oz java]# ls
-	jdk-7u80-linux-x64.gz
-	[root@izwe12zdi799668qfxdm5oz java]# tar -zxvf jdk-7u80-linux-x64.gz 
-	jdk1.7.0_80/
-	jdk1.7.0_80/LICENSE
-	jdk1.7.0_80/release
-	jdk1.7.0_80/jre/
-	.
-	.
-	.
-	jdk1.7.0_80/db/NOTICE
-	jdk1.7.0_80/README.html
-	jdk1.7.0_80/THIRDPARTYLICENSEREADME.txt
-	[root@izwe12zdi799668qfxdm5oz java]# ls
-	jdk1.7.0_80  jdk-7u80-linux-x64.gz
-	[root@izwe12zdi799668qfxdm5oz java]# 
+```
+[root@izwe12zdi799668qfxdm5oz java]# ls
+jdk-7u80-linux-x64.gz
+[root@izwe12zdi799668qfxdm5oz java]# tar -zxvf jdk-7u80-linux-x64.gz 
+jdk1.7.0_80/
+jdk1.7.0_80/LICENSE
+jdk1.7.0_80/release
+jdk1.7.0_80/jre/
+.
+.
+.
+jdk1.7.0_80/db/NOTICE
+jdk1.7.0_80/README.html
+jdk1.7.0_80/THIRDPARTYLICENSEREADME.txt
+[root@izwe12zdi799668qfxdm5oz java]# ls
+jdk1.7.0_80  jdk-7u80-linux-x64.gz
+[root@izwe12zdi799668qfxdm5oz java]# 
+```
 > 安装包也可以使用命令`curl -O http://download.Oracle.com/otn-pub/java/jdk/7u80-b15/jdk-7u80-linux-x64.tar.gz `下载，这里我直接拷贝了已下载好的。
 
 ##### 2.3 设置环境变量
-
-	[root@izwe12zdi799668qfxdm5oz java]# vi /etc/profile
+```
+[root@izwe12zdi799668qfxdm5oz java]# vi /etc/profile
+```
 在profile中最后的`done`和`unset i`之间添加如下内容:
 
 	#set java environment
@@ -99,18 +103,21 @@ description:
 	unset i
 	unset -f pathmunge
 	[root@izwe12zdi799668qfxdm5oz java]# 
-
 再执行以下命令，使修改生效：
+```
+[root@izwe12zdi799668qfxdm5oz java]# source /etc/profile
+```
 
-	[root@izwe12zdi799668qfxdm5oz java]# source /etc/profile
 ##### 2.4 测试
-如下，表示安装成功。
+执行命令：
+```
+java -version
+```
+出现如下，表示安装成功。
 
-	[root@izwe12zdi799668qfxdm5oz java]# java -version
 	java version "1.7.0_80"
 	Java(TM) SE Runtime Environment (build 1.7.0_80-b15)
 	Java HotSpot(TM) 64-Bit Server VM (build 24.80-b11, mixed mode)
-	[root@izwe12zdi799668qfxdm5oz java]# 
 
 ---
 

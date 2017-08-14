@@ -45,7 +45,7 @@ yum install iptables-services
 ```
 vi /etc/sysconfig/iptables
 ```
-在配置文件加入以下内容后，保存并退出：
+在配置文件中加入以下内容后，保存并退出：
 
 	# sample configuration for iptables service
 	# you can edit this manually or use system-config-firewall

@@ -8,7 +8,7 @@ tags: [Linux]
 keywords:
 description:
 ---
-#### 1. 首先切换到root账户下。
+#### 1. 首先切换到root账户下
 ```
 sudo -i
 ```
@@ -114,6 +114,8 @@ mkfs.ext3 /dev/vdb1
 ```
 > 在进行分区格式化时，开发者可自行决定文件系统的格式，如ext2、ext3等，这里我们选择ext3。
 
+格式化完成后如下：
+
 	[root@iZwe12zdi799668qfxdm5oZ ~]# mkfs.ext3 /dev/vdb1
 	mke2fs 1.42.9 (28-Dec-2013)
 	Filesystem label=
@@ -140,7 +142,7 @@ mkfs.ext3 /dev/vdb1
 	[root@iZwe12zdi799668qfxdm5oZ ~]# 
 
 #### 6. 挂载新分区
-使用下面的命令，先创建fimeson目录（目录名自定义），再手动挂载新分区，最后查看挂载结果。
+使用下面的命令，先创建fimeson目录（目录名可自定义），再手动挂载新分区，最后查看挂载结果。
 ```
 mkdir /fimeson
 mount /dev/vdb1 /fimeson
