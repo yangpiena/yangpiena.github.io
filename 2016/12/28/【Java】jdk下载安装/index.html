@@ -126,7 +126,7 @@
           <!-- Date -->
           <span class="date-time info">发表于
             <span class="date">2016-12-28</span>
-            <span class="time">17:40:01</span>
+            <span class="time">14:19:49</span>
           </span>
           
           <!--  Categories  -->
@@ -165,38 +165,19 @@
 <blockquote>
 <p>注意：在设置变量的末尾不要加上“；”）</p>
 </blockquote>
-<h5 id="1-3-测试"><a href="#1-3-测试" class="headerlink" title="1.3 测试"></a>1.3 测试</h5><p>设置完成之后我们需要测试，打开<code>运行</code>，输入<code>CMD</code>，在命令行上输入<code>java -version</code>，然后回车，如果出现以下内容，那么JDK配置成功，否则就需要检查环境变量的配置。</p>
-<pre><code>C:\Users\Administrator&gt;java -version
-java version &quot;1.7.0_80&quot;
+<h5 id="1-3-测试"><a href="#1-3-测试" class="headerlink" title="1.3 测试"></a>1.3 测试</h5><p>设置完成之后我们需要测试，打开<code>运行</code>，输入<code>CMD</code>，在命令行上执行以下命令：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">java -version</div></pre></td></tr></table></figure></p>
+<p>如果出现以下内容，那么JDK配置成功，否则就需要检查环境变量的配置。</p>
+<pre><code>java version &quot;1.7.0_80&quot;
 Java(TM) SE Runtime Environment (build 1.7.0_80-b15)
 Java HotSpot(TM) Client VM (build 24.80-b11, mixed mode, sharing)
-
-C:\Users\Administrator&gt;
 </code></pre><hr>
-<h4 id="2-Linux下"><a href="#2-Linux下" class="headerlink" title="2. Linux下"></a>2. Linux下</h4><h5 id="2-1-在-usr-目录下创建java目录"><a href="#2-1-在-usr-目录下创建java目录" class="headerlink" title="2.1 在/usr/目录下创建java目录"></a>2.1 在/usr/目录下创建java目录</h5><pre><code>[root@izwe12zdi799668qfxdm5oz ~]# mkdir /usr/java
-[root@izwe12zdi799668qfxdm5oz ~]# cd /usr/java
-[root@izwe12zdi799668qfxdm5oz java]# 
-</code></pre><h5 id="2-2-下载或拷贝jdk到java目录下，然后解压"><a href="#2-2-下载或拷贝jdk到java目录下，然后解压" class="headerlink" title="2.2 下载或拷贝jdk到java目录下，然后解压"></a>2.2 下载或拷贝jdk到java目录下，然后解压</h5><pre><code>[root@izwe12zdi799668qfxdm5oz java]# ls
-jdk-7u80-linux-x64.gz
-[root@izwe12zdi799668qfxdm5oz java]# tar -zxvf jdk-7u80-linux-x64.gz 
-jdk1.7.0_80/
-jdk1.7.0_80/LICENSE
-jdk1.7.0_80/release
-jdk1.7.0_80/jre/
-.
-.
-.
-jdk1.7.0_80/db/NOTICE
-jdk1.7.0_80/README.html
-jdk1.7.0_80/THIRDPARTYLICENSEREADME.txt
-[root@izwe12zdi799668qfxdm5oz java]# ls
-jdk1.7.0_80  jdk-7u80-linux-x64.gz
-[root@izwe12zdi799668qfxdm5oz java]# 
-</code></pre><blockquote>
+<h4 id="2-Linux下"><a href="#2-Linux下" class="headerlink" title="2. Linux下"></a>2. Linux下</h4><h5 id="2-1-在-usr-目录下创建java目录"><a href="#2-1-在-usr-目录下创建java目录" class="headerlink" title="2.1 在/usr/目录下创建java目录"></a>2.1 在/usr/目录下创建java目录</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">[root@izwe12zdi799668qfxdm5oz ~]# mkdir /usr/java</div><div class="line">[root@izwe12zdi799668qfxdm5oz ~]# cd /usr/java</div><div class="line">[root@izwe12zdi799668qfxdm5oz java]#</div></pre></td></tr></table></figure>
+<h5 id="2-2-下载或拷贝jdk到java目录下，然后解压"><a href="#2-2-下载或拷贝jdk到java目录下，然后解压" class="headerlink" title="2.2 下载或拷贝jdk到java目录下，然后解压"></a>2.2 下载或拷贝jdk到java目录下，然后解压</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line">[root@izwe12zdi799668qfxdm5oz java]# ls</div><div class="line">jdk-7u80-linux-x64.gz</div><div class="line">[root@izwe12zdi799668qfxdm5oz java]# tar -zxvf jdk-7u80-linux-x64.gz </div><div class="line">jdk1.7.0_80/</div><div class="line">jdk1.7.0_80/LICENSE</div><div class="line">jdk1.7.0_80/release</div><div class="line">jdk1.7.0_80/jre/</div><div class="line">.</div><div class="line">.</div><div class="line">.</div><div class="line">jdk1.7.0_80/db/NOTICE</div><div class="line">jdk1.7.0_80/README.html</div><div class="line">jdk1.7.0_80/THIRDPARTYLICENSEREADME.txt</div><div class="line">[root@izwe12zdi799668qfxdm5oz java]# ls</div><div class="line">jdk1.7.0_80  jdk-7u80-linux-x64.gz</div><div class="line">[root@izwe12zdi799668qfxdm5oz java]#</div></pre></td></tr></table></figure>
+<blockquote>
 <p>安装包也可以使用命令<code>curl -O http://download.Oracle.com/otn-pub/java/jdk/7u80-b15/jdk-7u80-linux-x64.tar.gz</code>下载，这里我直接拷贝了已下载好的。</p>
 </blockquote>
-<h5 id="2-3-设置环境变量"><a href="#2-3-设置环境变量" class="headerlink" title="2.3 设置环境变量"></a>2.3 设置环境变量</h5><pre><code>[root@izwe12zdi799668qfxdm5oz java]# vi /etc/profile
-</code></pre><p>在profile中最后的<code>done</code>和<code>unset i</code>之间添加如下内容:</p>
+<h5 id="2-3-设置环境变量"><a href="#2-3-设置环境变量" class="headerlink" title="2.3 设置环境变量"></a>2.3 设置环境变量</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">[root@izwe12zdi799668qfxdm5oz java]# vi /etc/profile</div></pre></td></tr></table></figure>
+<p>在profile中最后的<code>done</code>和<code>unset i</code>之间添加如下内容:</p>
 <pre><code>#set java environment
 JAVA_HOME=/usr/java/jdk1.7.0_80
 JRE_HOME=/usr/java/jdk1.7.0_80/jre
@@ -228,14 +209,12 @@ export JAVA_HOME JRE_HOME CLASS_PATH PATH
 unset i
 unset -f pathmunge
 [root@izwe12zdi799668qfxdm5oz java]# 
-</code></pre><p>再执行以下命令，使修改生效：</p>
-<pre><code>[root@izwe12zdi799668qfxdm5oz java]# source /etc/profile
-</code></pre><h5 id="2-4-测试"><a href="#2-4-测试" class="headerlink" title="2.4 测试"></a>2.4 测试</h5><p>如下，表示安装成功。</p>
-<pre><code>[root@izwe12zdi799668qfxdm5oz java]# java -version
-java version &quot;1.7.0_80&quot;
+</code></pre><p>再执行以下命令，使修改生效：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">[root@izwe12zdi799668qfxdm5oz java]# source /etc/profile</div></pre></td></tr></table></figure></p>
+<h5 id="2-4-测试"><a href="#2-4-测试" class="headerlink" title="2.4 测试"></a>2.4 测试</h5><p>执行命令：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">java -version</div></pre></td></tr></table></figure></p>
+<p>出现如下，表示安装成功。</p>
+<pre><code>java version &quot;1.7.0_80&quot;
 Java(TM) SE Runtime Environment (build 1.7.0_80-b15)
 Java HotSpot(TM) 64-Bit Server VM (build 24.80-b11, mixed mode)
-[root@izwe12zdi799668qfxdm5oz java]# 
 </code></pre><hr>
 <h3 id="可能出现的错误信息"><a href="#可能出现的错误信息" class="headerlink" title="可能出现的错误信息"></a>可能出现的错误信息</h3><p><code>bash: ./java: cannot execute binary file</code><br>出现这个错误的原因可能是在32位的操作系统上安装了64位的jdk，请检查jdk版本和Linux版本位数是否一致。<br>查看linux是32位还是64位系统用如下命令<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo uname --m</div></pre></td></tr></table></figure></p>
 <p>i686   //表示是32位<br>x86_64 // 表示是64位</p>
