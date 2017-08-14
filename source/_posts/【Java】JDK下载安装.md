@@ -19,8 +19,9 @@ description:
 ##### 1.1 安装
 安装目录建议自定义为C:\Java下，其它按默认安装即可。
 ##### 1.2 配置环境变量
+在系统变量里，
 新建变量名：`JAVA_HOME`   	变量值：C:\Java\jdk1.7.0_80
-编辑变量名：`Path`  		追加值：%JAVA_HOME%\bin;%JAVA_HOME%\jre\bin
+编辑变量名：`Path`  		追加值：;%JAVA_HOME%\bin;%JAVA_HOME%\jre\bin
 新建变量名：`CLASSPATH` 	变量值：.;%JAVA_HOME%\lib;%JAVA_HOME%\lib\dt.jar;%JAVA_HOME%\lib\tools.jar
 >注意：在设置变量的末尾不要加上“；”）
 
