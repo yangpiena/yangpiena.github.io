@@ -7,7 +7,7 @@ toc: true
 
 #### 常用
 [大马路](https://dama.lu/)                                    |  [谷歌搜索](https://www.google.com/ncr)                                                              |  [谷歌香港](https://www.google.com.hk/ncr)                                                              |  [维基百科](https://www.wikipedia.org/)                                                              |  [博客预览](http://localhost:4000)
-[网易公开课](https://open.163.com/)
+[网易公开课](https://open.163.com/)                           |  [YouTube](https://www.youtube.com/)
 [CSDN.NET](http://www.csdn.net/)                              |  [VeryCD 电驴大全](http://www.verycd.com/)                                                              |  [360doc个人图书馆](http://www.360doc.com/)
 [cnBeta](http://www.cnbeta.com/)                              |  [果壳](http://www.guokr.com/)                                                              |  [少数派](https://sspai.com/)                                                              |  [数字尾巴](http://www.dgtle.com/)                                                              |  [老D博客](https://laod.cn/)
 [百度云](https://pan.baidu.com/)                              |  [七牛云存储](https://portal.qiniu.com/create)                                                              |  [贴图库](http://www.tietuku.com/)
@@ -22,7 +22,7 @@ toc: true
 
 
 #### 电影
-[BT下载](http://www.qinou.cn/)                                |  [破晓电影](http://www.poxiao.com)                                                              |  [天天美剧](http://cn163.net/)                                                              |  [放电影网](http://www.fangdianying.tv/)                                                              |  [电影天堂](http://www.dy2018.com/)                                                              |  [面包网](http://www.mianbao99.com/)                                                              |  [迅雷电影下载](http://www.xlpu.cc/)                                                              |  [快播电影](http://www.bubulai.com/)
+[BT下载](http://www.qinou.cn/)                                |  [破晓电影](http://www.poxiao.com)                                                              |  [天天美剧](http://cn163.net/)                                                              |  [放电影网](http://www.fangdianying.tv/)                                                              |  [电影天堂](http://www.dy2018.com/)                                                              |  [面包网](http://www.mianbao99.com/)                                                              |  [迅雷电影下载](http://www.xlpu.cc/)                                                              |  [快播电影](http://www.bubulai.com/)                                                              |  [预告片世界](http://www.yugaopian.cn/)
 [人人影视](http://www.yyets.com/)
 
 
@@ -57,6 +57,7 @@ toc: true
 [绿盟](http://www.xdowns.com/)                                |  [zd423](http://www.zdfans.com/)
 [浏览迷](http://liulanmi.com/)
 [最新迅雷(xunlei)会员账号天天更新同享](http://www.win10.name/news/193.html)
+[FlashPlayer下载地址1](http://get.adobe.com/cn/flashplayer/otherversions/)  |  [FlashPlayer下载地址2](http://www.adobe.com/support/flashplayer/downloads.html)  |  [Debugger Version地址](http://kb2.adobe.com/cps/155/tn_15507.html)
 
 &nbsp;
 
