@@ -126,7 +126,7 @@
           <!-- Date -->
           <span class="date-time info">发表于
             <span class="date">2016-12-28</span>
-            <span class="time">14:30:09</span>
+            <span class="time">12:09:05</span>
           </span>
           
           <!--  Categories  -->
@@ -199,61 +199,43 @@ rem 这一行改不改无所谓，是服务的描述，根据自己的喜好决�
 </code></pre><h5 id="1-2-运行cmd打开控制台，进入解压后的Tomat的-bin目录下，运行service-bat-install命令"><a href="#1-2-运行cmd打开控制台，进入解压后的Tomat的-bin目录下，运行service-bat-install命令" class="headerlink" title="1.2 运行cmd打开控制台，进入解压后的Tomat的/bin目录下，运行service.bat install命令"></a>1.2 运行cmd打开控制台，进入解压后的Tomat的/bin目录下，运行<code>service.bat install</code>命令</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">D:\Program Files\tomcat6.0.35\bin&gt;service.bat install</div><div class="line">Installing the service  &apos;tomcat6.0&apos; ...</div><div class="line">Using CATALINA_HOME:    &quot;D:\Program Files\tomcat6.0.35&quot;</div><div class="line">Using CATALINA_BASE:    &quot;D:\Program Files\tomcat6.0.35&quot;</div><div class="line">Using JAVA_HOME:        &quot;D:\Program Files\Java\jdk1.6.0_30&quot;</div><div class="line">Using JVM:              &quot;D:\Program Files\Java\jdk1.6.0_30\jre\bin\server\jvm.dll&quot;</div><div class="line">The service &apos;tomcat6.0&apos; has been installed.</div></pre></td></tr></table></figure>
 <p>程序提示：The service ‘tomcat6.0（你修改以后的SERVICE_NAME）’ has been installed说明服务Tomcat已经被安装成功。相应的，运行<code>service.bat remove</code>可以移除服务。</p>
 <h5 id="1-3-到这里，服务添加成功，运行services-msc，可以看到添加的服务，默认状态下该服务是手动运行的，在它的属性中，将启动类型更改为”自动”，以后机器启动以后Tomcat就在后台启动了。"><a href="#1-3-到这里，服务添加成功，运行services-msc，可以看到添加的服务，默认状态下该服务是手动运行的，在它的属性中，将启动类型更改为”自动”，以后机器启动以后Tomcat就在后台启动了。" class="headerlink" title="1.3 到这里，服务添加成功，运行services.msc，可以看到添加的服务，默认状态下该服务是手动运行的，在它的属性中，将启动类型更改为”自动”，以后机器启动以后Tomcat就在后台启动了。"></a>1.3 到这里，服务添加成功，运行services.msc，可以看到添加的服务，默认状态下该服务是手动运行的，在它的属性中，将启动类型更改为”自动”，以后机器启动以后Tomcat就在后台启动了。</h5><hr>
-<h4 id="2-Linux下-1"><a href="#2-Linux下-1" class="headerlink" title="2. Linux下"></a>2. Linux下</h4><h5 id="2-1-执行下面命令，创建脚本文件，"><a href="#2-1-执行下面命令，创建脚本文件，" class="headerlink" title="2.1 执行下面命令，创建脚本文件，"></a>2.1 执行下面命令，创建脚本文件，</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">vim /etc/rc.d/init.d/tomcat</div></pre></td></tr></table></figure>
-<p>在文件中写入如下代码，保存并且退出。</p>
+<h4 id="2-Linux下-1"><a href="#2-Linux下-1" class="headerlink" title="2. Linux下"></a>2. Linux下</h4><h5 id="2-1-在-目录下，执行下面命令"><a href="#2-1-在-目录下，执行下面命令" class="headerlink" title="2.1 在~目录下，执行下面命令"></a>2.1 在~目录下，执行下面命令</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">vim .bash_profile</div></pre></td></tr></table></figure>
+<h5 id="2-2-在-bash-profile文件中定义TOMCAT-HOME变量，并将变量追加到PATH后面，效果如下："><a href="#2-2-在-bash-profile文件中定义TOMCAT-HOME变量，并将变量追加到PATH后面，效果如下：" class="headerlink" title="2.2 在.bash_profile文件中定义TOMCAT_HOME变量，并将变量追加到PATH后面，效果如下："></a>2.2 在.bash_profile文件中定义TOMCAT_HOME变量，并将变量追加到PATH后面，效果如下：</h5><pre><code># .bash_profile
+
+# Get the aliases and functions
+if [ -f ~/.bashrc ]; then
+        . ~/.bashrc
+fi
+
+# User specific environment and startup programs
+
+TOMCAT_HOME=/usr/tomcat
+PATH=$PATH:$HOME/bin:$TOMCAT_HOME/bin
+
+export TOMCAT_HOME
+export PATH
+</code></pre><p>保存并退出。</p>
+<h5 id="2-3-执行下面命令，使立即生效"><a href="#2-3-执行下面命令，使立即生效" class="headerlink" title="2.3 执行下面命令，使立即生效"></a>2.3 执行下面命令，使立即生效</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">source ./.bash_profile</div></pre></td></tr></table></figure>
+<h5 id="2-4-执行下面命令，在tomcat的bin目录下创建脚本文件，"><a href="#2-4-执行下面命令，在tomcat的bin目录下创建脚本文件，" class="headerlink" title="2.4 执行下面命令，在tomcat的bin目录下创建脚本文件，"></a>2.4 执行下面命令，在tomcat的bin目录下创建脚本文件，</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">vim /usr/tomcat/bin/tomcat</div></pre></td></tr></table></figure>
+<p>在文件中写入如下代码，保存并退出。</p>
 <pre><code>#!/bin/bash
-# /etc/rc.d/init.d/tomcat
-# init script for tomcat precesses
-# processname: tomcat
-# description: tomcat is a j2se server
-# chkconfig: 2345 86 16
-# description: Start up the Tomcat servlet engine.
+# /usr/tomcat/bin
+# YPN 2017-08-21 Create
 
-if [ -f /etc/init.d/functions ]; then
-. /etc/init.d/functions
-elif [ -f /etc/rc.d/init.d/functions ]; then
-. /etc/rc.d/init.d/functions
-else
-echo -e &quot;\atomcat: unable to locate functions lib. Cannot continue.&quot;
-exit -1
+if [ &quot;$1&quot;x = &quot;start&quot;x ]; then
+  exec $TOMCAT_HOME/bin/startup.sh
 fi
-RETVAL=$?
-CATALINA_HOME=&quot;/usr/tomcat&quot;   #tomcat安装目录，你安装在什么目录下就复制什么目录
-case &quot;$1&quot; in
-start)
-if [ -f $CATALINA_HOME/bin/startup.sh ];
-then
-echo $&quot;Starting Tomcat&quot;
-$CATALINA_HOME/bin/startup.sh
+if [ &quot;$1&quot;x = &quot;stop&quot;x ]; then
+  exec $TOMCAT_HOME/bin/shutdown.sh
 fi
-;;
-stop)
-if [ -f $CATALINA_HOME/bin/shutdown.sh ];
-then
-echo $&quot;Stopping Tomcat&quot;
-$CATALINA_HOME/bin/shutdown.sh
+if [ &quot;$1&quot;x = &quot;log&quot;x ]; then
+  tail -f $TOMCAT_HOME/logs/catalina.out -n 1000
 fi
-;;
-*)
-echo $&quot;Usage: $0 {start|stop}&quot;
-exit 1
-;;
-esac
-exit $RETVAL
-
-Linux
-</code></pre><h5 id="2-2-给文件添加权限，使得脚本文件可以执行，命令为"><a href="#2-2-给文件添加权限，使得脚本文件可以执行，命令为" class="headerlink" title="2.2 给文件添加权限，使得脚本文件可以执行，命令为"></a>2.2 给文件添加权限，使得脚本文件可以执行，命令为</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">chmod 755 /etc/rc.d/init.d/tomcat</div></pre></td></tr></table></figure>
-<h5 id="2-3-将其添加到服务中，命令为"><a href="#2-3-将其添加到服务中，命令为" class="headerlink" title="2.3 将其添加到服务中，命令为"></a>2.3 将其添加到服务中，命令为</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">chkconfig --add /etc/rc.d/init.d/tomcat</div></pre></td></tr></table></figure>
-<blockquote>
-<p>删除服务使用命令：<code>chkconfig --del /etc/rc.d/init.d/tomcat</code></p>
-</blockquote>
-<h5 id="2-4-然后将下面的配置文件加到tomcat中的catalina-sh文件中的最后面，命令为"><a href="#2-4-然后将下面的配置文件加到tomcat中的catalina-sh文件中的最后面，命令为" class="headerlink" title="2.4 然后将下面的配置文件加到tomcat中的catalina.sh文件中的最后面，命令为"></a>2.4 然后将下面的配置文件加到tomcat中的catalina.sh文件中的最后面，命令为</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">vim /usr/tomcat/bin/catalina.sh</div></pre></td></tr></table></figure>
-<p>配置文件：</p>
-<pre><code>export JAVA_HOME=/usr/java/jdk1.7.0_80   #javajdk的安装路径，使用echo $JAVA_HOME命令可以读取
-export CATALINA_HOME=/usr/tomcat
-export CATALINA_BASE=/usr/tomcat
-export CATALINA_TMPDIR=/usr/tomcat/temp
-</code></pre><hr>
+</code></pre><h5 id="2-5-给文件添加权限，使脚本文件可以执行，命令为"><a href="#2-5-给文件添加权限，使脚本文件可以执行，命令为" class="headerlink" title="2.5 给文件添加权限，使脚本文件可以执行，命令为"></a>2.5 给文件添加权限，使脚本文件可以执行，命令为</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">chmod 755 /usr/tomcat/bin/tomcat</div></pre></td></tr></table></figure>
+<h5 id="2-6-最后，执行下面命令可启动、关闭tomcat，或查看日志"><a href="#2-6-最后，执行下面命令可启动、关闭tomcat，或查看日志" class="headerlink" title="2.6 最后，执行下面命令可启动、关闭tomcat，或查看日志"></a>2.6 最后，执行下面命令可启动、关闭tomcat，或查看日志</h5><p>启动：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">tomcat start</div></pre></td></tr></table></figure></p>
+<p>关闭：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">tomcat stop</div></pre></td></tr></table></figure></p>
+<p>查看日志：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">tomcat log</div></pre></td></tr></table></figure></p>
+<hr>
 <h3 id="Tomcat设置开机启动（Linux）"><a href="#Tomcat设置开机启动（Linux）" class="headerlink" title="Tomcat设置开机启动（Linux）"></a>Tomcat设置开机启动（Linux）</h3><p>打开linux设置开启启动的文件，将下面的配置文件写入此文件的最后<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">vim /etc/rc.d/rc.local</div></pre></td></tr></table></figure></p>
 <p>配置文件：</p>
 <pre><code>export JAVA_HOME=/usr/java/jdk1.7.0_80

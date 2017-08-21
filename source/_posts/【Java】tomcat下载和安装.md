@@ -163,76 +163,70 @@ The service 'tomcat6.0' has been installed.
 ---
 
 #### 2. Linux下
-##### 2.1 执行下面命令，创建脚本文件，
+##### 2.1 在~目录下，执行下面命令
 ```
-vim /etc/rc.d/init.d/tomcat
-```
-在文件中写入如下代码，保存并且退出。
-
-	#!/bin/bash
-	# /etc/rc.d/init.d/tomcat
-	# init script for tomcat precesses
-	# processname: tomcat
-	# description: tomcat is a j2se server
-	# chkconfig: 2345 86 16
-	# description: Start up the Tomcat servlet engine.
-
-	if [ -f /etc/init.d/functions ]; then
-	. /etc/init.d/functions
-	elif [ -f /etc/rc.d/init.d/functions ]; then
-	. /etc/rc.d/init.d/functions
-	else
-	echo -e "\atomcat: unable to locate functions lib. Cannot continue."
-	exit -1
-	fi
-	RETVAL=$?
-	CATALINA_HOME="/usr/tomcat"   #tomcat安装目录，你安装在什么目录下就复制什么目录
-	case "$1" in
-	start)
-	if [ -f $CATALINA_HOME/bin/startup.sh ];
-	then
-	echo $"Starting Tomcat"
-	$CATALINA_HOME/bin/startup.sh
-	fi
-	;;
-	stop)
-	if [ -f $CATALINA_HOME/bin/shutdown.sh ];
-	then
-	echo $"Stopping Tomcat"
-	$CATALINA_HOME/bin/shutdown.sh
-	fi
-	;;
-	*)
-	echo $"Usage: $0 {start|stop}"
-	exit 1
-	;;
-	esac
-	exit $RETVAL
-
-	Linux
-
-##### 2.2 给文件添加权限，使得脚本文件可以执行，命令为
-```
-chmod 755 /etc/rc.d/init.d/tomcat
+vim .bash_profile
 ```
 
-##### 2.3 将其添加到服务中，命令为
-```
-chkconfig --add /etc/rc.d/init.d/tomcat
-```
-> 删除服务使用命令：`chkconfig --del /etc/rc.d/init.d/tomcat`
+##### 2.2 在.bash_profile文件中定义TOMCAT_HOME变量，并将变量追加到PATH后面，效果如下：
+		# .bash_profile
 
-##### 2.4 然后将下面的配置文件加到tomcat中的catalina.sh文件中的最后面，命令为
+		# Get the aliases and functions
+		if [ -f ~/.bashrc ]; then
+		        . ~/.bashrc
+		fi
+
+		# User specific environment and startup programs
+
+		TOMCAT_HOME=/usr/tomcat
+		PATH=$PATH:$HOME/bin:$TOMCAT_HOME/bin
+
+		export TOMCAT_HOME
+		export PATH
+保存并退出。
+
+##### 2.3 执行下面命令，使立即生效
 ```
-vim /usr/tomcat/bin/catalina.sh
+source ./.bash_profile
 ```
 
-配置文件：
+##### 2.4 执行下面命令，在tomcat的bin目录下创建脚本文件，
+```
+vim /usr/tomcat/bin/tomcat
+```
+在文件中写入如下代码，保存并退出。
+		#!/bin/bash
+		# /usr/tomcat/bin
+		# YPN 2017-08-21 Create
 
-	export JAVA_HOME=/usr/java/jdk1.7.0_80   #javajdk的安装路径，使用echo $JAVA_HOME命令可以读取
-	export CATALINA_HOME=/usr/tomcat
-	export CATALINA_BASE=/usr/tomcat
-	export CATALINA_TMPDIR=/usr/tomcat/temp
+		if [ "$1"x = "start"x ]; then
+		  exec $TOMCAT_HOME/bin/startup.sh
+		fi
+		if [ "$1"x = "stop"x ]; then
+		  exec $TOMCAT_HOME/bin/shutdown.sh
+		fi
+		if [ "$1"x = "log"x ]; then
+		  tail -f $TOMCAT_HOME/logs/catalina.out -n 1000
+		fi
+
+##### 2.5 给文件添加权限，使脚本文件可以执行，命令为
+```
+chmod 755 /usr/tomcat/bin/tomcat
+```
+
+##### 2.6 最后，执行下面命令可启动、关闭tomcat，或查看日志
+启动：
+```
+tomcat start
+```
+关闭：
+```
+tomcat stop
+```
+查看日志：
+```
+tomcat log
+```
 
 ---
 
