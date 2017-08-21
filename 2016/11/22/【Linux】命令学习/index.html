@@ -126,7 +126,7 @@
           <!-- Date -->
           <span class="date-time info">发表于
             <span class="date">2016-11-22</span>
-            <span class="time">14:30:09</span>
+            <span class="time">12:09:06</span>
           </span>
           
           <!--  Categories  -->
@@ -195,8 +195,16 @@
 <td style="text-align:left">10分钟后自动关机</td>
 </tr>
 <tr>
-<td></td>
-<td style="text-align:left"></td>
+<td>yum update</td>
+<td style="text-align:left">升级Linux，升级所有包同时也升级软件和系统内核</td>
+</tr>
+<tr>
+<td>yum upgrade</td>
+<td style="text-align:left">升级Linux，只升级所有包，不升级软件和系统内核</td>
+</tr>
+<tr>
+<td>——————————————–</td>
+<td style="text-align:left">————————————————————————–</td>
 </tr>
 <tr>
 <td>cat /proc/version</td>
@@ -239,16 +247,21 @@
 <td style="text-align:left">查看当前目录下各文件/文件夹的大小</td>
 </tr>
 <tr>
-<td>yum update</td>
-<td style="text-align:left">升级Linux，升级所有包同时也升级软件和系统内核</td>
+<td>jps</td>
+<td style="text-align:left">查看当前所有Java进程pid的命令</td>
 </tr>
 <tr>
-<td>yum upgrade</td>
-<td style="text-align:left">升级Linux，只升级所有包，不升级软件和系统内核</td>
+<td>kill</td>
+<td style="text-align:left">删除执行中的程序或工作</td>
+</tr>
+<tr>
+<td>kill -9</td>
+<td style="text-align:left">强制终止执行中的程序或工作</td>
 </tr>
 </tbody>
 </table>
 <a id="more"></a>
+<hr>
 <h3 id="文件"><a href="#文件" class="headerlink" title="文件"></a>文件</h3><table>
 <thead>
 <tr>
@@ -330,6 +343,10 @@
 <td style="text-align:left">重定向：将文件内容输出到指定的文件或位置。如cat /etc/services &gt; a.txt</td>
 </tr>
 <tr>
+<td>——————————————–</td>
+<td style="text-align:left">————————————————————————–</td>
+</tr>
+<tr>
 <td>ls -i</td>
 <td style="text-align:left">使用ls -i命令找到文件或文件夹的节点编号</td>
 </tr>
@@ -339,6 +356,7 @@
 </tr>
 </tbody>
 </table>
+<hr>
 <h3 id="网络"><a href="#网络" class="headerlink" title="网络"></a>网络</h3><table>
 <thead>
 <tr>
@@ -351,8 +369,13 @@
 <td>netstat -apn</td>
 <td style="text-align:left">查看所有的进程和端口使用情况</td>
 </tr>
+<tr>
+<td>——————————————–</td>
+<td style="text-align:left">————————————————————————–</td>
+</tr>
 </tbody>
 </table>
+<hr>
 <h3 id="vi"><a href="#vi" class="headerlink" title="vi"></a>vi</h3><table>
 <thead>
 <tr>
@@ -362,220 +385,556 @@
 </thead>
 <tbody>
 <tr>
-<td>i</td>
-<td style="text-align:left">进入Insert mode，表示插入，从当前光标处插入文字</td>
+<td>——————————————–</td>
+<td style="text-align:left">————————————————————————–</td>
 </tr>
 <tr>
-<td>a</td>
-<td style="text-align:left">进入Insert mode，表示增加，从当前光标所在的下一个字开始输入文字</td>
+<td>进入vi</td>
+<td style="text-align:left"></td>
 </tr>
 <tr>
-<td>o</td>
-<td style="text-align:left">进入Insert mode，表示插入新的一行，从行首开始输入文字</td>
+<td>——————————————–</td>
+<td style="text-align:left">————————————————————————–</td>
 </tr>
 <tr>
-<td>Esc</td>
-<td style="text-align:left">Insert mode切换到Command mode</td>
+<td>vi filename</td>
+<td style="text-align:left">打开或新建文件，并将光标置于第一行首</td>
+</tr>
+<tr>
+<td>vi +n filename</td>
+<td style="text-align:left">打开文件，并将光标置于第n行首</td>
+</tr>
+<tr>
+<td>vi + filename</td>
+<td style="text-align:left">打开文件，并将光标置于最后一行首</td>
+</tr>
+<tr>
+<td>vi +/pattern filename</td>
+<td style="text-align:left">打开文件，并将光标置于第一个与pattern匹配的串处</td>
+</tr>
+<tr>
+<td>vi -r filename</td>
+<td style="text-align:left">在上次正用vi编辑时发生系统崩溃，恢复filename</td>
+</tr>
+<tr>
+<td>vi filename….filename</td>
+<td style="text-align:left">打开多个文件，依次进行编辑</td>
+</tr>
+<tr>
+<td>——————————————–</td>
+<td style="text-align:left">————————————————————————–</td>
+</tr>
+<tr>
+<td>保存退出</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td>——————————————–</td>
+<td style="text-align:left">————————————————————————–</td>
 </tr>
 <tr>
 <td>:</td>
 <td style="text-align:left">进入Last line mode</td>
 </tr>
 <tr>
-<td>:w filename</td>
-<td style="text-align:left">将文章存入指定的文件名filename</td>
+<td>w</td>
+<td style="text-align:left">保存当前文件</td>
 </tr>
 <tr>
-<td>:wq</td>
-<td style="text-align:left">写入当前指定文件名并离开vi</td>
+<td>w /tmp1</td>
+<td style="text-align:left">另存为/tmp1</td>
 </tr>
 <tr>
-<td>:q!</td>
-<td style="text-align:left">强制离开并放弃编辑的文件</td>
+<td>20,59w /tmp1</td>
+<td style="text-align:left">仅将20-59行之间的内存另存为/tmp1</td>
 </tr>
 <tr>
-<td>h、j、k、l</td>
-<td style="text-align:left">分别控制光标左、下、上、右移一格</td>
+<td>x 或 wq</td>
+<td style="text-align:left">保存并退出</td>
 </tr>
 <tr>
-<td>Ctrl+B</td>
-<td style="text-align:left">屏幕往后移动一页</td>
+<td>q</td>
+<td style="text-align:left">退出vi</td>
 </tr>
 <tr>
-<td>Ctrl+F</td>
-<td style="text-align:left">屏幕往前移动一页</td>
+<td>q!</td>
+<td style="text-align:left">退出不保存</td>
 </tr>
 <tr>
-<td>Ctrl+U</td>
-<td style="text-align:left">屏幕往后移动半页</td>
+<td>!command</td>
+<td style="text-align:left">执行shell命令command</td>
 </tr>
 <tr>
-<td>Ctrl+D</td>
-<td style="text-align:left">屏幕往前移动半页</td>
+<td>n1,n2 w !command</td>
+<td style="text-align:left">将文件中n1行至n2行的内容作为command的输入并执行之，若不指定n1，n2，则表示将整个文件内容作为command的输入</td>
+</tr>
+<tr>
+<td>r !command</td>
+<td style="text-align:left">将命令command的输出结果放到当前行</td>
+</tr>
+<tr>
+<td>w !sudo tee %</td>
+<td style="text-align:left">保存没权限时，可获取权限再保存</td>
+</tr>
+<tr>
+<td>——————————————–</td>
+<td style="text-align:left">————————————————————————–</td>
+</tr>
+<tr>
+<td>光标移动</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td>——————————————–</td>
+<td style="text-align:left">————————————————————————–</td>
+</tr>
+<tr>
+<td>h</td>
+<td style="text-align:left">光标左移一个字符</td>
+</tr>
+<tr>
+<td>Backspace</td>
+<td style="text-align:left">光标左移一个字符</td>
+</tr>
+<tr>
+<td>l</td>
+<td style="text-align:left">光标右移一个字符</td>
+</tr>
+<tr>
+<td>spac</td>
+<td style="text-align:left">光标右移一个字符</td>
+</tr>
+<tr>
+<td>k 或 Ctrl+p</td>
+<td style="text-align:left">光标上移一行</td>
+</tr>
+<tr>
+<td>j 或 Ctrl+n</td>
+<td style="text-align:left">光标下移一行</td>
+</tr>
+<tr>
+<td>Enter</td>
+<td style="text-align:left">光标下移一行</td>
+</tr>
+<tr>
+<td>w 或 W</td>
+<td style="text-align:left">光标右移一个字至字首</td>
+</tr>
+<tr>
+<td>b 或 B</td>
+<td style="text-align:left">光标左移一个字至字首</td>
+</tr>
+<tr>
+<td>e 或 E</td>
+<td style="text-align:left">光标右移一个字至字尾</td>
+</tr>
+<tr>
+<td>)</td>
+<td style="text-align:left">光标移至句尾</td>
+</tr>
+<tr>
+<td>(</td>
+<td style="text-align:left">光标移至句首</td>
+</tr>
+<tr>
+<td>}</td>
+<td style="text-align:left">光标移至段落开头</td>
+</tr>
+<tr>
+<td>{</td>
+<td style="text-align:left">光标移至段落结尾</td>
+</tr>
+<tr>
+<td>nG</td>
+<td style="text-align:left">光标移至第n行首</td>
+</tr>
+<tr>
+<td>n+</td>
+<td style="text-align:left">光标下移n行</td>
+</tr>
+<tr>
+<td>n-</td>
+<td style="text-align:left">光标上移n行</td>
+</tr>
+<tr>
+<td>n$</td>
+<td style="text-align:left">光标移至第n行尾</td>
+</tr>
+<tr>
+<td>H</td>
+<td style="text-align:left">光标移至屏幕顶行</td>
+</tr>
+<tr>
+<td>M</td>
+<td style="text-align:left">光标移至屏幕中间行</td>
+</tr>
+<tr>
+<td>L</td>
+<td style="text-align:left">光标移至屏幕最后行</td>
 </tr>
 <tr>
 <td>0</td>
-<td style="text-align:left">移动到文章的开头</td>
-</tr>
-<tr>
-<td>G</td>
-<td style="text-align:left">移动到文章的最后</td>
-</tr>
-<tr>
-<td>w</td>
-<td style="text-align:left">光标跳到下个word的开头</td>
-</tr>
-<tr>
-<td>e</td>
-<td style="text-align:left">光标跳到下个word的字尾</td>
-</tr>
-<tr>
-<td>b</td>
-<td style="text-align:left">光标回到上个word的开头</td>
+<td style="text-align:left">（注意是数字零）光标移至当前行首</td>
 </tr>
 <tr>
 <td>$</td>
-<td style="text-align:left">移到光标所在行的行尾</td>
+<td style="text-align:left">光标移至当前行尾</td>
 </tr>
 <tr>
-<td>^</td>
-<td style="text-align:left">移到该行第一个非空白的字符</td>
+<td>——————————————–</td>
+<td style="text-align:left">————————————————————————–</td>
+</tr>
+<tr>
+<td>屏幕翻滚</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td>——————————————–</td>
+<td style="text-align:left">————————————————————————–</td>
+</tr>
+<tr>
+<td>Ctrl+u</td>
+<td style="text-align:left">向文件首翻半屏</td>
+</tr>
+<tr>
+<td>Ctrl+d</td>
+<td style="text-align:left">向文件尾翻半屏</td>
+</tr>
+<tr>
+<td>Ctrl+f</td>
+<td style="text-align:left">向文件尾翻一屏</td>
+</tr>
+<tr>
+<td>Ctrl＋b</td>
+<td style="text-align:left">向文件首翻一屏</td>
+</tr>
+<tr>
+<td>nz</td>
+<td style="text-align:left">将第n行滚至屏幕顶部，不指定n时将当前行滚至屏幕顶部</td>
+</tr>
+<tr>
+<td>——————————————–</td>
+<td style="text-align:left">————————————————————————–</td>
+</tr>
+<tr>
+<td>插入</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td>——————————————–</td>
+<td style="text-align:left">————————————————————————–</td>
+</tr>
+<tr>
+<td>i</td>
+<td style="text-align:left">在光标前</td>
+</tr>
+<tr>
+<td>I</td>
+<td style="text-align:left">在当前行首</td>
+</tr>
+<tr>
+<td>a</td>
+<td style="text-align:left">光标后</td>
+</tr>
+<tr>
+<td>A</td>
+<td style="text-align:left">在当前行尾</td>
 </tr>
 <tr>
 <td>o</td>
-<td style="text-align:left">移到该行的开头位置</td>
+<td style="text-align:left">在当前行之下新开一行</td>
 </tr>
 <tr>
-<td>#</td>
-<td style="text-align:left">移到该行的第#个位置</td>
-</tr>
-<tr>
-<td>x</td>
-<td style="text-align:left">每按一次删除光标所在位置的后面一个字符</td>
-</tr>
-<tr>
-<td>#x</td>
-<td style="text-align:left">例如，6x 表删除光标所在位置的后面6个字符</td>
-</tr>
-<tr>
-<td>X</td>
-<td style="text-align:left">大字的X，每按一次删除光标所在位置的前面一个字符</td>
-</tr>
-<tr>
-<td>#X</td>
-<td style="text-align:left">例如，20X 表删除光标所在位置的前面20个字符</td>
-</tr>
-<tr>
-<td>dd</td>
-<td style="text-align:left">删除光标所在行</td>
-</tr>
-<tr>
-<td>#dd</td>
-<td style="text-align:left">例如，6dd表删除从光标所在的该行往下数6行之文字</td>
-</tr>
-<tr>
-<td>yw</td>
-<td style="text-align:left">将光标所在处到字尾的字符复制到缓冲区中</td>
-</tr>
-<tr>
-<td>p</td>
-<td style="text-align:left">将缓冲区内的字符粘贴到光标所在位置</td>
-</tr>
-<tr>
-<td>yy</td>
-<td style="text-align:left">复制光标所在行</td>
-</tr>
-<tr>
-<td>p</td>
-<td style="text-align:left">复制单行到您想粘贴之处</td>
-</tr>
-<tr>
-<td>#yy</td>
-<td style="text-align:left">例如：6yy表示拷贝从光标所在的该行往下数6行之文字</td>
-</tr>
-<tr>
-<td>p</td>
-<td style="text-align:left">复制多行到您想粘贴之处</td>
-</tr>
-<tr>
-<td>“ayy</td>
-<td style="text-align:left">将复制行放入buffer a, vi提供buffer功能，可将常用的数据存在buffer</td>
-</tr>
-<tr>
-<td>“ap</td>
-<td style="text-align:left">将放在buffer a的数据粘贴</td>
-</tr>
-<tr>
-<td>“b3yy</td>
-<td style="text-align:left">将三行数据存入buffer b</td>
-</tr>
-<tr>
-<td>“b3p</td>
-<td style="text-align:left">将存在buffer b的资料粘贴</td>
+<td>O</td>
+<td style="text-align:left">在当前行之上新开一行</td>
 </tr>
 <tr>
 <td>r</td>
-<td style="text-align:left">取代光标所在处的字符</td>
+<td style="text-align:left">替换当前字符</td>
 </tr>
 <tr>
 <td>R</td>
-<td style="text-align:left">取代字符直到按Esc为止</td>
+<td style="text-align:left">替换当前字符及其后的字符，直至按ESC键</td>
 </tr>
 <tr>
-<td>u</td>
-<td style="text-align:left">假如您误操作一个指令，可以马上按u，回复到上一个操作</td>
+<td>s</td>
+<td style="text-align:left">从当前光标位置处开始，以输入的文本替代指定数目的字符</td>
 </tr>
 <tr>
-<td>.</td>
-<td style="text-align:left">可以重复执行上一次的指令</td>
+<td>S</td>
+<td style="text-align:left">删除指定数目的行，并以所输入文本代替之</td>
 </tr>
 <tr>
-<td>Ctrl+G</td>
-<td style="text-align:left">列出光标所在行的行号</td>
+<td>ncw 或 nCW</td>
+<td style="text-align:left">修改指定数目的字</td>
 </tr>
 <tr>
-<td>#G</td>
-<td style="text-align:left">例如，15G，表示移动光标至文章的第15行行首</td>
+<td>nCC</td>
+<td style="text-align:left">修改指定数目的行</td>
 </tr>
 <tr>
-<td>set nu</td>
-<td style="text-align:left">在文章的每一行前面列出行号</td>
+<td>——————————————–</td>
+<td style="text-align:left">————————————————————————–</td>
+</tr>
+<tr>
+<td>删除</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td>——————————————–</td>
+<td style="text-align:left">————————————————————————–</td>
+</tr>
+<tr>
+<td>ndw 或 ndW</td>
+<td style="text-align:left">删除光标处开始及其后的n-1个字</td>
+</tr>
+<tr>
+<td>do</td>
+<td style="text-align:left">删至行首</td>
+</tr>
+<tr>
+<td>d$</td>
+<td style="text-align:left">删至行尾</td>
+</tr>
+<tr>
+<td>ndd</td>
+<td style="text-align:left">删除当前行及其后n-1行</td>
+</tr>
+<tr>
+<td>x 或 X</td>
+<td style="text-align:left">删除一个字符，x删除光标后的，而X删除光标前的</td>
+</tr>
+<tr>
+<td>Ctrl+u</td>
+<td style="text-align:left">删除输入方式下所输入的文本</td>
+</tr>
+<tr>
+<td>n1,n2 d</td>
+<td style="text-align:left">将n1行到n2行之间的内容删除</td>
+</tr>
+<tr>
+<td>%d</td>
+<td style="text-align:left">删除全部内容</td>
+</tr>
+<tr>
+<td>1,$d</td>
+<td style="text-align:left">删除全部内容</td>
+</tr>
+<tr>
+<td>——————————————–</td>
+<td style="text-align:left">————————————————————————–</td>
+</tr>
+<tr>
+<td>复制粘贴、剪切、移动</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td>——————————————–</td>
+<td style="text-align:left">————————————————————————–</td>
+</tr>
+<tr>
+<td>yy</td>
+<td style="text-align:left">复制当前行</td>
+</tr>
+<tr>
+<td>nyy</td>
+<td style="text-align:left">复制当前行开始的n行</td>
+</tr>
+<tr>
+<td>先按 v 然后方向键选择区域，按 y 复制选中行</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td>dd</td>
+<td style="text-align:left">剪切当前行</td>
+</tr>
+<tr>
+<td>p（小）</td>
+<td style="text-align:left">在当前光标处下面粘贴内容。</td>
+</tr>
+<tr>
+<td>P（大）</td>
+<td style="text-align:left">在当前光标处上面粘贴内容</td>
+</tr>
+<tr>
+<td>n1,n2 co n3</td>
+<td style="text-align:left">将n1行到n2行之间的内容拷贝到第n3行下</td>
+</tr>
+<tr>
+<td>n1,n2 m n3</td>
+<td style="text-align:left">将n1行到n2行之间的内容移至到第n3行下</td>
+</tr>
+<tr>
+<td>——————————————–</td>
+<td style="text-align:left">————————————————————————–</td>
+</tr>
+<tr>
+<td>搜索（查找）</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td>——————————————–</td>
+<td style="text-align:left">————————————————————————–</td>
+</tr>
+<tr>
+<td>/abc</td>
+<td style="text-align:left">从光标开始处向文件尾搜索abc</td>
+</tr>
+<tr>
+<td>?abc</td>
+<td style="text-align:left">从光标开始处向文件首搜索abc</td>
+</tr>
+<tr>
+<td>/\/abc</td>
+<td style="text-align:left">从光标开始处向文件尾搜索/abc，其中\/是转义</td>
+</tr>
+<tr>
+<td>n</td>
+<td style="text-align:left">在同一方向重复上一次搜索命令</td>
+</tr>
+<tr>
+<td>N</td>
+<td style="text-align:left">在反方向上重复上一次搜索命令</td>
+</tr>
+<tr>
+<td>——————————————–</td>
+<td style="text-align:left">————————————————————————–</td>
+</tr>
+<tr>
+<td>替换</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td>——————————————–</td>
+<td style="text-align:left">————————————————————————–</td>
+</tr>
+<tr>
+<td>s/vivian/sky/</td>
+<td style="text-align:left">替换当前行第一个 vivian 为 sky</td>
+</tr>
+<tr>
+<td>s/vivian/sky/g</td>
+<td style="text-align:left">替换当前行所有 vivian 为 sky</td>
+</tr>
+<tr>
+<td>n,$s/vivian/sky/</td>
+<td style="text-align:left">替换第 n 行开始到最后一行中每一行的第一个 vivian 为 sky</td>
+</tr>
+<tr>
+<td>n,$s/vivian/sky/g</td>
+<td style="text-align:left">替换第 n 行开始到最后一行中每一行所有 vivian 为sky</td>
+</tr>
+<tr>
+<td>%s/vivian/sky/g</td>
+<td style="text-align:left">（等同于 g/vivian/s//sky/） 替换每一行的每一个 vivian 为 sky</td>
+</tr>
+<tr>
+<td>s#vivian/#sky/#</td>
+<td style="text-align:left">替换当前行第一个 vivian/ 为 sky/（可以使用 #或+作为分隔符，此时中间出现的 / 不会作为分隔符）</td>
+</tr>
+<tr>
+<td>s/p1/p2/g</td>
+<td style="text-align:left">将当前行中所有p1均用p2替代</td>
+</tr>
+<tr>
+<td>n1,n2s/p1/p2/g</td>
+<td style="text-align:left">将第n1至n2行中所有p1均用p2替代</td>
+</tr>
+<tr>
+<td>g/p1/s//p2/g</td>
+<td style="text-align:left">将文件中所有p1均用p2替换</td>
+</tr>
+<tr>
+<td>——————————————–</td>
+<td style="text-align:left">————————————————————————–</td>
+</tr>
+<tr>
+<td>寄存器</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td>——————————————–</td>
+<td style="text-align:left">————————————————————————–</td>
+</tr>
+<tr>
+<td>“?nyy</td>
+<td style="text-align:left">将当前行及其下n行的内容保存到寄存器？中，其中?为一个字母，n为一个数字</td>
+</tr>
+<tr>
+<td>“?nyw</td>
+<td style="text-align:left">将当前行及其下n个字保存到寄存器？中，其中?为一个字母，n为一个数字</td>
+</tr>
+<tr>
+<td>“?nyl</td>
+<td style="text-align:left">将当前行及其下n个字符保存到寄存器？中，其中?为一个字母，n为一个数字</td>
+</tr>
+<tr>
+<td>“?p</td>
+<td style="text-align:left">取出寄存器？中的内容并将其放到光标位置处。这里？可以是一个字母，也可以是一个数字</td>
+</tr>
+<tr>
+<td>ndd</td>
+<td style="text-align:left">将当前行及其下共n行文本删除，并将所删内容放到1号删除寄存器中。</td>
+</tr>
+<tr>
+<td>——————————————–</td>
+<td style="text-align:left">————————————————————————–</td>
+</tr>
+<tr>
+<td>选项设置</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td>——————————————–</td>
+<td style="text-align:left">————————————————————————–</td>
 </tr>
 <tr>
 <td>set number</td>
-<td style="text-align:left">在文章的每一行前面列出行号</td>
+<td style="text-align:left">显示行号</td>
 </tr>
 <tr>
-<td>set nonu</td>
-<td style="text-align:left">取消行号</td>
+<td>set number!</td>
+<td style="text-align:left">不显示行号，其它选项同理加！号</td>
 </tr>
 <tr>
-<td>set nonumber</td>
-<td style="text-align:left">取消行号</td>
+<td>set all</td>
+<td style="text-align:left">列出所有选项设置情况</td>
 </tr>
 <tr>
-<td>#</td>
-<td style="text-align:left">井号代表一个数字，在Last line mode提示符号“：”前输入数字，再按Enter就会跳到该行了。例如：15[Enter]就会跳到文章的第15行</td>
+<td>set term</td>
+<td style="text-align:left">设置终端类型</td>
 </tr>
 <tr>
-<td>/关键字</td>
-<td style="text-align:left">先按/，再输入您想寻找的字，如果第一次找的关键字不是您相尽可能的，可以一直按n会往下寻找到您要的关键字为止。自上而下进行搜索</td>
+<td>set ignorance</td>
+<td style="text-align:left">在搜索中忽略大小写</td>
 </tr>
 <tr>
-<td>?关键字</td>
-<td style="text-align:left">先按？，再输入您想寻找的字，如果第一次找的关键字不是您想要的，可以按n会往前寻找到您要的关键字为止。自下而上搜索</td>
+<td>set list</td>
+<td style="text-align:left">显示制表位(Ctrl+I)和行尾标志（$)</td>
 </tr>
 <tr>
-<td>1,$s/string/replae/g</td>
-<td style="text-align:left">在last line mode输入“1，$s/string/replace/g”会将全文的string字符串取代为replace字符串，其中1,$s就是指搜寻区间为文章从头至尾的意思，g则是表示全部取代不必确认</td>
+<td>set report</td>
+<td style="text-align:left">显示由面向行的命令修改过的数目</td>
 </tr>
 <tr>
-<td>%s/string/replace/c</td>
-<td style="text-align:left">同样会将全文的string字符串取代为replace字符串，和上面指令不同的地方是，%s和1,$s是相同的功能，c则是表示要替代之前必须再次确认是否取代。例如：1,20s/string/replace/g：将1至20行间的string替代为relpace字符串</td>
+<td>set terse</td>
+<td style="text-align:left">显示简短的警告信息</td>
 </tr>
 <tr>
-<td>#,# w filename</td>
-<td style="text-align:left">如果您想摘取文章的某一段，存成另一个文件，可用这个指令#代表行号，例如30,50 w nice，将您正在编辑文章的第30~50行存成nice这个文件。或者是30,50 w &gt;&gt; nice ,表示把内容附加到nice文件，不覆盖</td>
+<td>set warn</td>
+<td style="text-align:left">在转到别的文件时若没保存当前文件则显示NO write信息</td>
+</tr>
+<tr>
+<td>set nomagic</td>
+<td style="text-align:left">允许在搜索模式中，使用前面不带“\”的特殊字符</td>
+</tr>
+<tr>
+<td>set nowrapscan</td>
+<td style="text-align:left">禁止vi在搜索到达文件两端时，又从另一端开始</td>
+</tr>
+<tr>
+<td>set mesg</td>
+<td style="text-align:left">允许vi显示其他用户用write写到自己终端上的信息</td>
 </tr>
 </tbody>
 </table>
