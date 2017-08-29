@@ -38,6 +38,7 @@ toc: true
 
 #### 美图
 [it.me](http://www.topit.me/)                                 |  [Picever](http://www.picever.com/)                                                              |  [笔记本桌面壁纸下载](http://bbs.zol.com.cn/nbbbs/d33943.html)
+[手写导航](http://shouxie.org/)                               |  [手写体网](http://shouxieti.com/)
 
 &nbsp;
 
@@ -48,6 +49,7 @@ toc: true
 [MD5解密](http://www.cmd5.com/)
 [png在线转ico](http://www.easyicon.net/covert/)
 [MakePic.com 图片制造](http://www.makepic.com/)
+[草料二维码美化器](http://mh.cli.im/)
 
 &nbsp;
 
