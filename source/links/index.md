@@ -93,6 +93,8 @@ toc: true
 [Linux删除乱码文件](http://www.cnblogs.com/quanweiru/p/3764003.html)
 [SUSE Linux启用SSH](http://tophandxing.blog.163.com/blog/static/109714820124123438513/)
 [Win10怎么把批处理文件固定到开始菜单](http://www.jb51.net/os/win10/483729.html)
+[Flex转型Html学习随笔1——关于Html页面的div布局（上）](http://www.cnblogs.com/momoko8443/p/4302879.html)
+[Flex转型Html学习随笔1——关于Html页面的div布局（下）](http://www.cnblogs.com/momoko8443/p/4303829.html)
 
 &nbsp;
 

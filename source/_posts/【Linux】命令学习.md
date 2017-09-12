@@ -25,6 +25,7 @@ tags: [Linux, 命令]
 | cat /etc/redhat-release                      | 查看系统版本（只适合Redhat系）                                             |
 | getconf LONG_BIT                             | 查看系统位数                                                               |
 | cat /proc/cpuinfo                            | 查看CPU型号                                                                |
+| top                                          | 查看实时CPU使用率                                                          |
 | free -m                                      | 查看内存                                                                   |
 | df -l                                        | 查看硬盘空间情况                                                           |
 | du -sh ./*                                   | 查看当前目录下各文件/文件夹的大小                                          |
