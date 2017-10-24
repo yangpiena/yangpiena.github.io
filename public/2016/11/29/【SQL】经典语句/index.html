@@ -126,7 +126,7 @@
           <!-- Date -->
           <span class="date-time info">发表于
             <span class="date">2016-11-29</span>
-            <span class="time">11:09:48</span>
+            <span class="time">15:22:03</span>
           </span>
           
           <!--  Categories  -->
@@ -367,11 +367,17 @@ WHERE
     o.name = &apos;ATTACHMENTDOC&apos;;
 </code></pre><p>通过外键表的表名和外键名称执行以下语句即可删除外键</p>
 <pre><code>ALTER TABLE dbo.CONTRACTINFO DROP CONSTRAINT FK_CONTRACTINFO_ATTACHMENTDOC
-</code></pre><h2 id="31、查找指定数据库表的字段名，类型，注释"><a href="#31、查找指定数据库表的字段名，类型，注释" class="headerlink" title="31、查找指定数据库表的字段名，类型，注释"></a>31、查找指定数据库表的字段名，类型，注释</h2><pre><code>SELECT c.object_id,c.name AS cname,t.name AS tname,is_computed AS isComputed,(SELECT VALUE FROM    sys.extended_properties AS ex    WHERE    ex.major_id = c.object_id    AND ex.minor_id = c.column_id    ) AS notes
-FROM    sys.columns AS c
-INNER JOIN sys.tables AS ta ON c.object_id = ta.object_id
-INNER JOIN (SELECT name,system_type_id FROM    sys.types    WHERE    name &lt;&gt; &apos;sysname&apos;) AS t ON c.system_type_id = t.system_type_id
-WHERE    ta.name = &apos;Project&apos; ORDER BY    c.column_id
+</code></pre><h2 id="31、查找指定数据库表的字段名，类型，注释"><a href="#31、查找指定数据库表的字段名，类型，注释" class="headerlink" title="31、查找指定数据库表的字段名，类型，注释"></a>31、查找指定数据库表的字段名，类型，注释</h2><pre><code>    SELECT c.object_id, c.name AS cname, t.name AS tname, is_computed AS isComputed,
+           (SELECT VALUE
+              FROM sys.extended_properties AS ex
+             WHERE ex.major_id = c.object_id AND ex.minor_id = c.column_id) AS notes
+      FROM sys.columns AS c
+INNER JOIN sys.tables  AS ta ON c.object_id = ta.object_id
+INNER JOIN (SELECT name, system_type_id
+              FROM sys.types
+             WHERE name &lt;&gt; &apos;sysname&apos;) AS t ON c.system_type_id = t.system_type_id
+     WHERE ta.name = &apos;ProductAttributeNew&apos;
+  ORDER BY c.column_id
 </code></pre><h2 id="32、同步表数据"><a href="#32、同步表数据" class="headerlink" title="32、同步表数据"></a>32、同步表数据</h2><pre><code>INSERT 表2 
 SELECT * FROM 表1 AS a WHERE NOT EXISTS(SELECT 1 FROM 表2 WHERE ID = a.ID);
 </code></pre><hr>

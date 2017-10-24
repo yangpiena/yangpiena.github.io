@@ -338,11 +338,17 @@ sp_renamedb 'old_name', 'new_name'
 	ALTER TABLE dbo.CONTRACTINFO DROP CONSTRAINT FK_CONTRACTINFO_ATTACHMENTDOC
 
 ## 31、查找指定数据库表的字段名，类型，注释
-	SELECT c.object_id,c.name AS cname,t.name AS tname,is_computed AS isComputed,(SELECT VALUE FROM	sys.extended_properties AS ex	WHERE	ex.major_id = c.object_id	AND ex.minor_id = c.column_id	) AS notes
-	FROM	sys.columns AS c
-	INNER JOIN sys.tables AS ta ON c.object_id = ta.object_id
-	INNER JOIN (SELECT name,system_type_id FROM	sys.types	WHERE	name <> 'sysname') AS t ON c.system_type_id = t.system_type_id
-	WHERE	ta.name = 'Project' ORDER BY	c.column_id
+	    SELECT c.object_id, c.name AS cname, t.name AS tname, is_computed AS isComputed,
+		       (SELECT VALUE
+	              FROM sys.extended_properties AS ex
+	             WHERE ex.major_id = c.object_id AND ex.minor_id = c.column_id) AS notes
+	      FROM sys.columns AS c
+	INNER JOIN sys.tables  AS ta ON c.object_id = ta.object_id
+	INNER JOIN (SELECT name, system_type_id
+	              FROM sys.types
+	             WHERE name <> 'sysname') AS t ON c.system_type_id = t.system_type_id
+	     WHERE ta.name = '指定数据库表'
+	  ORDER BY c.column_id
 
 ## 32、同步表数据
 	INSERT 表2 

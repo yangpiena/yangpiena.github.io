@@ -44,12 +44,14 @@ toc: true
 
 
 #### 在线工具
+[在线工具](http://tool.lu/)
 [ATOOL在线工具](http://www.atool.org/)
 [在线API](http://tool.oschina.net/)
 [MD5解密](http://www.cmd5.com/)
 [png在线转ico](http://www.easyicon.net/covert/)
 [MakePic.com 图片制造](http://www.makepic.com/)
 [草料二维码美化器](http://mh.cli.im/)
+[简繁体在线转换工具](http://tool.lu/zhconvert/)
 
 &nbsp;
 
