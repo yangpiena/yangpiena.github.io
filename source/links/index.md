@@ -179,6 +179,7 @@ toc: true
 [配置简单功能强大的excel工具类搞定excel导入导出工具类](http://blog.csdn.net/lk_blog/article/details/8007777)
 [POI操作Excel常用方法总结 ](http://blog.csdn.net/huazhangena/article/details/7587731)
 [编程中国JSP教程和技术资料](http://old.bccn.net/Article/web/jsp/Index.html)
+[【FAQ】org.apache.maven.archiver.MavenArchiver.getManifest错误](http://www.cnblogs.com/asderx/p/6541945.html)
 
 &nbsp;
 

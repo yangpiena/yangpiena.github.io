@@ -73,10 +73,14 @@
         <!-- 多说最近访客 start -->
         <div class="ds-recent-visitors" data-num-items="28" data-avatar-size="42" id="ds-recent-visitors"></div>
         <!-- 多说最近访客 end -->
+
         <!-- 多说评论框 start -->
-        <div class="ds-thread" data-thread-key="<%- post.path %>" data-title="<%- post.title %>" data-url="<%- post.permalink %>">
-        </div>
+        <div class="ds-thread" data-thread-key="<%- post.path %>" data-title="<%- post.title %>" data-url="<%- post.permalink %>"></div>
         <!-- 多说评论框 end -->
+
+        <!-- YPN ADD 2017-11-02 新增 Hitokoto·一言经典语句-->
+        <script type="text/javascript" src="https://api.lwl12.com/hitokoto/main/get?encode=js&charset=utf-8"></script>
+        <div id="lwlhitokoto"><script>lwlhitokoto()</script></div>
 
       </div>
     </div>
