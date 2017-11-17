@@ -59,7 +59,7 @@ toc: true
 #### 系统/软件下载
 [IT之家](https://www.ithome.com/)                             |  [系统之家](http://www.xitongzhijia.net/)                                                              |  [Win10之家](http://www.iwin10.com/)                                                              |  [Win10之家](http://www.62hx.com/)                                                              |  [Win10之家](http://www.xh52.com/)                                                              |  [系统圣地](http://www.285868.com/)
 [绿盟](http://www.xdowns.com/)                                |  [zd423](http://www.zdfans.com/)
-[浏览迷](http://liulanmi.com/)
+[浏览迷](http://liulanmi.com/)                                |  [Chrome浏览器插件下载中心](https://www.chromefor.com/)
 [最新迅雷(xunlei)会员账号天天更新同享](http://www.win10.name/news/193.html)
 [FlashPlayer下载地址1](http://get.adobe.com/cn/flashplayer/otherversions/)  |  [FlashPlayer下载地址2](http://www.adobe.com/support/flashplayer/downloads.html)  |  [Debugger Version地址](http://kb2.adobe.com/cps/155/tn_15507.html)
 
@@ -81,7 +81,6 @@ toc: true
 [百度静态资源公共库](http://cdn.code.baidu.com/)
 [MSDN](http://msdn.itellyou.cn/?gytyzs=0z1zl)
 [常用的gif正在加载图](http://blog.sina.com.cn/s/blog_7c28bad401016j66.html)
-[2017 Google hosts 持续更新](https://laod.cn/hosts/2017-google-hosts.html)
 
 &nbsp;
 
