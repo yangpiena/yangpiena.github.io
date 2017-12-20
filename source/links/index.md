@@ -96,6 +96,7 @@ toc: true
 [Win10怎么把批处理文件固定到开始菜单](http://www.jb51.net/os/win10/483729.html)
 [Flex转型Html学习随笔1——关于Html页面的div布局（上）](http://www.cnblogs.com/momoko8443/p/4302879.html)
 [Flex转型Html学习随笔1——关于Html页面的div布局（下）](http://www.cnblogs.com/momoko8443/p/4303829.html)
+[MIUI更新日志](http://www.miui.com/home.php?mod=space&uid=8&do=thread&view=me&from=space)
 
 &nbsp;
 
@@ -154,6 +155,7 @@ toc: true
 &nbsp;
 
 #### Haproxy
+[首页](https://www.haproxy.org/)
 [haproxy资源](http://www.csdn.net/tag/haproxy)
 [haproxy 配置 说明](http://blog.chinaunix.net/uid-24250828-id-3778032.html)
 [最新版haproxy linux下的设置（haproxy-1.4.20 ）](http://blog.csdn.net/zilong00007/article/details/7450317)
@@ -226,6 +228,7 @@ toc: true
 #### VB
 [VB源码](http://www.codesky.net/vb/)
 [VB函数大全](http://www10.zzu.edu.cn/ie_wangjunfeng/daquan/function/index.aspx)
+[VB实现Base64 编解码](http://blog.csdn.net/iamlaosong/article/details/38229755)
 
 &nbsp;
 
