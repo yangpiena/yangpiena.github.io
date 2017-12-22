@@ -161,6 +161,7 @@ toc: true
 [最新版haproxy linux下的设置（haproxy-1.4.20 ）](http://blog.csdn.net/zilong00007/article/details/7450317)
 [HAProxy负载均衡保持客户端和服务器Session亲缘性的三种方式](http://itindex.net/blog/2012/07/24/1343118758531.html)
 [Linux下HAProxy的均衡配置](http://blog.csdn.net/zilong00007/article/details/7275235)
+[5月16日发布HAProxy,实现八种负载算法](http://blog.51cto.com/1234567aaa/317891)
 
 &nbsp;
 
@@ -235,3 +236,7 @@ toc: true
 #### Vue.js
 [Vue.js官网](http://cn.vuejs.org/)
 [JSFiddle Hello World](https://jsfiddle.net/chrisvfritz/50wL7mdz/)
+
+
+#### 民生
+[宁夏人力资源和社会保障网上服务大厅](http://www.12333nx.gov.cn/nxwsrs/personlogin)

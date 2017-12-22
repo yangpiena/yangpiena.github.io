@@ -120,6 +120,83 @@
     <div class="col-lg-10 col-md-10 col-md-offset-1">
       
         <div class="post-item-wrapper">
+  <a href="/2017/12/22/【HAProxy】介绍和应用/" class="post-title">
+      【HAProxy】介绍和应用
+  </a>
+  <div class="post-excerpt">
+    <!-- Post Date and Categories -->
+    <div class="date-and-category">
+      <div class="date">2017-12-22</div>
+      <div class="categories">
+        
+          
+
+<a href="/categories/HAProxy/">HAProxy</a>
+
+        
+      </div>
+    </div>
+    <!-- Post Excerpt -->
+    <div class="excerpt typo"><h3 id="HAProxy简介"><a href="#HAProxy简介" class="headerlink" title="HAProxy简介"></a>HAProxy简介</h3><p>HAProxy是一个使用C语言编写的自由及开放源代码软件，其提供高可用性、负载均衡，以及基于TCP和HTTP的应用程序代理。</p>
+<p>HAProxy特别适用于那些负载特大的web站点，这些站点通常又需要会话保持或七层处理。HAProxy运行在当前的硬件上，完全可以支持数以万计的并发连接。并且它的运行模式使得它可以很简单安全的整合进您当前的架构中， 同时可以保护你的web服务器不被暴露到网络上。</p>
+<p>HAProxy实现了一种事件驱动, 单一进程模型，此模型支持非常大的并发连接数。多进程或多线程模型受内存限制 、系统调度器限制以及无处不在的锁限制，很少能处理数千并发连接。事件驱动模型因为在有更好的资源和时间管理的用户空间(User-Space) 实现所有这些任务，所以没有这些问题。此模型的弊端是，在多核系统上，这些程序通常扩展性较差。这就是为什么他们必须进行优化以 使每个CPU时间片(Cycle)做更多的工作。</p>
+<p>包括 GitHub、Bitbucket、Stack Overflow、Reddit、Tumblr、Twitter和 Tuenti在内的知名网站，及亚马逊网络服务系统都使用了HAProxy。</p>
+<p>HAProxy是法国人Willy Tarreau开发的一个开源软件，是一款应对客户端10000以上的同时连接的高性能的TCP和 HTTP负载均衡器。其功能是用来提供基于cookie的持久性， 基于内容的交换，过载保护的高级流量管制，自动故障切换 ，以正则表达式为基础的标题控制运行时间，基于Web的报表，高级日志记录以帮助排除故障的应用或网络及其他功能。</p></div>
+    <!-- Post Tags -->
+    <div class="tags">
+      
+        
+
+<a class="tag" href="/tags/HAProxy/">HAProxy</a>
+
+
+      
+    </div>
+  </div>
+</div>
+
+      
+        <div class="post-item-wrapper">
+  <a href="/2017/12/22/【HAProxy】配置详解/" class="post-title">
+      【HAProxy】配置详解
+  </a>
+  <div class="post-excerpt">
+    <!-- Post Date and Categories -->
+    <div class="date-and-category">
+      <div class="date">2017-12-22</div>
+      <div class="categories">
+        
+          
+
+<a href="/categories/HAProxy/">HAProxy</a>
+
+        
+      </div>
+    </div>
+    <!-- Post Excerpt -->
+    <div class="excerpt typo"><h3 id="配置文件"><a href="#配置文件" class="headerlink" title="配置文件"></a>配置文件</h3><p>haproxy.cfg主要有两部分组成：global和proxies配置段</p>
+<h5 id="global：全局配置段"><a href="#global：全局配置段" class="headerlink" title="global：全局配置段"></a>global：全局配置段</h5><p>进程及安全配置相关的参数<br>性能调整相关参数<br>Debug参数</p>
+<h5 id="proxies：代理配置段"><a href="#proxies：代理配置段" class="headerlink" title="proxies：代理配置段"></a>proxies：代理配置段</h5><ul>
+<li>defaults：为frontend, backend, listen提供默认配置</li>
+<li>fronted：接收请求的前端虚拟节点，frontend可以增加规则直接指定具体使用后端的backend</li>
+<li>backend：后端服务集群的配置，真实服务器，一个backend对应一个或者多个实体服务器</li>
+<li>listen：同时拥有前端和后端,适用于一对一环境。fronted和backend的组合体，比如haproxy实例状态监控部分配置</li>
+</ul></div>
+    <!-- Post Tags -->
+    <div class="tags">
+      
+        
+
+<a class="tag" href="/tags/HAProxy/">HAProxy</a>
+
+
+      
+    </div>
+  </div>
+</div>
+
+      
+        <div class="post-item-wrapper">
   <a href="/2017/12/20/【HAProxy】ACL规则定义/" class="post-title">
       【HAProxy】ACL规则定义
   </a>
@@ -137,18 +214,7 @@
       </div>
     </div>
     <!-- Post Excerpt -->
-    <div class="excerpt typo"><h3 id="ACL规则定义"><a href="#ACL规则定义" class="headerlink" title="ACL规则定义"></a>ACL规则定义</h3><ol>
-<li><p>如果请求的域名满足正则表达式，返回true， -i是忽略大小写<br>acl denali_policy hdr_reg(host) -i ^(www.inbank.com|image.inbank.com)$</p>
-</li>
-<li><p>如果请求域名满足www.inbank.com，返回true， -i是忽略大小写<br>acl tm_policy hdr_dom(host) -i www.inbank.com</p>
-</li>
-<li><p>在请求url中包含sip_apiname=，则此控制策略返回true，否则为false<br>acl invalid_req url_sub -i sip_apiname=#定义一个名为invalid_req的策略</p>
-</li>
-<li><p>在请求url中存在timetask作为部分地址路径，则此控制策略返回true，否则返回false<br>acl timetask_req url_dir -i timetask</p>
-</li>
-<li><p>当请求的header中Content-length等于0时，返回true<br>acl missing_cl hdr_cnt(Content-length) eq 0</p>
-</li>
-</ol></div>
+    <div class="excerpt typo"><p>HAProxy的ACL具有很强大的功能，能够定义三到七层的规则。ACL的作用，就是为了匹配一些特别的请求，然后对其进行修改或者分发到不同的服务器组中。<br>HAProxy的ACL用于实现基于请求报文的首部、响应报文的内容或 其它的环境状态信息来做出转发决策，这大大增强了其配置弹性。 其配置法则通常分为两步，首先去定义ACL，即定义一个测试条件 ，而后在条件得到满足时执行某特定的动作，如阻止请求或转发至 某特定的后端。</p></div>
     <!-- Post Tags -->
     <div class="tags">
       
@@ -181,7 +247,7 @@
       </div>
     </div>
     <!-- Post Excerpt -->
-    <div class="excerpt typo"><p>常用的算法有：undrobin、source和lestconn。</p></div>
+    <div class="excerpt typo"><p>使用balance定义负载均衡算法，可用于“defaults”、“listen”和“backend”。用于在负载均衡场景中挑选一个server，其仅应用于用户新请求或需要将一个连接重新派发至另一个服务器时。常用的算法有：undrobin、source和lestconn。</p></div>
     <!-- Post Tags -->
     <div class="tags">
       
@@ -214,7 +280,7 @@
       </div>
     </div>
     <!-- Post Excerpt -->
-    <div class="excerpt typo"><h3 id="HAProxy简介"><a href="#HAProxy简介" class="headerlink" title="HAProxy简介"></a>HAProxy简介</h3><p>HAProxy是一个使用C语言编写的自由及开放源代码软件，其提供高可用性、负载均衡，以及基于TCP和HTTP的应用程序代理。<br>HAProxy特别适用于那些负载特大的web站点，这些站点通常又需要会话保持或七层处理。HAProxy运行在当前的硬件上，完全可以支持数以万计的并发连接。并且它的运行模式使得它可以很简单安全的整合进您当前的架构中， 同时可以保护你的web服务器不被暴露到网络上。<br>HAProxy实现了一种事件驱动, 单一进程模型，此模型支持非常大的并发连接数。多进程或多线程模型受内存限制 、系统调度器限制以及无处不在的锁限制，很少能处理数千并发连接。事件驱动模型因为在有更好的资源和时间管理的用户空间(User-Space) 实现所有这些任务，所以没有这些问题。此模型的弊端是，在多核系统上，这些程序通常扩展性较差。这就是为什么他们必须进行优化以 使每个CPU时间片(Cycle)做更多的工作。<br>包括 GitHub、Bitbucket、Stack Overflow、Reddit、Tumblr、Twitter和 Tuenti在内的知名网站，及亚马逊网络服务系统都使用了HAProxy。</p></div>
+    <div class="excerpt typo"><h3 id="HAProxy下载"><a href="#HAProxy下载" class="headerlink" title="HAProxy下载"></a>HAProxy下载</h3><p><a href="https://www.haproxy.org/">官网下载</a><br><a href="https://fossies.org/linux/misc/">Fossies下载</a></p></div>
     <!-- Post Tags -->
     <div class="tags">
       
@@ -393,85 +459,6 @@
         
 
 <a class="tag" href="/tags/Git/">Git</a>
-
-
-      
-    </div>
-  </div>
-</div>
-
-      
-        <div class="post-item-wrapper">
-  <a href="/2017/05/15/【Sublime-Text】快捷键/" class="post-title">
-      【Sublime Text】快捷键
-  </a>
-  <div class="post-excerpt">
-    <!-- Post Date and Categories -->
-    <div class="date-and-category">
-      <div class="date">2017-05-15</div>
-      <div class="categories">
-        
-          
-
-<a href="/categories/Sublime-Text/">Sublime Text</a>
-
-        
-      </div>
-    </div>
-    <!-- Post Excerpt -->
-    <div class="excerpt typo">暂无文章摘要</div>
-    <!-- Post Tags -->
-    <div class="tags">
-      
-        
-
-<a class="tag" href="/tags/Sublime-Text/">Sublime Text</a> <a class="tag" href="/tags/快捷键/">快捷键</a>
-
-
-      
-    </div>
-  </div>
-</div>
-
-      
-        <div class="post-item-wrapper">
-  <a href="/2017/05/15/【Windows】设置磁盘背景/" class="post-title">
-      【Windows】设置磁盘背景
-  </a>
-  <div class="post-excerpt">
-    <!-- Post Date and Categories -->
-    <div class="date-and-category">
-      <div class="date">2017-05-15</div>
-      <div class="categories">
-        
-          
-
-<a href="/categories/Windows/">Windows</a>
-
-        
-      </div>
-    </div>
-    <!-- Post Excerpt -->
-    <div class="excerpt typo"><p>如何将磁盘背景设置为自己喜欢的图片，具体操作步骤如下：</p>
-<ul>
-<li>首先，准备一张自己喜欢的图片。例如：D:\图片\其它\1741962.jpeg </li>
-<li>在要设置背景的盘符或文件夹下，新建一个文本文档，将下面代码粘贴到文本中，替换自己的图片路径。<pre><code>[ExtShellFolderViews] 
-{BE098140-A513-11D0-A3A4-00C04FD706EC}={BE098140-A513-11D0-A3A4-00C04FD706EC} 
-[{BE098140-A513-11D0-A3A4-00C04FD706EC}] 
-Attributes=1 
-IconArea_Image=D:\图片\其它\1741962.jpeg
-IconArea_Text=0x00000000 
-[.ShellClassInfo] 
-ConfirmFileOp=0 
-[Ctrl+A Select All] 
-</code></pre></li>
-<li>最后，将文档另存为desktop.ini即可。</div>
-    <!-- Post Tags -->
-    <div class="tags">
-      
-        
-
-<a class="tag" href="/tags/Windows/">Windows</a> <a class="tag" href="/tags/美化/">美化</a>
 
 
       
