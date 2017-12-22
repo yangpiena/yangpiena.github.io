@@ -8,10 +8,10 @@
   <meta name="description" content="">
   <meta name="author" content="昜丿捺">
   <!-- Open Graph Data -->
-  <meta property="og:title" content="【Java】tomcat部署项目访问不加项目名设置"/>
+  <meta property="og:title" content="昜丿捺"/>
   <meta property="og:description" content="没有阳光，沉默而居" />
   <meta property="og:site_name" content="昜丿捺"/>
-  <meta property="og:type" content="article" />
+  <meta property="og:type" content="website" />
   <meta property="og:image" content="http://yoursite.comundefined"/>
   
     <link rel="alternate" href="/atom.xml" title="昜丿捺" type="application/atom+xml">
@@ -37,7 +37,8 @@
 </head>
 
   <body>
-    <!-- Page Header -->
+    <!-- Archive Header -->
+<!-- Page Header -->
 
 
 <header class="site-header header-background" style="background-image: url(http://ogoh2gimk.bkt.clouddn.com/yangpiena-banner.jpg)">
@@ -45,7 +46,7 @@
     <div class="row">
       <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
         <div class="page-title with-background-image">
-          <p class="title">【Java】tomcat部署项目访问不加项目名设置</p>
+          <p class="title">博客归类</p>
           <p class="subtitle"></p>
         </div>
         <div class="site-menu with-background-image">
@@ -114,121 +115,65 @@
 -->
 </header>
 
-<article>
-  <div class="container typo">
-    <div class="row">
-      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-        <div class="post-info text-muted">
-          
-            <!-- Author -->
-            <span class="author info">作者 昜丿捺</span>
-          
-          <!-- Date -->
-          <span class="date-time info">发表于
-            <span class="date">2017-08-17</span>
-            <span class="time">16:12:32</span>
-          </span>
-          
-          <!--  Categories  -->
-            <span class="categories info">分类于 
 
-<a href="/categories/Java/">Java</a>
-</span>
-          
+<!-- Archive List -->
+<div class="container">
+  <div class="row">
+    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+	    <!-- 归档列表 -->
+	    
 
-          <!-- YPN Add 2016-11-14 增加热度 -->
-          <span id="busuanzi_container_page_pv">
-            &nbsp;&nbsp; 热度&nbsp; <span id="busuanzi_value_page_pv"></span>°C
-          </span>
-
-        </div>
-        <!-- Tags -->
         
-          <div class="post-tags text-muted">
-            标签: 
+        <div class="one-tag-list">
+            <span class="fa fa-calendar-times-o listing-seperator" id="2017">
+                <span style="color: #F03838; font-size: 2rem;" class="tag-text">2017</span>
+            </span>
+            
+            	<div class="archive-item">
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	05-15
+	<a href="/2017/05/15/【Sublime-Text】快捷键/" class="post-title">
+		【Sublime Text】快捷键
+	</a>
+	<!-- <div class="date text-muted">发表于 2017-05-15 15:59:04</div> -->
+</div>
 
-<a class="tag" href="/tags/Java/">#Java</a> <a class="tag" href="/tags/tomcat/">#tomcat</a>
+            
+            	<div class="archive-item">
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	05-15
+	<a href="/2017/05/15/【Windows】设置磁盘背景/" class="post-title">
+		【Windows】设置磁盘背景
+	</a>
+	<!-- <div class="date text-muted">发表于 2017-05-15 15:06:55</div> -->
+</div>
 
-
-          </div>
+            
+        </div>
         
-        <!-- Post Main Content -->
-        <div class="post-content">
 
-			<!-- YPN Add 2017-02-27 Table of Contents -->
-			
-			
-          	<ol>
-<li><p>打开conf目录下server.xml；</p>
-</li>
-<li><p>在Host内添加如下Context，其中docBase改为自己的项目路径即可。</p>
-<pre><code>&lt;Context path=&quot;&quot; docBase=&quot;/usr/tomcat/webapps/xxExpert&quot; reloadable=&quot;false&quot; /&gt;
-</code></pre><a id="more"></a>
-</li>
-<li><p>添加后效果如下：</p>
-<pre><code>&lt;Host name=&quot;localhost&quot;  appBase=&quot;webapps&quot;
-    unpackWARs=&quot;true&quot; autoDeploy=&quot;true&quot;&gt;
-
-    &lt;!-- SingleSignOn valve, share authentication between web applications
-         Documentation at: /docs/config/valve.html --&gt;
-    &lt;!--
-    &lt;Valve className=&quot;org.apache.catalina.authenticator.SingleSignOn&quot; /&gt;
-    --&gt;
-
-    &lt;!-- Access log processes all example.
-         Documentation at: /docs/config/valve.html
-         Note: The pattern used is equivalent to using pattern=&quot;common&quot; --&gt;
-    &lt;Valve className=&quot;org.apache.catalina.valves.AccessLogValve&quot; directory=&quot;logs&quot;
-           prefix=&quot;localhost_access_log.&quot; suffix=&quot;.txt&quot;
-           pattern=&quot;%h %l %u %t &amp;quot;%r&amp;quot; %s %b&quot; /&gt;
-
-    &lt;Context path=&quot;&quot; docBase=&quot;/usr/tomcat/webapps/xxExpert&quot; reloadable=&quot;false&quot; /&gt;
-
-&lt;/Host&gt;
-</code></pre></li>
-</ol>
-
-        </div>
-
-        <!-- YPN Add 2016-11-14 增加打赏 start -->
-        <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center">
-          <div></div>
-          <button id="rewardButton", disable="enable", onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}", style="cursor: pointer; border: 0; outline: 0; border-radius: 100%; padding: 0; margin: 0; letter-spacing: normal; text-transform: none; text-indent: 0px; text-shadow: none">
-            <span onmouseover="this.style.color='rgb(236,96,0)';this.style.background='rgb(204,204,204)'" onmouseout="this.style.color='#fff';this.style.background='rgb(236,96,0)'" style="display: inline-block; width: 70px; height: 70px; border-radius: 100%; line-height: 81px; color: #fff; font: 400 35px/75px 'microsofty'; background: rgb(236,96,0)">赏</span>
-          </button>
-          <div id="QR" style="display: none;">
-            
-              <div id="wechat" style="display: inline-block">
-                <img id="wechat_qr" src="/assets/blogImg/YPN_wechatpay-32x32.png" alt="昜丿捺 WeChat Pay" style="width: 200px; max-width: 100%; display: inline-block"/>
-                <p>微信打赏</p>
-              </div>
-            
-          
-            <div id="alipay" style="display: inline-block">
-              <img id="alipay_qr" src="/assets/blogImg/YPN_alipay-32x32.jpg" alt="昜丿捺 Alipay" style="width: 200px; max-width: 100%; display: inline-block"/>
-              <p>支付宝打赏</p>
-            </div>
-          
-          </div>
-        </div>
-        <!-- YPN Add 2016-11-14 增加打赏 end -->
-
-        <!-- 多说最近访客 start -->
-        <div class="ds-recent-visitors" data-num-items="28" data-avatar-size="42" id="ds-recent-visitors"></div>
-        <!-- 多说最近访客 end -->
-
-        <!-- 多说评论框 start -->
-        <div class="ds-thread" data-thread-key="2017/08/17/【Java】tomcat部署项目访问不加项目名设置/" data-title="【Java】tomcat部署项目访问不加项目名设置" data-url="http://yoursite.com/2017/08/17/【Java】tomcat部署项目访问不加项目名设置/"></div>
-        <!-- 多说评论框 end -->
-
-        <!-- YPN ADD 2017-11-02 新增 Hitokoto·一言经典语句-->
-        <script type="text/javascript" src="https://api.lwl12.com/hitokoto/main/get?encode=js&charset=utf-8"></script>
-        <div id="lwlhitokoto"><script>lwlhitokoto()</script></div>
-
-      </div>
     </div>
   </div>
-</article>
+</div>
+
+<!-- Pagination -->
+<div class="container">
+  <div class="row">
+    <div class="col-lg-10 col-md-10 col-md-offset-1">
+      <ul class="pagination">
+          
+              <li class="previous">
+                <a href="/archives/2017/">
+                  <span class="symbol-left">&lt;</span>
+                  <span>上一页</span>
+                </a>
+              </li>
+          
+          
+      </ul>
+    </div>
+  </div>
+</div>
 
 
 

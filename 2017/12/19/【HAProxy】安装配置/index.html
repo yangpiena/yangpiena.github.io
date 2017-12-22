@@ -126,7 +126,7 @@
           <!-- Date -->
           <span class="date-time info">发表于
             <span class="date">2017-12-19</span>
-            <span class="time">11:03:56</span>
+            <span class="time">16:12:32</span>
           </span>
           
           <!--  Categories  -->
@@ -158,15 +158,13 @@
 			<!-- YPN Add 2017-02-27 Table of Contents -->
 			
 			
-          	<h3 id="HAProxy简介"><a href="#HAProxy简介" class="headerlink" title="HAProxy简介"></a>HAProxy简介</h3><p>HAProxy是一个使用C语言编写的自由及开放源代码软件，其提供高可用性、负载均衡，以及基于TCP和HTTP的应用程序代理。<br>HAProxy特别适用于那些负载特大的web站点，这些站点通常又需要会话保持或七层处理。HAProxy运行在当前的硬件上，完全可以支持数以万计的并发连接。并且它的运行模式使得它可以很简单安全的整合进您当前的架构中， 同时可以保护你的web服务器不被暴露到网络上。<br>HAProxy实现了一种事件驱动, 单一进程模型，此模型支持非常大的并发连接数。多进程或多线程模型受内存限制 、系统调度器限制以及无处不在的锁限制，很少能处理数千并发连接。事件驱动模型因为在有更好的资源和时间管理的用户空间(User-Space) 实现所有这些任务，所以没有这些问题。此模型的弊端是，在多核系统上，这些程序通常扩展性较差。这就是为什么他们必须进行优化以 使每个CPU时间片(Cycle)做更多的工作。<br>包括 GitHub、Bitbucket、Stack Overflow、Reddit、Tumblr、Twitter和 Tuenti在内的知名网站，及亚马逊网络服务系统都使用了HAProxy。</p>
+          	<h3 id="HAProxy下载"><a href="#HAProxy下载" class="headerlink" title="HAProxy下载"></a>HAProxy下载</h3><p><a href="https://www.haproxy.org/" target="_blank" rel="external">官网下载</a><br><a href="https://fossies.org/linux/misc/" target="_blank" rel="external">Fossies下载</a></p>
 <a id="more"></a>
-<hr>
-<h3 id="HAProxy下载"><a href="#HAProxy下载" class="headerlink" title="HAProxy下载"></a>HAProxy下载</h3><p><a href="https://www.haproxy.org/" target="_blank" rel="external">官网下载</a><br><a href="https://fossies.org/linux/misc/" target="_blank" rel="external">Fossies下载</a></p>
 <hr>
 <h3 id="HAProxy安装"><a href="#HAProxy安装" class="headerlink" title="HAProxy安装"></a>HAProxy安装</h3><h4 id="1-Linux下"><a href="#1-Linux下" class="headerlink" title="1. Linux下"></a>1. Linux下</h4><h5 id="1-1-下载"><a href="#1-1-下载" class="headerlink" title="1.1 下载"></a>1.1 下载</h5><p>进入下载目录，使用wget下载，如果已离线下载成功，则跳过该步，直接上传安装包到下载目录即可<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">cd /usr/download/</div><div class="line">wget http://fossies.org/linux/misc/haproxy-1.8.1.tar.gz</div></pre></td></tr></table></figure></p>
 <h5 id="1-2-解压"><a href="#1-2-解压" class="headerlink" title="1.2 解压"></a>1.2 解压</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">tar -zxvf haproxy-1.8.1.tar.gz</div></pre></td></tr></table></figure>
-<h5 id="1-3-安装"><a href="#1-3-安装" class="headerlink" title="1.3 安装"></a>1.3 安装</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">cd haproxy-1.8.1</div><div class="line">make TARGET=linux2628 ARCH=x86_64 PREFIX=/usr/local/haproxy</div><div class="line">make install PREFIX=/usr/local/haproxy</div></pre></td></tr></table></figure>
-<p>参数说明:<br><strong>TARGET=linux2628</strong>          #内核版本，使用<code>uname -r</code>可查看内核，如：2.6.32-642.11.1.el6.x86_64，此时该参数就为linux2628；kernel 小于2.6.28的用：TARGET=linux26<br><strong>ARCH=x86_64</strong>               #系统位数<br><strong>PREFIX=/usr/local/haprpxy</strong> #/usr/local/haprpxy为haprpxy的安装路径</p>
+<h5 id="1-3-安装"><a href="#1-3-安装" class="headerlink" title="1.3 安装"></a>1.3 安装</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">cd haproxy-1.8.1</div><div class="line">make TARGET=linux26 ARCH=x86_64 PREFIX=/usr/local/haproxy</div><div class="line">make install PREFIX=/usr/local/haproxy</div></pre></td></tr></table></figure>
+<p>参数说明:<br><strong>TARGET=linux26</strong>            # 指定对目标操作系统在编译的时候进行优化，可选择如下值之一：Generic, linux22, linux24, linux24e, linux26, solaris, freebsd, openbsd, Cygwin, custom。如果不确定目标系统，可以保留默认值generic。使用<code>uname -r</code>可查看内核，如：2.6.32-642.11.1.el6.x86_64，此时该参数就为linux26。<br><strong>ARCH=x86_64</strong>               # 系统位数。指定ARCH值可强制编译生成针对一个特定系统架构的程序。通常用于在一个系统架构的平台上生成针对另一个不同架构平台的程序，比如在一个64位架构的目标系统上编译生成一个32位的程序。当前可选的值有：x86_64, i386, i486, i586, i686。<br>注：若选择上述其中的一个值，”-m32”或”-m64”会被添加到CFLAGS和LDFLAGS选项中。<br><strong>PREFIX=/usr/local/haprpxy</strong> # 指定安装目录，默认为/usr/local，其他诸如文档之类的文件将会在PREFIX指定的相应目录下。例如/usr/local/haprpxy为haprpxy的安装路径。</p>
 <blockquote>
 <p>CentOS中无法使用make、make install命令，提示：make: command not found，此时需在线安装make和gcc。</p>
 <ul>
@@ -180,134 +178,74 @@
 <p>粘贴如下内容至haproxy.cfg</p>
 <pre><code>###################### 全局配置 ######################
 global
-      log            127.0.0.1 local0                       # 日志输出配置，所有日志都记录在本机，通过local0输出
-    # log            127.0.0.1 local1 notice                # 定义haproxy 日志级别[error warring info debug]
-    # log            loghost local0 info
-      maxconn        1500                                   # 默认最大连接数,需考虑ulimit-n限制
-      chroot         /usr/local/haproxy                     # 改变当前工作目录
-      uid            haproxy                                # 运行haproxy的用户
-      gid            haproxy                                # 运行haproxy的用户所在的组
-      daemon                                                # 以后台形式运行harpoxy
-    # nbproc         2                                      # 设置进程数量
-      pidfile        /usr/local/haproxy/logs/haproxy.pid    #将所有进程的pid写入文件，启动进程的用户必须有权限访问此文件
-    # debug                                                 # haproxy 调试级别，建议只在开启单进程的时候调试
-    # quiet
+       log     127.0.0.1 local0                    # 日志输出配置，所有日志记录在本机，通过local0输出
+       maxconn 3000                                # 默认最大连接数,需考虑ulimit-n限制
+       daemon                                      # 以后台形式运行harpoxy
+       uid     5040                                # 运行haproxy的用户
+       gid     5040                                # 运行haproxy的用户所在的组
+       chroot  /usr/local/haproxy                  # 改变当前工作目录
+       pidfile /usr/local/haproxy/logs/haproxy.pid # 当前进程的pid文件
 
 ###################### 默认配置 ######################
 defaults
-        log             global
-        mode            http              # 默认的模式mode { tcp|http|health }，tcp是4层，http是7层，health只会返回OK
-        option          httpclose         # 每次请求完毕后主动关闭http通道,haproxy不支持keep-alive,只能模拟这种模式的实现
-      # option          dontlognull       # 不记录健康检查日志信息
-        option          forwardfor        # 如果后端服务器需要获得客户端真实ip需要配置的参数，可以从Http Header中获得客户端ip
-        option          redispatch        # 当serverId对应的服务器挂掉后，强制定向到其他健康的服务器，以后将不支持
-      # option          abortonclose      # 当服务器负载很高的时候，自动结束掉当前队列处理比较久的链接
-        retries         2                 # 两次连接失败就认为是服务器不可用，也可以通过后面设置
-        balance         static-rr         # 支持static-rr，leastconn,first,uri等参数
-      # balance         roundrobin        # 设置默认负载均衡方式，轮询方式
-      # balance         source            # 设置默认负载均衡方式，保存session值，类似于nginx的ip_hash
-      # balnace         leastconn         # 设置默认负载均衡方式，最小连接数
-        stats           enable
-      # stats uri       /ha?stats         # haproxy运行状态查看 自定义uri
-        stats uri       /haproxy-stats    # haproxy运行状态查看 自定义uri
-        stats refresh   30s               # 统计页面自动刷新时间
-        timeout connect 3000              # 连接超时
-        timeout client  50000             # 客户端超时
-        timeout server  50000             # 服务器超时
-      # timeout check   2000              # 心跳检测超时
-      # timeout http-keep-alive 10s       # 默认持久连接超时时间
-      # timeout http-request    10s       # 默认http请求超时时间
-      # timeout queue   1m                # 默认队列超时时间
+       log             global
+       mode            http       # 模式：tcp|http|health，tcp是4层，http是7层，health只会返回OK
+       option          httpclose  # 每次请求完毕后主动关闭http通道
+       option          forwardfor # 如果后端服务器需要获得客户端真实ip，可从Http Header中获得客户端ip
+       option          redispatch # 当serverId对应的服务器挂掉后，强制定向到其他健康的服务器
+       retries         3          # 3次连接失败就认为是服务器不可用
+       timeout connect 300000     # 连接超时
+       timeout client  500000     # 客户端超时
+       timeout server  500000     # 服务器超时
 
 ###################### 统计页面配置 ######################
-listen stats
-       bind          0.0.0.0:1080         # 设置Frontend和Backend的组合体，监控组的名称，按需要自定义名称
-       mode          http                 # http的7层模式
-       option        httplog              # 采用http日志格式
-     # log           127.0.0.1 local0 err # 错误日志记录
-       maxconn       10                   # 默认的最大连接数
-       stats refresh 30s                  # 统计页面自动刷新时间
-       stats uri     /stats               # 统计页面url
-       stats realm   YANGPIENA\ Haproxy   # 统计页面密码框上提示文本
-       stats auth    admin:admin          # 设置监控页面的用户和密码:admin,可以设置多个用户名
-       stats auth    Frank:Frank          # 设置监控页面的用户和密码：Frank
-       stats hide-version                 # 隐藏统计页面上HAProxy的版本信息
-       stats admin if TRUE                # 设置手工启动/禁用，后端服务器(haproxy-1.4.9以后版本)
+listen stats                      # 设置Frontend和Backend的组合体，监控组的名称，按需要自定义名称
+       bind          0.0.0.0:8888 # 监听端口
+       maxconn       1            # 默认的最大连接数
+       option        httplog      # 采用http日志格式
+       stats         enable       # 启用状态监控
+       stats refresh 30s          # 统计页面自动刷新时间
+       stats uri     /stats       # 统计页面url
+       stats realm   YANGPIENA    # 统计页面密码框上提示文本
+       stats auth    admin:admin  # 设置监控页面的用户和密码:admin,可以设置多个用户名（再增加一行即可）
+       stats admin   if TRUE      # 设置手工启动/禁用，后端服务器(haproxy-1.4.9以后版本)
 
-###################### 业务配置 ######################
-listen xx              0.0.0.0:80
-       balance         source                                 # 使用JSESSIONID时，此负载均衡方式必须为source 
-     # cookie SERVERID insert                                 # 允许插入serverid到cookie中，serverid后面可以定义
-     # option httpchk GET /root/index.jsp HTTP/1.0            # 健康检测 检测server web根目录有无此文件
-       appsession JSESSIONID len 64 timeout 5h request-learn
-       server  10.1.50.41:80 10.1.50.41:80 weight 3 check
-       server  10.1.50.42:80 10.1.50.42:80 weight 3 check
+###################### 业务前端配置 ######################
+frontend xx
+         bind            0.0.0.0:80
+         default_backend xxServers
 
-     # 此类方法，即使用cookie模式时，balance需设为roundrobin，且需要cookie SERVERID insert
-     # server server_151 86.2.1.151:80 cookie server_151 check
-     # server server_152 86.2.1.152:80 cookie server_152 check
+###################### 业务后端配置 ######################
+backend xxServers
+        balance source
+        server  50.41:80          10.1.50.41:80     weight 1 check inter 1500 rise 2 fall 3
+        server  50.42:80          10.1.50.42:80     weight 1 check inter 1500 rise 2 fall 3
+        server  108.6:8080        10.1.108.6:8080   weight 1 check inter 1500 rise 2 fall 3
+        server  218.95.162.130:88 218.95.162.130:88 weight 1 check inter 1500 rise 2 fall 3
 
-     # server server_151 86.2.1.151:80 cookie server_151 check inter 1500 rise 3 fall 3 weight 1
-     # 服务器定义，cookie 1表示serverid为web1，check inter 1500是检测心跳频率rise 3是3次正确认为服务器可用，fall 3是3次失败认为服务器不可用，weight代表权重
-     # server server_152 86.2.1.152:80 cookie server_152 check inter 1500 rise 3 fall 3 weight 2
-     # 服务器定义，cookie 1表示serverid为web2，check inter 1500是检测心跳频率rise 3是3次正确认为服务器可用， fall 3是3次失败认为服务器不可用，weight代表权重
-
-
-# # 原资料
-# ###################### 设置haproxy 错误页面 ######################
-# #errorfile 403 /home/haproxy/haproxy/errorfiles/403.http
-# #errorfile 500 /home/haproxy/haproxy/errorfiles/500.http
-# #errorfile 502 /home/haproxy/haproxy/errorfiles/502.http
-# #errorfile 503 /home/haproxy/haproxy/errorfiles/503.http
-# #errorfile 504 /home/haproxy/haproxy/errorfiles/504.http
-# 
-# ###################### frontend前端配置 ######################
-# frontend main
-# 　　bind *:80 #这里建议使用bind *:80的方式，要不然做集群高可用的时候有问题，vip切换到其他机器就不能访问了。
-# 　　acl web hdr(host) -i www.abc.com  #acl后面是规则名称，-i为忽略大小写，后面跟的是要访问的域名，如果访问www.abc.com这个域名，就触发web规则，。
-# 　　acl img hdr(host) -i img.abc.com  #如果访问img.abc.com这个域名，就触发img规则。
-# 　　use_backend webserver if web   #如果上面定义的web规则被触发，即访问www.abc.com，就将请求分发到webserver这个作用域。
-# 　　use_backend imgserver if img   #如果上面定义的img规则被触发，即访问img.abc.com，就将请求分发到imgserver这个作用域。
-# 　　default_backend dynamic #不满足则响应backend的默认页面
-# 
-# ###################### backend后端配置 ######################
-# backend webserver #webserver作用域
-# 　　mode http
-# 　　balance roundrobin #balance roundrobin 负载轮询，balance source 保存session值，支持static-rr，leastconn，first，uri等参数
-# 　　option httpchk /index.html HTTP/1.0 #健康检查, 检测文件，如果分发到后台index.html访问不到就不再分发给它
-# 　　server web1 10.16.0.9:8085 cookie 1 weight 5 check inter 2000 rise 2 fall 3
-# 　　server web2 10.16.0.10:8085 cookie 2 weight 3 check inter 2000 rise 2 fall 3
-# 　　#cookie 1表示serverid为1，check inter 1500 是检测心跳频率 
-# 　　#rise 2是2次正确认为服务器可用，fall 3是3次失败认为服务器不可用，weight代表权重
-# 
-# backend imgserver
-# 　　mode http
-# 　　option httpchk /index.php
-# 　　balance roundrobin 
-# 　　server img01 192.168.137.101:80 check inter 2000 fall 3
-# 　　server img02 192.168.137.102:80 check inter 2000 fall 3
-# 
-# backend dynamic 
-# 　　balance roundrobin 
-# 　　server test1 192.168.1.23:80 check maxconn 2000 
-# 　　server test2 192.168.1.24:80 check maxconn 2000
-# 
-# listen tcptest 
-# 　　bind 0.0.0.0:5222 
-# 　　mode tcp 
-# 　　option tcplog #采用tcp日志格式 
-# 　　balance source 
-# 　　#log 127.0.0.1 local0 debug 
-# 　　server s1 192.168.100.204:7222 weight 1 
-# 　　server s2 192.168.100.208:7222 weight 1
-</code></pre><hr>
+###################### 错误页面配置 ######################
+errorfile 403 /usr/local/haproxy/errorfiles/403.http
+errorfile 500 /usr/local/haproxy/errorfiles/500.http
+errorfile 502 /usr/local/haproxy/errorfiles/502.http
+errorfile 503 /usr/local/haproxy/errorfiles/503.http
+errorfile 504 /usr/local/haproxy/errorfiles/504.http
+</code></pre><blockquote>
+<p>实现日志记录：<br>haproxy配置文件中默认定义了log 127.0.0.1 local0，说明日志将被记录在本机的local0设施中。编辑rsyslog配置文件：<code>vim /etc/rsyslog.conf</code></p>
+<pre><code># Provides UDP syslog reception
+$ModLoad imudp      #取消注释
+$UDPServerRun 514   #取消注释
+local0.*            /usr/local/haproxy/logs/haproxy.log
+# 指定设备local0日志存放位置
+</code></pre><p>haproxy的日志信息可以设置存放在专门的日志服务器中。</p>
+</blockquote>
+<hr>
 <h3 id="HAProxy启动"><a href="#HAProxy启动" class="headerlink" title="HAProxy启动"></a>HAProxy启动</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">/usr/local/haproxy/sbin/haproxy -f /usr/local/haproxy/haproxy.cfg</div></pre></td></tr></table></figure>
 <p>检查是否启动：</p>
 <pre><code>[root@Linux-xx ~]# ps -e|grep haproxy
  1221 ?        00:01:32 haproxy
 </code></pre><p>看到上面结果，表明haproxy已经正常启动了。</p>
 <hr>
-<h3 id="HAProxy查看状态"><a href="#HAProxy查看状态" class="headerlink" title="HAProxy查看状态"></a>HAProxy查看状态</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">http://localhost:1080/stats</div></pre></td></tr></table></figure>
+<h3 id="HAProxy查看状态"><a href="#HAProxy查看状态" class="headerlink" title="HAProxy查看状态"></a>HAProxy查看状态</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">http://localhost:8888/stats</div></pre></td></tr></table></figure>
 <p>参数说明：<br><strong>1080</strong>  即haproxy配置文件中的监听端口<br><strong>stats</strong> 即haproxy配置文件中的监听名称</p>
 <p>如果无法访问，请查看防火墙中端口是否开启。</p>
 <blockquote>
