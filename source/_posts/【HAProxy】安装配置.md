@@ -113,14 +113,20 @@ vi /usr/local/haproxy/haproxy.cfg
 	errorfile 503 /usr/local/haproxy/errorfiles/503.http
 	errorfile 504 /usr/local/haproxy/errorfiles/504.http
 
->实现日志记录：
-haproxy配置文件中默认定义了log 127.0.0.1 local0，说明日志将被记录在本机的local0设施中。编辑rsyslog配置文件：`vim /etc/rsyslog.conf`
+###### 实现日志记录
+haproxy配置文件中默认定义了log 127.0.0.1 local0，说明日志将被记录在本机的local0设施中。
+修改rsyslog配置文件：`vim /etc/rsyslog.conf`
+
 	# Provides UDP syslog reception
 	$ModLoad imudp      #取消注释
 	$UDPServerRun 514   #取消注释
 	local0.*            /usr/local/haproxy/logs/haproxy.log
 	# 指定设备local0日志存放位置
-haproxy的日志信息可以设置存放在专门的日志服务器中。
+修改rsyslog配置文件：`vim /etc/sysconfig/rsyslog`
+
+	SYSLOGD_OPTIONS="-r -m 0"
+	service syslog restart
+haproxy的日志信息也可以设置存放在专门的日志服务器中。
 
 ---
 
@@ -235,47 +241,149 @@ vi /etc/sysconfig/iptables
 ```
 vi /etc/rc.d/init.d/haproxy
 ```
-本身不存在此文件，使用以上命令，进入vi编辑器，再使用命令保存退出即可。
+本身不存在此文件，使用以上命令，进入vi编辑器，再使用命令保存退出即可新建此文件。
 打开文件haproxy，贴入如下内容：
-	#!/bin/bash
-	BASE_DIR="/usr/local/haproxy"
-	ARGV="$@"  
 
-	start()
-	{
-	echo "START HAPoxy SERVERS"
-	$BASE_DIR/sbin/haproxy -f $BASE_DIR/haproxy.cfg
+	#!/bin/sh
+	#chkconfig: 2345 10 90
+	#description:haproxy
+	#
+	# chkconfig: - 85 15
+	# description: HA-Proxy is a TCP/HTTP reverse proxy which is particularly suited \
+	#              for high availability environments.
+	# processname: haproxy
+	# config: /etc/haproxy/haproxy.cfg
+	# pidfile: /var/run/haproxy.pid
+
+	# Script Author: Simon Matter <simon.matter@invoca.ch>
+	# Version: 2004060600
+
+	# Source function library.
+	if [ -f /etc/init.d/functions ]; then
+	  . /etc/init.d/functions
+	elif [ -f /etc/rc.d/init.d/functions ] ; then
+	  . /etc/rc.d/init.d/functions
+	else
+	  exit 0
+	fi
+
+	# Source networking configuration.
+	. /etc/sysconfig/network
+
+	# Check that networking is up.
+	[ ${NETWORKING} = "no" ] && exit 0
+
+	# This is our service name
+	BASENAME=`basename $0`
+	if [ -L $0 ]; then
+	  BASENAME=`find $0 -name $BASENAME -printf %l`
+	  BASENAME=`basename $BASENAME`
+	fi
+
+	BIN=/usr/local/haproxy/sbin/haproxy
+
+	CFG=/usr/local/haproxy/haproxy.cfg
+	[ -f $CFG ] || exit 1
+
+	PIDFILE=/var/run/$BASENAME.pid
+	LOCKFILE=/var/lock/subsys/$BASENAME
+
+	RETVAL=0
+
+	start() {
+	  quiet_check
+	  if [ $? -ne 0 ]; then
+	    echo "Errors found in configuration file, check it with '$BASENAME check'."
+	    return 1
+	  fi
+
+	  echo -n "Starting $BASENAME: "
+	  daemon $BIN -D -f $CFG -p $PIDFILE
+	  RETVAL=$?
+	  echo
+	  [ $RETVAL -eq 0 ] && touch $LOCKFILE
+	  return $RETVAL
 	}
 
-	stop()
-	{
-	echo "STOP HAPoxy Listen"
-	kill -TTOU $(cat $BASE_DIR/logs/haproxy.pid)
-	echo "STOP HAPoxy process"
-	kill -USR1 $(cat $BASE_DIR/logs/haproxy.pid)
+	stop() {
+	  echo -n "Shutting down $BASENAME: "
+	  killproc $BASENAME -USR1
+	  RETVAL=$?
+	  echo
+	  [ $RETVAL -eq 0 ] && rm -f $LOCKFILE
+	  [ $RETVAL -eq 0 ] && rm -f $PIDFILE
+	  return $RETVAL
 	}
-	case $ARGV in
 
-	start)
-	start
-	ERROR=$?
-	;;
+	restart() {
+	  quiet_check
+	  if [ $? -ne 0 ]; then
+	    echo "Errors found in configuration file, check it with '$BASENAME check'."
+	    return 1
+	  fi
+	  stop
+	  start
+	}
 
-	stop)
-	stop
-	ERROR=$?
-	;;
+	reload() {
+	  if ! [ -s $PIDFILE ]; then
+	    return 0
+	  fi
 
-	restart)
-	stop
-	start
-	ERROR=$?
-	;;
+	  quiet_check
+	  if [ $? -ne 0 ]; then
+	    echo "Errors found in configuration file, check it with '$BASENAME check'."
+	    return 1
+	  fi
+	  $BIN -D -f $CFG -p $PIDFILE -sf $(cat $PIDFILE)
+	}
 
-	*)
-	echo "hactl.sh [start|restart|stop]"
+	check() {
+	  $BIN -c -q -V -f $CFG
+	}
+
+	quiet_check() {
+	  $BIN -c -q -f $CFG
+	}
+
+	rhstatus() {
+	  status $BASENAME
+	}
+
+	condrestart() {
+	  [ -e $LOCKFILE ] && restart || :
+	}
+
+	# See how we were called.
+	case "$1" in
+	  start)
+	    start
+	    ;;
+	  stop)
+	    stop
+	    ;;
+	  restart)
+	    restart
+	    ;;
+	  reload)
+	    reload
+	    ;;
+	  condrestart)
+	    condrestart
+	    ;;
+	  status)
+	    rhstatus
+	    ;;
+	  check)
+	    check
+	    ;;
+	  *)
+	    echo $"Usage: $BASENAME {start|stop|restart|reload|condrestart|status|check}"
+	    exit 1
 	esac
-	exit $ERROR
+	 
+	exit $?
+如果安装路径有变动，则只需修改上面的`BIN=/usr/local/haproxy/sbin/haproxy`和`CFG=/usr/local/haproxy/haproxy.cfg`即可。
 
 #### 2. 脚本随系统自启动
 ```

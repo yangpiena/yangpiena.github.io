@@ -126,7 +126,7 @@
           <!-- Date -->
           <span class="date-time info">发表于
             <span class="date">2017-12-19</span>
-            <span class="time">16:12:32</span>
+            <span class="time">10:04:35</span>
           </span>
           
           <!--  Categories  -->
@@ -229,15 +229,16 @@ errorfile 500 /usr/local/haproxy/errorfiles/500.http
 errorfile 502 /usr/local/haproxy/errorfiles/502.http
 errorfile 503 /usr/local/haproxy/errorfiles/503.http
 errorfile 504 /usr/local/haproxy/errorfiles/504.http
-</code></pre><blockquote>
-<p>实现日志记录：<br>haproxy配置文件中默认定义了log 127.0.0.1 local0，说明日志将被记录在本机的local0设施中。编辑rsyslog配置文件：<code>vim /etc/rsyslog.conf</code></p>
+</code></pre><h6 id="实现日志记录"><a href="#实现日志记录" class="headerlink" title="实现日志记录"></a>实现日志记录</h6><p>haproxy配置文件中默认定义了log 127.0.0.1 local0，说明日志将被记录在本机的local0设施中。<br>修改rsyslog配置文件：<code>vim /etc/rsyslog.conf</code></p>
 <pre><code># Provides UDP syslog reception
 $ModLoad imudp      #取消注释
 $UDPServerRun 514   #取消注释
 local0.*            /usr/local/haproxy/logs/haproxy.log
 # 指定设备local0日志存放位置
-</code></pre><p>haproxy的日志信息可以设置存放在专门的日志服务器中。</p>
-</blockquote>
+</code></pre><p>修改rsyslog配置文件：<code>vim /etc/sysconfig/rsyslog</code></p>
+<pre><code>SYSLOGD_OPTIONS=&quot;-r -m 0&quot;
+service syslog restart
+</code></pre><p>haproxy的日志信息也可以设置存放在专门的日志服务器中。</p>
 <hr>
 <h3 id="HAProxy启动"><a href="#HAProxy启动" class="headerlink" title="HAProxy启动"></a>HAProxy启动</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">/usr/local/haproxy/sbin/haproxy -f /usr/local/haproxy/haproxy.cfg</div></pre></td></tr></table></figure>
 <p>检查是否启动：</p>
@@ -306,47 +307,148 @@ COMMIT
 <h3 id="HAProxy关闭"><a href="#HAProxy关闭" class="headerlink" title="HAProxy关闭"></a>HAProxy关闭</h3><p>直接kill pid即可。</p>
 <hr>
 <h3 id="HAProxy脚本启动和关闭"><a href="#HAProxy脚本启动和关闭" class="headerlink" title="HAProxy脚本启动和关闭"></a>HAProxy脚本启动和关闭</h3><h4 id="1-编写启动脚本"><a href="#1-编写启动脚本" class="headerlink" title="1. 编写启动脚本"></a>1. 编写启动脚本</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">vi /etc/rc.d/init.d/haproxy</div></pre></td></tr></table></figure>
-<p>本身不存在此文件，使用以上命令，进入vi编辑器，再使用命令保存退出即可。<br>打开文件haproxy，贴入如下内容：</p>
-<pre><code>#!/bin/bash
-BASE_DIR=&quot;/usr/local/haproxy&quot;
-ARGV=&quot;$@&quot;  
+<p>本身不存在此文件，使用以上命令，进入vi编辑器，再使用命令保存退出即可新建此文件。<br>打开文件haproxy，贴入如下内容：</p>
+<pre><code>#!/bin/sh
+#chkconfig: 2345 10 90
+#description:haproxy
+#
+# chkconfig: - 85 15
+# description: HA-Proxy is a TCP/HTTP reverse proxy which is particularly suited \
+#              for high availability environments.
+# processname: haproxy
+# config: /etc/haproxy/haproxy.cfg
+# pidfile: /var/run/haproxy.pid
 
-start()
-{
-echo &quot;START HAPoxy SERVERS&quot;
-$BASE_DIR/sbin/haproxy -f $BASE_DIR/haproxy.cfg
+# Script Author: Simon Matter &lt;simon.matter@invoca.ch&gt;
+# Version: 2004060600
+
+# Source function library.
+if [ -f /etc/init.d/functions ]; then
+  . /etc/init.d/functions
+elif [ -f /etc/rc.d/init.d/functions ] ; then
+  . /etc/rc.d/init.d/functions
+else
+  exit 0
+fi
+
+# Source networking configuration.
+. /etc/sysconfig/network
+
+# Check that networking is up.
+[ ${NETWORKING} = &quot;no&quot; ] &amp;&amp; exit 0
+
+# This is our service name
+BASENAME=`basename $0`
+if [ -L $0 ]; then
+  BASENAME=`find $0 -name $BASENAME -printf %l`
+  BASENAME=`basename $BASENAME`
+fi
+
+BIN=/usr/local/haproxy/sbin/haproxy
+
+CFG=/usr/local/haproxy/haproxy.cfg
+[ -f $CFG ] || exit 1
+
+PIDFILE=/var/run/$BASENAME.pid
+LOCKFILE=/var/lock/subsys/$BASENAME
+
+RETVAL=0
+
+start() {
+  quiet_check
+  if [ $? -ne 0 ]; then
+    echo &quot;Errors found in configuration file, check it with &apos;$BASENAME check&apos;.&quot;
+    return 1
+  fi
+
+  echo -n &quot;Starting $BASENAME: &quot;
+  daemon $BIN -D -f $CFG -p $PIDFILE
+  RETVAL=$?
+  echo
+  [ $RETVAL -eq 0 ] &amp;&amp; touch $LOCKFILE
+  return $RETVAL
 }
 
-stop()
-{
-echo &quot;STOP HAPoxy Listen&quot;
-kill -TTOU $(cat $BASE_DIR/logs/haproxy.pid)
-echo &quot;STOP HAPoxy process&quot;
-kill -USR1 $(cat $BASE_DIR/logs/haproxy.pid)
+stop() {
+  echo -n &quot;Shutting down $BASENAME: &quot;
+  killproc $BASENAME -USR1
+  RETVAL=$?
+  echo
+  [ $RETVAL -eq 0 ] &amp;&amp; rm -f $LOCKFILE
+  [ $RETVAL -eq 0 ] &amp;&amp; rm -f $PIDFILE
+  return $RETVAL
 }
-case $ARGV in
 
-start)
-start
-ERROR=$?
-;;
+restart() {
+  quiet_check
+  if [ $? -ne 0 ]; then
+    echo &quot;Errors found in configuration file, check it with &apos;$BASENAME check&apos;.&quot;
+    return 1
+  fi
+  stop
+  start
+}
 
-stop)
-stop
-ERROR=$?
-;;
+reload() {
+  if ! [ -s $PIDFILE ]; then
+    return 0
+  fi
 
-restart)
-stop
-start
-ERROR=$?
-;;
+  quiet_check
+  if [ $? -ne 0 ]; then
+    echo &quot;Errors found in configuration file, check it with &apos;$BASENAME check&apos;.&quot;
+    return 1
+  fi
+  $BIN -D -f $CFG -p $PIDFILE -sf $(cat $PIDFILE)
+}
 
-*)
-echo &quot;hactl.sh [start|restart|stop]&quot;
+check() {
+  $BIN -c -q -V -f $CFG
+}
+
+quiet_check() {
+  $BIN -c -q -f $CFG
+}
+
+rhstatus() {
+  status $BASENAME
+}
+
+condrestart() {
+  [ -e $LOCKFILE ] &amp;&amp; restart || :
+}
+
+# See how we were called.
+case &quot;$1&quot; in
+  start)
+    start
+    ;;
+  stop)
+    stop
+    ;;
+  restart)
+    restart
+    ;;
+  reload)
+    reload
+    ;;
+  condrestart)
+    condrestart
+    ;;
+  status)
+    rhstatus
+    ;;
+  check)
+    check
+    ;;
+  *)
+    echo $&quot;Usage: $BASENAME {start|stop|restart|reload|condrestart|status|check}&quot;
+    exit 1
 esac
-exit $ERROR
-</code></pre><h4 id="2-脚本随系统自启动"><a href="#2-脚本随系统自启动" class="headerlink" title="2. 脚本随系统自启动"></a>2. 脚本随系统自启动</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">chmod +x /etc/rc.d/init.d/haproxy</div><div class="line">chkconfig --add haproxy</div><div class="line">chkconfig  haproxy on</div></pre></td></tr></table></figure>
+
+exit $?
+</code></pre><p>如果安装路径有变动，则只需修改上面的<code>BIN=/usr/local/haproxy/sbin/haproxy</code>和<code>CFG=/usr/local/haproxy/haproxy.cfg</code>即可。</p>
+<h4 id="2-脚本随系统自启动"><a href="#2-脚本随系统自启动" class="headerlink" title="2. 脚本随系统自启动"></a>2. 脚本随系统自启动</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">chmod +x /etc/rc.d/init.d/haproxy</div><div class="line">chkconfig --add haproxy</div><div class="line">chkconfig  haproxy on</div></pre></td></tr></table></figure>
 <p>如果出现结果： <em>service haproxy does not support chkconfig</em><br>解决办法是在 <strong>/etc/rc.d/init.d/haproxy</strong> 中添加下面两句到 <strong>#!/bin/bash</strong> 之后:</p>
 <pre><code>#chkconfig: 2345 10 90
 #description:haproxy
