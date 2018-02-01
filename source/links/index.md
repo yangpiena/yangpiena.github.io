@@ -97,6 +97,9 @@ toc: true
 [Flex转型Html学习随笔1——关于Html页面的div布局（上）](http://www.cnblogs.com/momoko8443/p/4302879.html)
 [Flex转型Html学习随笔1——关于Html页面的div布局（下）](http://www.cnblogs.com/momoko8443/p/4303829.html)
 [MIUI更新日志](http://www.miui.com/home.php?mod=space&uid=8&do=thread&view=me&from=space)
+[2017 码云最火爆开源项目 TOP 50，你都用过哪些？](https://www.oschina.net/news/92438/2017-mayun-top-50)
+[解决TCP/IP筛选的实用设置问题](https://jingyan.baidu.com/article/851fbc37dc1e513e1f15ab27.html)
+[如何在不重装服务器的情况下尝试解决sqlmaint.exe失败的问题](http://blog.csdn.net/zhaoyonghui100/article/details/8939950)
 
 &nbsp;
 
@@ -162,6 +165,7 @@ toc: true
 [HAProxy负载均衡保持客户端和服务器Session亲缘性的三种方式](http://itindex.net/blog/2012/07/24/1343118758531.html)
 [Linux下HAProxy的均衡配置](http://blog.csdn.net/zilong00007/article/details/7275235)
 [5月16日发布HAProxy,实现八种负载算法](http://blog.51cto.com/1234567aaa/317891)
+[](https://www.cnblogs.com/qige2017/p/7783402.html)
 
 &nbsp;
 

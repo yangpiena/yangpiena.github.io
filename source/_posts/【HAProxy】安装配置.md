@@ -11,6 +11,7 @@ description:
 ### HAProxy下载
 [官网下载](https://www.haproxy.org/)
 [Fossies下载](https://fossies.org/linux/misc/)
+[官方文档](http://cbonte.github.io/haproxy-dconv/)
 
 <!-- more -->
 
@@ -46,6 +47,12 @@ make install PREFIX=/usr/local/haproxy
 yum -y install gcc automake autoconf libtool make
 > * 安装gcc
 yum install gcc gcc-c++
+>
+> SUSE Linux Enterprise Server 12安装gcc
+> 安装命令：zypper install gcc
+> 如果出现如下错误：
+> Failed to mount cd:///?devices=/dev/disk/by-id/ata-VMware_Virtual_IDE_CDROM_Drive_10000000000000000001 on /var/adm/mount/AP_0x63by2U: Mounting media failed (mount: no medium found on /dev/sr0)
+> 意思就是要插入DVD，此时，如果是虚拟机，则选择编辑设置，指定系统的ISO镜像，然后勾选已连接，问题就解决了。
 
 #### 2. Windows下
 *暂无*
@@ -147,11 +154,11 @@ haproxy的日志信息也可以设置存放在专门的日志服务器中。
 http://localhost:8888/stats
 ```
 参数说明：
-**1080**  即haproxy配置文件中的监听端口
+**8888**  即haproxy配置文件中的监听端口
 **stats** 即haproxy配置文件中的监听名称
 
 如果无法访问，请查看防火墙中端口是否开启。
-> Centos查看80端口占用情况，使用命令：`lsof -i tcp:80`
+> Centos查看8888端口占用情况，使用命令：`lsof -i tcp:8888`
 Centos列出所有使用的端口，使用命令：`netstat -ntlp`
 
 如果端口未开启，请设置防火墙开放端口。
@@ -234,190 +241,5 @@ vi /etc/sysconfig/iptables
 ### HAProxy关闭
 直接kill pid即可。
 
----
 
-### HAProxy脚本启动和关闭
-#### 1. 编写启动脚本
-```
-vi /etc/rc.d/init.d/haproxy
-```
-本身不存在此文件，使用以上命令，进入vi编辑器，再使用命令保存退出即可新建此文件。
-打开文件haproxy，贴入如下内容：
-
-	#!/bin/sh
-	#chkconfig: 2345 10 90
-	#description:haproxy
-	#
-	# chkconfig: - 85 15
-	# description: HA-Proxy is a TCP/HTTP reverse proxy which is particularly suited \
-	#              for high availability environments.
-	# processname: haproxy
-	# config: /etc/haproxy/haproxy.cfg
-	# pidfile: /var/run/haproxy.pid
-
-	# Script Author: Simon Matter <simon.matter@invoca.ch>
-	# Version: 2004060600
-
-	# Source function library.
-	if [ -f /etc/init.d/functions ]; then
-	  . /etc/init.d/functions
-	elif [ -f /etc/rc.d/init.d/functions ] ; then
-	  . /etc/rc.d/init.d/functions
-	else
-	  exit 0
-	fi
-
-	# Source networking configuration.
-	. /etc/sysconfig/network
-
-	# Check that networking is up.
-	[ ${NETWORKING} = "no" ] && exit 0
-
-	# This is our service name
-	BASENAME=`basename $0`
-	if [ -L $0 ]; then
-	  BASENAME=`find $0 -name $BASENAME -printf %l`
-	  BASENAME=`basename $BASENAME`
-	fi
-
-	BIN=/usr/local/haproxy/sbin/haproxy
-
-	CFG=/usr/local/haproxy/haproxy.cfg
-	[ -f $CFG ] || exit 1
-
-	PIDFILE=/var/run/$BASENAME.pid
-	LOCKFILE=/var/lock/subsys/$BASENAME
-
-	RETVAL=0
-
-	start() {
-	  quiet_check
-	  if [ $? -ne 0 ]; then
-	    echo "Errors found in configuration file, check it with '$BASENAME check'."
-	    return 1
-	  fi
-
-	  echo -n "Starting $BASENAME: "
-	  daemon $BIN -D -f $CFG -p $PIDFILE
-	  RETVAL=$?
-	  echo
-	  [ $RETVAL -eq 0 ] && touch $LOCKFILE
-	  return $RETVAL
-	}
-
-	stop() {
-	  echo -n "Shutting down $BASENAME: "
-	  killproc $BASENAME -USR1
-	  RETVAL=$?
-	  echo
-	  [ $RETVAL -eq 0 ] && rm -f $LOCKFILE
-	  [ $RETVAL -eq 0 ] && rm -f $PIDFILE
-	  return $RETVAL
-	}
-
-	restart() {
-	  quiet_check
-	  if [ $? -ne 0 ]; then
-	    echo "Errors found in configuration file, check it with '$BASENAME check'."
-	    return 1
-	  fi
-	  stop
-	  start
-	}
-
-	reload() {
-	  if ! [ -s $PIDFILE ]; then
-	    return 0
-	  fi
-
-	  quiet_check
-	  if [ $? -ne 0 ]; then
-	    echo "Errors found in configuration file, check it with '$BASENAME check'."
-	    return 1
-	  fi
-	  $BIN -D -f $CFG -p $PIDFILE -sf $(cat $PIDFILE)
-	}
-
-	check() {
-	  $BIN -c -q -V -f $CFG
-	}
-
-	quiet_check() {
-	  $BIN -c -q -f $CFG
-	}
-
-	rhstatus() {
-	  status $BASENAME
-	}
-
-	condrestart() {
-	  [ -e $LOCKFILE ] && restart || :
-	}
-
-	# See how we were called.
-	case "$1" in
-	  start)
-	    start
-	    ;;
-	  stop)
-	    stop
-	    ;;
-	  restart)
-	    restart
-	    ;;
-	  reload)
-	    reload
-	    ;;
-	  condrestart)
-	    condrestart
-	    ;;
-	  status)
-	    rhstatus
-	    ;;
-	  check)
-	    check
-	    ;;
-	  *)
-	    echo $"Usage: $BASENAME {start|stop|restart|reload|condrestart|status|check}"
-	    exit 1
-	esac
-	 
-	exit $?
-如果安装路径有变动，则只需修改上面的`BIN=/usr/local/haproxy/sbin/haproxy`和`CFG=/usr/local/haproxy/haproxy.cfg`即可。
-
-#### 2. 脚本随系统自启动
-```
-chmod +x /etc/rc.d/init.d/haproxy
-chkconfig --add haproxy
-chkconfig  haproxy on
-```
-如果出现结果： *service haproxy does not support chkconfig* 
-解决办法是在 **/etc/rc.d/init.d/haproxy** 中添加下面两句到 **#!/bin/bash** 之后:
-	#chkconfig: 2345 10 90
-	#description:haproxy
-----其中2345是默认启动级别，级别有0-6共7个级别。
-----等级0表示：表示关机
-----等级1表示：单用户模式
-----等级2表示：无网络连接的多用户命令行模式
-----等级3表示：有网络连接的多用户命令行模式
-----等级4表示：不可用
-----等级5表示：带图形界面的多用户模式
-----等级6表示：重新启动
-----10是启动优先级，90是停机优先级，优先级范围是0-100，数字越大，优先级越低。
-
->添加后效果如下：
-	[root@Linux-xx ~]# cat /etc/rc.d/init.d/haproxy
-	#!/bin/bash
-	#chkconfig: 2345 10 90
-	#description:haproxy
-	BASE_DIR="/usr/local/haproxy"
-	ARGV="$@"  
-	start()
-	...
-	...
-
-#### 3. 启动与关闭
-```
-service haproxy start
-service haproxy stop
-```
+### [HAProxy脚本启动和关闭](http://yangpiena.coding.me/2018/02/01/%E3%80%90HAProxy%E3%80%91%E8%84%9A%E6%9C%AC%E5%90%AF%E5%8A%A8%E5%92%8C%E5%85%B3%E9%97%AD/)

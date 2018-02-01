@@ -138,6 +138,9 @@ sp_renamedb 'old_name', 'new_name'
 ## 17、查询某一列的重复项内容
 	SELECT * FROM documentation AS A WHERE (SELECT COUNT(*) FROM documentation WHERE fileName=A.fileName)>1 
 
+## 18、判断表中是否存在记录
+	SELECT COUNT (*) FROM tableName WHERE conditions
+
 ---
 
 # 二、提升篇
