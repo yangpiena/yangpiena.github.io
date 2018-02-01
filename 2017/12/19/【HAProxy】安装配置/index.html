@@ -126,13 +126,13 @@
           <!-- Date -->
           <span class="date-time info">发表于
             <span class="date">2017-12-19</span>
-            <span class="time">10:42:47</span>
+            <span class="time">16:23:38</span>
           </span>
           
           <!--  Categories  -->
             <span class="categories info">分类于 
 
-<a href="/categories/HAPROXY/">HAPROXY</a>
+<a href="/categories/HAProxy/">HAProxy</a>
 </span>
           
 
@@ -158,7 +158,7 @@
 			<!-- YPN Add 2017-02-27 Table of Contents -->
 			
 			
-          	<h3 id="HAProxy下载"><a href="#HAProxy下载" class="headerlink" title="HAProxy下载"></a>HAProxy下载</h3><p><a href="https://www.haproxy.org/" target="_blank" rel="external">官网下载</a><br><a href="https://fossies.org/linux/misc/" target="_blank" rel="external">Fossies下载</a></p>
+          	<h3 id="HAProxy下载"><a href="#HAProxy下载" class="headerlink" title="HAProxy下载"></a>HAProxy下载</h3><p><a href="https://www.haproxy.org/" target="_blank" rel="external">官网下载</a><br><a href="https://fossies.org/linux/misc/" target="_blank" rel="external">Fossies下载</a><br><a href="http://cbonte.github.io/haproxy-dconv/" target="_blank" rel="external">官方文档</a></p>
 <a id="more"></a>
 <hr>
 <h3 id="HAProxy安装"><a href="#HAProxy安装" class="headerlink" title="HAProxy安装"></a>HAProxy安装</h3><h4 id="1-Linux下"><a href="#1-Linux下" class="headerlink" title="1. Linux下"></a>1. Linux下</h4><h5 id="1-1-下载"><a href="#1-1-下载" class="headerlink" title="1.1 下载"></a>1.1 下载</h5><p>进入下载目录，使用wget下载，如果已离线下载成功，则跳过该步，直接上传安装包到下载目录即可<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">cd /usr/download/</div><div class="line">wget http://fossies.org/linux/misc/haproxy-1.8.1.tar.gz</div></pre></td></tr></table></figure></p>
@@ -248,10 +248,10 @@ service syslog restart
 </code></pre><p>看到上面结果，表明haproxy已经正常启动了。</p>
 <hr>
 <h3 id="HAProxy查看状态"><a href="#HAProxy查看状态" class="headerlink" title="HAProxy查看状态"></a>HAProxy查看状态</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">http://localhost:8888/stats</div></pre></td></tr></table></figure>
-<p>参数说明：<br><strong>1080</strong>  即haproxy配置文件中的监听端口<br><strong>stats</strong> 即haproxy配置文件中的监听名称</p>
+<p>参数说明：<br><strong>8888</strong>  即haproxy配置文件中的监听端口<br><strong>stats</strong> 即haproxy配置文件中的监听名称</p>
 <p>如果无法访问，请查看防火墙中端口是否开启。</p>
 <blockquote>
-<p>Centos查看80端口占用情况，使用命令：<code>lsof -i tcp:80</code><br>Centos列出所有使用的端口，使用命令：<code>netstat -ntlp</code></p>
+<p>Centos查看8888端口占用情况，使用命令：<code>lsof -i tcp:8888</code><br>Centos列出所有使用的端口，使用命令：<code>netstat -ntlp</code></p>
 </blockquote>
 <p>如果端口未开启，请设置防火墙开放端口。</p>
 <h4 id="1-开启端口（以80端口为例）"><a href="#1-开启端口（以80端口为例）" class="headerlink" title="1. 开启端口（以80端口为例）"></a>1. 开启端口（以80端口为例）</h4><ul>
@@ -449,7 +449,7 @@ esac
 
 exit $?
 </code></pre><p>如果安装路径有变动，则只需修改上面的<code>BIN=/usr/local/haproxy/sbin/haproxy</code>和<code>CFG=/usr/local/haproxy/haproxy.cfg</code>即可。</p>
-<h4 id="2-脚本随系统自启动"><a href="#2-脚本随系统自启动" class="headerlink" title="2. 脚本随系统自启动"></a>2. 脚本随系统自启动</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">chmod +x /etc/rc.d/init.d/haproxy</div><div class="line">chkconfig --add haproxy</div><div class="line">chkconfig  haproxy on</div></pre></td></tr></table></figure>
+<h4 id="2-脚本随系统自启动"><a href="#2-脚本随系统自启动" class="headerlink" title="2. 脚本随系统自启动"></a>2. 脚本随系统自启动</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">chmod 755 /etc/rc.d/init.d/haproxy  # 添加执行属性</div><div class="line">chkconfig --add haproxy            # 添加服务</div><div class="line">chkconfig haproxy on</div></pre></td></tr></table></figure>
 <p>如果出现结果： <em>service haproxy does not support chkconfig</em><br>解决办法是在 <strong>/etc/rc.d/init.d/haproxy</strong> 中添加下面两句到 <strong>#!/bin/bash</strong> 之后:</p>
 <pre><code>#chkconfig: 2345 10 90
 #description:haproxy
