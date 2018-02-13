@@ -120,6 +120,47 @@
     <div class="col-lg-10 col-md-10 col-md-offset-1">
       
         <div class="post-item-wrapper">
+  <a href="/2016/12/27/【Flex】flash builder 4.6效率优化方法/" class="post-title">
+      【Flex】flash builder 4.6效率优化方法
+  </a>
+  <div class="post-excerpt">
+    <!-- Post Date and Categories -->
+    <div class="date-and-category">
+      <div class="date">2016-12-27</div>
+      <div class="categories">
+        
+          
+
+<a href="/categories/Flex/">Flex</a>
+
+        
+      </div>
+    </div>
+    <!-- Post Excerpt -->
+    <div class="excerpt typo"><p>Flash Builder 4.6编译慢、报java heap space堆空间异常错误的优化方法：</p>
+<ol>
+<li>在安装路径下找到<code>FlexBuilder.ini</code>文件，进行编辑，加入以下参数：<pre><code>-vmargs
+-Xms128m
+-Xmx512m
+-XX:MaxPermSize=256m
+-XX:PermSize=64m                    #不要设置太高，否则会更加慢
+-Djava.net.preferIPv4Stack=true
+</code></pre>加入后可以明显加快编译速度数倍，第3条可以明显减低FB挂掉的几率。</div>
+    <!-- Post Tags -->
+    <div class="tags">
+      
+        
+
+<a class="tag" href="/tags/flash-builder/">flash builder</a> <a class="tag" href="/tags/Flex/">Flex</a>
+
+
+      
+    </div>
+  </div>
+</div>
+
+      
+        <div class="post-item-wrapper">
   <a href="/2016/12/27/【Flex】flash builder 4.6免费使用方法/" class="post-title">
       【Flex】flash builder 4.6免费使用方法
   </a>
@@ -220,7 +261,7 @@
       
         
 
-<a class="tag" href="/tags/属性/">属性</a> <a class="tag" href="/tags/Flex/">Flex</a>
+<a class="tag" href="/tags/Flex/">Flex</a> <a class="tag" href="/tags/属性/">属性</a>
 
 
       
@@ -419,39 +460,6 @@
         
 
 <a class="tag" href="/tags/FPSpread/">FPSpread</a> <a class="tag" href="/tags/fpComboAdo/">fpComboAdo</a>
-
-
-      
-    </div>
-  </div>
-</div>
-
-      
-        <div class="post-item-wrapper">
-  <a href="/2016/12/22/【FPSpread】属性说明/" class="post-title">
-      【FPSpread】属性说明
-  </a>
-  <div class="post-excerpt">
-    <!-- Post Date and Categories -->
-    <div class="date-and-category">
-      <div class="date">2016-12-22</div>
-      <div class="categories">
-        
-          
-
-<a href="/categories/FPSpread/">FPSpread</a>
-
-        
-      </div>
-    </div>
-    <!-- Post Excerpt -->
-    <div class="excerpt typo"><p>以下记录一些常用的fpSpread控件属性，按字母排序：<br></div>
-    <!-- Post Tags -->
-    <div class="tags">
-      
-        
-
-<a class="tag" href="/tags/FPSpread/">FPSpread</a> <a class="tag" href="/tags/属性/">属性</a>
 
 
       
