@@ -661,6 +661,21 @@ N到结尾记录
 	exec(@sql) 
 	end
 
+## 27、查看数据库文件使用情况
+	SELECT  A.name                                                     AS "逻辑名称"
+	       ,CONVERT(FLOAT ,A.size)             * (8192.0/1024.0)/1024  AS "已用大小MB"
+	       ,CONVERT(FLOAT ,A.maxSize - A.size) * (8192.0/1024.0)/1024  AS "可用大小MB"
+	       ,CONVERT(FLOAT ,A.maxSize)          * (8192.0/1024.0)/1024  AS "分配大小MB"
+	       ,A.fileName                                                 AS "文件路径"
+	       ,(
+	         SELECT  SA.groupName
+	           FROM  SysFileGroups  SA
+	          WHERE  SA.groupID = A.groupID
+	        )                                                          AS "文件组"
+	       ,CASE WHEN A.status = 1081346 THEN '磁盘文件'               
+	             WHEN A.status = 1081410 THEN '日志设备'
+	             ELSE CONVERT(VARCHAR ,A.status) END                   AS "文件类型"
+	  FROM  SysFiles  A
 ---
 
 # 常识
