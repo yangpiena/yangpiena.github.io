@@ -87,6 +87,7 @@ toc: true
 | get                       | 下载文件                         |
 | mget                      | 下载多个文件                     |
 | bye                       | 中断与服务器的连接               |
+| tracert                   | 跟踪IP地址路由                   |
 
 
 ## 其他命令

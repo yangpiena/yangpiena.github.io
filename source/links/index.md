@@ -45,6 +45,7 @@ toc: true
 
 #### 在线工具
 [在线工具](http://tool.lu/)
+[JSON在线解析及格式化验证](http://www.json.cn/)
 [ATOOL在线工具](http://www.atool.org/)
 [在线API](http://tool.oschina.net/)
 [MD5解密](http://www.cmd5.com/)
@@ -100,6 +101,9 @@ toc: true
 [2017 码云最火爆开源项目 TOP 50，你都用过哪些？](https://www.oschina.net/news/92438/2017-mayun-top-50)
 [解决TCP/IP筛选的实用设置问题](https://jingyan.baidu.com/article/851fbc37dc1e513e1f15ab27.html)
 [如何在不重装服务器的情况下尝试解决sqlmaint.exe失败的问题](http://blog.csdn.net/zhaoyonghui100/article/details/8939950)
+[好的用户界面-界面设计的一些技巧](https://www.cnblogs.com/Wayou/p/goodui.html#home)
+[一种电子病历系统软件框架思想——B/S与C/S混合架构](http://www.hit180.com/21534.html)
+[B/S，C/S，B/S和C/S混合模式的概念区别优缺点及前景分析](http://www.ufidawhy.com/mfufida/613.html)
 
 &nbsp;
 
@@ -234,6 +238,8 @@ toc: true
 [VB源码](http://www.codesky.net/vb/)
 [VB函数大全](http://www10.zzu.edu.cn/ie_wangjunfeng/daquan/function/index.aspx)
 [VB实现Base64 编解码](http://blog.csdn.net/iamlaosong/article/details/38229755)
+[VB动态调用类模块中的函数的方法 - CSDN博客](https://blog.csdn.net/keikisou/article/details/50564156)
+[VB几种函数参数传递方法，Variant，数组，Optional，ParamArray](https://blog.csdn.net/whchensir/article/details/52050796)
 
 &nbsp;
 
