@@ -8,7 +8,7 @@
   <meta name="description" content="">
   <meta name="author" content="昜丿捺">
   <!-- Open Graph Data -->
-  <meta property="og:title" content="【HAProxy】脚本启动和关闭"/>
+  <meta property="og:title" content="【FTP】apache ftpserver安装配置"/>
   <meta property="og:description" content="没有阳光，沉默而居" />
   <meta property="og:site_name" content="昜丿捺"/>
   <meta property="og:type" content="article" />
@@ -45,7 +45,7 @@
     <div class="row">
       <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
         <div class="page-title with-background-image">
-          <p class="title">【HAProxy】脚本启动和关闭</p>
+          <p class="title">【FTP】apache ftpserver安装配置</p>
           <p class="subtitle"></p>
         </div>
         <div class="site-menu with-background-image">
@@ -125,14 +125,14 @@
           
           <!-- Date -->
           <span class="date-time info">发表于
-            <span class="date">2018-02-01</span>
+            <span class="date">2018-04-10</span>
             <span class="time">15:10:22</span>
           </span>
           
           <!--  Categories  -->
             <span class="categories info">分类于 
 
-<a href="/categories/HAProxy/">HAProxy</a>
+<a href="/categories/FTP/">FTP</a>
 </span>
           
 
@@ -147,7 +147,7 @@
           <div class="post-tags text-muted">
             标签: 
 
-<a class="tag" href="/tags/HAProxy/">#HAProxy</a>
+<a class="tag" href="/tags/FTP/">#FTP</a> <a class="tag" href="/tags/apache-ftpserver/">#apache ftpserver</a>
 
 
           </div>
@@ -158,210 +158,101 @@
 			<!-- YPN Add 2017-02-27 Table of Contents -->
 			
 			
-          	<h3 id="CentOS下实现脚本启动和关闭"><a href="#CentOS下实现脚本启动和关闭" class="headerlink" title="CentOS下实现脚本启动和关闭"></a>CentOS下实现脚本启动和关闭</h3><h4 id="1-编写启动脚本"><a href="#1-编写启动脚本" class="headerlink" title="1. 编写启动脚本"></a>1. 编写启动脚本</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">vi /etc/rc.d/init.d/haproxy</div></pre></td></tr></table></figure>
-<p>本身不存在此文件，使用以上命令，进入vi编辑器，再使用命令保存退出即可新建此文件。<br>打开文件haproxy，贴入如下内容：</p>
-<pre><code>#!/bin/sh
-#chkconfig: 2345 10 90
-#description:haproxy
-#
-# chkconfig: - 85 15
-# description: HA-Proxy is a TCP/HTTP reverse proxy which is particularly suited \
-#              for high availability environments.
-# processname: haproxy
-# config: /etc/haproxy/haproxy.cfg
-# pidfile: /var/run/haproxy.pid
-
-# Script Author: Simon Matter &lt;simon.matter@invoca.ch&gt;
-# Version: 2004060600
-
-# Source function library.
-if [ -f /etc/init.d/functions ]; then
-  . /etc/init.d/functions
-elif [ -f /etc/rc.d/init.d/functions ] ; then
-  . /etc/rc.d/init.d/functions
-else
-  exit 0
-fi
-
-# Source networking configuration.
-. /etc/sysconfig/network
-
-# Check that networking is up.
-[ ${NETWORKING} = &quot;no&quot; ] &amp;&amp; exit 0
-
-# This is our service name
-BASENAME=`basename $0`
-if [ -L $0 ]; then
-  BASENAME=`find $0 -name $BASENAME -printf %l`
-  BASENAME=`basename $BASENAME`
-fi
-
-BIN=/usr/local/haproxy/sbin/haproxy
-
-CFG=/usr/local/haproxy/haproxy.cfg
-[ -f $CFG ] || exit 1
-
-PIDFILE=/var/run/$BASENAME.pid
-LOCKFILE=/var/lock/subsys/$BASENAME
-
-RETVAL=0
-
-start() {
-  quiet_check
-  if [ $? -ne 0 ]; then
-    echo &quot;Errors found in configuration file, check it with &apos;$BASENAME check&apos;.&quot;
-    return 1
-  fi
-
-  echo -n &quot;Starting $BASENAME: &quot;
-  daemon $BIN -D -f $CFG -p $PIDFILE
-  RETVAL=$?
-  echo
-  [ $RETVAL -eq 0 ] &amp;&amp; touch $LOCKFILE
-  return $RETVAL
-}
-
-stop() {
-  echo -n &quot;Shutting down $BASENAME: &quot;
-  killproc $BASENAME -USR1
-  RETVAL=$?
-  echo
-  [ $RETVAL -eq 0 ] &amp;&amp; rm -f $LOCKFILE
-  [ $RETVAL -eq 0 ] &amp;&amp; rm -f $PIDFILE
-  return $RETVAL
-}
-
-restart() {
-  quiet_check
-  if [ $? -ne 0 ]; then
-    echo &quot;Errors found in configuration file, check it with &apos;$BASENAME check&apos;.&quot;
-    return 1
-  fi
-  stop
-  start
-}
-
-reload() {
-  if ! [ -s $PIDFILE ]; then
-    return 0
-  fi
-
-  quiet_check
-  if [ $? -ne 0 ]; then
-    echo &quot;Errors found in configuration file, check it with &apos;$BASENAME check&apos;.&quot;
-    return 1
-  fi
-  $BIN -D -f $CFG -p $PIDFILE -sf $(cat $PIDFILE)
-}
-
-check() {
-  $BIN -c -q -V -f $CFG
-}
-
-quiet_check() {
-  $BIN -c -q -f $CFG
-}
-
-rhstatus() {
-  status $BASENAME
-}
-
-condrestart() {
-  [ -e $LOCKFILE ] &amp;&amp; restart || :
-}
-
-# See how we were called.
-case &quot;$1&quot; in
-  start)
-    start
-    ;;
-  stop)
-    stop
-    ;;
-  restart)
-    restart
-    ;;
-  reload)
-    reload
-    ;;
-  condrestart)
-    condrestart
-    ;;
-  status)
-    rhstatus
-    ;;
-  check)
-    check
-    ;;
-  *)
-    echo $&quot;Usage: $BASENAME {start|stop|restart|reload|condrestart|status|check}&quot;
-    exit 1
-esac
-
-exit $?
-</code></pre><p>如果安装路径有变动，则只需修改上面的<code>BIN=/usr/local/haproxy/sbin/haproxy</code>和<code>CFG=/usr/local/haproxy/haproxy.cfg</code>即可。</p>
-<h4 id="2-脚本随系统自启动"><a href="#2-脚本随系统自启动" class="headerlink" title="2. 脚本随系统自启动"></a>2. 脚本随系统自启动</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">chmod 755 /etc/rc.d/init.d/haproxy  # 添加执行属性</div><div class="line">chkconfig --add haproxy            # 添加服务</div><div class="line">chkconfig haproxy on</div></pre></td></tr></table></figure>
-<p>如果出现结果： <em>service haproxy does not support chkconfig</em><br>解决办法是在 <strong>/etc/rc.d/init.d/haproxy</strong> 中添加下面两句到 <strong>#!/bin/bash</strong> 之后:</p>
-<pre><code>#chkconfig: 2345 10 90
-#description:haproxy
-</code></pre><p>—-其中2345是默认启动级别，级别有0-6共7个级别。<br>—-等级0表示：表示关机<br>—-等级1表示：单用户模式<br>—-等级2表示：无网络连接的多用户命令行模式<br>—-等级3表示：有网络连接的多用户命令行模式<br>—-等级4表示：不可用<br>—-等级5表示：带图形界面的多用户模式<br>—-等级6表示：重新启动<br>—-10是启动优先级，90是停机优先级，优先级范围是0-100，数字越大，优先级越低。</p>
-<blockquote>
-<p>添加后效果如下：<br>    [root@Linux-xx ~]# cat /etc/rc.d/init.d/haproxy</p>
-<pre><code>#!/bin/bash
-#chkconfig: 2345 10 90
-#description:haproxy
-BASE_DIR=&quot;/usr/local/haproxy&quot;
-ARGV=&quot;$@&quot;  
-start()
-...
-...
-</code></pre></blockquote>
-<h4 id="3-启动与关闭"><a href="#3-启动与关闭" class="headerlink" title="3. 启动与关闭"></a>3. 启动与关闭</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">service haproxy start</div><div class="line">service haproxy stop</div></pre></td></tr></table></figure>
+          	<h3 id="apache-ftpserver下载"><a href="#apache-ftpserver下载" class="headerlink" title="apache ftpserver下载"></a>apache ftpserver下载</h3><p><a href="http://mina.apache.org/ftpserver-project/downloads.html" target="_blank" rel="external">官网下载</a></p>
+<a id="more"></a>
+<hr>
+<h3 id="apache-ftpserver安装"><a href="#apache-ftpserver安装" class="headerlink" title="apache ftpserver安装"></a>apache ftpserver安装</h3><h4 id="1-Linux下"><a href="#1-Linux下" class="headerlink" title="1. Linux下"></a>1. Linux下</h4><h5 id="1-1-下载"><a href="#1-1-下载" class="headerlink" title="1.1 下载"></a>1.1 下载</h5><p>进入下载目录，使用wget下载，如果已离线下载成功，则跳过该步，直接上传安装包到下载目录即可<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">cd /usr/download/</div><div class="line">wget http://mirrors.shu.edu.cn/apache/mina/ftpserver/1.1.1/dist/apache-ftpserver-1.1.1.tar.gz</div></pre></td></tr></table></figure></p>
+<h5 id="1-2-解压"><a href="#1-2-解压" class="headerlink" title="1.2 解压"></a>1.2 解压</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">tar -zxvf apache-ftpserver-1.1.1.tar.gz</div></pre></td></tr></table></figure>
+<h5 id="1-3-安装"><a href="#1-3-安装" class="headerlink" title="1.3 安装"></a>1.3 安装</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">mv apache-ftpserver-1.1.1 /usr/local/ftpserver</div></pre></td></tr></table></figure>
+<h5 id="1-4-修改配置文件"><a href="#1-4-修改配置文件" class="headerlink" title="1.4 修改配置文件"></a>1.4 修改配置文件</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">cd /usr/local/ftpserver/res/conf/</div><div class="line">vim users.properties</div></pre></td></tr></table></figure>
+<p>users.properties文件存放的是用户名及密码权限等配置信息，通过修改该文件来添加和管理用户及权限等信息。参考下面内容配置：</p>
+<pre><code>#用户名为anonymous，密码为空
+tpserver.user.anonymous.userpassword=
+#主目录
+ftpserver.user.anonymous.homedirectory=./res/home
+#当前用户可用
+ftpserver.user.anonymous.enableflag=true
+#具有上传权限
+ftpserver.user.anonymous.writepermission=true
+#最大登陆用户数为20，0为不限
+ftpserver.user.anonymous.maxloginnumber=20
+#同IP登陆用户数为2，0为不限
+ftpserver.user.anonymous.maxloginperip=2 
+#空闲时间为300秒，0为不限
+ftpserver.user.anonymous.idletime=300
+#上传速率限制为48字节每秒，0为不限
+ftpserver.user.anonymous.uploadrate=4800
+#下载速率限制为48字节每秒，0为不限
+ftpserver.user.anonymous.downloadrate=4800
+</code></pre><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">vim ftpd-typical.xml</div></pre></td></tr></table></figure>
+<p>修改配置文件ftpd-file.xml，增加encrypt-passwords=”clear”，将密码加密方式修改为clear，默认为MD5加密方式。</p>
+<pre><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;server xmlns=&quot;http://mina.apache.org/ftpserver/spring/v1&quot;
+        xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;
+        xsi:schemaLocation=&quot;
+           http://mina.apache.org/ftpserver/spring/v1 http://mina.apache.org/ftpserver/ftpserver-1.0.xsd        
+           &quot;
+        id=&quot;myServer&quot;&gt;
+        &lt;listeners&gt;
+                &lt;nio-listener name=&quot;default&quot; port=&quot;21&quot;&gt;
+                    &lt;ssl&gt;
+                         &lt;keystore file=&quot;./res/ftpserver.jks&quot; password=&quot;password&quot; /&gt;
+                    &lt;/ssl&gt;
+                &lt;/nio-listener&gt;
+        &lt;/listeners&gt;
+        &lt;file-user-manager file=&quot;./res/conf/users.properties&quot; encrypt-passwords=&quot;clear&quot; /&gt;
+&lt;/server&gt;
+</code></pre><h5 id="1-5-启动"><a href="#1-5-启动" class="headerlink" title="1.5 启动"></a>1.5 启动</h5><p>在ftpserver目录下，执行命令：</p>
+<ul>
+<li>方式一：<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sh  bin/ftpd.sh  /res/conf/ftpd-typical.xml</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>此方式有局限，当命令窗口退出时，FTP服务停止。</p>
+<ul>
+<li>方式二：<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">nohup ./bin/ftpd.sh res/conf/ftpd-typical.xml &amp;</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>此方式为后台启动FTP服务，服务一直启动，不管窗口是否退出。</p>
+<ul>
+<li>方式三：<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">nohup sh   apache-ftpserver-1.0.6/bin/ftpd.sh   /res/conf/ftpd-typical.xml &gt; ftplog/`date &apos;+%Y%m%d&apos;`ftp.log  &gt; /dev/null   2&gt;&amp;1  &amp;</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>方式一、二无法启动时，可用此种方式。</p>
+<h5 id="1-5-测试"><a href="#1-5-测试" class="headerlink" title="1.5 测试"></a>1.5 测试</h5><p>在浏览器输入ftp://IP:21后，输入用户名，密码，可以登录ftp目录。</p>
 <hr>
 <h3 id="Suse-Linux-Enterprise-12下实现脚本启动和关闭"><a href="#Suse-Linux-Enterprise-12下实现脚本启动和关闭" class="headerlink" title="Suse Linux Enterprise 12下实现脚本启动和关闭"></a>Suse Linux Enterprise 12下实现脚本启动和关闭</h3><h4 id="1-在-目录下，执行下面命令"><a href="#1-在-目录下，执行下面命令" class="headerlink" title="1. 在~目录下，执行下面命令"></a>1. 在~目录下，执行下面命令</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">vim .profile</div></pre></td></tr></table></figure>
-<h4 id="2-在-profile文件中定义HAPROXY-HOME变量，并将变量追加到PATH后面，效果如下："><a href="#2-在-profile文件中定义HAPROXY-HOME变量，并将变量追加到PATH后面，效果如下：" class="headerlink" title="2. 在.profile文件中定义HAPROXY_HOME变量，并将变量追加到PATH后面，效果如下："></a>2. 在.profile文件中定义HAPROXY_HOME变量，并将变量追加到PATH后面，效果如下：</h4><pre><code># .profile
-
-# Get the aliases and functions
-if [ -f ~/.bashrc ]; then
-        . ~/.bashrc
-fi
-
-# User specific environment and startup programs
-
-HAPROXY_HOME=/usr/local/haproxy
-PATH=$PATH:$HOME/bin:$HAPROXY_HOME
-
-export HAPROXY_HOME
-export PATH
+<h4 id="2-在-profile文件中定义FTPSERVER-HOME变量，并将变量追加到PATH后面，效果如下："><a href="#2-在-profile文件中定义FTPSERVER-HOME变量，并将变量追加到PATH后面，效果如下：" class="headerlink" title="2. 在.profile文件中定义FTPSERVER_HOME变量，并将变量追加到PATH后面，效果如下："></a>2. 在.profile文件中定义FTPSERVER_HOME变量，并将变量追加到PATH后面，效果如下：</h4><pre><code>export RC_LANG=zh_CN.UTF-8
+export FTPSERVER_HOME=/usr/local/ftpserver
+export PATH=$PATH:$FTPSERVER_HOME
 </code></pre><p>保存并退出。</p>
 <h4 id="3-执行下面命令，使立即生效"><a href="#3-执行下面命令，使立即生效" class="headerlink" title="3. 执行下面命令，使立即生效"></a>3. 执行下面命令，使立即生效</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">source ~/.profile</div></pre></td></tr></table></figure>
-<h4 id="4-执行下面命令，在HAPROXY-HOME目录下创建脚本文件，"><a href="#4-执行下面命令，在HAPROXY-HOME目录下创建脚本文件，" class="headerlink" title="4. 执行下面命令，在HAPROXY_HOME目录下创建脚本文件，"></a>4. 执行下面命令，在HAPROXY_HOME目录下创建脚本文件，</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">vim /usr/local/haproxy/haproxy</div></pre></td></tr></table></figure>
+<h4 id="4-执行下面命令，在FTPSERVER-HOME目录下创建脚本文件，"><a href="#4-执行下面命令，在FTPSERVER-HOME目录下创建脚本文件，" class="headerlink" title="4. 执行下面命令，在FTPSERVER_HOME目录下创建脚本文件，"></a>4. 执行下面命令，在FTPSERVER_HOME目录下创建脚本文件，</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">vim /usr/local/ftpserver/ftpserver</div></pre></td></tr></table></figure>
 <p>在文件中写入如下代码，保存并退出。</p>
 <pre><code>#!/bin/bash
-# /usr/local/haproxy
-# YPN 2018-02-01 Create
+# /usr/local/ftpserver
+# YPN 2018-04-11 Create
 
 if [ &quot;$1&quot;x = &quot;start&quot;x ]; then
-  /usr/local/haproxy/sbin/haproxy -f /usr/local/haproxy/haproxy.cfg
+  nohup /usr/local/ftpserver/bin/ftpd.sh res/conf/ftpd-typical.xml 1&gt;/usr/local/ftpserver/res/log/ftpd.log 2&gt;&amp;1 &amp;
 fi
 if [ &quot;$1&quot;x = &quot;stop&quot;x ]; then
-  killall haproxy
+  kill $(ps aux|grep &quot;ftpserver&quot; | grep -v grep |awk &apos;{print $2}&apos;)
 fi
 if [ &quot;$1&quot;x = &quot;check&quot;x ]; then
-  ps -e|grep haproxy
+  ps -aux|grep &quot;ftpserver&quot; | grep -v grep
 fi
 if [ &quot;$1&quot;x = &quot;log&quot;x ]; then
-  tail -f /usr/local/haproxy/logs/haproxy.pid -n 1000
+  tail -f /usr/local/ftpserver/res/log/ftpd.log -n 1000
 fi
-</code></pre><h4 id="5-给文件添加权限，使脚本文件可以执行，命令为"><a href="#5-给文件添加权限，使脚本文件可以执行，命令为" class="headerlink" title="5. 给文件添加权限，使脚本文件可以执行，命令为"></a>5. 给文件添加权限，使脚本文件可以执行，命令为</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">chmod 755 /usr/local/haproxy/haproxy</div></pre></td></tr></table></figure>
-<h4 id="6-最后，执行下面命令可启动、关闭haproxy或查看日志"><a href="#6-最后，执行下面命令可启动、关闭haproxy或查看日志" class="headerlink" title="6. 最后，执行下面命令可启动、关闭haproxy或查看日志"></a>6. 最后，执行下面命令可启动、关闭haproxy或查看日志</h4><p>启动：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">haproxy start</div></pre></td></tr></table></figure></p>
-<p>关闭：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">haproxy stop</div></pre></td></tr></table></figure></p>
-<p>查看日志：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">haproxy log</div></pre></td></tr></table></figure></p>
-<p>检查haprxy进程：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">haproxy check</div></pre></td></tr></table></figure></p>
-<h4 id="7-随系统自启动"><a href="#7-随系统自启动" class="headerlink" title="7. 随系统自启动"></a>7. 随系统自启动</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">vim /etc/init.d/boot.local</div></pre></td></tr></table></figure>
-<p>加入以下内容，保存退出后生效。</p>
-<pre><code>/usr/local/haproxy/sbin/haproxy -f /usr/local/haproxy/haproxy.cfg
-</code></pre>
+</code></pre><h4 id="5-给文件添加权限，使脚本文件可以执行，命令为"><a href="#5-给文件添加权限，使脚本文件可以执行，命令为" class="headerlink" title="5. 给文件添加权限，使脚本文件可以执行，命令为"></a>5. 给文件添加权限，使脚本文件可以执行，命令为</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">chmod 755 /usr/local/ftpserver/ftpserver</div></pre></td></tr></table></figure>
+<h4 id="6-最后，执行下面命令可启动、关闭ftpserver或查看日志"><a href="#6-最后，执行下面命令可启动、关闭ftpserver或查看日志" class="headerlink" title="6. 最后，执行下面命令可启动、关闭ftpserver或查看日志"></a>6. 最后，执行下面命令可启动、关闭ftpserver或查看日志</h4><p>启动：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ftpserver start</div></pre></td></tr></table></figure></p>
+<p>关闭：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ftpserver stop</div></pre></td></tr></table></figure></p>
+<p>查看日志：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ftpserver log</div></pre></td></tr></table></figure></p>
+<p>检查ftpserver进程：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ftpserver check</div></pre></td></tr></table></figure></p>
+<h4 id="7-随系统自启动"><a href="#7-随系统自启动" class="headerlink" title="7. 随系统自启动"></a>7. 随系统自启动</h4><blockquote>
+<p>暂未找到解决办法</p>
+</blockquote>
+
         </div>
 
         <!-- YPN Add 2016-11-14 增加打赏 start -->
@@ -392,7 +283,7 @@ fi
         <!-- 多说最近访客 end -->
 
         <!-- 多说评论框 start -->
-        <div class="ds-thread" data-thread-key="2018/02/01/【HAProxy】脚本启动和关闭/" data-title="【HAProxy】脚本启动和关闭" data-url="http://yoursite.com/2018/02/01/【HAProxy】脚本启动和关闭/"></div>
+        <div class="ds-thread" data-thread-key="2018/04/10/【FTP】apache-ftpserver安装配置/" data-title="【FTP】apache ftpserver安装配置" data-url="http://yoursite.com/2018/04/10/【FTP】apache-ftpserver安装配置/"></div>
         <!-- 多说评论框 end -->
 
         <!-- YPN ADD 2017-11-02 新增 Hitokoto·一言经典语句-->
