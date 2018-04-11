@@ -31,7 +31,7 @@
        <link rel="stylesheet" href="/css/style.light.css"> -->
   
   
-  <link rel="stylesheet" href="/css/style.light.css">
+  <link rel="stylesheet" href="/css/style.dark.css">
 
   <script type="text/javascript" src="/js/jquery-1.11.3.min.js"></script>
 </head>
@@ -126,7 +126,7 @@
           <!-- Date -->
           <span class="date-time info">发表于
             <span class="date">2016-11-22</span>
-            <span class="time">15:10:22</span>
+            <span class="time">22:39:29</span>
           </span>
           
           <!--  Categories  -->
@@ -357,6 +357,18 @@
 <tr>
 <td>find -inum 2243223 -delete</td>
 <td style="text-align:left">使用find命令查询并且删除乱码文件或文件夹</td>
+</tr>
+<tr>
+<td>rm -rf fileA</td>
+<td style="text-align:left">删除文件或文件夹fileA的软链接</td>
+</tr>
+<tr>
+<td>ln -s fileB fileA</td>
+<td style="text-align:left">设置软链接用快捷方式fileB代替fileA</td>
+</tr>
+<tr>
+<td>ln fileB fileA</td>
+<td style="text-align:left">建立硬链接，相当于一个文件存储在两个位置，可以有效防止误删</td>
 </tr>
 </tbody>
 </table>

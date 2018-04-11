@@ -31,7 +31,7 @@
        <link rel="stylesheet" href="/css/style.light.css"> -->
   
   
-  <link rel="stylesheet" href="/css/style.light.css">
+  <link rel="stylesheet" href="/css/style.dark.css">
 
   <script type="text/javascript" src="/js/jquery-1.11.3.min.js"></script>
 </head>
@@ -118,6 +118,44 @@
 <div class="container">
   <div class="row">
     <div class="col-lg-10 col-md-10 col-md-offset-1">
+      
+        <div class="post-item-wrapper">
+  <a href="/2017/08/17/【Java】tomcat部署项目访问不加项目名设置/" class="post-title">
+      【Java】tomcat部署项目访问不加项目名设置
+  </a>
+  <div class="post-excerpt">
+    <!-- Post Date and Categories -->
+    <div class="date-and-category">
+      <div class="date">2017-08-17</div>
+      <div class="categories">
+        
+          
+
+<a href="/categories/Java/">Java</a>
+
+        
+      </div>
+    </div>
+    <!-- Post Excerpt -->
+    <div class="excerpt typo"><ol>
+<li><p>打开conf目录下server.xml；</p>
+</li>
+<li><p>在Host内添加如下Context，其中docBase改为自己的项目路径即可。</p>
+<pre><code>&lt;Context path=&quot;&quot; docBase=&quot;/usr/tomcat/webapps/xxExpert&quot; reloadable=&quot;false&quot; /&gt;
+</code></pre></div>
+    <!-- Post Tags -->
+    <div class="tags">
+      
+        
+
+<a class="tag" href="/tags/Java/">Java</a> <a class="tag" href="/tags/tomcat/">tomcat</a>
+
+
+      
+    </div>
+  </div>
+</div>
+
       
         <div class="post-item-wrapper">
   <a href="/2017/08/11/【Linux】CentOS使用iptables/" class="post-title">
@@ -441,39 +479,6 @@ SET CATALINA_HOME=D:\Program Files\tomcat6.0.35
         
 
 <a class="tag" href="/tags/Java/">Java</a> <a class="tag" href="/tags/tomcat/">tomcat</a>
-
-
-      
-    </div>
-  </div>
-</div>
-
-      
-        <div class="post-item-wrapper">
-  <a href="/2016/12/28/【Java】jdk下载安装/" class="post-title">
-      【Java】jdk下载安装
-  </a>
-  <div class="post-excerpt">
-    <!-- Post Date and Categories -->
-    <div class="date-and-category">
-      <div class="date">2016-12-28</div>
-      <div class="categories">
-        
-          
-
-<a href="/categories/Java/">Java</a>
-
-        
-      </div>
-    </div>
-    <!-- Post Excerpt -->
-    <div class="excerpt typo"><h3 id="JDK官网下载"><a href="#JDK官网下载" class="headerlink" title="JDK官网下载"></a>JDK<a href="http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html">官网下载</a></h3></div>
-    <!-- Post Tags -->
-    <div class="tags">
-      
-        
-
-<a class="tag" href="/tags/Java/">Java</a> <a class="tag" href="/tags/jdk/">jdk</a>
 
 
       
