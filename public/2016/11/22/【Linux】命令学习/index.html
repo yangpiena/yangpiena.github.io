@@ -31,7 +31,7 @@
        <link rel="stylesheet" href="/css/style.light.css"> -->
   
   
-  <link rel="stylesheet" href="/css/style.dark.css">
+  <link rel="stylesheet" href="/css/style.light.css">
 
   <script type="text/javascript" src="/js/jquery-1.11.3.min.js"></script>
 </head>
@@ -126,7 +126,7 @@
           <!-- Date -->
           <span class="date-time info">发表于
             <span class="date">2016-11-22</span>
-            <span class="time">22:39:29</span>
+            <span class="time">16:13:33</span>
           </span>
           
           <!--  Categories  -->
@@ -359,6 +359,10 @@
 <td style="text-align:left">使用find命令查询并且删除乱码文件或文件夹</td>
 </tr>
 <tr>
+<td>——————————————–</td>
+<td style="text-align:left">————————————————————————–</td>
+</tr>
+<tr>
 <td>rm -rf fileA</td>
 <td style="text-align:left">删除文件或文件夹fileA的软链接</td>
 </tr>
@@ -369,6 +373,46 @@
 <tr>
 <td>ln fileB fileA</td>
 <td style="text-align:left">建立硬链接，相当于一个文件存储在两个位置，可以有效防止误删</td>
+</tr>
+<tr>
+<td>—————————————————-</td>
+<td style="text-align:left">——————————————————————</td>
+</tr>
+<tr>
+<td><strong>删除指定文件夹下后缀名相同的文件</strong></td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td>—————————————————-</td>
+<td style="text-align:left">——————————————————————</td>
+</tr>
+<tr>
+<td>find 目录 -name ‘*.abc’ &#124; xargs rm</td>
+<td style="text-align:left">命令危险，可先执行前半段进行查看, 确认后再整条执行</td>
+</tr>
+<tr>
+<td>find . -name ‘*.exe’ -type f -print -exec rm -rf {} \;</td>
+<td style="text-align:left">1) “.”表示从当前目录开始递归查找</td>
+</tr>
+<tr>
+<td></td>
+<td style="text-align:left">2) “-name ‘*.exe’”根据名称来查找所有以.exe结尾的文件夹或者文件</td>
+</tr>
+<tr>
+<td></td>
+<td style="text-align:left">3) “-type f”查找的类型为文件</td>
+</tr>
+<tr>
+<td></td>
+<td style="text-align:left">4) “-print”输出查找的文件目录名</td>
+</tr>
+<tr>
+<td></td>
+<td style="text-align:left">5) “-exec”后边跟要执行的命令，表示将find出来的文件或目录执行该命令</td>
+</tr>
+<tr>
+<td></td>
+<td style="text-align:left">最后是一对{}，一个空格和一个\，一个分号</td>
 </tr>
 </tbody>
 </table>
@@ -405,7 +449,7 @@
 <td style="text-align:left">————————————————————————–</td>
 </tr>
 <tr>
-<td>进入vi</td>
+<td><strong>进入vi</strong></td>
 <td style="text-align:left"></td>
 </tr>
 <tr>
@@ -441,7 +485,7 @@
 <td style="text-align:left">————————————————————————–</td>
 </tr>
 <tr>
-<td>保存退出</td>
+<td><strong>保存退出</strong></td>
 <td style="text-align:left"></td>
 </tr>
 <tr>
@@ -497,7 +541,7 @@
 <td style="text-align:left">————————————————————————–</td>
 </tr>
 <tr>
-<td>光标移动</td>
+<td><strong>光标移动</strong></td>
 <td style="text-align:left"></td>
 </tr>
 <tr>
@@ -601,7 +645,7 @@
 <td style="text-align:left">————————————————————————–</td>
 </tr>
 <tr>
-<td>屏幕翻滚</td>
+<td><strong>屏幕翻滚</strong></td>
 <td style="text-align:left"></td>
 </tr>
 <tr>
@@ -633,7 +677,7 @@
 <td style="text-align:left">————————————————————————–</td>
 </tr>
 <tr>
-<td>插入</td>
+<td><strong>插入</strong></td>
 <td style="text-align:left"></td>
 </tr>
 <tr>
@@ -693,7 +737,7 @@
 <td style="text-align:left">————————————————————————–</td>
 </tr>
 <tr>
-<td>删除</td>
+<td><strong>删除</strong></td>
 <td style="text-align:left"></td>
 </tr>
 <tr>
@@ -741,7 +785,7 @@
 <td style="text-align:left">————————————————————————–</td>
 </tr>
 <tr>
-<td>复制粘贴、剪切、移动</td>
+<td><strong>复制粘贴、剪切、移动</strong></td>
 <td style="text-align:left"></td>
 </tr>
 <tr>
@@ -793,7 +837,7 @@
 <td style="text-align:left">————————————————————————–</td>
 </tr>
 <tr>
-<td>搜索（查找）</td>
+<td><strong>搜索（查找）</strong></td>
 <td style="text-align:left"></td>
 </tr>
 <tr>
@@ -825,7 +869,7 @@
 <td style="text-align:left">————————————————————————–</td>
 </tr>
 <tr>
-<td>替换</td>
+<td><strong>替换</strong></td>
 <td style="text-align:left"></td>
 </tr>
 <tr>
@@ -873,7 +917,7 @@
 <td style="text-align:left">————————————————————————–</td>
 </tr>
 <tr>
-<td>寄存器</td>
+<td><strong>寄存器</strong></td>
 <td style="text-align:left"></td>
 </tr>
 <tr>
@@ -905,7 +949,7 @@
 <td style="text-align:left">————————————————————————–</td>
 </tr>
 <tr>
-<td>选项设置</td>
+<td><strong>选项设置</strong></td>
 <td style="text-align:left"></td>
 </tr>
 <tr>
