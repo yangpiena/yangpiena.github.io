@@ -120,6 +120,39 @@
     <div class="col-lg-10 col-md-10 col-md-offset-1">
       
         <div class="post-item-wrapper">
+  <a href="/2017/12/19/【HAProxy】安装配置/" class="post-title">
+      【HAProxy】安装配置
+  </a>
+  <div class="post-excerpt">
+    <!-- Post Date and Categories -->
+    <div class="date-and-category">
+      <div class="date">2017-12-19</div>
+      <div class="categories">
+        
+          
+
+<a href="/categories/HAProxy/">HAProxy</a>
+
+        
+      </div>
+    </div>
+    <!-- Post Excerpt -->
+    <div class="excerpt typo"><h3 id="HAProxy下载"><a href="#HAProxy下载" class="headerlink" title="HAProxy下载"></a>HAProxy下载</h3><p><a href="https://www.haproxy.org/">官网下载</a><br><a href="https://fossies.org/linux/misc/">Fossies下载</a><br><a href="http://cbonte.github.io/haproxy-dconv/">官方文档</a></p></div>
+    <!-- Post Tags -->
+    <div class="tags">
+      
+        
+
+<a class="tag" href="/tags/HAProxy/">HAProxy</a>
+
+
+      
+    </div>
+  </div>
+</div>
+
+      
+        <div class="post-item-wrapper">
   <a href="/2017/08/17/【Java】tomcat部署项目访问不加项目名设置/" class="post-title">
       【Java】tomcat部署项目访问不加项目名设置
   </a>
@@ -431,48 +464,6 @@ pause
 </code></pre><blockquote>
 <p>-Xms：初始值<br>-Xmx：最大值<br>-Xmn：最小值</p>
 </blockquote></div>
-    <!-- Post Tags -->
-    <div class="tags">
-      
-        
-
-<a class="tag" href="/tags/Java/">Java</a> <a class="tag" href="/tags/tomcat/">tomcat</a>
-
-
-      
-    </div>
-  </div>
-</div>
-
-      
-        <div class="post-item-wrapper">
-  <a href="/2016/12/28/【Java】tomcat下载和安装/" class="post-title">
-      【Java】tomcat下载和安装
-  </a>
-  <div class="post-excerpt">
-    <!-- Post Date and Categories -->
-    <div class="date-and-category">
-      <div class="date">2016-12-28</div>
-      <div class="categories">
-        
-          
-
-<a href="/categories/Java/">Java</a>
-
-        
-      </div>
-    </div>
-    <!-- Post Excerpt -->
-    <div class="excerpt typo"><h3 id="Tomcat官网下载"><a href="#Tomcat官网下载" class="headerlink" title="Tomcat官网下载"></a>Tomcat<a href="https://tomcat.apache.org/">官网下载</a></h3><hr>
-<h3 id="Tomcat安装"><a href="#Tomcat安装" class="headerlink" title="Tomcat安装"></a>Tomcat安装</h3><h4 id="1-Windows下"><a href="#1-Windows下" class="headerlink" title="1. Windows下"></a>1. Windows下</h4><h5 id="1-1-将下载的apache-tomcat-6-0-35-windows-x86-zip压缩包解压。"><a href="#1-1-将下载的apache-tomcat-6-0-35-windows-x86-zip压缩包解压。" class="headerlink" title="1.1 将下载的apache-tomcat-6.0.35-windows-x86.zip压缩包解压。"></a>1.1 将下载的apache-tomcat-6.0.35-windows-x86.zip压缩包解压。</h5><h5 id="1-2-修改-bin-startup-bat文件，在第一行前面加入以下内容："><a href="#1-2-修改-bin-startup-bat文件，在第一行前面加入以下内容：" class="headerlink" title="1.2 修改\bin\startup.bat文件，在第一行前面加入以下内容："></a>1.2 修改\bin\startup.bat文件，在第一行前面加入以下内容：</h5><pre><code>REM JDK安装所在的路径
-SET JAVA_HOME=D:\Program Files\Java\jdk1.6.0_30
-REM 免安装的Tomcat解压后的路径
-SET CATALINA_HOME=D:\Program Files\tomcat6.0.35
-</code></pre><p>如果需要使用shutdown.bat关闭服务器的话，也按照上面加入。</p>
-<h5 id="1-3-这样，运行startup-bat就可以启动Tomcat，运行shutdown-bat就可以关闭服务器了。"><a href="#1-3-这样，运行startup-bat就可以启动Tomcat，运行shutdown-bat就可以关闭服务器了。" class="headerlink" title="1.3 这样，运行startup.bat就可以启动Tomcat，运行shutdown.bat就可以关闭服务器了。"></a>1.3 这样，运行startup.bat就可以启动Tomcat，运行shutdown.bat就可以关闭服务器了。</h5><h5 id="1-4-修改-conf-tomcat-users-xml文件，在-lt-tomcat-users-gt-标签内加入"><a href="#1-4-修改-conf-tomcat-users-xml文件，在-lt-tomcat-users-gt-标签内加入" class="headerlink" title="1.4 修改\conf\tomcat-users.xml文件，在&lt;tomcat-users&gt;标签内加入"></a>1.4 修改\conf\tomcat-users.xml文件，在<code>&lt;tomcat-users&gt;</code>标签内加入</h5><pre><code>&lt;role rolename=&quot;manager&quot;/&gt;
-&lt;role rolename=&quot;admin&quot;/&gt;
-&lt;user username=&quot;admin&quot; password=&quot;admin&quot; roles=&quot;admin,manager&quot;/&gt;
-</code></pre><p>这样才可以使用Tomcat的管理界面。</p></div>
     <!-- Post Tags -->
     <div class="tags">
       
