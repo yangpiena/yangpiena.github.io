@@ -16,13 +16,13 @@ toc: true
 
 
 #### 音乐
-[SongTaste](http://www.songtaste.com/)                        |  [AeKun](https://www.aekun.com/)                                                              |  [网易云音乐](http://music.163.com)
+[SongTaste](http://www.songtaste.com/)                        |  [AeKun](https://www.aekun.com/)                                                              |  [网易云音乐](http://music.163.com)                                                              |  [VIP付费音乐解析下载](http://music.zhuolin.wang/)
 
 &nbsp;
 
 
 #### 电影
-[BT下载](http://www.qinou.cn/)                                |  [BT之家](http://www.btbtt99.com/)                                                              |  [破晓电影](http://www.poxiao.com)                                                              |  [天天美剧](http://cn163.net/)                                                              |  [放电影网](http://www.fangdianying.tv/)                                                              |  [电影天堂](http://www.dy2018.com/)                                                              |  [面包网](http://www.mianbao99.com/)                                                              |  [迅雷电影下载](http://www.xlpu.cc/)                                                              |  [快播电影](http://www.bubulai.com/)                                                              |  [预告片世界](http://www.yugaopian.cn/)                                                              |  [LOL电影天堂](http://www.loldytt.com/)                                                              |  [免费吧](http://www.mianfeib.com/)
+[BT下载](http://www.qinou.cn/)                                |  [BT之家](http://www.btbtt33.com/)                                                              |  [BT之家](http://www.415.net)                                                              |  [BT之家](http://www.btbtt.com)                                                              |  [BT之家](http://www.btbta.com)                                                              |  [破晓电影](http://www.poxiao.com)                                                              |  [天天美剧](http://cn163.net/)                                                              |  [放电影网](http://www.fangdianying.tv/)                                                              |  [电影天堂](http://www.dy2018.com/)                                                              |  [面包网](http://www.mianbao99.com/)                                                              |  [迅雷电影下载](http://www.xlpu.cc/)                                                              |  [快播电影](http://www.bubulai.com/)                                                              |  [预告片世界](http://www.yugaopian.cn/)                                                              |  [LOL电影天堂](http://www.loldytt.com/)                                                              |  [免费吧](http://www.mianfeib.com/)
 [人人影视](http://www.yyets.com/)
 
 
@@ -55,6 +55,8 @@ toc: true
 [MakePic.com 图片制造](http://www.makepic.com/)
 [草料二维码美化器](http://mh.cli.im/)
 [简繁体在线转换工具](http://tool.lu/zhconvert/)
+[核心价值编码器](https://sym233.github.io/core-values-encoder/)
+[核心价值编码器源码](https://github.com/sym233/core-values-encoder)
 
 &nbsp;
 
@@ -239,6 +241,8 @@ toc: true
 #### VB
 [VB源码](http://www.codesky.net/vb/)
 [VB函数大全](http://www10.zzu.edu.cn/ie_wangjunfeng/daquan/function/index.aspx)
+[MZ-Tools的博客](https://www.mztools.com/blog/moving-from-mz-tools-3-0-to-8-0/)
+[VB下的插件开发](https://blog.csdn.net/guyehanxinlei/article/details/1506461)
 [VB实现Base64 编解码](http://blog.csdn.net/iamlaosong/article/details/38229755)
 [VB动态调用类模块中的函数的方法 - CSDN博客](https://blog.csdn.net/keikisou/article/details/50564156)
 [VB几种函数参数传递方法，Variant，数组，Optional，ParamArray](https://blog.csdn.net/whchensir/article/details/52050796)

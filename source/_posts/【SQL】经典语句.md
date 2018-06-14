@@ -357,6 +357,10 @@ sp_renamedb 'old_name', 'new_name'
 	INSERT 表2 
 	SELECT * FROM 表1 AS a WHERE NOT EXISTS(SELECT 1 FROM 表2 WHERE ID = a.ID);
 
+## 33、判断某列中是否包含中文字符或者英文字符
+	SELECT * FROM 表名 WHERE 某列 LIKE '%[吖-座]%'
+	SELECT * FROM 表名 WHERE 某列 LIKE '%[a-z]%'
+
 ---
 
 # 三、技巧篇
