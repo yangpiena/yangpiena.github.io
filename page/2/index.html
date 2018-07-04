@@ -120,6 +120,72 @@
     <div class="col-lg-10 col-md-10 col-md-offset-1">
       
         <div class="post-item-wrapper">
+  <a href="/2017/12/20/【HAProxy】ACL规则定义/" class="post-title">
+      【HAProxy】ACL规则定义
+  </a>
+  <div class="post-excerpt">
+    <!-- Post Date and Categories -->
+    <div class="date-and-category">
+      <div class="date">2017-12-20</div>
+      <div class="categories">
+        
+          
+
+<a href="/categories/HAProxy/">HAProxy</a>
+
+        
+      </div>
+    </div>
+    <!-- Post Excerpt -->
+    <div class="excerpt typo"><p>HAProxy的ACL具有很强大的功能，能够定义三到七层的规则。ACL的作用，就是为了匹配一些特别的请求，然后对其进行修改或者分发到不同的服务器组中。<br>HAProxy的ACL用于实现基于请求报文的首部、响应报文的内容或 其它的环境状态信息来做出转发决策，这大大增强了其配置弹性。 其配置法则通常分为两步，首先去定义ACL，即定义一个测试条件 ，而后在条件得到满足时执行某特定的动作，如阻止请求或转发至 某特定的后端。</p></div>
+    <!-- Post Tags -->
+    <div class="tags">
+      
+        
+
+<a class="tag" href="/tags/HAProxy/">HAProxy</a>
+
+
+      
+    </div>
+  </div>
+</div>
+
+      
+        <div class="post-item-wrapper">
+  <a href="/2017/12/20/【HAProxy】负载均衡算法/" class="post-title">
+      【HAProxy】负载均衡算法
+  </a>
+  <div class="post-excerpt">
+    <!-- Post Date and Categories -->
+    <div class="date-and-category">
+      <div class="date">2017-12-20</div>
+      <div class="categories">
+        
+          
+
+<a href="/categories/HAProxy/">HAProxy</a>
+
+        
+      </div>
+    </div>
+    <!-- Post Excerpt -->
+    <div class="excerpt typo"><p>使用balance定义负载均衡算法，可用于“defaults”、“listen”和“backend”。用于在负载均衡场景中挑选一个server，其仅应用于用户新请求或需要将一个连接重新派发至另一个服务器时。常用的算法有：undrobin、source和lestconn。</p></div>
+    <!-- Post Tags -->
+    <div class="tags">
+      
+        
+
+<a class="tag" href="/tags/HAProxy/">HAProxy</a>
+
+
+      
+    </div>
+  </div>
+</div>
+
+      
+        <div class="post-item-wrapper">
   <a href="/2017/12/19/【HAProxy】安装配置/" class="post-title">
       【HAProxy】安装配置
   </a>
@@ -395,81 +461,6 @@ ConfirmFileOp=0
         
 
 <a class="tag" href="/tags/Windows/">Windows</a> <a class="tag" href="/tags/美化/">美化</a>
-
-
-      
-    </div>
-  </div>
-</div>
-
-      
-        <div class="post-item-wrapper">
-  <a href="/2016/12/28/【Kettle】使用命令行来运行数据库job/" class="post-title">
-      【Kettle】使用命令行来运行数据库job
-  </a>
-  <div class="post-excerpt">
-    <!-- Post Date and Categories -->
-    <div class="date-and-category">
-      <div class="date">2016-12-28</div>
-      <div class="categories">
-        
-          
-
-<a href="/categories/Kettle/">Kettle</a>
-
-        
-      </div>
-    </div>
-    <!-- Post Excerpt -->
-    <div class="excerpt typo"><p>当您的Job是在数据库中存储，并需要通过命令行（.bat）方式运行时，如下编辑.bat文件即可：</p>
-<pre><code>d:
-cd d:\data-integration
-kitchen /rep xxKettle /dir taby /user admin /pass admin /job tabyToXX_Job /level basic /logfile D:\KettleLog\kettlelog.log
-pause
-</code></pre></div>
-    <!-- Post Tags -->
-    <div class="tags">
-      
-        
-
-<a class="tag" href="/tags/Kettle/">Kettle</a> <a class="tag" href="/tags/job/">job</a>
-
-
-      
-    </div>
-  </div>
-</div>
-
-      
-        <div class="post-item-wrapper">
-  <a href="/2016/12/28/【Java】tomcat启动jvm内存设置/" class="post-title">
-      【Java】tomcat启动jvm内存设置
-  </a>
-  <div class="post-excerpt">
-    <!-- Post Date and Categories -->
-    <div class="date-and-category">
-      <div class="date">2016-12-28</div>
-      <div class="categories">
-        
-          
-
-<a href="/categories/Java/">Java</a>
-
-        
-      </div>
-    </div>
-    <!-- Post Excerpt -->
-    <div class="excerpt typo"><h4 id="Linux"><a href="#Linux" class="headerlink" title="Linux"></a>Linux</h4><p>在/usr/local/apache-tomcat-7.0.57/bin目录下的catalina.sh中添加：</p>
-<pre><code>JAVA_OPTS=&apos;-Xms512m -Xmx1024m&apos;
-</code></pre><blockquote>
-<p>-Xms：初始值<br>-Xmx：最大值<br>-Xmn：最小值</p>
-</blockquote></div>
-    <!-- Post Tags -->
-    <div class="tags">
-      
-        
-
-<a class="tag" href="/tags/Java/">Java</a> <a class="tag" href="/tags/tomcat/">tomcat</a>
 
 
       

@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html>
+  <!-- Html Head Tag-->
+  <head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="昜丿捺">
+  <!-- Open Graph Data -->
+  <meta property="og:title" content="【C++】在VS2017中使用C++创建和使用DLL"/>
+  <meta property="og:description" content="没有阳光，沉默而居" />
+  <meta property="og:site_name" content="昜丿捺"/>
+  <meta property="og:type" content="article" />
+  <meta property="og:image" content="http://yoursite.comundefined"/>
+  
+    <link rel="alternate" href="/atom.xml" title="昜丿捺" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.ico">
+  
+
+  <!-- Site Title -->
+  <title>昜丿捺</title>
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="/css/bootstrap.min.css">
+  <!-- Custom CSS -->
+  <!-- YPN Edit 2016-11-11 增加根据时间自动切换主题风格 -->
+  <!-- 
+       <link rel="stylesheet" href="/css/style.light.css"> -->
+  
+  
+  <link rel="stylesheet" href="/css/style.light.css">
+
+  <script type="text/javascript" src="/js/jquery-1.11.3.min.js"></script>
+</head>
+
+  <body>
+    <!-- Page Header -->
+
+
+<header class="site-header header-background" style="background-image: url(http://ogoh2gimk.bkt.clouddn.com/yangpiena-banner.jpg)">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <div class="page-title with-background-image">
+          <p class="title">【C++】在VS2017中使用C++创建和使用DLL</p>
+          <p class="subtitle"></p>
+        </div>
+        <div class="site-menu with-background-image">
+          <ul>
+            
+              <li>
+                <a href="/">
+                  
+                  主页
+                  
+                </a>
+              </li>
+            
+              <li>
+                <a href="/archives">
+                  
+                  归类
+                  
+                </a>
+              </li>
+            
+              <li>
+                <a href="/tags">
+                  
+                  标签
+                  
+                </a>
+              </li>
+            
+              <li>
+                <a href="/links">
+                  
+                  链接
+                  
+                </a>
+              </li>
+            
+              <li>
+                <a href="/photos">
+                  
+                  相册
+                  
+                </a>
+              </li>
+            
+              <li>
+                <a href="/about">
+                  
+                  关于
+                  
+                </a>
+              </li>
+            
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+<!-- YPN Del 2016-12-27 因swiftype不能免费使用了，固已注销账号，停止使用搜索功能。
+  
+    <form class="search" action="/search/index.html" method="get" accept-charset="utf-8" style="text-align:right">
+    <label>Search</label>
+    <input type="text" id="search" class="st-default-search-input" maxlength="20" placeholder="Search" />
+    </form>
+  
+-->
+</header>
+
+<article>
+  <div class="container typo">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <div class="post-info text-muted">
+          
+            <!-- Author -->
+            <span class="author info">作者 昜丿捺</span>
+          
+          <!-- Date -->
+          <span class="date-time info">发表于
+            <span class="date">2018-07-03</span>
+            <span class="time">09:43:20</span>
+          </span>
+          
+          <!--  Categories  -->
+            <span class="categories info">分类于 
+
+<a href="/categories/C/">C++</a>
+</span>
+          
+
+          <!-- YPN Add 2016-11-14 增加热度 -->
+          <span id="busuanzi_container_page_pv">
+            &nbsp;&nbsp; 热度&nbsp; <span id="busuanzi_value_page_pv"></span>°C
+          </span>
+
+        </div>
+        <!-- Tags -->
+        
+          <div class="post-tags text-muted">
+            标签: 
+
+<a class="tag" href="/tags/C/">#C++</a>
+
+
+          </div>
+        
+        <!-- Post Main Content -->
+        <div class="post-content">
+
+			<!-- YPN Add 2017-02-27 Table of Contents -->
+			
+			
+          	<h4 id="创建DLL"><a href="#创建DLL" class="headerlink" title="创建DLL"></a>创建DLL</h4><p>1、打开Visual Studio 2017，创建如下图的工程：<br><img src="http://ogoh2gimk.bkt.clouddn.com/newProject.png" alt=""><br><img src="http://ogoh2gimk.bkt.clouddn.com/newProject2.png" alt=""></p>
+<p>2、右键项目》添加》新建项》头文件(.h)<br><img src="http://ogoh2gimk.bkt.clouddn.com/newh.png" alt=""><br>在头文件中输入以下代码：<br><figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">extern</span> <span class="string">"C"</span></div><div class="line">&#123;</div><div class="line">	__declspec(dllexport) <span class="keyword">int</span> __<span class="function">stdcall <span class="title">add</span><span class="params">(<span class="keyword">int</span> a, <span class="keyword">int</span> b)</span></span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>3、右键项目》添加》新建项》C++文件(.cpp)<br><img src="http://ogoh2gimk.bkt.clouddn.com/newcpp.png" alt=""><br>在C++文件中输入以下代码：<br><figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">"DWGNoEnDe.h"</span></span></div><div class="line"><span class="keyword">extern</span> <span class="string">"C"</span></div><div class="line">&#123;</div><div class="line">	<span class="keyword">int</span> __<span class="function">stdcall <span class="title">add</span><span class="params">(<span class="keyword">int</span> a, <span class="keyword">int</span> b)</span></span></div><div class="line">	&#123;</div><div class="line">		<span class="keyword">int</span> c;</div><div class="line">		c = a + b;</div><div class="line">		<span class="keyword">return</span> c;</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>4、右键项目》添加》新建项》模块定义文件(.def)<br><img src="http://ogoh2gimk.bkt.clouddn.com/newdef.png" alt=""><br>在模块定义文件中输入以下代码：<br><figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">LIBRARY</div><div class="line">EXPORTS</div><div class="line">add</div></pre></td></tr></table></figure></p>
+<blockquote>
+<p>add为方法名</p>
+</blockquote>
+<p>5、编译项目，生成DLL<br><img src="http://ogoh2gimk.bkt.clouddn.com/buildDLL.png" alt=""><br>可编译为x86或x64。</p>
+<h4 id="使用DLL"><a href="#使用DLL" class="headerlink" title="使用DLL"></a>使用DLL</h4><h5 id="一、C-调用"><a href="#一、C-调用" class="headerlink" title="一、C++调用"></a>一、C++调用</h5><p>1、新建项目<br><img src="http://ogoh2gimk.bkt.clouddn.com/newWin32.png" alt=""></p>
+<p>2、拷贝编译生成的dll和头文件，到测试项目下面<br><img src="http://ogoh2gimk.bkt.clouddn.com/copyDLLAndH.png" alt=""></p>
+<p>3、右键项目》添加》新建项》C++文件(.cpp)<br><img src="http://ogoh2gimk.bkt.clouddn.com/newcpp2.png" alt=""><br>在C++文件中输入以下代码：<br><figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">"DWGNoEnDe.h"</span></span></div><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">main</span><span class="params">()</span></span></div><div class="line">&#123;</div><div class="line">	<span class="keyword">int</span> a = <span class="number">10</span>;</div><div class="line">	<span class="keyword">int</span> b = <span class="number">23</span>;</div><div class="line">	<span class="keyword">int</span> c = add(a, b);</div><div class="line">	<span class="built_in">printf</span>(<span class="string">"输出：%d\n"</span>,c);</div><div class="line">	getchar();</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>4、点击“本地Windows调试器”运行项目，调用成功<br><img src="http://ogoh2gimk.bkt.clouddn.com/excuteEXE.png" alt=""></p>
+<h5 id="二、VB调用"><a href="#二、VB调用" class="headerlink" title="二、VB调用"></a>二、VB调用</h5><p>1、拷贝C++DLL到exe程序同一目录下</p>
+<p>2、在exe程序中引用C++DLL<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">Public Declare Function add Lib &quot;DWGNoEnDe.dll&quot; (ByVal a As Long, ByVal b As Long) As Long</div></pre></td></tr></table></figure></p>
+<p>3、调用C++DLL的方法<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">Private Sub Command1_Click()</div><div class="line">    Text3.Text = add(CInt(Text1.Text), CInt(Text2.Text))</div><div class="line">End Sub</div></pre></td></tr></table></figure></p>
+<h5 id="三、C-调用"><a href="#三、C-调用" class="headerlink" title="三、C#调用"></a>三、C#调用</h5><p>1、新建控制台应用项目</p>
+<p>2、拷贝C++DLL到<code>项目名称\bin\Debug</code>下，与exe处于同一目录</p>
+<p>3、在<code>Program.cs</code>中输入如下代码：<br><img src="http://ogoh2gimk.bkt.clouddn.com/Programe.cs" alt=""></p>
+<p>4、点击启动运行项目，调用成功</p>
+
+        </div>
+
+        <!-- YPN Add 2016-11-14 增加打赏 start -->
+        <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center">
+          <div></div>
+          <button id="rewardButton", disable="enable", onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}", style="cursor: pointer; border: 0; outline: 0; border-radius: 100%; padding: 0; margin: 0; letter-spacing: normal; text-transform: none; text-indent: 0px; text-shadow: none">
+            <span onmouseover="this.style.color='rgb(236,96,0)';this.style.background='rgb(204,204,204)'" onmouseout="this.style.color='#fff';this.style.background='rgb(236,96,0)'" style="display: inline-block; width: 70px; height: 70px; border-radius: 100%; line-height: 81px; color: #fff; font: 400 35px/75px 'microsofty'; background: rgb(236,96,0)">赏</span>
+          </button>
+          <div id="QR" style="display: none;">
+            
+              <div id="wechat" style="display: inline-block">
+                <img id="wechat_qr" src="/assets/blogImg/YPN_wechatpay-32x32.png" alt="昜丿捺 WeChat Pay" style="width: 200px; max-width: 100%; display: inline-block"/>
+                <p>微信打赏</p>
+              </div>
+            
+          
+            <div id="alipay" style="display: inline-block">
+              <img id="alipay_qr" src="/assets/blogImg/YPN_alipay-32x32.jpg" alt="昜丿捺 Alipay" style="width: 200px; max-width: 100%; display: inline-block"/>
+              <p>支付宝打赏</p>
+            </div>
+          
+          </div>
+        </div>
+        <!-- YPN Add 2016-11-14 增加打赏 end -->
+
+        <!-- 多说最近访客 start -->
+        <div class="ds-recent-visitors" data-num-items="28" data-avatar-size="42" id="ds-recent-visitors"></div>
+        <!-- 多说最近访客 end -->
+
+        <!-- 多说评论框 start -->
+        <div class="ds-thread" data-thread-key="2018/07/03/【C++】在VS2017中使用C++创建和使用DLL/" data-title="【C++】在VS2017中使用C++创建和使用DLL" data-url="http://yoursite.com/2018/07/03/【C++】在VS2017中使用C++创建和使用DLL/"></div>
+        <!-- 多说评论框 end -->
+
+        <!-- YPN ADD 2017-11-02 新增 Hitokoto·一言经典语句-->
+        <script type="text/javascript" src="https://api.lwl12.com/hitokoto/main/get?encode=js&charset=utf-8"></script>
+        <div id="lwlhitokoto"><script>lwlhitokoto()</script></div>
+
+      </div>
+    </div>
+  </div>
+</article>
+
+
+
+    <!-- Footer -->
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <p class="copyright text-muted">
+          Theme By <a target="_blank" href="https://github.com/levblanc">Levblanc.</a>
+          Inspired By <a target="_blank" href="https://github.com/klugjo/hexo-theme-clean-blog">Clean Blog.</a>
+        <p class="copyright text-muted">
+          Powered By <a target="_blank" href="https://hexo.io/">Hexo.</a>
+        <p class="copyright text-muted">
+          本站总访问量 <span id="busuanzi_value_site_pv"></span> 次, 访客数 <span id="busuanzi_value_site_uv"></span> 人次, 本文总阅读量 <span id="busuanzi_value_page_pv"></span> 次
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<script type="text/javascript">
+  (function(w,d,t,u,n,s,e){w['SwiftypeObject']=n;w[n]=w[n]||function(){
+  (w[n].q=w[n].q||[]).push(arguments);};s=d.createElement(t);
+  e=d.getElementsByTagName(t)[0];s.async=1;s.src=u;e.parentNode.insertBefore(s,e);
+  })(window,document,'script','//s.swiftypecdn.com/install/v2/st.js','_st');
+  
+  _st('install','Bw13BEeK5ASKzfM4WzMC','2.0.0');
+</script>
+
+<!--2017-10-06 YPN Add 添加鼠标点击特效 -->
+<script type="text/javascript">
+  /* 鼠标点击特效 */
+  var a_idx = 0;
+  jQuery(document).ready(function($) {
+      $("body").click(function(e) {
+  var a = new Array("富强", "民主", "文明", "和谐", "自由", "平等", "公正" ,"法治", "爱国", "敬业", "诚信", "友善");
+  var $i = $("<span/>").text(a[a_idx]);
+          a_idx = (a_idx + 1) % a.length;
+  var x = e.pageX,
+          y = e.pageY;
+          $i.css({
+  "z-index": 999999999999999999999999999999999999999999999999999999999999999999999,
+  "top": y - 20,
+  "left": x,
+  "cursor":"default",
+  "position": "absolute",
+  "font-weight": "bold",
+  "color": "#ff6651"
+          });
+          $("body").append($i);
+          $i.animate({
+  "top": y - 180,
+  "opacity": 0
+          },
+          1500,
+  function() {
+              $i.remove();
+          });
+      });
+  });
+</script>
+
+<!--2017-10-06 YPN Add 添加输入框特效。 -->
+<script src="/js/activate-power-mode.js"></script>
+<script>
+  POWERMODE.colorful = true; // 控制开启/开启礼花特效  
+  POWERMODE.shake = false;    // 控制开启/关闭屏幕震动特效  
+  document.body.addEventListener('input', POWERMODE);
+</script>
+
+    <!-- After Footer Scripts -->
+<script src="/js/highlight.pack.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function(event) {
+    var codeBlocks = Array.prototype.slice.call(document.getElementsByTagName('pre'))
+    codeBlocks.forEach(function(block, index) {
+      hljs.highlightBlock(block);
+    });
+  });
+</script>
+
+<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+<script type="text/javascript">
+var duoshuoQuery = {short_name:"yangpiena"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '/js/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+<!-- 多说公共JS代码 end -->
+
+<div id="totop" style="position:fixed;bottom:50px;right:30px;cursor: pointer;">
+	<a title="返回顶部"><img src="/img/scrollup.png"/></a>
+</div>
+<script src="/js/totop.js"></script>
+
+<script type="text/javascript" src="https://cdn.bootcss.com/canvas-nest.js/1.0.1/canvas-nest.min.js"></script>
+  </body>
+</html>
+
