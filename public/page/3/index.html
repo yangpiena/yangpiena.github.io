@@ -120,6 +120,81 @@
     <div class="col-lg-10 col-md-10 col-md-offset-1">
       
         <div class="post-item-wrapper">
+  <a href="/2016/12/28/【Kettle】使用命令行来运行数据库job/" class="post-title">
+      【Kettle】使用命令行来运行数据库job
+  </a>
+  <div class="post-excerpt">
+    <!-- Post Date and Categories -->
+    <div class="date-and-category">
+      <div class="date">2016-12-28</div>
+      <div class="categories">
+        
+          
+
+<a href="/categories/Kettle/">Kettle</a>
+
+        
+      </div>
+    </div>
+    <!-- Post Excerpt -->
+    <div class="excerpt typo"><p>当您的Job是在数据库中存储，并需要通过命令行（.bat）方式运行时，如下编辑.bat文件即可：</p>
+<pre><code>d:
+cd d:\data-integration
+kitchen /rep xxKettle /dir taby /user admin /pass admin /job tabyToXX_Job /level basic /logfile D:\KettleLog\kettlelog.log
+pause
+</code></pre></div>
+    <!-- Post Tags -->
+    <div class="tags">
+      
+        
+
+<a class="tag" href="/tags/Kettle/">Kettle</a> <a class="tag" href="/tags/job/">job</a>
+
+
+      
+    </div>
+  </div>
+</div>
+
+      
+        <div class="post-item-wrapper">
+  <a href="/2016/12/28/【Java】tomcat启动jvm内存设置/" class="post-title">
+      【Java】tomcat启动jvm内存设置
+  </a>
+  <div class="post-excerpt">
+    <!-- Post Date and Categories -->
+    <div class="date-and-category">
+      <div class="date">2016-12-28</div>
+      <div class="categories">
+        
+          
+
+<a href="/categories/Java/">Java</a>
+
+        
+      </div>
+    </div>
+    <!-- Post Excerpt -->
+    <div class="excerpt typo"><h4 id="Linux"><a href="#Linux" class="headerlink" title="Linux"></a>Linux</h4><p>在/usr/local/apache-tomcat-7.0.57/bin目录下的catalina.sh中添加：</p>
+<pre><code>JAVA_OPTS=&apos;-Xms512m -Xmx1024m&apos;
+</code></pre><blockquote>
+<p>-Xms：初始值<br>-Xmx：最大值<br>-Xmn：最小值</p>
+</blockquote></div>
+    <!-- Post Tags -->
+    <div class="tags">
+      
+        
+
+<a class="tag" href="/tags/Java/">Java</a> <a class="tag" href="/tags/tomcat/">tomcat</a>
+
+
+      
+    </div>
+  </div>
+</div>
+
+      
+        <div class="post-item-wrapper">
   <a href="/2016/12/28/【Java】tomcat下载和安装/" class="post-title">
       【Java】tomcat下载和安装
   </a>
@@ -403,72 +478,6 @@ SET CATALINA_HOME=D:\Program Files\tomcat6.0.35
         
 
 <a class="tag" href="/tags/Flex/">Flex</a> <a class="tag" href="/tags/scroller/">scroller</a>
-
-
-      
-    </div>
-  </div>
-</div>
-
-      
-        <div class="post-item-wrapper">
-  <a href="/2016/12/22/【Flex】dataGrid自动生成序号/" class="post-title">
-      【Flex】dataGrid自动生成序号
-  </a>
-  <div class="post-excerpt">
-    <!-- Post Date and Categories -->
-    <div class="date-and-category">
-      <div class="date">2016-12-22</div>
-      <div class="categories">
-        
-          
-
-<a href="/categories/Flex/">Flex</a>
-
-        
-      </div>
-    </div>
-    <!-- Post Excerpt -->
-    <div class="excerpt typo"><p>通过LabelFunction属性实现自动生成序号。<br>定义方法：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">/**</div><div class="line">* 生成datagrid第一列用的序号</div><div class="line">*/</div><div class="line">private function formatIndexNumber(item:Object, colum:Object):String</div><div class="line">&#123;</div><div class="line">    return indexNumLabelFun(item, colum.mx_internal::owner);</div><div class="line">&#125;</div><div class="line"> </div><div class="line">public static function indexNumLabelFun(value:Object, dataGrid:Object):String</div><div class="line">&#123;</div><div class="line">   var arr: Array = dataGrid.dataProvider.source;</div><div class="line">   var indexNum: int = (arr.indexOf(value) + 1);            </div><div class="line">   return indexNum.toString();</div><div class="line">&#125;</div></pre></td></tr></table></figure></p></div>
-    <!-- Post Tags -->
-    <div class="tags">
-      
-        
-
-<a class="tag" href="/tags/Flex/">Flex</a> <a class="tag" href="/tags/dataGrid/">dataGrid</a>
-
-
-      
-    </div>
-  </div>
-</div>
-
-      
-        <div class="post-item-wrapper">
-  <a href="/2016/12/22/【Flex】dataGrid设置列对齐方式/" class="post-title">
-      【Flex】dataGrid设置列对齐方式
-  </a>
-  <div class="post-excerpt">
-    <!-- Post Date and Categories -->
-    <div class="date-and-category">
-      <div class="date">2016-12-22</div>
-      <div class="categories">
-        
-          
-
-<a href="/categories/Flex/">Flex</a>
-
-        
-      </div>
-    </div>
-    <!-- Post Excerpt -->
-    <div class="excerpt typo"><p>可参照以下实例设置：<br></div>
-    <!-- Post Tags -->
-    <div class="tags">
-      
-        
-
-<a class="tag" href="/tags/Flex/">Flex</a> <a class="tag" href="/tags/dataGrid/">dataGrid</a>
 
 
       

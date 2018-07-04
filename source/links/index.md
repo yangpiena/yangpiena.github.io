@@ -140,6 +140,12 @@ toc: true
 &nbsp;
 
 
+#### C++
+[C#调用C++ dll导出函数提示找不到指定模块](http://www.bubuko.com/infodetail-1761193.html)
+
+&nbsp;
+
+
 #### C&#35;
 [C#教程](http://www.runoob.com/csharp/csharp-program-structure.html)
 [C#（Net）软件开发常用工具汇总，提高你的开发效率](https://www.cnblogs.com/Jeremy2001/p/6066553.html)
@@ -148,6 +154,9 @@ toc: true
 [Winform开发框架主界面设计展示](http://www.cnblogs.com/wuhuacong/p/3360648.html)
 [仿Office的程序载入窗体](https://www.cnblogs.com/HopeGi/p/3510809.html)
 [C#MDI打开子窗体去掉自动生成的菜单栏](https://blog.csdn.net/shiyangkai/article/details/71479947)
+[C# Tabcontrol组件如何切换显示Form窗体的示例代码](http://www.php.cn/csharp-article-355886.html)
+[Fluent.Ribbon](https://github.com/fluentribbon/Fluent.Ribbon)
+[RibbonWinForms](https://github.com/RibbonWinForms/RibbonWinForms)
 
 &nbsp;
 
@@ -249,6 +258,11 @@ toc: true
 [Sublime Text 2/3安装使用及常用插件](http://www.cnblogs.com/dudumao/p/4054086.html)
 [Sublime Text PackageControl](https://packagecontrol.io/)
 [Sublime Text 3 快捷键](https://segmentfault.com/a/1190000002570753)
+
+&nbsp;
+
+#### SVN
+[apache网站下载](http://subversion.apache.org/packages.html#windows)
 
 &nbsp;
 
