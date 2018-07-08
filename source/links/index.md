@@ -142,6 +142,7 @@ toc: true
 
 #### C++
 [C#调用C++ dll导出函数提示找不到指定模块](http://www.bubuko.com/infodetail-1761193.html)
+[C#多线程编程](https://www.cnblogs.com/luxiaoxun/p/3280146.html)
 
 &nbsp;
 
@@ -149,7 +150,7 @@ toc: true
 #### C&#35;
 [C#教程](http://www.runoob.com/csharp/csharp-program-structure.html)
 [C#（Net）软件开发常用工具汇总，提高你的开发效率](https://www.cnblogs.com/Jeremy2001/p/6066553.html)
-[Winform自动更新组件分享](https://blog.csdn.net/dqs78833488/article/details/52688374)
+[Winform自动更新组件分享](http://www.cnblogs.com/KnightsWarrior/archive/2010/10/20/1856255.html#3754564)
 [Winform开发框架的重要特性总结](https://www.cnblogs.com/wuhuacong/p/3199829.html)
 [Winform开发框架主界面设计展示](http://www.cnblogs.com/wuhuacong/p/3360648.html)
 [仿Office的程序载入窗体](https://www.cnblogs.com/HopeGi/p/3510809.html)
@@ -157,6 +158,7 @@ toc: true
 [C# Tabcontrol组件如何切换显示Form窗体的示例代码](http://www.php.cn/csharp-article-355886.html)
 [Fluent.Ribbon](https://github.com/fluentribbon/Fluent.Ribbon)
 [RibbonWinForms](https://github.com/RibbonWinForms/RibbonWinForms)
+[C# winform程序怎么打包成安装项目(图解)](https://blog.csdn.net/u011981242/article/details/51059441)
 
 &nbsp;
 
