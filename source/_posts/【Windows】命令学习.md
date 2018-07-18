@@ -94,5 +94,6 @@ toc: true
 | 命令                      | 说明 |
 | ------------------------- | :--  |
 |for /f "skip=9 tokens=1,2 delims=:" %i in ('netsh wlan show profiles') do  @echo %j | findstr -i -v echo | netsh wlan show profiles %j key=clear		|列出连接过的wifi信息、加密方式、包括密码|
-| net use * /del /y      | 清除共享或磁盘映射记录列表                    |
-| control userpasswords2 | 依次点击‘高级’—‘管理密码’，删除完毕，确定即可 |
+| net use * /del /y                                                  | 清除共享或磁盘映射记录列表                    |
+| control userpasswords2                                             | 依次点击‘高级’—‘管理密码’，删除完毕，确定即可 |
+| wmic product where "Name like 'Microsoft .Net%'" get Name, Version | 使用 WMI 命令获取.NET版本信息                 |

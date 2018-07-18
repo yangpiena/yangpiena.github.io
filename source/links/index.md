@@ -149,8 +149,10 @@ toc: true
 
 #### C&#35;
 [C#教程](http://www.runoob.com/csharp/csharp-program-structure.html)
+[Vs解决方案的目录结构设置和管理](https://blog.csdn.net/lp310018931/article/details/47991759)
 [C#（Net）软件开发常用工具汇总，提高你的开发效率](https://www.cnblogs.com/Jeremy2001/p/6066553.html)
 [Winform自动更新组件分享](http://www.cnblogs.com/KnightsWarrior/archive/2010/10/20/1856255.html#3754564)
+[Winform(C#.NET)自动更新组件的使用及部分功能实现](https://www.cnblogs.com/24la/p/autoupdater-component.html)
 [Winform开发框架的重要特性总结](https://www.cnblogs.com/wuhuacong/p/3199829.html)
 [Winform开发框架主界面设计展示](http://www.cnblogs.com/wuhuacong/p/3360648.html)
 [仿Office的程序载入窗体](https://www.cnblogs.com/HopeGi/p/3510809.html)
@@ -159,6 +161,8 @@ toc: true
 [Fluent.Ribbon](https://github.com/fluentribbon/Fluent.Ribbon)
 [RibbonWinForms](https://github.com/RibbonWinForms/RibbonWinForms)
 [C# winform程序怎么打包成安装项目(图解)](https://blog.csdn.net/u011981242/article/details/51059441)
+[【.Net】vs2017 自带发布工具 ClickOnce发布包遇到的问题](https://www.cnblogs.com/yanglang/p/8041662.html)
+[Winform打包工具SetupFactory 9 的使用](https://www.cnblogs.com/iiwen/p/5310246.html)
 
 &nbsp;
 
