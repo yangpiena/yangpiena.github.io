@@ -50,7 +50,10 @@ add
 ```
 > add为方法名
 
-5、编译项目，生成DLL
+5、右键项目》属性》配置属性》C/C++》代码生成，设置运行库为：多线程 DLL（/MD）
+![](http://ogoh2gimk.bkt.clouddn.com/%E5%A4%9A%E7%BA%BF%E7%A8%8BDLL.png)
+
+6、编译项目，生成Release版的DLL
 ![](http://ogoh2gimk.bkt.clouddn.com/buildDLL.png)
 可编译为x86或x64。
 

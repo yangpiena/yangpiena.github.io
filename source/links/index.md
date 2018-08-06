@@ -163,6 +163,12 @@ toc: true
 [C# winform程序怎么打包成安装项目(图解)](https://blog.csdn.net/u011981242/article/details/51059441)
 [【.Net】vs2017 自带发布工具 ClickOnce发布包遇到的问题](https://www.cnblogs.com/yanglang/p/8041662.html)
 [Winform打包工具SetupFactory 9 的使用](https://www.cnblogs.com/iiwen/p/5310246.html)
+[C#动态创建Access数据库及密码的方法](https://www.jb51.net/article/71952.htm)
+[C#编程总结（七）数据加密——附源码](https://www.cnblogs.com/yank/p/3528548.html)
+[C#常用的命名规则汇总](https://www.jb51.net/article/57163.htm)
+[C#三种定时器的实现](https://www.cnblogs.com/zhoug2020/p/5837035.html)
+[C#对WinForm应用程序的App.config的使用及加密](https://www.cnblogs.com/wanzhongjun/p/6534608.html)
+[Winform窗体控件图片过多后卡顿问题](https://blog.csdn.net/facefriends/article/details/79216114)
 
 &nbsp;
 
@@ -280,6 +286,7 @@ toc: true
 [VB实现Base64 编解码](http://blog.csdn.net/iamlaosong/article/details/38229755)
 [VB动态调用类模块中的函数的方法 - CSDN博客](https://blog.csdn.net/keikisou/article/details/50564156)
 [VB几种函数参数传递方法，Variant，数组，Optional，ParamArray](https://blog.csdn.net/whchensir/article/details/52050796)
+[VB调用c++写的Dll的一点总结](https://blog.csdn.net/emma_he/article/details/3023337)
 
 &nbsp;
 
