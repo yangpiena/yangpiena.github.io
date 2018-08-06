@@ -126,7 +126,7 @@
           <!-- Date -->
           <span class="date-time info">发表于
             <span class="date">2018-07-03</span>
-            <span class="time">17:16:08</span>
+            <span class="time">12:01:57</span>
           </span>
           
           <!--  Categories  -->
@@ -165,7 +165,8 @@
 <blockquote>
 <p>add为方法名</p>
 </blockquote>
-<p>5、编译项目，生成DLL<br><img src="http://ogoh2gimk.bkt.clouddn.com/buildDLL.png" alt=""><br>可编译为x86或x64。</p>
+<p>5、右键项目》属性》配置属性》C/C++》代码生成，设置运行库为：多线程 DLL（/MD）<br><img src="http://ogoh2gimk.bkt.clouddn.com/%E5%A4%9A%E7%BA%BF%E7%A8%8BDLL.png" alt=""></p>
+<p>6、编译项目，生成Release版的DLL<br><img src="http://ogoh2gimk.bkt.clouddn.com/buildDLL.png" alt=""><br>可编译为x86或x64。</p>
 <h4 id="使用DLL"><a href="#使用DLL" class="headerlink" title="使用DLL"></a>使用DLL</h4><h5 id="一、C-调用"><a href="#一、C-调用" class="headerlink" title="一、C++调用"></a>一、C++调用</h5><p>1、新建项目<br><img src="http://ogoh2gimk.bkt.clouddn.com/newWin32.png" alt=""></p>
 <p>2、拷贝编译生成的dll和头文件，到测试项目下面<br><img src="http://ogoh2gimk.bkt.clouddn.com/copyDLLAndH.png" alt=""></p>
 <p>3、右键项目》添加》新建项》C++文件(.cpp)<br><img src="http://ogoh2gimk.bkt.clouddn.com/newcpp2.png" alt=""><br>在C++文件中输入以下代码：<br><figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">"DWGNoEnDe.h"</span></span></div><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">main</span><span class="params">()</span></span></div><div class="line">&#123;</div><div class="line">	<span class="keyword">int</span> a = <span class="number">10</span>;</div><div class="line">	<span class="keyword">int</span> b = <span class="number">23</span>;</div><div class="line">	<span class="keyword">int</span> c = add(a, b);</div><div class="line">	<span class="built_in">printf</span>(<span class="string">"输出：%d\n"</span>,c);</div><div class="line">	getchar();</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
