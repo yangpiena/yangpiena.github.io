@@ -58,12 +58,13 @@ toc: true
 [核心价值编码器](https://sym233.github.io/core-values-encoder/)
 [核心价值编码器源码](https://github.com/sym233/core-values-encoder)
 [生成随机密码](https://suijimimashengcheng.51240.com/)
+[在线制作您的Logo](https://www.logaster.cn/)
 
 &nbsp;
 
 
 #### 系统/软件下载
-[IT之家](https://www.ithome.com/)                             |  [系统之家](http://www.xitongzhijia.net/)                                                              |  [Win10之家](http://www.iwin10.com/)                                                              |  [Win10之家](http://www.62hx.com/)                                                              |  [Win10之家](http://www.xh52.com/)                                                              |  [系统圣地](http://www.285868.com/)
+[IT之家](https://www.ithome.com/)                             |  [系统之家](http://www.xitongzhijia.net/)                                                              |  [系统天地](http://www.xitongtiandi.net/)                                                              |  [Win10专业版官网](http://www.win10zyb.com/)                                                              |  [Win10之家](http://www.xh52.com/)                                                              |  [系统圣地](http://www.285868.com/)
 [绿盟](http://www.xdowns.com/)                                |  [zd423](http://www.zdfans.com/)
 [浏览迷](http://liulanmi.com/)                                |  [Chrome浏览器插件下载中心](https://www.chromefor.com/)
 [最新迅雷(xunlei)会员账号天天更新同享](http://www.win10.name/news/193.html)
@@ -149,11 +150,13 @@ toc: true
 
 #### C&#35;
 [C#教程](http://www.runoob.com/csharp/csharp-program-structure.html)
+[辉耀应用程序框架学习网](http://www.huiyaosoft.com/winformlist.htm)
 [Vs解决方案的目录结构设置和管理](https://blog.csdn.net/lp310018931/article/details/47991759)
 [C#（Net）软件开发常用工具汇总，提高你的开发效率](https://www.cnblogs.com/Jeremy2001/p/6066553.html)
 [Winform自动更新组件分享](http://www.cnblogs.com/KnightsWarrior/archive/2010/10/20/1856255.html#3754564)
 [Winform(C#.NET)自动更新组件的使用及部分功能实现](https://www.cnblogs.com/24la/p/autoupdater-component.html)
 [Winform开发框架的重要特性总结](https://www.cnblogs.com/wuhuacong/p/3199829.html)
+[厚积薄发，丰富的公用类库积累，助你高效进行系统开发（8）----非对称加密、BASE64加密、MD5等常用加密处理](http://www.cnblogs.com/wuhuacong/archive/2011/11/28/2266694.html)
 [Winform开发框架主界面设计展示](http://www.cnblogs.com/wuhuacong/p/3360648.html)
 [仿Office的程序载入窗体](https://www.cnblogs.com/HopeGi/p/3510809.html)
 [C#MDI打开子窗体去掉自动生成的菜单栏](https://blog.csdn.net/shiyangkai/article/details/71479947)
@@ -169,6 +172,13 @@ toc: true
 [C#三种定时器的实现](https://www.cnblogs.com/zhoug2020/p/5837035.html)
 [C#对WinForm应用程序的App.config的使用及加密](https://www.cnblogs.com/wanzhongjun/p/6534608.html)
 [Winform窗体控件图片过多后卡顿问题](https://blog.csdn.net/facefriends/article/details/79216114)
+[winform中的DataGridView的列宽设置（自动调整列宽）](https://blog.csdn.net/swarb/article/details/8493328)
+[C#Winform频繁刷新导致界面闪烁解决方法](https://www.cnblogs.com/ghbjimmy/articles/3635825.html)
+[C# WinForm开发系列 - DataGridView](http://www.cnblogs.com/peterzb/archive/2009/05/29/1491891.html)
+[DataGridView实现添加合计行并始终显示在底部](https://blog.csdn.net/tyouvivi/article/details/1676850)
+[tablelayoutpanel 动态调整行列宽度](https://www.cnblogs.com/mandaren/p/3709932.html)
+[C#批量插入数据到Sqlserver中的四种方式](https://www.cnblogs.com/ingstyle/p/6196908.html)
+[C#命名规则和风格(收集)](https://www.cnblogs.com/jiekeng/articles/561562.html)
 
 &nbsp;
 
@@ -263,6 +273,8 @@ toc: true
 #### SQL
 [SQL Server 2008(R2)支持将数据导出为脚本](http://xcc313.iteye.com/blog/1331468)
 [【SQL Server备份恢复】维护计划实现备份：每周数据库完整备份、每天差异备份、每小时日志备份 ](http://blog.csdn.net/sqlserverdiscovery/article/details/11020057)
+[SQL 列转行，即多行合并成一条](https://www.cnblogs.com/luokunlun/p/5947615.html)
+[sql 判断 函数 存储过程是否存在的方法](https://www.cnblogs.com/a311300/p/4358916.html)
 
 &nbsp;
 
@@ -294,6 +306,7 @@ toc: true
 [Vue.js官网](http://cn.vuejs.org/)
 [JSFiddle Hello World](https://jsfiddle.net/chrisvfritz/50wL7mdz/)
 
+&nbsp;
 
 #### 民生
 [宁夏人力资源和社会保障网上服务大厅](http://www.12333nx.gov.cn/nxwsrs/personlogin)
