@@ -120,6 +120,52 @@
     <div class="col-lg-10 col-md-10 col-md-offset-1">
       
         <div class="post-item-wrapper">
+  <a href="/2017/05/15/【Windows】设置磁盘背景/" class="post-title">
+      【Windows】设置磁盘背景
+  </a>
+  <div class="post-excerpt">
+    <!-- Post Date and Categories -->
+    <div class="date-and-category">
+      <div class="date">2017-05-15</div>
+      <div class="categories">
+        
+          
+
+<a href="/categories/Windows/">Windows</a>
+
+        
+      </div>
+    </div>
+    <!-- Post Excerpt -->
+    <div class="excerpt typo"><p>如何将磁盘背景设置为自己喜欢的图片，具体操作步骤如下：</p>
+<ul>
+<li>首先，准备一张自己喜欢的图片。例如：D:\图片\其它\1741962.jpeg </li>
+<li>在要设置背景的盘符或文件夹下，新建一个文本文档，将下面代码粘贴到文本中，替换自己的图片路径。<pre><code>[ExtShellFolderViews] 
+{BE098140-A513-11D0-A3A4-00C04FD706EC}={BE098140-A513-11D0-A3A4-00C04FD706EC} 
+[{BE098140-A513-11D0-A3A4-00C04FD706EC}] 
+Attributes=1 
+IconArea_Image=D:\图片\其它\1741962.jpeg
+IconArea_Text=0x00000000 
+[.ShellClassInfo] 
+ConfirmFileOp=0 
+[Ctrl+A Select All] 
+</code></pre></li>
+<li>最后，将文档另存为desktop.ini即可。</div>
+    <!-- Post Tags -->
+    <div class="tags">
+      
+        
+
+<a class="tag" href="/tags/Windows/">Windows</a> <a class="tag" href="/tags/美化/">美化</a>
+
+
+      
+    </div>
+  </div>
+</div>
+
+      
+        <div class="post-item-wrapper">
   <a href="/2016/12/28/【Kettle】使用命令行来运行数据库job/" class="post-title">
       【Kettle】使用命令行来运行数据库job
   </a>
@@ -445,39 +491,6 @@ SET CATALINA_HOME=D:\Program Files\tomcat6.0.35
         
 
 <a class="tag" href="/tags/属性/">属性</a> <a class="tag" href="/tags/Flex/">Flex</a>
-
-
-      
-    </div>
-  </div>
-</div>
-
-      
-        <div class="post-item-wrapper">
-  <a href="/2016/12/22/【Flex】设置scroller的速度/" class="post-title">
-      【Flex】设置scroller的速度
-  </a>
-  <div class="post-excerpt">
-    <!-- Post Date and Categories -->
-    <div class="date-and-category">
-      <div class="date">2016-12-22</div>
-      <div class="categories">
-        
-          
-
-<a href="/categories/Flex/">Flex</a>
-
-        
-      </div>
-    </div>
-    <!-- Post Excerpt -->
-    <div class="excerpt typo"><p>Flex每个Scroller都有一个mouseWheelChanging方法,当滚动鼠标中轮的时候会调用，而后就可以在这个函数中进行判断，如下:<br></div>
-    <!-- Post Tags -->
-    <div class="tags">
-      
-        
-
-<a class="tag" href="/tags/Flex/">Flex</a> <a class="tag" href="/tags/scroller/">scroller</a>
 
 
       
