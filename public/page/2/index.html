@@ -120,6 +120,46 @@
     <div class="col-lg-10 col-md-10 col-md-offset-1">
       
         <div class="post-item-wrapper">
+  <a href="/2017/12/22/【HAProxy】配置详解/" class="post-title">
+      【HAProxy】配置详解
+  </a>
+  <div class="post-excerpt">
+    <!-- Post Date and Categories -->
+    <div class="date-and-category">
+      <div class="date">2017-12-22</div>
+      <div class="categories">
+        
+          
+
+<a href="/categories/HAProxy/">HAProxy</a>
+
+        
+      </div>
+    </div>
+    <!-- Post Excerpt -->
+    <div class="excerpt typo"><h3 id="配置文件"><a href="#配置文件" class="headerlink" title="配置文件"></a>配置文件</h3><p>haproxy.cfg主要有两部分组成：global和proxies配置段</p>
+<h5 id="global：全局配置段"><a href="#global：全局配置段" class="headerlink" title="global：全局配置段"></a>global：全局配置段</h5><p>进程及安全配置相关的参数<br>性能调整相关参数<br>Debug参数</p>
+<h5 id="proxies：代理配置段"><a href="#proxies：代理配置段" class="headerlink" title="proxies：代理配置段"></a>proxies：代理配置段</h5><ul>
+<li>defaults：为frontend, backend, listen提供默认配置</li>
+<li>fronted：接收请求的前端虚拟节点，frontend可以增加规则直接指定具体使用后端的backend</li>
+<li>backend：后端服务集群的配置，真实服务器，一个backend对应一个或者多个实体服务器</li>
+<li>listen：同时拥有前端和后端,适用于一对一环境。fronted和backend的组合体，比如haproxy实例状态监控部分配置</li>
+</ul></div>
+    <!-- Post Tags -->
+    <div class="tags">
+      
+        
+
+<a class="tag" href="/tags/HAProxy/">HAProxy</a>
+
+
+      
+    </div>
+  </div>
+</div>
+
+      
+        <div class="post-item-wrapper">
   <a href="/2017/12/20/【HAProxy】ACL规则定义/" class="post-title">
       【HAProxy】ACL规则定义
   </a>
@@ -415,52 +455,6 @@
         
 
 <a class="tag" href="/tags/Sublime-Text/">Sublime Text</a> <a class="tag" href="/tags/快捷键/">快捷键</a>
-
-
-      
-    </div>
-  </div>
-</div>
-
-      
-        <div class="post-item-wrapper">
-  <a href="/2017/05/15/【Windows】设置磁盘背景/" class="post-title">
-      【Windows】设置磁盘背景
-  </a>
-  <div class="post-excerpt">
-    <!-- Post Date and Categories -->
-    <div class="date-and-category">
-      <div class="date">2017-05-15</div>
-      <div class="categories">
-        
-          
-
-<a href="/categories/Windows/">Windows</a>
-
-        
-      </div>
-    </div>
-    <!-- Post Excerpt -->
-    <div class="excerpt typo"><p>如何将磁盘背景设置为自己喜欢的图片，具体操作步骤如下：</p>
-<ul>
-<li>首先，准备一张自己喜欢的图片。例如：D:\图片\其它\1741962.jpeg </li>
-<li>在要设置背景的盘符或文件夹下，新建一个文本文档，将下面代码粘贴到文本中，替换自己的图片路径。<pre><code>[ExtShellFolderViews] 
-{BE098140-A513-11D0-A3A4-00C04FD706EC}={BE098140-A513-11D0-A3A4-00C04FD706EC} 
-[{BE098140-A513-11D0-A3A4-00C04FD706EC}] 
-Attributes=1 
-IconArea_Image=D:\图片\其它\1741962.jpeg
-IconArea_Text=0x00000000 
-[.ShellClassInfo] 
-ConfirmFileOp=0 
-[Ctrl+A Select All] 
-</code></pre></li>
-<li>最后，将文档另存为desktop.ini即可。</div>
-    <!-- Post Tags -->
-    <div class="tags">
-      
-        
-
-<a class="tag" href="/tags/Windows/">Windows</a> <a class="tag" href="/tags/美化/">美化</a>
 
 
       
