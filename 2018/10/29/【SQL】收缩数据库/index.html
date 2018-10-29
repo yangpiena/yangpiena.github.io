@@ -8,10 +8,10 @@
   <meta name="description" content="">
   <meta name="author" content="昜丿捺">
   <!-- Open Graph Data -->
-  <meta property="og:title" content="昜丿捺"/>
+  <meta property="og:title" content="【SQL】收缩数据库"/>
   <meta property="og:description" content="没有阳光，沉默而居" />
   <meta property="og:site_name" content="昜丿捺"/>
-  <meta property="og:type" content="website" />
+  <meta property="og:type" content="article" />
   <meta property="og:image" content="http://yoursite.comundefined"/>
   
     <link rel="alternate" href="/atom.xml" title="昜丿捺" type="application/atom+xml">
@@ -37,8 +37,7 @@
 </head>
 
   <body>
-    <!-- Archive Header -->
-<!-- Page Header -->
+    <!-- Page Header -->
 
 
 <header class="site-header header-background" style="background-image: url(http://ogoh2gimk.bkt.clouddn.com/yangpiena-banner.jpg)">
@@ -46,7 +45,7 @@
     <div class="row">
       <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
         <div class="page-title with-background-image">
-          <p class="title">博客归类</p>
+          <p class="title">【SQL】收缩数据库</p>
           <p class="subtitle"></p>
         </div>
         <div class="site-menu with-background-image">
@@ -115,48 +114,99 @@
 -->
 </header>
 
+<article>
+  <div class="container typo">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <div class="post-info text-muted">
+          
+            <!-- Author -->
+            <span class="author info">作者 昜丿捺</span>
+          
+          <!-- Date -->
+          <span class="date-time info">发表于
+            <span class="date">2018-10-29</span>
+            <span class="time">16:08:54</span>
+          </span>
+          
+          <!--  Categories  -->
+            <span class="categories info">分类于 
 
-<!-- Archive List -->
-<div class="container">
-  <div class="row">
-    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-	    <!-- 归档列表 -->
-	    
+<a href="/categories/SQL/">SQL</a>
+</span>
+          
 
-        
-        <div class="one-tag-list">
-            <span class="fa fa-calendar-times-o listing-seperator" id="2016">
-                <span style="color: #F03838; font-size: 2rem;" class="tag-text">2016</span>
-            </span>
-            
-            	<div class="archive-item">
-	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-	12-22
-	<a href="/2016/12/22/【Flex】java与actionScript类型对应表/" class="post-title">
-		【Flex】java与actionScript类型对应表
-	</a>
-	<!-- <div class="date text-muted">发表于 2016-12-22 15:55:28</div> -->
-</div>
+          <!-- YPN Add 2016-11-14 增加热度 -->
+          <span id="busuanzi_container_page_pv">
+            &nbsp;&nbsp; 热度&nbsp; <span id="busuanzi_value_page_pv"></span>°C
+          </span>
 
-            
         </div>
+        <!-- Tags -->
         
+          <div class="post-tags text-muted">
+            标签: 
 
+<a class="tag" href="/tags/SQL/">#SQL</a> <a class="tag" href="/tags/数据库/">#数据库</a>
+
+
+          </div>
+        
+        <!-- Post Main Content -->
+        <div class="post-content">
+
+			<!-- YPN Add 2017-02-27 Table of Contents -->
+			
+			
+          	<h4 id="1-查询当前数据库的基本信息"><a href="#1-查询当前数据库的基本信息" class="headerlink" title="1. 查询当前数据库的基本信息"></a>1. 查询当前数据库的基本信息</h4><figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">SELECT</span> * <span class="keyword">FROM</span> sysfiles;</div></pre></td></tr></table></figure>
+<blockquote>
+<p>记录查询结果的fileid值，在第2、3步要使用</p>
+</blockquote>
+<h4 id="2-收缩数据库"><a href="#2-收缩数据库" class="headerlink" title="2. 收缩数据库"></a>2. 收缩数据库</h4><figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">DBCC SHRINKDATABASE('数据库名');</div></pre></td></tr></table></figure>
+<h4 id="3-收缩日志文件，第一个参数为fileid的值，0表示收缩到初始大小"><a href="#3-收缩日志文件，第一个参数为fileid的值，0表示收缩到初始大小" class="headerlink" title="3. 收缩日志文件，第一个参数为fileid的值，0表示收缩到初始大小"></a>3. 收缩日志文件，第一个参数为fileid的值，0表示收缩到初始大小</h4><figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">DBCC SHRINKFILE(2,0);</div></pre></td></tr></table></figure>
+<h4 id="4-收缩数据文件，第一个参数为fileid的值，0表示收缩到初始大小"><a href="#4-收缩数据文件，第一个参数为fileid的值，0表示收缩到初始大小" class="headerlink" title="4. 收缩数据文件，第一个参数为fileid的值，0表示收缩到初始大小"></a>4. 收缩数据文件，第一个参数为fileid的值，0表示收缩到初始大小</h4><figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">DBCC SHRINKFILE(1,0);</div></pre></td></tr></table></figure>
+<h4 id="5-执行更新操作"><a href="#5-执行更新操作" class="headerlink" title="5. 执行更新操作"></a>5. 执行更新操作</h4><figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">DBCC UPDATEUSAGE(0);</div></pre></td></tr></table></figure>
+        </div>
+
+        <!-- YPN Add 2016-11-14 增加打赏 start -->
+        <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center">
+          <div></div>
+          <button id="rewardButton", disable="enable", onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}", style="cursor: pointer; border: 0; outline: 0; border-radius: 100%; padding: 0; margin: 0; letter-spacing: normal; text-transform: none; text-indent: 0px; text-shadow: none">
+            <span onmouseover="this.style.color='rgb(236,96,0)';this.style.background='rgb(204,204,204)'" onmouseout="this.style.color='#fff';this.style.background='rgb(236,96,0)'" style="display: inline-block; width: 70px; height: 70px; border-radius: 100%; line-height: 81px; color: #fff; font: 400 35px/75px 'microsofty'; background: rgb(236,96,0)">赏</span>
+          </button>
+          <div id="QR" style="display: none;">
+            
+              <div id="wechat" style="display: inline-block">
+                <img id="wechat_qr" src="/assets/blogImg/YPN_wechatpay-32x32.png" alt="昜丿捺 WeChat Pay" style="width: 200px; max-width: 100%; display: inline-block"/>
+                <p>微信打赏</p>
+              </div>
+            
+          
+            <div id="alipay" style="display: inline-block">
+              <img id="alipay_qr" src="/assets/blogImg/YPN_alipay-32x32.jpg" alt="昜丿捺 Alipay" style="width: 200px; max-width: 100%; display: inline-block"/>
+              <p>支付宝打赏</p>
+            </div>
+          
+          </div>
+        </div>
+        <!-- YPN Add 2016-11-14 增加打赏 end -->
+
+        <!-- 多说最近访客 start -->
+        <div class="ds-recent-visitors" data-num-items="28" data-avatar-size="42" id="ds-recent-visitors"></div>
+        <!-- 多说最近访客 end -->
+
+        <!-- 多说评论框 start -->
+        <div class="ds-thread" data-thread-key="2018/10/29/【SQL】收缩数据库/" data-title="【SQL】收缩数据库" data-url="http://yoursite.com/2018/10/29/【SQL】收缩数据库/"></div>
+        <!-- 多说评论框 end -->
+
+        <!-- YPN ADD 2017-11-02 新增 Hitokoto·一言经典语句-->
+        <script type="text/javascript" src="https://api.lwl12.com/hitokoto/main/get?encode=js&charset=utf-8"></script>
+        <div id="lwlhitokoto"><script>lwlhitokoto()</script></div>
+
+      </div>
     </div>
   </div>
-</div>
-
-<!-- Pagination -->
-<div class="container">
-  <div class="row">
-    <div class="col-lg-10 col-md-10 col-md-offset-1">
-      <ul class="pagination">
-          
-          
-      </ul>
-    </div>
-  </div>
-</div>
+</article>
 
 
 
