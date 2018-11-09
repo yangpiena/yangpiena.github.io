@@ -11,7 +11,7 @@ toc: true
 [CSDN.NET](http://www.csdn.net/)                              |  [VeryCD 电驴大全](http://www.verycd.com/)                                                              |  [360doc个人图书馆](http://www.360doc.com/)
 [cnBeta](http://www.cnbeta.com/)                              |  [果壳](http://www.guokr.com/)                                                              |  [少数派](https://sspai.com/)                                                              |  [数字尾巴](http://www.dgtle.com/)                                                              |  [老D博客](https://laod.cn/)
 [百度云](https://pan.baidu.com/)                              |  [七牛云存储](https://portal.qiniu.com/create)                                                              |  [贴图库](http://www.tietuku.com/)
-
+[宁夏专业技术人员继续教育培训网](http://nxzj.chinahrt.com/)
 &nbsp;
 
 
@@ -65,6 +65,7 @@ toc: true
 
 #### 系统/软件下载
 [IT之家](https://www.ithome.com/)                             |  [系统之家](http://www.xitongzhijia.net/)                                                              |  [系统天地](http://www.xitongtiandi.net/)                                                              |  [Win10专业版官网](http://www.win10zyb.com/)                                                              |  [Win10之家](http://www.xh52.com/)                                                              |  [系统圣地](http://www.285868.com/)
+[黑苹果乐园](https://imac.hk/)								  |  [从零开始的黑苹果安装教程](http://tieba.baidu.com/p/5179866130#)
 [绿盟](http://www.xdowns.com/)                                |  [zd423](http://www.zdfans.com/)
 [浏览迷](http://liulanmi.com/)                                |  [Chrome浏览器插件下载中心](https://www.chromefor.com/)
 [最新迅雷(xunlei)会员账号天天更新同享](http://www.win10.name/news/193.html)
@@ -80,6 +81,7 @@ toc: true
 [开源中国社区](http://www.oschina.net/)
 [HTM5中国产业联盟](http://www.html5plus.org/)
 [SQLite 教程](http://www.runoob.com/sqlite/sqlite-tutorial.html)
+[channel9](https://channel9.msdn.com/)
 
 &nbsp;
 
