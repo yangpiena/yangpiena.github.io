@@ -6,11 +6,12 @@ toc: true
 ---
 
 #### 常用
-[大马路](https://dama.lu/)                                    |  [谷歌搜索](https://www.google.com/ncr)                                                              |  [谷歌香港](https://www.google.com.hk/ncr)                                                              |  [维基百科](https://www.wikipedia.org/)                                                              |  [博客预览](http://localhost:4000)
-[网易公开课](https://open.163.com/)                           |  [YouTube](https://www.youtube.com/)
-[CSDN.NET](http://www.csdn.net/)                              |  [VeryCD 电驴大全](http://www.verycd.com/)                                                              |  [360doc个人图书馆](http://www.360doc.com/)
-[cnBeta](http://www.cnbeta.com/)                              |  [果壳](http://www.guokr.com/)                                                              |  [少数派](https://sspai.com/)                                                              |  [数字尾巴](http://www.dgtle.com/)                                                              |  [老D博客](https://laod.cn/)
-[百度云](https://pan.baidu.com/)                              |  [七牛云存储](https://portal.qiniu.com/create)                                                              |  [贴图库](http://www.tietuku.com/)
+[大马路](https://dama.lu/)          |  [谷歌搜索](https://www.google.com/ncr)        |  [谷歌香港](https://www.google.com.hk/ncr)   |  [维基百科](https://www.wikipedia.org/)                                                              |  [博客预览](http://localhost:4000)
+[网易公开课](https://open.163.com/) |  [YouTube](https://www.youtube.com/)
+[CSDN.NET](http://www.csdn.net/)    |  [VeryCD 电驴大全](http://www.verycd.com/)     |  [360doc个人图书馆](http://www.360doc.com/)
+[cnBeta](http://www.cnbeta.com/)    |  [果壳](http://www.guokr.com/)                 |  [少数派](https://sspai.com/)                |  [数字尾巴](http://www.dgtle.com/)
+[老D博客](https://laod.cn/)         |  [黑果小兵](https://blog.daliansky.net/)
+[百度云](https://pan.baidu.com/)    |  [七牛云存储](https://portal.qiniu.com/create) |  [贴图库](http://www.tietuku.com/)
 [宁夏专业技术人员继续教育培训网](http://nxzj.chinahrt.com/)
 &nbsp;
 
@@ -46,6 +47,7 @@ toc: true
 #### 在线工具
 [在线工具](http://tool.lu/)
 [JSON在线解析及格式化验证](http://www.json.cn/)
+[转换json格式为C#类](http://json2csharp.chahuo.com/)
 [ATOOL在线工具](http://www.atool.org/)
 [在线API](http://tool.oschina.net/)
 [PMD5](http://pmd5.com/#)
@@ -113,6 +115,7 @@ toc: true
 [好的用户界面-界面设计的一些技巧](https://www.cnblogs.com/Wayou/p/goodui.html#home)
 [一种电子病历系统软件框架思想——B/S与C/S混合架构](http://www.hit180.com/21534.html)
 [B/S，C/S，B/S和C/S混合模式的概念区别优缺点及前景分析](http://www.ufidawhy.com/mfufida/613.html)
+[黑苹果macOS High Sierra 10.13.6详细安装新手菜鸟教程](http://tzit.net/htmlitjs/2018-10-25/2234.html)
 
 &nbsp;
 
@@ -181,6 +184,9 @@ toc: true
 [tablelayoutpanel 动态调整行列宽度](https://www.cnblogs.com/mandaren/p/3709932.html)
 [C#批量插入数据到Sqlserver中的四种方式](https://www.cnblogs.com/ingstyle/p/6196908.html)
 [C#命名规则和风格(收集)](https://www.cnblogs.com/jiekeng/articles/561562.html)
+[水缘泡泡技术集](https://www.sypopo.com/post/OBQ6E6EWo0/)
+[C# WinForm项目三层架构简述](https://www.jianshu.com/p/7f628015a243)
+[想和代码谈谈](http://www.cnblogs.com/WayneShao/)
 
 &nbsp;
 
