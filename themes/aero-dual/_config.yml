@@ -27,7 +27,7 @@ use_header_cover: true
 # or
 # Specify an online resource like so:
 # index_cover: /img/yangpiena-banner.jpg
-index_cover: http://ogoh2gimk.bkt.clouddn.com/yangpiena-banner.jpg
+index_cover: https://picturebed-1258146968.cos.ap-beijing.myqcloud.com/yangpiena-banner.jpg
 
 widgets:
 - category

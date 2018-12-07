@@ -31,7 +31,7 @@
        <link rel="stylesheet" href="/css/style.light.css"> -->
   
   
-  <link rel="stylesheet" href="/css/style.dark.css">
+  <link rel="stylesheet" href="/css/style.light.css">
 
   <script type="text/javascript" src="/js/jquery-1.11.3.min.js"></script>
 </head>
@@ -40,7 +40,7 @@
     <!-- Page Header -->
 
 
-<header class="site-header header-background" style="background-image: url(http://ogoh2gimk.bkt.clouddn.com/yangpiena-banner.jpg)">
+<header class="site-header header-background" style="background-image: url(https://picturebed-1258146968.cos.ap-beijing.myqcloud.com/yangpiena-banner.jpg)">
   <div class="container">
     <div class="row">
       <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
@@ -104,14 +104,6 @@
       </div>
     </div>
   </div>
-<!-- YPN Del 2016-12-27 因swiftype不能免费使用了，固已注销账号，停止使用搜索功能。
-  
-    <form class="search" action="/search/index.html" method="get" accept-charset="utf-8" style="text-align:right">
-    <label>Search</label>
-    <input type="text" id="search" class="st-default-search-input" maxlength="20" placeholder="Search" />
-    </form>
-  
--->
 </header>
 
 <article>
@@ -126,7 +118,7 @@
           <!-- Date -->
           <span class="date-time info">发表于
             <span class="date">2018-07-03</span>
-            <span class="time">23:41:58</span>
+            <span class="time">09:40:40</span>
           </span>
           
           <!--  Categories  -->
@@ -158,25 +150,25 @@
 			<!-- YPN Add 2017-02-27 Table of Contents -->
 			
 			
-          	<h4 id="创建DLL"><a href="#创建DLL" class="headerlink" title="创建DLL"></a>创建DLL</h4><p>1、打开Visual Studio 2017，创建如下图的工程：<br><img src="http://ogoh2gimk.bkt.clouddn.com/newProject.png" alt=""><br><img src="http://ogoh2gimk.bkt.clouddn.com/newProject2.png" alt=""></p>
-<p>2、右键项目》添加》新建项》头文件(.h)<br><img src="http://ogoh2gimk.bkt.clouddn.com/newh.png" alt=""><br>在头文件中输入以下代码：<br><figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">extern</span> <span class="string">"C"</span></div><div class="line">&#123;</div><div class="line">	__declspec(dllexport) <span class="keyword">int</span> __<span class="function">stdcall <span class="title">add</span><span class="params">(<span class="keyword">int</span> a, <span class="keyword">int</span> b)</span></span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-<p>3、右键项目》添加》新建项》C++文件(.cpp)<br><img src="http://ogoh2gimk.bkt.clouddn.com/newcpp.png" alt=""><br>在C++文件中输入以下代码：<br><figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">"DWGNoEnDe.h"</span></span></div><div class="line"><span class="keyword">extern</span> <span class="string">"C"</span></div><div class="line">&#123;</div><div class="line">	<span class="keyword">int</span> __<span class="function">stdcall <span class="title">add</span><span class="params">(<span class="keyword">int</span> a, <span class="keyword">int</span> b)</span></span></div><div class="line">	&#123;</div><div class="line">		<span class="keyword">int</span> c;</div><div class="line">		c = a + b;</div><div class="line">		<span class="keyword">return</span> c;</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-<p>4、右键项目》添加》新建项》模块定义文件(.def)<br><img src="http://ogoh2gimk.bkt.clouddn.com/newdef.png" alt=""><br>在模块定义文件中输入以下代码：<br><figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">LIBRARY</div><div class="line">EXPORTS</div><div class="line">add</div></pre></td></tr></table></figure></p>
+          	<h4 id="创建DLL"><a href="#创建DLL" class="headerlink" title="创建DLL"></a>创建DLL</h4><p>1、打开Visual Studio 2017，创建如下图的工程：<br><img src="https://picturebed-1258146968.cos.ap-beijing.myqcloud.com/newProject.png" alt=""><br><img src="https://picturebed-1258146968.cos.ap-beijing.myqcloud.com/newProject2.png" alt=""></p>
+<p>2、右键项目》添加》新建项》头文件(.h)<br><img src="https://picturebed-1258146968.cos.ap-beijing.myqcloud.com/newh.png" alt=""><br>在头文件中输入以下代码：<br><figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">extern</span> <span class="string">"C"</span></div><div class="line">&#123;</div><div class="line">	__declspec(dllexport) <span class="keyword">int</span> __<span class="function">stdcall <span class="title">add</span><span class="params">(<span class="keyword">int</span> a, <span class="keyword">int</span> b)</span></span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>3、右键项目》添加》新建项》C++文件(.cpp)<br><img src="https://picturebed-1258146968.cos.ap-beijing.myqcloud.com/newcpp.png" alt=""><br>在C++文件中输入以下代码：<br><figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">"DWGNoEnDe.h"</span></span></div><div class="line"><span class="keyword">extern</span> <span class="string">"C"</span></div><div class="line">&#123;</div><div class="line">	<span class="keyword">int</span> __<span class="function">stdcall <span class="title">add</span><span class="params">(<span class="keyword">int</span> a, <span class="keyword">int</span> b)</span></span></div><div class="line">	&#123;</div><div class="line">		<span class="keyword">int</span> c;</div><div class="line">		c = a + b;</div><div class="line">		<span class="keyword">return</span> c;</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>4、右键项目》添加》新建项》模块定义文件(.def)<br><img src="https://picturebed-1258146968.cos.ap-beijing.myqcloud.com/newdef.png" alt=""><br>在模块定义文件中输入以下代码：<br><figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">LIBRARY</div><div class="line">EXPORTS</div><div class="line">add</div></pre></td></tr></table></figure></p>
 <blockquote>
 <p>add为方法名</p>
 </blockquote>
-<p>5、右键项目》属性》配置属性》C/C++》代码生成，设置运行库为：多线程 DLL（/MD）<br><img src="http://ogoh2gimk.bkt.clouddn.com/%E5%A4%9A%E7%BA%BF%E7%A8%8BDLL.png" alt=""></p>
-<p>6、编译项目，生成Release版的DLL<br><img src="http://ogoh2gimk.bkt.clouddn.com/buildDLL.png" alt=""><br>可编译为x86或x64。</p>
-<h4 id="使用DLL"><a href="#使用DLL" class="headerlink" title="使用DLL"></a>使用DLL</h4><h5 id="一、C-调用"><a href="#一、C-调用" class="headerlink" title="一、C++调用"></a>一、C++调用</h5><p>1、新建项目<br><img src="http://ogoh2gimk.bkt.clouddn.com/newWin32.png" alt=""></p>
-<p>2、拷贝编译生成的dll和头文件，到测试项目下面<br><img src="http://ogoh2gimk.bkt.clouddn.com/copyDLLAndH.png" alt=""></p>
-<p>3、右键项目》添加》新建项》C++文件(.cpp)<br><img src="http://ogoh2gimk.bkt.clouddn.com/newcpp2.png" alt=""><br>在C++文件中输入以下代码：<br><figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">"DWGNoEnDe.h"</span></span></div><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">main</span><span class="params">()</span></span></div><div class="line">&#123;</div><div class="line">	<span class="keyword">int</span> a = <span class="number">10</span>;</div><div class="line">	<span class="keyword">int</span> b = <span class="number">23</span>;</div><div class="line">	<span class="keyword">int</span> c = add(a, b);</div><div class="line">	<span class="built_in">printf</span>(<span class="string">"输出：%d\n"</span>,c);</div><div class="line">	getchar();</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-<p>4、点击“本地Windows调试器”运行项目，调用成功<br><img src="http://ogoh2gimk.bkt.clouddn.com/excuteEXE.png" alt=""></p>
+<p>5、右键项目》属性》配置属性》C/C++》代码生成，设置运行库为：多线程 DLL（/MD）<br><img src="https://picturebed-1258146968.cos.ap-beijing.myqcloud.com/%E5%A4%9A%E7%BA%BF%E7%A8%8BDLL.png" alt=""></p>
+<p>6、编译项目，生成Release版的DLL<br><img src="https://picturebed-1258146968.cos.ap-beijing.myqcloud.com/buildDLL.png" alt=""><br>可编译为x86或x64。</p>
+<h4 id="使用DLL"><a href="#使用DLL" class="headerlink" title="使用DLL"></a>使用DLL</h4><h5 id="一、C-调用"><a href="#一、C-调用" class="headerlink" title="一、C++调用"></a>一、C++调用</h5><p>1、新建项目<br><img src="https://picturebed-1258146968.cos.ap-beijing.myqcloud.com/newWin32.png" alt=""></p>
+<p>2、拷贝编译生成的dll和头文件，到测试项目下面<br><img src="https://picturebed-1258146968.cos.ap-beijing.myqcloud.com/copyDLLAndH.png" alt=""></p>
+<p>3、右键项目》添加》新建项》C++文件(.cpp)<br><img src="https://picturebed-1258146968.cos.ap-beijing.myqcloud.com/newcpp2.png" alt=""><br>在C++文件中输入以下代码：<br><figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">"DWGNoEnDe.h"</span></span></div><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">main</span><span class="params">()</span></span></div><div class="line">&#123;</div><div class="line">	<span class="keyword">int</span> a = <span class="number">10</span>;</div><div class="line">	<span class="keyword">int</span> b = <span class="number">23</span>;</div><div class="line">	<span class="keyword">int</span> c = add(a, b);</div><div class="line">	<span class="built_in">printf</span>(<span class="string">"输出：%d\n"</span>,c);</div><div class="line">	getchar();</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>4、点击“本地Windows调试器”运行项目，调用成功<br><img src="https://picturebed-1258146968.cos.ap-beijing.myqcloud.com/excuteEXE.png" alt=""></p>
 <h5 id="二、VB调用"><a href="#二、VB调用" class="headerlink" title="二、VB调用"></a>二、VB调用</h5><p>1、拷贝C++DLL到exe程序同一目录下</p>
 <p>2、在exe程序中引用C++DLL<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">Public Declare Function add Lib &quot;DWGNoEnDe.dll&quot; (ByVal a As Long, ByVal b As Long) As Long</div></pre></td></tr></table></figure></p>
 <p>3、调用C++DLL的方法<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">Private Sub Command1_Click()</div><div class="line">    Text3.Text = add(CInt(Text1.Text), CInt(Text2.Text))</div><div class="line">End Sub</div></pre></td></tr></table></figure></p>
 <h5 id="三、C-调用"><a href="#三、C-调用" class="headerlink" title="三、C#调用"></a>三、C#调用</h5><p>1、新建控制台应用项目</p>
 <p>2、拷贝C++DLL到<code>项目名称\bin\Debug</code>下，与exe处于同一目录</p>
-<p>3、在<code>Program.cs</code>中输入如下代码：<br><img src="http://ogoh2gimk.bkt.clouddn.com/Programe.cs" alt=""></p>
+<p>3、在<code>Program.cs</code>中输入如下代码：<br><img src="https://picturebed-1258146968.cos.ap-beijing.myqcloud.com/Programe.cs" alt=""></p>
 <p>4、点击启动运行项目，调用成功</p>
 
         </div>
@@ -287,8 +279,8 @@
 <!--2017-10-06 YPN Add 添加输入框特效。 -->
 <script src="/js/activate-power-mode.js"></script>
 <script>
-  POWERMODE.colorful = true; // 控制开启/开启礼花特效  
-  POWERMODE.shake = false;    // 控制开启/关闭屏幕震动特效  
+  POWERMODE.colorful = true;  // 控制开启/开启礼花特效  
+  POWERMODE.shake    = false; // 控制开启/关闭屏幕震动特效  
   document.body.addEventListener('input', POWERMODE);
 </script>
 
@@ -322,7 +314,10 @@ var duoshuoQuery = {short_name:"yangpiena"};
 </div>
 <script src="/js/totop.js"></script>
 
+<!-- YPN Add 2017-04-12 基于canvas绘制的网页背景效果 -->
+<!--
 <script type="text/javascript" src="https://cdn.bootcss.com/canvas-nest.js/1.0.1/canvas-nest.min.js"></script>
+-->
   </body>
 </html>
 

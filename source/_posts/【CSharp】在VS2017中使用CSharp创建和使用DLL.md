@@ -12,10 +12,10 @@ description:
 
 #### 创建DLL
 1、打开Visual Studio 2017，创建如下图的工程：
-![](http://ogoh2gimk.bkt.clouddn.com/newProject3.png)
+![](https://picturebed-1258146968.cos.ap-beijing.myqcloud.com/newProject3.png)
 
 2、在类中定义接口类和接口实现类
-![](http://ogoh2gimk.bkt.clouddn.com/newCSharp.png)
+![](https://picturebed-1258146968.cos.ap-beijing.myqcloud.com/newCSharp.png)
 输入以下代码：
 ```C#
 [Guid("710CA75B-1193-4BBF-ADA6-C92763616B85")]
@@ -42,19 +42,19 @@ public class DWGNoEnDe : IDWGNoEnde
 }
 ```
 其中，GUID通过点击VS工具》创建GUID，复制得到
-![](http://ogoh2gimk.bkt.clouddn.com/createGUID.png)
+![](https://picturebed-1258146968.cos.ap-beijing.myqcloud.com/createGUID.png)
 
 3、右键项目》属性》应用程序》程序集信息，勾选使程序集COM可见
-![](http://ogoh2gimk.bkt.clouddn.com/%E7%A8%8B%E5%BA%8F%E9%9B%86%E4%BF%A1%E6%81%AF.png)
+![](https://picturebed-1258146968.cos.ap-beijing.myqcloud.com/%E7%A8%8B%E5%BA%8F%E9%9B%86%E4%BF%A1%E6%81%AF.png)
 
 4、右键项目》属性》生成，勾选为COM互操作注册
-![](http://ogoh2gimk.bkt.clouddn.com/CSharpDLL%E7%94%9F%E6%88%90.png)
+![](https://picturebed-1258146968.cos.ap-beijing.myqcloud.com/CSharpDLL%E7%94%9F%E6%88%90.png)
 
 5、打开VS2017的开发人员命令提示符，输入`sn -k c:\myKey.snk`，生成密钥文件
-![](http://ogoh2gimk.bkt.clouddn.com/vs2017CMD.png)
+![](https://picturebed-1258146968.cos.ap-beijing.myqcloud.com/vs2017CMD.png)
 
 6、右键项目》属性》签名》选择强名称密钥文件，点击浏览，选择刚刚生成的snk文件
-![](http://ogoh2gimk.bkt.clouddn.com/%E7%AD%BE%E5%90%8D.png)
+![](https://picturebed-1258146968.cos.ap-beijing.myqcloud.com/%E7%AD%BE%E5%90%8D.png)
 
 7、点击生成》重新生成解决方案，生成DLL
 
@@ -67,11 +67,11 @@ public class DWGNoEnDe : IDWGNoEnde
 在vb所在机器上，以管理员身份打开cmd，进入.netFramework所在目录`C:\WINDOWS\Microsoft.NET\Framework\v4.0.30319>`，执行以下命令生成tlb文件：
 
 	regasm F:\TestC#DLL\DWGNoEnDe.dll /tlb:DWGNoEnde.tlb /codebase
-![](http://ogoh2gimk.bkt.clouddn.com/cmdtlb.png)
+![](https://picturebed-1258146968.cos.ap-beijing.myqcloud.com/cmdtlb.png)
 
 2、打开VB工程，引用tlb文件
 点击浏览，选择刚刚生成的tlb文件，确定即可。
-![](http://ogoh2gimk.bkt.clouddn.com/%E5%BC%95%E7%94%A8tlb.png)
+![](https://picturebed-1258146968.cos.ap-beijing.myqcloud.com/%E5%BC%95%E7%94%A8tlb.png)
 
 3、在代码中定义和使用DLL
 ```VB

@@ -11,11 +11,11 @@ description:
 
 #### 创建DLL
 1、打开Visual Studio 2017，创建如下图的工程：
-![](http://ogoh2gimk.bkt.clouddn.com/newProject.png)
-![](http://ogoh2gimk.bkt.clouddn.com/newProject2.png)
+![](https://picturebed-1258146968.cos.ap-beijing.myqcloud.com/newProject.png)
+![](https://picturebed-1258146968.cos.ap-beijing.myqcloud.com/newProject2.png)
 
 2、右键项目》添加》新建项》头文件(.h)
-![](http://ogoh2gimk.bkt.clouddn.com/newh.png)
+![](https://picturebed-1258146968.cos.ap-beijing.myqcloud.com/newh.png)
 在头文件中输入以下代码：
 ``` C++
 extern "C"
@@ -25,7 +25,7 @@ extern "C"
 ```
 
 3、右键项目》添加》新建项》C++文件(.cpp)
-![](http://ogoh2gimk.bkt.clouddn.com/newcpp.png)
+![](https://picturebed-1258146968.cos.ap-beijing.myqcloud.com/newcpp.png)
 在C++文件中输入以下代码：
 ``` C++
 #include "DWGNoEnDe.h"
@@ -41,7 +41,7 @@ extern "C"
 ```
 
 4、右键项目》添加》新建项》模块定义文件(.def)
-![](http://ogoh2gimk.bkt.clouddn.com/newdef.png)
+![](https://picturebed-1258146968.cos.ap-beijing.myqcloud.com/newdef.png)
 在模块定义文件中输入以下代码：
 ``` C++
 LIBRARY
@@ -51,23 +51,23 @@ add
 > add为方法名
 
 5、右键项目》属性》配置属性》C/C++》代码生成，设置运行库为：多线程 DLL（/MD）
-![](http://ogoh2gimk.bkt.clouddn.com/%E5%A4%9A%E7%BA%BF%E7%A8%8BDLL.png)
+![](https://picturebed-1258146968.cos.ap-beijing.myqcloud.com/%E5%A4%9A%E7%BA%BF%E7%A8%8BDLL.png)
 
 6、编译项目，生成Release版的DLL
-![](http://ogoh2gimk.bkt.clouddn.com/buildDLL.png)
+![](https://picturebed-1258146968.cos.ap-beijing.myqcloud.com/buildDLL.png)
 可编译为x86或x64。
 
 
 #### 使用DLL
 ##### 一、C++调用
 1、新建项目
-![](http://ogoh2gimk.bkt.clouddn.com/newWin32.png)
+![](https://picturebed-1258146968.cos.ap-beijing.myqcloud.com/newWin32.png)
 
 2、拷贝编译生成的dll和头文件，到测试项目下面
-![](http://ogoh2gimk.bkt.clouddn.com/copyDLLAndH.png)
+![](https://picturebed-1258146968.cos.ap-beijing.myqcloud.com/copyDLLAndH.png)
 
 3、右键项目》添加》新建项》C++文件(.cpp)
-![](http://ogoh2gimk.bkt.clouddn.com/newcpp2.png)
+![](https://picturebed-1258146968.cos.ap-beijing.myqcloud.com/newcpp2.png)
 在C++文件中输入以下代码：
 ``` C++
 #include <stdio.h>
@@ -83,7 +83,7 @@ void main()
 ```
 
 4、点击“本地Windows调试器”运行项目，调用成功
-![](http://ogoh2gimk.bkt.clouddn.com/excuteEXE.png)
+![](https://picturebed-1258146968.cos.ap-beijing.myqcloud.com/excuteEXE.png)
 
 
 ##### 二、VB调用
@@ -107,6 +107,6 @@ End Sub
 2、拷贝C++DLL到`项目名称\bin\Debug`下，与exe处于同一目录
 
 3、在`Program.cs`中输入如下代码：
-![](http://ogoh2gimk.bkt.clouddn.com/Programe.cs)
+![](https://picturebed-1258146968.cos.ap-beijing.myqcloud.com/Programe.cs)
 
 4、点击启动运行项目，调用成功

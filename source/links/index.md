@@ -6,24 +6,26 @@ toc: true
 ---
 
 #### 常用
-[大马路](https://dama.lu/)          |  [谷歌搜索](https://www.google.com/ncr)        |  [谷歌香港](https://www.google.com.hk/ncr)   |  [维基百科](https://www.wikipedia.org/)                                                              |  [博客预览](http://localhost:4000)
+[大马路](https://dama.lu/)          |  [谷歌搜索](https://www.google.com/ncr)        |  [谷歌香港](https://www.google.com.hk/ncr)   |  [维基百科](https://www.wikipedia.org/)  |  [博客预览](http://localhost:4000)
 [网易公开课](https://open.163.com/) |  [YouTube](https://www.youtube.com/)
 [CSDN.NET](http://www.csdn.net/)    |  [VeryCD 电驴大全](http://www.verycd.com/)     |  [360doc个人图书馆](http://www.360doc.com/)
 [cnBeta](http://www.cnbeta.com/)    |  [果壳](http://www.guokr.com/)                 |  [少数派](https://sspai.com/)                |  [数字尾巴](http://www.dgtle.com/)
-[老D博客](https://laod.cn/)         |  [黑果小兵](https://blog.daliansky.net/)
-[百度云](https://pan.baidu.com/)    |  [七牛云存储](https://portal.qiniu.com/create) |  [贴图库](http://www.tietuku.com/)
-[宁夏专业技术人员继续教育培训网](http://nxzj.chinahrt.com/)
+[老D博客](https://laod.cn/)         |  [黑果小兵](https://blog.daliansky.net/)       |  [免费吧](http://www.mianfeib.com/)
+[百度云](https://pan.baidu.com/)    |  [腾讯云](https://cloud.tencent.com/)          |  [贴图库](http://www.tietuku.com/)
+
 &nbsp;
 
 
 #### 音乐
-[SongTaste](http://www.songtaste.com/)                        |  [AeKun](https://www.aekun.com/)                                                              |  [网易云音乐](http://music.163.com)                                                              |  [VIP付费音乐解析下载](http://music.zhuolin.wang/)
+[SongTaste](http://www.songtaste.com/)  |  [AeKun](https://www.aekun.com/)  |  [网易云音乐](http://music.163.com)  |  [VIP付费音乐解析下载](http://music.zhuolin.wang/)
 
 &nbsp;
 
 
 #### 电影
-[BT下载](http://www.qinou.cn/)                                |  [BT之家](http://www.btbtt33.com/)                                                              |  [BT之家](http://www.415.net)                                                              |  [BT之家](http://www.btbtt.com)                                                              |  [BT之家](http://www.btbta.com)                                                              |  [破晓电影](http://www.poxiao.com)                                                              |  [天天美剧](http://cn163.net/)                                                              |  [放电影网](http://www.fangdianying.tv/)                                                              |  [电影天堂](http://www.dy2018.com/)                                                              |  [面包网](http://www.mianbao99.com/)                                                              |  [迅雷电影下载](http://www.xlpu.cc/)                                                              |  [快播电影](http://www.bubulai.com/)                                                              |  [预告片世界](http://www.yugaopian.cn/)                                                              |  [LOL电影天堂](http://www.loldytt.com/)                                                              |  [免费吧](http://www.mianfeib.com/)
+[BT下载](http://www.qinou.cn/)     |  [BT之家](http://www.btbtt33.com/)        |  [BT之家](http://www.415.net)        |  [BT之家](http://www.btbtt.com)       |  [BT之家](http://www.btbta.com)
+[破晓电影](http://www.poxiao.com)  |  [放电影网](http://www.fangdianying.tv/)  |  [电影天堂](http://www.dy2018.com/)  |  [迅雷电影下载](http://www.xlpu.cc/)  |  [快播电影](http://www.bubulai.com/) |  [LOL电影天堂](http://www.loldytt.com/)
+[预告片世界](http://www.yugaopian.cn/)
 [人人影视](http://www.yyets.com/)
 
 
@@ -116,6 +118,7 @@ toc: true
 [一种电子病历系统软件框架思想——B/S与C/S混合架构](http://www.hit180.com/21534.html)
 [B/S，C/S，B/S和C/S混合模式的概念区别优缺点及前景分析](http://www.ufidawhy.com/mfufida/613.html)
 [黑苹果macOS High Sierra 10.13.6详细安装新手菜鸟教程](http://tzit.net/htmlitjs/2018-10-25/2234.html)
+[Sql Server 2000清除日志方法介绍](https://yq.aliyun.com/ziliao/22450)
 
 &nbsp;
 
@@ -187,6 +190,7 @@ toc: true
 [水缘泡泡技术集](https://www.sypopo.com/post/OBQ6E6EWo0/)
 [C# WinForm项目三层架构简述](https://www.jianshu.com/p/7f628015a243)
 [想和代码谈谈](http://www.cnblogs.com/WayneShao/)
+[使用C#创建Access2010或Access2007 accdb 数据库文件](http://blog.sina.com.cn/s/blog_7cc533310101lxn2.html)
 
 &nbsp;
 
@@ -317,4 +321,4 @@ toc: true
 &nbsp;
 
 #### 民生
-[宁夏人力资源和社会保障网上服务大厅](http://www.12333nx.gov.cn/nxwsrs/personlogin)
+[宁夏人力资源和社会保障网上服务大厅](http://www.12333nx.gov.cn/nxwsrs/personlogin)  |  [宁夏专业技术人员继续教育培训网](http://nxzj.chinahrt.com/)
