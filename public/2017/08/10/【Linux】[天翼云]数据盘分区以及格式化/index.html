@@ -1,18 +1,18 @@
 <!DOCTYPE html>
 <html>
   <!-- Html Head Tag-->
-  <head>
+  <head><meta name="generator" content="Hexo 3.8.0">
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="">
   <meta name="author" content="昜丿捺">
   <!-- Open Graph Data -->
-  <meta property="og:title" content="【Linux】[天翼云]数据盘分区以及格式化"/>
-  <meta property="og:description" content="没有阳光，沉默而居" />
-  <meta property="og:site_name" content="昜丿捺"/>
-  <meta property="og:type" content="article" />
-  <meta property="og:image" content="http://yoursite.comundefined"/>
+  <meta property="og:title" content="【Linux】[天翼云]数据盘分区以及格式化">
+  <meta property="og:description" content="没有阳光，沉默而居">
+  <meta property="og:site_name" content="昜丿捺">
+  <meta property="og:type" content="article">
+  <meta property="og:image" content="http://yoursite.comundefined">
   
     <link rel="alternate" href="/atom.xml" title="昜丿捺" type="application/atom+xml">
   
@@ -118,7 +118,7 @@
           <!-- Date -->
           <span class="date-time info">发表于
             <span class="date">2017-08-10</span>
-            <span class="time">09:40:40</span>
+            <span class="time">17:24:13</span>
           </span>
           
           <!--  Categories  -->
@@ -150,7 +150,7 @@
 			<!-- YPN Add 2017-02-27 Table of Contents -->
 			
 			
-          	<h4 id="1-首先切换到root账户下"><a href="#1-首先切换到root账户下" class="headerlink" title="1. 首先切换到root账户下"></a>1. 首先切换到root账户下</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo -i</div></pre></td></tr></table></figure>
+          	<h4 id="1-首先切换到root账户下"><a href="#1-首先切换到root账户下" class="headerlink" title="1. 首先切换到root账户下"></a>1. 首先切换到root账户下</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo -i</span><br></pre></td></tr></table></figure>
 <a id="more"></a>
 <h4 id="2-查看数据盘信息"><a href="#2-查看数据盘信息" class="headerlink" title="2. 查看数据盘信息"></a>2. 查看数据盘信息</h4><p>登录Linux云主机后，使用命令<code>fdisk -l</code>查看数据盘相关信息。</p>
 <blockquote>
@@ -182,7 +182,7 @@ Sector size (logical/physical): 512 bytes / 512 bytes
 I/O size (minimum/optimal): 512 bytes / 512 bytes
 
 [root@iZwe12zdi799668qfxdm5oZ ~]# 
-</code></pre><h4 id="3-数据盘分区"><a href="#3-数据盘分区" class="headerlink" title="3. 数据盘分区"></a>3. 数据盘分区</h4><p>执行以下命令，对数据盘进行分区。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">fdisk /dev/vdb</div></pre></td></tr></table></figure></p>
+</code></pre><h4 id="3-数据盘分区"><a href="#3-数据盘分区" class="headerlink" title="3. 数据盘分区"></a>3. 数据盘分区</h4><p>执行以下命令，对数据盘进行分区。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">fdisk /dev/vdb</span><br></pre></td></tr></table></figure></p>
 <p>按照界面的提示，依次输入“n”(新建分区)、“p”(新建扩展分区)、“1”(使用第1个主分区)，两次回车(使用默认配置)，输入“w”(保存分区表)，开始分区。</p>
 <pre><code>[root@iZwe12zdi799668qfxdm5oZ ~]# fdisk /dev/vdb
 Welcome to fdisk (util-linux 2.23.2).
@@ -234,7 +234,7 @@ Disk identifier: 0x6ea9e5ce
    Device Boot      Start         End      Blocks   Id  System
 /dev/vdb1            2048   209715199   104856576   83  Linux
 [root@iZwe12zdi799668qfxdm5oZ ~]# 
-</code></pre><h4 id="5-格式化新分区"><a href="#5-格式化新分区" class="headerlink" title="5. 格式化新分区"></a>5. 格式化新分区</h4><p>使用下面的命令对新分区进行格式化：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">mkfs.ext3 /dev/vdb1</div></pre></td></tr></table></figure></p>
+</code></pre><h4 id="5-格式化新分区"><a href="#5-格式化新分区" class="headerlink" title="5. 格式化新分区"></a>5. 格式化新分区</h4><p>使用下面的命令对新分区进行格式化：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mkfs.ext3 /dev/vdb1</span><br></pre></td></tr></table></figure></p>
 <blockquote>
 <p>在进行分区格式化时，开发者可自行决定文件系统的格式，如ext2、ext3等，这里我们选择ext3。</p>
 </blockquote>
@@ -263,7 +263,7 @@ Creating journal (32768 blocks): done
 Writing superblocks and filesystem accounting information: done   
 
 [root@iZwe12zdi799668qfxdm5oZ ~]# 
-</code></pre><h4 id="6-挂载新分区"><a href="#6-挂载新分区" class="headerlink" title="6. 挂载新分区"></a>6. 挂载新分区</h4><p>使用下面的命令，先创建fimeson目录（目录名可自定义），再手动挂载新分区，最后查看挂载结果。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">mkdir /fimeson</div><div class="line">mount /dev/vdb1 /fimeson</div><div class="line">df -h</div></pre></td></tr></table></figure></p>
+</code></pre><h4 id="6-挂载新分区"><a href="#6-挂载新分区" class="headerlink" title="6. 挂载新分区"></a>6. 挂载新分区</h4><p>使用下面的命令，先创建fimeson目录（目录名可自定义），再手动挂载新分区，最后查看挂载结果。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">mkdir /fimeson</span><br><span class="line">mount /dev/vdb1 /fimeson</span><br><span class="line">df -h</span><br></pre></td></tr></table></figure></p>
 <p>出现以下信息说明挂载成功，即可以查看到数据盘了。</p>
 <pre><code>[root@iZwe12zdi799668qfxdm5oZ ~]# mkdir /fimeson
 [root@iZwe12zdi799668qfxdm5oZ ~]# mount /dev/vdb1 /fimeson
@@ -281,7 +281,7 @@ tmpfs           783M     0  783M   0% /run/user/0
 <blockquote>
 <p>注意：请确认分区路径是否为 “/dev/vdb1”，若路径错误，将会造成云主机重启失败</p>
 </blockquote>
-<p>使用下面的命令添加分区信息，最后查看添加结果：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">echo &apos;/dev/vdb1 /fimeson ext3 defaults 0 0&apos; &gt;&gt; /etc/fstab</div><div class="line">cat /etc/fstab</div></pre></td></tr></table></figure></p>
+<p>使用下面的命令添加分区信息，最后查看添加结果：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">echo &apos;/dev/vdb1 /fimeson ext3 defaults 0 0&apos; &gt;&gt; /etc/fstab</span><br><span class="line">cat /etc/fstab</span><br></pre></td></tr></table></figure></p>
 <p>出现以下信息表示添加分区信息成功。</p>
 <pre><code>[root@iZwe12zdi799668qfxdm5oZ ~]# echo &apos;/dev/vdb1 /fimeson ext3 defaults 0 0&apos; &gt;&gt; /etc/fstab
 [root@iZwe12zdi799668qfxdm5oZ ~]# cat /etc/fstab
@@ -302,19 +302,19 @@ UUID=83e59f2d-45ce-4124-939a-3302e6cc6afa /                       ext4    defaul
         <!-- YPN Add 2016-11-14 增加打赏 start -->
         <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center">
           <div></div>
-          <button id="rewardButton", disable="enable", onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}", style="cursor: pointer; border: 0; outline: 0; border-radius: 100%; padding: 0; margin: 0; letter-spacing: normal; text-transform: none; text-indent: 0px; text-shadow: none">
+          <button id="rewardButton" ,="" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}" style="cursor: pointer; border: 0; outline: 0; border-radius: 100%; padding: 0; margin: 0; letter-spacing: normal; text-transform: none; text-indent: 0px; text-shadow: none">
             <span onmouseover="this.style.color='rgb(236,96,0)';this.style.background='rgb(204,204,204)'" onmouseout="this.style.color='#fff';this.style.background='rgb(236,96,0)'" style="display: inline-block; width: 70px; height: 70px; border-radius: 100%; line-height: 81px; color: #fff; font: 400 35px/75px 'microsofty'; background: rgb(236,96,0)">赏</span>
           </button>
           <div id="QR" style="display: none;">
             
               <div id="wechat" style="display: inline-block">
-                <img id="wechat_qr" src="/assets/blogImg/YPN_wechatpay-32x32.png" alt="昜丿捺 WeChat Pay" style="width: 200px; max-width: 100%; display: inline-block"/>
+                <img id="wechat_qr" src="/assets/blogImg/YPN_wechatpay-32x32.png" alt="昜丿捺 WeChat Pay" style="width: 200px; max-width: 100%; display: inline-block">
                 <p>微信打赏</p>
               </div>
             
           
             <div id="alipay" style="display: inline-block">
-              <img id="alipay_qr" src="/assets/blogImg/YPN_alipay-32x32.jpg" alt="昜丿捺 Alipay" style="width: 200px; max-width: 100%; display: inline-block"/>
+              <img id="alipay_qr" src="/assets/blogImg/YPN_alipay-32x32.jpg" alt="昜丿捺 Alipay" style="width: 200px; max-width: 100%; display: inline-block">
               <p>支付宝打赏</p>
             </div>
           
@@ -322,15 +322,7 @@ UUID=83e59f2d-45ce-4124-939a-3302e6cc6afa /                       ext4    defaul
         </div>
         <!-- YPN Add 2016-11-14 增加打赏 end -->
 
-        <!-- 多说最近访客 start -->
-        <div class="ds-recent-visitors" data-num-items="28" data-avatar-size="42" id="ds-recent-visitors"></div>
-        <!-- 多说最近访客 end -->
-
-        <!-- 多说评论框 start -->
-        <div class="ds-thread" data-thread-key="2017/08/10/【Linux】[天翼云]数据盘分区以及格式化/" data-title="【Linux】[天翼云]数据盘分区以及格式化" data-url="http://yoursite.com/2017/08/10/【Linux】[天翼云]数据盘分区以及格式化/"></div>
-        <!-- 多说评论框 end -->
-
-        <!-- YPN ADD 2017-11-02 新增 Hitokoto·一言经典语句-->
+        <!-- YPN ADD 2017-11-02 Hitokoto·一言经典语句-->
         <script type="text/javascript" src="https://api.lwl12.com/hitokoto/main/get?encode=js&charset=utf-8"></script>
         <div id="lwlhitokoto"><script>lwlhitokoto()</script></div>
 
@@ -349,9 +341,9 @@ UUID=83e59f2d-45ce-4124-939a-3302e6cc6afa /                       ext4    defaul
         <p class="copyright text-muted">
           Theme By <a target="_blank" href="https://github.com/levblanc">Levblanc.</a>
           Inspired By <a target="_blank" href="https://github.com/klugjo/hexo-theme-clean-blog">Clean Blog.</a>
-        <p class="copyright text-muted">
+        </p><p class="copyright text-muted">
           Powered By <a target="_blank" href="https://hexo.io/">Hexo.</a>
-        <p class="copyright text-muted">
+        </p><p class="copyright text-muted">
           本站总访问量 <span id="busuanzi_value_site_pv"></span> 次, 访客数 <span id="busuanzi_value_site_uv"></span> 人次, 本文总阅读量 <span id="busuanzi_value_page_pv"></span> 次
         </p>
       </div>
@@ -421,29 +413,13 @@ UUID=83e59f2d-45ce-4124-939a-3302e6cc6afa /                       ext4    defaul
   });
 </script>
 
-<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
-<script type="text/javascript">
-var duoshuoQuery = {short_name:"yangpiena"};
-	(function() {
-		var ds = document.createElement('script');
-		ds.type = 'text/javascript';ds.async = true;
-		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '/js/embed.js';
-		ds.charset = 'UTF-8';
-		(document.getElementsByTagName('head')[0] 
-		 || document.getElementsByTagName('body')[0]).appendChild(ds);
-	})();
-	</script>
-<!-- 多说公共JS代码 end -->
-
 <div id="totop" style="position:fixed;bottom:50px;right:30px;cursor: pointer;">
-	<a title="返回顶部"><img src="/img/scrollup.png"/></a>
+	<a title="返回顶部"><img src="/img/scrollup.png"></a>
 </div>
 <script src="/js/totop.js"></script>
 
 <!-- YPN Add 2017-04-12 基于canvas绘制的网页背景效果 -->
-<!--
-<script type="text/javascript" src="https://cdn.bootcss.com/canvas-nest.js/1.0.1/canvas-nest.min.js"></script>
--->
+<!-- <script type="text/javascript" src="https://cdn.bootcss.com/canvas-nest.js/1.0.1/canvas-nest.min.js"></script> -->
   </body>
 </html>
 

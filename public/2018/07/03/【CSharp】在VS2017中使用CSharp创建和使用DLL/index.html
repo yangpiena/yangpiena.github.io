@@ -1,18 +1,18 @@
 <!DOCTYPE html>
 <html>
   <!-- Html Head Tag-->
-  <head>
+  <head><meta name="generator" content="Hexo 3.8.0">
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="">
   <meta name="author" content="昜丿捺">
   <!-- Open Graph Data -->
-  <meta property="og:title" content="【C#】在VS2017中使用C#创建和使用DLL"/>
-  <meta property="og:description" content="没有阳光，沉默而居" />
-  <meta property="og:site_name" content="昜丿捺"/>
-  <meta property="og:type" content="article" />
-  <meta property="og:image" content="http://yoursite.comundefined"/>
+  <meta property="og:title" content="【C#】在VS2017中使用C#创建和使用DLL">
+  <meta property="og:description" content="没有阳光，沉默而居">
+  <meta property="og:site_name" content="昜丿捺">
+  <meta property="og:type" content="article">
+  <meta property="og:image" content="http://yoursite.comundefined">
   
     <link rel="alternate" href="/atom.xml" title="昜丿捺" type="application/atom+xml">
   
@@ -118,7 +118,7 @@
           <!-- Date -->
           <span class="date-time info">发表于
             <span class="date">2018-07-03</span>
-            <span class="time">09:40:40</span>
+            <span class="time">17:24:12</span>
           </span>
           
           <!--  Categories  -->
@@ -151,7 +151,7 @@
 			
 			
           	<h4 id="创建DLL"><a href="#创建DLL" class="headerlink" title="创建DLL"></a>创建DLL</h4><p>1、打开Visual Studio 2017，创建如下图的工程：<br><img src="https://picturebed-1258146968.cos.ap-beijing.myqcloud.com/newProject3.png" alt=""></p>
-<p>2、在类中定义接口类和接口实现类<br><img src="https://picturebed-1258146968.cos.ap-beijing.myqcloud.com/newCSharp.png" alt=""><br>输入以下代码：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div></pre></td><td class="code"><pre><div class="line">[Guid(&quot;710CA75B-1193-4BBF-ADA6-C92763616B85&quot;)]</div><div class="line">public interface IDWGNoEnde</div><div class="line">&#123;</div><div class="line">    string Encode(string i_DWGNo);</div><div class="line">    string Decode(string i_DWGNo);</div><div class="line">&#125;</div><div class="line">[Guid(&quot;F212F390-FB5C-4AF6-94CD-ED72B5ADEEC5&quot;)]</div><div class="line">public class DWGNoEnDe : IDWGNoEnde</div><div class="line">&#123;</div><div class="line">    public string Encode(string i_DWGNo)</div><div class="line">    &#123;</div><div class="line">        string o_EncodeDWGNo;</div><div class="line">        o_EncodeDWGNo = i_DWGNo + &quot;_YPN&quot;;</div><div class="line">        return o_EncodeDWGNo;</div><div class="line">    &#125;</div><div class="line">    public string Decode(string i_DWGNo)</div><div class="line">    &#123;</div><div class="line">        string o_DecodeDWGNo;</div><div class="line">        o_DecodeDWGNo = i_DWGNo.Substring(0, i_DWGNo.Length - 4);</div><div class="line">        return o_DecodeDWGNo;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>2、在类中定义接口类和接口实现类<br><img src="https://picturebed-1258146968.cos.ap-beijing.myqcloud.com/newCSharp.png" alt=""><br>输入以下代码：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">[Guid(&quot;710CA75B-1193-4BBF-ADA6-C92763616B85&quot;)]</span><br><span class="line">public interface IDWGNoEnde</span><br><span class="line">&#123;</span><br><span class="line">    string Encode(string i_DWGNo);</span><br><span class="line">    string Decode(string i_DWGNo);</span><br><span class="line">&#125;</span><br><span class="line">[Guid(&quot;F212F390-FB5C-4AF6-94CD-ED72B5ADEEC5&quot;)]</span><br><span class="line">public class DWGNoEnDe : IDWGNoEnde</span><br><span class="line">&#123;</span><br><span class="line">    public string Encode(string i_DWGNo)</span><br><span class="line">    &#123;</span><br><span class="line">        string o_EncodeDWGNo;</span><br><span class="line">        o_EncodeDWGNo = i_DWGNo + &quot;_YPN&quot;;</span><br><span class="line">        return o_EncodeDWGNo;</span><br><span class="line">    &#125;</span><br><span class="line">    public string Decode(string i_DWGNo)</span><br><span class="line">    &#123;</span><br><span class="line">        string o_DecodeDWGNo;</span><br><span class="line">        o_DecodeDWGNo = i_DWGNo.Substring(0, i_DWGNo.Length - 4);</span><br><span class="line">        return o_DecodeDWGNo;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
 <p>其中，GUID通过点击VS工具》创建GUID，复制得到<br><img src="https://picturebed-1258146968.cos.ap-beijing.myqcloud.com/createGUID.png" alt=""></p>
 <p>3、右键项目》属性》应用程序》程序集信息，勾选使程序集COM可见<br><img src="https://picturebed-1258146968.cos.ap-beijing.myqcloud.com/%E7%A8%8B%E5%BA%8F%E9%9B%86%E4%BF%A1%E6%81%AF.png" alt=""></p>
 <p>4、右键项目》属性》生成，勾选为COM互操作注册<br><img src="https://picturebed-1258146968.cos.ap-beijing.myqcloud.com/CSharpDLL%E7%94%9F%E6%88%90.png" alt=""></p>
@@ -166,26 +166,26 @@
 <pre><code>regasm F:\TestC#DLL\DWGNoEnDe.dll /tlb:DWGNoEnde.tlb /codebase
 </code></pre><p><img src="https://picturebed-1258146968.cos.ap-beijing.myqcloud.com/cmdtlb.png" alt=""></p>
 <p>2、打开VB工程，引用tlb文件<br>点击浏览，选择刚刚生成的tlb文件，确定即可。<br><img src="https://picturebed-1258146968.cos.ap-beijing.myqcloud.com/%E5%BC%95%E7%94%A8tlb.png" alt=""></p>
-<p>3、在代码中定义和使用DLL<br><figure class="highlight vb"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">Dim</span> v_dwgnoEnde <span class="keyword">As</span> <span class="keyword">New</span> DWGNoEnDe.DWGNoEnDe</div><div class="line"><span class="keyword">Private</span> <span class="keyword">Sub</span> Command1_Click()</div><div class="line">    Text2.<span class="keyword">Text</span> = v_dwgnoEnde.Encode(Text1.<span class="keyword">Text</span>)</div><div class="line"><span class="keyword">End</span> <span class="keyword">Sub</span></div></pre></td></tr></table></figure></p>
+<p>3、在代码中定义和使用DLL<br><figure class="highlight vb"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">Dim</span> v_dwgnoEnde <span class="keyword">As</span> <span class="keyword">New</span> DWGNoEnDe.DWGNoEnDe</span><br><span class="line"><span class="keyword">Private</span> <span class="keyword">Sub</span> Command1_Click()</span><br><span class="line">    Text2.<span class="keyword">Text</span> = v_dwgnoEnde.Encode(Text1.<span class="keyword">Text</span>)</span><br><span class="line"><span class="keyword">End</span> <span class="keyword">Sub</span></span><br></pre></td></tr></table></figure></p>
 
         </div>
 
         <!-- YPN Add 2016-11-14 增加打赏 start -->
         <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center">
           <div></div>
-          <button id="rewardButton", disable="enable", onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}", style="cursor: pointer; border: 0; outline: 0; border-radius: 100%; padding: 0; margin: 0; letter-spacing: normal; text-transform: none; text-indent: 0px; text-shadow: none">
+          <button id="rewardButton" ,="" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}" style="cursor: pointer; border: 0; outline: 0; border-radius: 100%; padding: 0; margin: 0; letter-spacing: normal; text-transform: none; text-indent: 0px; text-shadow: none">
             <span onmouseover="this.style.color='rgb(236,96,0)';this.style.background='rgb(204,204,204)'" onmouseout="this.style.color='#fff';this.style.background='rgb(236,96,0)'" style="display: inline-block; width: 70px; height: 70px; border-radius: 100%; line-height: 81px; color: #fff; font: 400 35px/75px 'microsofty'; background: rgb(236,96,0)">赏</span>
           </button>
           <div id="QR" style="display: none;">
             
               <div id="wechat" style="display: inline-block">
-                <img id="wechat_qr" src="/assets/blogImg/YPN_wechatpay-32x32.png" alt="昜丿捺 WeChat Pay" style="width: 200px; max-width: 100%; display: inline-block"/>
+                <img id="wechat_qr" src="/assets/blogImg/YPN_wechatpay-32x32.png" alt="昜丿捺 WeChat Pay" style="width: 200px; max-width: 100%; display: inline-block">
                 <p>微信打赏</p>
               </div>
             
           
             <div id="alipay" style="display: inline-block">
-              <img id="alipay_qr" src="/assets/blogImg/YPN_alipay-32x32.jpg" alt="昜丿捺 Alipay" style="width: 200px; max-width: 100%; display: inline-block"/>
+              <img id="alipay_qr" src="/assets/blogImg/YPN_alipay-32x32.jpg" alt="昜丿捺 Alipay" style="width: 200px; max-width: 100%; display: inline-block">
               <p>支付宝打赏</p>
             </div>
           
@@ -193,15 +193,7 @@
         </div>
         <!-- YPN Add 2016-11-14 增加打赏 end -->
 
-        <!-- 多说最近访客 start -->
-        <div class="ds-recent-visitors" data-num-items="28" data-avatar-size="42" id="ds-recent-visitors"></div>
-        <!-- 多说最近访客 end -->
-
-        <!-- 多说评论框 start -->
-        <div class="ds-thread" data-thread-key="2018/07/03/【CSharp】在VS2017中使用CSharp创建和使用DLL/" data-title="【C#】在VS2017中使用C#创建和使用DLL" data-url="http://yoursite.com/2018/07/03/【CSharp】在VS2017中使用CSharp创建和使用DLL/"></div>
-        <!-- 多说评论框 end -->
-
-        <!-- YPN ADD 2017-11-02 新增 Hitokoto·一言经典语句-->
+        <!-- YPN ADD 2017-11-02 Hitokoto·一言经典语句-->
         <script type="text/javascript" src="https://api.lwl12.com/hitokoto/main/get?encode=js&charset=utf-8"></script>
         <div id="lwlhitokoto"><script>lwlhitokoto()</script></div>
 
@@ -220,9 +212,9 @@
         <p class="copyright text-muted">
           Theme By <a target="_blank" href="https://github.com/levblanc">Levblanc.</a>
           Inspired By <a target="_blank" href="https://github.com/klugjo/hexo-theme-clean-blog">Clean Blog.</a>
-        <p class="copyright text-muted">
+        </p><p class="copyright text-muted">
           Powered By <a target="_blank" href="https://hexo.io/">Hexo.</a>
-        <p class="copyright text-muted">
+        </p><p class="copyright text-muted">
           本站总访问量 <span id="busuanzi_value_site_pv"></span> 次, 访客数 <span id="busuanzi_value_site_uv"></span> 人次, 本文总阅读量 <span id="busuanzi_value_page_pv"></span> 次
         </p>
       </div>
@@ -292,29 +284,13 @@
   });
 </script>
 
-<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
-<script type="text/javascript">
-var duoshuoQuery = {short_name:"yangpiena"};
-	(function() {
-		var ds = document.createElement('script');
-		ds.type = 'text/javascript';ds.async = true;
-		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '/js/embed.js';
-		ds.charset = 'UTF-8';
-		(document.getElementsByTagName('head')[0] 
-		 || document.getElementsByTagName('body')[0]).appendChild(ds);
-	})();
-	</script>
-<!-- 多说公共JS代码 end -->
-
 <div id="totop" style="position:fixed;bottom:50px;right:30px;cursor: pointer;">
-	<a title="返回顶部"><img src="/img/scrollup.png"/></a>
+	<a title="返回顶部"><img src="/img/scrollup.png"></a>
 </div>
 <script src="/js/totop.js"></script>
 
 <!-- YPN Add 2017-04-12 基于canvas绘制的网页背景效果 -->
-<!--
-<script type="text/javascript" src="https://cdn.bootcss.com/canvas-nest.js/1.0.1/canvas-nest.min.js"></script>
--->
+<!-- <script type="text/javascript" src="https://cdn.bootcss.com/canvas-nest.js/1.0.1/canvas-nest.min.js"></script> -->
   </body>
 </html>
 

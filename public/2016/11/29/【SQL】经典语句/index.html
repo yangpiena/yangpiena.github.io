@@ -1,18 +1,18 @@
 <!DOCTYPE html>
 <html>
   <!-- Html Head Tag-->
-  <head>
+  <head><meta name="generator" content="Hexo 3.8.0">
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="">
   <meta name="author" content="昜丿捺">
   <!-- Open Graph Data -->
-  <meta property="og:title" content="【SQL】经典语句"/>
-  <meta property="og:description" content="没有阳光，沉默而居" />
-  <meta property="og:site_name" content="昜丿捺"/>
-  <meta property="og:type" content="article" />
-  <meta property="og:image" content="http://yoursite.comundefined"/>
+  <meta property="og:title" content="【SQL】经典语句">
+  <meta property="og:description" content="没有阳光，沉默而居">
+  <meta property="og:site_name" content="昜丿捺">
+  <meta property="og:type" content="article">
+  <meta property="og:image" content="http://yoursite.comundefined">
   
     <link rel="alternate" href="/atom.xml" title="昜丿捺" type="application/atom+xml">
   
@@ -118,7 +118,7 @@
           <!-- Date -->
           <span class="date-time info">发表于
             <span class="date">2016-11-29</span>
-            <span class="time">09:40:40</span>
+            <span class="time">17:24:13</span>
           </span>
           
           <!--  Categories  -->
@@ -151,40 +151,40 @@
 			
 			<div id="toc" class="toc-article">
 				<strong class="toc-title">文章目录</strong>
-				<ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#一、基础篇"><span class="toc-number">1.</span> <span class="toc-text">一、基础篇</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1、创建数据库"><span class="toc-number">1.1.</span> <span class="toc-text">1、创建数据库</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2、删除数据库"><span class="toc-number">1.2.</span> <span class="toc-text">2、删除数据库</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3、备份sql-server"><span class="toc-number">1.3.</span> <span class="toc-text">3、备份sql server</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4、创建新表"><span class="toc-number">1.4.</span> <span class="toc-text">4、创建新表</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5、删除新表"><span class="toc-number">1.5.</span> <span class="toc-text">5、删除新表</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6、增加一个列"><span class="toc-number">1.6.</span> <span class="toc-text">6、增加一个列</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#7、添加主键"><span class="toc-number">1.7.</span> <span class="toc-text">7、添加主键</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#8、创建索引"><span class="toc-number">1.8.</span> <span class="toc-text">8、创建索引</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#9、创建视图"><span class="toc-number">1.9.</span> <span class="toc-text">9、创建视图</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#10、几个简单的基本sql语句"><span class="toc-number">1.10.</span> <span class="toc-text">10、几个简单的基本sql语句</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#11、几个高级查询运算词"><span class="toc-number">1.11.</span> <span class="toc-text">11、几个高级查询运算词</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#12、使用外连接"><span class="toc-number">1.12.</span> <span class="toc-text">12、使用外连接</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#13、分组-Group-by"><span class="toc-number">1.13.</span> <span class="toc-text">13、分组:Group by</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#14、对数据库进行操作"><span class="toc-number">1.14.</span> <span class="toc-text">14、对数据库进行操作</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#15、如何修改数据库的名称"><span class="toc-number">1.15.</span> <span class="toc-text">15、如何修改数据库的名称</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#16、查询字段ID最大值的记录"><span class="toc-number">1.16.</span> <span class="toc-text">16、查询字段ID最大值的记录</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#17、查询某一列的重复项内容"><span class="toc-number">1.17.</span> <span class="toc-text">17、查询某一列的重复项内容</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#18、判断表中是否存在记录"><span class="toc-number">1.18.</span> <span class="toc-text">18、判断表中是否存在记录</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#二、提升篇"><span class="toc-number">2.</span> <span class="toc-text">二、提升篇</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1、复制表-只复制结构-源表名：a-新表名：b-Access可用"><span class="toc-number">2.1.</span> <span class="toc-text">1、复制表(只复制结构,源表名：a 新表名：b) (Access可用)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2、拷贝表-拷贝数据-源表名：a-目标表名：b-Access可用"><span class="toc-number">2.2.</span> <span class="toc-text">2、拷贝表(拷贝数据,源表名：a 目标表名：b) (Access可用)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3、跨数据库之间表的拷贝-具体数据使用绝对路径-Access可用"><span class="toc-number">2.3.</span> <span class="toc-text">3、跨数据库之间表的拷贝(具体数据使用绝对路径) (Access可用)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4、子查询-表名1：a-表名2：b"><span class="toc-number">2.4.</span> <span class="toc-text">4、子查询(表名1：a 表名2：b)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5、显示文章、提交人和最后回复时间"><span class="toc-number">2.5.</span> <span class="toc-text">5、显示文章、提交人和最后回复时间</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6、外连接查询-表名1：a-表名2：b"><span class="toc-number">2.6.</span> <span class="toc-text">6、外连接查询(表名1：a 表名2：b)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#7、在线视图查询-表名1：a"><span class="toc-number">2.7.</span> <span class="toc-text">7、在线视图查询(表名1：a )</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#8、between的用法-between限制查询数据范围时包括了边界值-not-between不包括"><span class="toc-number">2.8.</span> <span class="toc-text">8、between的用法,between限制查询数据范围时包括了边界值,not between不包括</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#9、in-的使用方法"><span class="toc-number">2.9.</span> <span class="toc-text">9、in 的使用方法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#10、两张关联表，删除主表中已经在副表中没有的信息"><span class="toc-number">2.10.</span> <span class="toc-text">10、两张关联表，删除主表中已经在副表中没有的信息</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#11、四表联查问题"><span class="toc-number">2.11.</span> <span class="toc-text">11、四表联查问题</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#12、日程安排提前五分钟提醒"><span class="toc-number">2.12.</span> <span class="toc-text">12、日程安排提前五分钟提醒</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#13、一条sql语句搞定数据库分页"><span class="toc-number">2.13.</span> <span class="toc-text">13、一条sql语句搞定数据库分页</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#14、前10条记录"><span class="toc-number">2.14.</span> <span class="toc-text">14、前10条记录</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#15、选择在每一组b值相同的数据中对应的a最大的记录的所有信息-类似这样的用法可以用于论坛每月排行榜-每月热销产品分析-按科目成绩排名-等等"><span class="toc-number">2.15.</span> <span class="toc-text">15、选择在每一组b值相同的数据中对应的a最大的记录的所有信息(类似这样的用法可以用于论坛每月排行榜,每月热销产品分析,按科目成绩排名,等等.)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#16、包括所有在-TableA-中但不在-TableB和TableC-中的行并消除所有重复行而派生出一个结果表"><span class="toc-number">2.16.</span> <span class="toc-text">16、包括所有在 TableA 中但不在 TableB和TableC 中的行并消除所有重复行而派生出一个结果表</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#17、随机取出10条数据"><span class="toc-number">2.17.</span> <span class="toc-text">17、随机取出10条数据</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#18、随机选择记录"><span class="toc-number">2.18.</span> <span class="toc-text">18、随机选择记录</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#19、删除重复记录"><span class="toc-number">2.19.</span> <span class="toc-text">19、删除重复记录</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#20、列出数据库里所有的表名"><span class="toc-number">2.20.</span> <span class="toc-text">20、列出数据库里所有的表名</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#21、列出表里的所有的列名"><span class="toc-number">2.21.</span> <span class="toc-text">21、列出表里的所有的列名</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#22、列示type、vender、pcs字段，以type字段排列，case可以方便地实现多重选择，类似select-中的case。"><span class="toc-number">2.22.</span> <span class="toc-text">22、列示type、vender、pcs字段，以type字段排列，case可以方便地实现多重选择，类似select 中的case。</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#23、初始化-表table1"><span class="toc-number">2.23.</span> <span class="toc-text">23、初始化 表table1</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#24、选择从10到15的记录"><span class="toc-number">2.24.</span> <span class="toc-text">24、选择从10到15的记录</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#25、创建临时表"><span class="toc-number">2.25.</span> <span class="toc-text">25、创建临时表</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#26、关联表更新"><span class="toc-number">2.26.</span> <span class="toc-text">26、关联表更新</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#27、查看表的所有外键关系"><span class="toc-number">2.27.</span> <span class="toc-text">27、查看表的所有外键关系</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#28、删除所有约束"><span class="toc-number">2.28.</span> <span class="toc-text">28、删除所有约束</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#29、删除数据库所有表"><span class="toc-number">2.29.</span> <span class="toc-text">29、删除数据库所有表</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#30、删除外键约束"><span class="toc-number">2.30.</span> <span class="toc-text">30、删除外键约束</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#31、查找指定数据库表的字段名，类型，注释"><span class="toc-number">2.31.</span> <span class="toc-text">31、查找指定数据库表的字段名，类型，注释</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#32、同步表数据"><span class="toc-number">2.32.</span> <span class="toc-text">32、同步表数据</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#33、判断某列中是否包含中文字符或者英文字符"><span class="toc-number">2.33.</span> <span class="toc-text">33、判断某列中是否包含中文字符或者英文字符</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#三、技巧篇"><span class="toc-number">3.</span> <span class="toc-text">三、技巧篇</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1、1-1，1-2的使用，在SQL语句组合时用的较多"><span class="toc-number">3.1.</span> <span class="toc-text">1、1=1，1=2的使用，在SQL语句组合时用的较多</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2、收缩数据库"><span class="toc-number">3.2.</span> <span class="toc-text">2、收缩数据库</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3、压缩数据库"><span class="toc-number">3.3.</span> <span class="toc-text">3、压缩数据库</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4、转移数据库给新用户以已存在用户权限"><span class="toc-number">3.4.</span> <span class="toc-text">4、转移数据库给新用户以已存在用户权限</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5、检查备份集"><span class="toc-number">3.5.</span> <span class="toc-text">5、检查备份集</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6、修复数据库"><span class="toc-number">3.6.</span> <span class="toc-text">6、修复数据库</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#7、日志清除"><span class="toc-number">3.7.</span> <span class="toc-text">7、日志清除</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#8、更改某个表"><span class="toc-number">3.8.</span> <span class="toc-text">8、更改某个表</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#9、存储更改全部表"><span class="toc-number">3.9.</span> <span class="toc-text">9、存储更改全部表</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#10、SQL-SERVER中直接循环写入数据"><span class="toc-number">3.10.</span> <span class="toc-text">10、SQL SERVER中直接循环写入数据</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#11、查看数据库属性"><span class="toc-number">3.11.</span> <span class="toc-text">11、查看数据库属性</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#12、按姓氏笔画排序"><span class="toc-number">3.12.</span> <span class="toc-text">12、按姓氏笔画排序:</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#13、数据库加密"><span class="toc-number">3.13.</span> <span class="toc-text">13、数据库加密:</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#14、取回表中字段"><span class="toc-number">3.14.</span> <span class="toc-text">14、取回表中字段:</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#15、查看硬盘分区"><span class="toc-number">3.15.</span> <span class="toc-text">15、查看硬盘分区:</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#16、比较A-B表是否相等"><span class="toc-number">3.16.</span> <span class="toc-text">16、比较A,B表是否相等:</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#17、杀掉所有的事件探察器进程"><span class="toc-number">3.17.</span> <span class="toc-text">17、杀掉所有的事件探察器进程:</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#18、记录搜索"><span class="toc-number">3.18.</span> <span class="toc-text">18、记录搜索:</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#19、获取当前数据库中的所有用户表"><span class="toc-number">3.19.</span> <span class="toc-text">19、获取当前数据库中的所有用户表</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#20、获取某一个表的所有字段"><span class="toc-number">3.20.</span> <span class="toc-text">20、获取某一个表的所有字段</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#21、查看与某一个表相关的视图、存储过程、函数"><span class="toc-number">3.21.</span> <span class="toc-text">21、查看与某一个表相关的视图、存储过程、函数</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#22、查看当前数据库中所有存储过程"><span class="toc-number">3.22.</span> <span class="toc-text">22、查看当前数据库中所有存储过程</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#23、查询用户创建的所有数据库"><span class="toc-number">3.23.</span> <span class="toc-text">23、查询用户创建的所有数据库</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#24、查询某一个表的字段和数据类型"><span class="toc-number">3.24.</span> <span class="toc-text">24、查询某一个表的字段和数据类型</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#25、不同服务器数据库之间的数据操作"><span class="toc-number">3.25.</span> <span class="toc-text">25、不同服务器数据库之间的数据操作</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#26、删除数据库下面的所有表"><span class="toc-number">3.26.</span> <span class="toc-text">26、删除数据库下面的所有表</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#27、查看数据库文件使用情况"><span class="toc-number">3.27.</span> <span class="toc-text">27、查看数据库文件使用情况</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#常识"><span class="toc-number">4.</span> <span class="toc-text">常识</span></a></li></ol>
+				<ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#一-基础篇"><span class="toc-number">1.</span> <span class="toc-text">一. 基础篇</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-创建数据库"><span class="toc-number">1.1.</span> <span class="toc-text">1. 创建数据库</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-删除数据库"><span class="toc-number">1.2.</span> <span class="toc-text">2. 删除数据库</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-备份sql-server"><span class="toc-number">1.3.</span> <span class="toc-text">3. 备份sql server</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-创建新表"><span class="toc-number">1.4.</span> <span class="toc-text">4. 创建新表</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-删除新表"><span class="toc-number">1.5.</span> <span class="toc-text">5. 删除新表</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6-增加一个列"><span class="toc-number">1.6.</span> <span class="toc-text">6. 增加一个列</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#7-添加主键"><span class="toc-number">1.7.</span> <span class="toc-text">7. 添加主键</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#8-创建索引"><span class="toc-number">1.8.</span> <span class="toc-text">8. 创建索引</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#9-创建视图"><span class="toc-number">1.9.</span> <span class="toc-text">9. 创建视图</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#10-几个简单的基本sql语句"><span class="toc-number">1.10.</span> <span class="toc-text">10. 几个简单的基本sql语句</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#11-几个高级查询运算词"><span class="toc-number">1.11.</span> <span class="toc-text">11. 几个高级查询运算词</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#12-使用外连接"><span class="toc-number">1.12.</span> <span class="toc-text">12. 使用外连接</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#13-分组-Group-by"><span class="toc-number">1.13.</span> <span class="toc-text">13. 分组:Group by</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#14-对数据库进行操作"><span class="toc-number">1.14.</span> <span class="toc-text">14. 对数据库进行操作</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#15-如何修改数据库的名称"><span class="toc-number">1.15.</span> <span class="toc-text">15. 如何修改数据库的名称</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#16-查询字段ID最大值的记录"><span class="toc-number">1.16.</span> <span class="toc-text">16. 查询字段ID最大值的记录</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#17-查询某一列的重复项内容"><span class="toc-number">1.17.</span> <span class="toc-text">17. 查询某一列的重复项内容</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#18-判断表中是否存在记录"><span class="toc-number">1.18.</span> <span class="toc-text">18. 判断表中是否存在记录</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#二-提升篇"><span class="toc-number">2.</span> <span class="toc-text">二. 提升篇</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-复制表-只复制结构-源表名：a-新表名：b-Access可用"><span class="toc-number">2.1.</span> <span class="toc-text">1. 复制表(只复制结构,源表名：a 新表名：b) (Access可用)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-拷贝表-拷贝数据-源表名：a-目标表名：b-Access可用"><span class="toc-number">2.2.</span> <span class="toc-text">2. 拷贝表(拷贝数据,源表名：a 目标表名：b) (Access可用)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-跨数据库之间表的拷贝-具体数据使用绝对路径-Access可用"><span class="toc-number">2.3.</span> <span class="toc-text">3. 跨数据库之间表的拷贝(具体数据使用绝对路径) (Access可用)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-子查询-表名1：a-表名2：b"><span class="toc-number">2.4.</span> <span class="toc-text">4. 子查询(表名1：a 表名2：b)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-显示文章、提交人和最后回复时间"><span class="toc-number">2.5.</span> <span class="toc-text">5. 显示文章、提交人和最后回复时间</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6-外连接查询-表名1：a-表名2：b"><span class="toc-number">2.6.</span> <span class="toc-text">6. 外连接查询(表名1：a 表名2：b)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#7-在线视图查询-表名1：a"><span class="toc-number">2.7.</span> <span class="toc-text">7. 在线视图查询(表名1：a )</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#8-between的用法-between限制查询数据范围时包括了边界值-not-between不包括"><span class="toc-number">2.8.</span> <span class="toc-text">8. between的用法,between限制查询数据范围时包括了边界值,not between不包括</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#9-in-的使用方法"><span class="toc-number">2.9.</span> <span class="toc-text">9. in 的使用方法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#10-两张关联表，删除主表中已经在副表中没有的信息"><span class="toc-number">2.10.</span> <span class="toc-text">10. 两张关联表，删除主表中已经在副表中没有的信息</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#11-四表联查问题"><span class="toc-number">2.11.</span> <span class="toc-text">11. 四表联查问题</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#12-日程安排提前五分钟提醒"><span class="toc-number">2.12.</span> <span class="toc-text">12. 日程安排提前五分钟提醒</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#13-一条sql语句搞定数据库分页"><span class="toc-number">2.13.</span> <span class="toc-text">13. 一条sql语句搞定数据库分页</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#14-前10条记录"><span class="toc-number">2.14.</span> <span class="toc-text">14. 前10条记录</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#15-选择在每一组b值相同的数据中对应的a最大的记录的所有信息-类似这样的用法可以用于论坛每月排行榜-每月热销产品分析-按科目成绩排名-等等"><span class="toc-number">2.15.</span> <span class="toc-text">15. 选择在每一组b值相同的数据中对应的a最大的记录的所有信息(类似这样的用法可以用于论坛每月排行榜,每月热销产品分析,按科目成绩排名,等等.)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#16-包括所有在-TableA-中但不在-TableB和TableC-中的行并消除所有重复行而派生出一个结果表"><span class="toc-number">2.16.</span> <span class="toc-text">16. 包括所有在 TableA 中但不在 TableB和TableC 中的行并消除所有重复行而派生出一个结果表</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#17-随机取出10条数据"><span class="toc-number">2.17.</span> <span class="toc-text">17. 随机取出10条数据</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#18-随机选择记录"><span class="toc-number">2.18.</span> <span class="toc-text">18. 随机选择记录</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#19-删除重复记录"><span class="toc-number">2.19.</span> <span class="toc-text">19. 删除重复记录</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#20-列出数据库里所有的表名"><span class="toc-number">2.20.</span> <span class="toc-text">20. 列出数据库里所有的表名</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#21-列出表里的所有的列名"><span class="toc-number">2.21.</span> <span class="toc-text">21. 列出表里的所有的列名</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#22-列示type、vender、pcs字段，以type字段排列，case可以方便地实现多重选择，类似select-中的case。"><span class="toc-number">2.22.</span> <span class="toc-text">22. 列示type、vender、pcs字段，以type字段排列，case可以方便地实现多重选择，类似select 中的case。</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#23-初始化-表table1"><span class="toc-number">2.23.</span> <span class="toc-text">23. 初始化 表table1</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#24-选择从10到15的记录"><span class="toc-number">2.24.</span> <span class="toc-text">24. 选择从10到15的记录</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#25-创建临时表"><span class="toc-number">2.25.</span> <span class="toc-text">25. 创建临时表</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#26-关联表更新"><span class="toc-number">2.26.</span> <span class="toc-text">26. 关联表更新</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#27-查看表的所有外键关系"><span class="toc-number">2.27.</span> <span class="toc-text">27. 查看表的所有外键关系</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#28-删除所有约束"><span class="toc-number">2.28.</span> <span class="toc-text">28. 删除所有约束</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#29-删除数据库所有表"><span class="toc-number">2.29.</span> <span class="toc-text">29. 删除数据库所有表</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#30-删除外键约束"><span class="toc-number">2.30.</span> <span class="toc-text">30. 删除外键约束</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#31-查找指定数据库表的字段名，类型，注释"><span class="toc-number">2.31.</span> <span class="toc-text">31. 查找指定数据库表的字段名，类型，注释</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#32-同步表数据"><span class="toc-number">2.32.</span> <span class="toc-text">32. 同步表数据</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#33-判断某列中是否包含中文字符或者英文字符"><span class="toc-number">2.33.</span> <span class="toc-text">33. 判断某列中是否包含中文字符或者英文字符</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#34-行转列，将多行数据合并成一行（SQL-SERVER-2005以上支持）"><span class="toc-number">2.34.</span> <span class="toc-text">34. 行转列，将多行数据合并成一行（SQL SERVER 2005以上支持）</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#三-技巧篇"><span class="toc-number">3.</span> <span class="toc-text">三. 技巧篇</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-1-1，1-2的使用，在SQL语句组合时用的较多"><span class="toc-number">3.1.</span> <span class="toc-text">1. 1=1，1=2的使用，在SQL语句组合时用的较多</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-收缩数据库"><span class="toc-number">3.2.</span> <span class="toc-text">2. 收缩数据库</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-压缩数据库"><span class="toc-number">3.3.</span> <span class="toc-text">3. 压缩数据库</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-转移数据库给新用户以已存在用户权限"><span class="toc-number">3.4.</span> <span class="toc-text">4. 转移数据库给新用户以已存在用户权限</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-检查备份集"><span class="toc-number">3.5.</span> <span class="toc-text">5. 检查备份集</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6-修复数据库"><span class="toc-number">3.6.</span> <span class="toc-text">6. 修复数据库</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#7-日志清除"><span class="toc-number">3.7.</span> <span class="toc-text">7. 日志清除</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#8-更改某个表"><span class="toc-number">3.8.</span> <span class="toc-text">8. 更改某个表</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#9-存储更改全部表"><span class="toc-number">3.9.</span> <span class="toc-text">9. 存储更改全部表</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#10-SQL-SERVER中直接循环写入数据"><span class="toc-number">3.10.</span> <span class="toc-text">10. SQL SERVER中直接循环写入数据</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#11-查看数据库属性"><span class="toc-number">3.11.</span> <span class="toc-text">11. 查看数据库属性</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#12-按姓氏笔画排序"><span class="toc-number">3.12.</span> <span class="toc-text">12. 按姓氏笔画排序:</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#13-数据库加密"><span class="toc-number">3.13.</span> <span class="toc-text">13. 数据库加密:</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#14-取回表中字段"><span class="toc-number">3.14.</span> <span class="toc-text">14. 取回表中字段:</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#15-查看硬盘分区"><span class="toc-number">3.15.</span> <span class="toc-text">15. 查看硬盘分区:</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#16-比较A-B表是否相等"><span class="toc-number">3.16.</span> <span class="toc-text">16. 比较A,B表是否相等:</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#17-杀掉所有的事件探察器进程"><span class="toc-number">3.17.</span> <span class="toc-text">17. 杀掉所有的事件探察器进程:</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#18-记录搜索"><span class="toc-number">3.18.</span> <span class="toc-text">18. 记录搜索:</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#19-获取当前数据库中的所有用户表"><span class="toc-number">3.19.</span> <span class="toc-text">19. 获取当前数据库中的所有用户表</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#20-获取某一个表的所有字段"><span class="toc-number">3.20.</span> <span class="toc-text">20. 获取某一个表的所有字段</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#21-查看与某一个表相关的视图、存储过程、函数"><span class="toc-number">3.21.</span> <span class="toc-text">21. 查看与某一个表相关的视图、存储过程、函数</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#22-查看当前数据库中所有存储过程"><span class="toc-number">3.22.</span> <span class="toc-text">22. 查看当前数据库中所有存储过程</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#23-查询用户创建的所有数据库"><span class="toc-number">3.23.</span> <span class="toc-text">23. 查询用户创建的所有数据库</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#24-查询某一个表的字段和数据类型"><span class="toc-number">3.24.</span> <span class="toc-text">24. 查询某一个表的字段和数据类型</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#25-不同服务器数据库之间的数据操作"><span class="toc-number">3.25.</span> <span class="toc-text">25. 不同服务器数据库之间的数据操作</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#26-删除数据库下面的所有表"><span class="toc-number">3.26.</span> <span class="toc-text">26. 删除数据库下面的所有表</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#27-查看数据库文件使用情况"><span class="toc-number">3.27.</span> <span class="toc-text">27. 查看数据库文件使用情况</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#常识"><span class="toc-number">4.</span> <span class="toc-text">常识</span></a></li></ol>
 			</div>
 			
 			
-          	<h1 id="一、基础篇"><a href="#一、基础篇" class="headerlink" title="一、基础篇"></a>一、基础篇</h1><h2 id="1、创建数据库"><a href="#1、创建数据库" class="headerlink" title="1、创建数据库"></a>1、创建数据库</h2><pre><code>CREATE DATABASE database-name
-</code></pre><h2 id="2、删除数据库"><a href="#2、删除数据库" class="headerlink" title="2、删除数据库"></a>2、删除数据库</h2><pre><code>drop database dbname
-</code></pre><h2 id="3、备份sql-server"><a href="#3、备份sql-server" class="headerlink" title="3、备份sql server"></a>3、备份sql server</h2><pre><code>创建 备份数据的 device
+          	<h1 id="一-基础篇"><a href="#一-基础篇" class="headerlink" title="一. 基础篇"></a>一. 基础篇</h1><h2 id="1-创建数据库"><a href="#1-创建数据库" class="headerlink" title="1. 创建数据库"></a>1. 创建数据库</h2><pre><code>CREATE DATABASE database-name
+</code></pre><h2 id="2-删除数据库"><a href="#2-删除数据库" class="headerlink" title="2. 删除数据库"></a>2. 删除数据库</h2><pre><code>drop database dbname
+</code></pre><h2 id="3-备份sql-server"><a href="#3-备份sql-server" class="headerlink" title="3. 备份sql server"></a>3. 备份sql server</h2><pre><code>创建 备份数据的 device
 USE master
 EXEC sp_addumpdevice &apos;disk&apos;, &apos;testBack&apos;, &apos;c:\mssql7backup\MyNwind_1.dat&apos;
 开始 备份
 BACKUP DATABASE pubs TO testBack 
 </code></pre><a id="more"></a>
-<h2 id="4、创建新表"><a href="#4、创建新表" class="headerlink" title="4、创建新表"></a>4、创建新表</h2><pre><code>create table tabname(col1 type1 [not null] [primary key],col2 type2 [not null],..)
+<h2 id="4-创建新表"><a href="#4-创建新表" class="headerlink" title="4. 创建新表"></a>4. 创建新表</h2><pre><code>create table tabname(col1 type1 [not null] [primary key],col2 type2 [not null],..)
 </code></pre><p>根据已有的表创建新表：</p>
 <pre><code>A：create table tab_new like tab_old (使用旧表创建新表)
 B：create table tab_new as select col1,col2… from tab_old definition only
-</code></pre><h2 id="5、删除新表"><a href="#5、删除新表" class="headerlink" title="5、删除新表"></a>5、删除新表</h2><pre><code>drop table tabname
-</code></pre><h2 id="6、增加一个列"><a href="#6、增加一个列" class="headerlink" title="6、增加一个列"></a>6、增加一个列</h2><pre><code>Alter table tabname add column col type
+</code></pre><h2 id="5-删除新表"><a href="#5-删除新表" class="headerlink" title="5. 删除新表"></a>5. 删除新表</h2><pre><code>drop table tabname
+</code></pre><h2 id="6-增加一个列"><a href="#6-增加一个列" class="headerlink" title="6. 增加一个列"></a>6. 增加一个列</h2><pre><code>Alter table tabname add column col type
 </code></pre><blockquote>
 <p>注：列增加后将不能删除。DB2中列加上后数据类型也不能改变，唯一能改变的是增加varchar类型的长度。</p>
 </blockquote>
-<h2 id="7、添加主键"><a href="#7、添加主键" class="headerlink" title="7、添加主键"></a>7、添加主键</h2><pre><code>ALTER TABLE tabname ADD PRIMARY KEY (col)
+<h2 id="7-添加主键"><a href="#7-添加主键" class="headerlink" title="7. 添加主键"></a>7. 添加主键</h2><pre><code>ALTER TABLE tabname ADD PRIMARY KEY (col)
 </code></pre><p>删除主键</p>
 <pre><code>ALTER TABLE tabname DROP PRIMARY KEY (col)
-</code></pre><h2 id="8、创建索引"><a href="#8、创建索引" class="headerlink" title="8、创建索引"></a>8、创建索引</h2><pre><code>create [unique] index idxname on tabname(col….) 
+</code></pre><h2 id="8-创建索引"><a href="#8-创建索引" class="headerlink" title="8. 创建索引"></a>8. 创建索引</h2><pre><code>create [unique] index idxname on tabname(col….) 
 </code></pre><p>删除索引</p>
 <pre><code>drop index idxname
 </code></pre><blockquote>
 <p>注：索引是不可更改的，想更改必须删除重新建。</p>
 </blockquote>
-<h2 id="9、创建视图"><a href="#9、创建视图" class="headerlink" title="9、创建视图"></a>9、创建视图</h2><pre><code>create view viewname as select statement 
+<h2 id="9-创建视图"><a href="#9-创建视图" class="headerlink" title="9. 创建视图"></a>9. 创建视图</h2><pre><code>create view viewname as select statement 
 </code></pre><p>删除视图</p>
 <pre><code>drop view viewname
-</code></pre><h2 id="10、几个简单的基本sql语句"><a href="#10、几个简单的基本sql语句" class="headerlink" title="10、几个简单的基本sql语句"></a>10、几个简单的基本sql语句</h2><p>选择</p>
+</code></pre><h2 id="10-几个简单的基本sql语句"><a href="#10-几个简单的基本sql语句" class="headerlink" title="10. 几个简单的基本sql语句"></a>10. 几个简单的基本sql语句</h2><p>选择</p>
 <pre><code>select * from table1 where 范围
 </code></pre><p>插入</p>
 <pre><code>insert into table1(field1,field2) values(value1,value2)
@@ -206,7 +206,7 @@ B：create table tab_new as select col1,col2… from tab_old definition only
 <pre><code>select max(field1) as maxvalue from table1
 </code></pre><p>最小</p>
 <pre><code>select min(field1) as minvalue from table1
-</code></pre><h2 id="11、几个高级查询运算词"><a href="#11、几个高级查询运算词" class="headerlink" title="11、几个高级查询运算词"></a>11、几个高级查询运算词</h2><ul>
+</code></pre><h2 id="11-几个高级查询运算词"><a href="#11-几个高级查询运算词" class="headerlink" title="11. 几个高级查询运算词"></a>11. 几个高级查询运算词</h2><ul>
 <li>A： UNION 运算符<br>UNION 运算符通过组合其他两个结果表（例如 TABLE1 和 TABLE2）并消去表中任何重复行而派生出一个结果表。当 ALL 随 UNION一起使用时（即 UNION ALL），不消除重复行。两种情况下，派生表的每一行不是来自 TABLE1 就是来自 TABLE2。 </li>
 <li>B： EXCEPT 运算符<br>EXCEPT 运算符通过包括所有在 TABLE1 中但不在 TABLE2 中的行并消除所有重复行而派生出一个结果表。当 ALL 随 EXCEPT 一起使用时 (EXCEPT ALL)，不消除重复行。 </li>
 <li>C： INTERSECT 运算符<br>INTERSECT 运算符通过只包括 TABLE1 和 TABLE2 中都有的行并消除所有重复行而派生出一个结果表。当 ALL 随 INTERSECT 一起使用时 (INTERSECT ALL)，不消除重复行。 <blockquote>
@@ -214,42 +214,42 @@ B：create table tab_new as select col1,col2… from tab_old definition only
 </blockquote>
 </li>
 </ul>
-<h2 id="12、使用外连接"><a href="#12、使用外连接" class="headerlink" title="12、使用外连接"></a>12、使用外连接</h2><ul>
-<li>A、left （outer） join：<br>左外连接（左连接）：结果集几包括连接表的匹配行，也包括左连接表的所有行。 </li>
+<h2 id="12-使用外连接"><a href="#12-使用外连接" class="headerlink" title="12. 使用外连接"></a>12. 使用外连接</h2><ul>
+<li>A. left （outer） join：<br>左外连接（左连接）：结果集几包括连接表的匹配行，也包括左连接表的所有行。 </li>
 </ul>
 <pre><code>select a.a, a.b, a.c, b.c, b.d, b.f from a LEFT OUT JOIN b ON a.a = b.c
 </code></pre><ul>
 <li>B：right （outer） join:<br>右外连接(右连接)：结果集既包括连接表的匹配连接行，也包括右连接表的所有行。 </li>
 <li>C：full/cross （outer） join：<br>全外连接：不仅包括符号连接表的匹配行，还包括两个连接表中的所有记录。</li>
 </ul>
-<h2 id="13、分组-Group-by"><a href="#13、分组-Group-by" class="headerlink" title="13、分组:Group by"></a>13、分组:Group by</h2><p>一张表，一旦分组 完成后，查询后只能得到组相关的信息。<br>组相关的信息：（统计信息） count,sum,max,min,avg 分组的标准)<br>在SQLServer中分组时：不能以text,ntext,image类型的字段作为分组依据<br>在selecte统计函数中的字段，不能和普通的字段放在一起；</p>
-<h2 id="14、对数据库进行操作"><a href="#14、对数据库进行操作" class="headerlink" title="14、对数据库进行操作"></a>14、对数据库进行操作</h2><p>分离数据库： sp_detach_db; 附加数据库：sp_attach_db 后接表明，附加需要完整的路径名</p>
-<h2 id="15、如何修改数据库的名称"><a href="#15、如何修改数据库的名称" class="headerlink" title="15、如何修改数据库的名称"></a>15、如何修改数据库的名称</h2><p>sp_renamedb ‘old_name’, ‘new_name’</p>
-<h2 id="16、查询字段ID最大值的记录"><a href="#16、查询字段ID最大值的记录" class="headerlink" title="16、查询字段ID最大值的记录"></a>16、查询字段ID最大值的记录</h2><p>无索引</p>
+<h2 id="13-分组-Group-by"><a href="#13-分组-Group-by" class="headerlink" title="13. 分组:Group by"></a>13. 分组:Group by</h2><p>一张表，一旦分组 完成后，查询后只能得到组相关的信息。<br>组相关的信息：（统计信息） count,sum,max,min,avg 分组的标准)<br>在SQLServer中分组时：不能以text,ntext,image类型的字段作为分组依据<br>在selecte统计函数中的字段，不能和普通的字段放在一起；</p>
+<h2 id="14-对数据库进行操作"><a href="#14-对数据库进行操作" class="headerlink" title="14. 对数据库进行操作"></a>14. 对数据库进行操作</h2><p>分离数据库： sp_detach_db; 附加数据库：sp_attach_db 后接表明，附加需要完整的路径名</p>
+<h2 id="15-如何修改数据库的名称"><a href="#15-如何修改数据库的名称" class="headerlink" title="15. 如何修改数据库的名称"></a>15. 如何修改数据库的名称</h2><p>sp_renamedb ‘old_name’, ‘new_name’</p>
+<h2 id="16-查询字段ID最大值的记录"><a href="#16-查询字段ID最大值的记录" class="headerlink" title="16. 查询字段ID最大值的记录"></a>16. 查询字段ID最大值的记录</h2><p>无索引</p>
 <pre><code>select time from table t1 where not exists (select 1 from table where id &gt; t1.id) 
 </code></pre><p>有索引</p>
 <pre><code>select time from table where id in (select max(id) from table)
-</code></pre><h2 id="17、查询某一列的重复项内容"><a href="#17、查询某一列的重复项内容" class="headerlink" title="17、查询某一列的重复项内容"></a>17、查询某一列的重复项内容</h2><pre><code>SELECT * FROM documentation AS A WHERE (SELECT COUNT(*) FROM documentation WHERE fileName=A.fileName)&gt;1 
-</code></pre><h2 id="18、判断表中是否存在记录"><a href="#18、判断表中是否存在记录" class="headerlink" title="18、判断表中是否存在记录"></a>18、判断表中是否存在记录</h2><pre><code>SELECT COUNT (*) FROM tableName WHERE conditions
+</code></pre><h2 id="17-查询某一列的重复项内容"><a href="#17-查询某一列的重复项内容" class="headerlink" title="17. 查询某一列的重复项内容"></a>17. 查询某一列的重复项内容</h2><pre><code>SELECT * FROM documentation AS A WHERE (SELECT COUNT(*) FROM documentation WHERE fileName=A.fileName)&gt;1 
+</code></pre><h2 id="18-判断表中是否存在记录"><a href="#18-判断表中是否存在记录" class="headerlink" title="18. 判断表中是否存在记录"></a>18. 判断表中是否存在记录</h2><pre><code>SELECT COUNT (*) FROM tableName WHERE conditions
 </code></pre><hr>
-<h1 id="二、提升篇"><a href="#二、提升篇" class="headerlink" title="二、提升篇"></a>二、提升篇</h1><h2 id="1、复制表-只复制结构-源表名：a-新表名：b-Access可用"><a href="#1、复制表-只复制结构-源表名：a-新表名：b-Access可用" class="headerlink" title="1、复制表(只复制结构,源表名：a 新表名：b) (Access可用)"></a>1、复制表(只复制结构,源表名：a 新表名：b) (Access可用)</h2><p>法一</p>
+<h1 id="二-提升篇"><a href="#二-提升篇" class="headerlink" title="二. 提升篇"></a>二. 提升篇</h1><h2 id="1-复制表-只复制结构-源表名：a-新表名：b-Access可用"><a href="#1-复制表-只复制结构-源表名：a-新表名：b-Access可用" class="headerlink" title="1. 复制表(只复制结构,源表名：a 新表名：b) (Access可用)"></a>1. 复制表(只复制结构,源表名：a 新表名：b) (Access可用)</h2><p>法一</p>
 <pre><code>select * into b from a where 1&lt;&gt;1（仅用于SQlServer）
 </code></pre><p>法二</p>
 <pre><code>select top 0 * into b from a
-</code></pre><h2 id="2、拷贝表-拷贝数据-源表名：a-目标表名：b-Access可用"><a href="#2、拷贝表-拷贝数据-源表名：a-目标表名：b-Access可用" class="headerlink" title="2、拷贝表(拷贝数据,源表名：a 目标表名：b) (Access可用)"></a>2、拷贝表(拷贝数据,源表名：a 目标表名：b) (Access可用)</h2><pre><code>insert into b(a, b, c) select d,e,f from b;
-</code></pre><h2 id="3、跨数据库之间表的拷贝-具体数据使用绝对路径-Access可用"><a href="#3、跨数据库之间表的拷贝-具体数据使用绝对路径-Access可用" class="headerlink" title="3、跨数据库之间表的拷贝(具体数据使用绝对路径) (Access可用)"></a>3、跨数据库之间表的拷贝(具体数据使用绝对路径) (Access可用)</h2><pre><code>insert into b(a, b, c) select d,e,f from b in ‘具体数据库’ where 条件
+</code></pre><h2 id="2-拷贝表-拷贝数据-源表名：a-目标表名：b-Access可用"><a href="#2-拷贝表-拷贝数据-源表名：a-目标表名：b-Access可用" class="headerlink" title="2. 拷贝表(拷贝数据,源表名：a 目标表名：b) (Access可用)"></a>2. 拷贝表(拷贝数据,源表名：a 目标表名：b) (Access可用)</h2><pre><code>insert into b(a, b, c) select d,e,f from b;
+</code></pre><h2 id="3-跨数据库之间表的拷贝-具体数据使用绝对路径-Access可用"><a href="#3-跨数据库之间表的拷贝-具体数据使用绝对路径-Access可用" class="headerlink" title="3. 跨数据库之间表的拷贝(具体数据使用绝对路径) (Access可用)"></a>3. 跨数据库之间表的拷贝(具体数据使用绝对路径) (Access可用)</h2><pre><code>insert into b(a, b, c) select d,e,f from b in ‘具体数据库’ where 条件
 </code></pre><p>例子：..from b in ‘“&amp;Server.MapPath(“.”)&amp;”\data.mdb” &amp;”‘ where..</p>
-<h2 id="4、子查询-表名1：a-表名2：b"><a href="#4、子查询-表名1：a-表名2：b" class="headerlink" title="4、子查询(表名1：a 表名2：b)"></a>4、子查询(表名1：a 表名2：b)</h2><pre><code>select a,b,c from a where a IN (select d from b ) 或者: select a,b,c from a where a IN (1,2,3)
-</code></pre><h2 id="5、显示文章、提交人和最后回复时间"><a href="#5、显示文章、提交人和最后回复时间" class="headerlink" title="5、显示文章、提交人和最后回复时间"></a>5、显示文章、提交人和最后回复时间</h2><pre><code>select a.title,a.username,b.adddate from table a,(select max(adddate) adddate from table where table.title=a.title) b
-</code></pre><h2 id="6、外连接查询-表名1：a-表名2：b"><a href="#6、外连接查询-表名1：a-表名2：b" class="headerlink" title="6、外连接查询(表名1：a 表名2：b)"></a>6、外连接查询(表名1：a 表名2：b)</h2><pre><code>select a.a, a.b, a.c, b.c, b.d, b.f from a LEFT OUT JOIN b ON a.a = b.c
-</code></pre><h2 id="7、在线视图查询-表名1：a"><a href="#7、在线视图查询-表名1：a" class="headerlink" title="7、在线视图查询(表名1：a )"></a>7、在线视图查询(表名1：a )</h2><pre><code>select * from (SELECT a,b,c FROM a) T where t.a &gt; 1;
-</code></pre><h2 id="8、between的用法-between限制查询数据范围时包括了边界值-not-between不包括"><a href="#8、between的用法-between限制查询数据范围时包括了边界值-not-between不包括" class="headerlink" title="8、between的用法,between限制查询数据范围时包括了边界值,not between不包括"></a>8、between的用法,between限制查询数据范围时包括了边界值,not between不包括</h2><pre><code>select * from table1 where time between time1 and time2
+<h2 id="4-子查询-表名1：a-表名2：b"><a href="#4-子查询-表名1：a-表名2：b" class="headerlink" title="4. 子查询(表名1：a 表名2：b)"></a>4. 子查询(表名1：a 表名2：b)</h2><pre><code>select a,b,c from a where a IN (select d from b ) 或者: select a,b,c from a where a IN (1,2,3)
+</code></pre><h2 id="5-显示文章、提交人和最后回复时间"><a href="#5-显示文章、提交人和最后回复时间" class="headerlink" title="5. 显示文章、提交人和最后回复时间"></a>5. 显示文章、提交人和最后回复时间</h2><pre><code>select a.title,a.username,b.adddate from table a,(select max(adddate) adddate from table where table.title=a.title) b
+</code></pre><h2 id="6-外连接查询-表名1：a-表名2：b"><a href="#6-外连接查询-表名1：a-表名2：b" class="headerlink" title="6. 外连接查询(表名1：a 表名2：b)"></a>6. 外连接查询(表名1：a 表名2：b)</h2><pre><code>select a.a, a.b, a.c, b.c, b.d, b.f from a LEFT OUT JOIN b ON a.a = b.c
+</code></pre><h2 id="7-在线视图查询-表名1：a"><a href="#7-在线视图查询-表名1：a" class="headerlink" title="7. 在线视图查询(表名1：a )"></a>7. 在线视图查询(表名1：a )</h2><pre><code>select * from (SELECT a,b,c FROM a) T where t.a &gt; 1;
+</code></pre><h2 id="8-between的用法-between限制查询数据范围时包括了边界值-not-between不包括"><a href="#8-between的用法-between限制查询数据范围时包括了边界值-not-between不包括" class="headerlink" title="8. between的用法,between限制查询数据范围时包括了边界值,not between不包括"></a>8. between的用法,between限制查询数据范围时包括了边界值,not between不包括</h2><pre><code>select * from table1 where time between time1 and time2
 select a,b,c, from table1 where a not between 数值1 and 数值2
-</code></pre><h2 id="9、in-的使用方法"><a href="#9、in-的使用方法" class="headerlink" title="9、in 的使用方法"></a>9、in 的使用方法</h2><pre><code>select * from table1 where a [not] in (‘值1’,’值2’,’值4’,’值6’)
-</code></pre><h2 id="10、两张关联表，删除主表中已经在副表中没有的信息"><a href="#10、两张关联表，删除主表中已经在副表中没有的信息" class="headerlink" title="10、两张关联表，删除主表中已经在副表中没有的信息"></a>10、两张关联表，删除主表中已经在副表中没有的信息</h2><pre><code>delete from table1 where not exists ( select * from table2 where table1.field1=table2.field1 )
-</code></pre><h2 id="11、四表联查问题"><a href="#11、四表联查问题" class="headerlink" title="11、四表联查问题"></a>11、四表联查问题</h2><pre><code>select * from a left inner join b on a.a=b.b right inner join c on a.a=c.c inner join d on a.a=d.d where .....
-</code></pre><h2 id="12、日程安排提前五分钟提醒"><a href="#12、日程安排提前五分钟提醒" class="headerlink" title="12、日程安排提前五分钟提醒"></a>12、日程安排提前五分钟提醒</h2><pre><code>select * from 日程安排 where datediff(&apos;minute&apos;,f开始时间,getdate())&gt;5
-</code></pre><h2 id="13、一条sql语句搞定数据库分页"><a href="#13、一条sql语句搞定数据库分页" class="headerlink" title="13、一条sql语句搞定数据库分页"></a>13、一条sql语句搞定数据库分页</h2><pre><code>select top 10 b.* from (select top 20 主键字段,排序字段 from 表名 order by 排序字段 desc) a,表名 b where b.主键字段 = a.主键字段 order by a.排序字段
+</code></pre><h2 id="9-in-的使用方法"><a href="#9-in-的使用方法" class="headerlink" title="9. in 的使用方法"></a>9. in 的使用方法</h2><pre><code>select * from table1 where a [not] in (‘值1’,’值2’,’值4’,’值6’)
+</code></pre><h2 id="10-两张关联表，删除主表中已经在副表中没有的信息"><a href="#10-两张关联表，删除主表中已经在副表中没有的信息" class="headerlink" title="10. 两张关联表，删除主表中已经在副表中没有的信息"></a>10. 两张关联表，删除主表中已经在副表中没有的信息</h2><pre><code>delete from table1 where not exists ( select * from table2 where table1.field1=table2.field1 )
+</code></pre><h2 id="11-四表联查问题"><a href="#11-四表联查问题" class="headerlink" title="11. 四表联查问题"></a>11. 四表联查问题</h2><pre><code>select * from a left inner join b on a.a=b.b right inner join c on a.a=c.c inner join d on a.a=d.d where .....
+</code></pre><h2 id="12-日程安排提前五分钟提醒"><a href="#12-日程安排提前五分钟提醒" class="headerlink" title="12. 日程安排提前五分钟提醒"></a>12. 日程安排提前五分钟提醒</h2><pre><code>select * from 日程安排 where datediff(&apos;minute&apos;,f开始时间,getdate())&gt;5
+</code></pre><h2 id="13-一条sql语句搞定数据库分页"><a href="#13-一条sql语句搞定数据库分页" class="headerlink" title="13. 一条sql语句搞定数据库分页"></a>13. 一条sql语句搞定数据库分页</h2><pre><code>select top 10 b.* from (select top 20 主键字段,排序字段 from 表名 order by 排序字段 desc) a,表名 b where b.主键字段 = a.主键字段 order by a.排序字段
 </code></pre><p>关于数据库分页：</p>
 <pre><code>declare @start int,@end int
 @sql nvarchar(600)
@@ -258,12 +258,12 @@ exec sp_executesql @sql
 </code></pre><blockquote>
 <p>注意：在top后不能直接跟一个变量，所以在实际应用中只有这样的进行特殊的处理。Rid为一个标识列，如果top后还有具体的字段，这样做是非常有好处的。因为这样可以避免 top的字段如果是逻辑索引的，查询的结果后实际表中的不一致（逻辑索引中的数据有可能和数据表中的不一致，而查询时如果处在索引则首先查询索引）</p>
 </blockquote>
-<h2 id="14、前10条记录"><a href="#14、前10条记录" class="headerlink" title="14、前10条记录"></a>14、前10条记录</h2><pre><code>select top 10 * form table1 where 范围
-</code></pre><h2 id="15、选择在每一组b值相同的数据中对应的a最大的记录的所有信息-类似这样的用法可以用于论坛每月排行榜-每月热销产品分析-按科目成绩排名-等等"><a href="#15、选择在每一组b值相同的数据中对应的a最大的记录的所有信息-类似这样的用法可以用于论坛每月排行榜-每月热销产品分析-按科目成绩排名-等等" class="headerlink" title="15、选择在每一组b值相同的数据中对应的a最大的记录的所有信息(类似这样的用法可以用于论坛每月排行榜,每月热销产品分析,按科目成绩排名,等等.)"></a>15、选择在每一组b值相同的数据中对应的a最大的记录的所有信息(类似这样的用法可以用于论坛每月排行榜,每月热销产品分析,按科目成绩排名,等等.)</h2><pre><code>select a,b,c from tablename ta where a=(select max(a) from tablename tb where tb.b=ta.b)
-</code></pre><h2 id="16、包括所有在-TableA-中但不在-TableB和TableC-中的行并消除所有重复行而派生出一个结果表"><a href="#16、包括所有在-TableA-中但不在-TableB和TableC-中的行并消除所有重复行而派生出一个结果表" class="headerlink" title="16、包括所有在 TableA 中但不在 TableB和TableC 中的行并消除所有重复行而派生出一个结果表"></a>16、包括所有在 TableA 中但不在 TableB和TableC 中的行并消除所有重复行而派生出一个结果表</h2><pre><code>(select a from tableA ) except (select a from tableB) except (select a from tableC)
-</code></pre><h2 id="17、随机取出10条数据"><a href="#17、随机取出10条数据" class="headerlink" title="17、随机取出10条数据"></a>17、随机取出10条数据</h2><pre><code>select top 10 * from tablename order by newid()
-</code></pre><h2 id="18、随机选择记录"><a href="#18、随机选择记录" class="headerlink" title="18、随机选择记录"></a>18、随机选择记录</h2><pre><code>select newid()
-</code></pre><h2 id="19、删除重复记录"><a href="#19、删除重复记录" class="headerlink" title="19、删除重复记录"></a>19、删除重复记录</h2><ul>
+<h2 id="14-前10条记录"><a href="#14-前10条记录" class="headerlink" title="14. 前10条记录"></a>14. 前10条记录</h2><pre><code>select top 10 * form table1 where 范围
+</code></pre><h2 id="15-选择在每一组b值相同的数据中对应的a最大的记录的所有信息-类似这样的用法可以用于论坛每月排行榜-每月热销产品分析-按科目成绩排名-等等"><a href="#15-选择在每一组b值相同的数据中对应的a最大的记录的所有信息-类似这样的用法可以用于论坛每月排行榜-每月热销产品分析-按科目成绩排名-等等" class="headerlink" title="15. 选择在每一组b值相同的数据中对应的a最大的记录的所有信息(类似这样的用法可以用于论坛每月排行榜,每月热销产品分析,按科目成绩排名,等等.)"></a>15. 选择在每一组b值相同的数据中对应的a最大的记录的所有信息(类似这样的用法可以用于论坛每月排行榜,每月热销产品分析,按科目成绩排名,等等.)</h2><pre><code>select a,b,c from tablename ta where a=(select max(a) from tablename tb where tb.b=ta.b)
+</code></pre><h2 id="16-包括所有在-TableA-中但不在-TableB和TableC-中的行并消除所有重复行而派生出一个结果表"><a href="#16-包括所有在-TableA-中但不在-TableB和TableC-中的行并消除所有重复行而派生出一个结果表" class="headerlink" title="16. 包括所有在 TableA 中但不在 TableB和TableC 中的行并消除所有重复行而派生出一个结果表"></a>16. 包括所有在 TableA 中但不在 TableB和TableC 中的行并消除所有重复行而派生出一个结果表</h2><pre><code>(select a from tableA ) except (select a from tableB) except (select a from tableC)
+</code></pre><h2 id="17-随机取出10条数据"><a href="#17-随机取出10条数据" class="headerlink" title="17. 随机取出10条数据"></a>17. 随机取出10条数据</h2><pre><code>select top 10 * from tablename order by newid()
+</code></pre><h2 id="18-随机选择记录"><a href="#18-随机选择记录" class="headerlink" title="18. 随机选择记录"></a>18. 随机选择记录</h2><pre><code>select newid()
+</code></pre><h2 id="19-删除重复记录"><a href="#19-删除重复记录" class="headerlink" title="19. 删除重复记录"></a>19. 删除重复记录</h2><ul>
 <li>方法一：</li>
 </ul>
 <pre><code>delete from tablename where id not in (select max(id) from tablename group by col1,col2,...)
@@ -284,9 +284,9 @@ add column_b int identity(1,1)    --添加一个自增列
 delete from tablename where column_b not in(
 select max(column_b) from tablename group by column1,column2,...)
 alter table tablename drop column column_b
-</code></pre><h2 id="20、列出数据库里所有的表名"><a href="#20、列出数据库里所有的表名" class="headerlink" title="20、列出数据库里所有的表名"></a>20、列出数据库里所有的表名</h2><pre><code>select name from sysobjects where type=&apos;U&apos; // U代表用户
-</code></pre><h2 id="21、列出表里的所有的列名"><a href="#21、列出表里的所有的列名" class="headerlink" title="21、列出表里的所有的列名"></a>21、列出表里的所有的列名</h2><pre><code>select name from syscolumns where id=object_id(&apos;TableName&apos;)
-</code></pre><h2 id="22、列示type、vender、pcs字段，以type字段排列，case可以方便地实现多重选择，类似select-中的case。"><a href="#22、列示type、vender、pcs字段，以type字段排列，case可以方便地实现多重选择，类似select-中的case。" class="headerlink" title="22、列示type、vender、pcs字段，以type字段排列，case可以方便地实现多重选择，类似select 中的case。"></a>22、列示type、vender、pcs字段，以type字段排列，case可以方便地实现多重选择，类似select 中的case。</h2><pre><code>select type,sum(case vender when &apos;A&apos; then pcs else 0 end),sum(case vender when &apos;C&apos; then pcs else 0 end),sum(case vender when &apos;B&apos; then pcs else 0 end) FROM tablename group by type
+</code></pre><h2 id="20-列出数据库里所有的表名"><a href="#20-列出数据库里所有的表名" class="headerlink" title="20. 列出数据库里所有的表名"></a>20. 列出数据库里所有的表名</h2><pre><code>select name from sysobjects where type=&apos;U&apos; // U代表用户
+</code></pre><h2 id="21-列出表里的所有的列名"><a href="#21-列出表里的所有的列名" class="headerlink" title="21. 列出表里的所有的列名"></a>21. 列出表里的所有的列名</h2><pre><code>select name from syscolumns where id=object_id(&apos;TableName&apos;)
+</code></pre><h2 id="22-列示type、vender、pcs字段，以type字段排列，case可以方便地实现多重选择，类似select-中的case。"><a href="#22-列示type、vender、pcs字段，以type字段排列，case可以方便地实现多重选择，类似select-中的case。" class="headerlink" title="22. 列示type、vender、pcs字段，以type字段排列，case可以方便地实现多重选择，类似select 中的case。"></a>22. 列示type、vender、pcs字段，以type字段排列，case可以方便地实现多重选择，类似select 中的case。</h2><pre><code>select type,sum(case vender when &apos;A&apos; then pcs else 0 end),sum(case vender when &apos;C&apos; then pcs else 0 end),sum(case vender when &apos;B&apos; then pcs else 0 end) FROM tablename group by type
 </code></pre><p>显示结果：</p>
 <pre><code>type vender pcs
 电脑 A 1
@@ -295,9 +295,9 @@ alter table tablename drop column column_b
 光盘 A 2
 手机 B 3
 手机 C 3
-</code></pre><h2 id="23、初始化-表table1"><a href="#23、初始化-表table1" class="headerlink" title="23、初始化 表table1"></a>23、初始化 表table1</h2><pre><code>TRUNCATE TABLE table1
-</code></pre><h2 id="24、选择从10到15的记录"><a href="#24、选择从10到15的记录" class="headerlink" title="24、选择从10到15的记录"></a>24、选择从10到15的记录</h2><pre><code>select top 5 * from (select top 15 * from table order by id asc) table_别名 order by id desc
-</code></pre><h2 id="25、创建临时表"><a href="#25、创建临时表" class="headerlink" title="25、创建临时表"></a>25、创建临时表</h2><ul>
+</code></pre><h2 id="23-初始化-表table1"><a href="#23-初始化-表table1" class="headerlink" title="23. 初始化 表table1"></a>23. 初始化 表table1</h2><pre><code>TRUNCATE TABLE table1
+</code></pre><h2 id="24-选择从10到15的记录"><a href="#24-选择从10到15的记录" class="headerlink" title="24. 选择从10到15的记录"></a>24. 选择从10到15的记录</h2><pre><code>select top 5 * from (select top 15 * from table order by id asc) table_别名 order by id desc
+</code></pre><h2 id="25-创建临时表"><a href="#25-创建临时表" class="headerlink" title="25. 创建临时表"></a>25. 创建临时表</h2><ul>
 <li>方法一：</li>
 </ul>
 <pre><code>create table #临时表名(字段1 约束条件,
@@ -326,10 +326,10 @@ select * from ##临时表名;
 </code></pre><p>删除临时表</p>
 <pre><code>drop table #临时表名;
 drop table ##临时表名;
-</code></pre><h2 id="26、关联表更新"><a href="#26、关联表更新" class="headerlink" title="26、关联表更新"></a>26、关联表更新</h2><pre><code>UPDATE A SET A.b=B.d FROM tableA A INNER JOIN tableB B ON A.a = B.a
-</code></pre><h2 id="27、查看表的所有外键关系"><a href="#27、查看表的所有外键关系" class="headerlink" title="27、查看表的所有外键关系"></a>27、查看表的所有外键关系</h2><pre><code>select t1.*,t2.name,t3.name from dbo.sysforeignkeys t1 left join sysobjects t2 on t1.fkeyid=t2.id 
+</code></pre><h2 id="26-关联表更新"><a href="#26-关联表更新" class="headerlink" title="26. 关联表更新"></a>26. 关联表更新</h2><pre><code>UPDATE A SET A.b=B.d FROM tableA A INNER JOIN tableB B ON A.a = B.a
+</code></pre><h2 id="27-查看表的所有外键关系"><a href="#27-查看表的所有外键关系" class="headerlink" title="27. 查看表的所有外键关系"></a>27. 查看表的所有外键关系</h2><pre><code>select t1.*,t2.name,t3.name from dbo.sysforeignkeys t1 left join sysobjects t2 on t1.fkeyid=t2.id 
            left join sysobjects t3 on t1.rkeyid=t3.id where t3.name=&apos;表名 &apos;
-</code></pre><h2 id="28、删除所有约束"><a href="#28、删除所有约束" class="headerlink" title="28、删除所有约束"></a>28、删除所有约束</h2><pre><code>DECLARE c1 cursor for
+</code></pre><h2 id="28-删除所有约束"><a href="#28-删除所有约束" class="headerlink" title="28. 删除所有约束"></a>28. 删除所有约束</h2><pre><code>DECLARE c1 cursor for
     select &apos;alter table [&apos;+ object_name(parent_obj) + &apos;] drop constraint [&apos;+name+&apos;]; &apos;
     from sysobjects
     where xtype = &apos;F&apos;
@@ -343,12 +343,12 @@ while(@@fetch_status=0)
     end
 close c1
 deallocate c1
-</code></pre><h2 id="29、删除数据库所有表"><a href="#29、删除数据库所有表" class="headerlink" title="29、删除数据库所有表"></a>29、删除数据库所有表</h2><pre><code>declare @tname varchar(8000)
+</code></pre><h2 id="29-删除数据库所有表"><a href="#29-删除数据库所有表" class="headerlink" title="29. 删除数据库所有表"></a>29. 删除数据库所有表</h2><pre><code>declare @tname varchar(8000)
 set @tname=&apos;&apos;
 select @tname=@tname + Name + &apos;,&apos; from sysobjects where xtype=&apos;U&apos;
 select @tname=&apos;drop table &apos; + left(@tname,len(@tname)-1)
 exec(@tname)
-</code></pre><h2 id="30、删除外键约束"><a href="#30、删除外键约束" class="headerlink" title="30、删除外键约束"></a>30、删除外键约束</h2><p>得到某个表被哪些外键引用，并且显示出外键表的表名</p>
+</code></pre><h2 id="30-删除外键约束"><a href="#30-删除外键约束" class="headerlink" title="30. 删除外键约束"></a>30. 删除外键约束</h2><p>得到某个表被哪些外键引用，并且显示出外键表的表名</p>
 <pre><code>SELECT
     fk.name,
     fk.object_id,
@@ -360,7 +360,7 @@ WHERE
     o.name = &apos;ATTACHMENTDOC&apos;;
 </code></pre><p>通过外键表的表名和外键名称执行以下语句即可删除外键</p>
 <pre><code>ALTER TABLE dbo.CONTRACTINFO DROP CONSTRAINT FK_CONTRACTINFO_ATTACHMENTDOC
-</code></pre><h2 id="31、查找指定数据库表的字段名，类型，注释"><a href="#31、查找指定数据库表的字段名，类型，注释" class="headerlink" title="31、查找指定数据库表的字段名，类型，注释"></a>31、查找指定数据库表的字段名，类型，注释</h2><pre><code>    SELECT c.object_id, c.name AS cname, t.name AS tname, is_computed AS isComputed,
+</code></pre><h2 id="31-查找指定数据库表的字段名，类型，注释"><a href="#31-查找指定数据库表的字段名，类型，注释" class="headerlink" title="31. 查找指定数据库表的字段名，类型，注释"></a>31. 查找指定数据库表的字段名，类型，注释</h2><pre><code>    SELECT c.object_id, c.name AS cname, t.name AS tname, is_computed AS isComputed,
            (SELECT VALUE
               FROM sys.extended_properties AS ex
              WHERE ex.major_id = c.object_id AND ex.minor_id = c.column_id) AS notes
@@ -371,29 +371,41 @@ INNER JOIN (SELECT name, system_type_id
              WHERE name &lt;&gt; &apos;sysname&apos;) AS t ON c.system_type_id = t.system_type_id
      WHERE ta.name = &apos;指定数据库表&apos;
   ORDER BY c.column_id
-</code></pre><h2 id="32、同步表数据"><a href="#32、同步表数据" class="headerlink" title="32、同步表数据"></a>32、同步表数据</h2><pre><code>INSERT 表2 
+</code></pre><h2 id="32-同步表数据"><a href="#32-同步表数据" class="headerlink" title="32. 同步表数据"></a>32. 同步表数据</h2><pre><code>INSERT 表2 
 SELECT * FROM 表1 AS a WHERE NOT EXISTS(SELECT 1 FROM 表2 WHERE ID = a.ID);
-</code></pre><h2 id="33、判断某列中是否包含中文字符或者英文字符"><a href="#33、判断某列中是否包含中文字符或者英文字符" class="headerlink" title="33、判断某列中是否包含中文字符或者英文字符"></a>33、判断某列中是否包含中文字符或者英文字符</h2><pre><code>SELECT * FROM 表名 WHERE 某列 LIKE &apos;%[吖-座]%&apos;
+</code></pre><h2 id="33-判断某列中是否包含中文字符或者英文字符"><a href="#33-判断某列中是否包含中文字符或者英文字符" class="headerlink" title="33. 判断某列中是否包含中文字符或者英文字符"></a>33. 判断某列中是否包含中文字符或者英文字符</h2><pre><code>SELECT * FROM 表名 WHERE 某列 LIKE &apos;%[吖-座]%&apos;
 SELECT * FROM 表名 WHERE 某列 LIKE &apos;%[a-z]%&apos;
-</code></pre><hr>
-<h1 id="三、技巧篇"><a href="#三、技巧篇" class="headerlink" title="三、技巧篇"></a>三、技巧篇</h1><h2 id="1、1-1，1-2的使用，在SQL语句组合时用的较多"><a href="#1、1-1，1-2的使用，在SQL语句组合时用的较多" class="headerlink" title="1、1=1，1=2的使用，在SQL语句组合时用的较多"></a>1、1=1，1=2的使用，在SQL语句组合时用的较多</h2><p>“where 1=1” 表示选择全部<br>“where 1=2” 表示全部不选</p>
-<h2 id="2、收缩数据库"><a href="#2、收缩数据库" class="headerlink" title="2、收缩数据库"></a>2、收缩数据库</h2><p>重建索引</p>
+</code></pre><h2 id="34-行转列，将多行数据合并成一行（SQL-SERVER-2005以上支持）"><a href="#34-行转列，将多行数据合并成一行（SQL-SERVER-2005以上支持）" class="headerlink" title="34. 行转列，将多行数据合并成一行（SQL SERVER 2005以上支持）"></a>34. 行转列，将多行数据合并成一行（SQL SERVER 2005以上支持）</h2><p>例如表Table1中有两列数据：</p>
+<pre><code>code        name
+AAA         姓名1
+AAA         姓名2
+AAA         姓名3
+BBB         姓名4
+BBB         姓名5
+</code></pre><p>行转列，想变成如下格式：</p>
+<pre><code>code        name
+AAA         姓名1,姓名2,姓名3
+BBB         姓名4,姓名5
+</code></pre><p>可用如下SQL实现：<br><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">  <span class="keyword">SELECT</span> code, <span class="keyword">name</span> = (<span class="keyword">STUFF</span>((<span class="keyword">SELECT</span> <span class="string">','</span> + <span class="keyword">name</span> </span><br><span class="line">                                <span class="keyword">FROM</span> Table1 </span><br><span class="line">                               <span class="keyword">WHERE</span> code = a.code <span class="keyword">FOR</span> <span class="keyword">xml</span> <span class="keyword">PATH</span>(<span class="string">''</span>)),<span class="number">1</span>,<span class="number">1</span>,<span class="string">''</span>))</span><br><span class="line">    <span class="keyword">FROM</span> Table1 a </span><br><span class="line"><span class="keyword">GROUP</span> <span class="keyword">BY</span> code</span><br></pre></td></tr></table></figure></p>
+<hr>
+<h1 id="三-技巧篇"><a href="#三-技巧篇" class="headerlink" title="三. 技巧篇"></a>三. 技巧篇</h1><h2 id="1-1-1，1-2的使用，在SQL语句组合时用的较多"><a href="#1-1-1，1-2的使用，在SQL语句组合时用的较多" class="headerlink" title="1. 1=1，1=2的使用，在SQL语句组合时用的较多"></a>1. 1=1，1=2的使用，在SQL语句组合时用的较多</h2><p>“where 1=1” 表示选择全部<br>“where 1=2” 表示全部不选</p>
+<h2 id="2-收缩数据库"><a href="#2-收缩数据库" class="headerlink" title="2. 收缩数据库"></a>2. 收缩数据库</h2><p>重建索引</p>
 <pre><code>DBCC REINDEX
 DBCC INDEXDEFRAG
 </code></pre><p>收缩数据和日志</p>
 <pre><code>DBCC SHRINKDB
 DBCC SHRINKFILE
-</code></pre><h2 id="3、压缩数据库"><a href="#3、压缩数据库" class="headerlink" title="3、压缩数据库"></a>3、压缩数据库</h2><pre><code>dbcc shrinkdatabase(dbname)
-</code></pre><h2 id="4、转移数据库给新用户以已存在用户权限"><a href="#4、转移数据库给新用户以已存在用户权限" class="headerlink" title="4、转移数据库给新用户以已存在用户权限"></a>4、转移数据库给新用户以已存在用户权限</h2><pre><code>exec sp_change_users_login &apos;update_one&apos;,&apos;newname&apos;,&apos;oldname&apos;
+</code></pre><h2 id="3-压缩数据库"><a href="#3-压缩数据库" class="headerlink" title="3. 压缩数据库"></a>3. 压缩数据库</h2><pre><code>dbcc shrinkdatabase(dbname)
+</code></pre><h2 id="4-转移数据库给新用户以已存在用户权限"><a href="#4-转移数据库给新用户以已存在用户权限" class="headerlink" title="4. 转移数据库给新用户以已存在用户权限"></a>4. 转移数据库给新用户以已存在用户权限</h2><pre><code>exec sp_change_users_login &apos;update_one&apos;,&apos;newname&apos;,&apos;oldname&apos;
 go
-</code></pre><h2 id="5、检查备份集"><a href="#5、检查备份集" class="headerlink" title="5、检查备份集"></a>5、检查备份集</h2><pre><code>RESTORE VERIFYONLY from disk=&apos;E:\dvbbs.bak&apos;
-</code></pre><h2 id="6、修复数据库"><a href="#6、修复数据库" class="headerlink" title="6、修复数据库"></a>6、修复数据库</h2><pre><code>ALTER DATABASE [dvbbs] SET SINGLE_USER
+</code></pre><h2 id="5-检查备份集"><a href="#5-检查备份集" class="headerlink" title="5. 检查备份集"></a>5. 检查备份集</h2><pre><code>RESTORE VERIFYONLY from disk=&apos;E:\dvbbs.bak&apos;
+</code></pre><h2 id="6-修复数据库"><a href="#6-修复数据库" class="headerlink" title="6. 修复数据库"></a>6. 修复数据库</h2><pre><code>ALTER DATABASE [dvbbs] SET SINGLE_USER
 GO
 DBCC CHECKDB(&apos;dvbbs&apos;,repair_allow_data_loss) WITH TABLOCK
 GO
 ALTER DATABASE [dvbbs] SET MULTI_USER
 GO
-</code></pre><h2 id="7、日志清除"><a href="#7、日志清除" class="headerlink" title="7、日志清除"></a>7、日志清除</h2><pre><code>SET NOCOUNT ON
+</code></pre><h2 id="7-日志清除"><a href="#7-日志清除" class="headerlink" title="7. 日志清除"></a>7. 日志清除</h2><pre><code>SET NOCOUNT ON
 DECLARE @LogicalFileName sysname,
 @MaxMinutes INT,
 @NewSize INT
@@ -442,8 +454,8 @@ FROM sysfiles
 WHERE name = @LogicalFileName
 DROP TABLE DummyTrans
 SET NOCOUNT OFF
-</code></pre><h2 id="8、更改某个表"><a href="#8、更改某个表" class="headerlink" title="8、更改某个表"></a>8、更改某个表</h2><pre><code>exec sp_changeobjectowner &apos;tablename&apos;,&apos;dbo&apos;
-</code></pre><h2 id="9、存储更改全部表"><a href="#9、存储更改全部表" class="headerlink" title="9、存储更改全部表"></a>9、存储更改全部表</h2><pre><code>CREATE PROCEDURE dbo.User_ChangeObjectOwnerBatch
+</code></pre><h2 id="8-更改某个表"><a href="#8-更改某个表" class="headerlink" title="8. 更改某个表"></a>8. 更改某个表</h2><pre><code>exec sp_changeobjectowner &apos;tablename&apos;,&apos;dbo&apos;
+</code></pre><h2 id="9-存储更改全部表"><a href="#9-存储更改全部表" class="headerlink" title="9. 存储更改全部表"></a>9. 存储更改全部表</h2><pre><code>CREATE PROCEDURE dbo.User_ChangeObjectOwnerBatch
 @OldOwner as NVARCHAR(128),
 @NewOwner as NVARCHAR(128)
 AS
@@ -471,7 +483,7 @@ END
 close curObject
 deallocate curObject
 GO
-</code></pre><h2 id="10、SQL-SERVER中直接循环写入数据"><a href="#10、SQL-SERVER中直接循环写入数据" class="headerlink" title="10、SQL SERVER中直接循环写入数据"></a>10、SQL SERVER中直接循环写入数据</h2><pre><code>declare @i int
+</code></pre><h2 id="10-SQL-SERVER中直接循环写入数据"><a href="#10-SQL-SERVER中直接循环写入数据" class="headerlink" title="10. SQL SERVER中直接循环写入数据"></a>10. SQL SERVER中直接循环写入数据</h2><pre><code>declare @i int
 set @i=1
 while @i&lt;30
 begin
@@ -514,46 +526,46 @@ break
 else
 continue
 end
-</code></pre><h2 id="11、查看数据库属性"><a href="#11、查看数据库属性" class="headerlink" title="11、查看数据库属性"></a>11、查看数据库属性</h2><pre><code>sp_helpdb 数据库名
-</code></pre><h2 id="12、按姓氏笔画排序"><a href="#12、按姓氏笔画排序" class="headerlink" title="12、按姓氏笔画排序:"></a>12、按姓氏笔画排序:</h2><pre><code>Select * From TableName Order By CustomerName Collate Chinese_PRC_Stroke_ci_as //从少到多
-</code></pre><h2 id="13、数据库加密"><a href="#13、数据库加密" class="headerlink" title="13、数据库加密:"></a>13、数据库加密:</h2><pre><code>select encrypt(&apos;原始密码&apos;)
+</code></pre><h2 id="11-查看数据库属性"><a href="#11-查看数据库属性" class="headerlink" title="11. 查看数据库属性"></a>11. 查看数据库属性</h2><pre><code>sp_helpdb 数据库名
+</code></pre><h2 id="12-按姓氏笔画排序"><a href="#12-按姓氏笔画排序" class="headerlink" title="12. 按姓氏笔画排序:"></a>12. 按姓氏笔画排序:</h2><pre><code>Select * From TableName Order By CustomerName Collate Chinese_PRC_Stroke_ci_as //从少到多
+</code></pre><h2 id="13-数据库加密"><a href="#13-数据库加密" class="headerlink" title="13. 数据库加密:"></a>13. 数据库加密:</h2><pre><code>select encrypt(&apos;原始密码&apos;)
 select pwdencrypt(&apos;原始密码&apos;)
 select pwdcompare(&apos;原始密码&apos;,&apos;加密后密码&apos;) = 1--相同；否则不相同 encrypt(&apos;原始密码&apos;)
 select pwdencrypt(&apos;原始密码&apos;)
 select pwdcompare(&apos;原始密码&apos;,&apos;加密后密码&apos;) = 1--相同；否则不相同
-</code></pre><h2 id="14、取回表中字段"><a href="#14、取回表中字段" class="headerlink" title="14、取回表中字段:"></a>14、取回表中字段:</h2><pre><code>declare @list varchar(1000),
+</code></pre><h2 id="14-取回表中字段"><a href="#14-取回表中字段" class="headerlink" title="14. 取回表中字段:"></a>14. 取回表中字段:</h2><pre><code>declare @list varchar(1000),
 @sql nvarchar(1000) 
 select @list=@list+&apos;,&apos;+b.name from sysobjects a,syscolumns b where a.id=b.id and a.name=&apos;表A&apos;
 set @sql=&apos;select &apos;+right(@list,len(@list)-1)+&apos; from 表A&apos; 
 exec (@sql)
-</code></pre><h2 id="15、查看硬盘分区"><a href="#15、查看硬盘分区" class="headerlink" title="15、查看硬盘分区:"></a>15、查看硬盘分区:</h2><pre><code>EXEC master..xp_fixeddrives
-</code></pre><h2 id="16、比较A-B表是否相等"><a href="#16、比较A-B表是否相等" class="headerlink" title="16、比较A,B表是否相等:"></a>16、比较A,B表是否相等:</h2><pre><code>if (select checksum_agg(binary_checksum(*)) from A)
+</code></pre><h2 id="15-查看硬盘分区"><a href="#15-查看硬盘分区" class="headerlink" title="15. 查看硬盘分区:"></a>15. 查看硬盘分区:</h2><pre><code>EXEC master..xp_fixeddrives
+</code></pre><h2 id="16-比较A-B表是否相等"><a href="#16-比较A-B表是否相等" class="headerlink" title="16. 比较A,B表是否相等:"></a>16. 比较A,B表是否相等:</h2><pre><code>if (select checksum_agg(binary_checksum(*)) from A)
      =
     (select checksum_agg(binary_checksum(*)) from B)
 print &apos;相等&apos;
 else
 print &apos;不相等&apos;
-</code></pre><h2 id="17、杀掉所有的事件探察器进程"><a href="#17、杀掉所有的事件探察器进程" class="headerlink" title="17、杀掉所有的事件探察器进程:"></a>17、杀掉所有的事件探察器进程:</h2><pre><code>DECLARE hcforeach CURSOR GLOBAL FOR SELECT &apos;kill &apos;+RTRIM(spid) FROM master.dbo.sysprocesses
+</code></pre><h2 id="17-杀掉所有的事件探察器进程"><a href="#17-杀掉所有的事件探察器进程" class="headerlink" title="17. 杀掉所有的事件探察器进程:"></a>17. 杀掉所有的事件探察器进程:</h2><pre><code>DECLARE hcforeach CURSOR GLOBAL FOR SELECT &apos;kill &apos;+RTRIM(spid) FROM master.dbo.sysprocesses
 WHERE program_name IN(&apos;SQL profiler&apos;,N&apos;SQL 事件探查器&apos;)
 EXEC sp_msforeach_worker &apos;?&apos;
-</code></pre><h2 id="18、记录搜索"><a href="#18、记录搜索" class="headerlink" title="18、记录搜索:"></a>18、记录搜索:</h2><p>开头到N条记录</p>
+</code></pre><h2 id="18-记录搜索"><a href="#18-记录搜索" class="headerlink" title="18. 记录搜索:"></a>18. 记录搜索:</h2><p>开头到N条记录</p>
 <pre><code>Select Top N * From 表
 </code></pre><p>N到M条记录(要有主索引ID)</p>
 <pre><code>Select Top M-N * From 表 Where ID in (Select Top M ID From 表) Order by ID   Desc
 </code></pre><p>N到结尾记录</p>
 <pre><code>Select Top N * From 表 Order by ID Desc
-</code></pre><h2 id="19、获取当前数据库中的所有用户表"><a href="#19、获取当前数据库中的所有用户表" class="headerlink" title="19、获取当前数据库中的所有用户表"></a>19、获取当前数据库中的所有用户表</h2><pre><code>select Name from sysobjects where xtype=&apos;u&apos; and status&gt;=0
-</code></pre><h2 id="20、获取某一个表的所有字段"><a href="#20、获取某一个表的所有字段" class="headerlink" title="20、获取某一个表的所有字段"></a>20、获取某一个表的所有字段</h2><pre><code>select name from syscolumns where id=object_id(&apos;表名&apos;)
+</code></pre><h2 id="19-获取当前数据库中的所有用户表"><a href="#19-获取当前数据库中的所有用户表" class="headerlink" title="19. 获取当前数据库中的所有用户表"></a>19. 获取当前数据库中的所有用户表</h2><pre><code>select Name from sysobjects where xtype=&apos;u&apos; and status&gt;=0
+</code></pre><h2 id="20-获取某一个表的所有字段"><a href="#20-获取某一个表的所有字段" class="headerlink" title="20. 获取某一个表的所有字段"></a>20. 获取某一个表的所有字段</h2><pre><code>select name from syscolumns where id=object_id(&apos;表名&apos;)
 select name from syscolumns where id in (select id from sysobjects where type = &apos;u&apos; and name = &apos;表名&apos;)
 </code></pre><p>两种方式的效果相同</p>
-<h2 id="21、查看与某一个表相关的视图、存储过程、函数"><a href="#21、查看与某一个表相关的视图、存储过程、函数" class="headerlink" title="21、查看与某一个表相关的视图、存储过程、函数"></a>21、查看与某一个表相关的视图、存储过程、函数</h2><pre><code>select a.* from sysobjects a, syscomments b where a.id = b.id and b.text like &apos;%表名%&apos;
-</code></pre><h2 id="22、查看当前数据库中所有存储过程"><a href="#22、查看当前数据库中所有存储过程" class="headerlink" title="22、查看当前数据库中所有存储过程"></a>22、查看当前数据库中所有存储过程</h2><pre><code>select name as 存储过程名称 from sysobjects where xtype=&apos;P&apos;
-</code></pre><h2 id="23、查询用户创建的所有数据库"><a href="#23、查询用户创建的所有数据库" class="headerlink" title="23、查询用户创建的所有数据库"></a>23、查询用户创建的所有数据库</h2><pre><code>select * from master..sysdatabases D where sid not in(select sid from master..syslogins where name=&apos;sa&apos;)
+<h2 id="21-查看与某一个表相关的视图、存储过程、函数"><a href="#21-查看与某一个表相关的视图、存储过程、函数" class="headerlink" title="21. 查看与某一个表相关的视图、存储过程、函数"></a>21. 查看与某一个表相关的视图、存储过程、函数</h2><pre><code>select a.* from sysobjects a, syscomments b where a.id = b.id and b.text like &apos;%表名%&apos;
+</code></pre><h2 id="22-查看当前数据库中所有存储过程"><a href="#22-查看当前数据库中所有存储过程" class="headerlink" title="22. 查看当前数据库中所有存储过程"></a>22. 查看当前数据库中所有存储过程</h2><pre><code>select name as 存储过程名称 from sysobjects where xtype=&apos;P&apos;
+</code></pre><h2 id="23-查询用户创建的所有数据库"><a href="#23-查询用户创建的所有数据库" class="headerlink" title="23. 查询用户创建的所有数据库"></a>23. 查询用户创建的所有数据库</h2><pre><code>select * from master..sysdatabases D where sid not in(select sid from master..syslogins where name=&apos;sa&apos;)
 </code></pre><p>或者</p>
 <pre><code>select dbid, name AS DB_NAME from master..sysdatabases where sid &lt;&gt; 0x01
-</code></pre><h2 id="24、查询某一个表的字段和数据类型"><a href="#24、查询某一个表的字段和数据类型" class="headerlink" title="24、查询某一个表的字段和数据类型"></a>24、查询某一个表的字段和数据类型</h2><pre><code>select column_name,data_type from information_schema.columns
+</code></pre><h2 id="24-查询某一个表的字段和数据类型"><a href="#24-查询某一个表的字段和数据类型" class="headerlink" title="24. 查询某一个表的字段和数据类型"></a>24. 查询某一个表的字段和数据类型</h2><pre><code>select column_name,data_type from information_schema.columns
 where table_name = &apos;表名&apos;
-</code></pre><h2 id="25、不同服务器数据库之间的数据操作"><a href="#25、不同服务器数据库之间的数据操作" class="headerlink" title="25、不同服务器数据库之间的数据操作"></a>25、不同服务器数据库之间的数据操作</h2><p>创建链接服务器</p>
+</code></pre><h2 id="25-不同服务器数据库之间的数据操作"><a href="#25-不同服务器数据库之间的数据操作" class="headerlink" title="25. 不同服务器数据库之间的数据操作"></a>25. 不同服务器数据库之间的数据操作</h2><p>创建链接服务器</p>
 <pre><code>exec sp_addlinkedserver &apos;ITSV &apos;, &apos; &apos;, &apos;SQLOLEDB &apos;, &apos;远程服务器名或ip地址 &apos;
 exec sp_addlinkedsrvlogin &apos;ITSV &apos;, &apos;false &apos;,null, &apos;用户名 &apos;, &apos;密码 &apos;
 </code></pre><p>查询示例</p>
@@ -564,7 +576,10 @@ exec sp_addlinkedsrvlogin &apos;ITSV &apos;, &apos;false &apos;,null, &apos;用�
 <pre><code>exec sp_dropserver &apos;ITSV &apos;, &apos;droplogins &apos;
 </code></pre><p>连接远程/局域网数据(openrowset/openquery/opendatasource)</p>
 <ul>
-<li>1、openrowset<br>查询示例</li>
+<li><ol>
+<li>openrowset<br>查询示例</li>
+</ol>
+</li>
 </ul>
 <pre><code>select * from openrowset( &apos;SQLOLEDB &apos;, &apos;sql服务器名 &apos;; &apos;用户名 &apos;; &apos;密码 &apos;,数据库名.dbo.表名)
 </code></pre><p>生成本地表</p>
@@ -577,7 +592,10 @@ select *from 本地表
 set b.列A=a.列A
 from openrowset( &apos;SQLOLEDB &apos;, &apos;sql服务器名 &apos;; &apos;用户名 &apos;; &apos;密码 &apos;,数据库名.dbo.表名)as a inner join 本地表 b    on a.column1=b.column1
 </code></pre><ul>
-<li>2、openquery用法需要创建一个连接<br>首先创建一个连接创建链接服务器</li>
+<li><ol>
+<li>openquery用法需要创建一个连接<br>首先创建一个连接创建链接服务器</li>
+</ol>
+</li>
 </ul>
 <pre><code>exec sp_addlinkedserver &apos;ITSV &apos;, &apos; &apos;, &apos;SQLOLEDB &apos;, &apos;远程服务器名或ip地址 &apos;
 </code></pre><p>查询</p>
@@ -592,14 +610,17 @@ set b.列B=a.列B
 FROM openquery(ITSV, &apos;SELECT * FROM 数据库.dbo.表名 &apos;) as a
 inner join 本地表 b on a.列A=b.列A
 </code></pre><ul>
-<li>3、opendatasource/openrowset</li>
+<li><ol>
+<li>opendatasource/openrowset</li>
+</ol>
+</li>
 </ul>
 <pre><code>SELECT *
 FROM opendatasource( &apos;SQLOLEDB &apos;, &apos;Data Source=ip/ServerName;User ID=登陆名;Password=密码 &apos; ).test.dbo.roy_ta
 </code></pre><p>把本地表导入远程表</p>
 <pre><code>insert opendatasource( &apos;SQLOLEDB &apos;, &apos;Data Source=ip/ServerName;User ID=登陆名;Password=密码 &apos;).数据库.dbo.表名
 select * from 本地表
-</code></pre><h2 id="26、删除数据库下面的所有表"><a href="#26、删除数据库下面的所有表" class="headerlink" title="26、删除数据库下面的所有表"></a>26、删除数据库下面的所有表</h2><pre><code>use 数据库名(是要删除表的所在的那个数据库的名称)
+</code></pre><h2 id="26-删除数据库下面的所有表"><a href="#26-删除数据库下面的所有表" class="headerlink" title="26. 删除数据库下面的所有表"></a>26. 删除数据库下面的所有表</h2><pre><code>use 数据库名(是要删除表的所在的那个数据库的名称)
 GO
 declare @sql varchar(8000)
 while (select count(*) from sysobjects where type=&apos;U&apos;)&gt;0
@@ -610,7 +631,7 @@ WHERE (type = &apos;U&apos;)
 ORDER BY &apos;drop table &apos; + name
 exec(@sql) 
 end
-</code></pre><h2 id="27、查看数据库文件使用情况"><a href="#27、查看数据库文件使用情况" class="headerlink" title="27、查看数据库文件使用情况"></a>27、查看数据库文件使用情况</h2><pre><code>SELECT  A.name                                                     AS &quot;逻辑名称&quot;
+</code></pre><h2 id="27-查看数据库文件使用情况"><a href="#27-查看数据库文件使用情况" class="headerlink" title="27. 查看数据库文件使用情况"></a>27. 查看数据库文件使用情况</h2><pre><code>SELECT  A.name                                                     AS &quot;逻辑名称&quot;
        ,CONVERT(FLOAT ,A.size)             * (8192.0/1024.0)/1024  AS &quot;已用大小MB&quot;
        ,CONVERT(FLOAT ,A.maxSize - A.size) * (8192.0/1024.0)/1024  AS &quot;可用大小MB&quot;
        ,CONVERT(FLOAT ,A.maxSize)          * (8192.0/1024.0)/1024  AS &quot;分配大小MB&quot;
@@ -636,19 +657,19 @@ end
         <!-- YPN Add 2016-11-14 增加打赏 start -->
         <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center">
           <div></div>
-          <button id="rewardButton", disable="enable", onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}", style="cursor: pointer; border: 0; outline: 0; border-radius: 100%; padding: 0; margin: 0; letter-spacing: normal; text-transform: none; text-indent: 0px; text-shadow: none">
+          <button id="rewardButton" ,="" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}" style="cursor: pointer; border: 0; outline: 0; border-radius: 100%; padding: 0; margin: 0; letter-spacing: normal; text-transform: none; text-indent: 0px; text-shadow: none">
             <span onmouseover="this.style.color='rgb(236,96,0)';this.style.background='rgb(204,204,204)'" onmouseout="this.style.color='#fff';this.style.background='rgb(236,96,0)'" style="display: inline-block; width: 70px; height: 70px; border-radius: 100%; line-height: 81px; color: #fff; font: 400 35px/75px 'microsofty'; background: rgb(236,96,0)">赏</span>
           </button>
           <div id="QR" style="display: none;">
             
               <div id="wechat" style="display: inline-block">
-                <img id="wechat_qr" src="/assets/blogImg/YPN_wechatpay-32x32.png" alt="昜丿捺 WeChat Pay" style="width: 200px; max-width: 100%; display: inline-block"/>
+                <img id="wechat_qr" src="/assets/blogImg/YPN_wechatpay-32x32.png" alt="昜丿捺 WeChat Pay" style="width: 200px; max-width: 100%; display: inline-block">
                 <p>微信打赏</p>
               </div>
             
           
             <div id="alipay" style="display: inline-block">
-              <img id="alipay_qr" src="/assets/blogImg/YPN_alipay-32x32.jpg" alt="昜丿捺 Alipay" style="width: 200px; max-width: 100%; display: inline-block"/>
+              <img id="alipay_qr" src="/assets/blogImg/YPN_alipay-32x32.jpg" alt="昜丿捺 Alipay" style="width: 200px; max-width: 100%; display: inline-block">
               <p>支付宝打赏</p>
             </div>
           
@@ -656,15 +677,7 @@ end
         </div>
         <!-- YPN Add 2016-11-14 增加打赏 end -->
 
-        <!-- 多说最近访客 start -->
-        <div class="ds-recent-visitors" data-num-items="28" data-avatar-size="42" id="ds-recent-visitors"></div>
-        <!-- 多说最近访客 end -->
-
-        <!-- 多说评论框 start -->
-        <div class="ds-thread" data-thread-key="2016/11/29/【SQL】经典语句/" data-title="【SQL】经典语句" data-url="http://yoursite.com/2016/11/29/【SQL】经典语句/"></div>
-        <!-- 多说评论框 end -->
-
-        <!-- YPN ADD 2017-11-02 新增 Hitokoto·一言经典语句-->
+        <!-- YPN ADD 2017-11-02 Hitokoto·一言经典语句-->
         <script type="text/javascript" src="https://api.lwl12.com/hitokoto/main/get?encode=js&charset=utf-8"></script>
         <div id="lwlhitokoto"><script>lwlhitokoto()</script></div>
 
@@ -683,9 +696,9 @@ end
         <p class="copyright text-muted">
           Theme By <a target="_blank" href="https://github.com/levblanc">Levblanc.</a>
           Inspired By <a target="_blank" href="https://github.com/klugjo/hexo-theme-clean-blog">Clean Blog.</a>
-        <p class="copyright text-muted">
+        </p><p class="copyright text-muted">
           Powered By <a target="_blank" href="https://hexo.io/">Hexo.</a>
-        <p class="copyright text-muted">
+        </p><p class="copyright text-muted">
           本站总访问量 <span id="busuanzi_value_site_pv"></span> 次, 访客数 <span id="busuanzi_value_site_uv"></span> 人次, 本文总阅读量 <span id="busuanzi_value_page_pv"></span> 次
         </p>
       </div>
@@ -755,29 +768,13 @@ end
   });
 </script>
 
-<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
-<script type="text/javascript">
-var duoshuoQuery = {short_name:"yangpiena"};
-	(function() {
-		var ds = document.createElement('script');
-		ds.type = 'text/javascript';ds.async = true;
-		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '/js/embed.js';
-		ds.charset = 'UTF-8';
-		(document.getElementsByTagName('head')[0] 
-		 || document.getElementsByTagName('body')[0]).appendChild(ds);
-	})();
-	</script>
-<!-- 多说公共JS代码 end -->
-
 <div id="totop" style="position:fixed;bottom:50px;right:30px;cursor: pointer;">
-	<a title="返回顶部"><img src="/img/scrollup.png"/></a>
+	<a title="返回顶部"><img src="/img/scrollup.png"></a>
 </div>
 <script src="/js/totop.js"></script>
 
 <!-- YPN Add 2017-04-12 基于canvas绘制的网页背景效果 -->
-<!--
-<script type="text/javascript" src="https://cdn.bootcss.com/canvas-nest.js/1.0.1/canvas-nest.min.js"></script>
--->
+<!-- <script type="text/javascript" src="https://cdn.bootcss.com/canvas-nest.js/1.0.1/canvas-nest.min.js"></script> -->
   </body>
 </html>
 

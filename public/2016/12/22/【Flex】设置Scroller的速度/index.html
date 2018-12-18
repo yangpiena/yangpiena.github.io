@@ -1,18 +1,18 @@
 <!DOCTYPE html>
 <html>
   <!-- Html Head Tag-->
-  <head>
+  <head><meta name="generator" content="Hexo 3.8.0">
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="">
   <meta name="author" content="昜丿捺">
   <!-- Open Graph Data -->
-  <meta property="og:title" content="【Flex】设置scroller的速度"/>
-  <meta property="og:description" content="没有阳光，沉默而居" />
-  <meta property="og:site_name" content="昜丿捺"/>
-  <meta property="og:type" content="article" />
-  <meta property="og:image" content="http://yoursite.comundefined"/>
+  <meta property="og:title" content="【Flex】设置scroller的速度">
+  <meta property="og:description" content="没有阳光，沉默而居">
+  <meta property="og:site_name" content="昜丿捺">
+  <meta property="og:type" content="article">
+  <meta property="og:image" content="http://yoursite.comundefined">
   
     <link rel="alternate" href="/atom.xml" title="昜丿捺" type="application/atom+xml">
   
@@ -118,7 +118,7 @@
           <!-- Date -->
           <span class="date-time info">发表于
             <span class="date">2016-12-22</span>
-            <span class="time">09:40:40</span>
+            <span class="time">17:24:13</span>
           </span>
           
           <!--  Categories  -->
@@ -150,26 +150,26 @@
 			<!-- YPN Add 2017-02-27 Table of Contents -->
 			
 			
-          	<p>Flex每个Scroller都有一个mouseWheelChanging方法,当滚动鼠标中轮的时候会调用，而后就可以在这个函数中进行判断，如下:<br><a id="more"></a><br>假设我的滚动条id = mainScroller<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line">protected function mainScroller _mouseWheelChangingHandler(event:FlexMouseEvent):void</div><div class="line">&#123;</div><div class="line">	event.preventDefault();</div><div class="line">	var modifier:int       = 5;</div><div class="line">	var delta:Number       = Number(event.delta) * modifier;</div><div class="line">	var viewport:IViewport = mainScroller.verticalScrollBar.viewport;</div><div class="line">	var vPos:Number        = viewport.verticalScrollPosition;</div><div class="line">	var maximum:Number     = mainScroller.verticalScrollBar.maximum;</div><div class="line">	</div><div class="line">	if (delta &lt; 0) </div><div class="line">	&#123;</div><div class="line">		mainScroller.verticalScrollBar.viewport.verticalScrollPosition = Math.min(vPos - delta, maximum) ;        </div><div class="line">	&#125;</div><div class="line">	else</div><div class="line">	&#123;</div><div class="line">		mainScroller.verticalScrollBar.viewport.verticalScrollPosition = Math.max(vPos - delta, 0);</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+          	<p>Flex每个Scroller都有一个mouseWheelChanging方法,当滚动鼠标中轮的时候会调用，而后就可以在这个函数中进行判断，如下:<br><a id="more"></a><br>假设我的滚动条id = mainScroller<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">protected function mainScroller _mouseWheelChangingHandler(event:FlexMouseEvent):void</span><br><span class="line">&#123;</span><br><span class="line">	event.preventDefault();</span><br><span class="line">	var modifier:int       = 5;</span><br><span class="line">	var delta:Number       = Number(event.delta) * modifier;</span><br><span class="line">	var viewport:IViewport = mainScroller.verticalScrollBar.viewport;</span><br><span class="line">	var vPos:Number        = viewport.verticalScrollPosition;</span><br><span class="line">	var maximum:Number     = mainScroller.verticalScrollBar.maximum;</span><br><span class="line">	</span><br><span class="line">	if (delta &lt; 0) </span><br><span class="line">	&#123;</span><br><span class="line">		mainScroller.verticalScrollBar.viewport.verticalScrollPosition = Math.min(vPos - delta, maximum) ;        </span><br><span class="line">	&#125;</span><br><span class="line">	else</span><br><span class="line">	&#123;</span><br><span class="line">		mainScroller.verticalScrollBar.viewport.verticalScrollPosition = Math.max(vPos - delta, 0);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
 
         </div>
 
         <!-- YPN Add 2016-11-14 增加打赏 start -->
         <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center">
           <div></div>
-          <button id="rewardButton", disable="enable", onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}", style="cursor: pointer; border: 0; outline: 0; border-radius: 100%; padding: 0; margin: 0; letter-spacing: normal; text-transform: none; text-indent: 0px; text-shadow: none">
+          <button id="rewardButton" ,="" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}" style="cursor: pointer; border: 0; outline: 0; border-radius: 100%; padding: 0; margin: 0; letter-spacing: normal; text-transform: none; text-indent: 0px; text-shadow: none">
             <span onmouseover="this.style.color='rgb(236,96,0)';this.style.background='rgb(204,204,204)'" onmouseout="this.style.color='#fff';this.style.background='rgb(236,96,0)'" style="display: inline-block; width: 70px; height: 70px; border-radius: 100%; line-height: 81px; color: #fff; font: 400 35px/75px 'microsofty'; background: rgb(236,96,0)">赏</span>
           </button>
           <div id="QR" style="display: none;">
             
               <div id="wechat" style="display: inline-block">
-                <img id="wechat_qr" src="/assets/blogImg/YPN_wechatpay-32x32.png" alt="昜丿捺 WeChat Pay" style="width: 200px; max-width: 100%; display: inline-block"/>
+                <img id="wechat_qr" src="/assets/blogImg/YPN_wechatpay-32x32.png" alt="昜丿捺 WeChat Pay" style="width: 200px; max-width: 100%; display: inline-block">
                 <p>微信打赏</p>
               </div>
             
           
             <div id="alipay" style="display: inline-block">
-              <img id="alipay_qr" src="/assets/blogImg/YPN_alipay-32x32.jpg" alt="昜丿捺 Alipay" style="width: 200px; max-width: 100%; display: inline-block"/>
+              <img id="alipay_qr" src="/assets/blogImg/YPN_alipay-32x32.jpg" alt="昜丿捺 Alipay" style="width: 200px; max-width: 100%; display: inline-block">
               <p>支付宝打赏</p>
             </div>
           
@@ -177,15 +177,7 @@
         </div>
         <!-- YPN Add 2016-11-14 增加打赏 end -->
 
-        <!-- 多说最近访客 start -->
-        <div class="ds-recent-visitors" data-num-items="28" data-avatar-size="42" id="ds-recent-visitors"></div>
-        <!-- 多说最近访客 end -->
-
-        <!-- 多说评论框 start -->
-        <div class="ds-thread" data-thread-key="2016/12/22/【Flex】设置scroller的速度/" data-title="【Flex】设置scroller的速度" data-url="http://yoursite.com/2016/12/22/【Flex】设置scroller的速度/"></div>
-        <!-- 多说评论框 end -->
-
-        <!-- YPN ADD 2017-11-02 新增 Hitokoto·一言经典语句-->
+        <!-- YPN ADD 2017-11-02 Hitokoto·一言经典语句-->
         <script type="text/javascript" src="https://api.lwl12.com/hitokoto/main/get?encode=js&charset=utf-8"></script>
         <div id="lwlhitokoto"><script>lwlhitokoto()</script></div>
 
@@ -204,9 +196,9 @@
         <p class="copyright text-muted">
           Theme By <a target="_blank" href="https://github.com/levblanc">Levblanc.</a>
           Inspired By <a target="_blank" href="https://github.com/klugjo/hexo-theme-clean-blog">Clean Blog.</a>
-        <p class="copyright text-muted">
+        </p><p class="copyright text-muted">
           Powered By <a target="_blank" href="https://hexo.io/">Hexo.</a>
-        <p class="copyright text-muted">
+        </p><p class="copyright text-muted">
           本站总访问量 <span id="busuanzi_value_site_pv"></span> 次, 访客数 <span id="busuanzi_value_site_uv"></span> 人次, 本文总阅读量 <span id="busuanzi_value_page_pv"></span> 次
         </p>
       </div>
@@ -276,29 +268,13 @@
   });
 </script>
 
-<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
-<script type="text/javascript">
-var duoshuoQuery = {short_name:"yangpiena"};
-	(function() {
-		var ds = document.createElement('script');
-		ds.type = 'text/javascript';ds.async = true;
-		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '/js/embed.js';
-		ds.charset = 'UTF-8';
-		(document.getElementsByTagName('head')[0] 
-		 || document.getElementsByTagName('body')[0]).appendChild(ds);
-	})();
-	</script>
-<!-- 多说公共JS代码 end -->
-
 <div id="totop" style="position:fixed;bottom:50px;right:30px;cursor: pointer;">
-	<a title="返回顶部"><img src="/img/scrollup.png"/></a>
+	<a title="返回顶部"><img src="/img/scrollup.png"></a>
 </div>
 <script src="/js/totop.js"></script>
 
 <!-- YPN Add 2017-04-12 基于canvas绘制的网页背景效果 -->
-<!--
-<script type="text/javascript" src="https://cdn.bootcss.com/canvas-nest.js/1.0.1/canvas-nest.min.js"></script>
--->
+<!-- <script type="text/javascript" src="https://cdn.bootcss.com/canvas-nest.js/1.0.1/canvas-nest.min.js"></script> -->
   </body>
 </html>
 

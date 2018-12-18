@@ -1,18 +1,18 @@
 <!DOCTYPE html>
 <html>
   <!-- Html Head Tag-->
-  <head>
+  <head><meta name="generator" content="Hexo 3.8.0">
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="">
   <meta name="author" content="昜丿捺">
   <!-- Open Graph Data -->
-  <meta property="og:title" content="昜丿捺"/>
-  <meta property="og:description" content="没有阳光，沉默而居" />
-  <meta property="og:site_name" content="昜丿捺"/>
-  <meta property="og:type" content="website" />
-  <meta property="og:image" content="http://yoursite.comundefined"/>
+  <meta property="og:title" content="昜丿捺">
+  <meta property="og:description" content="没有阳光，沉默而居">
+  <meta property="og:site_name" content="昜丿捺">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="http://yoursite.comundefined">
   
     <link rel="alternate" href="/atom.xml" title="昜丿捺" type="application/atom+xml">
   
@@ -129,10 +129,10 @@
       </div>
     </div>
     <!-- Post Excerpt -->
-    <div class="excerpt typo"><h3 id="查询死锁进程"><a href="#查询死锁进程" class="headerlink" title="查询死锁进程"></a>查询死锁进程</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">SELECT</div><div class="line">	request_session_id spid,</div><div class="line">	OBJECT_NAME(</div><div class="line">		resource_associated_entity_id</div><div class="line">	) tableName</div><div class="line">FROM</div><div class="line">	sys.dm_tran_locks</div><div class="line">WHERE</div><div class="line">	resource_type = &apos;OBJECT&apos;;</div></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div></pre></td><td class="code"><pre><div class="line">SELECT</div><div class="line">	标志,</div><div class="line">	进程ID = spid,</div><div class="line">	线程ID = kpid,</div><div class="line">	块进程ID = blocked,</div><div class="line">	数据库ID = dbid,</div><div class="line">	数据库名 = db_name(dbid),</div><div class="line">	用户ID = uid,</div><div class="line">	用户名 = loginame,</div><div class="line">	累计CPU时间 = cpu,</div><div class="line">	登陆时间 = login_time,</div><div class="line">	打开事务数 = open_tran,</div><div class="line">	进程状态 = status,</div><div class="line">	工作站名 = hostname,</div><div class="line">	应用程序名 = program_name,</div><div class="line">	工作站进程ID = hostprocess,</div><div class="line">	域名 = nt_domain,</div><div class="line">	网卡地址 = net_address </div><div class="line">FROM</div><div class="line">	(</div><div class="line">		SELECT</div><div class="line">			标志 = &apos;死锁的进程&apos;,</div><div class="line">			spid,</div><div class="line">			kpid,</div><div class="line">			a.blocked,</div><div class="line">			dbid,</div><div class="line">			uid,</div><div class="line">			loginame,</div><div class="line">			cpu,</div><div class="line">			login_time,</div><div class="line">			open_tran,</div><div class="line">			status,</div><div class="line">			hostname,</div><div class="line">			program_name,</div><div class="line">			hostprocess,</div><div class="line">			nt_domain,</div><div class="line">			net_address,</div><div class="line">			s1 = a.spid,</div><div class="line">			s2 = 0</div><div class="line">		FROM</div><div class="line">			master..sysprocesses a</div><div class="line">		JOIN (</div><div class="line">			SELECT</div><div class="line">				blocked</div><div class="line">			FROM</div><div class="line">				master..sysprocesses</div><div class="line">			GROUP BY</div><div class="line">				blocked</div><div class="line">		) b ON a.spid = b.blocked</div><div class="line">		WHERE</div><div class="line">			a.blocked = 0</div><div class="line">		UNION ALL</div><div class="line">			SELECT</div><div class="line">				&apos;|_牺牲品_&gt;&apos;,</div><div class="line">				spid,</div><div class="line">				kpid,</div><div class="line">				blocked,</div><div class="line">				dbid,</div><div class="line">				uid,</div><div class="line">				loginame,</div><div class="line">				cpu,</div><div class="line">				login_time,</div><div class="line">				open_tran,</div><div class="line">				status,</div><div class="line">				hostname,</div><div class="line">				program_name,</div><div class="line">				hostprocess,</div><div class="line">				nt_domain,</div><div class="line">				net_address,</div><div class="line">				s1 = blocked,</div><div class="line">				s2 = 1</div><div class="line">			FROM</div><div class="line">				master..sysprocesses a</div><div class="line">			WHERE</div><div class="line">				blocked &lt;&gt; 0</div><div class="line">	) a</div><div class="line">ORDER BY</div><div class="line">	s1,</div><div class="line">	s2</div></pre></td></tr></table></figure>
-<h3 id="杀死死锁进程"><a href="#杀死死锁进程" class="headerlink" title="杀死死锁进程"></a>杀死死锁进程</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">KILL spid;</div></pre></td></tr></table></figure>
-<h3 id="每秒死锁数量"><a href="#每秒死锁数量" class="headerlink" title="每秒死锁数量"></a>每秒死锁数量</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">SELECT  *</div><div class="line">FROM    sys.dm_os_performance_counters</div><div class="line">WHERE   counter_name LIKE &apos;Number of Deadlocksc%&apos;;</div></pre></td></tr></table></figure></div>
+    <div class="excerpt typo"><h3 id="查询死锁进程"><a href="#查询死锁进程" class="headerlink" title="查询死锁进程"></a>查询死锁进程</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">SELECT</span><br><span class="line">	request_session_id spid,</span><br><span class="line">	OBJECT_NAME(</span><br><span class="line">		resource_associated_entity_id</span><br><span class="line">	) tableName</span><br><span class="line">FROM</span><br><span class="line">	sys.dm_tran_locks</span><br><span class="line">WHERE</span><br><span class="line">	resource_type = &apos;OBJECT&apos;;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br></pre></td><td class="code"><pre><span class="line">SELECT</span><br><span class="line">	标志,</span><br><span class="line">	进程ID = spid,</span><br><span class="line">	线程ID = kpid,</span><br><span class="line">	块进程ID = blocked,</span><br><span class="line">	数据库ID = dbid,</span><br><span class="line">	数据库名 = db_name(dbid),</span><br><span class="line">	用户ID = uid,</span><br><span class="line">	用户名 = loginame,</span><br><span class="line">	累计CPU时间 = cpu,</span><br><span class="line">	登陆时间 = login_time,</span><br><span class="line">	打开事务数 = open_tran,</span><br><span class="line">	进程状态 = status,</span><br><span class="line">	工作站名 = hostname,</span><br><span class="line">	应用程序名 = program_name,</span><br><span class="line">	工作站进程ID = hostprocess,</span><br><span class="line">	域名 = nt_domain,</span><br><span class="line">	网卡地址 = net_address </span><br><span class="line">FROM</span><br><span class="line">	(</span><br><span class="line">		SELECT</span><br><span class="line">			标志 = &apos;死锁的进程&apos;,</span><br><span class="line">			spid,</span><br><span class="line">			kpid,</span><br><span class="line">			a.blocked,</span><br><span class="line">			dbid,</span><br><span class="line">			uid,</span><br><span class="line">			loginame,</span><br><span class="line">			cpu,</span><br><span class="line">			login_time,</span><br><span class="line">			open_tran,</span><br><span class="line">			status,</span><br><span class="line">			hostname,</span><br><span class="line">			program_name,</span><br><span class="line">			hostprocess,</span><br><span class="line">			nt_domain,</span><br><span class="line">			net_address,</span><br><span class="line">			s1 = a.spid,</span><br><span class="line">			s2 = 0</span><br><span class="line">		FROM</span><br><span class="line">			master..sysprocesses a</span><br><span class="line">		JOIN (</span><br><span class="line">			SELECT</span><br><span class="line">				blocked</span><br><span class="line">			FROM</span><br><span class="line">				master..sysprocesses</span><br><span class="line">			GROUP BY</span><br><span class="line">				blocked</span><br><span class="line">		) b ON a.spid = b.blocked</span><br><span class="line">		WHERE</span><br><span class="line">			a.blocked = 0</span><br><span class="line">		UNION ALL</span><br><span class="line">			SELECT</span><br><span class="line">				&apos;|_牺牲品_&gt;&apos;,</span><br><span class="line">				spid,</span><br><span class="line">				kpid,</span><br><span class="line">				blocked,</span><br><span class="line">				dbid,</span><br><span class="line">				uid,</span><br><span class="line">				loginame,</span><br><span class="line">				cpu,</span><br><span class="line">				login_time,</span><br><span class="line">				open_tran,</span><br><span class="line">				status,</span><br><span class="line">				hostname,</span><br><span class="line">				program_name,</span><br><span class="line">				hostprocess,</span><br><span class="line">				nt_domain,</span><br><span class="line">				net_address,</span><br><span class="line">				s1 = blocked,</span><br><span class="line">				s2 = 1</span><br><span class="line">			FROM</span><br><span class="line">				master..sysprocesses a</span><br><span class="line">			WHERE</span><br><span class="line">				blocked &lt;&gt; 0</span><br><span class="line">	) a</span><br><span class="line">ORDER BY</span><br><span class="line">	s1,</span><br><span class="line">	s2</span><br></pre></td></tr></table></figure>
+<h3 id="杀死死锁进程"><a href="#杀死死锁进程" class="headerlink" title="杀死死锁进程"></a>杀死死锁进程</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">KILL spid;</span><br></pre></td></tr></table></figure>
+<h3 id="每秒死锁数量"><a href="#每秒死锁数量" class="headerlink" title="每秒死锁数量"></a>每秒死锁数量</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">SELECT  *</span><br><span class="line">FROM    sys.dm_os_performance_counters</span><br><span class="line">WHERE   counter_name LIKE &apos;Number of Deadlocksc%&apos;;</span><br></pre></td></tr></table></figure></div>
     <!-- Post Tags -->
     <div class="tags">
       
@@ -167,7 +167,7 @@
     <!-- Post Excerpt -->
     <div class="excerpt typo"><h2 id="exp-imp命令详解"><a href="#exp-imp命令详解" class="headerlink" title="exp/imp命令详解"></a>exp/imp命令详解</h2><p>exp        导出命令<br>imp        导入命令</p>
 <p><strong>exp导出模式</strong><br>full模式：导出整个数据库<br>user模式：导出指定的用户<br>table模式：导出指定的表<br>tablespace模式：导出表空间</p>
-<p><strong>exp导出参数</strong><br>owner：指定要导出的用户列表<br>full=y：表示要导出整个数据库<br>tables：指定要导出的表<br>tablepaces：指定要导出的表空间<br>rows=y：表示导出表数据,否则只导出表的结构.<br>help=y：表示要获取帮助<br>indexs：指定是否导出索引<br>grants：表示是否导出授权<br>query：定查询条件,允许用户导出表的一部分数据<br>triggers：指定是否导出触发器<br></div>
+<p><strong>exp导出参数</strong><br>owner：指定要导出的用户列表<br>full=y：表示要导出整个数据库<br>tables：指定要导出的表<br>tablepaces：指定要导出的表空间<br>rows=y：表示导出表数据,否则只导出表的结构.<br>help=y：表示要获取帮助<br>indexs：指定是否导出索引<br>grants：表示是否导出授权<br>query：定查询条件,允许用户导出表的一部分数据<br>triggers：指定是否导出触发器<br></p></div>
     <!-- Post Tags -->
     <div class="tags">
       
@@ -200,7 +200,7 @@
       </div>
     </div>
     <!-- Post Excerpt -->
-    <div class="excerpt typo"><h3 id="1-删除表空间和用户"><a href="#1-删除表空间和用户" class="headerlink" title="1. 删除表空间和用户"></a>1. 删除表空间和用户</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">DROP USER XCBA CASCADE;</div><div class="line">DROP tablespace XCBA_temp including contents AND datafiles;</div><div class="line">DROP tablespace XCBA including contents AND datafiles;</div></pre></td></tr></table></figure></div>
+    <div class="excerpt typo"><h3 id="1-删除表空间和用户"><a href="#1-删除表空间和用户" class="headerlink" title="1. 删除表空间和用户"></a>1. 删除表空间和用户</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">DROP USER XCBA CASCADE;</span><br><span class="line">DROP tablespace XCBA_temp including contents AND datafiles;</span><br><span class="line">DROP tablespace XCBA including contents AND datafiles;</span><br></pre></td></tr></table></figure></div>
     <!-- Post Tags -->
     <div class="tags">
       
@@ -234,8 +234,8 @@
     </div>
     <!-- Post Excerpt -->
     <div class="excerpt typo"><h1 id="关于SQL的常见问题解答"><a href="#关于SQL的常见问题解答" class="headerlink" title="关于SQL的常见问题解答"></a>关于SQL的常见问题解答</h1><hr>
-<h2 id="1-SQL句在Access里可正常执行，但在VB程序里报“FROM子句语法错误”"><a href="#1-SQL句在Access里可正常执行，但在VB程序里报“FROM子句语法错误”" class="headerlink" title="1. SQL句在Access里可正常执行，但在VB程序里报“FROM子句语法错误”"></a>1. SQL句在Access里可正常执行，但在VB程序里报“FROM子句语法错误”</h2><p>例如，报错SQL:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">SELECT</div><div class="line">	gz,</div><div class="line">	yz</div><div class="line">FROM</div><div class="line">	(SELECT DISTINCT gz, yz FROM dg LEFT JOIN dgdw ON dg.dg = dgdw.gz WHERE cpxh = &apos;abc&apos;) AS a</div><div class="line">ORDER BY</div><div class="line">	gz;</div></pre></td></tr></table></figure></p>
-<p>在Access里执行没问题，但放到代码里就<code>FROM子句语法错误</code>。此时，只需将from子语句用[]括起来，后面跟一个.即可，正确SQL如下：<br></div>
+<h2 id="1-SQL句在Access里可正常执行，但在VB程序里报“FROM子句语法错误”"><a href="#1-SQL句在Access里可正常执行，但在VB程序里报“FROM子句语法错误”" class="headerlink" title="1. SQL句在Access里可正常执行，但在VB程序里报“FROM子句语法错误”"></a>1. SQL句在Access里可正常执行，但在VB程序里报“FROM子句语法错误”</h2><p>例如，报错SQL:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">SELECT</span><br><span class="line">	gz,</span><br><span class="line">	yz</span><br><span class="line">FROM</span><br><span class="line">	(SELECT DISTINCT gz, yz FROM dg LEFT JOIN dgdw ON dg.dg = dgdw.gz WHERE cpxh = &apos;abc&apos;) AS a</span><br><span class="line">ORDER BY</span><br><span class="line">	gz;</span><br></pre></td></tr></table></figure></p>
+<p>在Access里执行没问题，但放到代码里就<code>FROM子句语法错误</code>。此时，只需将from子语句用[]括起来，后面跟一个.即可，正确SQL如下：<br></p></div>
     <!-- Post Tags -->
     <div class="tags">
       
@@ -269,7 +269,7 @@
     </div>
     <!-- Post Excerpt -->
     <div class="excerpt typo"><p>考虑到文件编码问题，在CSS中推荐使用中文字体的英文表示法，以下附常见中文字体的英文名：</p>
-<h3 id="Mac-OS"><a href="#Mac-OS" class="headerlink" title="Mac OS"></a>Mac OS</h3><p>华文细黑：STHeiti Light [STXihei]<br>华文黑体：STHeiti<br>华文楷体：STKaiti<br>华文宋体：STSong<br>华文仿宋：STFangsong<br>儷黑 Pro：LiHei Pro Medium<br>儷宋 Pro：LiSong Pro Light<br>標楷體：BiauKai<br>蘋果儷中黑：Apple LiGothic Medium<br>蘋果儷細宋：Apple LiSung Light<br></div>
+<h3 id="Mac-OS"><a href="#Mac-OS" class="headerlink" title="Mac OS"></a>Mac OS</h3><p>华文细黑：STHeiti Light [STXihei]<br>华文黑体：STHeiti<br>华文楷体：STKaiti<br>华文宋体：STSong<br>华文仿宋：STFangsong<br>儷黑 Pro：LiHei Pro Medium<br>儷宋 Pro：LiSong Pro Light<br>標楷體：BiauKai<br>蘋果儷中黑：Apple LiGothic Medium<br>蘋果儷細宋：Apple LiSung Light<br></p></div>
     <!-- Post Tags -->
     <div class="tags">
       
@@ -515,9 +515,9 @@
         <p class="copyright text-muted">
           Theme By <a target="_blank" href="https://github.com/levblanc">Levblanc.</a>
           Inspired By <a target="_blank" href="https://github.com/klugjo/hexo-theme-clean-blog">Clean Blog.</a>
-        <p class="copyright text-muted">
+        </p><p class="copyright text-muted">
           Powered By <a target="_blank" href="https://hexo.io/">Hexo.</a>
-        <p class="copyright text-muted">
+        </p><p class="copyright text-muted">
           本站总访问量 <span id="busuanzi_value_site_pv"></span> 次, 访客数 <span id="busuanzi_value_site_uv"></span> 人次, 本文总阅读量 <span id="busuanzi_value_page_pv"></span> 次
         </p>
       </div>
@@ -587,29 +587,13 @@
   });
 </script>
 
-<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
-<script type="text/javascript">
-var duoshuoQuery = {short_name:"yangpiena"};
-	(function() {
-		var ds = document.createElement('script');
-		ds.type = 'text/javascript';ds.async = true;
-		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '/js/embed.js';
-		ds.charset = 'UTF-8';
-		(document.getElementsByTagName('head')[0] 
-		 || document.getElementsByTagName('body')[0]).appendChild(ds);
-	})();
-	</script>
-<!-- 多说公共JS代码 end -->
-
 <div id="totop" style="position:fixed;bottom:50px;right:30px;cursor: pointer;">
-	<a title="返回顶部"><img src="/img/scrollup.png"/></a>
+	<a title="返回顶部"><img src="/img/scrollup.png"></a>
 </div>
 <script src="/js/totop.js"></script>
 
 <!-- YPN Add 2017-04-12 基于canvas绘制的网页背景效果 -->
-<!--
-<script type="text/javascript" src="https://cdn.bootcss.com/canvas-nest.js/1.0.1/canvas-nest.min.js"></script>
--->
+<!-- <script type="text/javascript" src="https://cdn.bootcss.com/canvas-nest.js/1.0.1/canvas-nest.min.js"></script> -->
   </body>
 </html>
 

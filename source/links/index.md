@@ -10,7 +10,7 @@ toc: true
 [网易公开课](https://open.163.com/) |  [YouTube](https://www.youtube.com/)
 [CSDN.NET](http://www.csdn.net/)    |  [VeryCD 电驴大全](http://www.verycd.com/)     |  [360doc个人图书馆](http://www.360doc.com/)
 [cnBeta](http://www.cnbeta.com/)    |  [果壳](http://www.guokr.com/)                 |  [少数派](https://sspai.com/)                |  [数字尾巴](http://www.dgtle.com/)
-[老D博客](https://laod.cn/)         |  [黑果小兵](https://blog.daliansky.net/)       |  [免费吧](http://www.mianfeib.com/)
+[老D博客](https://laod.cn/)         |  [黑果小兵](https://blog.daliansky.net/)       |  [免费吧](http://www.mianfeib.com/)          |  [行客工作室](http://www.runker.net/)
 [百度云](https://pan.baidu.com/)    |  [腾讯云](https://cloud.tencent.com/)          |  [贴图库](http://www.tietuku.com/)
 
 &nbsp;
@@ -24,9 +24,10 @@ toc: true
 
 #### 电影
 [BT下载](http://www.qinou.cn/)     |  [BT之家](http://www.btbtt33.com/)        |  [BT之家](http://www.415.net)        |  [BT之家](http://www.btbtt.com)       |  [BT之家](http://www.btbta.com)
-[破晓电影](http://www.poxiao.com)  |  [放电影网](http://www.fangdianying.tv/)  |  [电影天堂](http://www.dy2018.com/)  |  [迅雷电影下载](http://www.xlpu.cc/)  |  [快播电影](http://www.bubulai.com/) |  [LOL电影天堂](http://www.loldytt.com/)
+[破晓电影](http://www.poxiao.com)  |  [放电影网](http://www.fangdianying.tv/)  |  [电影天堂](http://www.dy2018.com/)  |  [迅雷电影下载](http://www.xlpu.cc/)  |  [快播电影](http://www.bubulai.com/) |  [LOL电影天堂](http://www.loldytt.com/) |  [BT电影天堂](http://www.btbttv.net/) | [迅影网](https://www.xunyingwang.com/)
 [预告片世界](http://www.yugaopian.cn/)
 [人人影视](http://www.yyets.com/)
+[第二度](https://deardu.com/)
 
 
 &nbsp;
@@ -321,4 +322,5 @@ toc: true
 &nbsp;
 
 #### 民生
-[宁夏人力资源和社会保障网上服务大厅](http://www.12333nx.gov.cn/nxwsrs/personlogin)  |  [宁夏专业技术人员继续教育培训网](http://nxzj.chinahrt.com/)
+[宁夏人事考试中心](http://www.nxpta.gov.cn/)  |  [宁夏专业技术人员继续教育培训网](http://nxzj.chinahrt.com/)
+[宁夏人力资源和社会保障网上服务大厅](http://www.12333nx.gov.cn/nxwsrs/personlogin)

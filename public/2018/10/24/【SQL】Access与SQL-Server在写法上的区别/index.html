@@ -1,18 +1,18 @@
 <!DOCTYPE html>
 <html>
   <!-- Html Head Tag-->
-  <head>
+  <head><meta name="generator" content="Hexo 3.8.0">
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="">
   <meta name="author" content="昜丿捺">
   <!-- Open Graph Data -->
-  <meta property="og:title" content="【SQL】Access与SQL Server在写法上的区别"/>
-  <meta property="og:description" content="没有阳光，沉默而居" />
-  <meta property="og:site_name" content="昜丿捺"/>
-  <meta property="og:type" content="article" />
-  <meta property="og:image" content="http://yoursite.comundefined"/>
+  <meta property="og:title" content="【SQL】Access与SQL Server在写法上的区别">
+  <meta property="og:description" content="没有阳光，沉默而居">
+  <meta property="og:site_name" content="昜丿捺">
+  <meta property="og:type" content="article">
+  <meta property="og:image" content="http://yoursite.comundefined">
   
     <link rel="alternate" href="/atom.xml" title="昜丿捺" type="application/atom+xml">
   
@@ -118,7 +118,7 @@
           <!-- Date -->
           <span class="date-time info">发表于
             <span class="date">2018-10-24</span>
-            <span class="time">09:40:40</span>
+            <span class="time">17:24:12</span>
           </span>
           
           <!--  Categories  -->
@@ -150,18 +150,18 @@
 			<!-- YPN Add 2017-02-27 Table of Contents -->
 			
 			
-          	<h4 id="1-查询语句WHERE条件带布尔类型值时"><a href="#1-查询语句WHERE条件带布尔类型值时" class="headerlink" title="1. 查询语句WHERE条件带布尔类型值时"></a>1. 查询语句WHERE条件带布尔类型值时</h4><p>Access<br><figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">AND IsA = true;</div></pre></td></tr></table></figure></p>
-<p>SQL Server<br><figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">AND IsA = 1;</div><div class="line">AND IsA = 'true';</div></pre></td></tr></table></figure></p>
-<h4 id="2-查询语句WHERE条件带日期时"><a href="#2-查询语句WHERE条件带日期时" class="headerlink" title="2. 查询语句WHERE条件带日期时"></a>2. 查询语句WHERE条件带日期时</h4><figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">SELECT</span> * <span class="keyword">FROM</span> 表 <span class="keyword">WHERE</span> TimeTag = <span class="keyword">FORMAT</span>(<span class="string">'2016-1-6'</span>,<span class="string">'yyyy-MM-dd hh:mm:ss'</span>);</div><div class="line"><span class="keyword">SELECT</span> * <span class="keyword">FROM</span> 表 <span class="keyword">WHERE</span> TimeTag = <span class="keyword">FORMAT</span>(<span class="string">"2016-1-6"</span>,<span class="string">"yyyy-MM-dd hh:mm:ss"</span>);</div></pre></td></tr></table></figure>
-<h4 id="3-多分支的判断情况"><a href="#3-多分支的判断情况" class="headerlink" title="3. 多分支的判断情况"></a>3. 多分支的判断情况</h4><p>Access<br><figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">SELECT</span> <span class="keyword">SWITCH</span>(IsA = <span class="literal">false</span>, <span class="number">0</span>, IsA = <span class="literal">true</span>, <span class="number">1</span>) <span class="keyword">AS</span> ColName <span class="keyword">FROM</span> 表;</div><div class="line"><span class="keyword">SELECT</span> <span class="keyword">IIF</span>(IsA <span class="keyword">IS</span> <span class="literal">NULL</span>, <span class="number">0</span>, IsA)              <span class="keyword">AS</span> ColName <span class="keyword">FROM</span> 表;</div></pre></td></tr></table></figure></p>
-<p>SQL Server<br><figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">SELECT</span> <span class="keyword">CASE</span> IsA <span class="keyword">WHEN</span> <span class="literal">NULL</span> <span class="keyword">THEN</span> <span class="number">0</span> <span class="keyword">ELSE</span> <span class="number">1</span> <span class="keyword">END</span> <span class="keyword">AS</span> ColName <span class="keyword">AS</span> A <span class="keyword">FROM</span> 表;</div><div class="line"><span class="keyword">SELECT</span> <span class="keyword">CASE</span> <span class="keyword">WHEN</span> IsA <span class="keyword">IS</span> <span class="literal">NULL</span> <span class="keyword">THEN</span> <span class="number">0</span> <span class="keyword">ELSE</span> <span class="number">1</span> <span class="keyword">END</span> <span class="keyword">AS</span> ColName <span class="keyword">AS</span> A <span class="keyword">FROM</span> 表;</div></pre></td></tr></table></figure></p>
-<h4 id="4-将字符类型转换成数值类型"><a href="#4-将字符类型转换成数值类型" class="headerlink" title="4. 将字符类型转换成数值类型"></a>4. 将字符类型转换成数值类型</h4><p>Access<br><figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">Val(str)</div></pre></td></tr></table></figure></p>
-<p>SQL Server<br><figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">CONVERT(INT, str)</div><div class="line">CAST(str AS INT)</div></pre></td></tr></table></figure></p>
-<h4 id="5-将数值类型转换成字符类型"><a href="#5-将数值类型转换成字符类型" class="headerlink" title="5. 将数值类型转换成字符类型"></a>5. 将数值类型转换成字符类型</h4><p>Access<br><figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">Str(num)</div></pre></td></tr></table></figure></p>
-<p>SQL Server<br><figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">CONVERT(VARCHAR(20), num)</div><div class="line">CAST(num AS VARCHAR)</div></pre></td></tr></table></figure></p>
-<h4 id="6-格式化日期"><a href="#6-格式化日期" class="headerlink" title="6. 格式化日期"></a>6. 格式化日期</h4><p>Access<br><figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">FORMAT(NOW(),'yyyy-MM-dd')</div><div class="line">FORMAT(NOW(),'yyyy-MM-dd hh:mm:ss')</div></pre></td></tr></table></figure></p>
-<p>SQL Server<br><figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">CONVERT(VARCHAR(20),GETDATE(),23)</div><div class="line">CONVERT(VARCHAR(20),GETDATE(),120)</div></pre></td></tr></table></figure></p>
-<h4 id="7-参数化更新或新增数据时，SQl-语句中的字段顺序需与参数列表的顺序保持一致"><a href="#7-参数化更新或新增数据时，SQl-语句中的字段顺序需与参数列表的顺序保持一致" class="headerlink" title="7. 参数化更新或新增数据时，SQl 语句中的字段顺序需与参数列表的顺序保持一致"></a>7. 参数化更新或新增数据时，SQl 语句中的字段顺序需与参数列表的顺序保持一致</h4><p>如更新SQL：<br><figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">UPDATE</span> 表 <span class="keyword">SET</span> <span class="keyword">Name</span> = @<span class="keyword">Name</span>, Age = @Age <span class="keyword">WHERE</span> <span class="keyword">ID</span> = @<span class="keyword">ID</span></div></pre></td></tr></table></figure></p>
+          	<h4 id="1-查询语句WHERE条件带布尔类型值时"><a href="#1-查询语句WHERE条件带布尔类型值时" class="headerlink" title="1. 查询语句WHERE条件带布尔类型值时"></a>1. 查询语句WHERE条件带布尔类型值时</h4><p>Access<br><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">AND IsA = true;</span><br></pre></td></tr></table></figure></p>
+<p>SQL Server<br><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">AND IsA = 1;</span><br><span class="line">AND IsA = 'true';</span><br></pre></td></tr></table></figure></p>
+<h4 id="2-查询语句WHERE条件带日期时"><a href="#2-查询语句WHERE条件带日期时" class="headerlink" title="2. 查询语句WHERE条件带日期时"></a>2. 查询语句WHERE条件带日期时</h4><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> * <span class="keyword">FROM</span> 表 <span class="keyword">WHERE</span> TimeTag = <span class="keyword">FORMAT</span>(<span class="string">'2016-1-6'</span>,<span class="string">'yyyy-MM-dd hh:mm:ss'</span>);</span><br><span class="line"><span class="keyword">SELECT</span> * <span class="keyword">FROM</span> 表 <span class="keyword">WHERE</span> TimeTag = <span class="keyword">FORMAT</span>(<span class="string">"2016-1-6"</span>,<span class="string">"yyyy-MM-dd hh:mm:ss"</span>);</span><br></pre></td></tr></table></figure>
+<h4 id="3-多分支的判断情况"><a href="#3-多分支的判断情况" class="headerlink" title="3. 多分支的判断情况"></a>3. 多分支的判断情况</h4><p>Access<br><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> <span class="keyword">SWITCH</span>(IsA = <span class="literal">false</span>, <span class="number">0</span>, IsA = <span class="literal">true</span>, <span class="number">1</span>) <span class="keyword">AS</span> ColName <span class="keyword">FROM</span> 表;</span><br><span class="line"><span class="keyword">SELECT</span> <span class="keyword">IIF</span>(IsA <span class="keyword">IS</span> <span class="literal">NULL</span>, <span class="number">0</span>, IsA)              <span class="keyword">AS</span> ColName <span class="keyword">FROM</span> 表;</span><br></pre></td></tr></table></figure></p>
+<p>SQL Server<br><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> <span class="keyword">CASE</span> IsA <span class="keyword">WHEN</span> <span class="literal">NULL</span> <span class="keyword">THEN</span> <span class="number">0</span> <span class="keyword">ELSE</span> <span class="number">1</span> <span class="keyword">END</span> <span class="keyword">AS</span> ColName <span class="keyword">AS</span> A <span class="keyword">FROM</span> 表;</span><br><span class="line"><span class="keyword">SELECT</span> <span class="keyword">CASE</span> <span class="keyword">WHEN</span> IsA <span class="keyword">IS</span> <span class="literal">NULL</span> <span class="keyword">THEN</span> <span class="number">0</span> <span class="keyword">ELSE</span> <span class="number">1</span> <span class="keyword">END</span> <span class="keyword">AS</span> ColName <span class="keyword">AS</span> A <span class="keyword">FROM</span> 表;</span><br></pre></td></tr></table></figure></p>
+<h4 id="4-将字符类型转换成数值类型"><a href="#4-将字符类型转换成数值类型" class="headerlink" title="4. 将字符类型转换成数值类型"></a>4. 将字符类型转换成数值类型</h4><p>Access<br><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Val(str)</span><br></pre></td></tr></table></figure></p>
+<p>SQL Server<br><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">CONVERT(INT, str)</span><br><span class="line">CAST(str AS INT)</span><br></pre></td></tr></table></figure></p>
+<h4 id="5-将数值类型转换成字符类型"><a href="#5-将数值类型转换成字符类型" class="headerlink" title="5. 将数值类型转换成字符类型"></a>5. 将数值类型转换成字符类型</h4><p>Access<br><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Str(num)</span><br></pre></td></tr></table></figure></p>
+<p>SQL Server<br><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">CONVERT(VARCHAR(20), num)</span><br><span class="line">CAST(num AS VARCHAR)</span><br></pre></td></tr></table></figure></p>
+<h4 id="6-格式化日期"><a href="#6-格式化日期" class="headerlink" title="6. 格式化日期"></a>6. 格式化日期</h4><p>Access<br><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">FORMAT(NOW(),'yyyy-MM-dd')</span><br><span class="line">FORMAT(NOW(),'yyyy-MM-dd hh:mm:ss')</span><br></pre></td></tr></table></figure></p>
+<p>SQL Server<br><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">CONVERT(VARCHAR(20),GETDATE(),23)</span><br><span class="line">CONVERT(VARCHAR(20),GETDATE(),120)</span><br></pre></td></tr></table></figure></p>
+<h4 id="7-参数化更新或新增数据时，SQl-语句中的字段顺序需与参数列表的顺序保持一致"><a href="#7-参数化更新或新增数据时，SQl-语句中的字段顺序需与参数列表的顺序保持一致" class="headerlink" title="7. 参数化更新或新增数据时，SQl 语句中的字段顺序需与参数列表的顺序保持一致"></a>7. 参数化更新或新增数据时，SQl 语句中的字段顺序需与参数列表的顺序保持一致</h4><p>如更新SQL：<br><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">UPDATE</span> 表 <span class="keyword">SET</span> <span class="keyword">Name</span> = @<span class="keyword">Name</span>, Age = @Age <span class="keyword">WHERE</span> <span class="keyword">ID</span> = @<span class="keyword">ID</span></span><br></pre></td></tr></table></figure></p>
 <p>则参数必须定义为：</p>
 <pre><code>OleDbParameter[] param = new OleDbParameter
 {
@@ -169,31 +169,31 @@
     new OleDbParameter(&quot;@Age&quot;, model.Age),
     new OleDbParameter(&quot;@ID&quot;, model.ID), 
  }
-</code></pre><h4 id="8-Access类似于SQL-Server的函数ISNULL"><a href="#8-Access类似于SQL-Server的函数ISNULL" class="headerlink" title="8. Access类似于SQL Server的函数ISNULL()"></a>8. Access类似于SQL Server的函数ISNULL()</h4><figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">IIF(IsA = '' OR IsA IS NULL, '', IsA)</div></pre></td></tr></table></figure>
+</code></pre><h4 id="8-Access类似于SQL-Server的函数ISNULL"><a href="#8-Access类似于SQL-Server的函数ISNULL" class="headerlink" title="8. Access类似于SQL Server的函数ISNULL()"></a>8. Access类似于SQL Server的函数ISNULL()</h4><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">IIF(IsA = '' OR IsA IS NULL, '', IsA)</span><br></pre></td></tr></table></figure>
 <h4 id="9-Access创建表或添加列时，必须附带默认约束（Defualt）"><a href="#9-Access创建表或添加列时，必须附带默认约束（Defualt）" class="headerlink" title="9. Access创建表或添加列时，必须附带默认约束（Defualt）"></a>9. Access创建表或添加列时，必须附带默认约束（Defualt）</h4><h4 id="10-Access创建新列时，如果未添加默认约束，在采用内置函数STR-A-查询时会显示null值"><a href="#10-Access创建新列时，如果未添加默认约束，在采用内置函数STR-A-查询时会显示null值" class="headerlink" title="10. Access创建新列时，如果未添加默认约束，在采用内置函数STR(A)查询时会显示null值"></a>10. Access创建新列时，如果未添加默认约束，在采用内置函数STR(A)查询时会显示null值</h4><p>如下：</p>
 <pre><code>ALTER TABLE 表 ADD A VARCHAR(23)
 SELECT IIF(STR(A) IS NULL, &apos;空&apos;, &apos;非空&apos;) FROM 表
-</code></pre><h4 id="11-当表从Access数据库导入到SQL-Server中时，原表中的自增长列会丢失，需要重新建立自增长标识。"><a href="#11-当表从Access数据库导入到SQL-Server中时，原表中的自增长列会丢失，需要重新建立自增长标识。" class="headerlink" title="11. 当表从Access数据库导入到SQL Server中时，原表中的自增长列会丢失，需要重新建立自增长标识。"></a>11. 当表从Access数据库导入到SQL Server中时，原表中的自增长列会丢失，需要重新建立自增长标识。</h4><h4 id="12-当表从Access数据库导入到SQL-Server中时，Access的数据如果存在密码，则以独立的方式清空Access原设置的密码即可。"><a href="#12-当表从Access数据库导入到SQL-Server中时，Access的数据如果存在密码，则以独立的方式清空Access原设置的密码即可。" class="headerlink" title="12. 当表从Access数据库导入到SQL Server中时，Access的数据如果存在密码，则以独立的方式清空Access原设置的密码即可。"></a>12. 当表从Access数据库导入到SQL Server中时，Access的数据如果存在密码，则以独立的方式清空Access原设置的密码即可。</h4><h4 id="13-多表关联查询"><a href="#13-多表关联查询" class="headerlink" title="13. 多表关联查询"></a>13. 多表关联查询</h4><p>Access（可理解为始终是两表间的操作）<br><figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">SELECT</span> * <span class="keyword">FROM</span>  (A <span class="keyword">INNER</span> <span class="keyword">JOIN</span> B <span class="keyword">ON</span> A.ID = B.ID ) <span class="keyword">INNER</span> <span class="keyword">JOIN</span> C <span class="keyword">ON</span> B.ID = C.ID;</div><div class="line"><span class="keyword">SELECT</span> * <span class="keyword">FROM</span> ((A <span class="keyword">INNER</span> <span class="keyword">JOIN</span> B <span class="keyword">ON</span> A.ID = B.ID ) <span class="keyword">INNER</span> <span class="keyword">JOIN</span> C <span class="keyword">ON</span> B.ID = C.ID) <span class="keyword">INNER</span> <span class="keyword">JOIN</span> D <span class="keyword">ON</span> C.ID = D.ID;</div></pre></td></tr></table></figure></p>
-<p>SQL Server<br><figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">SELECT</span> * <span class="keyword">FROM</span> A <span class="keyword">INNER</span> <span class="keyword">JOIN</span> B <span class="keyword">ON</span> A.ID = B.ID <span class="keyword">INNER</span> <span class="keyword">JOIN</span> C <span class="keyword">ON</span> B.ID = C.ID;</div></pre></td></tr></table></figure></p>
+</code></pre><h4 id="11-当表从Access数据库导入到SQL-Server中时，原表中的自增长列会丢失，需要重新建立自增长标识。"><a href="#11-当表从Access数据库导入到SQL-Server中时，原表中的自增长列会丢失，需要重新建立自增长标识。" class="headerlink" title="11. 当表从Access数据库导入到SQL Server中时，原表中的自增长列会丢失，需要重新建立自增长标识。"></a>11. 当表从Access数据库导入到SQL Server中时，原表中的自增长列会丢失，需要重新建立自增长标识。</h4><h4 id="12-当表从Access数据库导入到SQL-Server中时，Access的数据如果存在密码，则以独立的方式清空Access原设置的密码即可。"><a href="#12-当表从Access数据库导入到SQL-Server中时，Access的数据如果存在密码，则以独立的方式清空Access原设置的密码即可。" class="headerlink" title="12. 当表从Access数据库导入到SQL Server中时，Access的数据如果存在密码，则以独立的方式清空Access原设置的密码即可。"></a>12. 当表从Access数据库导入到SQL Server中时，Access的数据如果存在密码，则以独立的方式清空Access原设置的密码即可。</h4><h4 id="13-多表关联查询"><a href="#13-多表关联查询" class="headerlink" title="13. 多表关联查询"></a>13. 多表关联查询</h4><p>Access（可理解为始终是两表间的操作）<br><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> * <span class="keyword">FROM</span>  (A <span class="keyword">INNER</span> <span class="keyword">JOIN</span> B <span class="keyword">ON</span> A.ID = B.ID ) <span class="keyword">INNER</span> <span class="keyword">JOIN</span> C <span class="keyword">ON</span> B.ID = C.ID;</span><br><span class="line"><span class="keyword">SELECT</span> * <span class="keyword">FROM</span> ((A <span class="keyword">INNER</span> <span class="keyword">JOIN</span> B <span class="keyword">ON</span> A.ID = B.ID ) <span class="keyword">INNER</span> <span class="keyword">JOIN</span> C <span class="keyword">ON</span> B.ID = C.ID) <span class="keyword">INNER</span> <span class="keyword">JOIN</span> D <span class="keyword">ON</span> C.ID = D.ID;</span><br></pre></td></tr></table></figure></p>
+<p>SQL Server<br><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> * <span class="keyword">FROM</span> A <span class="keyword">INNER</span> <span class="keyword">JOIN</span> B <span class="keyword">ON</span> A.ID = B.ID <span class="keyword">INNER</span> <span class="keyword">JOIN</span> C <span class="keyword">ON</span> B.ID = C.ID;</span><br></pre></td></tr></table></figure></p>
 
         </div>
 
         <!-- YPN Add 2016-11-14 增加打赏 start -->
         <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center">
           <div></div>
-          <button id="rewardButton", disable="enable", onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}", style="cursor: pointer; border: 0; outline: 0; border-radius: 100%; padding: 0; margin: 0; letter-spacing: normal; text-transform: none; text-indent: 0px; text-shadow: none">
+          <button id="rewardButton" ,="" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}" style="cursor: pointer; border: 0; outline: 0; border-radius: 100%; padding: 0; margin: 0; letter-spacing: normal; text-transform: none; text-indent: 0px; text-shadow: none">
             <span onmouseover="this.style.color='rgb(236,96,0)';this.style.background='rgb(204,204,204)'" onmouseout="this.style.color='#fff';this.style.background='rgb(236,96,0)'" style="display: inline-block; width: 70px; height: 70px; border-radius: 100%; line-height: 81px; color: #fff; font: 400 35px/75px 'microsofty'; background: rgb(236,96,0)">赏</span>
           </button>
           <div id="QR" style="display: none;">
             
               <div id="wechat" style="display: inline-block">
-                <img id="wechat_qr" src="/assets/blogImg/YPN_wechatpay-32x32.png" alt="昜丿捺 WeChat Pay" style="width: 200px; max-width: 100%; display: inline-block"/>
+                <img id="wechat_qr" src="/assets/blogImg/YPN_wechatpay-32x32.png" alt="昜丿捺 WeChat Pay" style="width: 200px; max-width: 100%; display: inline-block">
                 <p>微信打赏</p>
               </div>
             
           
             <div id="alipay" style="display: inline-block">
-              <img id="alipay_qr" src="/assets/blogImg/YPN_alipay-32x32.jpg" alt="昜丿捺 Alipay" style="width: 200px; max-width: 100%; display: inline-block"/>
+              <img id="alipay_qr" src="/assets/blogImg/YPN_alipay-32x32.jpg" alt="昜丿捺 Alipay" style="width: 200px; max-width: 100%; display: inline-block">
               <p>支付宝打赏</p>
             </div>
           
@@ -201,15 +201,7 @@ SELECT IIF(STR(A) IS NULL, &apos;空&apos;, &apos;非空&apos;) FROM 表
         </div>
         <!-- YPN Add 2016-11-14 增加打赏 end -->
 
-        <!-- 多说最近访客 start -->
-        <div class="ds-recent-visitors" data-num-items="28" data-avatar-size="42" id="ds-recent-visitors"></div>
-        <!-- 多说最近访客 end -->
-
-        <!-- 多说评论框 start -->
-        <div class="ds-thread" data-thread-key="2018/10/24/【SQL】Access与SQL-Server在写法上的区别/" data-title="【SQL】Access与SQL Server在写法上的区别" data-url="http://yoursite.com/2018/10/24/【SQL】Access与SQL-Server在写法上的区别/"></div>
-        <!-- 多说评论框 end -->
-
-        <!-- YPN ADD 2017-11-02 新增 Hitokoto·一言经典语句-->
+        <!-- YPN ADD 2017-11-02 Hitokoto·一言经典语句-->
         <script type="text/javascript" src="https://api.lwl12.com/hitokoto/main/get?encode=js&charset=utf-8"></script>
         <div id="lwlhitokoto"><script>lwlhitokoto()</script></div>
 
@@ -228,9 +220,9 @@ SELECT IIF(STR(A) IS NULL, &apos;空&apos;, &apos;非空&apos;) FROM 表
         <p class="copyright text-muted">
           Theme By <a target="_blank" href="https://github.com/levblanc">Levblanc.</a>
           Inspired By <a target="_blank" href="https://github.com/klugjo/hexo-theme-clean-blog">Clean Blog.</a>
-        <p class="copyright text-muted">
+        </p><p class="copyright text-muted">
           Powered By <a target="_blank" href="https://hexo.io/">Hexo.</a>
-        <p class="copyright text-muted">
+        </p><p class="copyright text-muted">
           本站总访问量 <span id="busuanzi_value_site_pv"></span> 次, 访客数 <span id="busuanzi_value_site_uv"></span> 人次, 本文总阅读量 <span id="busuanzi_value_page_pv"></span> 次
         </p>
       </div>
@@ -300,29 +292,13 @@ SELECT IIF(STR(A) IS NULL, &apos;空&apos;, &apos;非空&apos;) FROM 表
   });
 </script>
 
-<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
-<script type="text/javascript">
-var duoshuoQuery = {short_name:"yangpiena"};
-	(function() {
-		var ds = document.createElement('script');
-		ds.type = 'text/javascript';ds.async = true;
-		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '/js/embed.js';
-		ds.charset = 'UTF-8';
-		(document.getElementsByTagName('head')[0] 
-		 || document.getElementsByTagName('body')[0]).appendChild(ds);
-	})();
-	</script>
-<!-- 多说公共JS代码 end -->
-
 <div id="totop" style="position:fixed;bottom:50px;right:30px;cursor: pointer;">
-	<a title="返回顶部"><img src="/img/scrollup.png"/></a>
+	<a title="返回顶部"><img src="/img/scrollup.png"></a>
 </div>
 <script src="/js/totop.js"></script>
 
 <!-- YPN Add 2017-04-12 基于canvas绘制的网页背景效果 -->
-<!--
-<script type="text/javascript" src="https://cdn.bootcss.com/canvas-nest.js/1.0.1/canvas-nest.min.js"></script>
--->
+<!-- <script type="text/javascript" src="https://cdn.bootcss.com/canvas-nest.js/1.0.1/canvas-nest.min.js"></script> -->
   </body>
 </html>
 

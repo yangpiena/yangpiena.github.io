@@ -1,18 +1,18 @@
 <!DOCTYPE html>
 <html>
   <!-- Html Head Tag-->
-  <head>
+  <head><meta name="generator" content="Hexo 3.8.0">
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="">
   <meta name="author" content="昜丿捺">
   <!-- Open Graph Data -->
-  <meta property="og:title" content="【HAProxy】脚本启动和关闭"/>
-  <meta property="og:description" content="没有阳光，沉默而居" />
-  <meta property="og:site_name" content="昜丿捺"/>
-  <meta property="og:type" content="article" />
-  <meta property="og:image" content="http://yoursite.comundefined"/>
+  <meta property="og:title" content="【HAProxy】脚本启动和关闭">
+  <meta property="og:description" content="没有阳光，沉默而居">
+  <meta property="og:site_name" content="昜丿捺">
+  <meta property="og:type" content="article">
+  <meta property="og:image" content="http://yoursite.comundefined">
   
     <link rel="alternate" href="/atom.xml" title="昜丿捺" type="application/atom+xml">
   
@@ -118,7 +118,7 @@
           <!-- Date -->
           <span class="date-time info">发表于
             <span class="date">2018-02-01</span>
-            <span class="time">09:40:40</span>
+            <span class="time">17:24:12</span>
           </span>
           
           <!--  Categories  -->
@@ -150,7 +150,7 @@
 			<!-- YPN Add 2017-02-27 Table of Contents -->
 			
 			
-          	<h3 id="CentOS下实现脚本启动和关闭"><a href="#CentOS下实现脚本启动和关闭" class="headerlink" title="CentOS下实现脚本启动和关闭"></a>CentOS下实现脚本启动和关闭</h3><h4 id="1-编写启动脚本"><a href="#1-编写启动脚本" class="headerlink" title="1. 编写启动脚本"></a>1. 编写启动脚本</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">vi /etc/rc.d/init.d/haproxy</div></pre></td></tr></table></figure>
+          	<h3 id="CentOS下实现脚本启动和关闭"><a href="#CentOS下实现脚本启动和关闭" class="headerlink" title="CentOS下实现脚本启动和关闭"></a>CentOS下实现脚本启动和关闭</h3><h4 id="1-编写启动脚本"><a href="#1-编写启动脚本" class="headerlink" title="1. 编写启动脚本"></a>1. 编写启动脚本</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vi /etc/rc.d/init.d/haproxy</span><br></pre></td></tr></table></figure>
 <p>本身不存在此文件，使用以上命令，进入vi编辑器，再使用命令保存退出即可新建此文件。<br>打开文件haproxy，贴入如下内容：</p>
 <pre><code>#!/bin/sh
 #chkconfig: 2345 10 90
@@ -292,7 +292,7 @@ esac
 
 exit $?
 </code></pre><p>如果安装路径有变动，则只需修改上面的<code>BIN=/usr/local/haproxy/sbin/haproxy</code>和<code>CFG=/usr/local/haproxy/haproxy.cfg</code>即可。</p>
-<h4 id="2-脚本随系统自启动"><a href="#2-脚本随系统自启动" class="headerlink" title="2. 脚本随系统自启动"></a>2. 脚本随系统自启动</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">chmod 755 /etc/rc.d/init.d/haproxy  # 添加执行属性</div><div class="line">chkconfig --add haproxy            # 添加服务</div><div class="line">chkconfig haproxy on</div></pre></td></tr></table></figure>
+<h4 id="2-脚本随系统自启动"><a href="#2-脚本随系统自启动" class="headerlink" title="2. 脚本随系统自启动"></a>2. 脚本随系统自启动</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">chmod 755 /etc/rc.d/init.d/haproxy  # 添加执行属性</span><br><span class="line">chkconfig --add haproxy            # 添加服务</span><br><span class="line">chkconfig haproxy on</span><br></pre></td></tr></table></figure>
 <p>如果出现结果： <em>service haproxy does not support chkconfig</em><br>解决办法是在 <strong>/etc/rc.d/init.d/haproxy</strong> 中添加下面两句到 <strong>#!/bin/bash</strong> 之后:</p>
 <pre><code>#chkconfig: 2345 10 90
 #description:haproxy
@@ -308,9 +308,9 @@ start()
 ...
 ...
 </code></pre></blockquote>
-<h4 id="3-启动与关闭"><a href="#3-启动与关闭" class="headerlink" title="3. 启动与关闭"></a>3. 启动与关闭</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">service haproxy start</div><div class="line">service haproxy stop</div></pre></td></tr></table></figure>
+<h4 id="3-启动与关闭"><a href="#3-启动与关闭" class="headerlink" title="3. 启动与关闭"></a>3. 启动与关闭</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">service haproxy start</span><br><span class="line">service haproxy stop</span><br></pre></td></tr></table></figure>
 <hr>
-<h3 id="Suse-Linux-Enterprise-12下实现脚本启动和关闭"><a href="#Suse-Linux-Enterprise-12下实现脚本启动和关闭" class="headerlink" title="Suse Linux Enterprise 12下实现脚本启动和关闭"></a>Suse Linux Enterprise 12下实现脚本启动和关闭</h3><h4 id="1-在-目录下，执行下面命令"><a href="#1-在-目录下，执行下面命令" class="headerlink" title="1. 在~目录下，执行下面命令"></a>1. 在~目录下，执行下面命令</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">vim .profile</div></pre></td></tr></table></figure>
+<h3 id="Suse-Linux-Enterprise-12下实现脚本启动和关闭"><a href="#Suse-Linux-Enterprise-12下实现脚本启动和关闭" class="headerlink" title="Suse Linux Enterprise 12下实现脚本启动和关闭"></a>Suse Linux Enterprise 12下实现脚本启动和关闭</h3><h4 id="1-在-目录下，执行下面命令"><a href="#1-在-目录下，执行下面命令" class="headerlink" title="1. 在~目录下，执行下面命令"></a>1. 在~目录下，执行下面命令</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vim .profile</span><br></pre></td></tr></table></figure>
 <h4 id="2-在-profile文件中定义HAPROXY-HOME变量，并将变量追加到PATH后面，效果如下："><a href="#2-在-profile文件中定义HAPROXY-HOME变量，并将变量追加到PATH后面，效果如下：" class="headerlink" title="2. 在.profile文件中定义HAPROXY_HOME变量，并将变量追加到PATH后面，效果如下："></a>2. 在.profile文件中定义HAPROXY_HOME变量，并将变量追加到PATH后面，效果如下：</h4><pre><code># .profile
 
 # Get the aliases and functions
@@ -326,8 +326,8 @@ PATH=$PATH:$HOME/bin:$HAPROXY_HOME
 export HAPROXY_HOME
 export PATH
 </code></pre><p>保存并退出。</p>
-<h4 id="3-执行下面命令，使立即生效"><a href="#3-执行下面命令，使立即生效" class="headerlink" title="3. 执行下面命令，使立即生效"></a>3. 执行下面命令，使立即生效</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">source ~/.profile</div></pre></td></tr></table></figure>
-<h4 id="4-执行下面命令，在HAPROXY-HOME目录下创建脚本文件，"><a href="#4-执行下面命令，在HAPROXY-HOME目录下创建脚本文件，" class="headerlink" title="4. 执行下面命令，在HAPROXY_HOME目录下创建脚本文件，"></a>4. 执行下面命令，在HAPROXY_HOME目录下创建脚本文件，</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">vim /usr/local/haproxy/haproxy</div></pre></td></tr></table></figure>
+<h4 id="3-执行下面命令，使立即生效"><a href="#3-执行下面命令，使立即生效" class="headerlink" title="3. 执行下面命令，使立即生效"></a>3. 执行下面命令，使立即生效</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">source ~/.profile</span><br></pre></td></tr></table></figure>
+<h4 id="4-执行下面命令，在HAPROXY-HOME目录下创建脚本文件，"><a href="#4-执行下面命令，在HAPROXY-HOME目录下创建脚本文件，" class="headerlink" title="4. 执行下面命令，在HAPROXY_HOME目录下创建脚本文件，"></a>4. 执行下面命令，在HAPROXY_HOME目录下创建脚本文件，</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vim /usr/local/haproxy/haproxy</span><br></pre></td></tr></table></figure>
 <p>在文件中写入如下代码，保存并退出。</p>
 <pre><code>#!/bin/bash
 # /usr/local/haproxy
@@ -345,12 +345,12 @@ fi
 if [ &quot;$1&quot;x = &quot;log&quot;x ]; then
   tail -f /usr/local/haproxy/logs/haproxy.pid -n 1000
 fi
-</code></pre><h4 id="5-给文件添加权限，使脚本文件可以执行，命令为"><a href="#5-给文件添加权限，使脚本文件可以执行，命令为" class="headerlink" title="5. 给文件添加权限，使脚本文件可以执行，命令为"></a>5. 给文件添加权限，使脚本文件可以执行，命令为</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">chmod 755 /usr/local/haproxy/haproxy</div></pre></td></tr></table></figure>
-<h4 id="6-最后，执行下面命令可启动、关闭haproxy或查看日志"><a href="#6-最后，执行下面命令可启动、关闭haproxy或查看日志" class="headerlink" title="6. 最后，执行下面命令可启动、关闭haproxy或查看日志"></a>6. 最后，执行下面命令可启动、关闭haproxy或查看日志</h4><p>启动：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">haproxy start</div></pre></td></tr></table></figure></p>
-<p>关闭：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">haproxy stop</div></pre></td></tr></table></figure></p>
-<p>查看日志：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">haproxy log</div></pre></td></tr></table></figure></p>
-<p>检查haprxy进程：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">haproxy check</div></pre></td></tr></table></figure></p>
-<h4 id="7-随系统自启动"><a href="#7-随系统自启动" class="headerlink" title="7. 随系统自启动"></a>7. 随系统自启动</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">vim /etc/init.d/boot.local</div></pre></td></tr></table></figure>
+</code></pre><h4 id="5-给文件添加权限，使脚本文件可以执行，命令为"><a href="#5-给文件添加权限，使脚本文件可以执行，命令为" class="headerlink" title="5. 给文件添加权限，使脚本文件可以执行，命令为"></a>5. 给文件添加权限，使脚本文件可以执行，命令为</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">chmod 755 /usr/local/haproxy/haproxy</span><br></pre></td></tr></table></figure>
+<h4 id="6-最后，执行下面命令可启动、关闭haproxy或查看日志"><a href="#6-最后，执行下面命令可启动、关闭haproxy或查看日志" class="headerlink" title="6. 最后，执行下面命令可启动、关闭haproxy或查看日志"></a>6. 最后，执行下面命令可启动、关闭haproxy或查看日志</h4><p>启动：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">haproxy start</span><br></pre></td></tr></table></figure></p>
+<p>关闭：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">haproxy stop</span><br></pre></td></tr></table></figure></p>
+<p>查看日志：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">haproxy log</span><br></pre></td></tr></table></figure></p>
+<p>检查haprxy进程：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">haproxy check</span><br></pre></td></tr></table></figure></p>
+<h4 id="7-随系统自启动"><a href="#7-随系统自启动" class="headerlink" title="7. 随系统自启动"></a>7. 随系统自启动</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vim /etc/init.d/boot.local</span><br></pre></td></tr></table></figure>
 <p>加入以下内容，保存退出后生效。</p>
 <pre><code>/usr/local/haproxy/sbin/haproxy -f /usr/local/haproxy/haproxy.cfg
 </code></pre>
@@ -359,19 +359,19 @@ fi
         <!-- YPN Add 2016-11-14 增加打赏 start -->
         <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center">
           <div></div>
-          <button id="rewardButton", disable="enable", onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}", style="cursor: pointer; border: 0; outline: 0; border-radius: 100%; padding: 0; margin: 0; letter-spacing: normal; text-transform: none; text-indent: 0px; text-shadow: none">
+          <button id="rewardButton" ,="" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}" style="cursor: pointer; border: 0; outline: 0; border-radius: 100%; padding: 0; margin: 0; letter-spacing: normal; text-transform: none; text-indent: 0px; text-shadow: none">
             <span onmouseover="this.style.color='rgb(236,96,0)';this.style.background='rgb(204,204,204)'" onmouseout="this.style.color='#fff';this.style.background='rgb(236,96,0)'" style="display: inline-block; width: 70px; height: 70px; border-radius: 100%; line-height: 81px; color: #fff; font: 400 35px/75px 'microsofty'; background: rgb(236,96,0)">赏</span>
           </button>
           <div id="QR" style="display: none;">
             
               <div id="wechat" style="display: inline-block">
-                <img id="wechat_qr" src="/assets/blogImg/YPN_wechatpay-32x32.png" alt="昜丿捺 WeChat Pay" style="width: 200px; max-width: 100%; display: inline-block"/>
+                <img id="wechat_qr" src="/assets/blogImg/YPN_wechatpay-32x32.png" alt="昜丿捺 WeChat Pay" style="width: 200px; max-width: 100%; display: inline-block">
                 <p>微信打赏</p>
               </div>
             
           
             <div id="alipay" style="display: inline-block">
-              <img id="alipay_qr" src="/assets/blogImg/YPN_alipay-32x32.jpg" alt="昜丿捺 Alipay" style="width: 200px; max-width: 100%; display: inline-block"/>
+              <img id="alipay_qr" src="/assets/blogImg/YPN_alipay-32x32.jpg" alt="昜丿捺 Alipay" style="width: 200px; max-width: 100%; display: inline-block">
               <p>支付宝打赏</p>
             </div>
           
@@ -379,15 +379,7 @@ fi
         </div>
         <!-- YPN Add 2016-11-14 增加打赏 end -->
 
-        <!-- 多说最近访客 start -->
-        <div class="ds-recent-visitors" data-num-items="28" data-avatar-size="42" id="ds-recent-visitors"></div>
-        <!-- 多说最近访客 end -->
-
-        <!-- 多说评论框 start -->
-        <div class="ds-thread" data-thread-key="2018/02/01/【HAProxy】脚本启动和关闭/" data-title="【HAProxy】脚本启动和关闭" data-url="http://yoursite.com/2018/02/01/【HAProxy】脚本启动和关闭/"></div>
-        <!-- 多说评论框 end -->
-
-        <!-- YPN ADD 2017-11-02 新增 Hitokoto·一言经典语句-->
+        <!-- YPN ADD 2017-11-02 Hitokoto·一言经典语句-->
         <script type="text/javascript" src="https://api.lwl12.com/hitokoto/main/get?encode=js&charset=utf-8"></script>
         <div id="lwlhitokoto"><script>lwlhitokoto()</script></div>
 
@@ -406,9 +398,9 @@ fi
         <p class="copyright text-muted">
           Theme By <a target="_blank" href="https://github.com/levblanc">Levblanc.</a>
           Inspired By <a target="_blank" href="https://github.com/klugjo/hexo-theme-clean-blog">Clean Blog.</a>
-        <p class="copyright text-muted">
+        </p><p class="copyright text-muted">
           Powered By <a target="_blank" href="https://hexo.io/">Hexo.</a>
-        <p class="copyright text-muted">
+        </p><p class="copyright text-muted">
           本站总访问量 <span id="busuanzi_value_site_pv"></span> 次, 访客数 <span id="busuanzi_value_site_uv"></span> 人次, 本文总阅读量 <span id="busuanzi_value_page_pv"></span> 次
         </p>
       </div>
@@ -478,29 +470,13 @@ fi
   });
 </script>
 
-<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
-<script type="text/javascript">
-var duoshuoQuery = {short_name:"yangpiena"};
-	(function() {
-		var ds = document.createElement('script');
-		ds.type = 'text/javascript';ds.async = true;
-		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '/js/embed.js';
-		ds.charset = 'UTF-8';
-		(document.getElementsByTagName('head')[0] 
-		 || document.getElementsByTagName('body')[0]).appendChild(ds);
-	})();
-	</script>
-<!-- 多说公共JS代码 end -->
-
 <div id="totop" style="position:fixed;bottom:50px;right:30px;cursor: pointer;">
-	<a title="返回顶部"><img src="/img/scrollup.png"/></a>
+	<a title="返回顶部"><img src="/img/scrollup.png"></a>
 </div>
 <script src="/js/totop.js"></script>
 
 <!-- YPN Add 2017-04-12 基于canvas绘制的网页背景效果 -->
-<!--
-<script type="text/javascript" src="https://cdn.bootcss.com/canvas-nest.js/1.0.1/canvas-nest.min.js"></script>
--->
+<!-- <script type="text/javascript" src="https://cdn.bootcss.com/canvas-nest.js/1.0.1/canvas-nest.min.js"></script> -->
   </body>
 </html>
 
