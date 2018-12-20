@@ -8,7 +8,7 @@
   <meta name="description" content="">
   <meta name="author" content="昜丿捺">
   <!-- Open Graph Data -->
-  <meta property="og:title" content="【Flex】dataGrid设置列对齐方式">
+  <meta property="og:title" content="【Git】Git下载安装">
   <meta property="og:description" content="没有阳光，沉默而居">
   <meta property="og:site_name" content="昜丿捺">
   <meta property="og:type" content="article">
@@ -45,7 +45,7 @@
     <div class="row">
       <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
         <div class="page-title with-background-image">
-          <p class="title">【Flex】dataGrid设置列对齐方式</p>
+          <p class="title">【Git】Git下载安装</p>
           <p class="subtitle"></p>
         </div>
         <div class="site-menu with-background-image">
@@ -117,14 +117,14 @@
           
           <!-- Date -->
           <span class="date-time info">发表于
-            <span class="date">2016-12-22</span>
-            <span class="time">16:07:59</span>
+            <span class="date">2018-12-19</span>
+            <span class="time">16:08:01</span>
           </span>
           
           <!--  Categories  -->
             <span class="categories info">分类于 
 
-<a href="/categories/Flex/">Flex</a>
+<a href="/categories/Git/">Git</a>
 </span>
           
 
@@ -139,7 +139,7 @@
           <div class="post-tags text-muted">
             标签: 
 
-<a class="tag" href="/tags/Flex/">#Flex</a> <a class="tag" href="/tags/dataGrid/">#dataGrid</a>
+<a class="tag" href="/tags/Git/">#Git</a>
 
 
           </div>
@@ -150,8 +150,29 @@
 			<!-- YPN Add 2017-02-27 Table of Contents -->
 			
 			
-          	<p>可参照以下实例设置：<br><a id="more"></a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">&lt;s:GridColumn dataField=&quot;sex&quot; headerText=&quot;Sex&quot;&gt;</span><br><span class="line">	&lt;s:headerRenderer&gt;</span><br><span class="line">		&lt;fx:Component&gt;</span><br><span class="line">			&lt;s:DefaultGridHeaderRenderer&gt;</span><br><span class="line">				&lt;s:labelDisplay&gt;</span><br><span class="line">					&lt;s:Label left=&quot;0&quot; right=&quot;0&quot; top=&quot;0&quot; bottom=&quot;0&quot;</span><br><span class="line">							 fontWeight=&quot;bold&quot; maxDisplayedLines=&quot;1&quot;</span><br><span class="line">							 textAlign=&quot;center&quot; verticalAlign=&quot;middle&quot;/&gt;</span><br><span class="line">				&lt;/s:labelDisplay&gt;</span><br><span class="line">			&lt;/s:DefaultGridHeaderRenderer&gt;</span><br><span class="line">		&lt;/fx:Component&gt;</span><br><span class="line">	&lt;/s:headerRenderer&gt;</span><br><span class="line">	&lt;s:itemRenderer&gt;</span><br><span class="line">		&lt;fx:Component&gt;</span><br><span class="line">			&lt;s:DefaultGridItemRenderer textAlign=&quot;center&quot;/&gt;</span><br><span class="line">		&lt;/fx:Component&gt;</span><br><span class="line">	&lt;/s:itemRenderer&gt;</span><br><span class="line">&lt;/s:GridColumn&gt;</span><br></pre></td></tr></table></figure></p>
-
+          	<h2 id="Windows平台"><a href="#Windows平台" class="headerlink" title="Windows平台"></a>Windows平台</h2><h3 id="Git官网下载"><a href="#Git官网下载" class="headerlink" title="Git官网下载"></a>Git<a href="https://www.git-scm.com/download/" target="_blank" rel="noopener">官网下载</a></h3><a id="more"></a>
+<h2 id="Linux平台（以SUSE-Linux-12为例）"><a href="#Linux平台（以SUSE-Linux-12为例）" class="headerlink" title="Linux平台（以SUSE Linux 12为例）"></a>Linux平台（以SUSE Linux 12为例）</h2><h3 id="源码安装"><a href="#源码安装" class="headerlink" title="源码安装"></a>源码安装</h3><h4 id="源码下载"><a href="#源码下载" class="headerlink" title="源码下载"></a><a href="https://github.com/git/git/releases" target="_blank" rel="noopener">源码下载</a></h4><h4 id="编译安装"><a href="#编译安装" class="headerlink" title="编译安装"></a>编译安装</h4><pre><code>tar -zxf git-2.20.1.tar.gz 
+cd git-2.20.1/
+make configure
+./configure --prefix=/usr/local
+make all doc info
+sudo make install install-doc install-html install-info
+</code></pre><p>执行<code>make all doc info</code>报如下错误：</p>
+<pre><code>    * new build flags
+    CC fuzz-pack-headers.o
+In file included from packfile.h:4:0,
+                 from fuzz-pack-headers.c:1:
+cache.h:20:18: fatal error: zlib.h: No such file or directory
+ #include &lt;zlib.h&gt;
+                  ^
+compilation terminated.
+Makefile:2302: recipe for target &apos;fuzz-pack-headers.o&apos; failed
+make: *** [fuzz-pack-headers.o] Error 1
+</code></pre><p>需要安装依赖包：<a href="http://rpm.pbone.net/index.php3/stat/4/idpl/30389149/dir/opensuse/com/zlib-devel-1.2.8-5.22.x86_64.rpm.html" target="_blank" rel="noopener">zlib-devel</a></p>
+<pre><code>rpm -ivh zlib-devel-1.2.8-5.22.x86_64.rpm
+</code></pre><p>之后便可继续安装了。</p>
+<h4 id="执行命令git-version，得到如下结果表示安装成功。"><a href="#执行命令git-version，得到如下结果表示安装成功。" class="headerlink" title="执行命令git --version，得到如下结果表示安装成功。"></a>执行命令<code>git --version</code>，得到如下结果表示安装成功。</h4><pre><code>git version 2.20.1
+</code></pre>
         </div>
 
         <!-- YPN Add 2016-11-14 增加打赏 start -->
