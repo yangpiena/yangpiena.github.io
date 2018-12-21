@@ -96,6 +96,7 @@ toc: true
 [百度静态资源公共库](http://cdn.code.baidu.com/)
 [MSDN](http://msdn.itellyou.cn/?gytyzs=0z1zl)
 [常用的gif正在加载图](http://blog.sina.com.cn/s/blog_7c28bad401016j66.html)
+[节点](https://lncn.org/)
 
 &nbsp;
 
@@ -273,6 +274,7 @@ toc: true
 [对 Linux 新手非常有用的 20 个命令](http://www.oschina.net/translate/useful-linux-commands-for-newbies)
 [linux数据盘，系统盘](http://blog.csdn.net/Truong/article/details/70171661)
 [数据盘分区以及格式化](http://blog.csdn.net/Truong/article/details/70171699)
+[Linux Used内存到底哪里去了？](http://blog.yufeng.info/archives/2456)
 
 &nbsp;
 

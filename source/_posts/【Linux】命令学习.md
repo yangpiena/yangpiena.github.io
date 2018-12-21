@@ -26,7 +26,9 @@ tags: [Linux, 命令]
 | getconf LONG_BIT                             | 查看系统位数                                                               |
 | cat /proc/cpuinfo                            | 查看CPU型号                                                                |
 | top                                          | 查看实时CPU使用率                                                          |
+| ps aux|head -1;ps aux|grep -v PID|sort -rn -k +3|head | 查看占用CPU最多的10个进程。head默认取前10行，自定义K行时，在后面跟-K即可 |
 | free -m                                      | 查看内存                                                                   |
+| ps aux|head -1;ps aux|grep -v PID|sort -rn -k +4|head | 查看占用内存最多的10个进程。head默认取前10行，自定义K行时，在后面跟-K即可 |
 | df -l                                        | 查看硬盘空间情况                                                           |
 | du -sh ./*                                   | 查看当前目录下各文件/文件夹的大小                                          |
 | jps                                          | 查看当前所有Java进程pid的命令                                              |
