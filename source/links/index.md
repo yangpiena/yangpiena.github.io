@@ -6,64 +6,52 @@ toc: true
 ---
 
 #### 常用
-[大马路](https://dama.lu/)          |  [谷歌搜索](https://www.google.com/ncr)        |  [谷歌香港](https://www.google.com.hk/ncr)   |  [维基百科](https://www.wikipedia.org/)  |  [博客预览](http://localhost:4000)
-[网易公开课](https://open.163.com/) |  [YouTube](https://www.youtube.com/)
-[CSDN.NET](http://www.csdn.net/)    |  [VeryCD 电驴大全](http://www.verycd.com/)     |  [360doc个人图书馆](http://www.360doc.com/)
-[cnBeta](http://www.cnbeta.com/)    |  [果壳](http://www.guokr.com/)                 |  [少数派](https://sspai.com/)                |  [数字尾巴](http://www.dgtle.com/)
-[老D博客](https://laod.cn/)         |  [黑果小兵](https://blog.daliansky.net/)       |  [免费吧](http://www.mianfeib.com/)          |  [行客工作室](http://www.runker.net/)
+[百度翻译](https://fanyi.baidu.com/)|  [谷歌搜索](https://www.google.com/ncr)        |  [谷歌香港](https://www.google.com.hk/ncr)   |  [维基百科](https://www.wikipedia.org/)
+[CSDN.NET](http://www.csdn.net/)    |  [VeryCD 电驴大全](http://www.verycd.com/)     |  [360doc个人图书馆](http://www.360doc.com/)  |[cnBeta](http://www.cnbeta.com/)    |  [果壳](http://www.guokr.com/)                 |  [少数派](https://sspai.com/)                |  [数字尾巴](http://www.dgtle.com/)
+[免费吧](http://www.mianfeib.com/)  |  [老D博客](https://laod.cn/)                   |  [行客工作室](http://www.runker.net/)        |  [黑果小兵](https://blog.daliansky.net/)
 [百度云](https://pan.baidu.com/)    |  [腾讯云](https://cloud.tencent.com/)          |  [贴图库](http://www.tietuku.com/)
-
+[天气万年历](https://wannianli.tianqi.com/today/zhou/)  |  [博客预览](http://localhost:4000)
+  
 &nbsp;
 
 
 #### 音乐
-[SongTaste](http://www.songtaste.com/)  |  [AeKun](https://www.aekun.com/)  |  [网易云音乐](http://music.163.com)  |  [VIP付费音乐解析下载](http://music.zhuolin.wang/)
+[SongTaste](http://www.songtaste.com/)  |  [AeKun](https://www.aekun.com/ )  |  [VIP付费音乐解析下载](http://music.zhuolin.wang/)  |  [网易云音乐](http://music.163.com)
 
 &nbsp;
 
 
 #### 电影
-[BT下载](http://www.qinou.cn/)     |  [BT之家](http://www.btbtt33.com/)        |  [BT之家](http://www.415.net)        |  [BT之家](http://www.btbtt.com)       |  [BT之家](http://www.btbta.com)
-[破晓电影](http://www.poxiao.com)  |  [放电影网](http://www.fangdianying.tv/)  |  [电影天堂](http://www.dy2018.com/)  |  [迅雷电影下载](http://www.xlpu.cc/)  |  [快播电影](http://www.bubulai.com/) |  [LOL电影天堂](http://www.loldytt.com/) |  [BT电影天堂](http://www.btbttv.net/) | [迅影网](https://www.xunyingwang.com/)
-[预告片世界](http://www.yugaopian.cn/)
-[人人影视](http://www.yyets.com/)
-[第二度](https://deardu.com/)
+[YouTube](https://www.youtube.com/)|  [网易公开课](https://open.163.com/)
+[BT下载](http://www.qinou.cn/)     |  [BT之家](http://www.btbtt33.com/)   |  [BT之家](http://www.415.net)         |  [BT之家](http://www.btbtt.com)      |  [第二度](https://deardu.com/)
+[破晓电影](http://www.poxiao.com)  |  [今日影视](http://www.2w2w.tv/)     |  [迅雷电影下载](http://www.xlpu.cc/)  |  [快播电影](http://www.bubulai.com/) |  [LOL电影天堂](http://www.loldytt.com/) |  [BT电影天堂](http://www.btbttv.net/) | [迅影网](https://www.xunyingwang.com/)
+[预告片世界](http://www.yugaopian.cn/)  |  [人人影视字幕](http://www.yyets.com/)
 
 
 &nbsp;
 
 #### 游戏
-[Chatroulette](http://chatroulette.com/)                      |  [三国杀](http://web.sanguosha.com/)
-[好蜀门私服](http://www.haosm.com/)
-[王者荣耀通用铭文推荐 通用全英雄四级五级铭文推荐](http://news.17173.com/z/pvp/content/02122017/153037729.shtml)
+[Chatroulette](http://chatroulette.com/)
+[三国杀](http://web.sanguosha.com/)  |  [好蜀门私服](http://www.haosm.com/)
 
 
 &nbsp;
 
 #### 美图
-[it.me](http://www.topit.me/)                                 |  [Picever](http://www.picever.com/)                                                              |  [笔记本桌面壁纸下载](http://bbs.zol.com.cn/nbbbs/d33943.html)
-[手写导航](http://shouxie.org/)                               |  [手写体网](http://shouxieti.com/)
+[it.me](http://www.topit.pro/)   |  [笔记本桌面壁纸下载](http://bbs.zol.com.cn/nbbbs/d33943.html)
+[手写导航](http://shouxie.org/)  |  [手写体网](http://shouxieti.com/)
 
 &nbsp;
 
 
 #### 在线工具
-[在线工具](http://tool.lu/)
-[JSON在线解析及格式化验证](http://www.json.cn/)
-[转换json格式为C#类](http://json2csharp.chahuo.com/)
-[ATOOL在线工具](http://www.atool.org/)
-[在线API](http://tool.oschina.net/)
-[PMD5](http://pmd5.com/#)
-[输入让你无语的MD5](https://www.somd5.com/)
-[在线MD5暴力破解 - md5解密破解 - aTool在线工具](http://www.atool.org/md5-crack.php)
-[png在线转ico](http://www.easyicon.net/covert/)
-[MakePic.com 图片制造](http://www.makepic.com/)
-[草料二维码美化器](http://mh.cli.im/)
-[简繁体在线转换工具](http://tool.lu/zhconvert/)
-[核心价值编码器](https://sym233.github.io/core-values-encoder/)
-[核心价值编码器源码](https://github.com/sym233/core-values-encoder)
 [生成随机密码](https://suijimimashengcheng.51240.com/)
-[在线制作您的Logo](https://www.logaster.cn/)
+[在线工具](http://tool.lu/)  |  [在线API](http://tool.oschina.net/)
+[JSON在线解析及格式化验证](http://www.json.cn/)  |  [转换json格式为C#类](http://json2csharp.chahuo.com/)
+[PMD5](http://pmd5.com/#)  |  [输入让你无语的MD5](https://www.somd5.com/)   |  [在线MD5暴力破解 - md5解密破解 - aTool在线工具](http://www.atool.org/md5-crack.php)
+[png在线转ico](http://www.easyicon.net/covert/)  |  [MakePic.com 图片制造](http://www.makepic.com/)  |  [草料二维码美化器](http://mh.cli.im/)  |  [在线制作您的Logo](https://www.logaster.cn/)
+[核心价值编码器](https://sym233.github.io/core-values-encoder/)  |  [核心价值编码器源码](https://github.com/sym233/core-values-encoder)
+
 
 &nbsp;
 
@@ -75,6 +63,7 @@ toc: true
 [浏览迷](http://liulanmi.com/)                                |  [Chrome浏览器插件下载中心](https://www.chromefor.com/)
 [最新迅雷(xunlei)会员账号天天更新同享](http://www.win10.name/news/193.html)
 [FlashPlayer下载地址1](http://get.adobe.com/cn/flashplayer/otherversions/)  |  [FlashPlayer下载地址2](http://www.adobe.com/support/flashplayer/downloads.html)  |  [Debugger Version地址](http://kb2.adobe.com/cps/155/tn_15507.html)
+[金狐维护盘](http://www.jinhu.me/)
 
 &nbsp;
 
@@ -196,6 +185,10 @@ toc: true
 
 &nbsp;
 
+#### ERP
+[ERP系统架构](https://www.cnblogs.com/Leo_wl/p/7978014.html#top)
+
+&nbsp;
 
 #### Flex
 [Flex下载地址](http://www.adobe.com/support/flashplayer/downloads.html)                                                              |  [查看浏览器FLash版本、Debug Player](http://kb2.adobe.com/cps/155/tn_15507.html)
@@ -285,11 +278,16 @@ toc: true
 
 &nbsp;
 
-#### SQL
+#### 数据库
 [SQL Server 2008(R2)支持将数据导出为脚本](http://xcc313.iteye.com/blog/1331468)
 [【SQL Server备份恢复】维护计划实现备份：每周数据库完整备份、每天差异备份、每小时日志备份 ](http://blog.csdn.net/sqlserverdiscovery/article/details/11020057)
 [SQL 列转行，即多行合并成一条](https://www.cnblogs.com/luokunlun/p/5947615.html)
 [sql 判断 函数 存储过程是否存在的方法](https://www.cnblogs.com/a311300/p/4358916.html)
+[SqlServer2008 数据库同步的两种方式 (发布、订阅)](http://www.cnblogs.com/tyb1222/archive/2011/05/31/2064944.html)
+[SqlServer数据库同步方案详解(包括跨网段)](https://www.cnblogs.com/hu88oo/articles/1505703.html)
+[不同数据库之间表数据的实时同步-发布与订阅](https://blog.csdn.net/rand_muse/article/details/81326879)
+[Sqlserver 高并发和大数据存储方案](https://www.cnblogs.com/zfthm/p/6271346.html)
+[sqlserver 发布订阅的弊端](https://blog.csdn.net/yangzhawen/article/details/8019921)
 
 &nbsp;
 

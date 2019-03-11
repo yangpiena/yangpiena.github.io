@@ -703,6 +703,9 @@ N到结尾记录
 	             WHEN A.status = 1081410 THEN '日志设备'
 	             ELSE CONVERT(VARCHAR ,A.status) END                   AS "文件类型"
 	  FROM  SysFiles  A
+
+## 28. 修改sa的密码
+	EXEC sp_password NULL,NULL,'sa';
 ---
 
 # 常识

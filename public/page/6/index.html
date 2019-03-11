@@ -31,7 +31,7 @@
        <link rel="stylesheet" href="/css/style.light.css"> -->
   
   
-  <link rel="stylesheet" href="/css/style.light.css">
+  <link rel="stylesheet" href="/css/style.dark.css">
 
   <script type="text/javascript" src="/js/jquery-1.11.3.min.js"></script>
 </head>
@@ -243,8 +243,24 @@
 <td style="text-align:left">查看实时CPU使用率</td>
 </tr>
 <tr>
+<td>ps aux</td>
+<td style="text-align:left">head -1;ps aux</td>
+<td>grep -v PID</td>
+<td>sort -rn -k +3</td>
+<td>head</td>
+<td>查看占用CPU最多的10个进程。head默认取前10行，自定义K行时，在后面跟-K即可</td>
+</tr>
+<tr>
 <td>free -m</td>
 <td style="text-align:left">查看内存</td>
+</tr>
+<tr>
+<td>ps aux</td>
+<td style="text-align:left">head -1;ps aux</td>
+<td>grep -v PID</td>
+<td>sort -rn -k +4</td>
+<td>head</td>
+<td>查看占用内存最多的10个进程。head默认取前10行，自定义K行时，在后面跟-K即可</td>
 </tr>
 <tr>
 <td>df -l</td>
@@ -283,8 +299,8 @@
 
       
         <div class="post-item-wrapper">
-  <a href="/2016/11/09/【Blog】hello-world/" class="post-title">
-      【Blog】Hello World
+  <a href="/2016/11/09/【Blog】hexo博客搭建记录/" class="post-title">
+      【Blog】hexo博客搭建记录
   </a>
   <div class="post-excerpt">
     <!-- Post Date and Categories -->
@@ -300,15 +316,7 @@
       </div>
     </div>
     <!-- Post Excerpt -->
-    <div class="excerpt typo"><p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a><br></p></div>
+    <div class="excerpt typo"><p>今天终于有了自己的博客，下面记录一下搭建步骤。<br>搭建步骤主要参考WX_JIN的博文<a href="http://blog.csdn.net/wx_jin/article/details/51027783" target="_blank" rel="noopener">Windows下使用Hexo+GithubPage搭建博客</a>搭建的，感谢WX_JIN的分享。<br></p></div>
     <!-- Post Tags -->
     <div class="tags">
       
@@ -375,8 +383,8 @@ npm install hexo-deployer-git --save
 
       
         <div class="post-item-wrapper">
-  <a href="/2016/11/09/【Blog】hexo博客搭建记录/" class="post-title">
-      【Blog】hexo博客搭建记录
+  <a href="/2016/11/09/【Blog】hello-world/" class="post-title">
+      【Blog】Hello World
   </a>
   <div class="post-excerpt">
     <!-- Post Date and Categories -->
@@ -392,7 +400,15 @@ npm install hexo-deployer-git --save
       </div>
     </div>
     <!-- Post Excerpt -->
-    <div class="excerpt typo"><p>今天终于有了自己的博客，下面记录一下搭建步骤。<br>搭建步骤主要参考WX_JIN的博文<a href="http://blog.csdn.net/wx_jin/article/details/51027783" target="_blank" rel="noopener">Windows下使用Hexo+GithubPage搭建博客</a>搭建的，感谢WX_JIN的分享。<br></p></div>
+    <div class="excerpt typo"><p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a><br></p></div>
     <!-- Post Tags -->
     <div class="tags">
       
