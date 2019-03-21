@@ -1,0 +1,666 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head><meta name="generator" content="Hexo 3.8.0">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="google-site-verification" content="xBT4GhYoi5qRD5tr338pgPM5OWHHIDR6mNg1a3euekI">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="没有阳光，沉默而居">
+    <meta name="keyword" content="">
+    <link rel="shortcut icon" href="/img/ironman-draw.png">
+    <!-- Place this tag in your head or just before your close body tag. -->
+    <script async defer src="https://buttons.github.io/buttons.js"></script>
+    <title>
+        
+          【FTP】apache ftpserver安装配置 - 昜丿捺 | Blog
+        
+    </title>
+
+    <link rel="canonical" href="http://www.yangpiena.com/FTP/【FTP】apache-ftpserver安装配置/">
+
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+
+    <!-- Custom CSS --> 
+    <link rel="stylesheet" href="/css/beantech.min.css">
+
+    <link rel="stylesheet" href="/css/donate.css">
+    
+    <!-- Pygments Highlight CSS -->
+    <link rel="stylesheet" href="/css/highlight.css">
+
+    <link rel="stylesheet" href="/css/widget.css">
+
+    <link rel="stylesheet" href="/css/rocket.css">
+
+    <link rel="stylesheet" href="/css/signature.css">
+
+    <link rel="stylesheet" href="/css/toc.css">
+
+    <!-- Custom Fonts -->
+    <!-- <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css"> -->
+    <!-- Hux change font-awesome CDN to qiniu -->
+    <link href="https://cdn.staticfile.org/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+
+    <!-- Hux Delete, sad but pending in China
+    <link href='http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/
+    css'>
+    -->
+
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- ga & ba script hoook -->
+    <script></script>
+</head>
+
+
+<!-- hack iOS CSS :active style -->
+<body ontouchstart="">
+	<!-- Modified by Yu-Hsuan Yen -->
+<!-- Post Header -->
+<style type="text/css">
+    header.intro-header{
+        
+            background-image: url('/img/article_header/article_bg.jpg')
+            /*post*/
+        
+    }
+    
+</style>
+
+<header class="intro-header">
+    <!-- Signature -->
+    <div id="signature">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                
+                    <div class="post-heading">
+                        <div class="tags">
+                            
+                              <a class="tag" href="/tags/#FTP" title="FTP">FTP</a>
+                            
+                              <a class="tag" href="/tags/#apache ftpserver" title="apache ftpserver">apache ftpserver</a>
+                            
+                        </div>
+                        <h1>【FTP】apache ftpserver安装配置</h1>
+                        <h2 class="subheading"></h2>
+                        <span class="meta">
+                            Posted by 昜丿捺 on
+                            2018-04-10
+                        </span>
+                    </div>
+                
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+	
+    <!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">昜丿捺</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <!-- Known Issue, found by Hux:
+            <nav>'s height woule be hold on by its content.
+            so, when navbar scale out, the <nav> will cover tags.
+            also mask any touch event of tags, unfortunately.
+        -->
+        <div id="huxblog_navbar">
+            <div class="navbar-collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="/">Home</a>
+                    </li>
+
+                    
+
+                        
+                    
+
+                        
+                        <li>
+                            <a href="/archive/">归档</a>
+                        </li>
+                        
+                    
+
+                        
+                        <li>
+                            <a href="/about/">关于</a>
+                        </li>
+                        
+                    
+
+                        
+                        <li>
+                            <a href="/tags/">标签</a>
+                        </li>
+                        
+                    
+
+                        
+                        <li>
+                            <a href="/links/">收藏夹</a>
+                        </li>
+                        
+                    
+
+                        
+                    
+
+                        
+                        <li>
+                            <a href="/photos/">相册</a>
+                        </li>
+                        
+                    
+                    
+                </ul>
+            </div>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+<script>
+    // Drop Bootstarp low-performance Navbar
+    // Use customize navbar with high-quality material design animation
+    // in high-perf jank-free CSS3 implementation
+    var $body   = document.body;
+    var $toggle = document.querySelector('.navbar-toggle');
+    var $navbar = document.querySelector('#huxblog_navbar');
+    var $collapse = document.querySelector('.navbar-collapse');
+
+    $toggle.addEventListener('click', handleMagic)
+    function handleMagic(e){
+        if ($navbar.className.indexOf('in') > 0) {
+        // CLOSE
+            $navbar.className = " ";
+            // wait until animation end.
+            setTimeout(function(){
+                // prevent frequently toggle
+                if($navbar.className.indexOf('in') < 0) {
+                    $collapse.style.height = "0px"
+                }
+            },400)
+        }else{
+        // OPEN
+            $collapse.style.height = "auto"
+            $navbar.className += " in";
+        }
+    }
+</script>
+
+
+    <!-- Main Content -->
+    <!-- Modify by Yu-Hsuan Yen -->
+
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+
+            <!-- Post Container -->
+            <div class="
+                col-lg-8 col-lg-offset-2
+                col-md-10 col-md-offset-1
+                post-container">
+
+                <h3 id="apache-ftpserver下载"><a href="#apache-ftpserver下载" class="headerlink" title="apache ftpserver下载"></a>apache ftpserver下载</h3><p><a href="http://mina.apache.org/ftpserver-project/downloads.html" target="_blank" rel="noopener">官网下载</a></p>
+<a id="more"></a>
+<hr>
+<h3 id="apache-ftpserver安装"><a href="#apache-ftpserver安装" class="headerlink" title="apache ftpserver安装"></a>apache ftpserver安装</h3><h4 id="1-Linux下"><a href="#1-Linux下" class="headerlink" title="1. Linux下"></a>1. Linux下</h4><h5 id="1-1-下载"><a href="#1-1-下载" class="headerlink" title="1.1 下载"></a>1.1 下载</h5><p>进入下载目录，使用wget下载，如果已离线下载成功，则跳过该步，直接上传安装包到下载目录即可<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cd /usr/download/</span><br><span class="line">wget http://mirrors.shu.edu.cn/apache/mina/ftpserver/1.1.1/dist/apache-ftpserver-1.1.1.tar.gz</span><br></pre></td></tr></table></figure></p>
+<h5 id="1-2-解压"><a href="#1-2-解压" class="headerlink" title="1.2 解压"></a>1.2 解压</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tar -zxvf apache-ftpserver-1.1.1.tar.gz</span><br></pre></td></tr></table></figure>
+<h5 id="1-3-安装"><a href="#1-3-安装" class="headerlink" title="1.3 安装"></a>1.3 安装</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mv apache-ftpserver-1.1.1 /usr/local/ftpserver</span><br></pre></td></tr></table></figure>
+<h5 id="1-4-修改配置文件"><a href="#1-4-修改配置文件" class="headerlink" title="1.4 修改配置文件"></a>1.4 修改配置文件</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cd /usr/local/ftpserver/res/conf/</span><br><span class="line">vim users.properties</span><br></pre></td></tr></table></figure>
+<p>users.properties文件存放的是用户名及密码权限等配置信息，通过修改该文件来添加和管理用户及权限等信息。参考下面内容配置：</p>
+<pre><code>#用户名为anonymous，密码为空
+tpserver.user.anonymous.userpassword=
+#主目录
+ftpserver.user.anonymous.homedirectory=./res/home
+#当前用户可用
+ftpserver.user.anonymous.enableflag=true
+#具有上传权限
+ftpserver.user.anonymous.writepermission=true
+#最大登陆用户数为20，0为不限
+ftpserver.user.anonymous.maxloginnumber=20
+#同IP登陆用户数为2，0为不限
+ftpserver.user.anonymous.maxloginperip=2 
+#空闲时间为300秒，0为不限
+ftpserver.user.anonymous.idletime=300
+#上传速率限制为48字节每秒，0为不限
+ftpserver.user.anonymous.uploadrate=4800
+#下载速率限制为48字节每秒，0为不限
+ftpserver.user.anonymous.downloadrate=4800
+</code></pre><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vim ftpd-typical.xml</span><br></pre></td></tr></table></figure>
+<p>修改配置文件ftpd-file.xml，增加encrypt-passwords=”clear”，将密码加密方式修改为clear，默认为MD5加密方式。</p>
+<pre><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;server xmlns=&quot;http://mina.apache.org/ftpserver/spring/v1&quot;
+        xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;
+        xsi:schemaLocation=&quot;
+           http://mina.apache.org/ftpserver/spring/v1 http://mina.apache.org/ftpserver/ftpserver-1.0.xsd        
+           &quot;
+        id=&quot;myServer&quot;&gt;
+        &lt;listeners&gt;
+                &lt;nio-listener name=&quot;default&quot; port=&quot;21&quot;&gt;
+                    &lt;ssl&gt;
+                         &lt;keystore file=&quot;./res/ftpserver.jks&quot; password=&quot;password&quot; /&gt;
+                    &lt;/ssl&gt;
+                &lt;/nio-listener&gt;
+        &lt;/listeners&gt;
+        &lt;file-user-manager file=&quot;./res/conf/users.properties&quot; encrypt-passwords=&quot;clear&quot; /&gt;
+&lt;/server&gt;
+</code></pre><h5 id="1-5-启动"><a href="#1-5-启动" class="headerlink" title="1.5 启动"></a>1.5 启动</h5><p>在ftpserver目录下，执行命令：</p>
+<ul>
+<li>方式一：<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sh  bin/ftpd.sh  /res/conf/ftpd-typical.xml</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>此方式有局限，当命令窗口退出时，FTP服务停止。</p>
+<ul>
+<li>方式二：<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nohup ./bin/ftpd.sh res/conf/ftpd-typical.xml &amp;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>此方式为后台启动FTP服务，服务一直启动，不管窗口是否退出。</p>
+<ul>
+<li>方式三：<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nohup sh   apache-ftpserver-1.0.6/bin/ftpd.sh   /res/conf/ftpd-typical.xml &gt; ftplog/`date &apos;+%Y%m%d&apos;`ftp.log  &gt; /dev/null   2&gt;&amp;1  &amp;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>方式一、二无法启动时，可用此种方式。</p>
+<h5 id="1-5-测试"><a href="#1-5-测试" class="headerlink" title="1.5 测试"></a>1.5 测试</h5><p>在浏览器输入ftp://IP:21后，输入用户名，密码，可以登录ftp目录。</p>
+<hr>
+<h3 id="Suse-Linux-Enterprise-12下实现脚本启动和关闭"><a href="#Suse-Linux-Enterprise-12下实现脚本启动和关闭" class="headerlink" title="Suse Linux Enterprise 12下实现脚本启动和关闭"></a>Suse Linux Enterprise 12下实现脚本启动和关闭</h3><h4 id="1-在-目录下，执行下面命令"><a href="#1-在-目录下，执行下面命令" class="headerlink" title="1. 在~目录下，执行下面命令"></a>1. 在~目录下，执行下面命令</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vim .profile</span><br></pre></td></tr></table></figure>
+<h4 id="2-在-profile文件中定义FTPSERVER-HOME变量，并将变量追加到PATH后面，效果如下："><a href="#2-在-profile文件中定义FTPSERVER-HOME变量，并将变量追加到PATH后面，效果如下：" class="headerlink" title="2. 在.profile文件中定义FTPSERVER_HOME变量，并将变量追加到PATH后面，效果如下："></a>2. 在.profile文件中定义FTPSERVER_HOME变量，并将变量追加到PATH后面，效果如下：</h4><pre><code>export RC_LANG=zh_CN.UTF-8
+export FTPSERVER_HOME=/usr/local/ftpserver
+export PATH=$PATH:$FTPSERVER_HOME
+</code></pre><p>保存并退出。</p>
+<h4 id="3-执行下面命令，使立即生效"><a href="#3-执行下面命令，使立即生效" class="headerlink" title="3. 执行下面命令，使立即生效"></a>3. 执行下面命令，使立即生效</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">source ~/.profile</span><br></pre></td></tr></table></figure>
+<h4 id="4-执行下面命令，在FTPSERVER-HOME目录下创建脚本文件，"><a href="#4-执行下面命令，在FTPSERVER-HOME目录下创建脚本文件，" class="headerlink" title="4. 执行下面命令，在FTPSERVER_HOME目录下创建脚本文件，"></a>4. 执行下面命令，在FTPSERVER_HOME目录下创建脚本文件，</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vim /usr/local/ftpserver/ftpserver</span><br></pre></td></tr></table></figure>
+<p>在文件中写入如下代码，保存并退出。</p>
+<pre><code>#!/bin/bash
+# /usr/local/ftpserver
+# YPN 2018-04-11 Create
+
+if [ &quot;$1&quot;x = &quot;start&quot;x ]; then
+  nohup /usr/local/ftpserver/bin/ftpd.sh res/conf/ftpd-typical.xml 1&gt;/usr/local/ftpserver/res/log/ftpd.log 2&gt;&amp;1 &amp;
+fi
+if [ &quot;$1&quot;x = &quot;stop&quot;x ]; then
+  kill $(ps aux|grep &quot;ftpserver&quot; | grep -v grep |awk &apos;{print $2}&apos;)
+fi
+if [ &quot;$1&quot;x = &quot;check&quot;x ]; then
+  ps -aux|grep &quot;ftpserver&quot; | grep -v grep
+fi
+if [ &quot;$1&quot;x = &quot;log&quot;x ]; then
+  tail -f /usr/local/ftpserver/res/log/ftpd.log -n 1000
+fi
+</code></pre><h4 id="5-给文件添加权限，使脚本文件可以执行，命令为"><a href="#5-给文件添加权限，使脚本文件可以执行，命令为" class="headerlink" title="5. 给文件添加权限，使脚本文件可以执行，命令为"></a>5. 给文件添加权限，使脚本文件可以执行，命令为</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">chmod 755 /usr/local/ftpserver/ftpserver</span><br></pre></td></tr></table></figure>
+<h4 id="6-最后，执行下面命令可启动、关闭ftpserver或查看日志"><a href="#6-最后，执行下面命令可启动、关闭ftpserver或查看日志" class="headerlink" title="6. 最后，执行下面命令可启动、关闭ftpserver或查看日志"></a>6. 最后，执行下面命令可启动、关闭ftpserver或查看日志</h4><p>启动：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ftpserver start</span><br></pre></td></tr></table></figure></p>
+<p>关闭：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ftpserver stop</span><br></pre></td></tr></table></figure></p>
+<p>查看日志：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ftpserver log</span><br></pre></td></tr></table></figure></p>
+<p>检查ftpserver进程：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ftpserver check</span><br></pre></td></tr></table></figure></p>
+<h4 id="7-随系统自启动"><a href="#7-随系统自启动" class="headerlink" title="7. 随系统自启动"></a>7. 随系统自启动</h4><blockquote>
+<p>暂未找到解决办法</p>
+</blockquote>
+
+                
+
+                <hr>
+                <!-- Pager -->
+                <ul class="pager">
+                    
+                        <li class="previous">
+                            <a href="/article/【Linux】共享目录和远程挂载/" data-toggle="tooltip" data-placement="top" title="【Linux】共享目录和远程挂载">&larr; Previous Post</a>
+                        </li>
+                    
+                    
+                        <li class="next">
+                            <a href="/OS/【Linux】CentOS网络连接system-eth0不可用解决办法/" data-toggle="tooltip" data-placement="top" title="【Linux】CentOS网络连接system eth0不可用解决办法">Next Post &rarr;</a>
+                        </li>
+                    
+                </ul>
+
+                <br>
+
+                <!--打赏-->
+                
+                <!--打赏-->
+
+                <br>
+                <!--分享-->
+                
+                    <div class="social-share" data-wechat-qrcode-helper="" align="center"></div>
+                    <!--  css & js -->
+                    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/css/share.min.css">
+                    <script src="https://cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/js/social-share.min.js"></script>
+                
+                <!--分享-->
+                <br>                       
+                
+                <!-- require APlayer -->
+                
+
+                <!-- duoshuo Share start -->
+                
+                <!-- 多说 Share end-->
+
+                <!-- 多说评论框 start -->
+                
+                <!-- 多说评论框 end -->
+
+                <!-- disqus comment start -->
+                
+                <!-- disqus comment end -->
+
+                
+
+            </div>
+            
+            <!-- Tabe of Content -->
+            <!-- Table of Contents -->
+
+                
+            <!-- Sidebar Container -->
+            <div class="
+                col-lg-8 col-lg-offset-2
+                col-md-10 col-md-offset-1
+                sidebar-container">
+
+                <!-- Featured Tags -->
+                
+                <section>
+                    <!-- no hr -->
+                    <h5><a href="/tags/">FEATURED TAGS</a></h5>
+                    <div class="tags">
+                       
+                          <a class="tag" href="/tags/#FTP" title="FTP">FTP</a>
+                        
+                          <a class="tag" href="/tags/#apache ftpserver" title="apache ftpserver">apache ftpserver</a>
+                        
+                    </div>
+                </section>
+                
+
+                <!-- Friends Blog -->
+                
+                <hr>
+                <h5>FRIENDS</h5>
+                <ul class="list-inline">
+
+                    
+                        <li><a href="http://blog.csdn.net/yangpiena" target="_blank">CSDN Blog 昜丿捺</a></li>
+                    
+                </ul>
+                
+            </div>
+        </div>
+    </div>
+</article>
+
+
+
+
+
+
+
+
+<!-- async load function -->
+<script>
+    function async(u, c) {
+      var d = document, t = 'script',
+          o = d.createElement(t),
+          s = d.getElementsByTagName(t)[0];
+      o.src = u;
+      if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+      s.parentNode.insertBefore(o, s);
+    }
+</script>
+<!-- anchor-js, Doc:http://bryanbraun.github.io/anchorjs/ -->
+<script>
+    async("https://cdn.bootcss.com/anchor-js/1.1.1/anchor.min.js",function(){
+        anchors.options = {
+          visible: 'hover',
+          placement: 'left',
+          icon: 'ℬ'
+        };
+        anchors.add().remove('.intro-header h1').remove('.subheading').remove('.sidebar-container h5');
+    })
+</script>
+<style>
+    /* place left on bigger screen */
+    @media all and (min-width: 800px) {
+        .anchorjs-link{
+            position: absolute;
+            left: -0.75em;
+            font-size: 1.1em;
+            margin-top : -0.1em;
+        }
+    }
+</style>
+
+
+
+    <!-- Footer -->
+    <!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+                
+                
+                
+
+                
+
+                
+
+                
+                    <li>
+                        <a target="_blank" href="https://github.com/huweihuang">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                
+
+                
+
+                </ul>
+                <p class="copyright text-muted">
+                    Copyright &copy; 昜丿捺 2019 
+                    <br>
+                    Theme by <a href="http://beantech.org">BeanTech</a> 
+                    <span style="display: inline-block; margin: 0 5px;">
+                        <i class="fa fa-heart"></i>
+                    </span> 
+                    re-Ported by <a href="http://www.huweihuang.com">胡伟煌</a> | 
+                    <iframe style="margin-left: 2px; margin-bottom:-5px;" frameborder="0" scrolling="0" width="91px" height="20px" src="https://ghbtns.com/github-btn.html?user=huweihuang&repo=hexo-theme-huweihuang&type=star&count=true">
+                    </iframe>
+                </p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- jQuery -->
+<script src="/js/jquery.min.js"></script>
+
+<!-- Bootstrap Core JavaScript -->
+<script src="/js/bootstrap.min.js"></script>
+
+<!-- Custom Theme JavaScript -->
+<script src="/js/hux-blog.min.js"></script>
+
+
+<!-- async load function -->
+<script>
+    function async(u, c) {
+      var d = document, t = 'script',
+          o = d.createElement(t),
+          s = d.getElementsByTagName(t)[0];
+      o.src = u;
+      if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+      s.parentNode.insertBefore(o, s);
+    }
+</script>
+
+<!-- 
+     Because of the native support for backtick-style fenced code blocks 
+     right within the Markdown is landed in Github Pages, 
+     From V1.6, There is no need for Highlight.js, 
+     so Huxblog drops it officially.
+
+     - https://github.com/blog/2100-github-pages-now-faster-and-simpler-with-jekyll-3-0  
+     - https://help.github.com/articles/creating-and-highlighting-code-blocks/    
+-->
+<!--
+    <script>
+        async("http://cdn.bootcss.com/highlight.js/8.6/highlight.min.js", function(){
+            hljs.initHighlightingOnLoad();
+        })
+    </script>
+    <link href="http://cdn.bootcss.com/highlight.js/8.6/styles/github.min.css" rel="stylesheet">
+-->
+
+
+<!-- jquery.tagcloud.js -->
+<script>
+    // only load tagcloud.js in tag.html
+    if($('#tag_cloud').length !== 0){
+        async("http://www.yangpiena.com/js/jquery.tagcloud.js",function(){
+            $.fn.tagcloud.defaults = {
+                //size: {start: 1, end: 1, unit: 'em'},
+                color: {start: '#bbbbee', end: '#0085a1'},
+            };
+            $('#tag_cloud a').tagcloud();
+        })
+    }
+</script>
+
+<!--fastClick.js -->
+<script>
+    async("https://cdn.bootcss.com/fastclick/1.0.6/fastclick.min.js", function(){
+        var $nav = document.querySelector("nav");
+        if($nav) FastClick.attach($nav);
+    })
+</script>
+
+
+<!-- Google Analytics -->
+
+
+<script>
+    // dynamic User by Hux
+    var _gaId = 'UA-XXXXXXXX-X';
+    var _gaDomain = 'yoursite';
+
+    // Originial
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', _gaId, _gaDomain);
+    ga('send', 'pageview');
+</script>
+
+
+
+
+<!-- Baidu Tongji -->
+
+<script>
+    // dynamic User by Hux
+    var _baId = 'xxx';
+
+    // Originial
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "//hm.baidu.com/hm.js?" + _baId;
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+</script>
+
+
+
+
+<!--2017-10-06 YPN Add 添加鼠标点击特效 -->
+<script type="text/javascript">
+  /* 鼠标点击特效 */
+  var a_idx = 0;
+  jQuery(document).ready(function($) {
+      $("body").click(function(e) {
+  var a = new Array("富强", "民主", "文明", "和谐", "自由", "平等", "公正" ,"法治", "爱国", "敬业", "诚信", "友善");
+  var $i = $("<span/>").text(a[a_idx]);
+          a_idx = (a_idx + 1) % a.length;
+  var x = e.pageX,
+          y = e.pageY;
+          $i.css({
+  "z-index": 999999999999999999999999999999999999999999999999999999999999999999999,
+  "top": y - 20,
+  "left": x,
+  "cursor":"default",
+  "position": "absolute",
+  "font-weight": "bold",
+  "color": "#ff6651"
+          });
+          $("body").append($i);
+          $i.animate({
+  "top": y - 180,
+  "opacity": 0
+          },
+          1500,
+  function() {
+              $i.remove();
+          });
+      });
+  });
+</script>
+
+<!--2017-10-06 YPN Add 添加输入框特效。 -->
+<script src="/js/activate-power-mode.js"></script>
+<script>
+  POWERMODE.colorful = true;  // 控制开启/开启礼花特效  
+  POWERMODE.shake    = false; // 控制开启/关闭屏幕震动特效  
+  document.body.addEventListener('input', POWERMODE);
+</script>
+
+
+	<a id="rocket" href="#top" class=""></a>
+	<script type="text/javascript" src="/js/totop.js?v=1.0.0" async=""></script>
+    <script type="text/javascript" src="/js/toc.js?v=1.0.0" async=""></script>
+<!-- Image to hack wechat -->
+<img src="http://www.yangpiena.com/img/icon_wechat.png" width="0" height="0" />
+<!-- Migrate from head to bottom, no longer block render and still work -->
+
+</body>
+
+</html>

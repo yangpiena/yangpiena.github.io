@@ -1,8 +1,34 @@
 ---
-title: 关于我
+layout: "about"
+title: "关于"
 date: 2016-11-11 12:30:48
-layout: blank
+description: "走在成为极客的路上"
+header-img: "/img/header_img/about.jpg"
+aplayer: true
+fixed: false
 ---
-<p style="text-align: center">
-    <a href="https://coding.net/u/yangpiena"><img src="/assets/blogImg/coding-logo.png" style="width: 200px; height: 100px"/></a>   <a href="https://github.com/yangpiena"><img src="/assets/blogImg/github-logo.jpg" style="width: 200px; height: 100px"/></a>     <a href="http://weibo.com/yangpiena"><img src="/assets/blogImg/xlweibo-logo.jpg" style="width: 200px; height: 100px"/></a>      <a href="mailto:yangpiena@gmail.com"><img src="/assets/blogImg/email-logo.jpg" style="width: 200px; height: 100px"/></a>
-</p>
+
+### 一句话
+
+>Just do it !
+
+### 关于我
+
+>...
+
+### 兴趣方向
+
+> 容器云
+
+### 参与社区
+
+ > 新浪微博: http://weibo.com/yangpiena
+ >
+ > Github: https://github.com/yangpiena
+ >
+ > Coding: https://coding.net/u/yangpiena
+
+### 联系我
+
+>Email: yangpiena@gmail.com
+

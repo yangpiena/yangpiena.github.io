@@ -1,9 +1,31 @@
 ---
-title: 链接
+title: 收藏夹
 layout: links
+description: ""
 date: 2016-11-11 12:31:37
-toc: true
+header-img: "/img/header_img/tag.png"
 ---
+<!-- YPN Add 2017-06-20 新增搜索框 -->
+<div class="search-wrapper" style="padding:0em 0em 0em 0em">
+	<form id="search-form" action="https://www.baidu.com/baidu" target="_blank" _lpchecked="1" >
+		<input id="q-btn"  type="submit" name="btnG" value="谷歌一下" class="button2"            style="width: 100px;"><input id="b-word" type="text" name="word" class="input2" size="40" > <input id="b-btn"  type="submit" value="百度几下" class="button button-hook" style="width: 100px;">
+	</form>
+	<script>
+		$('#b-btn, #q-btn').focus(function() {
+			var id = this.id;
+			var urlArr = {
+				'b-btn': 'https://www.baidu.com/baidu',
+				'q-btn': 'https://www.google.com/search'
+			}
+			$('#search-form').attr('action', urlArr[id]);
+		});
+		$('#search-form').on('submit', function() {
+			$('#q-word').val($('#b-word').val());
+		});
+	</script>
+</div>
+
+
 #### 常用
 [百度翻译](https://fanyi.baidu.com/)|  [谷歌搜索](https://www.google.com/ncr)        |  [谷歌香港](https://www.google.com.hk/ncr)   |  [维基百科](https://www.wikipedia.org/)
 [CSDN.NET](http://www.csdn.net/)    |  [VeryCD 电驴大全](http://www.verycd.com/)     |  [360doc个人图书馆](http://www.360doc.com/)  |[cnBeta](http://www.cnbeta.com/)    |  [果壳](http://www.guokr.com/)                 |  [少数派](https://sspai.com/)                |  [数字尾巴](http://www.dgtle.com/)

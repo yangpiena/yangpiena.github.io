@@ -1,11 +1,10 @@
 ---
-title: 相册
-date: 2016-11-11 12:32:00
-layout: photo
+layout: "photos"
+title: "相册"
+date: 2017-10-03 10:48:33
+description: ""
+header-img: "/img/header_img/about.jpg"
+aplayer: true
+fixed: false
 ---
-<!-- <link type="text/css" href="/fancybox/jquery.fancybox.css" rel="stylesheet">
-
-<div class="instagram" style="text-align:center;"></div>
-
-<script src="/fancybox/jquery.fancybox.js"></script>
-<script src="/js/addphoto.js"></script> -->
+书

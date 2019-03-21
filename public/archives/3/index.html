@@ -1,0 +1,1082 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head><meta name="generator" content="Hexo 3.8.0">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="google-site-verification" content="xBT4GhYoi5qRD5tr338pgPM5OWHHIDR6mNg1a3euekI">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="没有阳光，沉默而居">
+    <meta name="keyword" content="">
+    <link rel="shortcut icon" href="/img/ironman-draw.png">
+    <!-- Place this tag in your head or just before your close body tag. -->
+    <script async defer src="https://buttons.github.io/buttons.js"></script>
+    <title>
+        
+          昜丿捺 | Blog
+        
+    </title>
+
+    <link rel="canonical" href="http://www.yangpiena.com/archives/3/">
+
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+
+    <!-- Custom CSS --> 
+    <link rel="stylesheet" href="/css/beantech.min.css">
+
+    <link rel="stylesheet" href="/css/donate.css">
+    
+    <!-- Pygments Highlight CSS -->
+    <link rel="stylesheet" href="/css/highlight.css">
+
+    <link rel="stylesheet" href="/css/widget.css">
+
+    <link rel="stylesheet" href="/css/rocket.css">
+
+    <link rel="stylesheet" href="/css/signature.css">
+
+    <link rel="stylesheet" href="/css/toc.css">
+
+    <!-- Custom Fonts -->
+    <!-- <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css"> -->
+    <!-- Hux change font-awesome CDN to qiniu -->
+    <link href="https://cdn.staticfile.org/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+
+    <!-- Hux Delete, sad but pending in China
+    <link href='http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/
+    css'>
+    -->
+
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- ga & ba script hoook -->
+    <script></script>
+</head>
+
+
+<!-- hack iOS CSS :active style -->
+<body ontouchstart="">
+	<!-- Modified by Yu-Hsuan Yen -->
+<!-- Post Header -->
+<style type="text/css">
+    header.intro-header{
+        
+            background-image: url('/img/header_img/home.jpg') 
+            /*config*/
+        
+    }
+    
+</style>
+
+<header class="intro-header">
+    <!-- Signature -->
+    <div id="signature">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                
+                    <div class="site-heading">
+                        <h1>昜丿捺</h1>
+                        <!--<hr class="small">-->
+                        <span class="subheading">个人博客</span>
+                    </div>
+                
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+	
+    <!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">昜丿捺</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <!-- Known Issue, found by Hux:
+            <nav>'s height woule be hold on by its content.
+            so, when navbar scale out, the <nav> will cover tags.
+            also mask any touch event of tags, unfortunately.
+        -->
+        <div id="huxblog_navbar">
+            <div class="navbar-collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="/">Home</a>
+                    </li>
+
+                    
+
+                        
+                    
+
+                        
+                        <li>
+                            <a href="/archive/">归档</a>
+                        </li>
+                        
+                    
+
+                        
+                        <li>
+                            <a href="/about/">关于</a>
+                        </li>
+                        
+                    
+
+                        
+                        <li>
+                            <a href="/tags/">标签</a>
+                        </li>
+                        
+                    
+
+                        
+                        <li>
+                            <a href="/links/">收藏夹</a>
+                        </li>
+                        
+                    
+
+                        
+                    
+
+                        
+                        <li>
+                            <a href="/photos/">相册</a>
+                        </li>
+                        
+                    
+                    
+                </ul>
+            </div>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+<script>
+    // Drop Bootstarp low-performance Navbar
+    // Use customize navbar with high-quality material design animation
+    // in high-perf jank-free CSS3 implementation
+    var $body   = document.body;
+    var $toggle = document.querySelector('.navbar-toggle');
+    var $navbar = document.querySelector('#huxblog_navbar');
+    var $collapse = document.querySelector('.navbar-collapse');
+
+    $toggle.addEventListener('click', handleMagic)
+    function handleMagic(e){
+        if ($navbar.className.indexOf('in') > 0) {
+        // CLOSE
+            $navbar.className = " ";
+            // wait until animation end.
+            setTimeout(function(){
+                // prevent frequently toggle
+                if($navbar.className.indexOf('in') < 0) {
+                    $collapse.style.height = "0px"
+                }
+            },400)
+        }else{
+        // OPEN
+            $collapse.style.height = "auto"
+            $navbar.className += " in";
+        }
+    }
+</script>
+
+
+    <!-- Main Content -->
+    <!-- Main Content -->
+<div class="container">
+    <div class="row">
+        
+
+<!-- USE SIDEBAR -->
+    <!-- Post Container -->
+            <div class="
+                col-lg-8 col-lg-offset-1
+                col-md-8 col-md-offset-1
+                col-sm-12
+                col-xs-12
+                post-container
+            ">
+            
+                <!-- Main Content -->
+
+
+<div class="post-preview">
+
+    <a href="/Git/【Git】如何用命令将本地项目上传到git/">
+        <h2 class="post-title">
+            【Git】如何用命令将本地项目上传到git
+        </h2>
+        <h3 class="post-subtitle">
+            
+        </h3>
+        <div class="post-content-preview">
+            1. 先在GitHub网站上 New 一个资源库，如 demo
+2. 进入本地项目文件夹，通过命令 git init 把这个目录变成Git可以管理的仓库1git init
+3. 把文件添加到版本库中，使用命令 git add .添加到暂存区里面去，不要忘记后面的小数点“.”，意为添加文件夹下的所有文件1git add .
+4. 用命令 git commit 告诉Git，把文件提交到仓库。引号......
+        </div>
+    </a>
+    
+        <p class="post-meta" style="margin: 10px 0;">
+            Posted by 昜丿捺 on
+            2017-06-20
+        </p>
+        <div class="tags">
+            
+              <a href="/tags/#Git" title="Git">Git</a>
+            
+        </div>
+    
+
+</div>
+<hr>
+
+<div class="post-preview">
+
+    <a href="/Sublime-Text/【Sublime-Text】快捷键/">
+        <h2 class="post-title">
+            【Sublime Text】快捷键
+        </h2>
+        <h3 class="post-subtitle">
+            
+        </h3>
+        <div class="post-content-preview">
+            
+
+
+快捷键
+说明
+
+
+
+
+Ctrl+X
+删除当前行
+
+
+Ctrl+Shift+D
+复制光标所在整行，插入到下一行
+
+
+Ctrl+Shift+↑
+将光标所在行和上一行代码互换（将光标所在行插入到上一行之前）
+
+
+Ctrl+Shift+↓
+将光标所在行和下一行代码互换（将光标所在行插入到下一行之后）
+
+
+Shift+鼠标右键拖动
+列编辑模式
+
+
+Ctrl+K+U
+转换大写
+
+
+Ctrl+K+L......
+        </div>
+    </a>
+    
+        <p class="post-meta" style="margin: 10px 0;">
+            Posted by 昜丿捺 on
+            2017-05-15
+        </p>
+        <div class="tags">
+            
+              <a href="/tags/#Sublime Text" title="Sublime Text">Sublime Text</a>
+            
+              <a href="/tags/#快捷键" title="快捷键">快捷键</a>
+            
+        </div>
+    
+
+</div>
+<hr>
+
+<div class="post-preview">
+
+    <a href="/Windows/【Windows】设置磁盘背景/">
+        <h2 class="post-title">
+            【Windows】设置磁盘背景
+        </h2>
+        <h3 class="post-subtitle">
+            
+        </h3>
+        <div class="post-content-preview">
+            如何将磁盘背景设置为自己喜欢的图片，具体操作步骤如下：
+
+首先，准备一张自己喜欢的图片。例如：D:\图片\其它\1741962.jpeg 
+在要设置背景的盘符或文件夹下，新建一个文本文档，将下面代码粘贴到文本中，替换自己的图片路径。[ExtShellFolderViews] 
+{BE098140-A513-11D0-A3A4-00C04FD706EC}={BE098140-A513-11D0......
+        </div>
+    </a>
+    
+        <p class="post-meta" style="margin: 10px 0;">
+            Posted by 昜丿捺 on
+            2017-05-15
+        </p>
+        <div class="tags">
+            
+              <a href="/tags/#Windows" title="Windows">Windows</a>
+            
+              <a href="/tags/#美化" title="美化">美化</a>
+            
+        </div>
+    
+
+</div>
+<hr>
+
+<div class="post-preview">
+
+    <a href="/Kettle/【Kettle】使用命令行来运行数据库job/">
+        <h2 class="post-title">
+            【Kettle】使用命令行来运行数据库job
+        </h2>
+        <h3 class="post-subtitle">
+            
+        </h3>
+        <div class="post-content-preview">
+            当您的Job是在数据库中存储，并需要通过命令行（.bat）方式运行时，如下编辑.bat文件即可：
+d:
+cd d:\data-integration
+kitchen /rep xxKettle /dir taby /user admin /pass admin /job tabyToXX_Job /level basic /logfile D:\KettleLog\kettlelog.log......
+        </div>
+    </a>
+    
+        <p class="post-meta" style="margin: 10px 0;">
+            Posted by 昜丿捺 on
+            2016-12-28
+        </p>
+        <div class="tags">
+            
+              <a href="/tags/#Kettle" title="Kettle">Kettle</a>
+            
+              <a href="/tags/#job" title="job">job</a>
+            
+        </div>
+    
+
+</div>
+<hr>
+
+<div class="post-preview">
+
+    <a href="/Java/【Java】tomcat启动jvm内存设置/">
+        <h2 class="post-title">
+            【Java】tomcat启动jvm内存设置
+        </h2>
+        <h3 class="post-subtitle">
+            
+        </h3>
+        <div class="post-content-preview">
+            Linux在/usr/local/apache-tomcat-7.0.57/bin目录下的catalina.sh中添加：
+JAVA_OPTS=&apos;-Xms512m -Xmx1024m&apos;
+
+-Xms：初始值-Xmx：最大值-Xmn：最小值
+
+
+Windows
+若使用startup.bat启动tomcat，则在C:\apache-tomcat-7.0.57\bin\catali......
+        </div>
+    </a>
+    
+        <p class="post-meta" style="margin: 10px 0;">
+            Posted by 昜丿捺 on
+            2016-12-28
+        </p>
+        <div class="tags">
+            
+              <a href="/tags/#Java" title="Java">Java</a>
+            
+              <a href="/tags/#tomcat" title="tomcat">tomcat</a>
+            
+        </div>
+    
+
+</div>
+<hr>
+
+<div class="post-preview">
+
+    <a href="/Java/【Java】tomcat下载和安装/">
+        <h2 class="post-title">
+            【Java】tomcat下载和安装
+        </h2>
+        <h3 class="post-subtitle">
+            
+        </h3>
+        <div class="post-content-preview">
+            Tomcat官网下载
+Tomcat安装1. Windows下1.1 将下载的apache-tomcat-6.0.35-windows-x86.zip压缩包解压。1.2 修改\bin\startup.bat文件，在第一行前面加入以下内容：REM JDK安装所在的路径
+SET JAVA_HOME=D:\Program Files\Java\jdk1.6.0_30
+REM 免安装的Tomcat解压......
+        </div>
+    </a>
+    
+        <p class="post-meta" style="margin: 10px 0;">
+            Posted by 昜丿捺 on
+            2016-12-28
+        </p>
+        <div class="tags">
+            
+              <a href="/tags/#Java" title="Java">Java</a>
+            
+              <a href="/tags/#tomcat" title="tomcat">tomcat</a>
+            
+        </div>
+    
+
+</div>
+<hr>
+
+<div class="post-preview">
+
+    <a href="/Java/【Java】jdk下载安装/">
+        <h2 class="post-title">
+            【Java】jdk下载安装
+        </h2>
+        <h3 class="post-subtitle">
+            
+        </h3>
+        <div class="post-content-preview">
+            JDK官网下载
+
+JDK安装1. Windows下1.1 安装安装目录建议自定义为C:\Java下，其它按默认安装即可。
+1.2 配置环境变量在系统变量里，新建变量名：JAVA_HOME       变量值：C:\Java\jdk1.7.0_80编辑变量名：Path          追加值：;%JAVA_HOME%\bin;%JAVA_HOME%\jre\bin新建变量名：CLASSPAT......
+        </div>
+    </a>
+    
+        <p class="post-meta" style="margin: 10px 0;">
+            Posted by 昜丿捺 on
+            2016-12-28
+        </p>
+        <div class="tags">
+            
+              <a href="/tags/#Java" title="Java">Java</a>
+            
+              <a href="/tags/#jdk" title="jdk">jdk</a>
+            
+        </div>
+    
+
+</div>
+<hr>
+
+<div class="post-preview">
+
+    <a href="/FAQ/【FAQ】flash builder/">
+        <h2 class="post-title">
+            【FAQ】flash builder
+        </h2>
+        <h3 class="post-subtitle">
+            
+        </h3>
+        <div class="post-content-preview">
+            以下记录Flash Builder在使用过程中出现的问题和解决方法：
+1. 重新连接“数据/服务”时，出现错误，如“数据类型重复”等问题此时，只需将数据服务彻底删除干净后再重新连接即可。删除方法：
+
+删除文件夹services和valueObjects；
+删除xx.fml文件中的数据/服务内容。保留model标签和annotation标签内容，其它全删除。&lt;model xmlns=&q......
+        </div>
+    </a>
+    
+        <p class="post-meta" style="margin: 10px 0;">
+            Posted by 昜丿捺 on
+            2016-12-27
+        </p>
+        <div class="tags">
+            
+              <a href="/tags/#FAQ" title="FAQ">FAQ</a>
+            
+              <a href="/tags/#flash builder" title="flash builder">flash builder</a>
+            
+        </div>
+    
+
+</div>
+<hr>
+
+<div class="post-preview">
+
+    <a href="/Flex/【Flex】flash builder 4.6效率优化方法/">
+        <h2 class="post-title">
+            【Flex】flash builder 4.6效率优化方法
+        </h2>
+        <h3 class="post-subtitle">
+            
+        </h3>
+        <div class="post-content-preview">
+            Flash Builder 4.6编译慢、报java heap space堆空间异常错误的优化方法：
+
+在安装路径下找到FlexBuilder.ini文件，进行编辑，加入以下参数：-vmargs
+-Xms128m
+-Xmx512m
+-XX:MaxPermSize=256m
+-XX:PermSize=64m                    #不要设置太高，否则会更加慢
+-Djava.ne......
+        </div>
+    </a>
+    
+        <p class="post-meta" style="margin: 10px 0;">
+            Posted by 昜丿捺 on
+            2016-12-27
+        </p>
+        <div class="tags">
+            
+              <a href="/tags/#flash builder" title="flash builder">flash builder</a>
+            
+              <a href="/tags/#Flex" title="Flex">Flex</a>
+            
+        </div>
+    
+
+</div>
+<hr>
+
+<div class="post-preview">
+
+    <a href="/Flex/【Flex】flash builder 4.6免费使用方法/">
+        <h2 class="post-title">
+            【Flex】flash builder 4.6免费使用方法
+        </h2>
+        <h3 class="post-subtitle">
+            
+        </h3>
+        <div class="post-content-preview">
+            Flash Builder 4.6免费使用具体步骤如下：
+
+到Adobe官网下载FlashBuilder 4.6，有简体中文版；
+安装时，不用序列号，直接选择安装试用版；
+安装完成后在安装目录下依次修改下列3个文件：(1).eclipse\plugins\com.adobe.flexbuilder.project_4.6.0.328916\META-INF下面的MANIFEST.MF修改：B......
+        </div>
+    </a>
+    
+        <p class="post-meta" style="margin: 10px 0;">
+            Posted by 昜丿捺 on
+            2016-12-27
+        </p>
+        <div class="tags">
+            
+              <a href="/tags/#flash builder" title="flash builder">flash builder</a>
+            
+              <a href="/tags/#Flex" title="Flex">Flex</a>
+            
+        </div>
+    
+
+</div>
+<hr>
+
+
+
+<!-- Pager -->
+
+<ul class="pager">
+    
+        <li class="previous">
+            <a href="/archives/2/">&larr; Newer Posts</a>
+        </li>
+    
+    
+        <li class="next">
+            <a href="/archives/4/">Older Posts &rarr;</a>
+        </li>
+    
+</ul>
+
+
+
+                <br>
+
+                <!-- require APlayer -->
+                
+
+                <!-- 如果开启评论功能 -->
+                
+            </div>
+
+          <!-- Sidebar Container -->
+<div class="
+    col-lg-3 col-lg-offset-0
+    col-md-3 col-md-offset-0
+    col-sm-12
+    col-xs-12
+    sidebar-container
+">
+    
+        <!-- Featured Tags -->
+
+<section>
+    <!-- no hr -->
+    <h5><a href="/tags/">FEATURED TAGS</a></h5>
+    <div class="tags">
+        
+            
+            <a href="/tags/#Blog" title="Blog" rel="3">Blog</a>
+            
+        
+            
+            <a href="/tags/#hexo" title="hexo" rel="3">hexo</a>
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+            <a href="/tags/#FAQ" title="FAQ" rel="2">FAQ</a>
+            
+        
+            
+            <a href="/tags/#flash builder" title="flash builder" rel="3">flash builder</a>
+            
+        
+            
+        
+            
+            <a href="/tags/#FPSpread" title="FPSpread" rel="2">FPSpread</a>
+            
+        
+            
+        
+            
+            <a href="/tags/#属性" title="属性" rel="2">属性</a>
+            
+        
+            
+        
+            
+        
+            
+            <a href="/tags/#Flex" title="Flex" rel="7">Flex</a>
+            
+        
+            
+            <a href="/tags/#dataGrid" title="dataGrid" rel="2">dataGrid</a>
+            
+        
+            
+        
+            
+        
+            
+            <a href="/tags/#Git" title="Git" rel="2">Git</a>
+            
+        
+            
+            <a href="/tags/#HAProxy" title="HAProxy" rel="6">HAProxy</a>
+            
+        
+            
+            <a href="/tags/#IT" title="IT" rel="2">IT</a>
+            
+        
+            
+        
+            
+        
+            
+        
+            
+            <a href="/tags/#字符串" title="字符串" rel="2">字符串</a>
+            
+        
+            
+            <a href="/tags/#Java" title="Java" rel="4">Java</a>
+            
+        
+            
+        
+            
+            <a href="/tags/#tomcat" title="tomcat" rel="3">tomcat</a>
+            
+        
+            
+        
+            
+        
+            
+            <a href="/tags/#Linux" title="Linux" rel="7">Linux</a>
+            
+        
+            
+            <a href="/tags/#命令" title="命令" rel="2">命令</a>
+            
+        
+            
+            <a href="/tags/#Oracle" title="Oracle" rel="2">Oracle</a>
+            
+        
+            
+        
+            
+        
+            
+            <a href="/tags/#SQL" title="SQL" rel="5">SQL</a>
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+            <a href="/tags/#Windows" title="Windows" rel="2">Windows</a>
+            
+        
+            
+        
+    </div>
+</section>
+
+        <hr>
+    
+        <!-- Short About -->
+<section class="visible-md visible-lg">
+    <h5><a href="/about/">ABOUT ME</a></h5>
+    <div class="short-about">
+
+        
+            <img id="avatar_pic" src="/img/avatar/ironman.png">
+        
+
+        
+            <p>Stay hungry,Stay foolish</p>
+        
+
+        <!-- SNS Link -->
+        <ul class="list-inline">
+            
+            
+            
+
+            
+
+            
+
+            
+                <li>
+                    <a target="_blank" href="https://github.com/huweihuang">
+                        <span class="fa-stack fa-lg">
+                            <i class="fa fa-circle fa-stack-2x"></i>
+                            <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                        </span>
+                    </a>
+                </li>
+            
+            
+            
+            
+        </ul>
+    </div>
+</section>
+
+        <hr>
+    
+        
+  <h5>RECENT POSTS
+  <div class="widget">
+    <ul>
+      
+        <li>
+          <a href="/Git/【Git】Git下载安装/">【Git】Git下载安装</a>
+        </li>
+      
+        <li>
+          <a href="/SQL/【SQL】收缩数据库/">【SQL】收缩数据库</a>
+        </li>
+      
+        <li>
+          <a href="/SQL/【SQL】Access与SQL-Server在写法上的区别/">【SQL】Access与SQL Server在写法上的区别</a>
+        </li>
+      
+        <li>
+          <a href="/C/【CSharp】在VS2017中使用CSharp创建和使用DLL/">【C#】在VS2017中使用C#创建和使用DLL</a>
+        </li>
+      
+        <li>
+          <a href="/C/【C++】在VS2017中使用C++创建和使用DLL/">【C++】在VS2017中使用C++创建和使用DLL</a>
+        </li>
+      
+    </ul>
+  </div>
+</h5>
+        <hr>
+    
+        <!-- Friends Blog -->
+
+<h5>FRIENDS</h5>
+<ul class="list-inline">
+
+    
+        <li><a href="http://blog.csdn.net/yangpiena" target="_blank">CSDN Blog 昜丿捺</a></li>
+    
+</ul>
+
+        <hr>
+    
+        
+    <h5>ARCHIVES</h5>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/12/">十二月 2018</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/10/">十月 2018</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/07/">七月 2018</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/04/">四月 2018</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/02/">二月 2018</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/12/">十二月 2017</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/08/">八月 2017</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/06/">六月 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/05/">五月 2017</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/12/">十二月 2016</a><span class="archive-list-count">16</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/11/">十一月 2016</a><span class="archive-list-count">16</span></li></ul>
+    </div>
+
+        <hr>
+    
+</div>
+
+        
+    </div>
+</div>
+
+
+    <!-- Footer -->
+    <!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+                
+                
+                
+
+                
+
+                
+
+                
+                    <li>
+                        <a target="_blank" href="https://github.com/huweihuang">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                
+
+                
+
+                </ul>
+                <p class="copyright text-muted">
+                    Copyright &copy; 昜丿捺 2019 
+                    <br>
+                    Theme by <a href="http://beantech.org">BeanTech</a> 
+                    <span style="display: inline-block; margin: 0 5px;">
+                        <i class="fa fa-heart"></i>
+                    </span> 
+                    re-Ported by <a href="http://www.huweihuang.com">胡伟煌</a> | 
+                    <iframe style="margin-left: 2px; margin-bottom:-5px;" frameborder="0" scrolling="0" width="91px" height="20px" src="https://ghbtns.com/github-btn.html?user=huweihuang&repo=hexo-theme-huweihuang&type=star&count=true">
+                    </iframe>
+                </p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- jQuery -->
+<script src="/js/jquery.min.js"></script>
+
+<!-- Bootstrap Core JavaScript -->
+<script src="/js/bootstrap.min.js"></script>
+
+<!-- Custom Theme JavaScript -->
+<script src="/js/hux-blog.min.js"></script>
+
+
+<!-- async load function -->
+<script>
+    function async(u, c) {
+      var d = document, t = 'script',
+          o = d.createElement(t),
+          s = d.getElementsByTagName(t)[0];
+      o.src = u;
+      if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+      s.parentNode.insertBefore(o, s);
+    }
+</script>
+
+<!-- 
+     Because of the native support for backtick-style fenced code blocks 
+     right within the Markdown is landed in Github Pages, 
+     From V1.6, There is no need for Highlight.js, 
+     so Huxblog drops it officially.
+
+     - https://github.com/blog/2100-github-pages-now-faster-and-simpler-with-jekyll-3-0  
+     - https://help.github.com/articles/creating-and-highlighting-code-blocks/    
+-->
+<!--
+    <script>
+        async("http://cdn.bootcss.com/highlight.js/8.6/highlight.min.js", function(){
+            hljs.initHighlightingOnLoad();
+        })
+    </script>
+    <link href="http://cdn.bootcss.com/highlight.js/8.6/styles/github.min.css" rel="stylesheet">
+-->
+
+
+<!-- jquery.tagcloud.js -->
+<script>
+    // only load tagcloud.js in tag.html
+    if($('#tag_cloud').length !== 0){
+        async("http://www.yangpiena.com/js/jquery.tagcloud.js",function(){
+            $.fn.tagcloud.defaults = {
+                //size: {start: 1, end: 1, unit: 'em'},
+                color: {start: '#bbbbee', end: '#0085a1'},
+            };
+            $('#tag_cloud a').tagcloud();
+        })
+    }
+</script>
+
+<!--fastClick.js -->
+<script>
+    async("https://cdn.bootcss.com/fastclick/1.0.6/fastclick.min.js", function(){
+        var $nav = document.querySelector("nav");
+        if($nav) FastClick.attach($nav);
+    })
+</script>
+
+
+<!-- Google Analytics -->
+
+
+<script>
+    // dynamic User by Hux
+    var _gaId = 'UA-XXXXXXXX-X';
+    var _gaDomain = 'yoursite';
+
+    // Originial
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', _gaId, _gaDomain);
+    ga('send', 'pageview');
+</script>
+
+
+
+
+<!-- Baidu Tongji -->
+
+<script>
+    // dynamic User by Hux
+    var _baId = 'xxx';
+
+    // Originial
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "//hm.baidu.com/hm.js?" + _baId;
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+</script>
+
+
+
+
+<!--2017-10-06 YPN Add 添加鼠标点击特效 -->
+<script type="text/javascript">
+  /* 鼠标点击特效 */
+  var a_idx = 0;
+  jQuery(document).ready(function($) {
+      $("body").click(function(e) {
+  var a = new Array("富强", "民主", "文明", "和谐", "自由", "平等", "公正" ,"法治", "爱国", "敬业", "诚信", "友善");
+  var $i = $("<span/>").text(a[a_idx]);
+          a_idx = (a_idx + 1) % a.length;
+  var x = e.pageX,
+          y = e.pageY;
+          $i.css({
+  "z-index": 999999999999999999999999999999999999999999999999999999999999999999999,
+  "top": y - 20,
+  "left": x,
+  "cursor":"default",
+  "position": "absolute",
+  "font-weight": "bold",
+  "color": "#ff6651"
+          });
+          $("body").append($i);
+          $i.animate({
+  "top": y - 180,
+  "opacity": 0
+          },
+          1500,
+  function() {
+              $i.remove();
+          });
+      });
+  });
+</script>
+
+<!--2017-10-06 YPN Add 添加输入框特效。 -->
+<script src="/js/activate-power-mode.js"></script>
+<script>
+  POWERMODE.colorful = true;  // 控制开启/开启礼花特效  
+  POWERMODE.shake    = false; // 控制开启/关闭屏幕震动特效  
+  document.body.addEventListener('input', POWERMODE);
+</script>
+
+
+	<a id="rocket" href="#top" class=""></a>
+	<script type="text/javascript" src="/js/totop.js?v=1.0.0" async=""></script>
+    <script type="text/javascript" src="/js/toc.js?v=1.0.0" async=""></script>
+<!-- Image to hack wechat -->
+<img src="http://www.yangpiena.com/img/icon_wechat.png" width="0" height="0" />
+<!-- Migrate from head to bottom, no longer block render and still work -->
+
+</body>
+
+</html>
