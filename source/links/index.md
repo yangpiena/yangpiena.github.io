@@ -4,45 +4,34 @@ layout: links
 date: 2016-11-11 12:31:37
 toc: true
 ---
-
 #### 常用
 [百度翻译](https://fanyi.baidu.com/)|  [谷歌搜索](https://www.google.com/ncr)        |  [谷歌香港](https://www.google.com.hk/ncr)   |  [维基百科](https://www.wikipedia.org/)
 [CSDN.NET](http://www.csdn.net/)    |  [VeryCD 电驴大全](http://www.verycd.com/)     |  [360doc个人图书馆](http://www.360doc.com/)  |[cnBeta](http://www.cnbeta.com/)    |  [果壳](http://www.guokr.com/)                 |  [少数派](https://sspai.com/)                |  [数字尾巴](http://www.dgtle.com/)
 [免费吧](http://www.mianfeib.com/)  |  [老D博客](https://laod.cn/)                   |  [行客工作室](http://www.runker.net/)        |  [黑果小兵](https://blog.daliansky.net/)
 [百度云](https://pan.baidu.com/)    |  [腾讯云](https://cloud.tencent.com/)          |  [贴图库](http://www.tietuku.com/)
 [天气万年历](https://wannianli.tianqi.com/today/zhou/)  |  [博客预览](http://localhost:4000)
-  
 &nbsp;
-
 
 #### 音乐
 [SongTaste](http://www.songtaste.com/)  |  [AeKun](https://www.aekun.com/ )  |  [VIP付费音乐解析下载](http://music.zhuolin.wang/)  |  [网易云音乐](http://music.163.com)
-
 &nbsp;
-
 
 #### 电影
 [YouTube](https://www.youtube.com/)|  [网易公开课](https://open.163.com/)
 [BT下载](http://www.qinou.cn/)     |  [BT之家](http://www.btbtt33.com/)   |  [BT之家](http://www.415.net)         |  [BT之家](http://www.btbtt.com)      |  [第二度](https://deardu.com/)
 [破晓电影](http://www.poxiao.com)  |  [今日影视](http://www.2w2w.tv/)     |  [迅雷电影下载](http://www.xlpu.cc/)  |  [快播电影](http://www.bubulai.com/) |  [LOL电影天堂](http://www.loldytt.com/) |  [BT电影天堂](http://www.btbttv.net/) | [迅影网](https://www.xunyingwang.com/)
 [预告片世界](http://www.yugaopian.cn/)  |  [人人影视字幕](http://www.yyets.com/)
-
-
 &nbsp;
 
 #### 游戏
 [Chatroulette](http://chatroulette.com/)
 [三国杀](http://web.sanguosha.com/)  |  [好蜀门私服](http://www.haosm.com/)
-
-
 &nbsp;
 
 #### 美图
 [it.me](http://www.topit.pro/)   |  [笔记本桌面壁纸下载](http://bbs.zol.com.cn/nbbbs/d33943.html)
 [手写导航](http://shouxie.org/)  |  [手写体网](http://shouxieti.com/)
-
 &nbsp;
-
 
 #### 在线工具
 [生成随机密码](https://suijimimashengcheng.51240.com/)
@@ -51,10 +40,7 @@ toc: true
 [PMD5](http://pmd5.com/#)  |  [输入让你无语的MD5](https://www.somd5.com/)   |  [在线MD5暴力破解 - md5解密破解 - aTool在线工具](http://www.atool.org/md5-crack.php)
 [png在线转ico](http://www.easyicon.net/covert/)  |  [MakePic.com 图片制造](http://www.makepic.com/)  |  [草料二维码美化器](http://mh.cli.im/)  |  [在线制作您的Logo](https://www.logaster.cn/)
 [核心价值编码器](https://sym233.github.io/core-values-encoder/)  |  [核心价值编码器源码](https://github.com/sym233/core-values-encoder)
-
-
 &nbsp;
-
 
 #### 系统/软件下载
 [IT之家](https://www.ithome.com/)                             |  [系统之家](http://www.xitongzhijia.net/)                                                              |  [系统天地](http://www.xitongtiandi.net/)                                                              |  [Win10专业版官网](http://www.win10zyb.com/)                                                              |  [Win10之家](http://www.xh52.com/)                                                              |  [系统圣地](http://www.285868.com/)
@@ -64,9 +50,7 @@ toc: true
 [最新迅雷(xunlei)会员账号天天更新同享](http://www.win10.name/news/193.html)
 [FlashPlayer下载地址1](http://get.adobe.com/cn/flashplayer/otherversions/)  |  [FlashPlayer下载地址2](http://www.adobe.com/support/flashplayer/downloads.html)  |  [Debugger Version地址](http://kb2.adobe.com/cps/155/tn_15507.html)
 [金狐维护盘](http://www.jinhu.me/)
-
 &nbsp;
-
 
 #### 社区
 [SDK.cn](https://www.sdk.cn/)
@@ -76,9 +60,7 @@ toc: true
 [HTM5中国产业联盟](http://www.html5plus.org/)
 [SQLite 教程](http://www.runoob.com/sqlite/sqlite-tutorial.html)
 [channel9](https://channel9.msdn.com/)
-
 &nbsp;
-
 
 #### 资源
 [矢量图标库](http://www.iconfont.cn/)
@@ -86,9 +68,7 @@ toc: true
 [MSDN](http://msdn.itellyou.cn/?gytyzs=0z1zl)
 [常用的gif正在加载图](http://blog.sina.com.cn/s/blog_7c28bad401016j66.html)
 [节点](https://lncn.org/)
-
 &nbsp;
-
 
 #### 文章/教程
 [LB 负载均衡的层次结构](http://www.cnblogs.com/mindwind/p/5339657.html)
@@ -110,9 +90,7 @@ toc: true
 [B/S，C/S，B/S和C/S混合模式的概念区别优缺点及前景分析](http://www.ufidawhy.com/mfufida/613.html)
 [黑苹果macOS High Sierra 10.13.6详细安装新手菜鸟教程](http://tzit.net/htmlitjs/2018-10-25/2234.html)
 [Sql Server 2000清除日志方法介绍](https://yq.aliyun.com/ziliao/22450)
-
 &nbsp;
-
 
 #### 前端/案例
 [前端网](http://www.qdfuns.com/)
@@ -124,9 +102,7 @@ toc: true
 [网络培训系统界面设计UI](http://www.th7.cn/Design/ui/201312/199261.shtml)
 [公司某项目前端技术积累](http://blog.csdn.net/sunyingyuan/article/details/38237139)
 [后台界面模板](http://www.mycodes.net/154/3.htm)
-
 &nbsp;
-
 
 #### Angular
 [AngularJS官网](https://angularjs.org/)                       |  [AngularJS中文官网](https://angular.cn/)                                                              |  [AngularUI官网](http://angular-ui.github.io/)
@@ -136,16 +112,12 @@ toc: true
 [CSDN知识库：AngularJS](http://lib.csdn.net/base/23)          |  [伯乐在线：AngularJS](http://blog.jobbole.com/tag/angularjs/)                                                              |  [RIA爱好者：学习AngularJS](http://www.riafan.com/angularjs-learning/)
 [NgNice站点是由一批AngularJS爱好者发起的，致力于打造一个AngularJS的学习和经验分享平台。](http://www.ngnice.com/)
 [2013年度最强AngularJS资源合集](http://www.iteye.com/news/28651-AngularJS-Google-resource)                                                              |  [20个免费的 AngularJS 资源和开发教程](http://www.html5cn.org/article-9473-1.html)
-
 &nbsp;
-
 
 #### C++
 [C#调用C++ dll导出函数提示找不到指定模块](http://www.bubuko.com/infodetail-1761193.html)
 [C#多线程编程](https://www.cnblogs.com/luxiaoxun/p/3280146.html)
-
 &nbsp;
-
 
 #### C&#35;
 [C#教程](http://www.runoob.com/csharp/csharp-program-structure.html)
@@ -184,15 +156,12 @@ toc: true
 [使用C#创建Access2010或Access2007 accdb 数据库文件](http://blog.sina.com.cn/s/blog_7cc533310101lxn2.html)
 &nbsp;
 
-
 #### Eclipse
 [eclipse安装lombok插件](https://blog.csdn.net/qq_25646191/article/details/79639633)
 &nbsp;
 
-
 #### ERP
 [ERP系统架构](https://www.cnblogs.com/Leo_wl/p/7978014.html#top)
-
 &nbsp;
 
 #### Flex
@@ -205,21 +174,16 @@ toc: true
 [Flash Builder 提示与技巧](http://www.adobe.com/cn/devnet/flex/articles/tips-tricks.html)
 [一名优秀的Flex开发者需要知道的10样东西](http://www.cnblogs.com/kakaflex/archive/2010/12/02/1894142.html)
 [Flex 3 AdvancedDataGrid的使用(三)](http://www.cnblogs.com/xuehai/archive/2009/09/26/1574533.html)
-
 &nbsp;
-
 
 #### fpSpread
 [Spread for Windows Forms高级主题(7)---自定义打印的外观](http://www.cnblogs.com/powertoolsteam/archive/2011/08/22/2149009.html)
-
 &nbsp;
-
 
 #### Git
 [常用 Git 命令清单](http://www.ruanyifeng.com/blog/2015/12/git-cheat-sheet.html)
 [推荐！手把手教你使用Git](http://blog.jobbole.com/78960/)
 [Git服务器搭建全过程分步详解](http://developer.51cto.com/art/201507/483448.htm)
-
 &nbsp;
 
 #### Haproxy
@@ -231,7 +195,6 @@ toc: true
 [Linux下HAProxy的均衡配置](http://blog.csdn.net/zilong00007/article/details/7275235)
 [5月16日发布HAProxy,实现八种负载算法](http://blog.51cto.com/1234567aaa/317891)
 [](https://www.cnblogs.com/qige2017/p/7783402.html)
-
 &nbsp;
 
 #### Hexo
@@ -240,7 +203,6 @@ toc: true
 [Hexo常见问题](http://wp.huangshiyang.com/hexo%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88)                                                               |  [Hexo博客优化](http://xwartz.xyz/blog/2016/09/reduce-blog-load-time/)
 [Hexo官方主题](https://hexo.io/themes/)                        |  [Hexo主题](https://github.com/hexojs/hexo/wiki/Themes)
 [Hexo博客主题从Jacman切换到NexT.Mist ](http://codepub.cn/2016/03/20/Hexo-blog-theme-switching-from-Jacman-to-NexT-Mist/)
-
 &nbsp;
 
 #### Java
@@ -251,13 +213,11 @@ toc: true
 [POI操作Excel常用方法总结 ](http://blog.csdn.net/huazhangena/article/details/7587731)
 [编程中国JSP教程和技术资料](http://old.bccn.net/Article/web/jsp/Index.html)
 [【FAQ】org.apache.maven.archiver.MavenArchiver.getManifest错误](http://www.cnblogs.com/asderx/p/6541945.html)
-
 &nbsp;
 
 #### JQuery
 [jQuery插件库](http://www.jq22.com/)
 [36个引人注目JQuery导航菜单](http://www.cnblogs.com/ywqu/archive/2009/08/15/1546559.html)
-
 &nbsp;
 
 #### Kettle
@@ -265,7 +225,6 @@ toc: true
 [Kettle开源社区](http://www.ukettle.org/)
 [Kettle基本概念学习](http://www.cnblogs.com/hapjin/p/4578738.html)    |  [kettle使用命令行来运行ktr和kjb](http://www.cnblogs.com/wxjnew/p/3620792.html)
 [Kettle的一些常见问题](http://blog.csdn.net/iquicksandi/article/details/7635031)                                                                |  [Kettle连接数据库超时的参数设置](http://www.ukettle.org/thread-502-1-4.html)
-
 &nbsp;
 
 #### Linux
@@ -275,14 +234,13 @@ toc: true
 [Linux Used内存到底哪里去了？](http://blog.yufeng.info/archives/2456)
 [suse-zypper常用命令大全及软件仓库配置](http://www.bubuko.com/infodetail-2112148.html)
 [SUSE安装、配置APR和Tomcat-Native](https://blog.csdn.net/ClementAD/article/details/50749597)
-
+[SUSE Linux 系统加固](https://blog.csdn.net/vianoz/article/details/20864323)
 &nbsp;
 
 #### Markdown
 [Markdown在线编辑](http://www.ctrlshift.net/project/markdowneditor/)  |  [Windows在线markdown工具](https://www.zybuluo.com/mdeditor)
 [Markdown 语法 示例 字体 字号 颜色](http://blog.csdn.net/u011419965/article/details/50536937)
 [Markdown支持的语言](http://blog.csdn.net/peng_hong_fu/article/details/52805408)
-
 &nbsp;
 
 #### 数据库
@@ -295,19 +253,16 @@ toc: true
 [不同数据库之间表数据的实时同步-发布与订阅](https://blog.csdn.net/rand_muse/article/details/81326879)
 [Sqlserver 高并发和大数据存储方案](https://www.cnblogs.com/zfthm/p/6271346.html)
 [sqlserver 发布订阅的弊端](https://blog.csdn.net/yangzhawen/article/details/8019921)
-
 &nbsp;
 
 #### Sublime Text
 [Sublime Text 2/3安装使用及常用插件](http://www.cnblogs.com/dudumao/p/4054086.html)
 [Sublime Text PackageControl](https://packagecontrol.io/)
 [Sublime Text 3 快捷键](https://segmentfault.com/a/1190000002570753)
-
 &nbsp;
 
 #### SVN
 [apache网站下载](http://subversion.apache.org/packages.html#windows)
-
 &nbsp;
 
 #### VB
@@ -319,13 +274,11 @@ toc: true
 [VB动态调用类模块中的函数的方法 - CSDN博客](https://blog.csdn.net/keikisou/article/details/50564156)
 [VB几种函数参数传递方法，Variant，数组，Optional，ParamArray](https://blog.csdn.net/whchensir/article/details/52050796)
 [VB调用c++写的Dll的一点总结](https://blog.csdn.net/emma_he/article/details/3023337)
-
 &nbsp;
 
 #### Vue.js
 [Vue.js官网](http://cn.vuejs.org/)
 [JSFiddle Hello World](https://jsfiddle.net/chrisvfritz/50wL7mdz/)
-
 &nbsp;
 
 #### 民生
