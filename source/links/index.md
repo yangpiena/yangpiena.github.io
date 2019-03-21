@@ -182,8 +182,13 @@ toc: true
 [C# WinForm项目三层架构简述](https://www.jianshu.com/p/7f628015a243)
 [想和代码谈谈](http://www.cnblogs.com/WayneShao/)
 [使用C#创建Access2010或Access2007 accdb 数据库文件](http://blog.sina.com.cn/s/blog_7cc533310101lxn2.html)
-
 &nbsp;
+
+
+#### Eclipse
+[eclipse安装lombok插件](https://blog.csdn.net/qq_25646191/article/details/79639633)
+&nbsp;
+
 
 #### ERP
 [ERP系统架构](https://www.cnblogs.com/Leo_wl/p/7978014.html#top)
@@ -268,6 +273,8 @@ toc: true
 [linux数据盘，系统盘](http://blog.csdn.net/Truong/article/details/70171661)
 [数据盘分区以及格式化](http://blog.csdn.net/Truong/article/details/70171699)
 [Linux Used内存到底哪里去了？](http://blog.yufeng.info/archives/2456)
+[suse-zypper常用命令大全及软件仓库配置](http://www.bubuko.com/infodetail-2112148.html)
+[SUSE安装、配置APR和Tomcat-Native](https://blog.csdn.net/ClementAD/article/details/50749597)
 
 &nbsp;
 
