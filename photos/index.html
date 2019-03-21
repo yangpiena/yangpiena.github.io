@@ -1,425 +1,680 @@
 <!DOCTYPE html>
-<html>
-  <!-- Html Head Tag-->
-  <head><meta name="generator" content="Hexo 3.8.0">
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="">
-  <meta name="author" content="昜丿捺">
-  <!-- Open Graph Data -->
-  <meta property="og:title" content="相册">
-  <meta property="og:description" content="没有阳光，沉默而居">
-  <meta property="og:site_name" content="昜丿捺">
-  <meta property="og:type" content="article">
-  <meta property="og:image" content="http://yoursite.comundefined">
-  
-    <link rel="alternate" href="/atom.xml" title="昜丿捺" type="application/atom+xml">
-  
-  
-    <link rel="icon" href="/favicon.ico">
-  
+<html lang="en">
 
-  <!-- Site Title -->
-  <title>昜丿捺</title>
+<!-- Head tag -->
+<head><meta name="generator" content="Hexo 3.8.0">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="google-site-verification" content="xBT4GhYoi5qRD5tr338pgPM5OWHHIDR6mNg1a3euekI">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="没有阳光，沉默而居">
+    <meta name="keyword" content="">
+    <link rel="shortcut icon" href="/img/ironman-draw.png">
+    <!-- Place this tag in your head or just before your close body tag. -->
+    <script async defer src="https://buttons.github.io/buttons.js"></script>
+    <title>
+        
+          相册 - 昜丿捺 | Blog
+        
+    </title>
 
-  <!-- Bootstrap CSS -->
-  <link rel="stylesheet" href="/css/bootstrap.min.css">
-  <!-- Custom CSS -->
-  <!-- YPN Edit 2016-11-11 增加根据时间自动切换主题风格 -->
-  <!-- 
-       <link rel="stylesheet" href="/css/style.light.css"> -->
-  
-  
-  <link rel="stylesheet" href="/css/style.light.css">
+    <link rel="canonical" href="http://www.yangpiena.com/photos/">
 
-  <script type="text/javascript" src="/js/jquery-1.11.3.min.js"></script>
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+
+    <!-- Custom CSS --> 
+    <link rel="stylesheet" href="/css/beantech.min.css">
+
+    <link rel="stylesheet" href="/css/donate.css">
+    
+    <!-- Pygments Highlight CSS -->
+    <link rel="stylesheet" href="/css/highlight.css">
+
+    <link rel="stylesheet" href="/css/widget.css">
+
+    <link rel="stylesheet" href="/css/rocket.css">
+
+    <link rel="stylesheet" href="/css/signature.css">
+
+    <link rel="stylesheet" href="/css/toc.css">
+
+    <!-- Custom Fonts -->
+    <!-- <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css"> -->
+    <!-- Hux change font-awesome CDN to qiniu -->
+    <link href="https://cdn.staticfile.org/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+
+    <!-- Hux Delete, sad but pending in China
+    <link href='http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/
+    css'>
+    -->
+
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- ga & ba script hoook -->
+    <script></script>
 </head>
 
-  <body>
+
+<!-- hack iOS CSS :active style -->
+<body ontouchstart="">
+	<!-- Modified by Yu-Hsuan Yen -->
+<!-- Post Header -->
+<style type="text/css">
+    header.intro-header{
+        
+            background-image: url('/img/header_img/about.jpg')
+            /*page*/
+        
+    }
     
-        <link rel="stylesheet" type="text/css" href="/css/style.css">
-		<link href="http://fonts.googleapis.com/css?family=PT+Sans+Narrow" rel="stylesheet" type="text/css">
-		<link href="http://fonts.googleapis.com/css?family=Wire+One" rel="stylesheet" type="text/css">
+</style>
 
-		<header class="site-header header-background" style="background-image: url(https://picturebed-1258146968.cos.ap-beijing.myqcloud.com/yangpiena-banner.jpg)">
-			<div class="container">
-		    	<div class="row">
-		      		<div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-		        		<div class="page-title with-background-image">
-		          			<p class="title">相册</p>
-		          			<p class="subtitle"></p>
-		        		</div>
-		        		<div class="site-menu with-background-image">
-		          			<ul>
-								<li>
-									<a href="/">主页</a>
-								</li>
-								<li>
-									<a href="/archives">归类</a>
-								</li>
-								<li>
-									<a href="/tags">标签</a>
-								</li>
-								<li>
-									<a href="/links">链接</a>
-								</li>
-								<li>
-									<a href="/photos">相册</a>
-								</li>
-								<li>
-									<a href="/about">关于</a>
-								</li>		            
-			          		</ul>
-			        	</div>
-			      	</div>
-			    </div>
-			</div>
-		</header>
+<header class="intro-header">
+    <!-- Signature -->
+    <div id="signature">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                
+                    <div class="site-heading">
+                        <h1>相册</h1>
+                        <!--<hr class="small">-->
+                        <span class="subheading">个人博客</span>
+                    </div>
+                
 
-		<div class="content">
-			<div class="iw_wrapper">
-				<ul class="iw_thumbs" id="iw_thumbs">
-					<!-- <li><img src="/img/thumbs/1.jpg" data-img="/img/full/1.jpg" alt="Thumb1"/><div><h2>Serenity</h2><p>Far far away, behind the word mountains there live the blind texts.</p></div></li> -->
-				</ul>
-			</div>
-			<div id="iw_ribbon" class="iw_ribbon">
-				<span class="iw_close"></span>
-				<span class="iw_zoom">Click thumb to zoom</span>
-			</div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+	
+    <!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">昜丿捺</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <!-- Known Issue, found by Hux:
+            <nav>'s height woule be hold on by its content.
+            so, when navbar scale out, the <nav> will cover tags.
+            also mask any touch event of tags, unfortunately.
+        -->
+        <div id="huxblog_navbar">
+            <div class="navbar-collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="/">Home</a>
+                    </li>
+
+                    
+
+                        
+                    
+
+                        
+                        <li>
+                            <a href="/archive/">归档</a>
+                        </li>
+                        
+                    
+
+                        
+                        <li>
+                            <a href="/about/">关于</a>
+                        </li>
+                        
+                    
+
+                        
+                        <li>
+                            <a href="/tags/">标签</a>
+                        </li>
+                        
+                    
+
+                        
+                        <li>
+                            <a href="/links/">收藏夹</a>
+                        </li>
+                        
+                    
+
+                        
+                    
+
+                        
+                        <li>
+                            <a href="/photos/">相册</a>
+                        </li>
+                        
+                    
+                    
+                </ul>
+            </div>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+<script>
+    // Drop Bootstarp low-performance Navbar
+    // Use customize navbar with high-quality material design animation
+    // in high-perf jank-free CSS3 implementation
+    var $body   = document.body;
+    var $toggle = document.querySelector('.navbar-toggle');
+    var $navbar = document.querySelector('#huxblog_navbar');
+    var $collapse = document.querySelector('.navbar-collapse');
+
+    $toggle.addEventListener('click', handleMagic)
+    function handleMagic(e){
+        if ($navbar.className.indexOf('in') > 0) {
+        // CLOSE
+            $navbar.className = " ";
+            // wait until animation end.
+            setTimeout(function(){
+                // prevent frequently toggle
+                if($navbar.className.indexOf('in') < 0) {
+                    $collapse.style.height = "0px"
+                }
+            },400)
+        }else{
+        // OPEN
+            $collapse.style.height = "auto"
+            $navbar.className += " in";
+        }
+    }
+</script>
+
+
+    <!-- Main Content -->
+    <!-- Main Content -->
+<div class="container">
+	<div class="content">
+		<div class="iw_wrapper">
+			<ul class="iw_thumbs" id="iw_thumbs">
+				<!-- <li><img src="/img/thumbs/1.jpg" data-img="/img/full/1.jpg" alt="Thumb1"/><div><h2>Serenity</h2><p>Far far away, behind the word mountains there live the blind texts.</p></div></li> -->
+			</ul>
 		</div>
+		<div id="iw_ribbon" class="iw_ribbon">
+			<span class="iw_close"></span>
+			<span class="iw_zoom">Click thumb to zoom</span>
+		</div>
+	</div>
+</div>
 
-		<script type="text/javascript" src="/js/addphoto.js"></script>
-		<script type="text/javascript" src="/js/jquery.min.js"></script>
-		<script type="text/javascript" src="/js/jquery.masonry.min.js"></script>
-		<script type="text/javascript" src="/js/jquery.easing.1.3.js"></script>
-		<script type="text/javascript">
-			$(window).load(function(){
-				var $iw_thumbs			= $('#iw_thumbs'),
-					$iw_ribbon			= $('#iw_ribbon'),
-					$iw_ribbon_close	= $iw_ribbon.children('span.iw_close'),
-					$iw_ribbon_zoom		= $iw_ribbon.children('span.iw_zoom');
-					
-					ImageWall	= (function() {
-							// window width and height
-						var w_dim,
-						    // index of current image
-							current				= -1,
-							isRibbonShown		= false,
-							isFullMode			= false,
-							// ribbon / images animation settings
-							ribbonAnim			= {speed : 500, easing : 'easeOutExpo'},
-							imgAnim				= {speed : 400, easing : 'jswing'},
-							// init function : call masonry, calculate window dimentions, initialize some events
-							init				= function() {
-								$iw_thumbs.imagesLoaded(function(){
-									$iw_thumbs.masonry({
-										isAnimated	: true
-									});
-								});
-								getWindowsDim();
-								initEventsHandler();
-							},
-							// calculate window dimentions
-							getWindowsDim		= function() {
-								w_dim = {
-									width	: $(window).width(),
-									height	: $(window).height()
-								};
-							},
-							// initialize some events
-							initEventsHandler	= function() {
-								
-								// click on a image
-								$iw_thumbs.delegate('li', 'click', function() {
-									if($iw_ribbon.is(':animated')) return false;
-									
-									var $el = $(this);
-									
-									if($el.data('ribbon')) {
-										showFullImage($el);
-									}
-									else if(!isRibbonShown) {
-										isRibbonShown = true;
-										
-										$el.data('ribbon',true);
-										
-										// set the current
-										current = $el.index();
-									
-										showRibbon($el);
-									}
-								});
-								
-								// click ribbon close
-								$iw_ribbon_close.bind('click', closeRibbon);
-								
-								// on window resize we need to recalculate the window dimentions
-								$(window).bind('resize', function() {
-											getWindowsDim();
-											if($iw_ribbon.is(':animated'))
-												return false;
-											closeRibbon();
-										 })
-								         .bind('scroll', function() {
-											if($iw_ribbon.is(':animated'))
-												return false;
-											closeRibbon();
-										 });
-								
-							},
-							showRibbon			= function($el) {
-								var	$img	= $el.children('img'),
-									$descrp	= $img.next();
-								
-								// fadeOut all the other images
-								$iw_thumbs.children('li').not($el).animate({opacity : 0.2}, imgAnim.speed);
-								
-								// increase the image z-index, and set the height to 100px (default height)
-								$img.css('z-index', 100)
-									.data('originalHeight',$img.height())
-									.stop()
-									.animate({
-										height 		: '100px'
-									}, imgAnim.speed, imgAnim.easing);
-								
-								// the ribbon will animate from the left or right
-								// depending on the position of the image
-								var ribbonCssParam 		= {
-										top	: $el.offset().top - $(window).scrollTop() - 6 + 'px'
-									},
-									descriptionCssParam,
-									dir;
-								
-								if( $el.offset().left < (w_dim.width / 2) ) {
-									dir = 'left';
-									ribbonCssParam.left 	= 0;
-									ribbonCssParam.right 	= 'auto';
-								}
-								else {
-									dir = 'right';
-									ribbonCssParam.right 	= 0;
-									ribbonCssParam.left 	= 'auto';
-								}
-								
-								$iw_ribbon.css(ribbonCssParam)
-								          .show()
-										  .stop()
-										  .animate({width : '100%'}, ribbonAnim.speed, ribbonAnim.easing, function() {
-												switch(dir) {
-													case 'left' :
-														descriptionCssParam		= {
-															'left' 			: $img.outerWidth(true) + 'px',
-															'text-align' 	: 'left'
-														};
-														break;
-													case 'right' :	
-														descriptionCssParam		= {
-															'left' 			: '-200px',
-															'text-align' 	: 'right'
-														};
-														break;
-												};
-												$descrp.css(descriptionCssParam).fadeIn();
-												// show close button and zoom
-												$iw_ribbon_close.show();
-												$iw_ribbon_zoom.show();
-										  });
-								
-							},
-							// close the ribbon
-							// when in full mode slides in the middle of the page
-							// when not slides left
-							closeRibbon			= function() {
-								isRibbonShown 	= false
-								
-								$iw_ribbon_close.hide();
-								$iw_ribbon_zoom.hide();
-								
-								if(!isFullMode) {
-								
-									// current wall image
-									var $el	 		= $iw_thumbs.children('li').eq(current);
-									
-									resetWall($el);
-									
-									// slide out ribbon
-									$iw_ribbon.stop()
-											  .animate({width : '0%'}, ribbonAnim.speed, ribbonAnim.easing); 
-										  
-								}
-								else {
-									$iw_ribbon.stop().animate({
-										opacity		: 0.8,
-										height 		: '0px',
-										marginTop	: w_dim.height/2 + 'px' // half of window height
-									}, ribbonAnim.speed, function() {
-										$iw_ribbon.css({
-											'width'		: '0%',
-											'height'	: '126px',
-											'margin-top': '0px'
-										}).children('img').remove();
-									});
-									
-									isFullMode	= false;
-								}
-							},
-							resetWall			= function($el) {
-								var $img		= $el.children('img'),
-									$descrp		= $img.next();
-									
-								$el.data('ribbon',false);
-								
-								// reset the image z-index and height
-								$img.css('z-index',1).stop().animate({
-									height 		: $img.data('originalHeight')
-								}, imgAnim.speed,imgAnim.easing);
-								
-								// fadeOut the description
-								$descrp.fadeOut();
-
-								// fadeIn all the other images
-								$iw_thumbs.children('li').not($el).animate({opacity : 1}, imgAnim.speed);								
-							},
-							showFullImage		= function($el) {
-								isFullMode	= true;
-								
-								$iw_ribbon_close.hide();
-								
-								var	$img	= $el.children('img'),
-									large	= $img.data('img'),
-								
-									// add a loading image on top of the image
-									$loading = $('<span class="iw_loading"></span>');
-								
-								$el.append($loading);
-								
-								// preload large image
-								$('<img/>').load(function() {
-									var $largeImage	= $(this);
-									
-									$loading.remove();
-									
-									$iw_ribbon_zoom.hide();
-									
-									resizeImage($largeImage);
-									
-									// reset the current image in the wall
-									resetWall($el);
-									
-									// animate ribbon in and out
-									$iw_ribbon.stop().animate({
-										opacity		: 1,
-										height 		: '0px',
-										marginTop	: '63px' // half of ribbons height
-									}, ribbonAnim.speed, function() {
-										// add the large image to the DOM
-										$iw_ribbon.prepend($largeImage);
-										
-										$iw_ribbon_close.show();
-										
-										$iw_ribbon.animate({
-											height 		: '100%',
-											marginTop	: '0px',
-											top			: '0px'
-										}, ribbonAnim.speed);
-									});
-								}).attr('src',large);
-									
-							},
-							resizeImage			= function($image) {
-								var widthMargin		= 100,
-									heightMargin 	= 100,
-								
-									windowH      	= w_dim.height - heightMargin,
-									windowW      	= w_dim.width - widthMargin,
-									theImage     	= new Image();
-									
-								theImage.src     	= $image.attr("src");
-								
-								var imgwidth     	= theImage.width,
-									imgheight    	= theImage.height;
-
-								if((imgwidth > windowW) || (imgheight > windowH)) {
-									if(imgwidth > imgheight) {
-										var newwidth 	= windowW,
-											ratio 		= imgwidth / windowW,
-											newheight 	= imgheight / ratio;
-											
-										theImage.height = newheight;
-										theImage.width	= newwidth;
-										
-										if(newheight > windowH) {
-											var newnewheight 	= windowH,
-												newratio 		= newheight/windowH,
-												newnewwidth 	= newwidth/newratio;
-										
-											theImage.width 		= newnewwidth;
-											theImage.height		= newnewheight;
-										}
-									}
-									else {
-										var newheight 	= windowH,
-											ratio 		= imgheight / windowH,
-											newwidth 	= imgwidth / ratio;
-										
-										theImage.height = newheight;
-										theImage.width	= newwidth;
-										
-										if(newwidth > windowW) {
-											var newnewwidth 	= windowW,
-											    newratio 		= newwidth/windowW,
-												newnewheight 	= newheight/newratio;
-									
-											theImage.height 	= newnewheight;
-											theImage.width		= newnewwidth;
-										}
-									}
-								}
-									
-								$image.css({
-									'width'			: theImage.width + 'px',
-									'height'		: theImage.height + 'px',
-									'margin-left'	: -theImage.width / 2 + 'px',
-									'margin-top'	: -theImage.height / 2 + 'px'
-								});							
-							};
+<script type="text/javascript" src="/js/addphoto.js"></script>
+<script type="text/javascript" src="/js/jquery.min.js"></script>
+<script type="text/javascript" src="/js/jquery.masonry.min.js"></script>
+<script type="text/javascript" src="/js/jquery.easing.1.3.js"></script>
+<script type="text/javascript">
+	$(window).load(function(){
+		var $iw_thumbs			= $('#iw_thumbs'),
+			$iw_ribbon			= $('#iw_ribbon'),
+			$iw_ribbon_close	= $iw_ribbon.children('span.iw_close'),
+			$iw_ribbon_zoom		= $iw_ribbon.children('span.iw_zoom');
+			
+			ImageWall	= (function() {
+					// window width and height
+				var w_dim,
+					// index of current image
+					current				= -1,
+					isRibbonShown		= false,
+					isFullMode			= false,
+					// ribbon / images animation settings
+					ribbonAnim			= {speed : 500, easing : 'easeOutExpo'},
+					imgAnim				= {speed : 400, easing : 'jswing'},
+					// init function : call masonry, calculate window dimentions, initialize some events
+					init				= function() {
+						$iw_thumbs.imagesLoaded(function(){
+							$iw_thumbs.masonry({
+								isAnimated	: true
+							});
+						});
+						getWindowsDim();
+						initEventsHandler();
+					},
+					// calculate window dimentions
+					getWindowsDim		= function() {
+						w_dim = {
+							width	: $(window).width(),
+							height	: $(window).height()
+						};
+					},
+					// initialize some events
+					initEventsHandler	= function() {
+						
+						// click on a image
+						$iw_thumbs.delegate('li', 'click', function() {
+							if($iw_ribbon.is(':animated')) return false;
 							
-						return {init : init};	
-					})();
-				
-				ImageWall.init();
-			});
-		</script>
+							var $el = $(this);
+							
+							if($el.data('ribbon')) {
+								showFullImage($el);
+							}
+							else if(!isRibbonShown) {
+								isRibbonShown = true;
+								
+								$el.data('ribbon',true);
+								
+								// set the current
+								current = $el.index();
+							
+								showRibbon($el);
+							}
+						});
+						
+						// click ribbon close
+						$iw_ribbon_close.bind('click', closeRibbon);
+						
+						// on window resize we need to recalculate the window dimentions
+						$(window).bind('resize', function() {
+									getWindowsDim();
+									if($iw_ribbon.is(':animated'))
+										return false;
+									closeRibbon();
+								 })
+								 .bind('scroll', function() {
+									if($iw_ribbon.is(':animated'))
+										return false;
+									closeRibbon();
+								 });
+						
+					},
+					showRibbon			= function($el) {
+						var	$img	= $el.children('img'),
+							$descrp	= $img.next();
+						
+						// fadeOut all the other images
+						$iw_thumbs.children('li').not($el).animate({opacity : 0.2}, imgAnim.speed);
+						
+						// increase the image z-index, and set the height to 100px (default height)
+						$img.css('z-index', 100)
+							.data('originalHeight',$img.height())
+							.stop()
+							.animate({
+								height 		: '100px'
+							}, imgAnim.speed, imgAnim.easing);
+						
+						// the ribbon will animate from the left or right
+						// depending on the position of the image
+						var ribbonCssParam 		= {
+								top	: $el.offset().top - $(window).scrollTop() - 6 + 'px'
+							},
+							descriptionCssParam,
+							dir;
+						
+						if( $el.offset().left < (w_dim.width / 2) ) {
+							dir = 'left';
+							ribbonCssParam.left 	= 0;
+							ribbonCssParam.right 	= 'auto';
+						}
+						else {
+							dir = 'right';
+							ribbonCssParam.right 	= 0;
+							ribbonCssParam.left 	= 'auto';
+						}
+						
+						$iw_ribbon.css(ribbonCssParam)
+								  .show()
+								  .stop()
+								  .animate({width : '100%'}, ribbonAnim.speed, ribbonAnim.easing, function() {
+										switch(dir) {
+											case 'left' :
+												descriptionCssParam		= {
+													'left' 			: $img.outerWidth(true) + 'px',
+													'text-align' 	: 'left'
+												};
+												break;
+											case 'right' :	
+												descriptionCssParam		= {
+													'left' 			: '-200px',
+													'text-align' 	: 'right'
+												};
+												break;
+										};
+										$descrp.css(descriptionCssParam).fadeIn();
+										// show close button and zoom
+										$iw_ribbon_close.show();
+										$iw_ribbon_zoom.show();
+								  });
+						
+					},
+					// close the ribbon
+					// when in full mode slides in the middle of the page
+					// when not slides left
+					closeRibbon			= function() {
+						isRibbonShown 	= false
+						
+						$iw_ribbon_close.hide();
+						$iw_ribbon_zoom.hide();
+						
+						if(!isFullMode) {
+						
+							// current wall image
+							var $el	 		= $iw_thumbs.children('li').eq(current);
+							
+							resetWall($el);
+							
+							// slide out ribbon
+							$iw_ribbon.stop()
+									  .animate({width : '0%'}, ribbonAnim.speed, ribbonAnim.easing); 
+								  
+						}
+						else {
+							$iw_ribbon.stop().animate({
+								opacity		: 0.8,
+								height 		: '0px',
+								marginTop	: w_dim.height/2 + 'px' // half of window height
+							}, ribbonAnim.speed, function() {
+								$iw_ribbon.css({
+									'width'		: '0%',
+									'height'	: '126px',
+									'margin-top': '0px'
+								}).children('img').remove();
+							});
+							
+							isFullMode	= false;
+						}
+					},
+					resetWall			= function($el) {
+						var $img		= $el.children('img'),
+							$descrp		= $img.next();
+							
+						$el.data('ribbon',false);
+						
+						// reset the image z-index and height
+						$img.css('z-index',1).stop().animate({
+							height 		: $img.data('originalHeight')
+						}, imgAnim.speed,imgAnim.easing);
+						
+						// fadeOut the description
+						$descrp.fadeOut();
+
+						// fadeIn all the other images
+						$iw_thumbs.children('li').not($el).animate({opacity : 1}, imgAnim.speed);								
+					},
+					showFullImage		= function($el) {
+						isFullMode	= true;
+						
+						$iw_ribbon_close.hide();
+						
+						var	$img	= $el.children('img'),
+							large	= $img.data('img'),
+						
+							// add a loading image on top of the image
+							$loading = $('<span class="iw_loading"></span>');
+						
+						$el.append($loading);
+						
+						// preload large image
+						$('<img/>').load(function() {
+							var $largeImage	= $(this);
+							
+							$loading.remove();
+							
+							$iw_ribbon_zoom.hide();
+							
+							resizeImage($largeImage);
+							
+							// reset the current image in the wall
+							resetWall($el);
+							
+							// animate ribbon in and out
+							$iw_ribbon.stop().animate({
+								opacity		: 1,
+								height 		: '0px',
+								marginTop	: '63px' // half of ribbons height
+							}, ribbonAnim.speed, function() {
+								// add the large image to the DOM
+								$iw_ribbon.prepend($largeImage);
+								
+								$iw_ribbon_close.show();
+								
+								$iw_ribbon.animate({
+									height 		: '100%',
+									marginTop	: '0px',
+									top			: '0px'
+								}, ribbonAnim.speed);
+							});
+						}).attr('src',large);
+							
+					},
+					resizeImage			= function($image) {
+						var widthMargin		= 100,
+							heightMargin 	= 100,
+						
+							windowH      	= w_dim.height - heightMargin,
+							windowW      	= w_dim.width - widthMargin,
+							theImage     	= new Image();
+							
+						theImage.src     	= $image.attr("src");
+						
+						var imgwidth     	= theImage.width,
+							imgheight    	= theImage.height;
+
+						if((imgwidth > windowW) || (imgheight > windowH)) {
+							if(imgwidth > imgheight) {
+								var newwidth 	= windowW,
+									ratio 		= imgwidth / windowW,
+									newheight 	= imgheight / ratio;
+									
+								theImage.height = newheight;
+								theImage.width	= newwidth;
+								
+								if(newheight > windowH) {
+									var newnewheight 	= windowH,
+										newratio 		= newheight/windowH,
+										newnewwidth 	= newwidth/newratio;
+								
+									theImage.width 		= newnewwidth;
+									theImage.height		= newnewheight;
+								}
+							}
+							else {
+								var newheight 	= windowH,
+									ratio 		= imgheight / windowH,
+									newwidth 	= imgwidth / ratio;
+								
+								theImage.height = newheight;
+								theImage.width	= newwidth;
+								
+								if(newwidth > windowW) {
+									var newnewwidth 	= windowW,
+										newratio 		= newwidth/windowW,
+										newnewheight 	= newheight/newratio;
+							
+									theImage.height 	= newnewheight;
+									theImage.width		= newnewwidth;
+								}
+							}
+						}
+							
+						$image.css({
+							'width'			: theImage.width + 'px',
+							'height'		: theImage.height + 'px',
+							'margin-left'	: -theImage.width / 2 + 'px',
+							'margin-top'	: -theImage.height / 2 + 'px'
+						});							
+					};
+					
+				return {init : init};	
+			})();
+		
+		ImageWall.init();
+	});
+</script>
 
 
     <!-- Footer -->
+    <!-- Footer -->
 <footer>
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-        <p class="copyright text-muted">
-          Theme By <a target="_blank" href="https://github.com/levblanc">Levblanc.</a>
-          Inspired By <a target="_blank" href="https://github.com/klugjo/hexo-theme-clean-blog">Clean Blog.</a>
-        </p><p class="copyright text-muted">
-          Powered By <a target="_blank" href="https://hexo.io/">Hexo.</a>
-        </p><p class="copyright text-muted">
-          本站总访问量 <span id="busuanzi_value_site_pv"></span> 次, 访客数 <span id="busuanzi_value_site_uv"></span> 人次, 本文总阅读量 <span id="busuanzi_value_page_pv"></span> 次
-        </p>
-      </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+                
+                
+                
+
+                
+
+                
+
+                
+                    <li>
+                        <a target="_blank" href="https://github.com/huweihuang">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                
+
+                
+
+                </ul>
+                <p class="copyright text-muted">
+                    Copyright &copy; 昜丿捺 2019 
+                    <br>
+                    Theme by <a href="http://beantech.org">BeanTech</a> 
+                    <span style="display: inline-block; margin: 0 5px;">
+                        <i class="fa fa-heart"></i>
+                    </span> 
+                    re-Ported by <a href="http://www.huweihuang.com">胡伟煌</a> | 
+                    <iframe style="margin-left: 2px; margin-bottom:-5px;" frameborder="0" scrolling="0" width="91px" height="20px" src="https://ghbtns.com/github-btn.html?user=huweihuang&repo=hexo-theme-huweihuang&type=star&count=true">
+                    </iframe>
+                </p>
+            </div>
+        </div>
     </div>
-  </div>
 </footer>
 
-<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
-<script type="text/javascript">
-  (function(w,d,t,u,n,s,e){w['SwiftypeObject']=n;w[n]=w[n]||function(){
-  (w[n].q=w[n].q||[]).push(arguments);};s=d.createElement(t);
-  e=d.getElementsByTagName(t)[0];s.async=1;s.src=u;e.parentNode.insertBefore(s,e);
-  })(window,document,'script','//s.swiftypecdn.com/install/v2/st.js','_st');
-  
-  _st('install','Bw13BEeK5ASKzfM4WzMC','2.0.0');
+<!-- jQuery -->
+<script src="/js/jquery.min.js"></script>
+
+<!-- Bootstrap Core JavaScript -->
+<script src="/js/bootstrap.min.js"></script>
+
+<!-- Custom Theme JavaScript -->
+<script src="/js/hux-blog.min.js"></script>
+
+
+<!-- async load function -->
+<script>
+    function async(u, c) {
+      var d = document, t = 'script',
+          o = d.createElement(t),
+          s = d.getElementsByTagName(t)[0];
+      o.src = u;
+      if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+      s.parentNode.insertBefore(o, s);
+    }
 </script>
+
+<!-- 
+     Because of the native support for backtick-style fenced code blocks 
+     right within the Markdown is landed in Github Pages, 
+     From V1.6, There is no need for Highlight.js, 
+     so Huxblog drops it officially.
+
+     - https://github.com/blog/2100-github-pages-now-faster-and-simpler-with-jekyll-3-0  
+     - https://help.github.com/articles/creating-and-highlighting-code-blocks/    
+-->
+<!--
+    <script>
+        async("http://cdn.bootcss.com/highlight.js/8.6/highlight.min.js", function(){
+            hljs.initHighlightingOnLoad();
+        })
+    </script>
+    <link href="http://cdn.bootcss.com/highlight.js/8.6/styles/github.min.css" rel="stylesheet">
+-->
+
+
+<!-- jquery.tagcloud.js -->
+<script>
+    // only load tagcloud.js in tag.html
+    if($('#tag_cloud').length !== 0){
+        async("http://www.yangpiena.com/js/jquery.tagcloud.js",function(){
+            $.fn.tagcloud.defaults = {
+                //size: {start: 1, end: 1, unit: 'em'},
+                color: {start: '#bbbbee', end: '#0085a1'},
+            };
+            $('#tag_cloud a').tagcloud();
+        })
+    }
+</script>
+
+<!--fastClick.js -->
+<script>
+    async("https://cdn.bootcss.com/fastclick/1.0.6/fastclick.min.js", function(){
+        var $nav = document.querySelector("nav");
+        if($nav) FastClick.attach($nav);
+    })
+</script>
+
+
+<!-- Google Analytics -->
+
+
+<script>
+    // dynamic User by Hux
+    var _gaId = 'UA-XXXXXXXX-X';
+    var _gaDomain = 'yoursite';
+
+    // Originial
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', _gaId, _gaDomain);
+    ga('send', 'pageview');
+</script>
+
+
+
+
+<!-- Baidu Tongji -->
+
+<script>
+    // dynamic User by Hux
+    var _baId = 'xxx';
+
+    // Originial
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "//hm.baidu.com/hm.js?" + _baId;
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+</script>
+
+
+
 
 <!--2017-10-06 YPN Add 添加鼠标点击特效 -->
 <script type="text/javascript">
@@ -462,24 +717,14 @@
   document.body.addEventListener('input', POWERMODE);
 </script>
 
-    <!-- After Footer Scripts -->
-<script src="/js/highlight.pack.js"></script>
-<script>
-  document.addEventListener("DOMContentLoaded", function(event) {
-    var codeBlocks = Array.prototype.slice.call(document.getElementsByTagName('pre'))
-    codeBlocks.forEach(function(block, index) {
-      hljs.highlightBlock(block);
-    });
-  });
-</script>
 
-<div id="totop" style="position:fixed;bottom:50px;right:30px;cursor: pointer;">
-	<a title="返回顶部"><img src="/img/scrollup.png"></a>
-</div>
-<script src="/js/totop.js"></script>
+	<a id="rocket" href="#top" class=""></a>
+	<script type="text/javascript" src="/js/totop.js?v=1.0.0" async=""></script>
+    <script type="text/javascript" src="/js/toc.js?v=1.0.0" async=""></script>
+<!-- Image to hack wechat -->
+<img src="http://www.yangpiena.com/img/icon_wechat.png" width="0" height="0" />
+<!-- Migrate from head to bottom, no longer block render and still work -->
 
-<!-- YPN Add 2017-04-12 基于canvas绘制的网页背景效果 -->
-<!-- <script type="text/javascript" src="https://cdn.bootcss.com/canvas-nest.js/1.0.1/canvas-nest.min.js"></script> -->
-  </body>
+</body>
+
 </html>
-

@@ -1,27 +1,13 @@
-(function($) {
-    // When to show the scroll link
-    // higher number = scroll link appears further down the page
-    var upperLimit = 1000;
+$(window).scroll(function() {
+    $(window).scrollTop() > $(window).height()*0.5 ? $("#rocket").addClass("show") : $("#rocket").removeClass("show");
+});
 
-    // Our scroll link element
-    var scrollElem = $('#totop');
-
-    // Scroll to top speed
-    var scrollSpeed = 1000;
-
-    // Show and hide the scroll to top link based on scroll position
-    scrollElem.hide();
-    $(window).scroll(function () {
-        var scrollTop = $(document).scrollTop();
-        if ( scrollTop > upperLimit ) {
-            $(scrollElem).stop().fadeTo(300, 1); // fade back in
-        }else{
-            $(scrollElem).stop().fadeTo(300, 0); // fade out
-        }
+$("#rocket").click(function() {
+    $("#rocket").addClass("launch");
+    $("html, body").animate({
+        scrollTop: 0
+    }, 1000, function() {
+        $("#rocket").removeClass("show launch");
     });
-
-    // Scroll to top animation on click
-    $(scrollElem).click(function(){
-        $('html, body').animate({scrollTop:0}, scrollSpeed); return false;
-    });
-})(jQuery);
+    return false;
+});
