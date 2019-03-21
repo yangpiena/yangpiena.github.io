@@ -18,7 +18,7 @@
         
     </title>
 
-    <link rel="canonical" href="http://www.yangpiena.com/Java/【Java】tomcat下载和安装/">
+    <link rel="canonical" href="http://yangpiena.coding.me/Java/【Java】tomcat下载和安装/">
 
     <!-- Bootstrap Core CSS -->
     <link rel="stylesheet" href="/css/bootstrap.min.css">
@@ -157,10 +157,6 @@
                     
 
                         
-                        <li>
-                            <a href="/tags/">标签</a>
-                        </li>
-                        
                     
 
                         
@@ -170,6 +166,10 @@
                         
                     
 
+                        
+                        <li>
+                            <a href="/tags/">标签</a>
+                        </li>
                         
                     
 
@@ -249,7 +249,7 @@ SET CATALINA_HOME=D:\Program Files\tomcat6.0.35
 <h5 id="2-4-查看log信息"><a href="#2-4-查看log信息" class="headerlink" title="2.4 查看log信息"></a>2.4 查看log信息</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">[root@izwe12zdi799668qfxdm5oz tomcat]# tail -f logs/catalina.out</span><br><span class="line">Aug 11, 2017 12:29:19 PM org.apache.catalina.startup.HostConfig deployDirectory</span><br><span class="line">INFO: Deploying web application directory /usr/tomcat/webapps/ROOT</span><br><span class="line">Aug 11, 2017 12:29:19 PM org.apache.catalina.startup.HostConfig deployDirectory</span><br><span class="line">INFO: Deployment of web application directory /usr/tomcat/webapps/ROOT has finished in 39 ms</span><br><span class="line">Aug 11, 2017 12:29:19 PM org.apache.coyote.AbstractProtocol start</span><br><span class="line">INFO: Starting ProtocolHandler [&quot;http-bio-8080&quot;]</span><br><span class="line">Aug 11, 2017 12:29:19 PM org.apache.coyote.AbstractProtocol start</span><br><span class="line">INFO: Starting ProtocolHandler [&quot;ajp-bio-8009&quot;]</span><br><span class="line">Aug 11, 2017 12:29:19 PM org.apache.catalina.startup.Catalina start</span><br><span class="line">INFO: Server startup in 77809 ms</span><br></pre></td></tr></table></figure>
 <h5 id="2-5-防火墙开放8080端口"><a href="#2-5-防火墙开放8080端口" class="headerlink" title="2.5 防火墙开放8080端口"></a>2.5 防火墙开放8080端口</h5><p>打开防火墙配置文件：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[root@izwe12zdi799668qfxdm5oz tomcat]# vi /etc/sysconfig/iptables</span><br></pre></td></tr></table></figure></p>
 <blockquote>
-<p>部分系统没有iptables文件，请参考<a href="http://yangpiena.coding.me/2017/08/11/%E3%80%90Linux%E3%80%91CentOS%E4%BD%BF%E7%94%A8iptables/" target="_blank" rel="noopener">CentOS使用iptables</a></p>
+<p>部分系统没有iptables文件，请参考<a href="http://yangpiena.coding.me/2017/08/11/%E3%80%90Linux%E3%80%91CentOS%E4%BD%BF%E7%94%A8iptables/">CentOS使用iptables</a></p>
 </blockquote>
 <p>增加以下代码：</p>
 <pre><code>-A INPUT -m state --state NEW -m tcp -p tcp --dport 8080 -j ACCEPT
@@ -473,7 +473,7 @@ export CATALINA_HOME=/usr/tomcat/
 
                 
                     <li>
-                        <a target="_blank" href="https://github.com/huweihuang">
+                        <a target="_blank" href="https://github.com/yangpiena">
                             <span class="fa-stack fa-lg">
                                 <i class="fa fa-circle fa-stack-2x"></i>
                                 <i class="fa fa-github fa-stack-1x fa-inverse"></i>
@@ -546,7 +546,7 @@ export CATALINA_HOME=/usr/tomcat/
 <script>
     // only load tagcloud.js in tag.html
     if($('#tag_cloud').length !== 0){
-        async("http://www.yangpiena.com/js/jquery.tagcloud.js",function(){
+        async("http://yangpiena.coding.me/js/jquery.tagcloud.js",function(){
             $.fn.tagcloud.defaults = {
                 //size: {start: 1, end: 1, unit: 'em'},
                 color: {start: '#bbbbee', end: '#0085a1'},
@@ -651,7 +651,7 @@ export CATALINA_HOME=/usr/tomcat/
 	<script type="text/javascript" src="/js/totop.js?v=1.0.0" async=""></script>
     <script type="text/javascript" src="/js/toc.js?v=1.0.0" async=""></script>
 <!-- Image to hack wechat -->
-<img src="http://www.yangpiena.com/img/icon_wechat.png" width="0" height="0" />
+<img src="http://yangpiena.coding.me/img/icon_wechat.png" width="0" height="0" />
 <!-- Migrate from head to bottom, no longer block render and still work -->
 
 </body>

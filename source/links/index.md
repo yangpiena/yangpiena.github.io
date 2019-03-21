@@ -3,7 +3,8 @@ title: 收藏夹
 layout: links
 description: ""
 date: 2016-11-11 12:31:37
-header-img: "/img/header_img/tag.png"
+header-img: "https://picturebed-1258146968.cos.ap-beijing.myqcloud.com/yangpiena-banner.jpg"
+
 ---
 <!-- YPN Add 2017-06-20 新增搜索框 -->
 <div class="search-wrapper" style="padding:0em 0em 0em 0em">
@@ -27,6 +28,7 @@ header-img: "/img/header_img/tag.png"
 
 
 #### 常用
+header-img: "/img/header_img/tag.png"
 [百度翻译](https://fanyi.baidu.com/)|  [谷歌搜索](https://www.google.com/ncr)        |  [谷歌香港](https://www.google.com.hk/ncr)   |  [维基百科](https://www.wikipedia.org/)
 [CSDN.NET](http://www.csdn.net/)    |  [VeryCD 电驴大全](http://www.verycd.com/)     |  [360doc个人图书馆](http://www.360doc.com/)  |[cnBeta](http://www.cnbeta.com/)    |  [果壳](http://www.guokr.com/)                 |  [少数派](https://sspai.com/)                |  [数字尾巴](http://www.dgtle.com/)
 [免费吧](http://www.mianfeib.com/)  |  [老D博客](https://laod.cn/)                   |  [行客工作室](http://www.runker.net/)        |  [黑果小兵](https://blog.daliansky.net/)
