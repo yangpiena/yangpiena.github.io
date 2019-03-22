@@ -1,0 +1,347 @@
+<!DOCTYPE HTML>
+<html class="no-js" lang="zh-CN">
+<head><meta name="generator" content="Hexo 3.8.0">
+    <!--[if lte IE 9]>
+<meta http-equiv="refresh" content="0;url=http://yangpiena.coding.me/warn.html">
+<![endif]-->
+<meta charset="utf-8">
+<meta http-equiv="X-DNS-Prefetch-Control" content="on">
+<link rel="dns-prefetch" href="http://yangpiena.coding.me">
+<link rel="dns-prefetch" href="//www.google-analytics.com">
+<link rel="prefetch" href="http://yangpiena.coding.me">
+<link rel="prefetch" href="//www.google-analytics.com">
+
+
+<link rel="prerender" href="http://yangpiena.coding.me">
+
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<meta name="renderer" content="webkit">
+<meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=no">
+<meta http-equiv="mobile-agent" content="format=html5; url=http://yangpiena.coding.me">
+<meta name="author" content="昜丿捺">
+<link rel="stylesheet" href="/css/JSimple.css">
+
+<link rel="shortcut icon" href="/images/favicon.ico">
+
+
+<title>【ftp】apache ftpserver安装配置 - 昜丿捺</title>
+
+<meta name="keywords" content="undefined">
+
+<meta name="description " content="没有阳光，沉默而居">
+
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({
+            tex2jax: {
+                inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+                processEscapes: true
+            }
+        });
+    </script>
+
+
+    
+
+    
+
+</head>
+<body>
+<div id="nav">
+    <nav class="nav-menu">
+        <a class="site-name current" href="/" title="昜">昜</a>
+        <a class="site-index current" href="/"><i class="fa fa-home"></i><span>首页</span></a>
+        <a href="/archives" title="归档"><i class="fa fa-archives"></i><span>归档</span></a>
+        <a href="/tags" title="标签"><i class="fa fa-tags"></i><span>标签</span></a>
+        <!-- custom single page of menus -->
+        
+        
+        <a href="/links" title="收藏夹">
+            <i class="fa fa-star"></i>
+            <span>收藏夹</span>
+        </a>
+        
+        
+        <a href="/photos" title="相册">
+            <i class="fa fa-camera"></i>
+            <span>相册</span>
+        </a>
+        
+        
+        <a href="/about" title="关于">
+            <i class="fa fa-user-circle-o"></i>
+            <span>关于</span>
+        </a>
+        
+    </nav>
+</div>
+
+<div class="nav-user">
+    <a class="btn-search" href="#"><i class="fa fa-search"></i></a>
+    <a class="btn-read-mode" href="#"><i class="fa fa-sun-o"></i></a>
+	<!-- YPN Del 2019-03-22 -->
+    <!-- <a class="btn-sns-qr" href="javascript:"><i class="fa fa-telegram"></i></a> -->
+</div>
+
+<div id="wrapper" class="clearfix">
+    <div id="body">
+        <div class="main" id="main">
+            <div id="cover">
+    <div class="cover-img"></div>
+    <div class="cover-info">
+        
+        <h1 class="cover-siteName">昜丿捺</h1>
+        <h3 class="cover-siteTitle">个人博客</h3>
+        <p class="cover-siteDesc">没有阳光，沉默而居</p>
+        <div class="cover-sns">
+            
+    &nbsp;&nbsp;<div class="btn btn-telegram">
+        <a href="http://t.me/yangpiena" target="_blank" title="telegram" ref="friend">
+            <i class="fa fa-telegram"></i>
+        </a>
+    </div>
+
+    &nbsp;&nbsp;<div class="btn btn-instagram">
+        <a href="https://www.instagram.com/mtangsir/" target="_blank" title="instagram" ref="friend">
+            <i class="fa fa-instagram"></i>
+        </a>
+    </div>
+
+    &nbsp;&nbsp;<div class="btn btn-twitter">
+        <a href="https://twitter.com/yangpiena" target="_blank" title="twitter" ref="friend">
+            <i class="fa fa-twitter"></i>
+        </a>
+    </div>
+
+    &nbsp;&nbsp;<div class="btn btn-github">
+        <a href="https://github.com/yangpiena" target="_blank" title="github" ref="friend">
+            <i class="fa fa-github"></i>
+        </a>
+    </div>
+
+
+        </div>
+    </div>
+</div>
+
+            <div class="page-title">
+    <ul>
+        <li><a href="/">最近</a></li>
+        
+            
+        
+        <li class="page-search">
+    <form id="search" class="search-form">
+        <input type="text" readonly="readonly" id="local-search-input-tip" placeholder="搜索">
+        <button type="button" disabled="disabled" class="search-form-submit"><i class="fa fa-search"></i></button>
+    </form>
+</li>
+
+    </ul>
+</div>
+<div class="main-inner">
+    <article class="post" itemscope="" itemtype="http://schema.org/BlogPosting">
+        <div class="post-header">
+            <div class="post-author clearfix">
+                <a class="avatar fleft" href="https://yangpiena.coding.me" target="_blank">
+                    <img width="48" src="/images/favicon.png" alt="avatar">
+                </a>
+                <p><span class="label">作者</span>
+                    <a href="https://yangpiena.coding.me" target="_blank">昜丿捺</a>
+                    <span title="最后编辑于&nbsp;2018-04-10">2018-04-10</span>
+                </p>
+                <p>一个好人</p>
+            </div>
+            <h2 class="post-title">【FTP】apache Ftpserver安装配置</h2>
+            <div class="post-meta">
+                本文共计3530个字 |
+                您是第&nbsp;<span id="busuanzi_value_page_pv"><i class="fa fa-spinner fa-spin"></i></span>位看到它们的小伙伴
+            </div>
+        </div>
+        <div class="post-content markdown-body">
+            <h3 id="apache-ftpserver下载"><a href="#apache-ftpserver下载" class="headerlink" title="apache ftpserver下载"></a>apache ftpserver下载</h3><p><a href="http://mina.apache.org/ftpserver-project/downloads.html">官网下载</a></p>
+<a id="more"></a>
+<hr>
+<h3 id="apache-ftpserver安装"><a href="#apache-ftpserver安装" class="headerlink" title="apache ftpserver安装"></a>apache ftpserver安装</h3><h4 id="1-Linux下"><a href="#1-Linux下" class="headerlink" title="1. Linux下"></a>1. Linux下</h4><h5 id="1-1-下载"><a href="#1-1-下载" class="headerlink" title="1.1 下载"></a>1.1 下载</h5><p>进入下载目录，使用wget下载，如果已离线下载成功，则跳过该步，直接上传安装包到下载目录即可<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cd /usr/download/</span><br><span class="line">wget http://mirrors.shu.edu.cn/apache/mina/ftpserver/1.1.1/dist/apache-ftpserver-1.1.1.tar.gz</span><br></pre></td></tr></table></figure></p>
+<h5 id="1-2-解压"><a href="#1-2-解压" class="headerlink" title="1.2 解压"></a>1.2 解压</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tar -zxvf apache-ftpserver-1.1.1.tar.gz</span><br></pre></td></tr></table></figure>
+<h5 id="1-3-安装"><a href="#1-3-安装" class="headerlink" title="1.3 安装"></a>1.3 安装</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mv apache-ftpserver-1.1.1 /usr/local/ftpserver</span><br></pre></td></tr></table></figure>
+<h5 id="1-4-修改配置文件"><a href="#1-4-修改配置文件" class="headerlink" title="1.4 修改配置文件"></a>1.4 修改配置文件</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cd /usr/local/ftpserver/res/conf/</span><br><span class="line">vim users.properties</span><br></pre></td></tr></table></figure>
+<p>users.properties文件存放的是用户名及密码权限等配置信息，通过修改该文件来添加和管理用户及权限等信息。参考下面内容配置：</p>
+<pre><code>#用户名为anonymous，密码为空
+tpserver.user.anonymous.userpassword=
+#主目录
+ftpserver.user.anonymous.homedirectory=./res/home
+#当前用户可用
+ftpserver.user.anonymous.enableflag=true
+#具有上传权限
+ftpserver.user.anonymous.writepermission=true
+#最大登陆用户数为20，0为不限
+ftpserver.user.anonymous.maxloginnumber=20
+#同IP登陆用户数为2，0为不限
+ftpserver.user.anonymous.maxloginperip=2 
+#空闲时间为300秒，0为不限
+ftpserver.user.anonymous.idletime=300
+#上传速率限制为48字节每秒，0为不限
+ftpserver.user.anonymous.uploadrate=4800
+#下载速率限制为48字节每秒，0为不限
+ftpserver.user.anonymous.downloadrate=4800
+</code></pre><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vim ftpd-typical.xml</span><br></pre></td></tr></table></figure>
+<p>修改配置文件ftpd-file.xml，增加encrypt-passwords=”clear”，将密码加密方式修改为clear，默认为MD5加密方式。</p>
+<pre><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;server xmlns=&quot;http://mina.apache.org/ftpserver/spring/v1&quot;
+        xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;
+        xsi:schemaLocation=&quot;
+           http://mina.apache.org/ftpserver/spring/v1 http://mina.apache.org/ftpserver/ftpserver-1.0.xsd        
+           &quot;
+        id=&quot;myServer&quot;&gt;
+        &lt;listeners&gt;
+                &lt;nio-listener name=&quot;default&quot; port=&quot;21&quot;&gt;
+                    &lt;ssl&gt;
+                         &lt;keystore file=&quot;./res/ftpserver.jks&quot; password=&quot;password&quot; /&gt;
+                    &lt;/ssl&gt;
+                &lt;/nio-listener&gt;
+        &lt;/listeners&gt;
+        &lt;file-user-manager file=&quot;./res/conf/users.properties&quot; encrypt-passwords=&quot;clear&quot; /&gt;
+&lt;/server&gt;
+</code></pre><h5 id="1-5-启动"><a href="#1-5-启动" class="headerlink" title="1.5 启动"></a>1.5 启动</h5><p>在ftpserver目录下，执行命令：</p>
+<ul>
+<li>方式一：<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sh  bin/ftpd.sh  /res/conf/ftpd-typical.xml</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>此方式有局限，当命令窗口退出时，FTP服务停止。</p>
+<ul>
+<li>方式二：<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nohup ./bin/ftpd.sh res/conf/ftpd-typical.xml &amp;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>此方式为后台启动FTP服务，服务一直启动，不管窗口是否退出。</p>
+<ul>
+<li>方式三：<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nohup sh   apache-ftpserver-1.0.6/bin/ftpd.sh   /res/conf/ftpd-typical.xml &gt; ftplog/`date &apos;+%Y%m%d&apos;`ftp.log  &gt; /dev/null   2&gt;&amp;1  &amp;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>方式一、二无法启动时，可用此种方式。</p>
+<h5 id="1-5-测试"><a href="#1-5-测试" class="headerlink" title="1.5 测试"></a>1.5 测试</h5><p>在浏览器输入ftp://IP:21后，输入用户名，密码，可以登录ftp目录。</p>
+<hr>
+<h3 id="Suse-Linux-Enterprise-12下实现脚本启动和关闭"><a href="#Suse-Linux-Enterprise-12下实现脚本启动和关闭" class="headerlink" title="Suse Linux Enterprise 12下实现脚本启动和关闭"></a>Suse Linux Enterprise 12下实现脚本启动和关闭</h3><h4 id="1-在-目录下，执行下面命令"><a href="#1-在-目录下，执行下面命令" class="headerlink" title="1. 在~目录下，执行下面命令"></a>1. 在~目录下，执行下面命令</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vim .profile</span><br></pre></td></tr></table></figure>
+<h4 id="2-在-profile文件中定义FTPSERVER-HOME变量，并将变量追加到PATH后面，效果如下："><a href="#2-在-profile文件中定义FTPSERVER-HOME变量，并将变量追加到PATH后面，效果如下：" class="headerlink" title="2. 在.profile文件中定义FTPSERVER_HOME变量，并将变量追加到PATH后面，效果如下："></a>2. 在.profile文件中定义FTPSERVER_HOME变量，并将变量追加到PATH后面，效果如下：</h4><pre><code>export RC_LANG=zh_CN.UTF-8
+export FTPSERVER_HOME=/usr/local/ftpserver
+export PATH=$PATH:$FTPSERVER_HOME
+</code></pre><p>保存并退出。</p>
+<h4 id="3-执行下面命令，使立即生效"><a href="#3-执行下面命令，使立即生效" class="headerlink" title="3. 执行下面命令，使立即生效"></a>3. 执行下面命令，使立即生效</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">source ~/.profile</span><br></pre></td></tr></table></figure>
+<h4 id="4-执行下面命令，在FTPSERVER-HOME目录下创建脚本文件，"><a href="#4-执行下面命令，在FTPSERVER-HOME目录下创建脚本文件，" class="headerlink" title="4. 执行下面命令，在FTPSERVER_HOME目录下创建脚本文件，"></a>4. 执行下面命令，在FTPSERVER_HOME目录下创建脚本文件，</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vim /usr/local/ftpserver/ftpserver</span><br></pre></td></tr></table></figure>
+<p>在文件中写入如下代码，保存并退出。</p>
+<pre><code>#!/bin/bash
+# /usr/local/ftpserver
+# YPN 2018-04-11 Create
+
+if [ &quot;$1&quot;x = &quot;start&quot;x ]; then
+  nohup /usr/local/ftpserver/bin/ftpd.sh res/conf/ftpd-typical.xml 1&gt;/usr/local/ftpserver/res/log/ftpd.log 2&gt;&amp;1 &amp;
+fi
+if [ &quot;$1&quot;x = &quot;stop&quot;x ]; then
+  kill $(ps aux|grep &quot;ftpserver&quot; | grep -v grep |awk &apos;{print $2}&apos;)
+fi
+if [ &quot;$1&quot;x = &quot;check&quot;x ]; then
+  ps -aux|grep &quot;ftpserver&quot; | grep -v grep
+fi
+if [ &quot;$1&quot;x = &quot;log&quot;x ]; then
+  tail -f /usr/local/ftpserver/res/log/ftpd.log -n 1000
+fi
+</code></pre><h4 id="5-给文件添加权限，使脚本文件可以执行，命令为"><a href="#5-给文件添加权限，使脚本文件可以执行，命令为" class="headerlink" title="5. 给文件添加权限，使脚本文件可以执行，命令为"></a>5. 给文件添加权限，使脚本文件可以执行，命令为</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">chmod 755 /usr/local/ftpserver/ftpserver</span><br></pre></td></tr></table></figure>
+<h4 id="6-最后，执行下面命令可启动、关闭ftpserver或查看日志"><a href="#6-最后，执行下面命令可启动、关闭ftpserver或查看日志" class="headerlink" title="6. 最后，执行下面命令可启动、关闭ftpserver或查看日志"></a>6. 最后，执行下面命令可启动、关闭ftpserver或查看日志</h4><p>启动：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ftpserver start</span><br></pre></td></tr></table></figure></p>
+<p>关闭：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ftpserver stop</span><br></pre></td></tr></table></figure></p>
+<p>查看日志：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ftpserver log</span><br></pre></td></tr></table></figure></p>
+<p>检查ftpserver进程：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ftpserver check</span><br></pre></td></tr></table></figure></p>
+<h4 id="7-随系统自启动"><a href="#7-随系统自启动" class="headerlink" title="7. 随系统自启动"></a>7. 随系统自启动</h4><blockquote>
+<p>暂未找到解决办法</p>
+</blockquote>
+
+        </div>
+        <div class="post-tool">
+            <a class="btn-thumbs-up" href="javascript:void(0);" data-cid="52" title="95">
+                <i class="fa fa-thumbs-up" aria-hidden="true"></i> 打赏
+            </a>
+        </div>
+        
+        <div class="post-tags">标签：
+            
+            <a href="/tags/FTP/">FTP</a>
+            
+            <a href="/tags/apache-ftpserver/">apache ftpserver</a>
+            
+        </div>
+        
+    </article>
+    
+    <p style="text-align: center">本文代表个人观点，内容仅供参考。若有不恰当之处，望不吝赐教！</p>
+    
+    
+
+    
+
+</div>
+<script src="/js/busuanzi.pure.mini.js"></script>
+
+
+        </div><!-- end #main-->
+    </div><!-- end #body -->
+    <footer class="footer">
+    <div class="footer-inner" style="text-align: center">
+        <p>
+            <a href="/about" title="关于">关于</a>&nbsp;&nbsp<em>·</em>&nbsp;&nbsp
+            <!-- 自定义链接 -->
+            <a href="/help" title="帮助">帮助</a>&nbsp;&nbsp<em>·</em>&nbsp;&nbsp
+            <a href="/links" title="友链">友链</a>&nbsp;&nbsp<em>·</em>&nbsp;&nbsp
+            <a href="/sitemap.xml" title="地图">地图</a>
+        </p>
+        <p>
+            本站已建立&nbsp<a href="/timeline" id="siteBuildingTime"></a>&nbsp天，<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" rel="licence">采用知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议创作</a><br>
+            ©2016-<span id="cpYear"></span> 基于&nbsp<a href="http://hexo.io" target="_blank" rel="nofollow">Hexo</a>
+            ，主题采用&nbsp&nbsp<a href="https://github.com/tangkunyin/hexo-theme-jsimple" target="_blank" rel="bookmark">JSimple</a>
+            ，作者&nbsp<a href="https://yangpiena.coding.me" target="_blank" rel="friend">昜丿捺</a>
+            ，Hosted by <a href="https://coding.net/" target="_blank" rel="nofollow">Coding Pages</a>
+        </p>
+    </div>
+</footer>
+<script src="/js/SimpleCore.js"></script>
+
+</div>
+<!-- search pop -->
+<div class="popup search-popup local-search-popup">
+    <div class="local-search-header clearfix">
+        <span class="search-icon">
+            <i class="fa fa-search"></i>
+        </span>
+        <span class="popup-btn-close">
+            <i class="fa fa-times-circle"></i>
+        </span>
+        <div class="local-search-input-wrapper">
+            <input id="local-search-input" spellcheck="false" type="text" autocomplete="off" placeholder="输入关键字搜索">
+        </div>
+    </div>
+    <div id="local-search-result"></div>
+</div>
+<div class="fixed-btn">
+    <a class="btn-gotop" href="javascript:"> <i class="fa fa-angle-up"></i></a>
+</div>
+<script>
+    $(function () {
+        var jsi_config = {
+            buildingTime: '01/20/2018',
+            current: $('.post-tags').length > 0 ? 'post' : 'archive',
+            snsQRCode: '/images/sns-qrcode.png',
+            donateImg: '/images/donate-qr.png',
+            localSearch: { dbPath: '' },
+            readMode: 'day'
+        };
+        
+            jsi_config.localSearch = {
+                dbPath: '/search.xml',
+                trigger: 'auto',
+                topN: '1',
+                unescape: 'false'
+            }
+        
+        SimpleCore.init(jsi_config);
+        
+    });
+</script>
+</body>
+</html>

@@ -1,0 +1,304 @@
+<!DOCTYPE HTML>
+<html class="no-js" lang="zh-CN">
+<head><meta name="generator" content="Hexo 3.8.0">
+    <!--[if lte IE 9]>
+<meta http-equiv="refresh" content="0;url=http://yangpiena.coding.me/warn.html">
+<![endif]-->
+<meta charset="utf-8">
+<meta http-equiv="X-DNS-Prefetch-Control" content="on">
+<link rel="dns-prefetch" href="http://yangpiena.coding.me">
+<link rel="dns-prefetch" href="//www.google-analytics.com">
+<link rel="prefetch" href="http://yangpiena.coding.me">
+<link rel="prefetch" href="//www.google-analytics.com">
+
+
+<link rel="prerender" href="http://yangpiena.coding.me">
+
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<meta name="renderer" content="webkit">
+<meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=no">
+<meta http-equiv="mobile-agent" content="format=html5; url=http://yangpiena.coding.me">
+<meta name="author" content="昜丿捺">
+<link rel="stylesheet" href="/css/JSimple.css">
+
+<link rel="shortcut icon" href="/images/favicon.ico">
+
+
+<title>【eclipse】java注释模板设置 - 昜丿捺</title>
+
+<meta name="keywords" content="注释">
+
+<meta name="description " content="没有阳光，沉默而居">
+
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({
+            tex2jax: {
+                inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+                processEscapes: true
+            }
+        });
+    </script>
+
+
+    
+
+    
+
+</head>
+<body>
+<div id="nav">
+    <nav class="nav-menu">
+        <a class="site-name current" href="/" title="昜">昜</a>
+        <a class="site-index current" href="/"><i class="fa fa-home"></i><span>首页</span></a>
+        <a href="/archives" title="归档"><i class="fa fa-archives"></i><span>归档</span></a>
+        <a href="/tags" title="标签"><i class="fa fa-tags"></i><span>标签</span></a>
+        <!-- custom single page of menus -->
+        
+        
+        <a href="/links" title="收藏夹">
+            <i class="fa fa-star"></i>
+            <span>收藏夹</span>
+        </a>
+        
+        
+        <a href="/photos" title="相册">
+            <i class="fa fa-camera"></i>
+            <span>相册</span>
+        </a>
+        
+        
+        <a href="/about" title="关于">
+            <i class="fa fa-user-circle-o"></i>
+            <span>关于</span>
+        </a>
+        
+    </nav>
+</div>
+
+<div class="nav-user">
+    <a class="btn-search" href="#"><i class="fa fa-search"></i></a>
+    <a class="btn-read-mode" href="#"><i class="fa fa-sun-o"></i></a>
+	<!-- YPN Del 2019-03-22 -->
+    <!-- <a class="btn-sns-qr" href="javascript:"><i class="fa fa-telegram"></i></a> -->
+</div>
+
+<div id="wrapper" class="clearfix">
+    <div id="body">
+        <div class="main" id="main">
+            <div id="cover">
+    <div class="cover-img"></div>
+    <div class="cover-info">
+        
+        <h1 class="cover-siteName">昜丿捺</h1>
+        <h3 class="cover-siteTitle">个人博客</h3>
+        <p class="cover-siteDesc">没有阳光，沉默而居</p>
+        <div class="cover-sns">
+            
+    &nbsp;&nbsp;<div class="btn btn-telegram">
+        <a href="http://t.me/yangpiena" target="_blank" title="telegram" ref="friend">
+            <i class="fa fa-telegram"></i>
+        </a>
+    </div>
+
+    &nbsp;&nbsp;<div class="btn btn-instagram">
+        <a href="https://www.instagram.com/mtangsir/" target="_blank" title="instagram" ref="friend">
+            <i class="fa fa-instagram"></i>
+        </a>
+    </div>
+
+    &nbsp;&nbsp;<div class="btn btn-twitter">
+        <a href="https://twitter.com/yangpiena" target="_blank" title="twitter" ref="friend">
+            <i class="fa fa-twitter"></i>
+        </a>
+    </div>
+
+    &nbsp;&nbsp;<div class="btn btn-github">
+        <a href="https://github.com/yangpiena" target="_blank" title="github" ref="friend">
+            <i class="fa fa-github"></i>
+        </a>
+    </div>
+
+
+        </div>
+    </div>
+</div>
+
+            <div class="page-title">
+    <ul>
+        <li><a href="/">最近</a></li>
+        
+            
+        
+        <li class="page-search">
+    <form id="search" class="search-form">
+        <input type="text" readonly="readonly" id="local-search-input-tip" placeholder="搜索">
+        <button type="button" disabled="disabled" class="search-form-submit"><i class="fa fa-search"></i></button>
+    </form>
+</li>
+
+    </ul>
+</div>
+<div class="main-inner">
+    <article class="post" itemscope="" itemtype="http://schema.org/BlogPosting">
+        <div class="post-header">
+            <div class="post-author clearfix">
+                <a class="avatar fleft" href="https://yangpiena.coding.me" target="_blank">
+                    <img width="48" src="/images/favicon.png" alt="avatar">
+                </a>
+                <p><span class="label">作者</span>
+                    <a href="https://yangpiena.coding.me" target="_blank">昜丿捺</a>
+                    <span title="最后编辑于&nbsp;2016-12-27">2016-12-27</span>
+                </p>
+                <p>一个好人</p>
+            </div>
+            <h2 class="post-title">【Eclipse】java注释模板设置</h2>
+            <div class="post-meta">
+                本文共计1185个字 |
+                您是第&nbsp;<span id="busuanzi_value_page_pv"><i class="fa fa-spinner fa-spin"></i></span>位看到它们的小伙伴
+            </div>
+        </div>
+        <div class="post-content markdown-body">
+            <p>设置注释模板的入口： Window-&gt;Preference-&gt;Java-&gt;Code Style-&gt;Code Template  ，然后展开Comments节点就是所有需设置注释的元素。现就每一元素逐一介绍：</p>
+<h4 id="文件-Files-注释标签："><a href="#文件-Files-注释标签：" class="headerlink" title="文件(Files)注释标签："></a>文件(Files)注释标签：</h4><pre><code>/**
+ * @Title       : ${file_name}
+ * @Package     : ${package_name}
+ * @Description : ${todo}
+ * @author      : YPN
+ * @date        : ${date} ${time}
+ * @version     : V1.0
+ */
+</code></pre><a id="more"></a>
+<h4 id="类型-Types-注释标签（类的注释）："><a href="#类型-Types-注释标签（类的注释）：" class="headerlink" title="类型(Types)注释标签（类的注释）："></a>类型(Types)注释标签（类的注释）：</h4><pre><code>/**
+ * @ClassName   : ${type_name}
+ * @Description : ${todo}
+ * @author      : YPN
+ * @date        : ${date} ${time}
+ * 
+ * ${tags}
+ */
+</code></pre><h4 id="字段-Fields-注释标签："><a href="#字段-Fields-注释标签：" class="headerlink" title="字段(Fields)注释标签："></a>字段(Fields)注释标签：</h4><pre><code>/**
+ * @Fields ${field} : ${todo}
+ */
+</code></pre><h4 id="构造函数标签："><a href="#构造函数标签：" class="headerlink" title="构造函数标签："></a>构造函数标签：</h4><pre><code>/**
+ * &lt;p&gt;Title       : &lt;/p&gt;
+ * &lt;p&gt;Description : &lt;/p&gt;
+ * ${tags}
+ */
+</code></pre><h4 id="方法-Constructor-amp-Methods-标签："><a href="#方法-Constructor-amp-Methods-标签：" class="headerlink" title="方法(Constructor &amp; Methods)标签："></a>方法(Constructor &amp; Methods)标签：</h4><pre><code>/**
+ * @Title       : ${enclosing_method}
+ * @Description : ${todo}
+ * @author      : YPN
+ * @date        : ${date} ${time}
+ * @param       : ${tags}
+ * @return      : ${return_type}
+ * @throws
+ */
+</code></pre><h4 id="覆盖方法-Overriding-Methods-标签："><a href="#覆盖方法-Overriding-Methods-标签：" class="headerlink" title="覆盖方法(Overriding Methods)标签："></a>覆盖方法(Overriding Methods)标签：</h4><pre><code>/*
+ * &lt;p&gt;Title       : ${enclosing_method}&lt;/p&gt;
+ * &lt;p&gt;Description : &lt;/p&gt;
+ * ${tags}
+ * ${see_to_overridden}
+ */
+</code></pre><h4 id="代表方法-Delegate-Methods-标签："><a href="#代表方法-Delegate-Methods-标签：" class="headerlink" title="代表方法(Delegate Methods)标签："></a>代表方法(Delegate Methods)标签：</h4><pre><code>/**
+ * ${tags}
+ * ${see_to_target}
+ */
+</code></pre><h4 id="getter方法标签："><a href="#getter方法标签：" class="headerlink" title="getter方法标签："></a>getter方法标签：</h4><pre><code>/**
+ * @return ${bare_field_name}
+ */
+</code></pre><h4 id="setter方法标签："><a href="#setter方法标签：" class="headerlink" title="setter方法标签："></a>setter方法标签：</h4><pre><code>/**
+ * @param ${param} 要设置的 ${bare_field_name}
+ */
+</code></pre>
+        </div>
+        <div class="post-tool">
+            <a class="btn-thumbs-up" href="javascript:void(0);" data-cid="52" title="95">
+                <i class="fa fa-thumbs-up" aria-hidden="true"></i> 打赏
+            </a>
+        </div>
+        
+        <div class="post-tags">标签：
+            
+            <a href="/tags/Eclipse/">Eclipse</a>
+            
+            <a href="/tags/java/">java</a>
+            
+        </div>
+        
+    </article>
+    
+    <p style="text-align: center">本文代表个人观点，内容仅供参考。若有不恰当之处，望不吝赐教！</p>
+    
+    
+
+    
+
+</div>
+<script src="/js/busuanzi.pure.mini.js"></script>
+
+
+        </div><!-- end #main-->
+    </div><!-- end #body -->
+    <footer class="footer">
+    <div class="footer-inner" style="text-align: center">
+        <p>
+            <a href="/about" title="关于">关于</a>&nbsp;&nbsp<em>·</em>&nbsp;&nbsp
+            <!-- 自定义链接 -->
+            <a href="/help" title="帮助">帮助</a>&nbsp;&nbsp<em>·</em>&nbsp;&nbsp
+            <a href="/links" title="友链">友链</a>&nbsp;&nbsp<em>·</em>&nbsp;&nbsp
+            <a href="/sitemap.xml" title="地图">地图</a>
+        </p>
+        <p>
+            本站已建立&nbsp<a href="/timeline" id="siteBuildingTime"></a>&nbsp天，<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" rel="licence">采用知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议创作</a><br>
+            ©2016-<span id="cpYear"></span> 基于&nbsp<a href="http://hexo.io" target="_blank" rel="nofollow">Hexo</a>
+            ，主题采用&nbsp&nbsp<a href="https://github.com/tangkunyin/hexo-theme-jsimple" target="_blank" rel="bookmark">JSimple</a>
+            ，作者&nbsp<a href="https://yangpiena.coding.me" target="_blank" rel="friend">昜丿捺</a>
+            ，Hosted by <a href="https://coding.net/" target="_blank" rel="nofollow">Coding Pages</a>
+        </p>
+    </div>
+</footer>
+<script src="/js/SimpleCore.js"></script>
+
+</div>
+<!-- search pop -->
+<div class="popup search-popup local-search-popup">
+    <div class="local-search-header clearfix">
+        <span class="search-icon">
+            <i class="fa fa-search"></i>
+        </span>
+        <span class="popup-btn-close">
+            <i class="fa fa-times-circle"></i>
+        </span>
+        <div class="local-search-input-wrapper">
+            <input id="local-search-input" spellcheck="false" type="text" autocomplete="off" placeholder="输入关键字搜索">
+        </div>
+    </div>
+    <div id="local-search-result"></div>
+</div>
+<div class="fixed-btn">
+    <a class="btn-gotop" href="javascript:"> <i class="fa fa-angle-up"></i></a>
+</div>
+<script>
+    $(function () {
+        var jsi_config = {
+            buildingTime: '01/20/2018',
+            current: $('.post-tags').length > 0 ? 'post' : 'archive',
+            snsQRCode: '/images/sns-qrcode.png',
+            donateImg: '/images/donate-qr.png',
+            localSearch: { dbPath: '' },
+            readMode: 'day'
+        };
+        
+            jsi_config.localSearch = {
+                dbPath: '/search.xml',
+                trigger: 'auto',
+                topN: '1',
+                unescape: 'false'
+            }
+        
+        SimpleCore.init(jsi_config);
+        
+    });
+</script>
+</body>
+</html>

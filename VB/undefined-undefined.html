@@ -1,0 +1,279 @@
+<!DOCTYPE HTML>
+<html class="no-js" lang="zh-CN">
+<head><meta name="generator" content="Hexo 3.8.0">
+    <!--[if lte IE 9]>
+<meta http-equiv="refresh" content="0;url=http://yangpiena.coding.me/warn.html">
+<![endif]-->
+<meta charset="utf-8">
+<meta http-equiv="X-DNS-Prefetch-Control" content="on">
+<link rel="dns-prefetch" href="http://yangpiena.coding.me">
+<link rel="dns-prefetch" href="//www.google-analytics.com">
+<link rel="prefetch" href="http://yangpiena.coding.me">
+<link rel="prefetch" href="//www.google-analytics.com">
+
+
+<link rel="prerender" href="http://yangpiena.coding.me">
+
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<meta name="renderer" content="webkit">
+<meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=no">
+<meta http-equiv="mobile-agent" content="format=html5; url=http://yangpiena.coding.me">
+<meta name="author" content="昜丿捺">
+<link rel="stylesheet" href="/css/JSimple.css">
+
+<link rel="shortcut icon" href="/images/favicon.ico">
+
+
+<title>【vb】下载网页文件或图片的方法 - 昜丿捺</title>
+
+<meta name="keywords" content="下载">
+
+<meta name="description " content="没有阳光，沉默而居">
+
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({
+            tex2jax: {
+                inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+                processEscapes: true
+            }
+        });
+    </script>
+
+
+    
+
+    
+
+</head>
+<body>
+<div id="nav">
+    <nav class="nav-menu">
+        <a class="site-name current" href="/" title="昜">昜</a>
+        <a class="site-index current" href="/"><i class="fa fa-home"></i><span>首页</span></a>
+        <a href="/archives" title="归档"><i class="fa fa-archives"></i><span>归档</span></a>
+        <a href="/tags" title="标签"><i class="fa fa-tags"></i><span>标签</span></a>
+        <!-- custom single page of menus -->
+        
+        
+        <a href="/links" title="收藏夹">
+            <i class="fa fa-star"></i>
+            <span>收藏夹</span>
+        </a>
+        
+        
+        <a href="/photos" title="相册">
+            <i class="fa fa-camera"></i>
+            <span>相册</span>
+        </a>
+        
+        
+        <a href="/about" title="关于">
+            <i class="fa fa-user-circle-o"></i>
+            <span>关于</span>
+        </a>
+        
+    </nav>
+</div>
+
+<div class="nav-user">
+    <a class="btn-search" href="#"><i class="fa fa-search"></i></a>
+    <a class="btn-read-mode" href="#"><i class="fa fa-sun-o"></i></a>
+	<!-- YPN Del 2019-03-22 -->
+    <!-- <a class="btn-sns-qr" href="javascript:"><i class="fa fa-telegram"></i></a> -->
+</div>
+
+<div id="wrapper" class="clearfix">
+    <div id="body">
+        <div class="main" id="main">
+            <div id="cover">
+    <div class="cover-img"></div>
+    <div class="cover-info">
+        
+        <h1 class="cover-siteName">昜丿捺</h1>
+        <h3 class="cover-siteTitle">个人博客</h3>
+        <p class="cover-siteDesc">没有阳光，沉默而居</p>
+        <div class="cover-sns">
+            
+    &nbsp;&nbsp;<div class="btn btn-telegram">
+        <a href="http://t.me/yangpiena" target="_blank" title="telegram" ref="friend">
+            <i class="fa fa-telegram"></i>
+        </a>
+    </div>
+
+    &nbsp;&nbsp;<div class="btn btn-instagram">
+        <a href="https://www.instagram.com/mtangsir/" target="_blank" title="instagram" ref="friend">
+            <i class="fa fa-instagram"></i>
+        </a>
+    </div>
+
+    &nbsp;&nbsp;<div class="btn btn-twitter">
+        <a href="https://twitter.com/yangpiena" target="_blank" title="twitter" ref="friend">
+            <i class="fa fa-twitter"></i>
+        </a>
+    </div>
+
+    &nbsp;&nbsp;<div class="btn btn-github">
+        <a href="https://github.com/yangpiena" target="_blank" title="github" ref="friend">
+            <i class="fa fa-github"></i>
+        </a>
+    </div>
+
+
+        </div>
+    </div>
+</div>
+
+            <div class="page-title">
+    <ul>
+        <li><a href="/">最近</a></li>
+        
+            
+        
+        <li class="page-search">
+    <form id="search" class="search-form">
+        <input type="text" readonly="readonly" id="local-search-input-tip" placeholder="搜索">
+        <button type="button" disabled="disabled" class="search-form-submit"><i class="fa fa-search"></i></button>
+    </form>
+</li>
+
+    </ul>
+</div>
+<div class="main-inner">
+    <article class="post" itemscope="" itemtype="http://schema.org/BlogPosting">
+        <div class="post-header">
+            <div class="post-author clearfix">
+                <a class="avatar fleft" href="https://yangpiena.coding.me" target="_blank">
+                    <img width="48" src="/images/favicon.png" alt="avatar">
+                </a>
+                <p><span class="label">作者</span>
+                    <a href="https://yangpiena.coding.me" target="_blank">昜丿捺</a>
+                    <span title="最后编辑于&nbsp;2018-04-26">2018-04-26</span>
+                </p>
+                <p>一个好人</p>
+            </div>
+            <h2 class="post-title">【VB】下载网页文件或图片的方法</h2>
+            <div class="post-meta">
+                本文共计4037个字 |
+                您是第&nbsp;<span id="busuanzi_value_page_pv"><i class="fa fa-spinner fa-spin"></i></span>位看到它们的小伙伴
+            </div>
+        </div>
+        <div class="post-content markdown-body">
+            <h4 id="一、使用API函数URLDownloadToFile，下载网页、图片等其它文件到本地"><a href="#一、使用API函数URLDownloadToFile，下载网页、图片等其它文件到本地" class="headerlink" title="一、使用API函数URLDownloadToFile，下载网页、图片等其它文件到本地"></a>一、使用API函数URLDownloadToFile，下载网页、图片等其它文件到本地</h4><p>引入API：</p>
+<pre><code>Private Declare Function URLDownloadToFile Lib &quot;urlmon&quot; Alias &quot;URLDownloadToFileA&quot; (ByVal pCaller As Long, ByVal szURL As String, ByVal szFileName As String, ByVal dwReserved As Long, ByVal lpfnCB As Long) As Long
+</code></pre><p>用法：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">Private Sub test()</span><br><span class="line">    Dim v_URL As String, v_FileName As String, v_Result As Long</span><br><span class="line">    v_URL = &quot;http://www.baidu.com/img/baidu_logo.gif&quot;</span><br><span class="line">    v_FileName = App.Path &amp; &quot;\Baidu.bmp&quot;  &apos;下载百度Logo图片</span><br><span class="line">    v_Result = URLDownloadToFile(0, v_URL, v_FileName, 0, 0)     &apos;下载文件，返回 0 表示成功</span><br><span class="line">    v_URL = &quot;http://www.baidu.com&quot;</span><br><span class="line">    v_FileName = App.Path &amp; &quot;\Baidu.html&quot; &apos;下载百度首页的网页</span><br><span class="line">    v_Result = URLDownloadToFile(0, v_URL, v_FileName, 0, 0)     &apos;下载文件，返回 0 表示成功</span><br><span class="line">End Sub</span><br></pre></td></tr></table></figure></p>
+<h4 id="二、使用API函数OleLoadPicturePath，下载图片文件到变量，注意要勾选引用：OLE-Automation"><a href="#二、使用API函数OleLoadPicturePath，下载图片文件到变量，注意要勾选引用：OLE-Automation" class="headerlink" title="二、使用API函数OleLoadPicturePath，下载图片文件到变量，注意要勾选引用：OLE Automation"></a>二、使用API函数OleLoadPicturePath，下载图片文件到变量，注意要勾选引用：OLE Automation</h4><p>引入API：</p>
+<pre><code>Private Declare Function OleLoadPicturePath Lib &quot;oleaut32.dll&quot; (ByVal szURLorPath As Long, ByVal punkCaller As Long, ByVal dwReserved As Long, ByVal clrReserved As OLE_COLOR, ByRef riid As TGUID, ByRef ppvRet As IPicture) As Long
+Private Type TGUID
+    Data1 As Long
+    Data2 As Integer
+    Data3 As Integer
+    Data4(0 To 7) As Byte
+End Type
+</code></pre><p>用法：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">Public Function LoadNetPicture(ByVal i_ImgUrl As String) As Picture</span><br><span class="line">    Dim riid As TGUID</span><br><span class="line">    riid.Data1    = &amp;H7BF80980</span><br><span class="line">    riid.Data2    = &amp;HBF32</span><br><span class="line">    riid.Data3    = &amp;H101A</span><br><span class="line">    riid.Data4(0) = &amp;H8B</span><br><span class="line">    riid.Data4(1) = &amp;HBB</span><br><span class="line">    riid.Data4(2) = &amp;H0</span><br><span class="line">    riid.Data4(3) = &amp;HAA</span><br><span class="line">    riid.Data4(4) = &amp;H0</span><br><span class="line">    riid.Data4(5) = &amp;H30</span><br><span class="line">    riid.Data4(6) = &amp;HC</span><br><span class="line">    riid.Data4(7) = &amp;HAB</span><br><span class="line">    OleLoadPicturePath StrPtr(i_ImgUrl), 0&amp;, 0&amp;, 0&amp;, riid, LoadNetPicture</span><br><span class="line">End Function</span><br><span class="line">Private Sub test()</span><br><span class="line">    Dim v_ImgUrl As String, v_Picture As Picture</span><br><span class="line">    v_ImgUrl = &quot;http://www.baidu.com/img/baidu_logo.gif&quot;</span><br><span class="line">    Set v_Picture = LoadNetPicture(v_ImgUrl)          &apos;将图片下载到变量</span><br><span class="line">    SavePicture v_Picture, App.Path &amp; &quot;\MyImg.bmp&quot;    &apos;保存到硬盘</span><br><span class="line">    Picture1.Picture = v_Picture</span><br><span class="line">    &apos;如果要将图片装载到控件</span><br><span class="line">    Picture1.Picture = LoadNetPicture(v_ImgUrl)</span><br><span class="line">End Sub</span><br></pre></td></tr></table></figure></p>
+<h4 id="三、使用Microsoft-XMLHTTP对象，下载网页、图片等其它文件到本地"><a href="#三、使用Microsoft-XMLHTTP对象，下载网页、图片等其它文件到本地" class="headerlink" title="三、使用Microsoft.XMLHTTP对象，下载网页、图片等其它文件到本地"></a>三、使用Microsoft.XMLHTTP对象，下载网页、图片等其它文件到本地</h4><p>定义公用下载过程：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">Public Sub DownNetFile(ByVal i_Url As String, ByVal i_File As String)</span><br><span class="line">    Dim XmlHttp, B() As Byte</span><br><span class="line">    Set XmlHttp = CreateObject(&quot;Microsoft.XMLHTTP&quot;)</span><br><span class="line">    XmlHttp.Open &quot;GET&quot;, i_Url, False</span><br><span class="line">    XmlHttp.Send</span><br><span class="line">    If XmlHttp.ReadyState = 4 Then</span><br><span class="line">        B() = XmlHttp.ResponseBody</span><br><span class="line">        Open i_File For Binary As #1</span><br><span class="line">        Put #1, , B()</span><br><span class="line">        Close #1</span><br><span class="line">    End If</span><br><span class="line">    Set XmlHttp = Nothing</span><br><span class="line">End Sub</span><br></pre></td></tr></table></figure></p>
+<p>用法:</p>
+<pre><code>DownNetFile &quot;http://www.baidu.com/img/baidu_logo.gif&quot;, App.Path &amp; &quot;\My-1.bmp&quot; &apos;下载百度图片
+DownNetFile &quot;http://www.baidu.com&quot;, App.Path &amp; &quot;\Baidu.html&quot;                  &apos;下载百度首页的网页
+</code></pre><h4 id="四、使用WebBrowser的Document对象，保存网页的所有图片"><a href="#四、使用WebBrowser的Document对象，保存网页的所有图片" class="headerlink" title="四、使用WebBrowser的Document对象，保存网页的所有图片"></a>四、使用WebBrowser的Document对象，保存网页的所有图片</h4><p>先用 WebBrowser1 显示一个网页，如：</p>
+<pre><code>WebBrowser1.Navigate &quot;http://www.baidu.com&quot;
+</code></pre><p>待网页加载完毕后，再执行以下语句：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">Dim v_Path As String, I As Long, E, v_Range</span><br><span class="line">v_Path = App.Path &amp; &quot;\Tu\&quot;</span><br><span class="line">WebBrowser1.Silent = True &apos;关闭交互，禁止脚本错误</span><br><span class="line">For Each E In WebBrowser1.Document.All</span><br><span class="line">    If E.tagName = &quot;IMG&quot; Then</span><br><span class="line">        Set v_Range = WebBrowser1.Document.body.createControlRange()</span><br><span class="line">        v_Range.Add E</span><br><span class="line">        v_Range.execCommand &quot;Copy&quot; &apos;复制到剪贴板</span><br><span class="line">        I = I + 1</span><br><span class="line">        SavePicture Clipboard.GetData, v_Path &amp; I &amp; &quot;.bmp&quot; &apos;保存到硬盘</span><br><span class="line">    End If</span><br><span class="line">Next</span><br></pre></td></tr></table></figure></p>
+<h4 id="五、用API调用系统的另存为下载对话框，进行文件下载"><a href="#五、用API调用系统的另存为下载对话框，进行文件下载" class="headerlink" title="五、用API调用系统的另存为下载对话框，进行文件下载"></a>五、用API调用系统的另存为下载对话框，进行文件下载</h4><p>引入API:</p>
+<pre><code>Private Declare Function DoFileDownload Lib &quot;shdocvw.dll&quot; (ByVal lpszFile As String) As Long
+</code></pre><p>用法：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Dim v_Url As String</span><br><span class="line">v_Url = StrConv(&quot;http://www.baidu.com&quot;, vbUnicode)</span><br><span class="line">Call DoFileDownload(v_Url)</span><br></pre></td></tr></table></figure></p>
+<h4 id="六、用WebBrowser1的ExecWB方法调用网页另存为对话框下载"><a href="#六、用WebBrowser1的ExecWB方法调用网页另存为对话框下载" class="headerlink" title="六、用WebBrowser1的ExecWB方法调用网页另存为对话框下载"></a>六、用WebBrowser1的ExecWB方法调用网页另存为对话框下载</h4><pre><code>WebBrowser1.ExecWB OLECMDID_SAVEAS, OLECMDEXECOPT_DODEFAULT
+</code></pre><hr>
+<p>以上方法各有优缺点。<br>Microsoft.XMLHTTP 对于大文件有利，支持断点续传，但需调用 getResponseHeader 进行数据检查。<br>对于谷歌地图图片，图片链接形如：<a href="http://mt1.google.cn/vt/lyrs=s@63&amp;gl=cn&amp;x=51694&amp;s=&amp;y=26884&amp;z=16&amp;s=Galile">http://mt1.google.cn/vt/lyrs=s@63&amp;gl=cn&amp;x=51694&amp;s=&amp;y=26884&amp;z=16&amp;s=Galile</a> ，仅第四种方法有效。</p>
+<blockquote>
+<p>本文根据<a href="https://blog.csdn.net/rztyfx/article/details/7605624">rztyfx的专栏</a>整理发表。</p>
+</blockquote>
+
+        </div>
+        <div class="post-tool">
+            <a class="btn-thumbs-up" href="javascript:void(0);" data-cid="52" title="95">
+                <i class="fa fa-thumbs-up" aria-hidden="true"></i> 打赏
+            </a>
+        </div>
+        
+        <div class="post-tags">标签：
+            
+            <a href="/tags/VB/">VB</a>
+            
+        </div>
+        
+    </article>
+    
+    <p style="text-align: center">本文代表个人观点，内容仅供参考。若有不恰当之处，望不吝赐教！</p>
+    
+    
+
+    
+
+</div>
+<script src="/js/busuanzi.pure.mini.js"></script>
+
+
+        </div><!-- end #main-->
+    </div><!-- end #body -->
+    <footer class="footer">
+    <div class="footer-inner" style="text-align: center">
+        <p>
+            <a href="/about" title="关于">关于</a>&nbsp;&nbsp<em>·</em>&nbsp;&nbsp
+            <!-- 自定义链接 -->
+            <a href="/help" title="帮助">帮助</a>&nbsp;&nbsp<em>·</em>&nbsp;&nbsp
+            <a href="/links" title="友链">友链</a>&nbsp;&nbsp<em>·</em>&nbsp;&nbsp
+            <a href="/sitemap.xml" title="地图">地图</a>
+        </p>
+        <p>
+            本站已建立&nbsp<a href="/timeline" id="siteBuildingTime"></a>&nbsp天，<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" rel="licence">采用知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议创作</a><br>
+            ©2016-<span id="cpYear"></span> 基于&nbsp<a href="http://hexo.io" target="_blank" rel="nofollow">Hexo</a>
+            ，主题采用&nbsp&nbsp<a href="https://github.com/tangkunyin/hexo-theme-jsimple" target="_blank" rel="bookmark">JSimple</a>
+            ，作者&nbsp<a href="https://yangpiena.coding.me" target="_blank" rel="friend">昜丿捺</a>
+            ，Hosted by <a href="https://coding.net/" target="_blank" rel="nofollow">Coding Pages</a>
+        </p>
+    </div>
+</footer>
+<script src="/js/SimpleCore.js"></script>
+
+</div>
+<!-- search pop -->
+<div class="popup search-popup local-search-popup">
+    <div class="local-search-header clearfix">
+        <span class="search-icon">
+            <i class="fa fa-search"></i>
+        </span>
+        <span class="popup-btn-close">
+            <i class="fa fa-times-circle"></i>
+        </span>
+        <div class="local-search-input-wrapper">
+            <input id="local-search-input" spellcheck="false" type="text" autocomplete="off" placeholder="输入关键字搜索">
+        </div>
+    </div>
+    <div id="local-search-result"></div>
+</div>
+<div class="fixed-btn">
+    <a class="btn-gotop" href="javascript:"> <i class="fa fa-angle-up"></i></a>
+</div>
+<script>
+    $(function () {
+        var jsi_config = {
+            buildingTime: '01/20/2018',
+            current: $('.post-tags').length > 0 ? 'post' : 'archive',
+            snsQRCode: '/images/sns-qrcode.png',
+            donateImg: '/images/donate-qr.png',
+            localSearch: { dbPath: '' },
+            readMode: 'day'
+        };
+        
+            jsi_config.localSearch = {
+                dbPath: '/search.xml',
+                trigger: 'auto',
+                topN: '1',
+                unescape: 'false'
+            }
+        
+        SimpleCore.init(jsi_config);
+        
+    });
+</script>
+</body>
+</html>
