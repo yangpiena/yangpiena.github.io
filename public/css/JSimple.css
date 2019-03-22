@@ -151,7 +151,10 @@ table {
     border-spacing:0
 }
 body {
+	/** YPN Edit 2019-03-22
     font:14px/1.7 "lucida grande","lucida sans unicode",lucida,helvetica,"Hiragino Sans GB","Microsoft YaHei","微软雅黑",STXihei,"华文细黑","WenQuanYi Micro Hei",sans-serif;
+	*/
+	font:14px/1.7 sans-serif,"Microsoft YaHei","微软雅黑",STXihei,"华文细黑","WenQuanYi Micro Hei";
     color:#1a1a1a
 }
 a {

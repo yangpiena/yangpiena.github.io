@@ -7,7 +7,7 @@ title: 昜丿捺 #网站的标题
 subtitle: Blog #副标题
 description: 没有阳光，沉默而居 #描述
 author: 昜丿捺 #作者信息
-avatar: /images/avatar.png #头像，图片位置在相应主题目录下的images
+avatar: /img/avatar/ironman.png #头像，图片位置在相应主题目录下的images
 language: zh-cn #中文简体
 email: yangpiena@163.com
 timezone:
@@ -16,7 +16,8 @@ timezone:
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
 url: http://yangpiena.coding.me
 root: /
-permalink: :category/:entitle-:timestamp.html
+# permalink: :category/:entitle-:timestamp.html
+permalink: :year/:month/:day/:title/
 permalink_defaults:
   lang: en
 
@@ -45,10 +46,10 @@ future: true
 
 # Category & Tag
 default_category: 技术
-# category_map:
-   # 技术: tech-notes
-   # 人文: humanities
-   # 其他: others
+category_map:
+   技术: tech-notes
+   人文: humanities
+   其它: others
 tag_map:
   Dart: dart
   Swift: swift
