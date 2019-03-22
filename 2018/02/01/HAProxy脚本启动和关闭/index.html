@@ -1,0 +1,504 @@
+<!DOCTYPE HTML>
+<html class="no-js" lang="zh-CN">
+<head><meta name="generator" content="Hexo 3.8.0">
+    <!--[if lte IE 9]>
+<meta http-equiv="refresh" content="0;url=http://yangpiena.coding.me/warn.html">
+<![endif]-->
+<meta charset="utf-8">
+<meta http-equiv="X-DNS-Prefetch-Control" content="on">
+<link rel="dns-prefetch" href="http://yangpiena.coding.me">
+<link rel="dns-prefetch" href="//www.google-analytics.com">
+<link rel="prefetch" href="http://yangpiena.coding.me">
+<link rel="prefetch" href="//www.google-analytics.com">
+
+
+<link rel="prerender" href="http://yangpiena.coding.me">
+
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<meta name="renderer" content="webkit">
+<meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=no">
+<meta http-equiv="mobile-agent" content="format=html5; url=http://yangpiena.coding.me">
+<meta name="author" content="昜丿捺">
+<link rel="stylesheet" href="/css/JSimple.css">
+
+<link rel="shortcut icon" href="/img/avatar/favicon.ico">
+
+
+<title>haproxy脚本启动和关闭 - 昜丿捺</title>
+
+<meta name="keywords" content="undefined">
+
+<meta name="description " content="没有阳光，沉默而居">
+
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({
+            tex2jax: {
+                inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+                processEscapes: true
+            }
+        });
+    </script>
+
+
+    
+
+    
+
+</head>
+<body>
+<div id="nav">
+    <nav class="nav-menu">
+        <a class="site-name current" href="/" title="昜">昜</a>
+        <a class="site-index current" href="/"><i class="fa fa-home"></i><span>首页</span></a>
+        <a href="/archives" title="归档"><i class="fa fa-archives"></i><span>归档</span></a>
+        <a href="/tags" title="标签"><i class="fa fa-tags"></i><span>标签</span></a>
+        <!-- custom single page of menus -->
+        
+        
+        <a href="/links" title="收藏夹">
+            <i class="fa fa-star"></i>
+            <span>收藏夹</span>
+        </a>
+        
+        
+        <a href="/photos" title="相册">
+            <i class="fa fa-camera"></i>
+            <span>相册</span>
+        </a>
+        
+        
+        <a href="/about" title="关于">
+            <i class="fa fa-user-circle-o"></i>
+            <span>关于</span>
+        </a>
+        
+    </nav>
+</div>
+
+<div class="nav-user">
+    <a class="btn-search" href="#"><i class="fa fa-search"></i></a>
+    <a class="btn-read-mode" href="#"><i class="fa fa-sun-o"></i></a>
+	<!-- YPN Del 2019-03-22 -->
+    <!-- <a class="btn-sns-qr" href="javascript:"><i class="fa fa-telegram"></i></a> -->
+</div>
+
+<div id="wrapper" class="clearfix">
+    <div id="body">
+        <div class="main" id="main">
+            <div id="cover">
+    <div class="cover-img"></div>
+    <div class="cover-info">
+        
+        <h1 class="cover-siteName">昜丿捺</h1>
+        <h3 class="cover-siteTitle">个人博客</h3>
+        <p class="cover-siteDesc">没有阳光，沉默而居</p>
+        <div class="cover-sns">
+            
+    &nbsp;&nbsp;<div class="btn btn-telegram">
+        <a href="http://t.me/yangpiena" target="_blank" title="telegram" ref="friend">
+            <i class="fa fa-telegram"></i>
+        </a>
+    </div>
+
+    &nbsp;&nbsp;<div class="btn btn-instagram">
+        <a href="https://www.instagram.com/mtangsir/" target="_blank" title="instagram" ref="friend">
+            <i class="fa fa-instagram"></i>
+        </a>
+    </div>
+
+    &nbsp;&nbsp;<div class="btn btn-twitter">
+        <a href="https://twitter.com/yangpiena" target="_blank" title="twitter" ref="friend">
+            <i class="fa fa-twitter"></i>
+        </a>
+    </div>
+
+    &nbsp;&nbsp;<div class="btn btn-github">
+        <a href="https://github.com/yangpiena" target="_blank" title="github" ref="friend">
+            <i class="fa fa-github"></i>
+        </a>
+    </div>
+
+
+        </div>
+    </div>
+</div>
+
+            <div class="page-title">
+    <ul>
+        <li><a href="/">最近</a></li>
+        
+            
+        
+        <li class="page-search">
+    <form id="search" class="search-form">
+        <input type="text" readonly="readonly" id="local-search-input-tip" placeholder="搜索">
+        <button type="button" disabled="disabled" class="search-form-submit"><i class="fa fa-search"></i></button>
+    </form>
+</li>
+
+    </ul>
+</div>
+<div class="main-inner">
+    <article class="post" itemscope="" itemtype="http://schema.org/BlogPosting">
+        <div class="post-header">
+            <h2 class="post-title" style="text-align: center">HAProxy脚本启动和关闭</h2>
+			<div class="post-meta" style="text-align: center">
+				<span title="最后编辑于&nbsp;2018-02-01">2018-02-01</span>
+				<!-- 您是第&nbsp;<span id="busuanzi_value_page_pv"><i class="fa fa-spinner fa-spin"></i></span>位看到它们的小伙伴 -->
+				&nbsp;&nbsp;&nbsp;<span id="busuanzi_value_page_pv"><i class="fa fa-spinner fa-spin"></i></span>↑
+			</div>
+        </div>
+        <div class="post-content markdown-body">
+            <h3 id="CentOS下实现脚本启动和关闭"><a href="#CentOS下实现脚本启动和关闭" class="headerlink" title="CentOS下实现脚本启动和关闭"></a>CentOS下实现脚本启动和关闭</h3><h4 id="1-编写启动脚本"><a href="#1-编写启动脚本" class="headerlink" title="1. 编写启动脚本"></a>1. 编写启动脚本</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vi /etc/rc.d/init.d/haproxy</span><br></pre></td></tr></table></figure>
+<p>本身不存在此文件，使用以上命令，进入vi编辑器，再使用命令保存退出即可新建此文件。<br>打开文件haproxy，贴入如下内容：</p>
+<pre><code>#!/bin/sh
+#chkconfig: 2345 10 90
+#description:haproxy
+#
+# chkconfig: - 85 15
+# description: HA-Proxy is a TCP/HTTP reverse proxy which is particularly suited \
+#              for high availability environments.
+# processname: haproxy
+# config: /etc/haproxy/haproxy.cfg
+# pidfile: /var/run/haproxy.pid
+
+# Script Author: Simon Matter &lt;simon.matter@invoca.ch&gt;
+# Version: 2004060600
+
+# Source function library.
+if [ -f /etc/init.d/functions ]; then
+  . /etc/init.d/functions
+elif [ -f /etc/rc.d/init.d/functions ] ; then
+  . /etc/rc.d/init.d/functions
+else
+  exit 0
+fi
+
+# Source networking configuration.
+. /etc/sysconfig/network
+
+# Check that networking is up.
+[ ${NETWORKING} = &quot;no&quot; ] &amp;&amp; exit 0
+
+# This is our service name
+BASENAME=`basename $0`
+if [ -L $0 ]; then
+  BASENAME=`find $0 -name $BASENAME -printf %l`
+  BASENAME=`basename $BASENAME`
+fi
+
+BIN=/usr/local/haproxy/sbin/haproxy
+
+CFG=/usr/local/haproxy/haproxy.cfg
+[ -f $CFG ] || exit 1
+
+PIDFILE=/var/run/$BASENAME.pid
+LOCKFILE=/var/lock/subsys/$BASENAME
+
+RETVAL=0
+
+start() {
+  quiet_check
+  if [ $? -ne 0 ]; then
+    echo &quot;Errors found in configuration file, check it with &apos;$BASENAME check&apos;.&quot;
+    return 1
+  fi
+
+  echo -n &quot;Starting $BASENAME: &quot;
+  daemon $BIN -D -f $CFG -p $PIDFILE
+  RETVAL=$?
+  echo
+  [ $RETVAL -eq 0 ] &amp;&amp; touch $LOCKFILE
+  return $RETVAL
+}
+
+stop() {
+  echo -n &quot;Shutting down $BASENAME: &quot;
+  killproc $BASENAME -USR1
+  RETVAL=$?
+  echo
+  [ $RETVAL -eq 0 ] &amp;&amp; rm -f $LOCKFILE
+  [ $RETVAL -eq 0 ] &amp;&amp; rm -f $PIDFILE
+  return $RETVAL
+}
+
+restart() {
+  quiet_check
+  if [ $? -ne 0 ]; then
+    echo &quot;Errors found in configuration file, check it with &apos;$BASENAME check&apos;.&quot;
+    return 1
+  fi
+  stop
+  start
+}
+
+reload() {
+  if ! [ -s $PIDFILE ]; then
+    return 0
+  fi
+
+  quiet_check
+  if [ $? -ne 0 ]; then
+    echo &quot;Errors found in configuration file, check it with &apos;$BASENAME check&apos;.&quot;
+    return 1
+  fi
+  $BIN -D -f $CFG -p $PIDFILE -sf $(cat $PIDFILE)
+}
+
+check() {
+  $BIN -c -q -V -f $CFG
+}
+
+quiet_check() {
+  $BIN -c -q -f $CFG
+}
+
+rhstatus() {
+  status $BASENAME
+}
+
+condrestart() {
+  [ -e $LOCKFILE ] &amp;&amp; restart || :
+}
+
+# See how we were called.
+case &quot;$1&quot; in
+  start)
+    start
+    ;;
+  stop)
+    stop
+    ;;
+  restart)
+    restart
+    ;;
+  reload)
+    reload
+    ;;
+  condrestart)
+    condrestart
+    ;;
+  status)
+    rhstatus
+    ;;
+  check)
+    check
+    ;;
+  *)
+    echo $&quot;Usage: $BASENAME {start|stop|restart|reload|condrestart|status|check}&quot;
+    exit 1
+esac
+
+exit $?
+</code></pre><p>如果安装路径有变动，则只需修改上面的<code>BIN=/usr/local/haproxy/sbin/haproxy</code>和<code>CFG=/usr/local/haproxy/haproxy.cfg</code>即可。</p>
+<h4 id="2-脚本随系统自启动"><a href="#2-脚本随系统自启动" class="headerlink" title="2. 脚本随系统自启动"></a>2. 脚本随系统自启动</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">chmod 755 /etc/rc.d/init.d/haproxy  # 添加执行属性</span><br><span class="line">chkconfig --add haproxy            # 添加服务</span><br><span class="line">chkconfig haproxy on</span><br></pre></td></tr></table></figure>
+<p>如果出现结果： <em>service haproxy does not support chkconfig</em><br>解决办法是在 <strong>/etc/rc.d/init.d/haproxy</strong> 中添加下面两句到 <strong>#!/bin/bash</strong> 之后:</p>
+<pre><code>#chkconfig: 2345 10 90
+#description:haproxy
+</code></pre><p>—-其中2345是默认启动级别，级别有0-6共7个级别。<br>—-等级0表示：表示关机<br>—-等级1表示：单用户模式<br>—-等级2表示：无网络连接的多用户命令行模式<br>—-等级3表示：有网络连接的多用户命令行模式<br>—-等级4表示：不可用<br>—-等级5表示：带图形界面的多用户模式<br>—-等级6表示：重新启动<br>—-10是启动优先级，90是停机优先级，优先级范围是0-100，数字越大，优先级越低。</p>
+<blockquote>
+<p>添加后效果如下：<br>    [root@Linux-xx ~]# cat /etc/rc.d/init.d/haproxy</p>
+<pre><code>#!/bin/bash
+#chkconfig: 2345 10 90
+#description:haproxy
+BASE_DIR=&quot;/usr/local/haproxy&quot;
+ARGV=&quot;$@&quot;  
+start()
+...
+...
+</code></pre></blockquote>
+<h4 id="3-启动与关闭"><a href="#3-启动与关闭" class="headerlink" title="3. 启动与关闭"></a>3. 启动与关闭</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">service haproxy start</span><br><span class="line">service haproxy stop</span><br></pre></td></tr></table></figure>
+<hr>
+<h3 id="Suse-Linux-Enterprise-12下实现脚本启动和关闭"><a href="#Suse-Linux-Enterprise-12下实现脚本启动和关闭" class="headerlink" title="Suse Linux Enterprise 12下实现脚本启动和关闭"></a>Suse Linux Enterprise 12下实现脚本启动和关闭</h3><h4 id="1-在-目录下，执行下面命令"><a href="#1-在-目录下，执行下面命令" class="headerlink" title="1. 在~目录下，执行下面命令"></a>1. 在~目录下，执行下面命令</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vim .profile</span><br></pre></td></tr></table></figure>
+<h4 id="2-在-profile文件中定义HAPROXY-HOME变量，并将变量追加到PATH后面，效果如下："><a href="#2-在-profile文件中定义HAPROXY-HOME变量，并将变量追加到PATH后面，效果如下：" class="headerlink" title="2. 在.profile文件中定义HAPROXY_HOME变量，并将变量追加到PATH后面，效果如下："></a>2. 在.profile文件中定义HAPROXY_HOME变量，并将变量追加到PATH后面，效果如下：</h4><pre><code># .profile
+
+# Get the aliases and functions
+if [ -f ~/.bashrc ]; then
+        . ~/.bashrc
+fi
+
+# User specific environment and startup programs
+
+HAPROXY_HOME=/usr/local/haproxy
+PATH=$PATH:$HOME/bin:$HAPROXY_HOME
+
+export HAPROXY_HOME
+export PATH
+</code></pre><p>保存并退出。</p>
+<h4 id="3-执行下面命令，使立即生效"><a href="#3-执行下面命令，使立即生效" class="headerlink" title="3. 执行下面命令，使立即生效"></a>3. 执行下面命令，使立即生效</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">source ~/.profile</span><br></pre></td></tr></table></figure>
+<h4 id="4-执行下面命令，在HAPROXY-HOME目录下创建脚本文件，"><a href="#4-执行下面命令，在HAPROXY-HOME目录下创建脚本文件，" class="headerlink" title="4. 执行下面命令，在HAPROXY_HOME目录下创建脚本文件，"></a>4. 执行下面命令，在HAPROXY_HOME目录下创建脚本文件，</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vim /usr/local/haproxy/haproxy</span><br></pre></td></tr></table></figure>
+<p>在文件中写入如下代码，保存并退出。</p>
+<pre><code>#!/bin/bash
+# /usr/local/haproxy
+# YPN 2018-02-01 Create
+
+if [ &quot;$1&quot;x = &quot;start&quot;x ]; then
+  /usr/local/haproxy/sbin/haproxy -f /usr/local/haproxy/haproxy.cfg
+fi
+if [ &quot;$1&quot;x = &quot;stop&quot;x ]; then
+  killall haproxy
+fi
+if [ &quot;$1&quot;x = &quot;check&quot;x ]; then
+  ps -e|grep haproxy
+fi
+if [ &quot;$1&quot;x = &quot;log&quot;x ]; then
+  tail -f /usr/local/haproxy/logs/haproxy.pid -n 1000
+fi
+</code></pre><h4 id="5-给文件添加权限，使脚本文件可以执行，命令为"><a href="#5-给文件添加权限，使脚本文件可以执行，命令为" class="headerlink" title="5. 给文件添加权限，使脚本文件可以执行，命令为"></a>5. 给文件添加权限，使脚本文件可以执行，命令为</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">chmod 755 /usr/local/haproxy/haproxy</span><br></pre></td></tr></table></figure>
+<h4 id="6-最后，执行下面命令可启动、关闭haproxy或查看日志"><a href="#6-最后，执行下面命令可启动、关闭haproxy或查看日志" class="headerlink" title="6. 最后，执行下面命令可启动、关闭haproxy或查看日志"></a>6. 最后，执行下面命令可启动、关闭haproxy或查看日志</h4><p>启动：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">haproxy start</span><br></pre></td></tr></table></figure></p>
+<p>关闭：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">haproxy stop</span><br></pre></td></tr></table></figure></p>
+<p>查看日志：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">haproxy log</span><br></pre></td></tr></table></figure></p>
+<p>检查haprxy进程：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">haproxy check</span><br></pre></td></tr></table></figure></p>
+<h4 id="7-随系统自启动"><a href="#7-随系统自启动" class="headerlink" title="7. 随系统自启动"></a>7. 随系统自启动</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vim /etc/init.d/boot.local</span><br></pre></td></tr></table></figure>
+<p>加入以下内容，保存退出后生效。</p>
+<pre><code>/usr/local/haproxy/sbin/haproxy -f /usr/local/haproxy/haproxy.cfg
+</code></pre>
+        </div>
+        <div class="post-tool">
+            <a class="btn-thumbs-up" href="javascript:void(0);" data-cid="52" title="95">
+                <i class="fa fa-thumbs-up" aria-hidden="true"></i> 打赏
+            </a>
+        </div>
+        
+        <div class="post-tags">标签：
+            
+            <a href="/tags/HAProxy/">HAProxy</a>
+            
+        </div>
+        
+    </article>
+            <div class="post-author clearfix">
+                <a class="avatar fleft" href="https://yangpiena.coding.me" target="_blank">
+                    <img width="48" src="/img/avatar/ironman.png" alt="avatar">
+                </a>
+                <p><span class="label">作者</span>
+                    <a href="https://yangpiena.coding.me" target="_blank">昜丿捺</a>
+                    <span title="最后编辑于&nbsp;2018-02-01">2018-02-01</span>
+					，共 4704 字 
+                </p>
+                <!-- <p>一个好人</p> -->
+				<!-- YPN Add 2019-03-22 没有authorDesc时，显示一言经典语句-->
+				
+					<script type="text/javascript" src="https://api.lwl12.com/hitokoto/v1?encode=js&charset=utf-8"></script>
+					<p><span id="lwlhitokoto"><script>lwlhitokoto()</script></span></p>
+				
+            </div>
+	<!-- 
+    
+    <p style="text-align: center">本文代表个人观点，内容仅供参考。若有不恰当之处，望不吝赐教！</p>
+    
+	-->
+    
+
+    
+
+</div>
+<script src="/js/busuanzi.pure.mini.js"></script>
+
+
+        </div><!-- end #main-->
+    </div><!-- end #body -->
+    <footer class="footer">
+    <div class="footer-inner" style="text-align: center">
+        <p>
+            <a href="/about" title="关于">关于</a>&nbsp;&nbsp<em>·</em>&nbsp;&nbsp
+            <!-- 自定义链接 -->
+            <a href="/help" title="帮助">帮助</a>&nbsp;&nbsp<em>·</em>&nbsp;&nbsp
+            <a href="/links" title="友链">友链</a>&nbsp;&nbsp<em>·</em>&nbsp;&nbsp
+            <a href="/sitemap.xml" title="地图">地图</a>
+        </p>
+        <p>
+            本站已建立&nbsp<a href="/timeline" id="siteBuildingTime"></a>&nbsp天，<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" rel="licence">采用知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议创作</a><br>
+            ©2016-<span id="cpYear"></span> 基于&nbsp<a href="http://hexo.io" target="_blank" rel="nofollow">Hexo</a>
+            ，主题采用&nbsp&nbsp<a href="https://github.com/tangkunyin/hexo-theme-jsimple" target="_blank" rel="bookmark">JSimple</a>
+            ，作者&nbsp<a href="https://yangpiena.coding.me" target="_blank" rel="friend">昜丿捺</a>
+            ，Hosted by <a href="https://coding.net/" target="_blank" rel="nofollow">Coding Pages</a>
+        </p>
+    </div>
+</footer>
+<script src="/js/SimpleCore.js"></script>
+
+
+<!--2017-10-06 YPN Add 添加鼠标点击特效 -->
+<script type="text/javascript">
+  /* 鼠标点击特效 */
+  var a_idx = 0;
+  jQuery(document).ready(function($) {
+      $("body").click(function(e) {
+  var a = new Array("富强", "民主", "文明", "和谐", "自由", "平等", "公正" ,"法治", "爱国", "敬业", "诚信", "友善");
+  var $i = $("<span/>").text(a[a_idx]);
+          a_idx = (a_idx + 1) % a.length;
+  var x = e.pageX,
+          y = e.pageY;
+          $i.css({
+  "z-index": 999999999999999999999999999999999999999999999999999999999999999999999,
+  "top": y - 20,
+  "left": x,
+  "cursor":"default",
+  "position": "absolute",
+  "font-weight": "bold",
+  "color": "#ff6651"
+          });
+          $("body").append($i);
+          $i.animate({
+  "top": y - 180,
+  "opacity": 0
+          },
+          1500,
+  function() {
+              $i.remove();
+          });
+      });
+  });
+</script>
+
+<!--2017-10-06 YPN Add 添加输入框特效。 -->
+<script src="/js/activate-power-mode.js"></script>
+<script>
+  POWERMODE.colorful = true;  // 控制开启/开启礼花特效  
+  POWERMODE.shake    = false; // 控制开启/关闭屏幕震动特效  
+  document.body.addEventListener('input', POWERMODE);
+</script>
+</div>
+<!-- search pop -->
+<div class="popup search-popup local-search-popup">
+    <div class="local-search-header clearfix">
+        <span class="search-icon">
+            <i class="fa fa-search"></i>
+        </span>
+        <span class="popup-btn-close">
+            <i class="fa fa-times-circle"></i>
+        </span>
+        <div class="local-search-input-wrapper">
+            <input id="local-search-input" spellcheck="false" type="text" autocomplete="off" placeholder="输入关键字搜索">
+        </div>
+    </div>
+    <div id="local-search-result"></div>
+</div>
+<div class="fixed-btn">
+    <a class="btn-gotop" href="javascript:"> <i class="fa fa-angle-up"></i></a>
+</div>
+<script>
+    $(function () {
+        var jsi_config = {
+            buildingTime: '01/20/2018',
+            current: $('.post-tags').length > 0 ? 'post' : 'archive',
+            snsQRCode: '/images/sns-qrcode.png',
+            donateImg: '/images/donate-qr.png',
+            localSearch: { dbPath: '' },
+            readMode: 'day'
+        };
+        
+            jsi_config.localSearch = {
+                dbPath: '/search.xml',
+                trigger: 'auto',
+                topN: '1',
+                unescape: 'false'
+            }
+        
+        SimpleCore.init(jsi_config);
+        
+    });
+</script>
+</body>
+</html>
