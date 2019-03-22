@@ -1,15 +1,13 @@
 ---
-title: 收藏夹
 layout: links
-description: ""
+title: 收藏夹
 date: 2016-11-11 12:31:37
-header-img: "https://picturebed-1258146968.cos.ap-beijing.myqcloud.com/yangpiena-banner.jpg"
-
+description: "记录有用的到的网址"
 ---
 <!-- YPN Add 2017-06-20 新增搜索框 -->
 <div class="search-wrapper" style="padding:0em 0em 0em 0em">
 	<form id="search-form" action="https://www.baidu.com/baidu" target="_blank" _lpchecked="1" >
-		<input id="q-btn"  type="submit" name="btnG" value="谷歌一下" class="button2"            style="width: 100px;"><input id="b-word" type="text" name="word" class="input2" size="40" > <input id="b-btn"  type="submit" value="百度几下" class="button button-hook" style="width: 100px;">
+		<input id="q-btn"  type="submit" name="btnG" value="谷歌一下" class="button2" style="width: 100px;">  <input id="b-word" type="text" name="word" class="input2" size="40" style="width: 70%;">  <input id="b-btn"  type="submit" value="百度几下" class="button button-hook" style="width: 100px;">
 	</form>
 	<script>
 		$('#b-btn, #q-btn').focus(function() {
@@ -28,7 +26,6 @@ header-img: "https://picturebed-1258146968.cos.ap-beijing.myqcloud.com/yangpiena
 
 
 #### 常用
-header-img: "/img/header_img/tag.png"
 [百度翻译](https://fanyi.baidu.com/)|  [谷歌搜索](https://www.google.com/ncr)        |  [谷歌香港](https://www.google.com.hk/ncr)   |  [维基百科](https://www.wikipedia.org/)
 [CSDN.NET](http://www.csdn.net/)    |  [VeryCD 电驴大全](http://www.verycd.com/)     |  [360doc个人图书馆](http://www.360doc.com/)  |[cnBeta](http://www.cnbeta.com/)    |  [果壳](http://www.guokr.com/)                 |  [少数派](https://sspai.com/)                |  [数字尾巴](http://www.dgtle.com/)
 [免费吧](http://www.mianfeib.com/)  |  [老D博客](https://laod.cn/)                   |  [行客工作室](http://www.runker.net/)        |  [黑果小兵](https://blog.daliansky.net/)
@@ -224,6 +221,7 @@ header-img: "/img/header_img/tag.png"
 #### Hexo
 [hexo常用命令笔记](https://segmentfault.com/a/1190000002632530)
 [Windows下使用Hexo+GithubPage搭建博客](http://blog.csdn.net/wx_jin/article/details/51027783)
+[Hexo博客的常用配置修改](https://www.jianshu.com/p/0fe7dd8a0e8b?winzoom=1)
 [Hexo常见问题](http://wp.huangshiyang.com/hexo%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88)                                                               |  [Hexo博客优化](http://xwartz.xyz/blog/2016/09/reduce-blog-load-time/)
 [Hexo官方主题](https://hexo.io/themes/)                        |  [Hexo主题](https://github.com/hexojs/hexo/wiki/Themes)
 [Hexo博客主题从Jacman切换到NexT.Mist ](http://codepub.cn/2016/03/20/Hexo-blog-theme-switching-from-Jacman-to-NexT-Mist/)

@@ -1,0 +1,1117 @@
+<!DOCTYPE HTML>
+<html class="no-js" lang="zh-CN">
+<head><meta name="generator" content="Hexo 3.8.0">
+    <!--[if lte IE 9]>
+<meta http-equiv="refresh" content="0;url=http://yangpiena.coding.me/warn.html">
+<![endif]-->
+<meta charset="utf-8">
+<meta http-equiv="X-DNS-Prefetch-Control" content="on">
+<link rel="dns-prefetch" href="http://yangpiena.coding.me">
+<link rel="dns-prefetch" href="//www.google-analytics.com">
+<link rel="prefetch" href="http://yangpiena.coding.me">
+<link rel="prefetch" href="//www.google-analytics.com">
+
+
+<link rel="prerender" href="http://yangpiena.coding.me">
+
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<meta name="renderer" content="webkit">
+<meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=no">
+<meta http-equiv="mobile-agent" content="format=html5; url=http://yangpiena.coding.me">
+<meta name="author" content="昜丿捺">
+<link rel="stylesheet" href="/css/JSimple.css">
+
+<link rel="shortcut icon" href="/images/favicon.ico">
+
+
+<title>【linux】命令学习 - 昜丿捺</title>
+
+<meta name="keywords" content="undefined">
+
+<meta name="description " content="没有阳光，沉默而居">
+
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({
+            tex2jax: {
+                inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+                processEscapes: true
+            }
+        });
+    </script>
+
+
+    
+
+    
+
+</head>
+<body>
+<div id="nav">
+    <nav class="nav-menu">
+        <a class="site-name current" href="/" title="昜">昜</a>
+        <a class="site-index current" href="/"><i class="fa fa-home"></i><span>首页</span></a>
+        <a href="/archives" title="归档"><i class="fa fa-archives"></i><span>归档</span></a>
+        <a href="/tags" title="标签"><i class="fa fa-tags"></i><span>标签</span></a>
+        <!-- custom single page of menus -->
+        
+        
+        <a href="/links" title="收藏夹">
+            <i class="fa fa-star"></i>
+            <span>收藏夹</span>
+        </a>
+        
+        
+        <a href="/photos" title="相册">
+            <i class="fa fa-camera"></i>
+            <span>相册</span>
+        </a>
+        
+        
+        <a href="/about" title="关于">
+            <i class="fa fa-user-circle-o"></i>
+            <span>关于</span>
+        </a>
+        
+    </nav>
+</div>
+
+<div class="nav-user">
+    <a class="btn-search" href="#"><i class="fa fa-search"></i></a>
+    <a class="btn-read-mode" href="#"><i class="fa fa-sun-o"></i></a>
+	<!-- YPN Del 2019-03-22 -->
+    <!-- <a class="btn-sns-qr" href="javascript:"><i class="fa fa-telegram"></i></a> -->
+</div>
+
+<div id="wrapper" class="clearfix">
+    <div id="body">
+        <div class="main" id="main">
+            <div id="cover">
+    <div class="cover-img"></div>
+    <div class="cover-info">
+        
+        <h1 class="cover-siteName">昜丿捺</h1>
+        <h3 class="cover-siteTitle">个人博客</h3>
+        <p class="cover-siteDesc">没有阳光，沉默而居</p>
+        <div class="cover-sns">
+            
+    &nbsp;&nbsp;<div class="btn btn-telegram">
+        <a href="http://t.me/yangpiena" target="_blank" title="telegram" ref="friend">
+            <i class="fa fa-telegram"></i>
+        </a>
+    </div>
+
+    &nbsp;&nbsp;<div class="btn btn-instagram">
+        <a href="https://www.instagram.com/mtangsir/" target="_blank" title="instagram" ref="friend">
+            <i class="fa fa-instagram"></i>
+        </a>
+    </div>
+
+    &nbsp;&nbsp;<div class="btn btn-twitter">
+        <a href="https://twitter.com/yangpiena" target="_blank" title="twitter" ref="friend">
+            <i class="fa fa-twitter"></i>
+        </a>
+    </div>
+
+    &nbsp;&nbsp;<div class="btn btn-github">
+        <a href="https://github.com/yangpiena" target="_blank" title="github" ref="friend">
+            <i class="fa fa-github"></i>
+        </a>
+    </div>
+
+
+        </div>
+    </div>
+</div>
+
+            <div class="page-title">
+    <ul>
+        <li><a href="/">最近</a></li>
+        
+            
+        
+        <li class="page-search">
+    <form id="search" class="search-form">
+        <input type="text" readonly="readonly" id="local-search-input-tip" placeholder="搜索">
+        <button type="button" disabled="disabled" class="search-form-submit"><i class="fa fa-search"></i></button>
+    </form>
+</li>
+
+    </ul>
+</div>
+<div class="main-inner">
+    <article class="post" itemscope="" itemtype="http://schema.org/BlogPosting">
+        <div class="post-header">
+            <div class="post-author clearfix">
+                <a class="avatar fleft" href="https://yangpiena.coding.me" target="_blank">
+                    <img width="48" src="/images/favicon.png" alt="avatar">
+                </a>
+                <p><span class="label">作者</span>
+                    <a href="https://yangpiena.coding.me" target="_blank">昜丿捺</a>
+                    <span title="最后编辑于&nbsp;2016-11-22">2016-11-22</span>
+                </p>
+                <p>一个好人</p>
+            </div>
+            <h2 class="post-title">【Linux】命令学习</h2>
+            <div class="post-meta">
+                本文共计5711个字 |
+                您是第&nbsp;<span id="busuanzi_value_page_pv"><i class="fa fa-spinner fa-spin"></i></span>位看到它们的小伙伴
+            </div>
+        </div>
+        <div class="post-content markdown-body">
+            <h2 id="基础命令"><a href="#基础命令" class="headerlink" title="基础命令"></a>基础命令</h2><h3 id="系统"><a href="#系统" class="headerlink" title="系统"></a>系统</h3><table>
+<thead>
+<tr>
+<th>命令</th>
+<th style="text-align:left">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>reboot</td>
+<td style="text-align:left">重启系统</td>
+</tr>
+<tr>
+<td>shutdown -r now</td>
+<td style="text-align:left">重启系统</td>
+</tr>
+<tr>
+<td>shutdown -c</td>
+<td style="text-align:left">取消重启</td>
+</tr>
+<tr>
+<td>halt</td>
+<td style="text-align:left">立刻关机</td>
+</tr>
+<tr>
+<td>poweroff</td>
+<td style="text-align:left">立刻关机</td>
+</tr>
+<tr>
+<td>shutdown -h now</td>
+<td style="text-align:left">立刻关机（root用户使用）</td>
+</tr>
+<tr>
+<td>shutdown -h 10</td>
+<td style="text-align:left">10分钟后自动关机</td>
+</tr>
+<tr>
+<td>yum update</td>
+<td style="text-align:left">升级Linux，升级所有包同时也升级软件和系统内核</td>
+</tr>
+<tr>
+<td>yum upgrade</td>
+<td style="text-align:left">升级Linux，只升级所有包，不升级软件和系统内核</td>
+</tr>
+<tr>
+<td>——————————————–</td>
+<td style="text-align:left">————————————————————————–</td>
+</tr>
+<tr>
+<td>cat /proc/version</td>
+<td style="text-align:left">查看内核版本</td>
+</tr>
+<tr>
+<td>uname -a</td>
+<td style="text-align:left">查看内核版本</td>
+</tr>
+<tr>
+<td>lsb_release -a</td>
+<td style="text-align:left">查看系统版本</td>
+</tr>
+<tr>
+<td>cat /etc/issue</td>
+<td style="text-align:left">查看系统版本</td>
+</tr>
+<tr>
+<td>cat /etc/redhat-release</td>
+<td style="text-align:left">查看系统版本（只适合Redhat系）</td>
+</tr>
+<tr>
+<td>getconf LONG_BIT</td>
+<td style="text-align:left">查看系统位数</td>
+</tr>
+<tr>
+<td>cat /proc/cpuinfo</td>
+<td style="text-align:left">查看CPU型号</td>
+</tr>
+<tr>
+<td>top</td>
+<td style="text-align:left">查看实时CPU使用率</td>
+</tr>
+<tr>
+<td>ps aux</td>
+<td style="text-align:left">head -1;ps aux</td>
+<td>grep -v PID</td>
+<td>sort -rn -k +3</td>
+<td>head</td>
+<td>查看占用CPU最多的10个进程。head默认取前10行，自定义K行时，在后面跟-K即可</td>
+</tr>
+<tr>
+<td>free -m</td>
+<td style="text-align:left">查看内存</td>
+</tr>
+<tr>
+<td>ps aux</td>
+<td style="text-align:left">head -1;ps aux</td>
+<td>grep -v PID</td>
+<td>sort -rn -k +4</td>
+<td>head</td>
+<td>查看占用内存最多的10个进程。head默认取前10行，自定义K行时，在后面跟-K即可</td>
+</tr>
+<tr>
+<td>df -l</td>
+<td style="text-align:left">查看硬盘空间情况</td>
+</tr>
+<tr>
+<td>du -sh ./*</td>
+<td style="text-align:left">查看当前目录下各文件/文件夹的大小</td>
+</tr>
+<tr>
+<td>jps</td>
+<td style="text-align:left">查看当前所有Java进程pid的命令</td>
+</tr>
+<tr>
+<td>kill</td>
+<td style="text-align:left">删除执行中的程序或工作</td>
+</tr>
+<tr>
+<td>kill -9</td>
+<td style="text-align:left">强制终止执行中的程序或工作</td>
+</tr>
+</tbody>
+</table>
+<a id="more"></a>
+<hr>
+<h3 id="文件"><a href="#文件" class="headerlink" title="文件"></a>文件</h3><table>
+<thead>
+<tr>
+<th>命令</th>
+<th style="text-align:left">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>cd</td>
+<td style="text-align:left">改变目录到</td>
+</tr>
+<tr>
+<td>cd ~</td>
+<td style="text-align:left">回到家目录</td>
+</tr>
+<tr>
+<td>pwd</td>
+<td style="text-align:left">查看当前路径</td>
+</tr>
+<tr>
+<td>mkdir</td>
+<td style="text-align:left">创建文件夹</td>
+</tr>
+<tr>
+<td>touch</td>
+<td style="text-align:left">创建文件</td>
+</tr>
+<tr>
+<td>rm</td>
+<td style="text-align:left">删除文件</td>
+</tr>
+<tr>
+<td>rm -r</td>
+<td style="text-align:left">删除文件夹</td>
+</tr>
+<tr>
+<td>rm -fr</td>
+<td style="text-align:left">直接删除，无需确认</td>
+</tr>
+<tr>
+<td>cp</td>
+<td style="text-align:left">复制</td>
+</tr>
+<tr>
+<td>mv</td>
+<td style="text-align:left">移动</td>
+</tr>
+<tr>
+<td>find</td>
+<td style="text-align:left">查找</td>
+</tr>
+<tr>
+<td>which</td>
+<td style="text-align:left">查找</td>
+</tr>
+<tr>
+<td>cat</td>
+<td style="text-align:left">查看文本内容</td>
+</tr>
+<tr>
+<td>head</td>
+<td style="text-align:left">查看文本前十行</td>
+</tr>
+<tr>
+<td>tail</td>
+<td style="text-align:left">查看文本后十行</td>
+</tr>
+<tr>
+<td>more</td>
+<td style="text-align:left">让文件内容一屏一屏的显示</td>
+</tr>
+<tr>
+<td>cat XXX &#124; more</td>
+<td style="text-align:left">管道：将cat显示出来的内容重新输出给more命令</td>
+</tr>
+<tr>
+<td>&gt;</td>
+<td style="text-align:left">重定向：将文件内容输出到指定的文件或位置。如cat /etc/services &gt; a.txt</td>
+</tr>
+<tr>
+<td>——————————————–</td>
+<td style="text-align:left">————————————————————————–</td>
+</tr>
+<tr>
+<td>ls -i</td>
+<td style="text-align:left">使用ls -i命令找到文件或文件夹的节点编号</td>
+</tr>
+<tr>
+<td>find -inum 2243223 -delete</td>
+<td style="text-align:left">使用find命令查询并且删除乱码文件或文件夹</td>
+</tr>
+<tr>
+<td>——————————————–</td>
+<td style="text-align:left">————————————————————————–</td>
+</tr>
+<tr>
+<td>rm -rf fileA</td>
+<td style="text-align:left">删除文件或文件夹fileA的软链接</td>
+</tr>
+<tr>
+<td>ln -s fileB fileA</td>
+<td style="text-align:left">设置软链接用快捷方式fileB代替fileA</td>
+</tr>
+<tr>
+<td>ln fileB fileA</td>
+<td style="text-align:left">建立硬链接，相当于一个文件存储在两个位置，可以有效防止误删</td>
+</tr>
+<tr>
+<td>—————————————————-</td>
+<td style="text-align:left">——————————————————————</td>
+</tr>
+<tr>
+<td><strong>删除指定文件夹下后缀名相同的文件</strong></td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td>—————————————————-</td>
+<td style="text-align:left">——————————————————————</td>
+</tr>
+<tr>
+<td>find 目录 -name ‘*.abc’ &#124; xargs rm</td>
+<td style="text-align:left">命令危险，可先执行前半段进行查看, 确认后再整条执行</td>
+</tr>
+<tr>
+<td>find . -name ‘*.exe’ -type f -print -exec rm -rf {} \;</td>
+<td style="text-align:left">1) “.”表示从当前目录开始递归查找</td>
+</tr>
+<tr>
+<td></td>
+<td style="text-align:left">2) “-name ‘*.exe’”根据名称来查找所有以.exe结尾的文件夹或者文件</td>
+</tr>
+<tr>
+<td></td>
+<td style="text-align:left">3) “-type f”查找的类型为文件</td>
+</tr>
+<tr>
+<td></td>
+<td style="text-align:left">4) “-print”输出查找的文件目录名</td>
+</tr>
+<tr>
+<td></td>
+<td style="text-align:left">5) “-exec”后边跟要执行的命令，表示将find出来的文件或目录执行该命令</td>
+</tr>
+<tr>
+<td></td>
+<td style="text-align:left">最后是一对{}，一个空格和一个\，一个分号</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="网络"><a href="#网络" class="headerlink" title="网络"></a>网络</h3><table>
+<thead>
+<tr>
+<th>命令</th>
+<th style="text-align:left">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>netstat -apn</td>
+<td style="text-align:left">查看所有的进程和端口使用情况</td>
+</tr>
+<tr>
+<td>——————————————–</td>
+<td style="text-align:left">————————————————————————–</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="vi"><a href="#vi" class="headerlink" title="vi"></a>vi</h3><table>
+<thead>
+<tr>
+<th>命令</th>
+<th style="text-align:left">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>——————————————–</td>
+<td style="text-align:left">————————————————————————–</td>
+</tr>
+<tr>
+<td><strong>进入vi</strong></td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td>——————————————–</td>
+<td style="text-align:left">————————————————————————–</td>
+</tr>
+<tr>
+<td>vi filename</td>
+<td style="text-align:left">打开或新建文件，并将光标置于第一行首</td>
+</tr>
+<tr>
+<td>vi +n filename</td>
+<td style="text-align:left">打开文件，并将光标置于第n行首</td>
+</tr>
+<tr>
+<td>vi + filename</td>
+<td style="text-align:left">打开文件，并将光标置于最后一行首</td>
+</tr>
+<tr>
+<td>vi +/pattern filename</td>
+<td style="text-align:left">打开文件，并将光标置于第一个与pattern匹配的串处</td>
+</tr>
+<tr>
+<td>vi -r filename</td>
+<td style="text-align:left">在上次正用vi编辑时发生系统崩溃，恢复filename</td>
+</tr>
+<tr>
+<td>vi filename….filename</td>
+<td style="text-align:left">打开多个文件，依次进行编辑</td>
+</tr>
+<tr>
+<td>——————————————–</td>
+<td style="text-align:left">————————————————————————–</td>
+</tr>
+<tr>
+<td><strong>保存退出</strong></td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td>——————————————–</td>
+<td style="text-align:left">————————————————————————–</td>
+</tr>
+<tr>
+<td>:</td>
+<td style="text-align:left">进入Last line mode</td>
+</tr>
+<tr>
+<td>w</td>
+<td style="text-align:left">保存当前文件</td>
+</tr>
+<tr>
+<td>w /tmp1</td>
+<td style="text-align:left">另存为/tmp1</td>
+</tr>
+<tr>
+<td>20,59w /tmp1</td>
+<td style="text-align:left">仅将20-59行之间的内存另存为/tmp1</td>
+</tr>
+<tr>
+<td>x 或 wq</td>
+<td style="text-align:left">保存并退出</td>
+</tr>
+<tr>
+<td>q</td>
+<td style="text-align:left">退出vi</td>
+</tr>
+<tr>
+<td>q!</td>
+<td style="text-align:left">退出不保存</td>
+</tr>
+<tr>
+<td>!command</td>
+<td style="text-align:left">执行shell命令command</td>
+</tr>
+<tr>
+<td>n1,n2 w !command</td>
+<td style="text-align:left">将文件中n1行至n2行的内容作为command的输入并执行之，若不指定n1，n2，则表示将整个文件内容作为command的输入</td>
+</tr>
+<tr>
+<td>r !command</td>
+<td style="text-align:left">将命令command的输出结果放到当前行</td>
+</tr>
+<tr>
+<td>w !sudo tee %</td>
+<td style="text-align:left">保存没权限时，可获取权限再保存</td>
+</tr>
+<tr>
+<td>——————————————–</td>
+<td style="text-align:left">————————————————————————–</td>
+</tr>
+<tr>
+<td><strong>光标移动</strong></td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td>——————————————–</td>
+<td style="text-align:left">————————————————————————–</td>
+</tr>
+<tr>
+<td>h</td>
+<td style="text-align:left">光标左移一个字符</td>
+</tr>
+<tr>
+<td>Backspace</td>
+<td style="text-align:left">光标左移一个字符</td>
+</tr>
+<tr>
+<td>l</td>
+<td style="text-align:left">光标右移一个字符</td>
+</tr>
+<tr>
+<td>spac</td>
+<td style="text-align:left">光标右移一个字符</td>
+</tr>
+<tr>
+<td>k 或 Ctrl+p</td>
+<td style="text-align:left">光标上移一行</td>
+</tr>
+<tr>
+<td>j 或 Ctrl+n</td>
+<td style="text-align:left">光标下移一行</td>
+</tr>
+<tr>
+<td>Enter</td>
+<td style="text-align:left">光标下移一行</td>
+</tr>
+<tr>
+<td>w 或 W</td>
+<td style="text-align:left">光标右移一个字至字首</td>
+</tr>
+<tr>
+<td>b 或 B</td>
+<td style="text-align:left">光标左移一个字至字首</td>
+</tr>
+<tr>
+<td>e 或 E</td>
+<td style="text-align:left">光标右移一个字至字尾</td>
+</tr>
+<tr>
+<td>)</td>
+<td style="text-align:left">光标移至句尾</td>
+</tr>
+<tr>
+<td>(</td>
+<td style="text-align:left">光标移至句首</td>
+</tr>
+<tr>
+<td>}</td>
+<td style="text-align:left">光标移至段落开头</td>
+</tr>
+<tr>
+<td>{</td>
+<td style="text-align:left">光标移至段落结尾</td>
+</tr>
+<tr>
+<td>nG</td>
+<td style="text-align:left">光标移至第n行首</td>
+</tr>
+<tr>
+<td>n+</td>
+<td style="text-align:left">光标下移n行</td>
+</tr>
+<tr>
+<td>n-</td>
+<td style="text-align:left">光标上移n行</td>
+</tr>
+<tr>
+<td>n$</td>
+<td style="text-align:left">光标移至第n行尾</td>
+</tr>
+<tr>
+<td>H</td>
+<td style="text-align:left">光标移至屏幕顶行</td>
+</tr>
+<tr>
+<td>M</td>
+<td style="text-align:left">光标移至屏幕中间行</td>
+</tr>
+<tr>
+<td>L</td>
+<td style="text-align:left">光标移至屏幕最后行</td>
+</tr>
+<tr>
+<td>0</td>
+<td style="text-align:left">（注意是数字零）光标移至当前行首</td>
+</tr>
+<tr>
+<td>$</td>
+<td style="text-align:left">光标移至当前行尾</td>
+</tr>
+<tr>
+<td>——————————————–</td>
+<td style="text-align:left">————————————————————————–</td>
+</tr>
+<tr>
+<td><strong>屏幕翻滚</strong></td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td>——————————————–</td>
+<td style="text-align:left">————————————————————————–</td>
+</tr>
+<tr>
+<td>Ctrl+u</td>
+<td style="text-align:left">向文件首翻半屏</td>
+</tr>
+<tr>
+<td>Ctrl+d</td>
+<td style="text-align:left">向文件尾翻半屏</td>
+</tr>
+<tr>
+<td>Ctrl+f</td>
+<td style="text-align:left">向文件尾翻一屏</td>
+</tr>
+<tr>
+<td>Ctrl+b</td>
+<td style="text-align:left">向文件首翻一屏</td>
+</tr>
+<tr>
+<td>nz</td>
+<td style="text-align:left">将第n行滚至屏幕顶部，不指定n时将当前行滚至屏幕顶部</td>
+</tr>
+<tr>
+<td>——————————————–</td>
+<td style="text-align:left">————————————————————————–</td>
+</tr>
+<tr>
+<td><strong>插入</strong></td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td>——————————————–</td>
+<td style="text-align:left">————————————————————————–</td>
+</tr>
+<tr>
+<td>i</td>
+<td style="text-align:left">在光标前</td>
+</tr>
+<tr>
+<td>I</td>
+<td style="text-align:left">在当前行首</td>
+</tr>
+<tr>
+<td>a</td>
+<td style="text-align:left">光标后</td>
+</tr>
+<tr>
+<td>A</td>
+<td style="text-align:left">在当前行尾</td>
+</tr>
+<tr>
+<td>o</td>
+<td style="text-align:left">在当前行之下新开一行</td>
+</tr>
+<tr>
+<td>O</td>
+<td style="text-align:left">在当前行之上新开一行</td>
+</tr>
+<tr>
+<td>r</td>
+<td style="text-align:left">替换当前字符</td>
+</tr>
+<tr>
+<td>R</td>
+<td style="text-align:left">替换当前字符及其后的字符，直至按ESC键</td>
+</tr>
+<tr>
+<td>s</td>
+<td style="text-align:left">从当前光标位置处开始，以输入的文本替代指定数目的字符</td>
+</tr>
+<tr>
+<td>S</td>
+<td style="text-align:left">删除指定数目的行，并以所输入文本代替之</td>
+</tr>
+<tr>
+<td>ncw 或 nCW</td>
+<td style="text-align:left">修改指定数目的字</td>
+</tr>
+<tr>
+<td>nCC</td>
+<td style="text-align:left">修改指定数目的行</td>
+</tr>
+<tr>
+<td>——————————————–</td>
+<td style="text-align:left">————————————————————————–</td>
+</tr>
+<tr>
+<td><strong>删除</strong></td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td>——————————————–</td>
+<td style="text-align:left">————————————————————————–</td>
+</tr>
+<tr>
+<td>ndw 或 ndW</td>
+<td style="text-align:left">删除光标处开始及其后的n-1个字</td>
+</tr>
+<tr>
+<td>do</td>
+<td style="text-align:left">删至行首</td>
+</tr>
+<tr>
+<td>d$</td>
+<td style="text-align:left">删至行尾</td>
+</tr>
+<tr>
+<td>ndd</td>
+<td style="text-align:left">删除当前行及其后n-1行</td>
+</tr>
+<tr>
+<td>x 或 X</td>
+<td style="text-align:left">删除一个字符，x删除光标后的，而X删除光标前的</td>
+</tr>
+<tr>
+<td>Ctrl+u</td>
+<td style="text-align:left">删除输入方式下所输入的文本</td>
+</tr>
+<tr>
+<td>n1,n2 d</td>
+<td style="text-align:left">将n1行到n2行之间的内容删除</td>
+</tr>
+<tr>
+<td>%d</td>
+<td style="text-align:left">删除全部内容</td>
+</tr>
+<tr>
+<td>1,$d</td>
+<td style="text-align:left">删除全部内容</td>
+</tr>
+<tr>
+<td>——————————————–</td>
+<td style="text-align:left">————————————————————————–</td>
+</tr>
+<tr>
+<td><strong>复制粘贴、剪切、移动</strong></td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td>——————————————–</td>
+<td style="text-align:left">————————————————————————–</td>
+</tr>
+<tr>
+<td>yy</td>
+<td style="text-align:left">复制当前行</td>
+</tr>
+<tr>
+<td>nyy</td>
+<td style="text-align:left">复制当前行开始的n行</td>
+</tr>
+<tr>
+<td>先按 v 然后方向键选择区域，按 y 复制选中行</td>
+<td style="text-align:left">复制选中行</td>
+</tr>
+<tr>
+<td>dd</td>
+<td style="text-align:left">剪切当前行</td>
+</tr>
+<tr>
+<td>p（小）</td>
+<td style="text-align:left">在当前光标处下面粘贴内容。</td>
+</tr>
+<tr>
+<td>P（大）</td>
+<td style="text-align:left">在当前光标处上面粘贴内容</td>
+</tr>
+<tr>
+<td>n1,n2 co n3</td>
+<td style="text-align:left">将n1行到n2行之间的内容拷贝到第n3行下</td>
+</tr>
+<tr>
+<td>n1,n2 m n3</td>
+<td style="text-align:left">将n1行到n2行之间的内容移至到第n3行下</td>
+</tr>
+<tr>
+<td>u</td>
+<td style="text-align:left">撤销上一步的操作</td>
+</tr>
+<tr>
+<td>Ctrl+r</td>
+<td style="text-align:left">恢复上一步被撤销的操作</td>
+</tr>
+<tr>
+<td>——————————————–</td>
+<td style="text-align:left">————————————————————————–</td>
+</tr>
+<tr>
+<td><strong>搜索（查找）</strong></td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td>——————————————–</td>
+<td style="text-align:left">————————————————————————–</td>
+</tr>
+<tr>
+<td>/abc</td>
+<td style="text-align:left">从光标开始处向文件尾搜索abc</td>
+</tr>
+<tr>
+<td>?abc</td>
+<td style="text-align:left">从光标开始处向文件首搜索abc</td>
+</tr>
+<tr>
+<td>/\/abc</td>
+<td style="text-align:left">从光标开始处向文件尾搜索/abc，其中\/是转义</td>
+</tr>
+<tr>
+<td>n</td>
+<td style="text-align:left">在同一方向重复上一次搜索命令</td>
+</tr>
+<tr>
+<td>N</td>
+<td style="text-align:left">在反方向上重复上一次搜索命令</td>
+</tr>
+<tr>
+<td>——————————————–</td>
+<td style="text-align:left">————————————————————————–</td>
+</tr>
+<tr>
+<td><strong>替换</strong></td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td>——————————————–</td>
+<td style="text-align:left">————————————————————————–</td>
+</tr>
+<tr>
+<td>s/vivian/sky/</td>
+<td style="text-align:left">替换当前行第一个 vivian 为 sky</td>
+</tr>
+<tr>
+<td>s/vivian/sky/g</td>
+<td style="text-align:left">替换当前行所有 vivian 为 sky</td>
+</tr>
+<tr>
+<td>n,$s/vivian/sky/</td>
+<td style="text-align:left">替换第 n 行开始到最后一行中每一行的第一个 vivian 为 sky</td>
+</tr>
+<tr>
+<td>n,$s/vivian/sky/g</td>
+<td style="text-align:left">替换第 n 行开始到最后一行中每一行所有 vivian 为sky</td>
+</tr>
+<tr>
+<td>%s/vivian/sky/g</td>
+<td style="text-align:left">（等同于 g/vivian/s//sky/） 替换每一行的每一个 vivian 为 sky</td>
+</tr>
+<tr>
+<td>s#vivian/#sky/#</td>
+<td style="text-align:left">替换当前行第一个 vivian/ 为 sky/（可以使用 #或+作为分隔符，此时中间出现的 / 不会作为分隔符）</td>
+</tr>
+<tr>
+<td>s/p1/p2/g</td>
+<td style="text-align:left">将当前行中所有p1均用p2替代</td>
+</tr>
+<tr>
+<td>n1,n2s/p1/p2/g</td>
+<td style="text-align:left">将第n1至n2行中所有p1均用p2替代</td>
+</tr>
+<tr>
+<td>g/p1/s//p2/g</td>
+<td style="text-align:left">将文件中所有p1均用p2替换</td>
+</tr>
+<tr>
+<td>——————————————–</td>
+<td style="text-align:left">————————————————————————–</td>
+</tr>
+<tr>
+<td><strong>寄存器</strong></td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td>——————————————–</td>
+<td style="text-align:left">————————————————————————–</td>
+</tr>
+<tr>
+<td>“?nyy</td>
+<td style="text-align:left">将当前行及其下n行的内容保存到寄存器？中，其中?为一个字母，n为一个数字</td>
+</tr>
+<tr>
+<td>“?nyw</td>
+<td style="text-align:left">将当前行及其下n个字保存到寄存器？中，其中?为一个字母，n为一个数字</td>
+</tr>
+<tr>
+<td>“?nyl</td>
+<td style="text-align:left">将当前行及其下n个字符保存到寄存器？中，其中?为一个字母，n为一个数字</td>
+</tr>
+<tr>
+<td>“?p</td>
+<td style="text-align:left">取出寄存器？中的内容并将其放到光标位置处。这里？可以是一个字母，也可以是一个数字</td>
+</tr>
+<tr>
+<td>ndd</td>
+<td style="text-align:left">将当前行及其下共n行文本删除，并将所删内容放到1号删除寄存器中。</td>
+</tr>
+<tr>
+<td>——————————————–</td>
+<td style="text-align:left">————————————————————————–</td>
+</tr>
+<tr>
+<td><strong>选项设置</strong></td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td>——————————————–</td>
+<td style="text-align:left">————————————————————————–</td>
+</tr>
+<tr>
+<td>set number</td>
+<td style="text-align:left">显示行号</td>
+</tr>
+<tr>
+<td>set number!</td>
+<td style="text-align:left">不显示行号，其它选项同理加！号</td>
+</tr>
+<tr>
+<td>set all</td>
+<td style="text-align:left">列出所有选项设置情况</td>
+</tr>
+<tr>
+<td>set term</td>
+<td style="text-align:left">设置终端类型</td>
+</tr>
+<tr>
+<td>set ignorance</td>
+<td style="text-align:left">在搜索中忽略大小写</td>
+</tr>
+<tr>
+<td>set list</td>
+<td style="text-align:left">显示制表位(Ctrl+I)和行尾标志（$)</td>
+</tr>
+<tr>
+<td>set report</td>
+<td style="text-align:left">显示由面向行的命令修改过的数目</td>
+</tr>
+<tr>
+<td>set terse</td>
+<td style="text-align:left">显示简短的警告信息</td>
+</tr>
+<tr>
+<td>set warn</td>
+<td style="text-align:left">在转到别的文件时若没保存当前文件则显示NO write信息</td>
+</tr>
+<tr>
+<td>set nomagic</td>
+<td style="text-align:left">允许在搜索模式中，使用前面不带“\”的特殊字符</td>
+</tr>
+<tr>
+<td>set nowrapscan</td>
+<td style="text-align:left">禁止vi在搜索到达文件两端时，又从另一端开始</td>
+</tr>
+<tr>
+<td>set mesg</td>
+<td style="text-align:left">允许vi显示其他用户用write写到自己终端上的信息</td>
+</tr>
+</tbody>
+</table>
+
+        </div>
+        <div class="post-tool">
+            <a class="btn-thumbs-up" href="javascript:void(0);" data-cid="52" title="95">
+                <i class="fa fa-thumbs-up" aria-hidden="true"></i> 打赏
+            </a>
+        </div>
+        
+        <div class="post-tags">标签：
+            
+            <a href="/tags/Linux/">Linux</a>
+            
+            <a href="/tags/命令/">命令</a>
+            
+        </div>
+        
+    </article>
+    
+    <p style="text-align: center">本文代表个人观点，内容仅供参考。若有不恰当之处，望不吝赐教！</p>
+    
+    
+
+    
+
+</div>
+<script src="/js/busuanzi.pure.mini.js"></script>
+
+
+        </div><!-- end #main-->
+    </div><!-- end #body -->
+    <footer class="footer">
+    <div class="footer-inner" style="text-align: center">
+        <p>
+            <a href="/about" title="关于">关于</a>&nbsp;&nbsp<em>·</em>&nbsp;&nbsp
+            <!-- 自定义链接 -->
+            <a href="/help" title="帮助">帮助</a>&nbsp;&nbsp<em>·</em>&nbsp;&nbsp
+            <a href="/links" title="友链">友链</a>&nbsp;&nbsp<em>·</em>&nbsp;&nbsp
+            <a href="/sitemap.xml" title="地图">地图</a>
+        </p>
+        <p>
+            本站已建立&nbsp<a href="/timeline" id="siteBuildingTime"></a>&nbsp天，<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" rel="licence">采用知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议创作</a><br>
+            ©2016-<span id="cpYear"></span> 基于&nbsp<a href="http://hexo.io" target="_blank" rel="nofollow">Hexo</a>
+            ，主题采用&nbsp&nbsp<a href="https://github.com/tangkunyin/hexo-theme-jsimple" target="_blank" rel="bookmark">JSimple</a>
+            ，作者&nbsp<a href="https://yangpiena.coding.me" target="_blank" rel="friend">昜丿捺</a>
+            ，Hosted by <a href="https://coding.net/" target="_blank" rel="nofollow">Coding Pages</a>
+        </p>
+    </div>
+</footer>
+<script src="/js/SimpleCore.js"></script>
+
+</div>
+<!-- search pop -->
+<div class="popup search-popup local-search-popup">
+    <div class="local-search-header clearfix">
+        <span class="search-icon">
+            <i class="fa fa-search"></i>
+        </span>
+        <span class="popup-btn-close">
+            <i class="fa fa-times-circle"></i>
+        </span>
+        <div class="local-search-input-wrapper">
+            <input id="local-search-input" spellcheck="false" type="text" autocomplete="off" placeholder="输入关键字搜索">
+        </div>
+    </div>
+    <div id="local-search-result"></div>
+</div>
+<div class="fixed-btn">
+    <a class="btn-gotop" href="javascript:"> <i class="fa fa-angle-up"></i></a>
+</div>
+<script>
+    $(function () {
+        var jsi_config = {
+            buildingTime: '01/20/2018',
+            current: $('.post-tags').length > 0 ? 'post' : 'archive',
+            snsQRCode: '/images/sns-qrcode.png',
+            donateImg: '/images/donate-qr.png',
+            localSearch: { dbPath: '' },
+            readMode: 'day'
+        };
+        
+            jsi_config.localSearch = {
+                dbPath: '/search.xml',
+                trigger: 'auto',
+                topN: '1',
+                unescape: 'false'
+            }
+        
+        SimpleCore.init(jsi_config);
+        
+    });
+</script>
+</body>
+</html>

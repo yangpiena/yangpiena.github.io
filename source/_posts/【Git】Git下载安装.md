@@ -3,7 +3,7 @@ title: 【Git】Git下载安装
 layout: post
 comments: true
 date: 2018-12-19 15:49:38
-categories: Git
+categories: 技术
 tags: [Git]
 keywords:
 description:

@@ -1,34 +1,16 @@
 ---
-layout: "about"
-title: "关于"
-date: 2016-11-11 12:30:48
-description: "走在成为极客的路上"
-header-img: "/img/header_img/about.jpg"
-aplayer: true
-fixed: false
+layout: page
+title: 关于
+date: 2019-03-22 16:09:37
+description:
 ---
-
-### 一句话
-
->Just do it !
-
-### 关于我
-
->...
-
-### 兴趣方向
-
-> 容器云
-
-### 参与社区
-
- > 新浪微博: http://weibo.com/yangpiena
+ > 新浪微博：<a href="http://weibo.com/yangpiena" target="_blank">http://weibo.com/yangpiena</a>
  >
- > Github: https://github.com/yangpiena
+ > Github: <a href="https://github.com/yangpiena" target="_blank">https://github.com/yangpiena</a>
  >
- > Coding: https://coding.net/u/yangpiena
+ > Coding: <a href="https://coding.net/u/yangpiena" target="_blank">https://coding.net/u/yangpiena</a>
 
 ### 联系我
 
->Email: yangpiena@gmail.com
+>Email: yangpiena@163.com
 

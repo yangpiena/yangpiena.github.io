@@ -3,19 +3,22 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: 昜丿捺
-subtitle:
-description: 没有阳光，沉默而居
-author: 昜丿捺
-language: zh-CN
+title: 昜丿捺 #网站的标题
+subtitle: Blog #副标题
+description: 没有阳光，沉默而居 #描述
+author: 昜丿捺 #作者信息
+avatar: /images/avatar.png #头像，图片位置在相应主题目录下的images
+language: zh-cn #中文简体
+email: yangpiena@163.com
 timezone:
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: http://yoursite.com
+url: http://yangpiena.coding.me
 root: /
-permalink: :year/:month/:day/:title/
+permalink: :category/:entitle-:timestamp.html
 permalink_defaults:
+  lang: en
 
 # Directory
 source_dir: source
@@ -26,27 +29,29 @@ category_dir: categories
 code_dir: downloads/code
 i18n_dir: :lang
 skip_render:
-
+  - README.md
+  - README.zhCN.md
+  
 # Writing
-new_post_name: :title.md # 新建文章默认文件名
-default_layout: post # 默认布局
-titlecase: false # Transform title into titlecase
-external_link: true # Open external links in new tab
-filename_case: 0 #转换文件名，1代表小写；2代表大写；默认为0，意思就是创建文章的时候，是否自动帮你转换文件名，默认就行，意义不大。
+new_post_name: :title.md # File name of new posts
+default_layout: post
+titlecase: true # Transform title into titlecase
+external_link: false  #在新标签中打开链接
+filename_case: 0s
 render_drafts: false
 post_asset_folder: false
 relative_link: false
 future: true
-highlight:
-  enable: true
-  line_number: true
-  auto_detect: false
-  tab_replace:
 
 # Category & Tag
-default_category: uncategorized
-category_map:
+default_category: 技术
+# category_map:
+   # 技术: tech-notes
+   # 人文: humanities
+   # 其他: others
 tag_map:
+  Dart: dart
+  Swift: swift
 
 # Date / Time format
 ## Hexo uses Moment.js to parse and display date
@@ -63,16 +68,19 @@ pagination_dir: page
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-theme: jsimple
+theme: jsimple #配置主题，这里使用 jsimple 主题
 
-# theme_style is default to 'light' # dark or light
-# theme_style: dark
+stylus:
+  compress: true #自适应布局
+
+search:
+  path: search.xml
+  field: post
+  content: true
 
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
-  type: git
-  repository: https://git.coding.net/yangpiena/yangpiena.git
+  type: git #部署环境，基于hexo+githubpage,所以这里使用git。注意：不同版本的hexo，type有可能不同，3.x以后应使用git,具体参看官方文档
+  repository: https://git.coding.net/yangpiena/yangpiena.git  #git仓库地址，替换成你的username即可，其他保持不变，后面会提到如何创建git仓库
   branch: master
-
-# duoshuo_shortname: yangpiena

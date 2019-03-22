@@ -1,6 +1,6 @@
 ---
-layout: "tags"
-title: "标签"
-description: ""
-header-img: "/img/header_img/tag.png"
+layout: tags
+title: 标签
+date: 2019-03-22 16:09:37
+description:
 ---
