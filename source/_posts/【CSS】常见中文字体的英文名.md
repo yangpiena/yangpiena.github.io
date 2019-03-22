@@ -3,8 +3,8 @@ title: 【CSS】常见中文字体的英文名
 layout: post
 comments: true
 date: 2016-11-28 17:15:38
-categories: CSS
-tags: [CSS, 字体]
+categories: CSS样式
+tags: [CSS样式, 字体]
 keywords:
 description:
 ---

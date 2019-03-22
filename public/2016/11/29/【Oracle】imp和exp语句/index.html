@@ -1,0 +1,263 @@
+<!DOCTYPE HTML>
+<html class="no-js" lang="zh-CN">
+<head><meta name="generator" content="Hexo 3.8.0">
+    <!--[if lte IE 9]>
+<meta http-equiv="refresh" content="0;url=http://yoursite.com/warn.html">
+<![endif]-->
+<meta charset="utf-8">
+<meta http-equiv="X-DNS-Prefetch-Control" content="on">
+<link rel="dns-prefetch" href="http://yoursite.com">
+<link rel="dns-prefetch" href="//www.google-analytics.com">
+<link rel="prefetch" href="http://yoursite.com">
+<link rel="prefetch" href="//www.google-analytics.com">
+
+
+<link rel="prerender" href="http://yoursite.com">
+
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<meta name="renderer" content="webkit">
+<meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=no">
+<meta http-equiv="mobile-agent" content="format=html5; url=http://yoursite.com">
+<meta name="author" content="昜丿捺">
+<link rel="stylesheet" href="/css/JSimple.css">
+
+<link rel="shortcut icon" href="/images/favicon.png">
+
+
+<title>【oracle】imp和exp语句 - 昜丿捺</title>
+
+<meta name="keywords" content="备份">
+
+<meta name="description " content="没有阳光，沉默而居">
+
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({
+            tex2jax: {
+                inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+                processEscapes: true
+            }
+        });
+    </script>
+
+
+    
+
+    
+
+</head>
+<body>
+<div id="nav">
+    <nav class="nav-menu">
+        <a class="site-name current" href="/" title="说">说</a>
+        <a class="site-index current" href="/"><i class="fa fa-home"></i><span>Home</span></a>
+        <a href="/archives" title="Archives"><i class="fa fa-archives"></i><span>Archives</span></a>
+        <a href="/tags" title="Tags"><i class="fa fa-tags"></i><span>Tags</span></a>
+        <!-- custom single page of menus -->
+        
+        
+        <a href="/help" title="帮助">
+            <i class="fa fa-question-circle"></i>
+            <span>帮助</span>
+        </a>
+        
+    </nav>
+</div>
+
+<div class="nav-user">
+    <a class="btn-search" href="#"><i class="fa fa-search"></i></a>
+    <a class="btn-read-mode" href="#"><i class="fa fa-sun-o"></i></a>
+    <a class="btn-sns-qr" href="javascript:"><i class="fa fa-telegram"></i></a>
+</div>
+
+<div id="wrapper" class="clearfix">
+    <div id="body">
+        <div class="main" id="main">
+            <div id="cover">
+    <div class="cover-img"></div>
+    <div class="cover-info">
+        
+        <h1 class="cover-siteName">说IT</h1>
+        <h3 class="cover-siteTitle">用代码摇滚这个世界</h3>
+        <p class="cover-siteDesc">一个关注技术与人文的IT博客</p>
+        <div class="cover-sns">
+            
+    &nbsp;&nbsp;<div class="btn btn-telegram">
+        <a href="http://t.me/kunyintang" target="_blank" title="telegram" ref="friend">
+            <i class="fa fa-telegram"></i>
+        </a>
+    </div>
+
+    &nbsp;&nbsp;<div class="btn btn-instagram">
+        <a href="https://www.instagram.com/mtangsir/" target="_blank" title="instagram" ref="friend">
+            <i class="fa fa-instagram"></i>
+        </a>
+    </div>
+
+    &nbsp;&nbsp;<div class="btn btn-twitter">
+        <a href="https://twitter.com/tangkunyin" target="_blank" title="twitter" ref="friend">
+            <i class="fa fa-twitter"></i>
+        </a>
+    </div>
+
+    &nbsp;&nbsp;<div class="btn btn-github">
+        <a href="https://github.com/tangkunyin" target="_blank" title="github" ref="friend">
+            <i class="fa fa-github"></i>
+        </a>
+    </div>
+
+
+        </div>
+    </div>
+</div>
+
+            <div class="page-title">
+    <ul>
+        <li><a href="/">Recent Posts</a></li>
+        
+            
+                <li class="">
+                    <a href="/categories/tech-notes" data-name="技术">技术</a>
+                </li>
+            
+                <li class="">
+                    <a href="/categories/humanities" data-name="人文">人文</a>
+                </li>
+            
+                <li class="">
+                    <a href="/categories/others" data-name="其他">其他</a>
+                </li>
+            
+        
+        <li class="page-search">
+    <form id="search" class="search-form">
+        <input type="text" readonly="readonly" id="local-search-input-tip" placeholder="click to search...">
+        <button type="button" disabled="disabled" class="search-form-submit"><i class="fa fa-search"></i></button>
+    </form>
+</li>
+
+    </ul>
+</div>
+<div class="main-inner">
+    <article class="post" itemscope="" itemtype="http://schema.org/BlogPosting">
+        <div class="post-header">
+            <div class="post-author clearfix">
+                <a class="avatar fleft" href="https://shuoit.net" target="_blank">
+                    <img width="48" src="/images/favicon.png" alt="avatar">
+                </a>
+                <p><span class="label">Author</span>
+                    <a href="https://shuoit.net" target="_blank">纠结伦</a>
+                    <span title="Last edited at&nbsp;2016-11-29">2016-11-29</span>
+                </p>
+                <p>一个搬🧱的劳斯基😁️️</p>
+            </div>
+            <h2 class="post-title">【Oracle】imp和exp语句</h2>
+            <div class="post-meta">
+                emm... 2539 words in the article |
+                you are the&nbsp;<span id="busuanzi_value_page_pv"><i class="fa fa-spinner fa-spin"></i></span>th friend who reading now
+            </div>
+        </div>
+        <div class="post-content markdown-body">
+            <h2 id="exp-imp命令详解"><a href="#exp-imp命令详解" class="headerlink" title="exp/imp命令详解"></a>exp/imp命令详解</h2><p>exp        导出命令<br>imp        导入命令</p>
+<p><strong>exp导出模式</strong><br>full模式：导出整个数据库<br>user模式：导出指定的用户<br>table模式：导出指定的表<br>tablespace模式：导出表空间</p>
+<p><strong>exp导出参数</strong><br>owner：指定要导出的用户列表<br>full=y：表示要导出整个数据库<br>tables：指定要导出的表<br>tablepaces：指定要导出的表空间<br>rows=y：表示导出表数据,否则只导出表的结构.<br>help=y：表示要获取帮助<br>indexs：指定是否导出索引<br>grants：表示是否导出授权<br>query：定查询条件,允许用户导出表的一部分数据<br>triggers：指定是否导出触发器<br><a id="more"></a></p>
+<h2 id="exp-imp使用方法"><a href="#exp-imp使用方法" class="headerlink" title="exp/imp使用方法"></a>exp/imp使用方法</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">imp username/password@connect_string param=value …</span><br><span class="line">exp username/password@connect_string param=value …</span><br></pre></td></tr></table></figure>
+<p>例如：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">exp xcba/xcba@orcl file=C:\xcba.dmp log=C:\xcba.log owner=(xcba)</span><br><span class="line">imp xcba/xcba@orcl file=C:\xcba.dmp log=C:\xcba.log full=y ignore=y</span><br></pre></td></tr></table></figure></p>
+<blockquote>
+<p>导出备份为dmp时，需要将Oracle在注册表里的编码设置为UTF8，否则会出现中文乱码。<br>具体作法：将“HKEY_LOCAL_MACHINE\SOFTWARE\ORACLE\KEY_OraDb10g_home1”下的“NLS_LANG”设置为“SIMPLIFIED CHINESE_CHINA.UTF8”</p>
+</blockquote>
+<h2 id="exp-imp导入导出方式"><a href="#exp-imp导入导出方式" class="headerlink" title="exp/imp导入导出方式"></a>exp/imp导入导出方式</h2><h3 id="1-表方式，将指定表的数据导出-导入。"><a href="#1-表方式，将指定表的数据导出-导入。" class="headerlink" title="1. 表方式，将指定表的数据导出/导入。"></a>1. 表方式，将指定表的数据导出/导入。</h3><p><strong>导出：</strong><br>导出一张或几张表：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ exp user/pwd file=/dir/xxx.dmp log=xxx.log tables=table1,table2 </span><br><span class="line">$ exp user/pwd file=/dir/xxx.dmp log=xxx.log tables=table1,table2</span><br></pre></td></tr></table></figure></p>
+<p>如果是分区表<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ exp user/pwd file=/dir/xxx.dmp log=xxx.log tables=table1:tablespaces1,table2:tablespaces2 </span><br><span class="line">$ exp user/pwd file=/dir/xxx.dmp log=xxx.log tables=table1:tablespaces1,table2:tablespaces2</span><br></pre></td></tr></table></figure></p>
+<p>导出某张表的部分数据<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ exp user/pwd file=/dir/xxx.dmp log=xxx.log tables=table1 query=\”where col1=\’…\’ and col2 \&lt;…\” </span><br><span class="line">$ exp user/pwd file=/dir/xxx.dmp log=xxx.log tables=table1 query=\”where col1=\’…\’ and col2 \&lt;…\”</span><br></pre></td></tr></table></figure></p>
+<p><strong>导入：</strong><br>导入一张或几张表<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$  imp  user/pwd  file=/dir/xxx.dmp  log=xxx.log  tables=table1,table2  fromuser=dbuser touser=dbuser2 commit=y ignore=y </span><br><span class="line">$  imp  user/pwd  file=/dir/xxx.dmp  log=xxx.log  tables=table1,table2  fromuser=dbuser touser=dbuser2 commit=y ignore=y</span><br></pre></td></tr></table></figure></p>
+<p>如果是分区表<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$  imp  user/pwd  file=/dir/xxx.dmp  log=xxx.log  tables=table1:tablespaces1,table2:tablespaces2  fromuser=dbuser touser=dbuser2 commit=y ignore=y </span><br><span class="line">$  imp  user/pwd  file=/dir/xxx.dmp  log=xxx.log  tables=table1:tablespaces1,table2:tablespaces2  fromuser=dbuser touser=dbuser2 commit=y ignore=y</span><br></pre></td></tr></table></figure></p>
+<h3 id="2-用户方式，将指定用户的所有对象及数据导出-导入。"><a href="#2-用户方式，将指定用户的所有对象及数据导出-导入。" class="headerlink" title="2. 用户方式，将指定用户的所有对象及数据导出/导入。"></a>2. 用户方式，将指定用户的所有对象及数据导出/导入。</h3><p><strong>导出：</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ exp user/pwd file=/dir/xxx.dmp log=xxx.log owner=(xx, yy) </span><br><span class="line">$ exp user/pwd file=/dir/xxx.dmp log=xxx.log owner=(xx, yy)</span><br></pre></td></tr></table></figure></p>
+<p>只导出数据对象，不导出数据  (rows=n )<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ exp user/pwd file=/dir/xxx.dmp log=xxx.log owner=user rows=n</span><br></pre></td></tr></table></figure></p>
+<p><strong>导入：</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">imp  user/pwd  file=/dir/xxx.dmp  log=xxx.log  fromuser=dbuser  touser=dbuser2  mmit=y     ignore=y </span><br><span class="line">imp  user/pwd  file=/dir/xxx.dmp  log=xxx.log  fromuser=dbuser  touser=dbuser2  commit=y  ignore=y</span><br></pre></td></tr></table></figure></p>
+<h3 id="3-全库方式，将数据库中的所有对象导出-导入"><a href="#3-全库方式，将数据库中的所有对象导出-导入" class="headerlink" title="3. 全库方式，将数据库中的所有对象导出/导入"></a>3. 全库方式，将数据库中的所有对象导出/导入</h3><p><strong>导出：</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ exp user/pwd file=/dir/xxx.dmp log=xxx.log full=y commit=y ignore=y </span><br><span class="line">$ exp user/pwd file=/dir/xxx.dmp log=xxx.log full=y commit=y ignore=y</span><br></pre></td></tr></table></figure></p>
+<p><strong>导入：</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ imp user/pwd file=/dir/xxx.dmp log=xxx.log fromuser=dbuser touser=dbuser2</span><br></pre></td></tr></table></figure></p>
+
+        </div>
+        <div class="post-tool">
+            <a class="btn-thumbs-up" href="javascript:void(0);" data-cid="52" title="95">
+                <i class="fa fa-thumbs-up" aria-hidden="true"></i> Donate
+            </a>
+        </div>
+        
+        <div class="post-tags">Tags：
+            
+            <a href="/tags/Oracle/">Oracle</a>
+            
+            <a href="/tags/导入导出/">导入导出</a>
+            
+        </div>
+        
+    </article>
+    
+    <p style="text-align: center">This article just represents my own viewpoint. If there is something wrong, please correct me.</p>
+    
+    
+
+    
+
+</div>
+<script src="/js/busuanzi.pure.mini.js"></script>
+
+
+        </div><!-- end #main-->
+    </div><!-- end #body -->
+    <footer class="footer">
+    <div class="footer-inner" style="text-align: center">
+        <p>
+            <a href="/about" title="About">About</a>&nbsp;&nbsp<em>·</em>&nbsp;&nbsp
+            <!-- 自定义链接 -->
+            <a href="/help" title="Help">Help</a>&nbsp;&nbsp<em>·</em>&nbsp;&nbsp
+            <a href="/links" title="Links">Links</a>&nbsp;&nbsp<em>·</em>&nbsp;&nbsp
+            <a href="/sitemap.xml" title="SiteMap">SiteMap</a>
+        </p>
+        <p>
+            Has been established&nbsp<a href="/timeline" id="siteBuildingTime"></a>&nbspDays，<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" rel="licence">Based on Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)</a><br>
+            ©2017-<span id="cpYear"></span> Based on&nbsp<a href="http://hexo.io" target="_blank" rel="nofollow">Hexo</a>
+            ，Theme by&nbsp&nbsp<a href="https://github.com/tangkunyin/hexo-theme-jsimple" target="_blank" rel="bookmark">JSimple</a>
+            ，Author&nbsp<a href="https://shuoit.net" target="_blank" rel="friend">纠结伦</a>
+            ，Hosted by <a href="https://pages.github.com/" target="_blank" rel="nofollow">GitHub Pages</a>
+        </p>
+    </div>
+</footer>
+<script src="/js/SimpleCore.js"></script>
+
+</div>
+<!-- search pop -->
+<div class="popup search-popup local-search-popup">
+    <div class="local-search-header clearfix">
+        <span class="search-icon">
+            <i class="fa fa-search"></i>
+        </span>
+        <span class="popup-btn-close">
+            <i class="fa fa-times-circle"></i>
+        </span>
+        <div class="local-search-input-wrapper">
+            <input id="local-search-input" spellcheck="false" type="text" autocomplete="off" placeholder="Input query keywords here...">
+        </div>
+    </div>
+    <div id="local-search-result"></div>
+</div>
+<div class="fixed-btn">
+    <a class="btn-gotop" href="javascript:"> <i class="fa fa-angle-up"></i></a>
+</div>
+<script>
+    $(function () {
+        var jsi_config = {
+            buildingTime: '01/20/2018',
+            current: $('.post-tags').length > 0 ? 'post' : 'archive',
+            snsQRCode: '/images/sns-qrcode.png',
+            donateImg: '/images/donate-qr.png',
+            localSearch: { dbPath: '' },
+            readMode: 'day'
+        };
+        
+        SimpleCore.init(jsi_config);
+        
+    });
+</script>
+</body>
+</html>
