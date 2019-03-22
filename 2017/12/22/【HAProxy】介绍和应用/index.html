@@ -1,0 +1,348 @@
+<!DOCTYPE HTML>
+<html class="no-js" lang="zh-CN">
+<head><meta name="generator" content="Hexo 3.8.0">
+    <!--[if lte IE 9]>
+<meta http-equiv="refresh" content="0;url=http://yoursite.com/warn.html">
+<![endif]-->
+<meta charset="utf-8">
+<meta http-equiv="X-DNS-Prefetch-Control" content="on">
+<link rel="dns-prefetch" href="http://yoursite.com">
+<link rel="dns-prefetch" href="//www.google-analytics.com">
+<link rel="prefetch" href="http://yoursite.com">
+<link rel="prefetch" href="//www.google-analytics.com">
+
+
+<link rel="prerender" href="http://yoursite.com">
+
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<meta name="renderer" content="webkit">
+<meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=no">
+<meta http-equiv="mobile-agent" content="format=html5; url=http://yoursite.com">
+<meta name="author" content="昜丿捺">
+<link rel="stylesheet" href="/css/JSimple.css">
+
+<link rel="shortcut icon" href="/images/favicon.png">
+
+
+<title>【haproxy】介绍和应用 - 昜丿捺</title>
+
+<meta name="keywords" content="undefined">
+
+<meta name="description " content="没有阳光，沉默而居">
+
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({
+            tex2jax: {
+                inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+                processEscapes: true
+            }
+        });
+    </script>
+
+
+    
+
+    
+
+</head>
+<body>
+<div id="nav">
+    <nav class="nav-menu">
+        <a class="site-name current" href="/" title="说">说</a>
+        <a class="site-index current" href="/"><i class="fa fa-home"></i><span>Home</span></a>
+        <a href="/archives" title="Archives"><i class="fa fa-archives"></i><span>Archives</span></a>
+        <a href="/tags" title="Tags"><i class="fa fa-tags"></i><span>Tags</span></a>
+        <!-- custom single page of menus -->
+        
+        
+        <a href="/help" title="帮助">
+            <i class="fa fa-question-circle"></i>
+            <span>帮助</span>
+        </a>
+        
+    </nav>
+</div>
+
+<div class="nav-user">
+    <a class="btn-search" href="#"><i class="fa fa-search"></i></a>
+    <a class="btn-read-mode" href="#"><i class="fa fa-sun-o"></i></a>
+    <a class="btn-sns-qr" href="javascript:"><i class="fa fa-telegram"></i></a>
+</div>
+
+<div id="wrapper" class="clearfix">
+    <div id="body">
+        <div class="main" id="main">
+            <div id="cover">
+    <div class="cover-img"></div>
+    <div class="cover-info">
+        
+        <h1 class="cover-siteName">说IT</h1>
+        <h3 class="cover-siteTitle">用代码摇滚这个世界</h3>
+        <p class="cover-siteDesc">一个关注技术与人文的IT博客</p>
+        <div class="cover-sns">
+            
+    &nbsp;&nbsp;<div class="btn btn-telegram">
+        <a href="http://t.me/kunyintang" target="_blank" title="telegram" ref="friend">
+            <i class="fa fa-telegram"></i>
+        </a>
+    </div>
+
+    &nbsp;&nbsp;<div class="btn btn-instagram">
+        <a href="https://www.instagram.com/mtangsir/" target="_blank" title="instagram" ref="friend">
+            <i class="fa fa-instagram"></i>
+        </a>
+    </div>
+
+    &nbsp;&nbsp;<div class="btn btn-twitter">
+        <a href="https://twitter.com/tangkunyin" target="_blank" title="twitter" ref="friend">
+            <i class="fa fa-twitter"></i>
+        </a>
+    </div>
+
+    &nbsp;&nbsp;<div class="btn btn-github">
+        <a href="https://github.com/tangkunyin" target="_blank" title="github" ref="friend">
+            <i class="fa fa-github"></i>
+        </a>
+    </div>
+
+
+        </div>
+    </div>
+</div>
+
+            <div class="page-title">
+    <ul>
+        <li><a href="/">Recent Posts</a></li>
+        
+            
+                <li class="">
+                    <a href="/categories/tech-notes" data-name="技术">技术</a>
+                </li>
+            
+                <li class="">
+                    <a href="/categories/humanities" data-name="人文">人文</a>
+                </li>
+            
+                <li class="">
+                    <a href="/categories/others" data-name="其他">其他</a>
+                </li>
+            
+        
+        <li class="page-search">
+    <form id="search" class="search-form">
+        <input type="text" readonly="readonly" id="local-search-input-tip" placeholder="click to search...">
+        <button type="button" disabled="disabled" class="search-form-submit"><i class="fa fa-search"></i></button>
+    </form>
+</li>
+
+    </ul>
+</div>
+<div class="main-inner">
+    <article class="post" itemscope="" itemtype="http://schema.org/BlogPosting">
+        <div class="post-header">
+            <div class="post-author clearfix">
+                <a class="avatar fleft" href="https://shuoit.net" target="_blank">
+                    <img width="48" src="/images/favicon.png" alt="avatar">
+                </a>
+                <p><span class="label">Author</span>
+                    <a href="https://shuoit.net" target="_blank">纠结伦</a>
+                    <span title="Last edited at&nbsp;2017-12-22">2017-12-22</span>
+                </p>
+                <p>一个搬🧱的劳斯基😁️️</p>
+            </div>
+            <h2 class="post-title">【HAProxy】介绍和应用</h2>
+            <div class="post-meta">
+                emm... 4578 words in the article |
+                you are the&nbsp;<span id="busuanzi_value_page_pv"><i class="fa fa-spinner fa-spin"></i></span>th friend who reading now
+            </div>
+        </div>
+        <div class="post-content markdown-body">
+            <h3 id="HAProxy简介"><a href="#HAProxy简介" class="headerlink" title="HAProxy简介"></a>HAProxy简介</h3><p>HAProxy是一个使用C语言编写的自由及开放源代码软件，其提供高可用性、负载均衡，以及基于TCP和HTTP的应用程序代理。</p>
+<p>HAProxy特别适用于那些负载特大的web站点，这些站点通常又需要会话保持或七层处理。HAProxy运行在当前的硬件上，完全可以支持数以万计的并发连接。并且它的运行模式使得它可以很简单安全的整合进您当前的架构中， 同时可以保护你的web服务器不被暴露到网络上。</p>
+<p>HAProxy实现了一种事件驱动, 单一进程模型，此模型支持非常大的并发连接数。多进程或多线程模型受内存限制 、系统调度器限制以及无处不在的锁限制，很少能处理数千并发连接。事件驱动模型因为在有更好的资源和时间管理的用户空间(User-Space) 实现所有这些任务，所以没有这些问题。此模型的弊端是，在多核系统上，这些程序通常扩展性较差。这就是为什么他们必须进行优化以 使每个CPU时间片(Cycle)做更多的工作。</p>
+<p>包括 GitHub、Bitbucket、Stack Overflow、Reddit、Tumblr、Twitter和 Tuenti在内的知名网站，及亚马逊网络服务系统都使用了HAProxy。</p>
+<p>HAProxy是法国人Willy Tarreau开发的一个开源软件，是一款应对客户端10000以上的同时连接的高性能的TCP和 HTTP负载均衡器。其功能是用来提供基于cookie的持久性， 基于内容的交换，过载保护的高级流量管制，自动故障切换 ，以正则表达式为基础的标题控制运行时间，基于Web的报表，高级日志记录以帮助排除故障的应用或网络及其他功能。</p>
+<a id="more"></a>
+<hr>
+<h3 id="HAProxy基础概念"><a href="#HAProxy基础概念" class="headerlink" title="HAProxy基础概念"></a>HAProxy基础概念</h3><p>代理的作用</p>
+<ul>
+<li>正向代理，反向代理</li>
+<li>代理服务器，可以提供缓存功能加速客户端访问，同时可以对缓存数据进行有效性检查</li>
+<li>内容路由：根据流量以及内容类型将请求转发至特定的服务器</li>
+<li>转码器：支持压缩功能，将数据以压缩形式发送给客户端</li>
+</ul>
+<p>缓存的作用</p>
+<ul>
+<li>减少访冗余内容传输</li>
+<li>节省带宽，缓解网络瓶颈</li>
+<li>降低了对原始服务器的请求压力</li>
+<li>降低了传输延迟</li>
+</ul>
+<p>负载均衡集群</p>
+<ul>
+<li><p>四层代理：lvs, nginx(stream)，HAProxy(mode tcp)<br>通过分析IP层及TCP/UDP层的流量实现的基于“IP+端口”的负载均衡。</p>
+</li>
+<li><p>七层代理：http: nginx(http, ngx_http_upstream_module), HAProxy(mode http), httpd, ats, perlbal, pound…<br>可以根据内容，再配合负载均衡算法来选择后端服务器，不但可以根据 “ip+端口”方式进行负载分流，还可以根据网站的URL，访问域名，浏览 器类别，语言等决定负载均衡的策略。</p>
+</li>
+</ul>
+<p>七层负载均衡模式下，负载均衡与客户端及后端的服务器会分别建立一次 TCP连接，而在四层负载均衡模式下(DR)，仅建立一次TCP连接；七层负载均衡对负载均衡设备的要求更高，处理能力也低于四层负载均衡。</p>
+<p><strong>HAProxy与lvs的负载均衡很大一点不同的是，lvs仅仅是基于内核的简单调度，而HAProxy则是当请求到达反向代理端时，代理端帮前端去请求相应内容</strong></p>
+<hr>
+<h3 id="HAProxy功能"><a href="#HAProxy功能" class="headerlink" title="HAProxy功能"></a>HAProxy功能</h3><ul>
+<li>HAProxy是TCP/HTTP反向代理服务器，尤其适合于高可用性环境</li>
+<li>可以针对HTTP请求添加cookie，进行路由后端服务器</li>
+<li>可平衡负载至后端服务器，并支持持久连接</li>
+<li>支持基于cookie进行调度</li>
+<li>支持所有主服务器故障切换至备用服务器</li>
+<li>支持专用端口实现监控服务</li>
+<li>支持不影响现有连接情况下停止接受新连接请求</li>
+<li>可以在双向添加，修改或删除HTTP报文首部</li>
+<li>支持基于pattern实现连接请求的访问控制</li>
+<li>通过特定的URI为授权用户提供详细的状态信息</li>
+<li>支持http反向代理</li>
+<li>支持动态程序的反向代理</li>
+<li>支持基于数据库的反向代理<br>版本：1.4 1.5 1.6 1.7 1.8</li>
+</ul>
+<hr>
+<h3 id="HAProxy应用"><a href="#HAProxy应用" class="headerlink" title="HAProxy应用"></a>HAProxy应用</h3><h5 id="HAProxy进行安全加固"><a href="#HAProxy进行安全加固" class="headerlink" title="HAProxy进行安全加固"></a>HAProxy进行安全加固</h5><p>用于测试指定的backend上会话创建的速率(即每秒创建的会话数)是否满足指定的条件；常用于在指定 backend上的会话速率过高时将用户请求转发至另外的backend，或用于阻止攻击行为。例如</p>
+<pre><code>backend dynamic
+    mode http
+    acl being_scanned be_sess_rate gt 100
+    redirect location /denied.html if being_scanned
+</code></pre><h5 id="通过ACL指定可访问的用户"><a href="#通过ACL指定可访问的用户" class="headerlink" title="通过ACL指定可访问的用户"></a>通过ACL指定可访问的用户</h5><p>阻断来自非指定IP的访问80端口的请求</p>
+<pre><code>acl myhost src 172.16.100.1
+acl myport dst_port 80
+tcp-request connection reject if !myhost myport　　
+</code></pre><p>还可以用block</p>
+<pre><code>block if ! myhost myport
+</code></pre><h5 id="根据用户访问内容实现动静分离"><a href="#根据用户访问内容实现动静分离" class="headerlink" title="根据用户访问内容实现动静分离"></a>根据用户访问内容实现动静分离</h5><pre><code>frontend http-in
+    bind            *:80
+    mode            http
+    log             global
+    option          httpclose
+    acl             url_static path_beg -i /static /images /javascript /stylesheets
+    acl             url_static path_end -i .jpg .jpeg .gif .png .css .js
+    use_backend     static_servers if url_static
+    default_backend dynamic_servers
+backend static_servers
+    balance roundrobin
+    server  imgsrv1 172.18.64.7:80 check maxconn 6000
+    server  imgsrv2 172.18.64.107:80 check maxconn 6000
+backend dynamic_servers
+    balance source
+    server  websrv1 172.18.64.17:80 check maxconn 1000
+    server  websrv2 172.18.64.106:80 check maxconn 1000
+</code></pre><h5 id="HAProxy实现浏览器控制"><a href="#HAProxy实现浏览器控制" class="headerlink" title="HAProxy实现浏览器控制"></a>HAProxy实现浏览器控制</h5><p>阻断火狐浏览器发送的请求  </p>
+<pre><code>acl firefox hdr_reg(User-Agent) -i .*firefox.*
+block if firefox
+</code></pre><p>将IE用户请求分配到静态服务器</p>
+<pre><code>acl ie_useragent hdr_reg(User-Agent) -i .*ie.*
+use_backend static_servers if ie_useragent
+</code></pre><h5 id="HAProxy实现真实日志记录"><a href="#HAProxy实现真实日志记录" class="headerlink" title="HAProxy实现真实日志记录"></a>HAProxy实现真实日志记录</h5><p>option forwardfor [ except ] [ header ] [ if-none ] 允许在发往服务器的请求首部中插入“X-Forwarded-For”首部。<br>HAProxy工作于反向代理模式，其发往服务器的请求中的客户端IP均为HAProxy主机的地址而非真正客户端的地址，这会使得服务器端的日志信息记录不了真正的请求来源，“X-Forwarded-For”首部则可用于解决此问题。HAProxy可以 向每个发往服务器的请求上添加此首部，并以客户端IP为其value。 需要注意的是，HAProxy工作于隧道模式，其仅检查每一个连接的第一个请求，因此，仅第一个请求报文被附加此首部。 下面是一个例子。</p>
+<pre><code>frontend www
+mode http
+option forwardfor except 127.0.0.1
+</code></pre><h5 id="HAProxy实现会话保持"><a href="#HAProxy实现会话保持" class="headerlink" title="HAProxy实现会话保持"></a>HAProxy实现会话保持</h5><ol>
+<li><p>源地址hash（用户IP识别）Haroxy 将用户IP经过hash计算后 指定到固定的真实服务器上（类似于nginx的IP hash 指令）。<br>缺点：当后端一台服务器挂了以后会造成部分session丢失</p>
+<p> backend SOURCE_srv</p>
+<pre><code>mode    http
+balance source
+server  app-node1 10.31.1.179:80 check port 80 inter 3000 rise 3 fall 3
+server  app-node2 10.31.1.191:80 check port 80 inter 3000 rise 3 fall 3
+server  app-node3 10.31.0.35:80 check port 80 inter 3000 rise 3 fall 3
+</code></pre></li>
+<li><p>cookie 识别 HAProxy 将WEB服务端返回给客户端的cookie中插入HAProxy中特定的字符串(或添加前缀)在后端的服务器COOKIE ID。</p>
+<p> backend COOKIE_srv</p>
+<pre><code>mode   http
+cookie SERVERID insert indirect nocache
+server app-node1 10.31.1.179:80 check port 80 cookie a inter 3000 rise 3 fall 3
+server app-node2 10.31.1.191:80 check port 80 cookie b inter 3000 rise 3 fall 3
+server app-node3 10.31.0.251:80 check port 80 cookie c inter 3000 rise 3 fall 3
+</code></pre><p>在LB1上配置好HAProxy后，LB1将接受用户的所有请求。如果一个用户请求不包含任何cookie，那这个请求将被HAProxy转发到一台可用的WEB服务器。可能是webA,webB，webC。然后HAProxy将把处理这个请求的WEB服务器的cookie值插入到请求响应中。如SERVERID=A。当这个客户端再次访问 并在HTTP请求头中带有SERVERID=A,HAProxy将会把它的请求直接转发给webA处理。在请求到达 webA之前，cookie将被移除，webA将不会看到这个cookie。如果webA不可用，对应的请求将被转发到其他可用的WEB服务器，相应的cookie值也将被重新设置。</p>
+</li>
+</ol>
+<h5 id="HAProxy性能优化参数"><a href="#HAProxy性能优化参数" class="headerlink" title="HAProxy性能优化参数"></a>HAProxy性能优化参数</h5><p>option redispatch：当server对应的服务器挂掉后，强制定向到其他健康的服务器<br>option dontlognull ：保证HAProxy不记录上级负载均衡发送过来 的用于检测状态没有数据的心跳包<br>retries 3 : 3次连接失败就认为服务器不可用，主要通过后面的check检查<br>maxconn 30000 : 代理时所能接受的最大并发连接数， 应该要比后端主机的并发总和要小</p>
+
+        </div>
+        <div class="post-tool">
+            <a class="btn-thumbs-up" href="javascript:void(0);" data-cid="52" title="95">
+                <i class="fa fa-thumbs-up" aria-hidden="true"></i> Donate
+            </a>
+        </div>
+        
+        <div class="post-tags">Tags：
+            
+            <a href="/tags/HAProxy/">HAProxy</a>
+            
+        </div>
+        
+    </article>
+    
+    <p style="text-align: center">This article just represents my own viewpoint. If there is something wrong, please correct me.</p>
+    
+    
+
+    
+
+</div>
+<script src="/js/busuanzi.pure.mini.js"></script>
+
+
+        </div><!-- end #main-->
+    </div><!-- end #body -->
+    <footer class="footer">
+    <div class="footer-inner" style="text-align: center">
+        <p>
+            <a href="/about" title="About">About</a>&nbsp;&nbsp<em>·</em>&nbsp;&nbsp
+            <!-- 自定义链接 -->
+            <a href="/help" title="Help">Help</a>&nbsp;&nbsp<em>·</em>&nbsp;&nbsp
+            <a href="/links" title="Links">Links</a>&nbsp;&nbsp<em>·</em>&nbsp;&nbsp
+            <a href="/sitemap.xml" title="SiteMap">SiteMap</a>
+        </p>
+        <p>
+            Has been established&nbsp<a href="/timeline" id="siteBuildingTime"></a>&nbspDays，<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" rel="licence">Based on Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)</a><br>
+            ©2017-<span id="cpYear"></span> Based on&nbsp<a href="http://hexo.io" target="_blank" rel="nofollow">Hexo</a>
+            ，Theme by&nbsp&nbsp<a href="https://github.com/tangkunyin/hexo-theme-jsimple" target="_blank" rel="bookmark">JSimple</a>
+            ，Author&nbsp<a href="https://shuoit.net" target="_blank" rel="friend">纠结伦</a>
+            ，Hosted by <a href="https://pages.github.com/" target="_blank" rel="nofollow">GitHub Pages</a>
+        </p>
+    </div>
+</footer>
+<script src="/js/SimpleCore.js"></script>
+
+</div>
+<!-- search pop -->
+<div class="popup search-popup local-search-popup">
+    <div class="local-search-header clearfix">
+        <span class="search-icon">
+            <i class="fa fa-search"></i>
+        </span>
+        <span class="popup-btn-close">
+            <i class="fa fa-times-circle"></i>
+        </span>
+        <div class="local-search-input-wrapper">
+            <input id="local-search-input" spellcheck="false" type="text" autocomplete="off" placeholder="Input query keywords here...">
+        </div>
+    </div>
+    <div id="local-search-result"></div>
+</div>
+<div class="fixed-btn">
+    <a class="btn-gotop" href="javascript:"> <i class="fa fa-angle-up"></i></a>
+</div>
+<script>
+    $(function () {
+        var jsi_config = {
+            buildingTime: '01/20/2018',
+            current: $('.post-tags').length > 0 ? 'post' : 'archive',
+            snsQRCode: '/images/sns-qrcode.png',
+            donateImg: '/images/donate-qr.png',
+            localSearch: { dbPath: '' },
+            readMode: 'day'
+        };
+        
+        SimpleCore.init(jsi_config);
+        
+    });
+</script>
+</body>
+</html>

@@ -1,0 +1,250 @@
+<!DOCTYPE HTML>
+<html class="no-js" lang="zh-CN">
+<head><meta name="generator" content="Hexo 3.8.0">
+    <!--[if lte IE 9]>
+<meta http-equiv="refresh" content="0;url=http://yoursite.com/warn.html">
+<![endif]-->
+<meta charset="utf-8">
+<meta http-equiv="X-DNS-Prefetch-Control" content="on">
+<link rel="dns-prefetch" href="http://yoursite.com">
+<link rel="dns-prefetch" href="//www.google-analytics.com">
+<link rel="prefetch" href="http://yoursite.com">
+<link rel="prefetch" href="//www.google-analytics.com">
+
+
+<link rel="prerender" href="http://yoursite.com">
+
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<meta name="renderer" content="webkit">
+<meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=no">
+<meta http-equiv="mobile-agent" content="format=html5; url=http://yoursite.com">
+<meta name="author" content="昜丿捺">
+<link rel="stylesheet" href="/css/JSimple.css">
+
+<link rel="shortcut icon" href="/images/favicon.png">
+
+
+<title>【sql】查询死锁和阻塞 - 昜丿捺</title>
+
+<meta name="keywords" content="死锁，阻塞">
+
+<meta name="description " content="没有阳光，沉默而居">
+
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({
+            tex2jax: {
+                inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+                processEscapes: true
+            }
+        });
+    </script>
+
+
+    
+
+    
+
+</head>
+<body>
+<div id="nav">
+    <nav class="nav-menu">
+        <a class="site-name current" href="/" title="说">说</a>
+        <a class="site-index current" href="/"><i class="fa fa-home"></i><span>Home</span></a>
+        <a href="/archives" title="Archives"><i class="fa fa-archives"></i><span>Archives</span></a>
+        <a href="/tags" title="Tags"><i class="fa fa-tags"></i><span>Tags</span></a>
+        <!-- custom single page of menus -->
+        
+        
+        <a href="/help" title="帮助">
+            <i class="fa fa-question-circle"></i>
+            <span>帮助</span>
+        </a>
+        
+    </nav>
+</div>
+
+<div class="nav-user">
+    <a class="btn-search" href="#"><i class="fa fa-search"></i></a>
+    <a class="btn-read-mode" href="#"><i class="fa fa-sun-o"></i></a>
+    <a class="btn-sns-qr" href="javascript:"><i class="fa fa-telegram"></i></a>
+</div>
+
+<div id="wrapper" class="clearfix">
+    <div id="body">
+        <div class="main" id="main">
+            <div id="cover">
+    <div class="cover-img"></div>
+    <div class="cover-info">
+        
+        <h1 class="cover-siteName">说IT</h1>
+        <h3 class="cover-siteTitle">用代码摇滚这个世界</h3>
+        <p class="cover-siteDesc">一个关注技术与人文的IT博客</p>
+        <div class="cover-sns">
+            
+    &nbsp;&nbsp;<div class="btn btn-telegram">
+        <a href="http://t.me/kunyintang" target="_blank" title="telegram" ref="friend">
+            <i class="fa fa-telegram"></i>
+        </a>
+    </div>
+
+    &nbsp;&nbsp;<div class="btn btn-instagram">
+        <a href="https://www.instagram.com/mtangsir/" target="_blank" title="instagram" ref="friend">
+            <i class="fa fa-instagram"></i>
+        </a>
+    </div>
+
+    &nbsp;&nbsp;<div class="btn btn-twitter">
+        <a href="https://twitter.com/tangkunyin" target="_blank" title="twitter" ref="friend">
+            <i class="fa fa-twitter"></i>
+        </a>
+    </div>
+
+    &nbsp;&nbsp;<div class="btn btn-github">
+        <a href="https://github.com/tangkunyin" target="_blank" title="github" ref="friend">
+            <i class="fa fa-github"></i>
+        </a>
+    </div>
+
+
+        </div>
+    </div>
+</div>
+
+            <div class="page-title">
+    <ul>
+        <li><a href="/">Recent Posts</a></li>
+        
+            
+                <li class="">
+                    <a href="/categories/tech-notes" data-name="技术">技术</a>
+                </li>
+            
+                <li class="">
+                    <a href="/categories/humanities" data-name="人文">人文</a>
+                </li>
+            
+                <li class="">
+                    <a href="/categories/others" data-name="其他">其他</a>
+                </li>
+            
+        
+        <li class="page-search">
+    <form id="search" class="search-form">
+        <input type="text" readonly="readonly" id="local-search-input-tip" placeholder="click to search...">
+        <button type="button" disabled="disabled" class="search-form-submit"><i class="fa fa-search"></i></button>
+    </form>
+</li>
+
+    </ul>
+</div>
+<div class="main-inner">
+    <article class="post" itemscope="" itemtype="http://schema.org/BlogPosting">
+        <div class="post-header">
+            <div class="post-author clearfix">
+                <a class="avatar fleft" href="https://shuoit.net" target="_blank">
+                    <img width="48" src="/images/favicon.png" alt="avatar">
+                </a>
+                <p><span class="label">Author</span>
+                    <a href="https://shuoit.net" target="_blank">纠结伦</a>
+                    <span title="Last edited at&nbsp;2016-11-29">2016-11-29</span>
+                </p>
+                <p>一个搬🧱的劳斯基😁️️</p>
+            </div>
+            <h2 class="post-title">【SQL】查询死锁和阻塞</h2>
+            <div class="post-meta">
+                emm... 2151 words in the article |
+                you are the&nbsp;<span id="busuanzi_value_page_pv"><i class="fa fa-spinner fa-spin"></i></span>th friend who reading now
+            </div>
+        </div>
+        <div class="post-content markdown-body">
+            <h3 id="查询死锁进程"><a href="#查询死锁进程" class="headerlink" title="查询死锁进程"></a>查询死锁进程</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">SELECT</span><br><span class="line">	request_session_id spid,</span><br><span class="line">	OBJECT_NAME(</span><br><span class="line">		resource_associated_entity_id</span><br><span class="line">	) tableName</span><br><span class="line">FROM</span><br><span class="line">	sys.dm_tran_locks</span><br><span class="line">WHERE</span><br><span class="line">	resource_type = &apos;OBJECT&apos;;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br></pre></td><td class="code"><pre><span class="line">SELECT</span><br><span class="line">	标志,</span><br><span class="line">	进程ID = spid,</span><br><span class="line">	线程ID = kpid,</span><br><span class="line">	块进程ID = blocked,</span><br><span class="line">	数据库ID = dbid,</span><br><span class="line">	数据库名 = db_name(dbid),</span><br><span class="line">	用户ID = uid,</span><br><span class="line">	用户名 = loginame,</span><br><span class="line">	累计CPU时间 = cpu,</span><br><span class="line">	登陆时间 = login_time,</span><br><span class="line">	打开事务数 = open_tran,</span><br><span class="line">	进程状态 = status,</span><br><span class="line">	工作站名 = hostname,</span><br><span class="line">	应用程序名 = program_name,</span><br><span class="line">	工作站进程ID = hostprocess,</span><br><span class="line">	域名 = nt_domain,</span><br><span class="line">	网卡地址 = net_address </span><br><span class="line">FROM</span><br><span class="line">	(</span><br><span class="line">		SELECT</span><br><span class="line">			标志 = &apos;死锁的进程&apos;,</span><br><span class="line">			spid,</span><br><span class="line">			kpid,</span><br><span class="line">			a.blocked,</span><br><span class="line">			dbid,</span><br><span class="line">			uid,</span><br><span class="line">			loginame,</span><br><span class="line">			cpu,</span><br><span class="line">			login_time,</span><br><span class="line">			open_tran,</span><br><span class="line">			status,</span><br><span class="line">			hostname,</span><br><span class="line">			program_name,</span><br><span class="line">			hostprocess,</span><br><span class="line">			nt_domain,</span><br><span class="line">			net_address,</span><br><span class="line">			s1 = a.spid,</span><br><span class="line">			s2 = 0</span><br><span class="line">		FROM</span><br><span class="line">			master..sysprocesses a</span><br><span class="line">		JOIN (</span><br><span class="line">			SELECT</span><br><span class="line">				blocked</span><br><span class="line">			FROM</span><br><span class="line">				master..sysprocesses</span><br><span class="line">			GROUP BY</span><br><span class="line">				blocked</span><br><span class="line">		) b ON a.spid = b.blocked</span><br><span class="line">		WHERE</span><br><span class="line">			a.blocked = 0</span><br><span class="line">		UNION ALL</span><br><span class="line">			SELECT</span><br><span class="line">				&apos;|_牺牲品_&gt;&apos;,</span><br><span class="line">				spid,</span><br><span class="line">				kpid,</span><br><span class="line">				blocked,</span><br><span class="line">				dbid,</span><br><span class="line">				uid,</span><br><span class="line">				loginame,</span><br><span class="line">				cpu,</span><br><span class="line">				login_time,</span><br><span class="line">				open_tran,</span><br><span class="line">				status,</span><br><span class="line">				hostname,</span><br><span class="line">				program_name,</span><br><span class="line">				hostprocess,</span><br><span class="line">				nt_domain,</span><br><span class="line">				net_address,</span><br><span class="line">				s1 = blocked,</span><br><span class="line">				s2 = 1</span><br><span class="line">			FROM</span><br><span class="line">				master..sysprocesses a</span><br><span class="line">			WHERE</span><br><span class="line">				blocked &lt;&gt; 0</span><br><span class="line">	) a</span><br><span class="line">ORDER BY</span><br><span class="line">	s1,</span><br><span class="line">	s2</span><br></pre></td></tr></table></figure>
+<h3 id="杀死死锁进程"><a href="#杀死死锁进程" class="headerlink" title="杀死死锁进程"></a>杀死死锁进程</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">KILL spid;</span><br></pre></td></tr></table></figure>
+<h3 id="每秒死锁数量"><a href="#每秒死锁数量" class="headerlink" title="每秒死锁数量"></a>每秒死锁数量</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">SELECT  *</span><br><span class="line">FROM    sys.dm_os_performance_counters</span><br><span class="line">WHERE   counter_name LIKE &apos;Number of Deadlocksc%&apos;;</span><br></pre></td></tr></table></figure>
+<a id="more"></a>
+<h3 id="查询当前阻塞"><a href="#查询当前阻塞" class="headerlink" title="查询当前阻塞"></a>查询当前阻塞</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line">WITH CTE_SID (BSID, SID, sql_handle) AS (</span><br><span class="line">	SELECT</span><br><span class="line">		blocking_session_id,</span><br><span class="line">		session_id,</span><br><span class="line">		sql_handle</span><br><span class="line">	FROM</span><br><span class="line">		sys.dm_exec_requests</span><br><span class="line">	WHERE</span><br><span class="line">		blocking_session_id &lt;&gt; 0</span><br><span class="line">	UNION ALL</span><br><span class="line">		SELECT</span><br><span class="line">			A.blocking_session_id,</span><br><span class="line">			A.session_id,</span><br><span class="line">			A.sql_handle</span><br><span class="line">		FROM</span><br><span class="line">			sys.dm_exec_requests A</span><br><span class="line">		JOIN CTE_SID B ON A.SESSION_ID = B.BSID</span><br><span class="line">) SELECT</span><br><span class="line">	C.BSID,</span><br><span class="line">	C.SID,</span><br><span class="line">	S.login_name,</span><br><span class="line">	S.host_name,</span><br><span class="line">	S.status,</span><br><span class="line">	S.cpu_time,</span><br><span class="line">	S.memory_usage,</span><br><span class="line">	S.last_request_start_time,</span><br><span class="line">	S.last_request_end_time,</span><br><span class="line">	S.logical_reads,</span><br><span class="line">	S.row_count,</span><br><span class="line">	q. TEXT</span><br><span class="line">FROM</span><br><span class="line">	CTE_SID C</span><br><span class="line">JOIN sys.dm_exec_sessions S ON C.sid = s.session_id CROSS APPLY sys.dm_exec_sql_text (C.sql_handle) Q</span><br><span class="line">ORDER BY</span><br><span class="line">	sid;</span><br></pre></td></tr></table></figure>
+        </div>
+        <div class="post-tool">
+            <a class="btn-thumbs-up" href="javascript:void(0);" data-cid="52" title="95">
+                <i class="fa fa-thumbs-up" aria-hidden="true"></i> Donate
+            </a>
+        </div>
+        
+        <div class="post-tags">Tags：
+            
+            <a href="/tags/SQL/">SQL</a>
+            
+            <a href="/tags/死锁/">死锁</a>
+            
+        </div>
+        
+    </article>
+    
+    <p style="text-align: center">This article just represents my own viewpoint. If there is something wrong, please correct me.</p>
+    
+    
+
+    
+
+</div>
+<script src="/js/busuanzi.pure.mini.js"></script>
+
+
+        </div><!-- end #main-->
+    </div><!-- end #body -->
+    <footer class="footer">
+    <div class="footer-inner" style="text-align: center">
+        <p>
+            <a href="/about" title="About">About</a>&nbsp;&nbsp<em>·</em>&nbsp;&nbsp
+            <!-- 自定义链接 -->
+            <a href="/help" title="Help">Help</a>&nbsp;&nbsp<em>·</em>&nbsp;&nbsp
+            <a href="/links" title="Links">Links</a>&nbsp;&nbsp<em>·</em>&nbsp;&nbsp
+            <a href="/sitemap.xml" title="SiteMap">SiteMap</a>
+        </p>
+        <p>
+            Has been established&nbsp<a href="/timeline" id="siteBuildingTime"></a>&nbspDays，<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" rel="licence">Based on Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)</a><br>
+            ©2017-<span id="cpYear"></span> Based on&nbsp<a href="http://hexo.io" target="_blank" rel="nofollow">Hexo</a>
+            ，Theme by&nbsp&nbsp<a href="https://github.com/tangkunyin/hexo-theme-jsimple" target="_blank" rel="bookmark">JSimple</a>
+            ，Author&nbsp<a href="https://shuoit.net" target="_blank" rel="friend">纠结伦</a>
+            ，Hosted by <a href="https://pages.github.com/" target="_blank" rel="nofollow">GitHub Pages</a>
+        </p>
+    </div>
+</footer>
+<script src="/js/SimpleCore.js"></script>
+
+</div>
+<!-- search pop -->
+<div class="popup search-popup local-search-popup">
+    <div class="local-search-header clearfix">
+        <span class="search-icon">
+            <i class="fa fa-search"></i>
+        </span>
+        <span class="popup-btn-close">
+            <i class="fa fa-times-circle"></i>
+        </span>
+        <div class="local-search-input-wrapper">
+            <input id="local-search-input" spellcheck="false" type="text" autocomplete="off" placeholder="Input query keywords here...">
+        </div>
+    </div>
+    <div id="local-search-result"></div>
+</div>
+<div class="fixed-btn">
+    <a class="btn-gotop" href="javascript:"> <i class="fa fa-angle-up"></i></a>
+</div>
+<script>
+    $(function () {
+        var jsi_config = {
+            buildingTime: '01/20/2018',
+            current: $('.post-tags').length > 0 ? 'post' : 'archive',
+            snsQRCode: '/images/sns-qrcode.png',
+            donateImg: '/images/donate-qr.png',
+            localSearch: { dbPath: '' },
+            readMode: 'day'
+        };
+        
+        SimpleCore.init(jsi_config);
+        
+    });
+</script>
+</body>
+</html>
