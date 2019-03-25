@@ -737,8 +737,8 @@ var SimpleCore = {
             $('body').removeClass('night-mode');
             btn.find('i').attr('class', 'fa fa-sun-o');
             $(".cover-img").css({
-                'background': "url('/images/cover-day.jpg')",
-                'background-image': '/images/cover-day.jpg',
+                'background': "url(https://picturebed-1258146968.cos.ap-beijing.myqcloud.com/yangpiena-banner.jpg)",
+                'background-image': 'https://picturebed-1258146968.cos.ap-beijing.myqcloud.com/yangpiena-banner.jpg',
                 'background-size': 'cover',
                 'background-position': 'center',
                 'background-repeat': 'no-repeat'
