@@ -2,6 +2,20 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://yangpiena.coding.me/photos/data.json</loc>
+    
+    <lastmod>2019-03-25T14:07:17.533Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yangpiena.coding.me/photos/index.html</loc>
+    
+    <lastmod>2019-03-25T13:45:12.550Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://yangpiena.coding.me/help/index.html</loc>
     
     <lastmod>2019-03-25T02:24:18.274Z</lastmod>
@@ -415,13 +429,6 @@
   </url>
   
   <url>
-    <loc>http://yangpiena.coding.me/photos/index.html</loc>
-    
-    <lastmod>2019-03-22T09:20:02.216Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://yangpiena.coding.me/links/index.html</loc>
     
     <lastmod>2019-03-22T09:17:54.530Z</lastmod>
@@ -439,13 +446,6 @@
     <loc>http://yangpiena.coding.me/tags/index.html</loc>
     
     <lastmod>2019-03-22T08:14:46.726Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://yangpiena.coding.me/photos/data.json</loc>
-    
-    <lastmod>2018-11-25T06:15:20.907Z</lastmod>
     
   </url>
   
