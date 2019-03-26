@@ -2,8 +2,7 @@
 title: Hexo博客搭建记录
 layout: post
 date: 2016-11-09
-comments: true
-categories: Blog
+categories: 技术
 tags: Hexo
 description: 生命在于折腾
 ---
