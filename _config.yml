@@ -81,8 +81,17 @@ search:
 
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
-deploy:
-  type: git #部署环境，基于hexo+githubpage,所以这里使用git。注意：不同版本的hexo，type有可能不同，3.x以后应使用git,具体参看官方文档
-  repo:
-    github: git@github.com:yangpiena/yangpiena.github.io.git,master
-    coding: https://git.coding.net/yangpiena/yangpiena.git,master  #git仓库地址，替换成你的username即可，其他保持不变，后面会提到如何创建git仓库
+#deploy:
+#  type: git #部署环境，基于hexo+githubpage,所以这里使用git。注意：不同版本的hexo，type有可能不同，3.x以后应使用git,具体参看官方文档
+#  repo:
+#    github: git@github.com:yangpiena/yangpiena.github.io.git,master
+#    coding: https://git.coding.net/yangpiena/yangpiena.git,master  #git仓库地址，替换成你的username即可，其他保持不变，后面会提到如何创建git仓库
+
+deploy: 
+- type: git
+  repo: git@github.com:yangpiena/yangpiena.github.io.git
+  branch: master
+  
+- type: git
+  repo: https://git.coding.net/yangpiena/yangpiena.git
+  branch: master
