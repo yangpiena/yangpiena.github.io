@@ -1,6 +1,8 @@
 <div class="archive-item">
-  <a href="<%- url_for(post.path) %>" class="post-title">
-    <%= post.title || __('untitled_post') %>
-  </a>
-  <div class="date text-muted">发表于 <%= full_date(post.date) %></div>
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	<%= post.date.format('MM-DD') %>
+	<a href="<%- url_for(post.path) %>" class="post-title">
+		<%= post.title || __('untitled_post') %>
+	</a>
+	<!-- <div class="date text-muted">发表于 <%= full_date(post.date) %></div> -->
 </div>

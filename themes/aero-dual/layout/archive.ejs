@@ -1,14 +1,35 @@
 <!-- Archive Header -->
 <%- partial('_partial/header', {headerType: 'archive'}) %>
+
 <!-- Archive List -->
 <div class="container">
   <div class="row">
     <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-      <% page.posts.each(function(post){ %>
-        <%- partial('_partial/archive-entry', {post: post, index: true}) %>
-      <% }) %>
+	    <!-- 归档列表 -->
+	    <% 
+	        var years = {};
+	        page.posts.sort('date').reverse().forEach(function(post){
+	            var year = post.date.year()
+	            if(years[year]===undefined){
+	                years[year] = [];
+	            }
+	            years[year].push(post);
+	        });
+	    %>
+
+        <% Object.keys(years).reverse().forEach(function(year){  %>
+        <div class="one-tag-list">
+            <span class="fa fa-calendar-times-o listing-seperator" id="<%= year %>">
+                <span style="color: #F03838; font-size: 2rem;" class="tag-text"><%= year %></span>
+            </span>
+            <% years[year].map(function(post){  %>
+            	<%- partial('_partial/archive-entry', {post: post, index: true}) %>
+            <% }) %>
+        </div>
+        <% }) %>
 
     </div>
   </div>
 </div>
+
 <%- partial('_partial/pagination') %>

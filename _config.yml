@@ -4,7 +4,7 @@
 
 # Site
 title: 昜丿捺
-subtitle: 
+subtitle:
 description: 没有阳光，沉默而居
 author: 昜丿捺
 language: zh-CN
@@ -72,7 +72,7 @@ theme: aero-dual
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
   type: git
-  repository: git@github.com:yangpiena/yangpiena.github.io.git
+  repository: https://git.coding.net/yangpiena/yangpiena.git
   branch: master
 
 # duoshuo_shortname: yangpiena

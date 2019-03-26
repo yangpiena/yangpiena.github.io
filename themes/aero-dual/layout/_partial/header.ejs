@@ -22,6 +22,12 @@
     pageTitle = post.title || __('untitled_post');
   } else if (headerType === 'archive') {
     pageTitle = __('archive_title');
+  } else if (headerType === 'tags') {
+    pageTitle = '标签';
+  } else if (headerType === 'links') {
+    pageTitle = '链接';
+  } else if (headerType === 'blank') {
+    pageTitle = '关于';
   }
 %>
 
@@ -51,12 +57,4 @@
       </div>
     </div>
   </div>
-
-  <% if(theme.swift_search.enable){ %>
-    <form class="search" action="<%- config.root %>search/index.html" method="get" accept-charset="utf-8" style="text-align:right">
-    <label>Search</label>
-    <input type="text" id="search" class="st-default-search-input" maxlength="20" placeholder="Search" />
-    </form>
-  <% } %>
-
 </header>
