@@ -1,0 +1,653 @@
+<!DOCTYPE HTML>
+<html class="no-js" lang="zh-CN">
+<head><meta name="generator" content="Hexo 3.8.0">
+    <!--[if lte IE 9]>
+<meta http-equiv="refresh" content="0;url=http://yangpiena.coding.me/warn.html">
+<![endif]-->
+<meta charset="utf-8">
+<meta http-equiv="X-DNS-Prefetch-Control" content="on">
+<link rel="dns-prefetch" href="http://yangpiena.coding.me">
+<link rel="dns-prefetch" href="//www.google-analytics.com">
+<link rel="prefetch" href="http://yangpiena.coding.me">
+<link rel="prefetch" href="//www.google-analytics.com">
+
+
+<link rel="prerender" href="http://yangpiena.coding.me">
+
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<meta name="renderer" content="webkit">
+<meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=no">
+<meta http-equiv="mobile-agent" content="format=html5; url=http://yangpiena.coding.me">
+<meta name="author" content="昜丿捺">
+<link rel="stylesheet" href="/css/JSimple.css">
+
+<link rel="shortcut icon" href="/img/avatar/favicon.ico">
+
+
+<title>hexo博客增加相册 - 昜丿捺</title>
+
+<meta name="keywords" content="undefined">
+
+<meta name="description " content="没有阳光，沉默而居">
+
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({
+            tex2jax: {
+                inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+                processEscapes: true
+            }
+        });
+    </script>
+
+
+<!-- YPN Add 2019-03-25 增加相册所需js -->
+<script type="text/javascript" src="/js/jquery-1.11.3.min.js"></script>
+    
+
+    
+
+</head>
+<body>
+<div id="nav">
+    <nav class="nav-menu">
+        <a class="site-name current" href="/" title="昜">昜</a>
+        <a class="site-index current" href="/"><i class="fa fa-home"></i><span>首页</span></a>
+        <a href="/archives" title="归档"><i class="fa fa-archives"></i><span>归档</span></a>
+        <a href="/tags" title="标签"><i class="fa fa-tags"></i><span>标签</span></a>
+        <!-- custom single page of menus -->
+        
+        
+        <a href="/links" title="收藏">
+            <i class="fa fa-star"></i>
+            <span>收藏</span>
+        </a>
+        
+        
+        <a href="/photos" title="相册">
+            <i class="fa fa-camera"></i>
+            <span>相册</span>
+        </a>
+        
+    </nav>
+</div>
+
+<div class="nav-user">
+    <a class="btn-search" href="#"><i class="fa fa-search"></i></a>
+    <a class="btn-read-mode" href="#"><i class="fa fa-sun-o"></i></a>
+	<!-- YPN Del 2019-03-22 -->
+    <!-- <a class="btn-sns-qr" href="javascript:"><i class="fa fa-telegram"></i></a> -->
+</div>
+
+<div id="wrapper" class="clearfix">
+    <div id="body">
+        <div class="main" id="main">
+            <div id="cover">
+    <div class="cover-img"></div>
+    <div class="cover-info">
+        
+        <h1 class="cover-siteName">昜丿捺</h1>
+        <h3 class="cover-siteTitle">个人博客</h3>
+        <p class="cover-siteDesc">没有阳光，沉默而居</p>
+        <div class="cover-sns">
+            
+    &nbsp;&nbsp;<div class="btn btn-github">
+        <a href="https://github.com/yangpiena" target="_blank" title="github" ref="friend">
+            <i class="fa fa-github"></i>
+        </a>
+    </div>
+
+    &nbsp;&nbsp;<div class="btn btn-github-alt">
+        <a href="https://coding.net/u/yangpiena" target="_blank" title="github-alt" ref="friend">
+            <i class="fa fa-github-alt"></i>
+        </a>
+    </div>
+
+    &nbsp;&nbsp;<div class="btn btn-weibo">
+        <a href="http://weibo.com/yangpiena" target="_blank" title="weibo" ref="friend">
+            <i class="fa fa-weibo"></i>
+        </a>
+    </div>
+
+    &nbsp;&nbsp;<div class="btn btn-envelope">
+        <a href="yangpiena@163.com" target="_blank" title="envelope" ref="friend">
+            <i class="fa fa-envelope"></i>
+        </a>
+    </div>
+
+
+        </div>
+    </div>
+</div>
+
+            <div class="page-title">
+    <ul>
+        <li><a href="/">最近</a></li>
+        
+            
+        
+        <li class="page-search">
+    <form id="search" class="search-form">
+        <input type="text" readonly="readonly" id="local-search-input-tip" placeholder="点击或按F键搜索">
+        <button type="button" disabled="disabled" class="search-form-submit"><i class="fa fa-search"></i></button>
+    </form>
+</li>
+
+    </ul>
+</div>
+<div class="main-inner">
+    <article class="post" itemscope="" itemtype="http://schema.org/BlogPosting">
+        <div class="post-header">
+            <h2 class="post-title" style="text-align: center">Hexo博客增加相册</h2>
+			<div class="post-meta" style="text-align: center">
+				<span title="最后编辑于&nbsp;2019-03-27">2019-03-27</span>
+				<!-- YPN Edit 2019-03-25 -->
+				<!-- 您是第&nbsp;<span id="busuanzi_value_page_pv"><i class="fa fa-spinner fa-spin"></i></span>位看到它们的小伙伴 -->
+				&nbsp;&nbsp;&nbsp;<span id="busuanzi_value_page_pv"><i class="fa fa-spinner fa-spin"></i></span>&nbsp;<font color="#00FF00">↑</font>
+			</div>
+        </div>
+        <div class="post-content markdown-body">
+            <h4 id="1-增加菜单，命令如下："><a href="#1-增加菜单，命令如下：" class="headerlink" title="1. 增加菜单，命令如下："></a>1. 增加菜单，命令如下：</h4><pre><code>hexo new page photos
+</code></pre><h4 id="2-编辑菜单photos下的文件index-md，添加如下内容："><a href="#2-编辑菜单photos下的文件index-md，添加如下内容：" class="headerlink" title="2. 编辑菜单photos下的文件index.md，添加如下内容："></a>2. 编辑菜单photos下的文件index.md，添加如下内容：</h4><pre><code>&lt;div class=&quot;content&quot;&gt;
+    &lt;div class=&quot;iw_wrapper&quot;&gt;
+        &lt;ul class=&quot;iw_thumbs&quot; id=&quot;iw_thumbs&quot;&gt;
+            &lt;!-- &lt;li&gt;&lt;img src=&quot;/img/thumbs/1.jpg&quot; data-img=&quot;/img/full/1.jpg&quot; alt=&quot;Thumb1&quot;/&gt;&lt;div&gt;&lt;h2&gt;Serenity&lt;/h2&gt;&lt;p&gt;Far far away, behind the word mountains there live the blind texts.&lt;/p&gt;&lt;/div&gt;&lt;/li&gt; --&gt;
+        &lt;/ul&gt;
+    &lt;/div&gt;
+    &lt;div id=&quot;iw_ribbon&quot; class=&quot;iw_ribbon&quot;&gt;
+        &lt;span class=&quot;iw_close&quot;&gt;&lt;/span&gt;
+        &lt;span class=&quot;iw_zoom&quot;&gt;Click thumb to zoom&lt;/span&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;script type=&quot;text/javascript&quot; src=&quot;/js/addphoto.js&quot;&gt;&lt;/script&gt;
+&lt;script type=&quot;text/javascript&quot; src=&quot;/js/jquery.min.js&quot;&gt;&lt;/script&gt;
+&lt;script type=&quot;text/javascript&quot; src=&quot;/js/jquery.masonry.min.js&quot;&gt;&lt;/script&gt;
+&lt;script type=&quot;text/javascript&quot; src=&quot;/js/jquery.easing.1.3.js&quot;&gt;&lt;/script&gt;
+&lt;script type=&quot;text/javascript&quot;&gt;
+    $(window).load(function(){
+        var $iw_thumbs            = $(&apos;#iw_thumbs&apos;),
+            $iw_ribbon            = $(&apos;#iw_ribbon&apos;),
+            $iw_ribbon_close    = $iw_ribbon.children(&apos;span.iw_close&apos;),
+            $iw_ribbon_zoom        = $iw_ribbon.children(&apos;span.iw_zoom&apos;);
+
+            ImageWall    = (function() {
+                    // window width and height
+                var w_dim,
+                    // index of current image
+                    current                = -1,
+                    isRibbonShown        = false,
+                    isFullMode            = false,
+                    // ribbon / images animation settings
+                    ribbonAnim            = {speed : 500, easing : &apos;easeOutExpo&apos;},
+                    imgAnim                = {speed : 400, easing : &apos;jswing&apos;},
+                    // init function : call masonry, calculate window dimentions, initialize some events
+                    init                = function() {
+                        $iw_thumbs.imagesLoaded(function(){
+                            $iw_thumbs.masonry({
+                                isAnimated    : true
+                            });
+                        });
+                        getWindowsDim();
+                        initEventsHandler();
+                    },
+                    // calculate window dimentions
+                    getWindowsDim        = function() {
+                        w_dim = {
+                            width    : $(window).width(),
+                            height    : $(window).height()
+                        };
+                    },
+                    // initialize some events
+                    initEventsHandler    = function() {
+
+                        // click on a image
+                        $iw_thumbs.delegate(&apos;li&apos;, &apos;click&apos;, function() {
+                            if($iw_ribbon.is(&apos;:animated&apos;)) return false;
+
+                            var $el = $(this);
+
+                            if($el.data(&apos;ribbon&apos;)) {
+                                showFullImage($el);
+                            }
+                            else if(!isRibbonShown) {
+                                isRibbonShown = true;
+
+                                $el.data(&apos;ribbon&apos;,true);
+
+                                // set the current
+                                current = $el.index();
+
+                                showRibbon($el);
+                            }
+                        });
+
+                        // click ribbon close
+                        $iw_ribbon_close.bind(&apos;click&apos;, closeRibbon);
+
+                        // on window resize we need to recalculate the window dimentions
+                        $(window).bind(&apos;resize&apos;, function() {
+                                    getWindowsDim();
+                                    if($iw_ribbon.is(&apos;:animated&apos;))
+                                        return false;
+                                    closeRibbon();
+                                 })
+                                 .bind(&apos;scroll&apos;, function() {
+                                    if($iw_ribbon.is(&apos;:animated&apos;))
+                                        return false;
+                                    closeRibbon();
+                                 });
+
+                    },
+                    showRibbon            = function($el) {
+                        var    $img    = $el.children(&apos;img&apos;),
+                            $descrp    = $img.next();
+
+                        // fadeOut all the other images
+                        $iw_thumbs.children(&apos;li&apos;).not($el).animate({opacity : 0.2}, imgAnim.speed);
+
+                        // increase the image z-index, and set the height to 100px (default height)
+                        $img.css(&apos;z-index&apos;, 100)
+                            .data(&apos;originalHeight&apos;,$img.height())
+                            .stop()
+                            .animate({
+                                height         : &apos;100px&apos;
+                            }, imgAnim.speed, imgAnim.easing);
+
+                        // the ribbon will animate from the left or right
+                        // depending on the position of the image
+                        var ribbonCssParam         = {
+                                top    : $el.offset().top - $(window).scrollTop() - 6 + &apos;px&apos;
+                            },
+                            descriptionCssParam,
+                            dir;
+
+                        if( $el.offset().left &lt; (w_dim.width / 2) ) {
+                            dir = &apos;left&apos;;
+                            ribbonCssParam.left     = 0;
+                            ribbonCssParam.right     = &apos;auto&apos;;
+                        }
+                        else {
+                            dir = &apos;right&apos;;
+                            ribbonCssParam.right     = 0;
+                            ribbonCssParam.left     = &apos;auto&apos;;
+                        }
+
+                        $iw_ribbon.css(ribbonCssParam)
+                                  .show()
+                                  .stop()
+                                  .animate({width : &apos;100%&apos;}, ribbonAnim.speed, ribbonAnim.easing, function() {
+                                        switch(dir) {
+                                            case &apos;left&apos; :
+                                                descriptionCssParam        = {
+                                                    &apos;left&apos;             : $img.outerWidth(true) + &apos;px&apos;,
+                                                    &apos;text-align&apos;     : &apos;left&apos;
+                                                };
+                                                break;
+                                            case &apos;right&apos; :    
+                                                descriptionCssParam        = {
+                                                    &apos;left&apos;             : &apos;-200px&apos;,
+                                                    &apos;text-align&apos;     : &apos;right&apos;
+                                                };
+                                                break;
+                                        };
+                                        $descrp.css(descriptionCssParam).fadeIn();
+                                        // show close button and zoom
+                                        $iw_ribbon_close.show();
+                                        $iw_ribbon_zoom.show();
+                                  });
+
+                    },
+                    // close the ribbon
+                    // when in full mode slides in the middle of the page
+                    // when not slides left
+                    closeRibbon            = function() {
+                        isRibbonShown     = false
+
+                        $iw_ribbon_close.hide();
+                        $iw_ribbon_zoom.hide();
+
+                        if(!isFullMode) {
+
+                            // current wall image
+                            var $el             = $iw_thumbs.children(&apos;li&apos;).eq(current);
+
+                            resetWall($el);
+
+                            // slide out ribbon
+                            $iw_ribbon.stop()
+                                      .animate({width : &apos;0%&apos;}, ribbonAnim.speed, ribbonAnim.easing); 
+
+                        }
+                        else {
+                            $iw_ribbon.stop().animate({
+                                opacity        : 0.8,
+                                height         : &apos;0px&apos;,
+                                marginTop    : w_dim.height/2 + &apos;px&apos; // half of window height
+                            }, ribbonAnim.speed, function() {
+                                $iw_ribbon.css({
+                                    &apos;width&apos;        : &apos;0%&apos;,
+                                    &apos;height&apos;    : &apos;126px&apos;,
+                                    &apos;margin-top&apos;: &apos;0px&apos;
+                                }).children(&apos;img&apos;).remove();
+                            });
+
+                            isFullMode    = false;
+                        }
+                    },
+                    resetWall            = function($el) {
+                        var $img        = $el.children(&apos;img&apos;),
+                            $descrp        = $img.next();
+
+                        $el.data(&apos;ribbon&apos;,false);
+
+                        // reset the image z-index and height
+                        $img.css(&apos;z-index&apos;,1).stop().animate({
+                            height         : $img.data(&apos;originalHeight&apos;)
+                        }, imgAnim.speed,imgAnim.easing);
+
+                        // fadeOut the description
+                        $descrp.fadeOut();
+
+                        // fadeIn all the other images
+                        $iw_thumbs.children(&apos;li&apos;).not($el).animate({opacity : 1}, imgAnim.speed);                                
+                    },
+                    showFullImage        = function($el) {
+                        isFullMode    = true;
+
+                        $iw_ribbon_close.hide();
+
+                        var    $img    = $el.children(&apos;img&apos;),
+                            large    = $img.data(&apos;img&apos;),
+
+                            // add a loading image on top of the image
+                            $loading = $(&apos;&lt;span class=&quot;iw_loading&quot;&gt;&lt;/span&gt;&apos;);
+
+                        $el.append($loading);
+
+                        // preload large image
+                        $(&apos;&lt;img/&gt;&apos;).load(function() {
+                            var $largeImage    = $(this);
+
+                            $loading.remove();
+
+                            $iw_ribbon_zoom.hide();
+
+                            resizeImage($largeImage);
+
+                            // reset the current image in the wall
+                            resetWall($el);
+
+                            // animate ribbon in and out
+                            $iw_ribbon.stop().animate({
+                                opacity        : 1,
+                                height         : &apos;0px&apos;,
+                                marginTop    : &apos;63px&apos; // half of ribbons height
+                            }, ribbonAnim.speed, function() {
+                                // add the large image to the DOM
+                                $iw_ribbon.prepend($largeImage);
+
+                                $iw_ribbon_close.show();
+
+                                $iw_ribbon.animate({
+                                    height         : &apos;100%&apos;,
+                                    marginTop    : &apos;0px&apos;,
+                                    top            : &apos;0px&apos;
+                                }, ribbonAnim.speed);
+                            });
+                        }).attr(&apos;src&apos;,large);
+
+                    },
+                    resizeImage            = function($image) {
+                        var widthMargin        = 100,
+                            heightMargin     = 100,
+
+                            windowH          = w_dim.height - heightMargin,
+                            windowW          = w_dim.width - widthMargin,
+                            theImage         = new Image();
+
+                        theImage.src         = $image.attr(&quot;src&quot;);
+
+                        var imgwidth         = theImage.width,
+                            imgheight        = theImage.height;
+
+                        if((imgwidth &gt; windowW) || (imgheight &gt; windowH)) {
+                            if(imgwidth &gt; imgheight) {
+                                var newwidth     = windowW,
+                                    ratio         = imgwidth / windowW,
+                                    newheight     = imgheight / ratio;
+
+                                theImage.height = newheight;
+                                theImage.width    = newwidth;
+
+                                if(newheight &gt; windowH) {
+                                    var newnewheight     = windowH,
+                                        newratio         = newheight/windowH,
+                                        newnewwidth     = newwidth/newratio;
+
+                                    theImage.width         = newnewwidth;
+                                    theImage.height        = newnewheight;
+                                }
+                            }
+                            else {
+                                var newheight     = windowH,
+                                    ratio         = imgheight / windowH,
+                                    newwidth     = imgwidth / ratio;
+
+                                theImage.height = newheight;
+                                theImage.width    = newwidth;
+
+                                if(newwidth &gt; windowW) {
+                                    var newnewwidth     = windowW,
+                                        newratio         = newwidth/windowW,
+                                        newnewheight     = newheight/newratio;
+
+                                    theImage.height     = newnewheight;
+                                    theImage.width        = newnewwidth;
+                                }
+                            }
+                        }
+
+                        $image.css({
+                            &apos;width&apos;            : theImage.width + &apos;px&apos;,
+                            &apos;height&apos;        : theImage.height + &apos;px&apos;,
+                            &apos;margin-left&apos;    : -theImage.width / 2 + &apos;px&apos;,
+                            &apos;margin-top&apos;    : -theImage.height / 2 + &apos;px&apos;
+                        });                            
+                    };
+
+                return {init : init};    
+            })();
+
+        ImageWall.init();
+    });
+&lt;/script&gt;
+</code></pre><h4 id="3-拷贝需要的4个js文件，到主题的js目录下"><a href="#3-拷贝需要的4个js文件，到主题的js目录下" class="headerlink" title="3. 拷贝需要的4个js文件，到主题的js目录下"></a>3. 拷贝需要的4个js文件，到主题的js目录下</h4><p>addphoto.js<br>jquery.min.js<br>jquery.masonry.min.js<br>jquery.easing.1.3.js<br>jquery-1.11.3.min.js</p>
+<h4 id="4-编辑layout下的文件head-ejs，引入js"><a href="#4-编辑layout下的文件head-ejs，引入js" class="headerlink" title="4. 编辑layout下的文件head.ejs，引入js"></a>4. 编辑layout下的文件head.ejs，引入js</h4><pre><code>&lt;!-- YPN Add 2019-03-25 增加相册所需js --&gt;
+&lt;script type=&quot;text/javascript&quot; src=&quot;&lt;%- config.root %&gt;js/jquery-1.11.3.min.js&quot;&gt;&lt;/script&gt;
+</code></pre><h4 id="5-新建图片数据源配置文件data-json，保存到菜单目录photos下面，内容如下"><a href="#5-新建图片数据源配置文件data-json，保存到菜单目录photos下面，内容如下" class="headerlink" title="5. 新建图片数据源配置文件data.json，保存到菜单目录photos下面，内容如下"></a>5. 新建图片数据源配置文件data.json，保存到菜单目录photos下面，内容如下</h4><pre><code>[
+    {&quot;url&quot;:&quot;https://picturebed-1258146968.cos.ap-beijing.myqcloud.com/%E6%83%B3%E5%BF%B5.jpg&quot;,&quot;title&quot;:&quot;昜丿捺&quot;,&quot;desc&quot;:&quot;2019-03-25 22:06:26&quot;},
+    {&quot;url&quot;:&quot;https://picturebed-1258146968.cos.ap-beijing.myqcloud.com/%E7%BE%81%E7%BB%8A.jpg&quot;,&quot;title&quot;:&quot;昜丿捺&quot;,&quot;desc&quot;:&quot;2019-03-25 22:06:26&quot;},
+    {&quot;url&quot;:&quot;https://picturebed-1258146968.cos.ap-beijing.myqcloud.com/%E6%95%85%E4%BA%8B.jpg&quot;,&quot;title&quot;:&quot;昜丿捺&quot;,&quot;desc&quot;:&quot;2019-03-25 22:06:26&quot;},
+    {&quot;url&quot;:&quot;https://picturebed-1258146968.cos.ap-beijing.myqcloud.com/%E5%AE%98%E5%9C%BA.jpg&quot;,&quot;title&quot;:&quot;昜丿捺&quot;,&quot;desc&quot;:&quot;2019-03-25 22:06:26&quot;},
+    {&quot;url&quot;:&quot;https://picturebed-1258146968.cos.ap-beijing.myqcloud.com/%E5%8F%8D%E6%8A%97%E5%86%9B.jpg&quot;,&quot;title&quot;:&quot;昜丿捺&quot;,&quot;desc&quot;:&quot;2019-03-25 22:06:26&quot;},
+    {&quot;url&quot;:&quot;https://picturebed-1258146968.cos.ap-beijing.myqcloud.com/%E7%89%A1%E4%B8%B9%E7%AC%91%E4%BA%86.jpg&quot;,&quot;title&quot;:&quot;昜丿捺&quot;,&quot;desc&quot;:&quot;2019-03-25 22:06:26&quot;},
+    {&quot;url&quot;:&quot;https://picturebed-1258146968.cos.ap-beijing.myqcloud.com/%E7%88%B1%E4%BA%BA.jpg&quot;,&quot;title&quot;:&quot;昜丿捺&quot;,&quot;desc&quot;:&quot;2019-03-25 22:06:26&quot;},
+    {&quot;url&quot;:&quot;https://picturebed-1258146968.cos.ap-beijing.myqcloud.com/%E7%89%A1%E4%B8%B9.jpg&quot;,&quot;title&quot;:&quot;昜丿捺&quot;,&quot;desc&quot;:&quot;2019-03-25 22:06:26&quot;},
+    {&quot;url&quot;:&quot;https://picturebed-1258146968.cos.ap-beijing.myqcloud.com/%E7%BE%8E.jpg&quot;,&quot;title&quot;:&quot;昜丿捺&quot;,&quot;desc&quot;:&quot;2019-03-25 22:06:26&quot;},
+    {&quot;url&quot;:&quot;https://picturebed-1258146968.cos.ap-beijing.myqcloud.com/%E6%88%90%E9%95%BF.jpg&quot;,&quot;title&quot;:&quot;昜丿捺&quot;,&quot;desc&quot;:&quot;2019-03-25 22:06:26&quot;},
+    {&quot;url&quot;:&quot;https://picturebed-1258146968.cos.ap-beijing.myqcloud.com/%E6%9E%97%E4%B8%AD%E5%B0%8F%E5%B1%8B.jpg&quot;,&quot;title&quot;:&quot;昜丿捺&quot;,&quot;desc&quot;:&quot;2019-03-25 22:06:26&quot;},
+    {&quot;url&quot;:&quot;https://picturebed-1258146968.cos.ap-beijing.myqcloud.com/%E6%98%A5%E5%B7%B2%E6%9A%AE.jpg&quot;,&quot;title&quot;:&quot;昜丿捺&quot;,&quot;desc&quot;:&quot;2019-03-25 22:06:26&quot;},
+    {&quot;url&quot;:&quot;https://picturebed-1258146968.cos.ap-beijing.myqcloud.com/%E4%BA%BA%E9%9D%A2%E4%B8%8D%E7%9F%A5%E4%BD%95%E5%8E%BB.jpg&quot;,&quot;title&quot;:&quot;昜丿捺&quot;,&quot;desc&quot;:&quot;2019-03-25 22:06:26&quot;},
+    {&quot;url&quot;:&quot;https://picturebed-1258146968.cos.ap-beijing.myqcloud.com/%E7%83%AD%E6%83%85.jpg&quot;,&quot;title&quot;:&quot;昜丿捺&quot;,&quot;desc&quot;:&quot;2019-03-25 22:06:26&quot;},
+    {&quot;url&quot;:&quot;https://picturebed-1258146968.cos.ap-beijing.myqcloud.com/%E8%8B%A5%E9%9D%9E%E9%9D%92%E6%98%A5%E8%8B%A6%E7%9F%AD.jpg&quot;,&quot;title&quot;:&quot;昜丿捺&quot;,&quot;desc&quot;:&quot;2019-03-25 22:06:26&quot;},
+    {&quot;url&quot;:&quot;https://picturebed-1258146968.cos.ap-beijing.myqcloud.com/%E5%BE%97%E6%88%90%E6%AD%A4%E7%9B%AE%E4%BD%95%E8%BE%9E%E6%AD%BB.jpg&quot;,&quot;title&quot;:&quot;昜丿捺&quot;,&quot;desc&quot;:&quot;2019-03-25 22:06:26&quot;},
+    {&quot;url&quot;:&quot;https://picturebed-1258146968.cos.ap-beijing.myqcloud.com/%E7%94%9F%E5%91%BD%E5%8F%B3%E5%A4%AA%E5%A4%9A%E9%81%97%E6%86%BE.jpg&quot;,&quot;title&quot;:&quot;昜丿捺&quot;,&quot;desc&quot;:&quot;2019-03-25 22:06:26&quot;},
+    {&quot;url&quot;:&quot;https://picturebed-1258146968.cos.ap-beijing.myqcloud.com/%E5%B0%91%E5%B9%B4.jpg&quot;,&quot;title&quot;:&quot;昜丿捺&quot;,&quot;desc&quot;:&quot;2019-03-25 22:06:26&quot;},
+    {&quot;url&quot;:&quot;https://picturebed-1258146968.cos.ap-beijing.myqcloud.com/%E4%B8%96%E4%BA%8B%E9%83%BD%E6%95%8C%E4%B8%8D%E8%BF%87%E6%97%B6%E9%97%B4.jpg&quot;,&quot;title&quot;:&quot;昜丿捺&quot;,&quot;desc&quot;:&quot;2019-03-25 22:06:26&quot;},
+    {&quot;url&quot;:&quot;https://picturebed-1258146968.cos.ap-beijing.myqcloud.com/%E6%97%85%E7%A8%8B.jpg&quot;,&quot;title&quot;:&quot;昜丿捺&quot;,&quot;desc&quot;:&quot;2019-03-25 22:06:26&quot;},
+    {&quot;url&quot;:&quot;https://picturebed-1258146968.cos.ap-beijing.myqcloud.com/%E5%90%91%E6%9D%A5%E7%BC%98%E6%B5%85.jpg&quot;,&quot;title&quot;:&quot;昜丿捺&quot;,&quot;desc&quot;:&quot;2019-03-25 22:06:26&quot;},
+    {&quot;url&quot;:&quot;https://picturebed-1258146968.cos.ap-beijing.myqcloud.com/%E5%A4%A9%E6%B6%AF%E6%B5%B7%E8%A7%92.jpg&quot;,&quot;title&quot;:&quot;昜丿捺&quot;,&quot;desc&quot;:&quot;2019-03-25 22:06:26&quot;},
+    {&quot;url&quot;:&quot;https://picturebed-1258146968.cos.ap-beijing.myqcloud.com/%E4%B8%8E%E5%90%9B%E5%88%9D%E7%9B%B8%E8%AF%86.jpg&quot;,&quot;title&quot;:&quot;昜丿捺&quot;,&quot;desc&quot;:&quot;2019-03-25 22:06:26&quot;},
+    {&quot;url&quot;:&quot;https://picturebed-1258146968.cos.ap-beijing.myqcloud.com/%E8%AF%AD%E8%A8%80.jpg&quot;,&quot;title&quot;:&quot;昜丿捺&quot;,&quot;desc&quot;:&quot;2019-03-25 22:06:26&quot;},
+    {&quot;url&quot;:&quot;https://picturebed-1258146968.cos.ap-beijing.myqcloud.com/%E6%AC%B2%E6%A7%95%E8%BD%BB%E8%88%9F.jpg&quot;,&quot;title&quot;:&quot;昜丿捺&quot;,&quot;desc&quot;:&quot;2019-03-25 22:06:26&quot;},
+    {&quot;url&quot;:&quot;https://picturebed-1258146968.cos.ap-beijing.myqcloud.com/%E4%B8%80%E9%A9%AC%E5%BD%93%E5%85%88.jpg&quot;,&quot;title&quot;:&quot;昜丿捺&quot;,&quot;desc&quot;:&quot;2019-03-25 22:06:26&quot;},
+    {&quot;url&quot;:&quot;https://picturebed-1258146968.cos.ap-beijing.myqcloud.com/%E6%AD%BB%E5%85%9A.jpg&quot;,&quot;title&quot;:&quot;昜丿捺&quot;,&quot;desc&quot;:&quot;2019-03-25 22:06:26&quot;},
+    {&quot;url&quot;:&quot;https://picturebed-1258146968.cos.ap-beijing.myqcloud.com/%E8%87%B4%E9%9D%92%E6%98%A5.jpg&quot;,&quot;title&quot;:&quot;昜丿捺&quot;,&quot;desc&quot;:&quot;2019-03-25 22:06:26&quot;},
+    {&quot;url&quot;:&quot;https://picturebed-1258146968.cos.ap-beijing.myqcloud.com/%E6%80%BB%E6%9C%89%E8%BF%99%E6%A0%B7%E9%82%A3%E6%A0%B7.jpg&quot;,&quot;title&quot;:&quot;昜丿捺&quot;,&quot;desc&quot;:&quot;2019-03-25 22:06:26&quot;},
+    {&quot;url&quot;:&quot;https://picturebed-1258146968.cos.ap-beijing.myqcloud.com/%E8%BF%BD%E5%AF%BB.jpg&quot;,&quot;title&quot;:&quot;昜丿捺&quot;,&quot;desc&quot;:&quot;2019-03-25 22:06:26&quot;},
+    {&quot;url&quot;:&quot;https://picturebed-1258146968.cos.ap-beijing.myqcloud.com/%E6%9C%89%E4%BD%A0%E5%9C%A8.jpg&quot;,&quot;title&quot;:&quot;昜丿捺&quot;,&quot;desc&quot;:&quot;2019-03-25 22:06:26&quot;},
+    {&quot;url&quot;:&quot;https://picturebed-1258146968.cos.ap-beijing.myqcloud.com/%E6%8B%A5%E6%9C%89.jpg&quot;,&quot;title&quot;:&quot;昜丿捺&quot;,&quot;desc&quot;:&quot;2019-03-25 22:06:26&quot;},
+    {&quot;url&quot;:&quot;https://picturebed-1258146968.cos.ap-beijing.myqcloud.com/%E5%8D%B4%E7%88%B1%E8%93%9D%E7%BD%97%E8%A3%99%E5%AD%90.jpg&quot;,&quot;title&quot;:&quot;昜丿捺&quot;,&quot;desc&quot;:&quot;2019-03-25 22:06:26&quot;}
+]
+</code></pre><p>其中，图片地址为网络地址，示例中图床由腾讯云提供。</p>
+<h4 id="最后，重启hexo服务生效。"><a href="#最后，重启hexo服务生效。" class="headerlink" title="最后，重启hexo服务生效。"></a>最后，重启hexo服务生效。</h4><pre><code>hexo clean &amp;&amp; hexo g &amp;&amp; hexo s
+</code></pre>
+        </div>
+        <div class="post-tool">
+            <a class="btn-thumbs-up" href="javascript:void(0);" data-cid="52" title="95">
+                <i class="fa fa-thumbs-up" aria-hidden="true"></i> 打赏
+            </a>
+        </div>
+        
+        <div class="post-tags">标签：
+            
+            <a href="/tags/Hexo/">Hexo</a>
+            
+        </div>
+        
+    </article>
+            <div class="post-author clearfix">
+                <a class="avatar fleft" href="https://yangpiena.coding.me" target="_blank">
+                    <img width="48" src="/img/avatar/ironman.png" alt="avatar">
+                </a>
+                <p><span class="label">作者</span>
+                    <a href="https://yangpiena.coding.me" target="_blank">昜丿捺</a>
+                    <span title="最后编辑于&nbsp;2019-03-27">2019-03-27</span>
+					，共 23062 字 
+                </p>
+                <!-- <p>null</p> -->
+				<!-- YPN Add 2019-03-22 没有authorDesc时，显示一言经典语句-->
+				
+					<script type="text/javascript" src="https://api.lwl12.com/hitokoto/v1?encode=js&charset=utf-8"></script>
+					<p><span id="lwlhitokoto"><script>lwlhitokoto()</script></span></p>
+				
+            </div>
+	<!-- 
+    
+    <p style="text-align: center">本文代表个人观点，内容仅供参考。若有不恰当之处，望不吝赐教！</p>
+    
+	-->
+    
+
+    
+
+</div>
+<script src="/js/busuanzi.pure.mini.js"></script>
+
+
+        </div><!-- end #main-->
+    </div><!-- end #body -->
+    <footer class="footer">
+    <div class="footer-inner" style="text-align: center">
+        <p>
+            <a href="/about" title="关于">关于</a>&nbsp;&nbsp<em>·</em>&nbsp;&nbsp
+            <!-- 自定义链接 -->
+            <a href="/help" title="帮助">帮助</a>&nbsp;&nbsp<em>·</em>&nbsp;&nbsp
+            <a href="/links" title="友链">友链</a>&nbsp;&nbsp<em>·</em>&nbsp;&nbsp
+            <a href="/sitemap.xml" title="地图">地图</a>
+        </p>
+        <p>
+            本站已建立&nbsp<a href="/timeline" id="siteBuildingTime"></a>&nbsp天，<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" rel="licence">采用知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议创作</a><br>
+            ©2016-<span id="cpYear"></span> 基于&nbsp<a href="http://hexo.io" target="_blank" rel="nofollow">Hexo</a>
+            ，主题采用&nbsp&nbsp<a href="https://github.com/tangkunyin/hexo-theme-jsimple" target="_blank" rel="bookmark">JSimple</a>
+            ，作者&nbsp<a href="https://yangpiena.coding.me" target="_blank" rel="friend">昜丿捺</a>
+            ，Hosted by <a href="https://coding.net/" target="_blank" rel="nofollow">Coding Pages</a>
+        </p>
+    </div>
+</footer>
+<script src="/js/SimpleCore.js"></script>
+
+
+<!--2017-10-06 YPN Add 添加鼠标点击特效 -->
+<script type="text/javascript">
+  /* 鼠标点击特效 */
+  var a_idx = 0;
+  jQuery(document).ready(function($) {
+      $("body").click(function(e) {
+  var a = new Array("富强", "民主", "文明", "和谐", "自由", "平等", "公正" ,"法治", "爱国", "敬业", "诚信", "友善");
+  var $i = $("<span/>").text(a[a_idx]);
+          a_idx = (a_idx + 1) % a.length;
+  var x = e.pageX,
+          y = e.pageY;
+          $i.css({
+  "z-index": 999999999999999999999999999999999999999999999999999999999999999999999,
+  "top": y - 20,
+  "left": x,
+  "cursor":"default",
+  "position": "absolute",
+  "font-weight": "bold",
+  "color": "#ff6651"
+          });
+          $("body").append($i);
+          $i.animate({
+  "top": y - 180,
+  "opacity": 0
+          },
+          1500,
+  function() {
+              $i.remove();
+          });
+      });
+  });
+</script>
+
+<!--2017-10-06 YPN Add 添加输入框特效。 -->
+<script src="/js/activate-power-mode.js"></script>
+<script>
+  POWERMODE.colorful = true;  // 控制开启/开启礼花特效  
+  POWERMODE.shake    = false; // 控制开启/关闭屏幕震动特效  
+  document.body.addEventListener('input', POWERMODE);
+</script>
+</div>
+<!-- search pop -->
+<div class="popup search-popup local-search-popup">
+    <div class="local-search-header clearfix">
+        <span class="search-icon">
+            <i class="fa fa-search"></i>
+        </span>
+        <span class="popup-btn-close">
+            <i class="fa fa-times-circle"></i>
+        </span>
+        <div class="local-search-input-wrapper">
+            <input id="local-search-input" spellcheck="false" type="text" autocomplete="off" placeholder="输入关键字开始搜索">
+        </div>
+    </div>
+    <div id="local-search-result"></div>
+</div>
+<div class="fixed-btn">
+    <a class="btn-gotop" href="javascript:"> <i class="fa fa-angle-up"></i></a>
+</div>
+<script>
+    $(function () {
+        var jsi_config = {
+            buildingTime: '01/20/2018',
+            current: $('.post-tags').length > 0 ? 'post' : 'archive',
+            snsQRCode: '/images/sns-qrcode.png',
+            donateImg: '/images/donate-qr.png',
+            localSearch: { dbPath: '' },
+            readMode: 'day'
+        };
+        
+            jsi_config.localSearch = {
+                dbPath: '/search.xml',
+                trigger: 'auto',
+                topN: '1',
+                unescape: 'false'
+            }
+        
+        SimpleCore.init(jsi_config);
+        
+    });
+</script>
+</body>
+</html>
