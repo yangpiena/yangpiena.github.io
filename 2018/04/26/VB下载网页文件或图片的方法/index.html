@@ -170,9 +170,9 @@ DownNetFile &quot;http://www.baidu.com&quot;, App.Path &amp; &quot;\Baidu.html&q
 </code></pre><p>用法：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Dim v_Url As String</span><br><span class="line">v_Url = StrConv(&quot;http://www.baidu.com&quot;, vbUnicode)</span><br><span class="line">Call DoFileDownload(v_Url)</span><br></pre></td></tr></table></figure></p>
 <h4 id="六、用WebBrowser1的ExecWB方法调用网页另存为对话框下载"><a href="#六、用WebBrowser1的ExecWB方法调用网页另存为对话框下载" class="headerlink" title="六、用WebBrowser1的ExecWB方法调用网页另存为对话框下载"></a>六、用WebBrowser1的ExecWB方法调用网页另存为对话框下载</h4><pre><code>WebBrowser1.ExecWB OLECMDID_SAVEAS, OLECMDEXECOPT_DODEFAULT
 </code></pre><hr>
-<p>以上方法各有优缺点。<br>Microsoft.XMLHTTP 对于大文件有利，支持断点续传，但需调用 getResponseHeader 进行数据检查。<br>对于谷歌地图图片，图片链接形如：<a href="http://mt1.google.cn/vt/lyrs=s@63&amp;gl=cn&amp;x=51694&amp;s=&amp;y=26884&amp;z=16&amp;s=Galile">http://mt1.google.cn/vt/lyrs=s@63&amp;gl=cn&amp;x=51694&amp;s=&amp;y=26884&amp;z=16&amp;s=Galile</a> ，仅第四种方法有效。</p>
+<p>以上方法各有优缺点。<br>Microsoft.XMLHTTP 对于大文件有利，支持断点续传，但需调用 getResponseHeader 进行数据检查。<br>对于谷歌地图图片，图片链接形如：<a href="http://mt1.google.cn/vt/lyrs=s@63&amp;gl=cn&amp;x=51694&amp;s=&amp;y=26884&amp;z=16&amp;s=Galile" target="_blank" rel="noopener">http://mt1.google.cn/vt/lyrs=s@63&amp;gl=cn&amp;x=51694&amp;s=&amp;y=26884&amp;z=16&amp;s=Galile</a> ，仅第四种方法有效。</p>
 <blockquote>
-<p>本文根据<a href="https://blog.csdn.net/rztyfx/article/details/7605624">rztyfx的专栏</a>整理发表。</p>
+<p>本文根据<a href="https://blog.csdn.net/rztyfx/article/details/7605624" target="_blank" rel="noopener">rztyfx的专栏</a>整理发表。</p>
 </blockquote>
 
         </div>

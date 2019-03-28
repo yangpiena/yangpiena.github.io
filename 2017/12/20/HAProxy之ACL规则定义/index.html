@@ -195,7 +195,7 @@ use_backend lvs3 if is_lvs3
 <pre><code>acl is_lvs3 hdr_end(host) -i lvs3.test.net:8080  
 use_backend lvs3 if is_lvs2 
 </code></pre></li>
-<li><p>hdr <code>&lt;string&gt;</code><br>用于测试请求报文中的所有首部或指定首部信息是否满足指定的条件；指定首部时， 其名称不区分大小写， 且在括号中“（）”不能有任何多余的空白字符。测试服务器端的响应报文时可以使用shdr()。<br>例如 当用户访问172.16.1.100时，重定向到<a href="http://www.afwing.com">http://www.afwing.com</a></p>
+<li><p>hdr <code>&lt;string&gt;</code><br>用于测试请求报文中的所有首部或指定首部信息是否满足指定的条件；指定首部时， 其名称不区分大小写， 且在括号中“（）”不能有任何多余的空白字符。测试服务器端的响应报文时可以使用shdr()。<br>例如 当用户访问172.16.1.100时，重定向到<a href="http://www.afwing.com" target="_blank" rel="noopener">http://www.afwing.com</a></p>
 <pre><code>acl  dstipaddr  hdr(Host) 172.16.1.100
 redirect  location   http://www.afwing.com if  dstipaddr
 </code></pre></li>
