@@ -14,7 +14,7 @@ timezone:
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: http://yoursite.com
+url: http://yangpiena.coding.me
 root: /
 # permalink: :category/:entitle-:timestamp.html
 permalink: :year/:month/:day/:title/
@@ -37,7 +37,7 @@ skip_render:
 new_post_name: :title.md # File name of new posts
 default_layout: post
 titlecase: true # Transform title into titlecase
-external_link: false  #在新标签中打开链接
+external_link: true  #在新标签中打开链接
 filename_case: 0s
 render_drafts: false
 post_asset_folder: false

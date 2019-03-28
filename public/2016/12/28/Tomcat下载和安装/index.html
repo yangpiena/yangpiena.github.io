@@ -2,22 +2,22 @@
 <html class="no-js" lang="zh-CN">
 <head><meta name="generator" content="Hexo 3.8.0">
     <!--[if lte IE 9]>
-<meta http-equiv="refresh" content="0;url=http://yoursite.com/warn.html">
+<meta http-equiv="refresh" content="0;url=http://yangpiena.coding.me/warn.html">
 <![endif]-->
 <meta charset="utf-8">
 <meta http-equiv="X-DNS-Prefetch-Control" content="on">
-<link rel="dns-prefetch" href="http://yoursite.com">
+<link rel="dns-prefetch" href="http://yangpiena.coding.me">
 <link rel="dns-prefetch" href="//www.google-analytics.com">
-<link rel="prefetch" href="http://yoursite.com">
+<link rel="prefetch" href="http://yangpiena.coding.me">
 <link rel="prefetch" href="//www.google-analytics.com">
 
 
-<link rel="prerender" href="http://yoursite.com">
+<link rel="prerender" href="http://yangpiena.coding.me">
 
 <meta http-equiv="X-UA-Compatible" content="IE=Edge">
 <meta name="renderer" content="webkit">
 <meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=no">
-<meta http-equiv="mobile-agent" content="format=html5; url=http://yoursite.com">
+<meta http-equiv="mobile-agent" content="format=html5; url=http://yangpiena.coding.me">
 <meta name="author" content="昜丿捺">
 <link rel="stylesheet" href="/css/JSimple.css">
 
@@ -146,7 +146,7 @@
 			</div>
         </div>
         <div class="post-content markdown-body">
-            <h3 id="Tomcat官网下载"><a href="#Tomcat官网下载" class="headerlink" title="Tomcat官网下载"></a>Tomcat<a href="https://tomcat.apache.org/">官网下载</a></h3><hr>
+            <h3 id="Tomcat官网下载"><a href="#Tomcat官网下载" class="headerlink" title="Tomcat官网下载"></a>Tomcat<a href="https://tomcat.apache.org/" target="_blank" rel="noopener">官网下载</a></h3><hr>
 <h3 id="Tomcat安装"><a href="#Tomcat安装" class="headerlink" title="Tomcat安装"></a>Tomcat安装</h3><h4 id="1-Windows下"><a href="#1-Windows下" class="headerlink" title="1. Windows下"></a>1. Windows下</h4><h5 id="1-1-将下载的apache-tomcat-6-0-35-windows-x86-zip压缩包解压。"><a href="#1-1-将下载的apache-tomcat-6-0-35-windows-x86-zip压缩包解压。" class="headerlink" title="1.1 将下载的apache-tomcat-6.0.35-windows-x86.zip压缩包解压。"></a>1.1 将下载的apache-tomcat-6.0.35-windows-x86.zip压缩包解压。</h5><h5 id="1-2-修改-bin-startup-bat文件，在第一行前面加入以下内容："><a href="#1-2-修改-bin-startup-bat文件，在第一行前面加入以下内容：" class="headerlink" title="1.2 修改\bin\startup.bat文件，在第一行前面加入以下内容："></a>1.2 修改\bin\startup.bat文件，在第一行前面加入以下内容：</h5><pre><code>REM JDK安装所在的路径
 SET JAVA_HOME=D:\Program Files\Java\jdk1.6.0_30
 REM 免安装的Tomcat解压后的路径
@@ -169,7 +169,7 @@ SET CATALINA_HOME=D:\Program Files\tomcat6.0.35
 <p>增加以下代码：</p>
 <pre><code>-A INPUT -m state --state NEW -m tcp -p tcp --dport 8080 -j ACCEPT
 </code></pre><p>重启防火墙<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[root@izwe12zdi799668qfxdm5oz tomcat]# service iptables restart</span><br></pre></td></tr></table></figure></p>
-<h5 id="2-6-访问tomcat"><a href="#2-6-访问tomcat" class="headerlink" title="2.6 访问tomcat"></a>2.6 访问tomcat</h5><p>在浏览器访问地址：<a href="http://IP:8080">http://IP:8080</a></p>
+<h5 id="2-6-访问tomcat"><a href="#2-6-访问tomcat" class="headerlink" title="2.6 访问tomcat"></a>2.6 访问tomcat</h5><p>在浏览器访问地址：<a href="http://IP:8080" target="_blank" rel="noopener">http://IP:8080</a></p>
 <h5 id="2-7-停止tomcat"><a href="#2-7-停止tomcat" class="headerlink" title="2.7 停止tomcat"></a>2.7 停止tomcat</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">[root@izwe12zdi799668qfxdm5oz tomcat]# bin/shutdown.sh </span><br><span class="line">Using CATALINA_BASE:   /usr/tomcat</span><br><span class="line">Using CATALINA_HOME:   /usr/tomcat</span><br><span class="line">Using CATALINA_TMPDIR: /usr/tomcat/temp</span><br><span class="line">Using JRE_HOME:        /usr/java/jdk1.7.0_80/jre</span><br><span class="line">Using CLASSPATH:       /usr/tomcat/bin/bootstrap.jar:/usr/tomcat/bin/tomcat-juli.jar</span><br><span class="line">[root@izwe12zdi799668qfxdm5oz tomcat]#</span><br></pre></td></tr></table></figure>
 <hr>
 <h3 id="Tomcat设置服务"><a href="#Tomcat设置服务" class="headerlink" title="Tomcat设置服务"></a>Tomcat设置服务</h3><h4 id="1-Windows下-1"><a href="#1-Windows下-1" class="headerlink" title="1. Windows下"></a>1. Windows下</h4><h5 id="1-1-修改-bin目录中的service-bat"><a href="#1-1-修改-bin目录中的service-bat" class="headerlink" title="1.1 修改\bin目录中的service.bat"></a>1.1 修改\bin目录中的service.bat</h5><pre><code>rem 在第一个if语句的前面一行添加下面的行：
