@@ -152,21 +152,55 @@
         </div>
         
     </article>
-            <div class="post-author clearfix">
-                <a class="avatar fleft" href="http://yangpiena.coding.me" target="_blank">
-                    <img width="48" src="/images/favicon.png" alt="avatar">
-                </a>
-                <p><span class="label">作者</span>
-                    <a href="http://yangpiena.coding.me/about/" target="_blank">昜丿捺</a>
-                    <span title="最后编辑于&nbsp;2019-03-22">2019-03-22</span>
-					，共 0 字 
-                </p>
-                <!-- <p>一个好人</p> -->
-				<!-- YPN Add 2019-03-22 没有authorDesc时，显示一言经典语句-->
-				
-					<p>一个好人</p>
-				
-            </div>
+	<div class="post-author clearfix">
+		<a class="avatar fleft" href="http://yangpiena.coding.me" target="_blank">
+			<img width="48" src="/images/favicon.png" alt="avatar">
+		</a>
+		<p><span class="label">作者</span>
+			<a href="http://yangpiena.coding.me/about/" target="_blank">昜丿捺</a>
+			<span title="最后编辑于&nbsp;2019-03-22">2019-03-22</span>
+			，共 0 字 
+		</p>		
+		<!-- <p>一个好人</p> -->
+		
+		<!-- YPN Add 2019-03-22 没有authorDesc时，显示一言经典语句-->
+		
+			<p>一个好人</p>
+		
+	</div>
+	
+	<!-- YPN Add 2019-03-29 增加背景音乐Aplayer-->
+	<!-- 参数如下：（粗体为必填项） -->
+	<!-- data-id: 歌曲/专辑/歌单 ID -->	
+		<!-- data-server: 音乐平台，支持如下参数 -->
+		<!-- netease （网易云音乐） -->
+		<!-- tencent （qq音乐） -->
+		<!-- xiami （虾米音乐） -->
+		<!-- kugou （酷狗音乐） -->
+		<!-- baidu （百度音乐） -->	
+	<!-- data-type: 请求类型，支持如下参数 -->
+		<!-- song （单曲） -->
+		<!-- album （专辑） -->
+		<!-- playlist （歌单） -->
+		<!-- search （搜索） -->
+	<!-- data-mode: 播放模式 -->
+		<!-- random （随机） -->
+		<!-- single （单曲） -->
+		<!-- circulation （列表循环） -->
+		<!-- order （列表） -->
+	<!-- data-autoplay: 自动播放  -->
+		<!-- true -->
+		<!-- false -->
+	<section class="music">
+		<div class="content material">
+			<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer@1.7.0/dist/APlayer.min.css">
+			<div class="aplayer" data-theme="#1BCDFC" data-mode="random" data-server="netease" data-type="playlist" data-id="745065239" data-autoplay="false" data-volume="0.7">
+			</div>
+			<script src="https://cdn.jsdelivr.net/npm/aplayer@1.7.0/dist/APlayer.min.js"></script>
+			<script src="https://cdn.jsdelivr.net/npm/meting@1.1.0/dist/Meting.min.js"></script>
+		</div>
+	</section>
+	
 	<!-- 
     
 	-->
@@ -201,7 +235,7 @@
 <script src="/js/SimpleCore.js"></script>
 
 
-<!--2017-10-06 YPN Add 添加鼠标点击特效 -->
+<!--2017-10-06 YPN Add 添加鼠标点击特效
 <script type="text/javascript">
   /* 鼠标点击特效 */
   var a_idx = 0;
@@ -232,7 +266,7 @@
           });
       });
   });
-</script>
+</script> -->
 
 <!--2017-10-06 YPN Add 添加输入框特效。 -->
 <script src="/js/activate-power-mode.js"></script>
@@ -283,5 +317,7 @@
         
     });
 </script>
-</body>
+<!--动态线条背景-->
+<!-- <script type="text/javascript" color="231,129,112" opacity='0.7' zIndex="-2" count="200" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js"></script> -->
+<script src="/live2dw/lib/L2Dwidget.min.js?0c58a1486de42ac6cc1c59c7d98ae887"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"log":false,"model":{"jsonPath":"/live2dw/assets/hijiki.model.json"},"display":{"position":"right","width":150,"height":300,"hOffset":0,"vOffset":-150},"mobile":{"show":true}});</script></body>
 </html>

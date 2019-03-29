@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>Hexo博客增加音乐</title>
+      <link href="/2019/03/29/Hexo%E5%8D%9A%E5%AE%A2%E5%A2%9E%E5%8A%A0%E9%9F%B3%E4%B9%90/"/>
+      <url>/2019/03/29/Hexo%E5%8D%9A%E5%AE%A2%E5%A2%9E%E5%8A%A0%E9%9F%B3%E4%B9%90/</url>
+      
+        <content type="html"><![CDATA[<p>根据你的需求，在合适地方加入音乐。例如，打开主题layout下的文件common-article.ejs，加入：</p><pre><code>&lt;!-- YPN Add 2019-03-29 增加背景音乐Aplayer--&gt;&lt;!-- 参数如下：（粗体为必填项） --&gt;&lt;!-- data-id: 歌曲/专辑/歌单 ID --&gt;        &lt;!-- data-server: 音乐平台，支持如下参数 --&gt;    &lt;!-- netease （网易云音乐） --&gt;    &lt;!-- tencent （qq音乐） --&gt;    &lt;!-- xiami （虾米音乐） --&gt;    &lt;!-- kugou （酷狗音乐） --&gt;    &lt;!-- baidu （百度音乐） --&gt;    &lt;!-- data-type: 请求类型，支持如下参数 --&gt;    &lt;!-- song （单曲） --&gt;    &lt;!-- album （专辑） --&gt;    &lt;!-- playlist （歌单） --&gt;    &lt;!-- search （搜索） --&gt;&lt;!-- data-mode: 播放模式 --&gt;    &lt;!-- random （随机） --&gt;    &lt;!-- single （单曲） --&gt;    &lt;!-- circulation （列表循环） --&gt;    &lt;!-- order （列表） --&gt;&lt;!-- data-autoplay: 自动播放  --&gt;    &lt;!-- true --&gt;    &lt;!-- false --&gt;&lt;section class=&apos;music&apos;&gt;    &lt;div class=&apos;content material&apos;&gt;        &lt;link rel=&quot;stylesheet&quot; href=&quot;https://cdn.jsdelivr.net/npm/aplayer@1.7.0/dist/APlayer.min.css&quot;&gt;        &lt;div class=&quot;aplayer&quot;            data-server=&quot;netease&quot;            data-id=&quot;745065239&quot;            data-theme=&quot;#1BCDFC&quot;            data-type=&quot;playlist&quot;            data-mode=&quot;random&quot;            data-autoplay=false            data-volume=&quot;0.7&quot;&gt;        &lt;/div&gt;        &lt;script src=&quot;https://cdn.jsdelivr.net/npm/aplayer@1.7.0/dist/APlayer.min.js&quot;&gt;&lt;/script&gt;        &lt;script src=&quot;https://cdn.jsdelivr.net/npm/meting@1.1.0/dist/Meting.min.js&quot;&gt;&lt;/script&gt;    &lt;/div&gt;&lt;/section&gt;</code></pre>]]></content>
+      
+      
+      <categories>
+          
+          <category> 技术 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Hexo </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Hexo博客增加相册</title>
       <link href="/2019/03/27/Hexo%E5%8D%9A%E5%AE%A2%E5%A2%9E%E5%8A%A0%E7%9B%B8%E5%86%8C/"/>
       <url>/2019/03/27/Hexo%E5%8D%9A%E5%AE%A2%E5%A2%9E%E5%8A%A0%E7%9B%B8%E5%86%8C/</url>
@@ -83,7 +108,7 @@
       <link href="/2019/03/22/Hexo%E5%8D%9A%E5%AE%A2%E5%A2%9E%E5%8A%A0%E4%B8%80%E8%A8%80API/"/>
       <url>/2019/03/22/Hexo%E5%8D%9A%E5%AE%A2%E5%A2%9E%E5%8A%A0%E4%B8%80%E8%A8%80API/</url>
       
-        <content type="html"><![CDATA[<p>打开主题layout下的文件common-article.ejs，加入以下内容：</p><pre><code>&lt;!-- YPN Add 2019-03-22 没有authorDesc时，显示一言经典语句--&gt;&lt;% if (post.authorDesc) { %&gt;    &lt;p&gt;&lt;%= post.authorDesc ? post.authorDesc : theme.webmaster.desc %&gt;&lt;/p&gt;&lt;% }else { %&gt;    &lt;script type=&quot;text/javascript&quot; src=&quot;https://api.lwl12.com/hitokoto/v1?encode=js&amp;charset=utf-8&quot;&gt;&lt;/script&gt;    &lt;p&gt;&lt;span id=&quot;lwlhitokoto&quot;&gt;&lt;script&gt;lwlhitokoto()&lt;/script&gt;&lt;/span&gt;&lt;/p&gt;&lt;% } %&gt;</code></pre>]]></content>
+        <content type="html"><![CDATA[<p>根据你的需求，在合适地方加入一言。例如，打开主题layout下的文件common-article.ejs，加入一言：</p><h2 id="增加普通一言"><a href="#增加普通一言" class="headerlink" title="增加普通一言"></a>增加普通一言</h2><pre><code>&lt;!-- YPN Add 2019-03-22 没有authorDesc时，显示一言经典语句--&gt;&lt;% if (post.authorDesc) { %&gt;    &lt;p&gt;&lt;%= post.authorDesc ? post.authorDesc : theme.webmaster.desc %&gt;&lt;/p&gt;&lt;% }else { %&gt;    &lt;script type=&quot;text/javascript&quot; src=&quot;https://api.lwl12.com/hitokoto/v1?encode=js&amp;charset=utf-8&quot;&gt;&lt;/script&gt;    &lt;p&gt;&lt;span id=&quot;lwlhitokoto&quot;&gt;&lt;script&gt;lwlhitokoto()&lt;/script&gt;&lt;/span&gt;&lt;/p&gt;&lt;% } %&gt;</code></pre><h2 id="增加彩色滚动变换一言"><a href="#增加彩色滚动变换一言" class="headerlink" title="增加彩色滚动变换一言"></a>增加彩色滚动变换一言</h2><p>下面示例，由固定内容方式，切换为了一言</p><pre><code>&lt;p&gt;&lt;span id=&quot;lwlhitokoto&quot;&gt;&lt;script&gt;    var binft = function (r) {        function t() {        return b[Math.floor(Math.random() * b.length)]        }          function e() {        return String.fromCharCode(94 * Math.random() + 33)        }        function n(r) {        for (var n = document.createDocumentFragment(), i = 0; r &gt; i; i++) {          var l = document.createElement(&quot;span&quot;);          l.textContent = e(), l.style.color = t(), n.appendChild(l)        }        return n        }        function i() {            //var t = o[c.skillI];            var t = v_yiYan;            c.step ? c.step-- : (c.step = g, c.prefixP &lt; l.length ? (c.prefixP &gt;= 0 &amp;&amp; (c.text += l[c.prefixP]), c.prefixP++) : &quot;forward&quot; === c.direction ? c.skillP &lt; t.length ? (c.text += t[c.skillP], c.skillP++) : c.delay ? c.delay-- : (c.direction = &quot;backward&quot;, c.delay = a) : c.skillP &gt; 0 ? (c.text = c.text.slice(0, -1), c.skillP--) : (c.skillI = (c.skillI + 1) % o.length, c.direction = &quot;forward&quot;)), r.textContent = c.text, r.appendChild(n(c.prefixP &lt; l.length ? Math.min(s, s + c.prefixP) : Math.min(s, t.length - c.skillP))), setTimeout(i, d)        }        var l = &quot;&quot;,        o = [&quot;青青陵上柏，磊磊涧中石。&quot;, &quot;人生天地间，忽如远行客。&quot;,&quot;斗酒相娱乐，聊厚不为薄。&quot;, &quot;驱车策驽马，游戏宛与洛。&quot;,&quot;洛中何郁郁，冠带自相索。&quot;,&quot;长衢罗夹巷，王侯多第宅。&quot;,&quot;两宫遥相望，双阙百余尺。&quot;,&quot;极宴娱心意，戚戚何所迫？&quot;].map(function (r) {            return r + &quot;&quot;        }),        a = 2,        g = 1,        s = 5,        d = 75,        b = [&quot;rgb(110,64,170)&quot;, &quot;rgb(150,61,179)&quot;, &quot;rgb(191,60,175)&quot;, &quot;rgb(228,65,157)&quot;, &quot;rgb(254,75,131)&quot;, &quot;rgb(255,94,99)&quot;, &quot;rgb(255,120,71)&quot;, &quot;rgb(251,150,51)&quot;, &quot;rgb(226,183,47)&quot;, &quot;rgb(198,214,60)&quot;, &quot;rgb(175,240,91)&quot;, &quot;rgb(127,246,88)&quot;, &quot;rgb(82,246,103)&quot;, &quot;rgb(48,239,130)&quot;, &quot;rgb(29,223,163)&quot;, &quot;rgb(26,199,194)&quot;, &quot;rgb(35,171,216)&quot;, &quot;rgb(54,140,225)&quot;, &quot;rgb(76,110,219)&quot;, &quot;rgb(96,84,200)&quot;],        c = {            text: &quot;&quot;,            prefixP: -s,            skillI: 0,            skillP: 0,            direction: &quot;forward&quot;,            delay: a,            step: g        };              //YPN Add 2019-03-29 请求获得从7种分类中随机抽取一个句子，并以纯文本格式输出：https://v1.hitokoto.cn/?encode=text        //https://v1.hitokoto.cn/（从7种分类中随机抽取）        //https://v1.hitokoto.cn/?c=b （请求获得一个分类是漫画的句子）        //https://v1.hitokoto.cn/?c=f&amp;encode=text （请求获得一个来自网络的句子，并以纯文本格式输出）        var v_yiYan = &quot;让我安静一会儿&quot;;        var xhr = new XMLHttpRequest();        xhr.onreadystatechange = function () {            if (xhr.readyState === 4) {                v_yiYan = xhr.responseText;            }        }        xhr.open(&quot;GET&quot;, &quot;https://v1.hitokoto.cn/?encode=text&quot;,true);        xhr.send();        i()    };    binft(document.getElementById(&apos;lwlhitokoto&apos;));&lt;/script&gt;&lt;/span&gt;&lt;/p&gt;</code></pre>]]></content>
       
       
       <categories>
