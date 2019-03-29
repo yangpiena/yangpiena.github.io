@@ -79,6 +79,28 @@ search:
   field: post
   content: true
 
+# 看板娘
+# 作者博客：https://huaji8.top/post/live2d-plugin-2.0/
+# 模型地址：https://github.com/xiazeyu/live2d-widget-models
+live2d:
+  enable: true
+  scriptFrom: local
+  pluginRootPath: live2dw/
+  pluginJsPath: lib/
+  pluginModelPath: assets/
+  tagMode: false
+  log: false
+  model:
+    use: live2d-widget-model-hijiki #模型选择
+  display:
+    position: right #模型位置
+    width: 150      #模型宽度
+    height: 300     #模型高度
+    hOffset: 0
+    vOffset: -150
+  mobile:
+    show: true      #是否在手机端显示
+  
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
 #deploy:
