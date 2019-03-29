@@ -737,8 +737,8 @@ var SimpleCore = {
             $('body').removeClass('night-mode');
             btn.find('i').attr('class', 'fa fa-sun-o');
             $(".cover-img").css({
-                'background': 'url(https://cdn.jsdelivr.net/gh/yangpiena/cdn@1.0/img/cover-day.jpg)',
-                'background-image': 'url(https://cdn.jsdelivr.net/gh/yangpiena/cdn@1.0/img/cover-day.jpg)',
+                'background': "url('/images/cover-day.jpg')",
+                'background-image': '/images/cover-day.jpg',
                 'background-size': 'cover',
                 'background-position': 'center',
                 'background-repeat': 'no-repeat'
