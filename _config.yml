@@ -99,7 +99,7 @@ live2d:
     hOffset: 0
     vOffset: -150
   mobile:
-    show: true      #是否在手机端显示
+    show: false      #是否在手机端显示
   
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
