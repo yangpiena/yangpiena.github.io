@@ -615,7 +615,7 @@ var SimpleCore = {
         $(document).on('click', '.btn-sns-qr', function (e) {
             e.preventDefault();
             if (SimpleCore.snsQRCode != '') {
-                SimpleCore.alert('同性聊天交友请上车','<img style="width:180px;background:#fff;" src="' + SimpleCore.snsQRCode + '">');
+                SimpleCore.alert('虚位以待','<img style="width:180px;background:#fff;" src="' + SimpleCore.snsQRCode + '">');
             } else {
                 SimpleCore.alert('未开通自定义功能','<h4 style="text-align: center;margin: 0">联系博主试试看 ：）</h4>');
             }
@@ -623,7 +623,7 @@ var SimpleCore = {
         $(document).on('click', '.btn-thumbs-up', function (e) {
             e.preventDefault();
             if (SimpleCore.donateImg != '') {
-                SimpleCore.alert('随意打赏，谢谢','<img style="width:180px;background:#fff;" src="' + SimpleCore.donateImg + '">');
+                SimpleCore.alert('随意打赏，谢谢！','<img style="width:180px;background:#fff;" src="' + SimpleCore.donateImg + '">');
             } else {
                 SimpleCore.alert('未开通自定义功能','<h4 style="text-align: center;margin: 0">联系博主试试看 ：）</h4>');
             }
@@ -737,8 +737,8 @@ var SimpleCore = {
             $('body').removeClass('night-mode');
             btn.find('i').attr('class', 'fa fa-sun-o');
             $(".cover-img").css({
-                'background': "url('/images/cover-day.jpg')",
-                'background-image': '/images/cover-day.jpg',
+                'background': 'url(https://cdn.jsdelivr.net/gh/yangpiena/cdn@1.0/img/cover-day.jpg)',
+                'background-image': 'url(https://cdn.jsdelivr.net/gh/yangpiena/cdn@1.0/img/cover-day.jpg)',
                 'background-size': 'cover',
                 'background-position': 'center',
                 'background-repeat': 'no-repeat'

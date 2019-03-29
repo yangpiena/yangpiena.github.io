@@ -25,14 +25,16 @@ description: "记录有用的到的网址"
 </div>
 
 #### 常用
-[百度翻译](https://fanyi.baidu.com/)|  [谷歌搜索](https://www.google.com/ncr)        |  [谷歌香港](https://www.google.com.hk/ncr)   |  [维基百科](https://www.wikipedia.org/)
-[CSDN.NET](http://www.csdn.net/)    |  [VeryCD 电驴大全](http://www.verycd.com/)     |  [360doc个人图书馆](http://www.360doc.com/)  |[cnBeta](http://www.cnbeta.com/)    |  [果壳](http://www.guokr.com/)                 |  [少数派](https://sspai.com/)                |  [数字尾巴](http://www.dgtle.com/)
-[免费吧](http://www.mianfeib.com/)  |  [老D博客](https://laod.cn/)                   |  [行客工作室](http://www.runker.net/)        |  [黑果小兵](https://blog.daliansky.net/)
-[百度云](https://pan.baidu.com/)    |  [腾讯云](https://cloud.tencent.com/)          |  [贴图库](http://www.tietuku.com/)
 [天气万年历](https://wannianli.tianqi.com/today/zhou/)  |  [博客预览](http://localhost:4000)
+[V2EX](https://www.v2ex.com/)       | [CSDN.NET](http://www.csdn.net/)
+[免费吧](http://www.mianfeib.com/)  |  [老D博客](https://laod.cn/)                           
+[VeryCD 电驴大全](http://www.verycd.com/) | [360doc个人图书馆](http://www.360doc.com/)  |[cnBeta](http://www.cnbeta.com/)    |  [果壳](http://www.guokr.com/)                 |  [少数派](https://sspai.com/)                |  [数字尾巴](http://www.dgtle.com/)
+[百度云](https://pan.baidu.com/)    |  [腾讯云](https://cloud.tencent.com/)          |  [贴图库](http://www.tietuku.com/)
+[百度翻译](https://fanyi.baidu.com/)|  [谷歌搜索](https://www.google.com/ncr)        |  [谷歌香港](https://www.google.com.hk/ncr)   |  [维基百科](https://www.wikipedia.org/)
 &nbsp;
 
 #### 音乐
+[听雨](http://rain.xxoojoke.com/)
 [SongTaste](http://www.songtaste.com/)  |  [AeKun](https://www.aekun.com/ )  |  [VIP付费音乐解析下载](http://music.zhuolin.wang/)  |  [网易云音乐](http://music.163.com)
 &nbsp;
 
@@ -63,13 +65,13 @@ description: "记录有用的到的网址"
 &nbsp;
 
 #### 系统/软件下载
-[IT之家](https://www.ithome.com/)                             |  [系统之家](http://www.xitongzhijia.net/)                                                              |  [系统天地](http://www.xitongtiandi.net/)                                                              |  [Win10专业版官网](http://www.win10zyb.com/)                                                              |  [Win10之家](http://www.xh52.com/)                                                              |  [系统圣地](http://www.285868.com/)
-[黑苹果乐园](https://imac.hk/)								  |  [从零开始的黑苹果安装教程](http://tieba.baidu.com/p/5179866130#)
-[绿盟](http://www.xdowns.com/)                                |  [zd423](http://www.zdfans.com/)
-[浏览迷](http://liulanmi.com/)                                |  [Chrome浏览器插件下载中心](https://www.chromefor.com/)
-[最新迅雷(xunlei)会员账号天天更新同享](http://www.win10.name/news/193.html)
+[IT之家](https://www.ithome.com/) |  [系统之家](http://www.xitongzhijia.net/) |  [系统天地](http://www.xitongtiandi.net/) |  [Win10专业版官网](http://www.win10zyb.com/)                                                              |  [Win10之家](http://www.xh52.com/)                                                              |  [系统圣地](http://www.285868.com/)
+[黑苹果乐园](https://imac.hk/)	  |  [黑果小兵](https://blog.daliansky.net/)  |  [从零开始的黑苹果安装教程](http://tieba.baidu.com/p/5179866130#)
+[浏览迷](http://liulanmi.com/)    |  [Chrome浏览器插件下载中心](https://www.chromefor.com/)
 [FlashPlayer下载地址1](http://get.adobe.com/cn/flashplayer/otherversions/)  |  [FlashPlayer下载地址2](http://www.adobe.com/support/flashplayer/downloads.html)  |  [Debugger Version地址](http://kb2.adobe.com/cps/155/tn_15507.html)
-[金狐维护盘](http://www.jinhu.me/)
+[绿盟](http://www.xdowns.com/)    |  [zd423](http://www.zdfans.com/)          |  [行客工作室](http://www.runker.net/) | [金狐维护盘](http://www.jinhu.me/)
+[最新迅雷(xunlei)会员账号天天更新同享](http://www.win10.name/news/193.html)
+
 &nbsp;
 
 #### 社区
