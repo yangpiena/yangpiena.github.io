@@ -384,6 +384,10 @@ sp_renamedb 'old_name', 'new_name'
 GROUP BY code
 ```
 
+## 35. 去除字段中空格、换行符、回车符
+```
+UPDATE xx_sjb SET sl = LTRIM(RTRIM(REPLACE(REPLACE(sl, CHAR(10), ''), CHAR (13), '')))
+```
 ---
 
 # 三. 技巧篇

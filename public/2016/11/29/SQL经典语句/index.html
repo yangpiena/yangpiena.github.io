@@ -380,6 +380,7 @@ BBB         姓名5
 AAA         姓名1,姓名2,姓名3
 BBB         姓名4,姓名5
 </code></pre><p>可用如下SQL实现：<br><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">  <span class="keyword">SELECT</span> code, <span class="keyword">name</span> = (<span class="keyword">STUFF</span>((<span class="keyword">SELECT</span> <span class="string">','</span> + <span class="keyword">name</span> </span><br><span class="line">                                <span class="keyword">FROM</span> Table1 </span><br><span class="line">                               <span class="keyword">WHERE</span> code = a.code <span class="keyword">FOR</span> <span class="keyword">xml</span> <span class="keyword">PATH</span>(<span class="string">''</span>)),<span class="number">1</span>,<span class="number">1</span>,<span class="string">''</span>))</span><br><span class="line">    <span class="keyword">FROM</span> Table1 a </span><br><span class="line"><span class="keyword">GROUP</span> <span class="keyword">BY</span> code</span><br></pre></td></tr></table></figure></p>
+<h2 id="35-去除字段中空格、换行符、回车符"><a href="#35-去除字段中空格、换行符、回车符" class="headerlink" title="35. 去除字段中空格、换行符、回车符"></a>35. 去除字段中空格、换行符、回车符</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">UPDATE xx_sjb SET sl = LTRIM(RTRIM(REPLACE(REPLACE(sl, CHAR(10), &apos;&apos;), CHAR (13), &apos;&apos;)))</span><br></pre></td></tr></table></figure>
 <hr>
 <h1 id="三-技巧篇"><a href="#三-技巧篇" class="headerlink" title="三. 技巧篇"></a>三. 技巧篇</h1><h2 id="1-1-1，1-2的使用，在SQL语句组合时用的较多"><a href="#1-1-1，1-2的使用，在SQL语句组合时用的较多" class="headerlink" title="1. 1=1，1=2的使用，在SQL语句组合时用的较多"></a>1. 1=1，1=2的使用，在SQL语句组合时用的较多</h2><p>“where 1=1” 表示选择全部<br>“where 1=2” 表示全部不选</p>
 <h2 id="2-收缩数据库"><a href="#2-收缩数据库" class="headerlink" title="2. 收缩数据库"></a>2. 收缩数据库</h2><p>重建索引</p>
@@ -669,7 +670,7 @@ end
 		<p><span class="label">作者</span>
 			<a href="https://yangpiena.coding.me" target="_blank">昜丿捺</a>
 			<span title="最后编辑于&nbsp;2016-11-29">2016-11-29</span>
-			，共 17997 字 
+			，共 18124 字 
 		</p>		
 		<!-- <p>null</p> -->
 		

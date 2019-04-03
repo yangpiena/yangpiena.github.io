@@ -10,7 +10,7 @@ description:
 ---
 
 ### 查询死锁进程
-```
+```sql
 SELECT
 	request_session_id spid,
 	OBJECT_NAME(
@@ -21,7 +21,7 @@ FROM
 WHERE
 	resource_type = 'OBJECT';
 ```
-```
+```sql
 SELECT
 	标志,
 	进程ID = spid,
@@ -109,7 +109,7 @@ KILL spid;
 ```
 
 ### 每秒死锁数量
-```
+```sql
 SELECT  *
 FROM    sys.dm_os_performance_counters
 WHERE   counter_name LIKE 'Number of Deadlocksc%';
@@ -117,7 +117,7 @@ WHERE   counter_name LIKE 'Number of Deadlocksc%';
 
 <!-- more -->
 ### 查询当前阻塞
-```
+```sql
 WITH CTE_SID (BSID, SID, sql_handle) AS (
 	SELECT
 		blocking_session_id,

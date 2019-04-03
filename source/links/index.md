@@ -69,7 +69,7 @@ description: "记录有用的到的网址"
 [黑苹果乐园](https://imac.hk/)	  |  [黑果小兵](https://blog.daliansky.net/)  |  [从零开始的黑苹果安装教程](http://tieba.baidu.com/p/5179866130#)
 [浏览迷](http://liulanmi.com/)    |  [Chrome浏览器插件下载中心](https://www.chromefor.com/)
 [FlashPlayer下载地址1](http://get.adobe.com/cn/flashplayer/otherversions/)  |  [FlashPlayer下载地址2](http://www.adobe.com/support/flashplayer/downloads.html)  |  [Debugger Version地址](http://kb2.adobe.com/cps/155/tn_15507.html)
-[绿盟](http://www.xdowns.com/)    |  [zd423](http://www.zdfans.com/)          |  [行客工作室](http://www.runker.net/) | [金狐维护盘](http://www.jinhu.me/)
+[绿盟](http://www.xdowns.com/)    |  [zd423](http://www.zdfans.com/)          |  [行客工作室](http://www.runker.net/) | [金狐维护盘](http://www.jinhu.me/) | [小众软件](https://www.appinn.com/)
 [最新迅雷(xunlei)会员账号天天更新同享](http://www.win10.name/news/193.html)
 
 &nbsp;
@@ -82,6 +82,7 @@ description: "记录有用的到的网址"
 [HTM5中国产业联盟](http://www.html5plus.org/)
 [SQLite 教程](http://www.runoob.com/sqlite/sqlite-tutorial.html)
 [channel9](https://channel9.msdn.com/)
+[互联网技术图谱](https://techmap.canmeng.net/#)
 &nbsp;
 
 #### 资源
@@ -124,6 +125,18 @@ description: "记录有用的到的网址"
 [网络培训系统界面设计UI](http://www.th7.cn/Design/ui/201312/199261.shtml)
 [公司某项目前端技术积累](http://blog.csdn.net/sunyingyuan/article/details/38237139)
 [后台界面模板](http://www.mycodes.net/154/3.htm)
+&nbsp;
+
+#### 数据库
+[SQL Server 2008(R2)支持将数据导出为脚本](http://xcc313.iteye.com/blog/1331468)
+[【SQL Server备份恢复】维护计划实现备份：每周数据库完整备份、每天差异备份、每小时日志备份 ](http://blog.csdn.net/sqlserverdiscovery/article/details/11020057)
+[SQL 列转行，即多行合并成一条](https://www.cnblogs.com/luokunlun/p/5947615.html)
+[sql 判断 函数 存储过程是否存在的方法](https://www.cnblogs.com/a311300/p/4358916.html)
+[SqlServer2008 数据库同步的两种方式 (发布、订阅)](http://www.cnblogs.com/tyb1222/archive/2011/05/31/2064944.html)
+[SqlServer数据库同步方案详解(包括跨网段)](https://www.cnblogs.com/hu88oo/articles/1505703.html)
+[不同数据库之间表数据的实时同步-发布与订阅](https://blog.csdn.net/rand_muse/article/details/81326879)
+[Sqlserver 高并发和大数据存储方案](https://www.cnblogs.com/zfthm/p/6271346.html)
+[sqlserver 发布订阅的弊端](https://blog.csdn.net/yangzhawen/article/details/8019921)
 &nbsp;
 
 #### Angular
@@ -241,6 +254,7 @@ description: "记录有用的到的网址"
 #### JQuery
 [jQuery插件库](http://www.jq22.com/)
 [36个引人注目JQuery导航菜单](http://www.cnblogs.com/ywqu/archive/2009/08/15/1546559.html)
+[JQuery DrawSVG](http://leocs.me/jquery-drawsvg/)
 &nbsp;
 
 #### Kettle
@@ -264,18 +278,6 @@ description: "记录有用的到的网址"
 [Markdown在线编辑](http://www.ctrlshift.net/project/markdowneditor/)  |  [Windows在线markdown工具](https://www.zybuluo.com/mdeditor)
 [Markdown 语法 示例 字体 字号 颜色](http://blog.csdn.net/u011419965/article/details/50536937)
 [Markdown支持的语言](http://blog.csdn.net/peng_hong_fu/article/details/52805408)
-&nbsp;
-
-#### 数据库
-[SQL Server 2008(R2)支持将数据导出为脚本](http://xcc313.iteye.com/blog/1331468)
-[【SQL Server备份恢复】维护计划实现备份：每周数据库完整备份、每天差异备份、每小时日志备份 ](http://blog.csdn.net/sqlserverdiscovery/article/details/11020057)
-[SQL 列转行，即多行合并成一条](https://www.cnblogs.com/luokunlun/p/5947615.html)
-[sql 判断 函数 存储过程是否存在的方法](https://www.cnblogs.com/a311300/p/4358916.html)
-[SqlServer2008 数据库同步的两种方式 (发布、订阅)](http://www.cnblogs.com/tyb1222/archive/2011/05/31/2064944.html)
-[SqlServer数据库同步方案详解(包括跨网段)](https://www.cnblogs.com/hu88oo/articles/1505703.html)
-[不同数据库之间表数据的实时同步-发布与订阅](https://blog.csdn.net/rand_muse/article/details/81326879)
-[Sqlserver 高并发和大数据存储方案](https://www.cnblogs.com/zfthm/p/6271346.html)
-[sqlserver 发布订阅的弊端](https://blog.csdn.net/yangzhawen/article/details/8019921)
 &nbsp;
 
 #### Sublime Text
