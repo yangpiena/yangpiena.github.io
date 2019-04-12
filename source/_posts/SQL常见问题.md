@@ -37,3 +37,11 @@ ORDER BY
 
 ### 2. SQL Server安装提示暂挂项目
 打开注册表编辑器，在`HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Session Manager`中找到`PendingFileRenameOperations`项目，并删除它。这样就可以清除安装暂挂项目。
+
+### 3. SQL语句在查询分析器执行速度很快，但在程序代码中执行很慢
+```vb
+Public MRec As New ADODB.Recordset
+```
+例如，在VB代码中使用上面定义的对象执行`MRec.Open`时，查询很慢，但SQL在查询分析器中执行很快很快。
+此时的解决办法是：更换Recordset对象，例如使用`Public MRec2 As New ADODB.Recordset`定义新的MRec2查询即可。
+> 具体原因不详，很诡异的问题。

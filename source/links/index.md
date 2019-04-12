@@ -86,7 +86,7 @@ description: "记录有用的到的网址"
 &nbsp;
 
 #### 资源
-[矢量图标库](http://www.iconfont.cn/)
+[矢量图标库](http://www.iconfont.cn/) | [最好的12个Icon图标资源网站整理分享出来](https://blog.csdn.net/xiawj8957/article/details/45130263)
 [百度静态资源公共库](http://cdn.code.baidu.com/)
 [MSDN](http://msdn.itellyou.cn/?gytyzs=0z1zl)
 [常用的gif正在加载图](http://blog.sina.com.cn/s/blog_7c28bad401016j66.html)
