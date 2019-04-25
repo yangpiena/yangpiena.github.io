@@ -41,7 +41,7 @@ description: "记录有用的到的网址"
 #### 电影
 [YouTube](https://www.youtube.com/)|  [网易公开课](https://open.163.com/)
 [BT下载](http://www.qinou.cn/)     |  [BT之家](http://www.btbtt33.com/)   |  [BT之家](http://www.415.net)         |  [BT之家](http://www.btbtt.com)      |  [第二度](https://deardu.com/)
-[破晓电影](http://www.poxiao.com)  |  [今日影视](http://www.2w2w.tv/)     |  [迅雷电影下载](http://www.xlpu.cc/)  |  [快播电影](http://www.bubulai.com/) |  [LOL电影天堂](http://www.loldytt.com/) |  [BT电影天堂](http://www.btbttv.net/) | [迅影网](https://www.xunyingwang.com/)
+[破晓电影](http://www.poxiao.com)  |  [今日影视](http://www.2w2w.tv/)     |  [迅雷电影下载](http://www.xlpu.cc/)  |  [快播电影](http://www.bubulai.com/) |  [LOL电影天堂](http://www.loldytt.com/) |  [BT电影天堂](http://www.btbttv.net/) | [迅影网](https://www.xunyingwang.com/) | [天天美剧](http://www.ttmeiju.me/) | [99美剧网](https://www.jjmeiju.com/)
 [预告片世界](http://www.yugaopian.cn/)  |  [人人影视字幕](http://www.yyets.com/)
 &nbsp;
 
@@ -118,6 +118,7 @@ description: "记录有用的到的网址"
 #### 前端/案例
 [前端网](http://www.qdfuns.com/)
 [LayUI](https://www.layui.com/)
+[HeyUI](https://www.heyui.top/) | [HeyUI Admin](https://admin.heyui.top/)
 [10个顶级的CSS UI开源框架](http://www.codeceo.com/article/top-10-css-ui-framework.html)
 [Android酷炫实用的开源框架（UI框架）](http://www.runoob.com/w3cnote/android-ui-framework.html)
 [不落阁](http://www.lyblogs.cn/)
@@ -309,3 +310,4 @@ description: "记录有用的到的网址"
 #### 民生
 [宁夏人事考试中心](http://www.nxpta.gov.cn/)  |  [宁夏专业技术人员继续教育培训网](http://nxzj.chinahrt.com/)
 [宁夏人力资源和社会保障网上服务大厅](http://www.12333nx.gov.cn/nxwsrs/personlogin)
+[宁夏回族自治区专业技术人员服务平台——个人职称申报登录窗口](http://124.224.239.164:8088/)
