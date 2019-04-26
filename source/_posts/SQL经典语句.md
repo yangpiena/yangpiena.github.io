@@ -11,29 +11,35 @@ toc: true
 ---
 
 # 一. 基础篇
-
 ## 1. 创建数据库
-	CREATE DATABASE database-name
-
+```sql
+CREATE DATABASE database-name
+```
 ## 2. 删除数据库
-	drop database dbname
-
+```sql
+drop database dbname
+```
 ## 3. 备份sql server
-	创建 备份数据的 device
-	USE master
-	EXEC sp_addumpdevice 'disk', 'testBack', 'c:\mssql7backup\MyNwind_1.dat'
-	开始 备份
-	BACKUP DATABASE pubs TO testBack 
-
+创建 备份数据的 device
+```sql
+USE master
+EXEC sp_addumpdevice 'disk', 'testBack', 'c:\mssql7backup\MyNwind_1.dat'
+```
+开始 备份
+```sql
+BACKUP DATABASE pubs TO testBack 
+```
 <!-- more -->
 
 ## 4. 创建新表
-	create table tabname(col1 type1 [not null] [primary key],col2 type2 [not null],..)
+```sql
+create table tabname(col1 type1 [not null] [primary key],col2 type2 [not null],..)
+```
 根据已有的表创建新表：
-
-	A：create table tab_new like tab_old (使用旧表创建新表)
-	B：create table tab_new as select col1,col2… from tab_old definition only
-
+```sql
+create table tab_new like tab_old (使用旧表创建新表)
+create table tab_new as select col1,col2… from tab_old definition only
+```
 ## 5. 删除新表
 	drop table tabname
 
@@ -242,139 +248,157 @@ sp_renamedb 'old_name', 'new_name'
 	select name from syscolumns where id=object_id('TableName')
 
 ## 22. 列示type、vender、pcs字段，以type字段排列，case可以方便地实现多重选择，类似select 中的case。
-	select type,sum(case vender when 'A' then pcs else 0 end),sum(case vender when 'C' then pcs else 0 end),sum(case vender when 'B' then pcs else 0 end) FROM tablename group by type
+```sql
+select type,sum(case vender when 'A' then pcs else 0 end),sum(case vender when 'C' then pcs else 0 end),sum(case vender when 'B' then pcs else 0 end) FROM tablename group by type
+```
 显示结果：
 
-	type vender pcs
-	电脑 A 1
-	电脑 A 1
-	光盘 B 2
-	光盘 A 2
-	手机 B 3
-	手机 C 3
-
-## 23. 初始化 表table1
-	TRUNCATE TABLE table1
-
+|type|vender|pcs|
+|---|---|---|
+|电脑| A| 1|
+|电脑| A| 1|
+|光盘| B| 2|
+|光盘| A| 2|
+|手机| B| 3|
+|手机| C| 3|
+## 23. 初始化表
+```sql
+TRUNCATE TABLE table1
+```
 ## 24. 选择从10到15的记录
-	select top 5 * from (select top 15 * from table order by id asc) table_别名 order by id desc
-
-## 25. 创建临时表
+```sql
+select top 5 * from (select top 15 * from table order by id asc) table_别名 order by id desc
+```
+## 25. 临时表
+#### 创建临时表
 - 方法一：
-
-
-    create table #临时表名(字段1 约束条件,
-                           字段2 约束条件,
-                          .....)
-    create table ##临时表名(字段1 约束条件,
-                            字段2 约束条件,
-                            .....)
-例：
-
-
-	create table #Tmp --创建临时表#Tmp
+```sql
+create table #临时表名(字段1 约束条件,
+                       字段2 约束条件,
+                      .....)
+create table ##临时表名(字段1 约束条件,
+                        字段2 约束条件,
+                        .....)
+```
+    例：
+    ```sql
+    create table #Tmp --创建临时表#Tmp
     (
         ID   int IDENTITY (1,1)     not null, --创建列ID,并且每次新增一条记录就会加1
         WokNo                varchar(50),   
         primary key (ID)      --定义ID为临时表#Tmp的主键      
     );
+    ```
 - 方法二：
-
-
-    select * into #临时表名 from 你的表;
-    select * into ##临时表名 from 你的表;
+```sql
+select * into #临时表名 from 你的表;
+select * into ##临时表名 from 你的表;
+```
 >注：以上的#代表局部临时表，##代表全局临时表
-查询临时表
 
-    select * from #临时表名;
-    select * from ##临时表名;
-删除临时表
-
-    drop table #临时表名;
-    drop table ##临时表名;
-
+#### 查询临时表
+```sql
+select * from #临时表名;
+select * from ##临时表名;
+```
+#### 删除临时表
+```sql
+drop table #临时表名;
+drop table ##临时表名;
+```
 ## 26. 关联表更新
-	UPDATE A SET A.b=B.d FROM tableA A INNER JOIN tableB B ON A.a = B.a
-
+```sql
+UPDATE A SET A.b=B.d FROM tableA A INNER JOIN tableB B ON A.a = B.a
+```
 ## 27. 查看表的所有外键关系
-	select t1.*,t2.name,t3.name from dbo.sysforeignkeys t1 left join sysobjects t2 on t1.fkeyid=t2.id 
-			   left join sysobjects t3 on t1.rkeyid=t3.id where t3.name='表名 '
-
+```sql
+select t1.*,t2.name,t3.name from dbo.sysforeignkeys t1 left join sysobjects t2 on t1.fkeyid=t2.id 
+           left join sysobjects t3 on t1.rkeyid=t3.id where t3.name='表名 '
+```
 ## 28. 删除所有约束
-	DECLARE c1 cursor for
-	    select 'alter table ['+ object_name(parent_obj) + '] drop constraint ['+name+']; '
-	    from sysobjects
-	    where xtype = 'F'
-	open c1
-	declare @c1 varchar(8000)
-	fetch next from c1 into @c1
-	while(@@fetch_status=0)
-	    begin
-	        exec(@c1)
-	        fetch next from c1 into @c1
-	    end
-	close c1
-	deallocate c1
-
+```sql
+DECLARE c1 cursor for
+    select 'alter table ['+ object_name(parent_obj) + '] drop constraint ['+name+']; '
+    from sysobjects
+    where xtype = 'F'
+open c1
+declare @c1 varchar(8000)
+fetch next from c1 into @c1
+while(@@fetch_status=0)
+    begin
+        exec(@c1)
+        fetch next from c1 into @c1
+    end
+close c1
+deallocate c1
+```
 ## 29. 删除数据库所有表
-	declare @tname varchar(8000)
-	set @tname=''
-	select @tname=@tname + Name + ',' from sysobjects where xtype='U'
-	select @tname='drop table ' + left(@tname,len(@tname)-1)
-	exec(@tname)
-
+```sql
+declare @tname varchar(8000)
+set @tname=''
+select @tname=@tname + Name + ',' from sysobjects where xtype='U'
+select @tname='drop table ' + left(@tname,len(@tname)-1)
+exec(@tname)
+```
 ## 30. 删除外键约束
 得到某个表被哪些外键引用，并且显示出外键表的表名
-
-	SELECT
-		fk.name,
-		fk.object_id,
-		OBJECT_NAME(fk.parent_object_id) AS referenceTableName
-	FROM
-		sys.foreign_keys AS fk
-	JOIN sys.objects AS o ON fk.referenced_object_id = o.object_id
-	WHERE
-		o.name = 'ATTACHMENTDOC';
-
+```sql
+SELECT
+    fk.name,
+    fk.object_id,
+    OBJECT_NAME(fk.parent_object_id) AS referenceTableName
+FROM
+    sys.foreign_keys AS fk
+JOIN sys.objects AS o ON fk.referenced_object_id = o.object_id
+WHERE
+    o.name = 'ATTACHMENTDOC';
+```
 通过外键表的表名和外键名称执行以下语句即可删除外键
-
-	ALTER TABLE dbo.CONTRACTINFO DROP CONSTRAINT FK_CONTRACTINFO_ATTACHMENTDOC
-
+```sql
+ALTER TABLE dbo.CONTRACTINFO DROP CONSTRAINT FK_CONTRACTINFO_ATTACHMENTDOC
+```
 ## 31. 查找指定数据库表的字段名，类型，注释
-	    SELECT c.object_id, c.name AS cname, t.name AS tname, is_computed AS isComputed,
-		       (SELECT VALUE
-	              FROM sys.extended_properties AS ex
-	             WHERE ex.major_id = c.object_id AND ex.minor_id = c.column_id) AS notes
-	      FROM sys.columns AS c
-	INNER JOIN sys.tables  AS ta ON c.object_id = ta.object_id
-	INNER JOIN (SELECT name, system_type_id
-	              FROM sys.types
-	             WHERE name <> 'sysname') AS t ON c.system_type_id = t.system_type_id
-	     WHERE ta.name = '指定数据库表'
-	  ORDER BY c.column_id
-
+```sql
+    SELECT c.object_id, c.name AS cname, t.name AS tname, is_computed AS isComputed,
+           (SELECT VALUE
+              FROM sys.extended_properties AS ex
+             WHERE ex.major_id = c.object_id AND ex.minor_id = c.column_id) AS notes
+      FROM sys.columns AS c
+INNER JOIN sys.tables  AS ta ON c.object_id = ta.object_id
+INNER JOIN (SELECT name, system_type_id
+              FROM sys.types
+             WHERE name <> 'sysname') AS t ON c.system_type_id = t.system_type_id
+     WHERE ta.name = '指定数据库表'
+  ORDER BY c.column_id
+```
 ## 32. 同步表数据
-	INSERT 表2 
-	SELECT * FROM 表1 AS a WHERE NOT EXISTS(SELECT 1 FROM 表2 WHERE ID = a.ID);
-
+```sql
+INSERT 表2 
+SELECT * FROM 表1 AS a WHERE NOT EXISTS(SELECT 1 FROM 表2 WHERE ID = a.ID);
+```
 ## 33. 判断某列中是否包含中文字符或者英文字符
-	SELECT * FROM 表名 WHERE 某列 LIKE '%[吖-座]%'
-	SELECT * FROM 表名 WHERE 某列 LIKE '%[a-z]%'
-
+```sql
+SELECT * FROM 表名 WHERE 某列 LIKE '%[吖-座]%'
+SELECT * FROM 表名 WHERE 某列 LIKE '%[a-z]%'
+```
 ## 34. 行转列，将多行数据合并成一行（SQL SERVER 2005以上支持）
-例如表Table1中有两列数据：
+例如，表Table1中有两列数据：
 
-	code        name
-	AAA         姓名1
-	AAA         姓名2
-	AAA         姓名3
-	BBB         姓名4
-	BBB         姓名5
+|code       |name|
+|-------  	|---|
+|AAA        |姓名1|
+|AAA        |姓名2|
+|AAA        |姓名3|
+|BBB        |姓名4|
+|BBB        |姓名5|
+
 行转列，想变成如下格式：
 
-	code        name
-	AAA         姓名1,姓名2,姓名3
-	BBB         姓名4,姓名5
+|code       |name|
+|-------  	|---|
+|AAA        |姓名1,姓名2,姓名3|
+|BBB        |姓名4,姓名5|
+
 可用如下SQL实现：
 ```sql
   SELECT code, name = (STUFF((SELECT ',' + name 
@@ -385,7 +409,7 @@ GROUP BY code
 ```
 
 ## 35. 去除字段中空格、换行符、回车符
-```
+```sql
 UPDATE xx_sjb SET sl = LTRIM(RTRIM(REPLACE(REPLACE(sl, CHAR(10), ''), CHAR (13), '')))
 ```
 ---
@@ -393,39 +417,43 @@ UPDATE xx_sjb SET sl = LTRIM(RTRIM(REPLACE(REPLACE(sl, CHAR(10), ''), CHAR (13),
 # 三. 技巧篇
 
 ## 1. 1=1，1=2的使用，在SQL语句组合时用的较多
-“where 1=1” 表示选择全部
-“where 1=2” 表示全部不选
-
-
+    “where 1=1” 表示选择全部
+    “where 1=2” 表示全部不选
 ## 2. 收缩数据库
-重建索引
-
-	DBCC REINDEX
-	DBCC INDEXDEFRAG
-收缩数据和日志
-
-	DBCC SHRINKDB
-	DBCC SHRINKFILE
-
+- 重建索引
+```sql
+DBCC REINDEX
+DBCC INDEXDEFRAG
+```
+- 收缩数据和日志
+```sql
+DBCC SHRINKDB
+DBCC SHRINKFILE
+```
 ## 3. 压缩数据库
-	dbcc shrinkdatabase(dbname)
-
+```sql
+dbcc shrinkdatabase(dbname)
+```
 ## 4. 转移数据库给新用户以已存在用户权限
-	exec sp_change_users_login 'update_one','newname','oldname'
-	go
-
+```sql
+exec sp_change_users_login 'update_one','newname','oldname'
+go
+```
 ## 5. 检查备份集
-	RESTORE VERIFYONLY from disk='E:\dvbbs.bak'
-
+```sql
+RESTORE VERIFYONLY from disk='E:\dvbbs.bak'
+```
 ## 6. 修复数据库
-	ALTER DATABASE [dvbbs] SET SINGLE_USER
-	GO
-	DBCC CHECKDB('dvbbs',repair_allow_data_loss) WITH TABLOCK
-	GO
-	ALTER DATABASE [dvbbs] SET MULTI_USER
-	GO
-
+```sql
+ALTER DATABASE [dvbbs] SET SINGLE_USER
+GO
+DBCC CHECKDB('dvbbs',repair_allow_data_loss) WITH TABLOCK
+GO
+ALTER DATABASE [dvbbs] SET MULTI_USER
+GO
+```
 ## 7. 日志清除
+```sql
 	SET NOCOUNT ON
 	DECLARE @LogicalFileName sysname,
 	@MaxMinutes INT,
@@ -475,50 +503,53 @@ UPDATE xx_sjb SET sl = LTRIM(RTRIM(REPLACE(REPLACE(sl, CHAR(10), ''), CHAR (13),
 	WHERE name = @LogicalFileName
 	DROP TABLE DummyTrans
 	SET NOCOUNT OFF
-
+```
 ## 8. 更改某个表
-	exec sp_changeobjectowner 'tablename','dbo'
-
+```sql
+exec sp_changeobjectowner 'tablename','dbo'
+```
 ## 9. 存储更改全部表
-	CREATE PROCEDURE dbo.User_ChangeObjectOwnerBatch
-	@OldOwner as NVARCHAR(128),
-	@NewOwner as NVARCHAR(128)
-	AS
-	DECLARE @Name    as NVARCHAR(128)
-	DECLARE @Owner   as NVARCHAR(128)
-	DECLARE @OwnerName   as NVARCHAR(128)
-	DECLARE curObject CURSOR FOR 
-	select 'Name'    = name,
-	   'Owner'    = user_name(uid)
-	from sysobjects
-	where user_name(uid)=@OldOwner
-	order by name
-	OPEN   curObject
-	FETCH NEXT FROM curObject INTO @Name, @Owner
-	WHILE(@@FETCH_STATUS=0)
-	BEGIN     
-	if @Owner=@OldOwner 
-	begin
-	   set @OwnerName = @OldOwner + '.' + rtrim(@Name)
-	   exec sp_changeobjectowner @OwnerName, @NewOwner
-	end
-	-- select @name,@NewOwner,@OldOwner
-	FETCH NEXT FROM curObject INTO @Name, @Owner
-	END
-	close curObject
-	deallocate curObject
-	GO
-
+```sql
+CREATE PROCEDURE dbo.User_ChangeObjectOwnerBatch
+@OldOwner as NVARCHAR(128),
+@NewOwner as NVARCHAR(128)
+AS
+DECLARE @Name    as NVARCHAR(128)
+DECLARE @Owner   as NVARCHAR(128)
+DECLARE @OwnerName   as NVARCHAR(128)
+DECLARE curObject CURSOR FOR 
+select 'Name'    = name,
+   'Owner'    = user_name(uid)
+from sysobjects
+where user_name(uid)=@OldOwner
+order by name
+OPEN   curObject
+FETCH NEXT FROM curObject INTO @Name, @Owner
+WHILE(@@FETCH_STATUS=0)
+BEGIN     
+if @Owner=@OldOwner 
+begin
+   set @OwnerName = @OldOwner + '.' + rtrim(@Name)
+   exec sp_changeobjectowner @OwnerName, @NewOwner
+end
+-- select @name,@NewOwner,@OldOwner
+FETCH NEXT FROM curObject INTO @Name, @Owner
+END
+close curObject
+deallocate curObject
+GO
+```
 ## 10. SQL SERVER中直接循环写入数据
-	declare @i int
-	set @i=1
-	while @i<30
-	begin
-	insert into test (userid) values(@i)
-	set @i=@i+1
-	end
-案例：
-有如下表，要求就表中所有沒有及格的成绩，在每次增长0.1的基础上，使他们刚好及格:
+```sql
+declare @i int
+set @i=1
+while @i<30
+begin
+insert into test (userid) values(@i)
+set @i=@i+1
+end
+```
+案例：有如下表，要求就表中所有沒有及格的成绩，在每次增长0.1的基础上，使他们刚好及格:
 
 | Name 			| score |
 | -------  		| ---: |
@@ -526,194 +557,244 @@ UPDATE xx_sjb SET sl = LTRIM(RTRIM(REPLACE(REPLACE(sl, CHAR(10), ''), CHAR (13),
 |Lishi  		|59|
 |Wangwu  		|50|
 |Songquan 		|69|
-
-	while((select min(score) from tb_table)<60)
-	begin
-	update tb_table set score =score*1.01
-	where score<60
-	if (select min(score) from tb_table)>60
-	break
-	else
-	continue
-	end
-
+```sql
+while((select min(score) from tb_table)<60)
+begin
+update tb_table set score =score*1.01
+where score<60
+if (select min(score) from tb_table)>60
+break
+else
+continue
+end
+```
 ## 11. 查看数据库属性
-	sp_helpdb 数据库名
-
+```sql
+sp_helpdb 数据库名
+```
 ## 12. 按姓氏笔画排序:
-	Select * From TableName Order By CustomerName Collate Chinese_PRC_Stroke_ci_as //从少到多
-
+```sql
+Select * From TableName Order By CustomerName Collate Chinese_PRC_Stroke_ci_as //从少到多
+```
 ## 13. 数据库加密:
-	select encrypt('原始密码')
-	select pwdencrypt('原始密码')
-	select pwdcompare('原始密码','加密后密码') = 1--相同；否则不相同 encrypt('原始密码')
-	select pwdencrypt('原始密码')
-	select pwdcompare('原始密码','加密后密码') = 1--相同；否则不相同
-
+```sql
+select encrypt('原始密码')
+select pwdencrypt('原始密码')
+select pwdcompare('原始密码','加密后密码') = 1--相同；否则不相同 encrypt('原始密码')
+select pwdencrypt('原始密码')
+select pwdcompare('原始密码','加密后密码') = 1--相同；否则不相同
+```
 ## 14. 取回表中字段:
-	declare @list varchar(1000),
-	@sql nvarchar(1000) 
-	select @list=@list+','+b.name from sysobjects a,syscolumns b where a.id=b.id and a.name='表A'
-	set @sql='select '+right(@list,len(@list)-1)+' from 表A' 
-	exec (@sql)
-
+```sql
+declare @list varchar(1000),
+@sql nvarchar(1000) 
+select @list=@list+','+b.name from sysobjects a,syscolumns b where a.id=b.id and a.name='表A'
+set @sql='select '+right(@list,len(@list)-1)+' from 表A' 
+exec (@sql)
+```
 ## 15. 查看硬盘分区:
-	EXEC master..xp_fixeddrives
-
+```sql
+EXEC master..xp_fixeddrives
+```
 ## 16. 比较A,B表是否相等:
-	if (select checksum_agg(binary_checksum(*)) from A)
-	     =
-	    (select checksum_agg(binary_checksum(*)) from B)
-	print '相等'
-	else
-	print '不相等'
-
+```sql
+if (select checksum_agg(binary_checksum(*)) from A)
+     =
+    (select checksum_agg(binary_checksum(*)) from B)
+print '相等'
+else
+print '不相等'
+```
 ## 17. 杀掉所有的事件探察器进程:
-	DECLARE hcforeach CURSOR GLOBAL FOR SELECT 'kill '+RTRIM(spid) FROM master.dbo.sysprocesses
-	WHERE program_name IN('SQL profiler',N'SQL 事件探查器')
-	EXEC sp_msforeach_worker '?'
-
+```sql
+DECLARE hcforeach CURSOR GLOBAL FOR SELECT 'kill '+RTRIM(spid) FROM master.dbo.sysprocesses
+WHERE program_name IN('SQL profiler',N'SQL 事件探查器')
+EXEC sp_msforeach_worker '?'
+```
 ## 18. 记录搜索:
-开头到N条记录
-
-	Select Top N * From 表
-
-N到M条记录(要有主索引ID)
-
-	Select Top M-N * From 表 Where ID in (Select Top M ID From 表) Order by ID   Desc
-
-N到结尾记录
-
-	Select Top N * From 表 Order by ID Desc
-
-
+- 开头到N条记录
+```sql
+Select Top N * From 表
+```
+- N到M条记录(要有主索引ID)
+```sql
+Select Top M-N * From 表 Where ID in (Select Top M ID From 表) Order by ID   Desc
+```
+- N到结尾记录
+```sql
+Select Top N * From 表 Order by ID Desc
+```
 ## 19. 获取当前数据库中的所有用户表
-	select Name from sysobjects where xtype='u' and status>=0
-
+```sql
+select Name from sysobjects where xtype='u' and status>=0
+```
 ## 20. 获取某一个表的所有字段
-	select name from syscolumns where id=object_id('表名')
-	select name from syscolumns where id in (select id from sysobjects where type = 'u' and name = '表名')
-两种方式的效果相同
-
+```sql
+select name from syscolumns where id=object_id('表名')
+select name from syscolumns where id in (select id from sysobjects where type = 'u' and name = '表名')
+```
 ## 21. 查看与某一个表相关的视图、存储过程、函数
-	select a.* from sysobjects a, syscomments b where a.id = b.id and b.text like '%表名%'
-
+```sql
+select a.* from sysobjects a, syscomments b where a.id = b.id and b.text like '%表名%'
+```
 ## 22. 查看当前数据库中所有存储过程
-	select name as 存储过程名称 from sysobjects where xtype='P'
-
+```sql
+select name as 存储过程名称 from sysobjects where xtype='P'
+```
 ## 23. 查询用户创建的所有数据库
-	select * from master..sysdatabases D where sid not in(select sid from master..syslogins where name='sa')
-或者
-
-	select dbid, name AS DB_NAME from master..sysdatabases where sid <> 0x01
-
+```sql
+select * from master..sysdatabases D where sid not in(select sid from master..syslogins where name='sa')
+select dbid, name AS DB_NAME from master..sysdatabases where sid <> 0x01
+```
 ## 24. 查询某一个表的字段和数据类型
-	select column_name,data_type from information_schema.columns
-	where table_name = '表名'
-
+```sql
+select column_name,data_type from information_schema.columns
+where table_name = '表名'
+```
 ## 25. 不同服务器数据库之间的数据操作
-创建链接服务器
-
-	exec sp_addlinkedserver 'ITSV ', ' ', 'SQLOLEDB ', '远程服务器名或ip地址 '
-	exec sp_addlinkedsrvlogin 'ITSV ', 'false ',null, '用户名 ', '密码 '
-查询示例
-
-	select * from ITSV.数据库名.dbo.表名
-导入示例
-
-	select * into 表 from ITSV.数据库名.dbo.表名
-以后不再使用时删除链接服务器
-
-	exec sp_dropserver 'ITSV ', 'droplogins '
-连接远程/局域网数据(openrowset/openquery/opendatasource)
-- 1. openrowset
-查询示例
-	
-
-	select * from openrowset( 'SQLOLEDB ', 'sql服务器名 '; '用户名 '; '密码 ',数据库名.dbo.表名)
-生成本地表
-	
-
-	select * into 表 from openrowset( 'SQLOLEDB ', 'sql服务器名 '; '用户名 '; '密码 ',数据库名.dbo.表名)
-把本地表导入远程表
-	
-
-	insert openrowset( 'SQLOLEDB ', 'sql服务器名 '; '用户名 '; '密码 ',数据库名.dbo.表名)
-	select *from 本地表
-更新本地表
-	
-
-	update b
-	set b.列A=a.列A
-	from openrowset( 'SQLOLEDB ', 'sql服务器名 '; '用户名 '; '密码 ',数据库名.dbo.表名)as a inner join 本地表 b	on a.column1=b.column1
-- 2. openquery用法需要创建一个连接
-首先创建一个连接创建链接服务器
-	
-
-	exec sp_addlinkedserver 'ITSV ', ' ', 'SQLOLEDB ', '远程服务器名或ip地址 '
-查询
-	
-
-	select *
-	FROM openquery(ITSV, 'SELECT * FROM 数据库.dbo.表名 ')
-把本地表导入远程表
-	
-
-	insert openquery(ITSV, 'SELECT * FROM 数据库.dbo.表名 ')
-	select * from 本地表
-更新本地表
-	
-
-	update b
-	set b.列B=a.列B
-	FROM openquery(ITSV, 'SELECT * FROM 数据库.dbo.表名 ') as a
-	inner join 本地表 b on a.列A=b.列A
-- 3. opendatasource/openrowset
-	
-
-	SELECT *
-	FROM opendatasource( 'SQLOLEDB ', 'Data Source=ip/ServerName;User ID=登陆名;Password=密码 ' ).test.dbo.roy_ta
-把本地表导入远程表
-	
-
-	insert opendatasource( 'SQLOLEDB ', 'Data Source=ip/ServerName;User ID=登陆名;Password=密码 ').数据库.dbo.表名
-	select * from 本地表
-
+#### 25.1 创建链接服务器
+- 创建一个链接名
+```sql
+EXEC sp_addlinkedserver 'LinkName ', ' ', 'SQLOLEDB ', '远程服务器名或IP地址 ' --有自定义实例名时要加上"/实例名"
+```
+- 创建登录信息（或叫创建链接服务器登录名映射）（只需选择一种方式即可）
+    + 以windows认证的方式登录
+    ```sql
+    EXEC sp_addlinkedsrvlogin 'LinkName'  --或EXEC sp_addlinkedsrvlogin 'LinkName','true'
+    ```
+    + 以SQL认证的方式登录
+    ```sql
+    EXEC sp_addlinkedsrvlogin 'LinkName ', 'false ',null, '用户名 ', '密码 '
+    ```
+#### 25.2 链接服务器相关数据操作
+- 查询示例
+```sql
+SELECT * FROM LinkName.数据库名.架构名.表名
+```
+#### 25.3 删除链接服务器
+- 删除登录信息(或叫删除链接服务器登录名映射)
+```sql
+EXEC sp_droplinkedsrvlogin 'LinkName',NULL
+```
+- 删除链接服务器名称
+```sql
+EXEC sp_dropserver 'LinkName ', 'droplogins' --如果指定droplogins，则在删除链接服务器之前要删除登录名映射
+```
+#### 25.4 其它连接远程/局域网数据方法：OPENROWSET/OPENQUERY/opendatasource
+- ##### OPENROWSET方法（不需要用到创建好的链接名。如果连接的实例名不是默认的，需要在"sql服务器名或IP地址"后加上"/实例名"）
+    + 查询示例
+        * Windows认证方式查询(以下方法之一即可)
+        ```sql
+        SELECT * FROM OPENROWSET('SQLOLEDB', 'server=sql服务器名或IP地址;Trusted_Connection=yes',数据库名.架构名.表名)
+        SELECT * FROM OPENROWSET('SQLNCLI', 'server=sql服务器名或IP地址;Trusted_Connection=yes',数据库名.架构名.表名)
+        SELECT * FROM OPENROWSET('SQLOLEDB', 'server=sql服务器名或IP地址;Trusted_Connection=yes','SELECT * FROM 数据库名.架构名.表名')
+        SELECT * FROM OPENROWSET('SQLNCLI', 'server=sql服务器名或IP地址;Trusted_Connection=yes','SELECT * FROM 数据库名.架构名.表名')
+        ```
+        * SQL认证方式查询(以下方法之一即可)
+        ```sql
+        SELECT * FROM OPENROWSET('SQLOLEDB', 'server=sql服务器名或IP地址;uid=用户名;pwd=密码',数据库名.架构名.表名)
+        SELECT * FROM OPENROWSET('SQLNCLI', 'server=sql服务器名或IP地址;uid=用户名;pwd=密码',数据库名.架构名.表名)
+        SELECT * FROM OPENROWSET('SQLOLEDB', 'server=sql服务器名或IP地址;uid=用户名;pwd=密码','SELECT * FROM 数据库名.架构名.表名')
+        SELECT * FROM OPENROWSET('SQLNCLI', 'server=sql服务器名或IP地址;uid=用户名;pwd=密码','SELECT * FROM 数据库名.架构名.表名')
+        SELECT * FROM OPENROWSET('SQLOLEDB', 'sql服务器名';'用户名';'密码',数据库名.架构名.表名)
+        SELECT * FROM OPENROWSET('SQLNCLI', 'sql服务器名';'用户名';'密码',数据库名.架构名.表名)
+        SELECT * FROM OPENROWSET('SQLOLEDB', 'sql服务器名';'用户名';'密码','SELECT * FROM 数据库名.架构名.表名')
+        SELECT * FROM OPENROWSET('SQLNCLI', 'sql服务器名';'用户名'; '密码','SELECT * FROM 数据库名.架构名.表名')
+        ```
+    + 生成本地表
+    ```sql
+    SELECT * INTO 表 FROM openrowset( 'SQLOLEDB ', 'sql服务器名 '; '用户名 '; '密码 ',数据库名.dbo.表名)
+    ```
+    + 把本地表导入远程表
+    ```sql
+	INSERT OPENROWSET('SQLOLEDB', 'server=sql服务器名或IP地址;uid=用户名;pwd=密码',数据库名.架构名.表名)
+    SELECT * FROM 本地表
+    ```
+    + 关联更新本地表
+    ```sql
+	UPDATE b
+	   SET b.列A = a.列A
+	  FROM OPENROWSET( 'SQLOLEDB ', 'sql服务器名 '; '用户名 '; '密码 ',数据库名.dbo.表名) AS a
+INNER JOIN 本地表 b ON a.column1 = b.column1
+    ```
+- ##### OPENQUERY方法（需要先创建一个链接）
+    + 查询示例
+    ```sql
+    SELECT * FROM OPENQUERY(LinkName,'SELECT * FROM 数据库名.架构名.表名')
+    ```
+    + 把本地表导入远程表
+    ```sql
+    INSERT OPENQUERY(LinkName, 'SELECT *  FROM 数据库名.架构名.表名') SELECT * FROM 本地表
+    ```
+    + 关联更新本地表
+    ```sql
+	UPDATE b
+	   SET b.列A = a.列A
+	  FROM OPENQUERY(ITSV, 'SELECT * FROM 数据库.dbo.表名 ') AS a
+INNER JOIN 本地表 b ON a.column1 = b.column1
+    ```
+- ##### OPENDATASOURCE方法(不需要用到创建好的链接名。如果连接的实例名不是默认的，需要在"sql服务器名或IP地址"后加上"/实例名")
+    + 查询示例
+        * Windows认证方式查询(以下方法之一即可)
+        ```sql
+        SELECT * FROM OPENDATASOURCE('SQLOLEDB', 'server=sql服务器名或IP地址;Trusted_Connection=yes').数据库名.架构名.表名
+        SELECT * FROM OPENDATASOURCE('SQLNCLI', 'server=sql服务器名或IP地址;Trusted_Connection=yes').数据库名.架构名.表名
+        ```
+        * SQL认证方式查询(以下方法之一即可)
+        ```sql
+        SELECT * FROM OPENDATASOURCE('SQLOLEDB', 'server=sql服务器名或IP地址;uid=用户名;pwd=密码').数据库名.架构名.表名
+        SELECT * FROM OPENDATASOURCE('SQLNCLI', 'server=sql服务器名或IP地址;uid=用户名;pwd=密码').数据库名.架构名.表名
+        SELECT * FROM OPENDATASOURCE('SQLOLEDB', 'Data Source=sql服务器名或IP地址;uid=用户名;pwd=密码').数据库名.架构名.表名
+        SELECT * FROM OPENDATASOURCE('SQLNCLI', 'Data Source=sql服务器名或IP地址;uid=用户名;pwd=密码').数据库名.架构名.表名
+        ```
+    + 导入示例
+    ```sql
+    INSERT OPENDATASOURCE('SQLOLEDB', 'server=sql服务器名或IP地址;uid=用户名;pwd=密码').数据库名.架构名.表名
+    SELECT * FROM 本地表
+    ```
+   
 ## 26. 删除数据库下面的所有表
-	use 数据库名(是要删除表的所在的那个数据库的名称)
-	GO
-	declare @sql varchar(8000)
-	while (select count(*) from sysobjects where type='U')>0
-	begin
-	SELECT @sql='drop table ' + name
-	FROM sysobjects
-	WHERE (type = 'U')
-	ORDER BY 'drop table ' + name
-	exec(@sql) 
-	end
+```sql
+use 数据库名(是要删除表的所在的那个数据库的名称)
+GO
+declare @sql varchar(8000)
+while (select count(*) from sysobjects where type='U')>0
+begin
+SELECT @sql='drop table ' + name
+FROM sysobjects
+WHERE (type = 'U')
+ORDER BY 'drop table ' + name
+exec(@sql) 
+end
+```
 
 ## 27. 查看数据库文件使用情况
-	SELECT  A.name                                                     AS "逻辑名称"
-	       ,CONVERT(FLOAT ,A.size)             * (8192.0/1024.0)/1024  AS "已用大小MB"
-	       ,CONVERT(FLOAT ,A.maxSize - A.size) * (8192.0/1024.0)/1024  AS "可用大小MB"
-	       ,CONVERT(FLOAT ,A.maxSize)          * (8192.0/1024.0)/1024  AS "分配大小MB"
-	       ,A.fileName                                                 AS "文件路径"
-	       ,(
-	         SELECT  SA.groupName
-	           FROM  SysFileGroups  SA
-	          WHERE  SA.groupID = A.groupID
-	        )                                                          AS "文件组"
-	       ,CASE WHEN A.status = 1081346 THEN '磁盘文件'               
-	             WHEN A.status = 1081410 THEN '日志设备'
-	             ELSE CONVERT(VARCHAR ,A.status) END                   AS "文件类型"
-	  FROM  SysFiles  A
+```sql
+SELECT  A.name                                                     AS "逻辑名称"
+       ,CONVERT(FLOAT ,A.size)             * (8192.0/1024.0)/1024  AS "已用大小MB"
+       ,CONVERT(FLOAT ,A.maxSize - A.size) * (8192.0/1024.0)/1024  AS "可用大小MB"
+       ,CONVERT(FLOAT ,A.maxSize)          * (8192.0/1024.0)/1024  AS "分配大小MB"
+       ,A.fileName                                                 AS "文件路径"
+       ,(
+         SELECT  SA.groupName
+           FROM  SysFileGroups  SA
+          WHERE  SA.groupID = A.groupID
+        )                                                          AS "文件组"
+       ,CASE WHEN A.status = 1081346 THEN '磁盘文件'               
+             WHEN A.status = 1081410 THEN '日志设备'
+             ELSE CONVERT(VARCHAR ,A.status) END                   AS "文件类型"
+  FROM  SysFiles  A
+```
 
 ## 28. 修改sa的密码
-	EXEC sp_password NULL,NULL,'sa';
+```sql
+EXEC sp_password NULL,NULL,'sa';
+```
+
 ---
 
 # 常识
-
 - 在SQL查询中，from后最多可以跟256张表或视图
-- 在SQL语句中出现 Order by，查询时，先排序，后取值
+- 在SQL语句中使用Order by查询时，先排序，后取值
 - 在SQL中，一个字段的最大容量是8000
+
