@@ -91,6 +91,7 @@ description: "记录有用的到的网址"
 [MSDN](http://msdn.itellyou.cn/?gytyzs=0z1zl)
 [常用的gif正在加载图](http://blog.sina.com.cn/s/blog_7c28bad401016j66.html)
 [节点](https://lncn.org/)
+[Tracker服务器地址1](https://newtrackon.com/) | [Tracker服务器地址2](https://github.com/ngosang/trackerslist)
 &nbsp;
 
 #### 文章/教程
@@ -198,6 +199,8 @@ description: "记录有用的到的网址"
 
 #### ERP
 [ERP系统架构](https://www.cnblogs.com/Leo_wl/p/7978014.html#top)
+[互联网保险O2O平台微服务架构设计](https://www.cnblogs.com/firstdream/p/6973598.html)
+[微服务架构实践](https://www.cnblogs.com/exceptioneye/p/9334303.html#4025251)
 &nbsp;
 
 #### Flex
