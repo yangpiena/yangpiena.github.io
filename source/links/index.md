@@ -30,7 +30,7 @@ description: "记录有用的到的网址"
 [免费吧](http://www.mianfeib.com/)  |  [老D博客](https://laod.cn/)                           
 [VeryCD 电驴大全](http://www.verycd.com/) | [360doc个人图书馆](http://www.360doc.com/)  |[cnBeta](http://www.cnbeta.com/)    |  [果壳](http://www.guokr.com/)                 |  [少数派](https://sspai.com/)                |  [数字尾巴](http://www.dgtle.com/)
 [百度云](https://pan.baidu.com/)    |  [腾讯云](https://cloud.tencent.com/)          |  [贴图库](http://www.tietuku.com/)
-[百度翻译](https://fanyi.baidu.com/)|  [谷歌搜索](https://www.google.com/ncr)        |  [谷歌香港](https://www.google.com.hk/ncr)   |  [维基百科](https://www.wikipedia.org/)
+[必应在线翻译](https://cn.bing.com/translator/) | [百度翻译](https://fanyi.baidu.com/) | [Google翻译](https://translate.google.cn/?hl=zh-CN&tab=TT) | [谷歌搜索](https://www.google.com/ncr)        |  [谷歌香港](https://www.google.com.hk/ncr)   |  [维基百科](https://www.wikipedia.org/)
 &nbsp;
 
 #### 音乐
@@ -221,6 +221,7 @@ description: "记录有用的到的网址"
 
 #### Git
 [常用 Git 命令清单](http://www.ruanyifeng.com/blog/2015/12/git-cheat-sheet.html)
+[git bash安装和基本设置](https://www.cnblogs.com/jasonxu19900827/p/7823089.html)
 [推荐！手把手教你使用Git](http://blog.jobbole.com/78960/)
 [Git服务器搭建全过程分步详解](http://developer.51cto.com/art/201507/483448.htm)
 &nbsp;
@@ -244,6 +245,10 @@ description: "记录有用的到的网址"
 [Hexo官方主题](https://hexo.io/themes/)                        |  [Hexo主题](https://github.com/hexojs/hexo/wiki/Themes)
 [Hexo博客主题从Jacman切换到NexT.Mist ](http://codepub.cn/2016/03/20/Hexo-blog-theme-switching-from-Jacman-to-NexT-Mist/)
 &nbsp;
+
+#### Idea
+[IntelliJ IDEA 注册码](http://idea.lanyus.com/)
+[IntelliJ IDEA 使用教程(2019图文版) ——从入门到上瘾](https://blog.csdn.net/qq_39507276/article/details/87875508)
 
 #### Java
 [SSM框架——详细整合教程（Spring+SpringMVC+MyBatis）](http://blog.csdn.net/zhshulin/article/details/37956105)
