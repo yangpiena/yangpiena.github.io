@@ -788,8 +788,9 @@ SELECT  A.name                                                     AS "逻辑名
 
 ## 28. 修改sa的密码
 ```sql
-EXEC sp_password NULL,NULL,'sa';
+EXEC sp_password 'OldPassword','NewPassword','sa';
 ```
+> 不知道OldPassword时，可用NULL代替。
 
 ---
 
