@@ -32,7 +32,7 @@ description: "记录有用的到的网址"
 [听雨](http://rain.xxoojoke.com/) |  [AeKun](https://www.aekun.com/ )  |  [VIP付费音乐解析下载](http://music.zhuolin.wang/)  |  [网易云音乐](http://music.163.com)
 
 #### 电影
-[今日影视](http://www.2w2w.tv/) | [天天美剧](http://www.ttmeiju.me/) | [99美剧网](https://www.jjmeiju.com/) | [预告片世界](http://www.yugaopian.cn/)  |  [人人影视字幕](http://www.yyets.com/)
+[全民解析](http://www.qmaile.com/) | [今日影视](http://www.2w2w.tv/) | [天天美剧](http://www.ttmeiju.me/) | [99美剧网](https://www.jjmeiju.com/) | [预告片世界](http://www.yugaopian.cn/)  |  [人人影视字幕](http://www.yyets.com/)
 [BT之家](http://www.btbtt33.com/)   |  [BT之家](http://www.415.net)         |  [BT之家](http://www.btbtt.com)      |  [第二度](https://deardu.com/) | [破晓电影](http://www.poxiao.com) |  [迅雷电影下载](http://www.xlpu.cc/)  |  [快播电影](http://www.bubulai.com/) |  [BT电影天堂](http://www.btbttv.net/)
 
 #### 游戏
@@ -268,7 +268,8 @@ description: "记录有用的到的网址"
 #### Vue.js
 [Vue.js官网](http://cn.vuejs.org/)
 [JSFiddle Hello World](https://jsfiddle.net/chrisvfritz/50wL7mdz/)
-
+#### Windows
+[robocopy的用法](https://www.cnblogs.com/zhanglei1371/p/6724167.html)
 
 #### 民生
 [宁夏人事考试中心](http://www.nxpta.gov.cn/)  |  [宁夏专业技术人员继续教育培训网](http://nxzj.chinahrt.com/)
