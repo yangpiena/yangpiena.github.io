@@ -4,6 +4,33 @@
   
     
     <entry>
+      <title>Windows利用robocopy命令实现文件同步</title>
+      <link href="/2019/06/17/Windows%E5%88%A9%E7%94%A8robocopy%E5%91%BD%E4%BB%A4%E5%AE%9E%E7%8E%B0%E6%96%87%E4%BB%B6%E5%90%8C%E6%AD%A5/"/>
+      <url>/2019/06/17/Windows%E5%88%A9%E7%94%A8robocopy%E5%91%BD%E4%BB%A4%E5%AE%9E%E7%8E%B0%E6%96%87%E4%BB%B6%E5%90%8C%E6%AD%A5/</url>
+      
+        <content type="html"><![CDATA[<p>Robocopy是Microsoft在Windows Server 2003 Resource Kit Tools提供的复制工具。</p><h3 id="1-下载rktools-exe"><a href="#1-下载rktools-exe" class="headerlink" title="1. 下载rktools.exe"></a>1. <a href="http://download.microsoft.com/download/8/e/c/8ec3a7d8-05b4-440a-a71e-ca3ee25fe057/rktools.exe" target="_blank" rel="noopener">下载rktools.exe</a></h3><p>使用默认选项安装即可。一般情况下Windows Server 2003不带robocopy，所以需要安装。</p><h3 id="2-使用命令robocopy，实现镜像同步，且输出日志到log-txt"><a href="#2-使用命令robocopy，实现镜像同步，且输出日志到log-txt" class="headerlink" title="2. 使用命令robocopy，实现镜像同步，且输出日志到log.txt"></a>2. 使用命令robocopy，实现镜像同步，且输出日志到log.txt</h3><pre><code>robocpy C:\源文件夹\ D:\目标文件夹\ /LOG+:C:\log.txt /MIR</code></pre><p>robocopy提供了很多xcopy不具备的功能：</p><ul><li>可选择多种文件类型复制到目标文件夹</li><li>可指定在复制时不复制的文件类型</li><li>可指定复制目录的级次，如只复制两级目录</li><li>可按文件的修改时间或访问时间进行复制，如只复制三天内修改的文件</li><li>按文件大小，如只复制大于100K小于1M的文件</li><li>镜像模式，拷贝时删除在目标文件夹里存在但源文件夹里并没有的文件</li><li>支持文件移动</li><li>监控文件夹，一旦文件夹内文件发生变化，自动复制变化的文件</li></ul><p>更多参数使用请参照<a href="https://www.cnblogs.com/zhanglei1371/p/6724167.html" target="_blank" rel="noopener">robocopy的用法</a></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 技术 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 命令 </tag>
+            
+            <tag> Windows </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>数据库增加时间列</title>
       <link href="/2019/04/03/%E6%95%B0%E6%8D%AE%E5%BA%93%E5%A2%9E%E5%8A%A0%E6%97%B6%E9%97%B4%E5%88%97/"/>
       <url>/2019/04/03/%E6%95%B0%E6%8D%AE%E5%BA%93%E5%A2%9E%E5%8A%A0%E6%97%B6%E9%97%B4%E5%88%97/</url>
@@ -963,9 +990,9 @@
       
         <tags>
             
-            <tag> Flex </tag>
-            
             <tag> 属性 </tag>
+            
+            <tag> Flex </tag>
             
         </tags>
       
