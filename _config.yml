@@ -96,10 +96,10 @@ live2d:
     #use: live2d-widget-model-tororo #模型选择，白猫
   display:
     position: right #模型位置
-    width: 50       #模型宽度
-    height: 100     #模型高度
-    hOffset: -20
-    vOffset: -50
+    width: 70       #模型宽度
+    height: 90     #模型高度
+    hOffset: -37
+    vOffset: -20
   mobile:
     show: false      #是否在手机端显示
   
