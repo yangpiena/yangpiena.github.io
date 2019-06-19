@@ -4,7 +4,7 @@ layout: post
 comments: true
 date: 2016-12-28 09:29:53
 categories: 技术
-tags: [Java, Jdk]
+tags: [JDK相关]
 keywords:
 description:
 ---

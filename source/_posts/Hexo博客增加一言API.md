@@ -2,7 +2,7 @@
 title: Hexo博客增加一言API
 author: 昜丿捺
 categories: 技术
-tags: Hexo
+tags: Hexo博客
 timestamp: 1553267229
 date: 2019-03-22 23:07:09
 authorDesc:

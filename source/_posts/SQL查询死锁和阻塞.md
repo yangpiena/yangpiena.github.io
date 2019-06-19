@@ -4,7 +4,7 @@ layout: post
 comments: true
 date: 2016-11-29 15:13:06
 categories: 技术
-tags: [SQL, 死锁]
+tags: [SQL相关, 死锁]
 keywords: 死锁，阻塞
 description:
 ---

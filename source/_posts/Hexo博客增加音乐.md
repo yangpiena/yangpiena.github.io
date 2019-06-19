@@ -5,7 +5,7 @@ categories: 技术
 timestamp: 1553844903
 date: 2019-03-29 15:35:03
 authorDesc:
-tags: Hexo
+tags: Hexo博客
 description:
 ---
 根据你的需求，在合适地方加入音乐。例如，打开主题layout下的文件common-article.ejs，加入：

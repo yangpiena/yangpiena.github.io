@@ -3,7 +3,7 @@ title: Hexo博客搭建记录
 layout: post
 date: 2016-11-09
 categories: 技术
-tags: Hexo
+tags: Hexo博客
 description: 生命在于折腾
 ---
 个人博客已搭建完成，下面记录一下搭建步骤。
