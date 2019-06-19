@@ -1,11 +1,11 @@
 ---
 title: Tomcat部署项目访问不加项目名设置
-layout: post
-comments: true
-date: 2017-08-17 10:19:48
+author: 昜丿捺
 categories: 技术
-tags: [Java, Tomcat]
-keywords:
+timestamp: 1560763353
+date: 2017-08-17 10:19:48
+authorDesc:
+tags: [Tomcat]
 description:
 ---
 1. 打开conf目录下server.xml；

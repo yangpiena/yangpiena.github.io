@@ -4,7 +4,7 @@ layout: post
 comments: true
 date: 2016-12-28 10:06:29
 categories: 技术
-tags: [Java, Tomcat]
+tags: [Tomcat]
 keywords:
 description:
 ---
