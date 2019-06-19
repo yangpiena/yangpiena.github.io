@@ -47,7 +47,6 @@ description: "记录有用的到的网址"
 [png在线转ico](http://www.easyicon.net/covert/)  |  [MakePic.com 图片制造](http://www.makepic.com/)  |  [草料二维码美化器](http://mh.cli.im/)  |  [在线制作您的Logo](https://www.logaster.cn/)
 [数字绘](https://www.myshuju.net/Home) | [drawio](https://www.draw.io/)
 
-
 #### 系统/软件下载
 [IT之家](https://www.ithome.com/) |  [系统之家](http://www.xitongzhijia.net/) |  [系统天地](http://www.xitongtiandi.net/) |  [Win10专业版官网](http://www.win10zyb.com/)                                                              |  [Win10之家](http://www.xh52.com/)                                                              |  [系统圣地](http://www.285868.com/)
 [黑苹果乐园](https://imac.hk/)	  |  [黑果小兵](https://blog.daliansky.net/)  |  [从零开始的黑苹果安装教程](http://tieba.baidu.com/p/5179866130#)
@@ -77,8 +76,6 @@ description: "记录有用的到的网址"
 [10个顶级的CSS UI开源框架](http://www.codeceo.com/article/top-10-css-ui-framework.html) | [Android酷炫实用的开源框架（UI框架）](http://www.runoob.com/w3cnote/android-ui-framework.html) | [后台界面模板](http://www.mycodes.net/154/3.htm)
 [不落阁](http://www.lyblogs.cn/) | [网络培训系统界面设计UI](http://www.th7.cn/Design/ui/201312/199261.shtml) | [公司某项目前端技术积累](http://blog.csdn.net/sunyingyuan/article/details/38237139)
 
-
-
 #### 数据库
 [SQL Server 2008(R2)支持将数据导出为脚本](http://xcc313.iteye.com/blog/1331468)
 [【SQL Server备份恢复】维护计划实现备份：每周数据库完整备份、每天差异备份、每小时日志备份 ](http://blog.csdn.net/sqlserverdiscovery/article/details/11020057)
@@ -90,7 +87,6 @@ description: "记录有用的到的网址"
 [Sqlserver 高并发和大数据存储方案](https://www.cnblogs.com/zfthm/p/6271346.html)
 [sqlserver 发布订阅的弊端](https://blog.csdn.net/yangzhawen/article/details/8019921)
 
-
 #### Angular
 [AngularJS官网](https://angularjs.org/)                       |  [AngularJS中文官网](https://angular.cn/)                                                              |  [AngularUI官网](http://angular-ui.github.io/)
 [AngularJS所有版本下载](https://code.angularjs.org/)
@@ -100,11 +96,9 @@ description: "记录有用的到的网址"
 [NgNice站点是由一批AngularJS爱好者发起的，致力于打造一个AngularJS的学习和经验分享平台。](http://www.ngnice.com/)
 [2013年度最强AngularJS资源合集](http://www.iteye.com/news/28651-AngularJS-Google-resource)                                                              |  [20个免费的 AngularJS 资源和开发教程](http://www.html5cn.org/article-9473-1.html)
 
-
 #### C++
 [C#调用C++ dll导出函数提示找不到指定模块](http://www.bubuko.com/infodetail-1761193.html)
 [C#多线程编程](https://www.cnblogs.com/luxiaoxun/p/3280146.html)
-
 
 #### C&#35;
 [C#教程](http://www.runoob.com/csharp/csharp-program-structure.html)
@@ -142,17 +136,14 @@ description: "记录有用的到的网址"
 [想和代码谈谈](http://www.cnblogs.com/WayneShao/)
 [使用C#创建Access2010或Access2007 accdb 数据库文件](http://blog.sina.com.cn/s/blog_7cc533310101lxn2.html)
 
-
 #### Eclipse
 [eclipse安装lombok插件](https://blog.csdn.net/qq_25646191/article/details/79639633)
-
 
 #### ERP/微服务
 [ERP系统架构](https://www.cnblogs.com/Leo_wl/p/7978014.html#top)
 [互联网保险O2O平台微服务架构设计](https://www.cnblogs.com/firstdream/p/6973598.html)
 [微服务架构实践](https://www.cnblogs.com/exceptioneye/p/9334303.html#4025251)
 [微服务架构理解[架构图]](https://blog.csdn.net/bcqtt/article/details/79649296)
-
 
 #### Flex
 [Flex下载地址](http://www.adobe.com/support/flashplayer/downloads.html)                                                              |  [查看浏览器FLash版本、Debug Player](http://kb2.adobe.com/cps/155/tn_15507.html)
@@ -165,21 +156,17 @@ description: "记录有用的到的网址"
 [一名优秀的Flex开发者需要知道的10样东西](http://www.cnblogs.com/kakaflex/archive/2010/12/02/1894142.html)
 [Flex 3 AdvancedDataGrid的使用(三)](http://www.cnblogs.com/xuehai/archive/2009/09/26/1574533.html)
 
-
 #### Freemarker
 [Freemarker的基本语法及入门基础](https://www.cnblogs.com/JealousGirl/p/6914122.html)
 
-
 #### fpSpread
 [Spread for Windows Forms高级主题(7)---自定义打印的外观](http://www.cnblogs.com/powertoolsteam/archive/2011/08/22/2149009.html)
-
 
 #### Git
 [常用 Git 命令清单](http://www.ruanyifeng.com/blog/2015/12/git-cheat-sheet.html)
 [git bash安装和基本设置](https://www.cnblogs.com/jasonxu19900827/p/7823089.html)
 [推荐！手把手教你使用Git](http://blog.jobbole.com/78960/)
 [Git服务器搭建全过程分步详解](http://developer.51cto.com/art/201507/483448.htm)
-
 
 #### Haproxy
 [首页](https://www.haproxy.org/)
@@ -191,7 +178,6 @@ description: "记录有用的到的网址"
 [5月16日发布HAProxy,实现八种负载算法](http://blog.51cto.com/1234567aaa/317891)
 [](https://www.cnblogs.com/qige2017/p/7783402.html)
 
-
 #### Hexo
 [hexo常用命令笔记](https://segmentfault.com/a/1190000002632530)
 [Windows下使用Hexo+GithubPage搭建博客](http://blog.csdn.net/wx_jin/article/details/51027783)
@@ -199,7 +185,6 @@ description: "记录有用的到的网址"
 [Hexo常见问题](http://wp.huangshiyang.com/hexo%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88)                                                               |  [Hexo博客优化](http://xwartz.xyz/blog/2016/09/reduce-blog-load-time/)
 [Hexo官方主题](https://hexo.io/themes/)                        |  [Hexo主题](https://github.com/hexojs/hexo/wiki/Themes)
 [Hexo博客主题从Jacman切换到NexT.Mist ](http://codepub.cn/2016/03/20/Hexo-blog-theme-switching-from-Jacman-to-NexT-Mist/)
-
 
 #### Idea
 [IntelliJ IDEA 注册码](http://idea.lanyus.com/)
@@ -214,19 +199,16 @@ description: "记录有用的到的网址"
 [编程中国JSP教程和技术资料](http://old.bccn.net/Article/web/jsp/Index.html)
 [【FAQ】org.apache.maven.archiver.MavenArchiver.getManifest错误](http://www.cnblogs.com/asderx/p/6541945.html)
 
-
 #### JQuery
 [jQuery插件库](http://www.jq22.com/)
 [36个引人注目JQuery导航菜单](http://www.cnblogs.com/ywqu/archive/2009/08/15/1546559.html)
 [JQuery DrawSVG](http://leocs.me/jquery-drawsvg/)
-
 
 #### Kettle
 [Kettle官网下载](http://kettle.pentaho.org/)                    |  [Kettle各版本下载](http://sourceforge.net/projects/pentaho/files/Data%20Integration/)
 [Kettle开源社区](http://www.ukettle.org/)
 [Kettle基本概念学习](http://www.cnblogs.com/hapjin/p/4578738.html)    |  [kettle使用命令行来运行ktr和kjb](http://www.cnblogs.com/wxjnew/p/3620792.html)
 [Kettle的一些常见问题](http://blog.csdn.net/iquicksandi/article/details/7635031)                                                                |  [Kettle连接数据库超时的参数设置](http://www.ukettle.org/thread-502-1-4.html)
-
 
 #### Linux
 [对 Linux 新手非常有用的 20 个命令](http://www.oschina.net/translate/useful-linux-commands-for-newbies)
@@ -237,22 +219,18 @@ description: "记录有用的到的网址"
 [SUSE安装、配置APR和Tomcat-Native](https://blog.csdn.net/ClementAD/article/details/50749597)
 [SUSE Linux 系统加固](https://blog.csdn.net/vianoz/article/details/20864323)
 
-
 #### Markdown
 [Markdown在线编辑](http://www.ctrlshift.net/project/markdowneditor/)  |  [Windows在线markdown工具](https://www.zybuluo.com/mdeditor)
 [Markdown 语法 示例 字体 字号 颜色](http://blog.csdn.net/u011419965/article/details/50536937)
 [Markdown支持的语言](http://blog.csdn.net/peng_hong_fu/article/details/52805408)
-
 
 #### Sublime Text
 [Sublime Text 2/3安装使用及常用插件](http://www.cnblogs.com/dudumao/p/4054086.html)
 [Sublime Text PackageControl](https://packagecontrol.io/)
 [Sublime Text 3 快捷键](https://segmentfault.com/a/1190000002570753)
 
-
 #### SVN
 [apache网站下载](http://subversion.apache.org/packages.html#windows)
-
 
 #### VB
 [VB源码](http://www.codesky.net/vb/)
@@ -264,10 +242,10 @@ description: "记录有用的到的网址"
 [VB几种函数参数传递方法，Variant，数组，Optional，ParamArray](https://blog.csdn.net/whchensir/article/details/52050796)
 [VB调用c++写的Dll的一点总结](https://blog.csdn.net/emma_he/article/details/3023337)
 
-
 #### Vue.js
 [Vue.js官网](http://cn.vuejs.org/)
 [JSFiddle Hello World](https://jsfiddle.net/chrisvfritz/50wL7mdz/)
+
 #### Windows
 [robocopy的用法](https://www.cnblogs.com/zhanglei1371/p/6724167.html)
 
