@@ -595,8 +595,6 @@
       
         <tags>
             
-            <tag> Java </tag>
-            
             <tag> Tomcat </tag>
             
         </tags>
@@ -990,9 +988,9 @@
       
         <tags>
             
-            <tag> 属性 </tag>
-            
             <tag> Flex </tag>
+            
+            <tag> 属性 </tag>
             
         </tags>
       
