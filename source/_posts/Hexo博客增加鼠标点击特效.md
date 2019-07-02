@@ -5,7 +5,7 @@ categories: 技术
 timestamp: 1553668241
 date: 2019-03-27 14:30:41
 authorDesc:
-tags: Hexo博客
+tags: [hexo]
 description:
 ---
 打开layout下的文件footer.ejs，增加社会主义核心价值观特效：

@@ -4,7 +4,7 @@ layout: post
 comments: true
 date: 2016-12-22 16:23:55
 categories: 技术
-tags: [Flex]
+tags: flex
 keywords: 序号
 description:
 ---

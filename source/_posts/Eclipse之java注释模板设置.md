@@ -4,7 +4,7 @@ layout: post
 comments: true
 date: 2016-12-27 10:27:15
 categories: 技术
-tags: [Eclipse, Java]
+tags: [Eclipse, java]
 keywords: 注释
 description:
 ---

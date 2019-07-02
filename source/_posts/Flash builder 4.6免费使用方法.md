@@ -4,7 +4,7 @@ layout: post
 comments: true
 date: 2016-12-27 15:18:23
 categories: 技术
-tags: [Flex, Flash builder]
+tags: [flex, flash builder]
 keywords: 免费
 description: 整理自网络
 ---

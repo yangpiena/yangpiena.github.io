@@ -4,7 +4,7 @@ layout: post
 comments: true
 date: 2018-10-29 15:56:44
 categories: 技术
-tags: [SQL相关, 数据库]
+tags: [sql, 数据库]
 keywords: 数据库
 description:
 ---

@@ -69,6 +69,7 @@ description: "记录有用的到的网址"
 [Linux删除乱码文件](http://www.cnblogs.com/quanweiru/p/3764003.html) | [SUSE Linux启用SSH](http://tophandxing.blog.163.com/blog/static/109714820124123438513/) | [黑苹果macOS High Sierra 10.13.6详细安装新手菜鸟教程](http://tzit.net/htmlitjs/2018-10-25/2234.html)
 [Win10怎么把批处理文件固定到开始菜单](http://www.jb51.net/os/win10/483729.html) | [解决TCP/IP筛选的实用设置问题](https://jingyan.baidu.com/article/851fbc37dc1e513e1f15ab27.html) | [如何在不重装服务器的情况下尝试解决sqlmaint.exe失败的问题](http://blog.csdn.net/zhaoyonghui100/article/details/8939950) | [Sql Server 2000清除日志方法介绍](https://yq.aliyun.com/ziliao/22450)
 [Flex转型Html学习随笔1——关于Html页面的div布局（上）](http://www.cnblogs.com/momoko8443/p/4302879.html) | [Flex转型Html学习随笔1——关于Html页面的div布局（下）](http://www.cnblogs.com/momoko8443/p/4303829.html)
+[OneAPM 工作两年总结](http://www.ituring.com.cn/article/497377)
 
 #### 前端/案例
 [蓝蓝设计](http://www.lanlanwork.com/)

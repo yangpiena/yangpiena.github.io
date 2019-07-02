@@ -4,7 +4,7 @@ layout: post
 comments: true
 date: 2016-11-29 09:53:02
 categories: 技术
-tags: [FAQ, SQL相关]
+tags: [FAQ, sql]
 keywords:
 description:
 ---

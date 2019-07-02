@@ -4,7 +4,7 @@ layout: post
 comments: true
 date: 2016-12-27 15:54:04
 categories: 技术
-tags: [FAQ, Flash builder]
+tags: [FAQ, flash builder]
 keywords:
 description: 整理自YPN
 ---

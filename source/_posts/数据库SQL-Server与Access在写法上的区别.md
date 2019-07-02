@@ -4,7 +4,7 @@ layout: post
 comments: true
 date: 2018-10-24 22:19:18
 categories: 技术
-tags: [SQL相关, 数据库, Access]
+tags: [sql, 数据库, Access]
 description:
 ---
 

@@ -4,7 +4,7 @@ layout: post
 comments: true
 date: 2016-11-29 15:38:32
 categories: 技术
-tags: [SQL相关, 经典语句]
+tags: [sql, 经典语句]
 keywords:
 description:
 toc: true

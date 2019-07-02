@@ -4,7 +4,7 @@ layout: post
 date: 2016-11-09
 comments: true
 categories: 技术
-tags: Hexo
+tags: [hexo]
 description: 生命在于折腾
 ---
 # 当重装电脑，或者想在其它电脑上修改博客，可以使用下列步骤：

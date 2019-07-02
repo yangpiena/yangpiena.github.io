@@ -5,7 +5,7 @@ categories: 技术
 timestamp: 1553668756
 date: 2019-03-27 14:39:16
 authorDesc:
-tags: Hexo博客
+tags: [hexo]
 description:
 ---
 打开layout下的文件footer.ejs，增加文本输入框特效：

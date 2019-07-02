@@ -4,7 +4,7 @@ layout: post
 comments: true
 date: 2016-12-22 16:38:11
 categories: 技术
-tags: [Flex]
+tags: [flex]
 keywords: 速度
 description:
 ---

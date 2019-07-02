@@ -4,7 +4,7 @@ layout: post
 comments: true
 date: 2016-11-29 15:24:58
 categories: 技术
-tags: [SQL相关, 字符串]
+tags: [sql, 字符串]
 keywords: 截取
 description:
 ---

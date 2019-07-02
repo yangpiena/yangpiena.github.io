@@ -4,7 +4,7 @@ layout: post
 comments: true
 date: 2016-12-22 15:55:28
 categories: 技术
-tags: [Flex, ActionScript]
+tags: [flex, actionscript]
 keywords: 
 description:
 ---
