@@ -104,11 +104,12 @@ description: "记录有用的到的网址"
 #### C&#35;
 [C#教程](http://www.runoob.com/csharp/csharp-program-structure.html)
 [辉耀应用程序框架学习网](http://www.huiyaosoft.com/winformlist.htm)
+[Winform开发框架的重要特性总结](https://www.cnblogs.com/wuhuacong/p/3199829.html)
 [Vs解决方案的目录结构设置和管理](https://blog.csdn.net/lp310018931/article/details/47991759)
 [C#（Net）软件开发常用工具汇总，提高你的开发效率](https://www.cnblogs.com/Jeremy2001/p/6066553.html)
 [Winform自动更新组件分享](http://www.cnblogs.com/KnightsWarrior/archive/2010/10/20/1856255.html#3754564)
 [Winform(C#.NET)自动更新组件的使用及部分功能实现](https://www.cnblogs.com/24la/p/autoupdater-component.html)
-[Winform开发框架的重要特性总结](https://www.cnblogs.com/wuhuacong/p/3199829.html)
+[C#之使用AutoUpdater自动更新客户端](https://www.e-learn.cn/content/net/1985327)
 [厚积薄发，丰富的公用类库积累，助你高效进行系统开发（8）----非对称加密、BASE64加密、MD5等常用加密处理](http://www.cnblogs.com/wuhuacong/archive/2011/11/28/2266694.html)
 [Winform开发框架主界面设计展示](http://www.cnblogs.com/wuhuacong/p/3360648.html)
 [仿Office的程序载入窗体](https://www.cnblogs.com/HopeGi/p/3510809.html)
@@ -118,7 +119,6 @@ description: "记录有用的到的网址"
 [RibbonWinForms](https://github.com/RibbonWinForms/RibbonWinForms)
 [C# winform程序怎么打包成安装项目(图解)](https://blog.csdn.net/u011981242/article/details/51059441)
 [【.Net】vs2017 自带发布工具 ClickOnce发布包遇到的问题](https://www.cnblogs.com/yanglang/p/8041662.html)
-[Winform打包工具SetupFactory 9 的使用](https://www.cnblogs.com/iiwen/p/5310246.html)
 [C#动态创建Access数据库及密码的方法](https://www.jb51.net/article/71952.htm)
 [C#编程总结（七）数据加密——附源码](https://www.cnblogs.com/yank/p/3528548.html)
 [C#常用的命名规则汇总](https://www.jb51.net/article/57163.htm)
@@ -136,6 +136,7 @@ description: "记录有用的到的网址"
 [C# WinForm项目三层架构简述](https://www.jianshu.com/p/7f628015a243)
 [想和代码谈谈](http://www.cnblogs.com/WayneShao/)
 [使用C#创建Access2010或Access2007 accdb 数据库文件](http://blog.sina.com.cn/s/blog_7cc533310101lxn2.html)
+[【.net】未在本地计算机上注册“microsoft.ACE.oledb.12.0”提供程序解决办法](https://www.cnblogs.com/willingtolove/p/9630485.html)
 
 #### Eclipse
 [eclipse安装lombok插件](https://blog.csdn.net/qq_25646191/article/details/79639633)
@@ -168,6 +169,9 @@ description: "记录有用的到的网址"
 [git bash安装和基本设置](https://www.cnblogs.com/jasonxu19900827/p/7823089.html)
 [推荐！手把手教你使用Git](http://blog.jobbole.com/78960/)
 [Git服务器搭建全过程分步详解](http://developer.51cto.com/art/201507/483448.htm)
+
+#### GitHub
+[AutoUpdater.NET](https://github.com/ravibpatel/AutoUpdater.NET)
 
 #### Haproxy
 [首页](https://www.haproxy.org/)
@@ -224,6 +228,15 @@ description: "记录有用的到的网址"
 [Markdown在线编辑](http://www.ctrlshift.net/project/markdowneditor/)  |  [Windows在线markdown工具](https://www.zybuluo.com/mdeditor)
 [Markdown 语法 示例 字体 字号 颜色](http://blog.csdn.net/u011419965/article/details/50536937)
 [Markdown支持的语言](http://blog.csdn.net/peng_hong_fu/article/details/52805408)
+
+#### Setup Factory
+[安装包制作工具 SetupFactory使用2 API清单](https://www.cnblogs.com/SavionZhang/p/4107761.html)
+[Setup Factory操作注册表](https://blog.csdn.net/feter1992/article/details/12048771)
+[Setup Factory覆盖安装并且安装完成之后设置立即运行选项](https://blog.csdn.net/feter1992/article/details/12510225)
+[Winform打包工具SetupFactory 9 的使用](https://www.cnblogs.com/iiwen/p/5310246.html)
+[用Setup Factory打包基于.Net的WinForm程序](https://blog.csdn.net/snlei/article/details/4083037)
+[完美解决SetupFactory 打包后安装出现注册表错误](https://blog.csdn.net/huruyiye_123/article/details/72649777)
+[C#之使用AutoUpdater自动更新客户端](https://www.cnblogs.com/GardenofEden/p/10337744.html)
 
 #### Sublime Text
 [Sublime Text 2/3安装使用及常用插件](http://www.cnblogs.com/dudumao/p/4054086.html)
