@@ -42,7 +42,7 @@ description: "记录有用的到的网址"
 [it.me](http://www.topit.pro/) | [WallpaperHub](https://wallpaperhub.app/) |  [笔记本桌面壁纸下载](http://bbs.zol.com.cn/nbbbs/d33943.html)
 
 #### 在线工具
-[天气万年历](https://wannianli.tianqi.com/today/zhou/) | [生成随机密码](https://suijimimashengcheng.51240.com/) | [在线工具](http://tool.lu/)  |  [在线工具](http://tool.oschina.net/) | [JSON在线解析及格式化验证](http://www.json.cn/)  |  [转换json格式为C#类](http://json2csharp.chahuo.com/)
+[天气万年历](https://wannianli.tianqi.com/today/zhou/) | [生成随机密码](https://suijimimashengcheng.51240.com/) |[密码强度检测](https://mimaqiangdu.51240.com/)| [在线工具](http://tool.lu/)  |  [在线工具](http://tool.oschina.net/) | [JSON在线解析及格式化验证](http://www.json.cn/)  |  [转换json格式为C#类](http://json2csharp.chahuo.com/)
 [PMD5](http://pmd5.com/#)  |  [输入让你无语的MD5](https://www.somd5.com/)   |  [在线MD5暴力破解](http://www.atool.org/md5-crack.php) | [核心价值编码器](https://sym233.github.io/core-values-encoder/)  |  [核心价值编码器源码](https://github.com/sym233/core-values-encoder)
 [png在线转ico](http://www.easyicon.net/covert/)  |  [MakePic.com 图片制造](http://www.makepic.com/)  |  [草料二维码美化器](http://mh.cli.im/)  |  [在线制作您的Logo](https://www.logaster.cn/)
 [数字绘](https://www.myshuju.net/Home) | [drawio](https://www.draw.io/)
@@ -127,6 +127,7 @@ description: "记录有用的到的网址"
 [Winform窗体控件图片过多后卡顿问题](https://blog.csdn.net/facefriends/article/details/79216114)
 [winform中的DataGridView的列宽设置（自动调整列宽）](https://blog.csdn.net/swarb/article/details/8493328)
 [C#Winform频繁刷新导致界面闪烁解决方法](https://www.cnblogs.com/ghbjimmy/articles/3635825.html)
+[Winform MDI窗体切换不闪烁的解决办法（测试通过）](https://www.cnblogs.com/Charltsing/p/WinFormNoFlicker.html)
 [C# WinForm开发系列 - DataGridView](http://www.cnblogs.com/peterzb/archive/2009/05/29/1491891.html)
 [DataGridView实现添加合计行并始终显示在底部](https://blog.csdn.net/tyouvivi/article/details/1676850)
 [tablelayoutpanel 动态调整行列宽度](https://www.cnblogs.com/mandaren/p/3709932.html)
@@ -137,6 +138,9 @@ description: "记录有用的到的网址"
 [想和代码谈谈](http://www.cnblogs.com/WayneShao/)
 [使用C#创建Access2010或Access2007 accdb 数据库文件](http://blog.sina.com.cn/s/blog_7cc533310101lxn2.html)
 [【.net】未在本地计算机上注册“microsoft.ACE.oledb.12.0”提供程序解决办法](https://www.cnblogs.com/willingtolove/p/9630485.html)
+[各种主流.net混淆加密软件对比:](https://blog.csdn.net/mituan1234567/article/details/89671799)
+[.net反编译的九款神器](https://www.cnblogs.com/zsuxiong/p/5117465.html)
+[C#提升性能"数据库连接打开与关闭"经验分享(附：优化过的DBHelper类) 之配餐系统的开发](https://www.cnblogs.com/know/archive/2011/03/10/1979751.html)
 
 #### Eclipse
 [eclipse安装lombok插件](https://blog.csdn.net/qq_25646191/article/details/79639633)

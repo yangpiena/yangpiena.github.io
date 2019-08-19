@@ -30,8 +30,7 @@ yast2 firewall
 ### 二、命令方式
 #### 1. 修改防火墙配置
 ```
-cd /etc/sysconfig
-vim SuSEfirewall2
+vim /etc/sysconfig/SuSEfirewall2
 ```
 在文件中找到FW_SERVICES_EXT_TCP，在其后面加上服务名或者是服务对应的端口，如SSH,FW_SERVICES_EXT_TCP=”ssh” 或 FW_SERVICES_EXT_TCP=”22″
 如果要开放多个端口则为 FW_SERVICES_EXT_TCP=”22 80 8090″
@@ -39,4 +38,24 @@ vim SuSEfirewall2
 #### 2. 重启防火墙使生效
 ```
 rcSuSEfirewall2 restart
+```
+#### 3. 查看防火墙状态
+```
+rcSuSEfirewall2 status
+```
+#### 4. 关闭防火墙
+```
+systemctl stop SuSEfirewall2.service
+```
+#### 5. 取消开机启动防火墙
+```
+systemctl disable SuSEfirewall2.service
+```
+#### 6. 开启防火墙
+```
+systemctl start SuSEfirewall2.service
+```
+#### 7. 开机启动防火墙
+```
+systemctl enable SuSEfirewall2.service
 ```
