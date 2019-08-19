@@ -154,9 +154,14 @@
 <h4 id="3-开放端口"><a href="#3-开放端口" class="headerlink" title="3. 开放端口"></a>3. 开放端口</h4><p>选择右下角的Advanced…，然后填写要开放的端口，多个端口之间用空格隔开。</p>
 <h4 id="4-保存设置重启防火墙使生效"><a href="#4-保存设置重启防火墙使生效" class="headerlink" title="4. 保存设置重启防火墙使生效"></a>4. 保存设置重启防火墙使生效</h4><p>选择Save Settings and Restart Firewall Now即可。</p>
 <hr>
-<h3 id="二、命令方式"><a href="#二、命令方式" class="headerlink" title="二、命令方式"></a>二、命令方式</h3><h4 id="1-修改防火墙配置"><a href="#1-修改防火墙配置" class="headerlink" title="1. 修改防火墙配置"></a>1. 修改防火墙配置</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cd /etc/sysconfig</span><br><span class="line">vim SuSEfirewall2</span><br></pre></td></tr></table></figure>
+<h3 id="二、命令方式"><a href="#二、命令方式" class="headerlink" title="二、命令方式"></a>二、命令方式</h3><h4 id="1-修改防火墙配置"><a href="#1-修改防火墙配置" class="headerlink" title="1. 修改防火墙配置"></a>1. 修改防火墙配置</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vim /etc/sysconfig/SuSEfirewall2</span><br></pre></td></tr></table></figure>
 <p>在文件中找到FW_SERVICES_EXT_TCP，在其后面加上服务名或者是服务对应的端口，如SSH,FW_SERVICES_EXT_TCP=”ssh” 或 FW_SERVICES_EXT_TCP=”22″<br>如果要开放多个端口则为 FW_SERVICES_EXT_TCP=”22 80 8090″<br>最后，保存退出。</p>
 <h4 id="2-重启防火墙使生效"><a href="#2-重启防火墙使生效" class="headerlink" title="2. 重启防火墙使生效"></a>2. 重启防火墙使生效</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">rcSuSEfirewall2 restart</span><br></pre></td></tr></table></figure>
+<h4 id="3-查看防火墙状态"><a href="#3-查看防火墙状态" class="headerlink" title="3. 查看防火墙状态"></a>3. 查看防火墙状态</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">rcSuSEfirewall2 status</span><br></pre></td></tr></table></figure>
+<h4 id="4-关闭防火墙"><a href="#4-关闭防火墙" class="headerlink" title="4. 关闭防火墙"></a>4. 关闭防火墙</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">systemctl stop SuSEfirewall2.service</span><br></pre></td></tr></table></figure>
+<h4 id="5-取消开机启动防火墙"><a href="#5-取消开机启动防火墙" class="headerlink" title="5. 取消开机启动防火墙"></a>5. 取消开机启动防火墙</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">systemctl disable SuSEfirewall2.service</span><br></pre></td></tr></table></figure>
+<h4 id="6-开启防火墙"><a href="#6-开启防火墙" class="headerlink" title="6. 开启防火墙"></a>6. 开启防火墙</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">systemctl start SuSEfirewall2.service</span><br></pre></td></tr></table></figure>
+<h4 id="7-开机启动防火墙"><a href="#7-开机启动防火墙" class="headerlink" title="7. 开机启动防火墙"></a>7. 开机启动防火墙</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">systemctl enable SuSEfirewall2.service</span><br></pre></td></tr></table></figure>
         </div>
         <div class="post-tool">
             <a class="btn-thumbs-up" href="javascript:void(0);" data-cid="52" title="95">
@@ -178,7 +183,7 @@
 		<p><span class="label">作者</span>
 			<a href="https://yangpiena.coding.me" target="_blank">昜丿捺</a>
 			<span title="最后编辑于&nbsp;2018-02-01">2018-02-01</span>
-			，共 520 字 
+			，共 747 字 
 		</p>		
 		<!-- <p>null</p> -->
 		
