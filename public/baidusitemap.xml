@@ -1,6 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>http://yangpiena.coding.me/2016/11/22/Linux%E5%91%BD%E4%BB%A4%E5%AD%A6%E4%B9%A0/</loc>
+    <lastmod>2019-08-19</lastmod>
+  </url>  <url>
+    <loc>http://yangpiena.coding.me/2018/02/01/Suse-Linux-Enterprise-12-%E9%98%B2%E7%81%AB%E5%A2%99%E5%BC%80%E6%94%BE%E6%9C%8D%E5%8A%A1%E5%8F%8A%E7%AB%AF%E5%8F%A3/</loc>
+    <lastmod>2019-08-19</lastmod>
+  </url>  <url>
     <loc>http://yangpiena.coding.me/2016/12/22/Flex%E4%B9%8BdataGrid%E8%87%AA%E5%8A%A8%E7%94%9F%E6%88%90%E5%BA%8F%E5%8F%B7/</loc>
     <lastmod>2019-07-02</lastmod>
   </url>  <url>
@@ -88,9 +94,6 @@
     <loc>http://yangpiena.coding.me/2019/06/17/Windows%E5%88%A9%E7%94%A8robocopy%E5%91%BD%E4%BB%A4%E5%AE%9E%E7%8E%B0%E6%96%87%E4%BB%B6%E5%90%8C%E6%AD%A5/</loc>
     <lastmod>2019-06-17</lastmod>
   </url>  <url>
-    <loc>http://yangpiena.coding.me/2016/11/22/Linux%E5%91%BD%E4%BB%A4%E5%AD%A6%E4%B9%A0/</loc>
-    <lastmod>2019-03-27</lastmod>
-  </url>  <url>
     <loc>http://yangpiena.coding.me/2016/12/28/Kettle%E4%BD%BF%E7%94%A8%E5%91%BD%E4%BB%A4%E8%A1%8C%E6%9D%A5%E8%BF%90%E8%A1%8C%E6%95%B0%E6%8D%AE%E5%BA%93job/</loc>
     <lastmod>2019-03-22</lastmod>
   </url>  <url>
@@ -122,9 +125,6 @@
     <lastmod>2019-03-22</lastmod>
   </url>  <url>
     <loc>http://yangpiena.coding.me/2018/04/26/VB%E4%B8%8B%E8%BD%BD%E7%BD%91%E9%A1%B5%E6%96%87%E4%BB%B6%E6%88%96%E5%9B%BE%E7%89%87%E7%9A%84%E6%96%B9%E6%B3%95/</loc>
-    <lastmod>2019-03-22</lastmod>
-  </url>  <url>
-    <loc>http://yangpiena.coding.me/2018/02/01/Suse-Linux-Enterprise-12-%E9%98%B2%E7%81%AB%E5%A2%99%E5%BC%80%E6%94%BE%E6%9C%8D%E5%8A%A1%E5%8F%8A%E7%AB%AF%E5%8F%A3/</loc>
     <lastmod>2019-03-22</lastmod>
   </url>  <url>
     <loc>http://yangpiena.coding.me/2017/05/15/Sublime-Text%E5%BF%AB%E6%8D%B7%E9%94%AE/</loc>
