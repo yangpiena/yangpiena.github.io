@@ -26,7 +26,7 @@ description: "记录有用的到的网址"
 
 #### 常用
 [必应在线翻译](https://cn.bing.com/translator/) | [百度翻译](https://fanyi.baidu.com/) | [Google翻译](https://translate.google.cn/?hl=zh-CN&tab=TT) | [百度云](https://pan.baidu.com/) |  [腾讯云](https://cloud.tencent.com/) |  [贴图库](http://www.tietuku.com/)
-[CSDN.NET](http://www.csdn.net/) | [V2EX](https://www.v2ex.com/) | [免费吧](http://www.mianfeib.com/)  |  [老D博客](https://laod.cn/) | [VeryCD 电驴大全](http://www.verycd.com/) | [360doc个人图书馆](http://www.360doc.com/)  |[cnBeta](http://www.cnbeta.com/)    |  [果壳](http://www.guokr.com/)                 |  [少数派](https://sspai.com/)                |  [数字尾巴](http://www.dgtle.com/)
+[CSDN.NET](http://www.csdn.net/) | [V2EX](https://www.v2ex.com/) | [免费吧](http://www.mianfeib.me/)  |  [老D博客](https://laod.cn/) | [VeryCD 电驴大全](http://www.verycd.com/) | [360doc个人图书馆](http://www.360doc.com/)  |[cnBeta](http://www.cnbeta.com/)    |  [果壳](http://www.guokr.com/)                 |  [少数派](https://sspai.com/)                |  [数字尾巴](http://www.dgtle.com/)
 
 #### 音乐
 [听雨](http://rain.xxoojoke.com/) |  [AeKun](https://www.aekun.com/ )  |  [VIP付费音乐解析下载](http://music.zhuolin.wang/)  |  [网易云音乐](http://music.163.com)
@@ -76,6 +76,7 @@ description: "记录有用的到的网址"
 [前端网](http://www.qdfuns.com/) | [LayUI](https://www.layui.com/) | [HeyUI](https://www.heyui.top/) | [HeyUI Admin](https://admin.heyui.top/)
 [10个顶级的CSS UI开源框架](http://www.codeceo.com/article/top-10-css-ui-framework.html) | [Android酷炫实用的开源框架（UI框架）](http://www.runoob.com/w3cnote/android-ui-framework.html) | [后台界面模板](http://www.mycodes.net/154/3.htm)
 [不落阁](http://www.lyblogs.cn/) | [网络培训系统界面设计UI](http://www.th7.cn/Design/ui/201312/199261.shtml) | [公司某项目前端技术积累](http://blog.csdn.net/sunyingyuan/article/details/38237139)
+[H-ui前端框架](http://www.h-ui.net/H-ui.admin.shtml)
 
 #### 数据库
 [SQL Server 2008(R2)支持将数据导出为脚本](http://xcc313.iteye.com/blog/1331468)
@@ -150,6 +151,9 @@ description: "记录有用的到的网址"
 [互联网保险O2O平台微服务架构设计](https://www.cnblogs.com/firstdream/p/6973598.html)
 [微服务架构实践](https://www.cnblogs.com/exceptioneye/p/9334303.html#4025251)
 [微服务架构理解[架构图]](https://blog.csdn.net/bcqtt/article/details/79649296)
+
+#### Everything
+[Everything必知必会搜索教程](https://blog.csdn.net/xiake001/article/details/76094559)
 
 #### Flex
 [Flex下载地址](http://www.adobe.com/support/flashplayer/downloads.html)                                                              |  [查看浏览器FLash版本、Debug Player](http://kb2.adobe.com/cps/155/tn_15507.html)
