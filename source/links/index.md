@@ -5,27 +5,16 @@ date: 2016-11-11 12:31:37
 description: "记录有用的到的网址"
 ---
 <!-- YPN Add 2017-06-20 新增搜索框 -->
-<div class="search-wrapper" style="padding:0em 0em 0em 0em">
-	<form id="search-form" action="https://www.baidu.com/baidu" target="_blank" _lpchecked="1" >
-		<input id="q-btn"  type="submit" name="btnG" value="谷歌一下" class="button2" style="width: 100px;">  <input id="b-word" type="text" name="word" class="input2" size="40" style="width: 70%;">  <input id="b-btn"  type="submit" value="百度几下" class="button button-hook" style="width: 100px;">
+<div class="search-wrapper" style="padding:0em 0em 0em 0em;">
+	<form id="search-form" action="//www.baidu.com/baidu" target="_blank" style="">
+		<input name="q" type="hidden" id="q-word" />
+		<input type="text" id="b-word" name="word" size="40" placeholder="秘迹搜索，安全、聚合百度、360、Bing、搜狗等 | 多吉搜索，侧重于知乎、博客园、CSDN等"/>
+		<input type="submit" id="b-btn" value="百度一下"/> <input id="q-btn" type="submit" value="Google"/> <input id="w-btn" type="submit" value="Bing"/> <input id="m-btn" type="submit" value="秘迹搜索"/> <input id="d-btn" type="submit" value="多吉搜索"/>
 	</form>
-	<script>
-		$('#b-btn, #q-btn').focus(function() {
-			var id = this.id;
-			var urlArr = {
-				'b-btn': 'https://www.baidu.com/baidu',
-				'q-btn': 'https://www.google.com/search'
-			}
-			$('#search-form').attr('action', urlArr[id]);
-		});
-		$('#search-form').on('submit', function() {
-			$('#q-word').val($('#b-word').val());
-		});
-	</script>
 </div>
 
 #### 常用
-[必应在线翻译](https://cn.bing.com/translator/) | [百度翻译](https://fanyi.baidu.com/) | [Google翻译](https://translate.google.cn/?hl=zh-CN&tab=TT) | [百度云](https://pan.baidu.com/) |  [腾讯云](https://cloud.tencent.com/) |  [贴图库](http://www.tietuku.com/)
+[百度翻译](https://fanyi.baidu.com/) | [Google翻译](https://translate.google.cn/?hl=zh-CN&tab=TT) | [必应在线翻译](https://cn.bing.com/translator/) | [百度云](https://pan.baidu.com/) |  [腾讯云](https://cloud.tencent.com/) |  [贴图库](http://www.tietuku.com/) | [拷贝兔](https://cp.anyknew.com/)
 [CSDN.NET](http://www.csdn.net/) | [V2EX](https://www.v2ex.com/) | [免费吧](http://www.mianfeib.me/)  |  [老D博客](https://laod.cn/) | [VeryCD 电驴大全](http://www.verycd.com/) | [360doc个人图书馆](http://www.360doc.com/)  |[cnBeta](http://www.cnbeta.com/)    |  [果壳](http://www.guokr.com/)                 |  [少数派](https://sspai.com/)                |  [数字尾巴](http://www.dgtle.com/)
 
 #### 音乐
@@ -45,12 +34,14 @@ description: "记录有用的到的网址"
 [天气万年历](https://wannianli.tianqi.com/today/zhou/) | [生成随机密码](https://suijimimashengcheng.51240.com/) |[密码强度检测](https://mimaqiangdu.51240.com/)| [在线工具](http://tool.lu/)  |  [在线工具](http://tool.oschina.net/) | [JSON在线解析及格式化验证](http://www.json.cn/)  |  [转换json格式为C#类](http://json2csharp.chahuo.com/)
 [PMD5](http://pmd5.com/#)  |  [输入让你无语的MD5](https://www.somd5.com/)   |  [在线MD5暴力破解](http://www.atool.org/md5-crack.php) | [核心价值编码器](https://sym233.github.io/core-values-encoder/)  |  [核心价值编码器源码](https://github.com/sym233/core-values-encoder)
 [png在线转ico](http://www.easyicon.net/covert/)  |  [MakePic.com 图片制造](http://www.makepic.com/)  |  [草料二维码美化器](http://mh.cli.im/)  |  [在线制作您的Logo](https://www.logaster.cn/)
+[Remove Image Background照片抠图和证件照换底色](https://www.remove.bg/ ) | [waifu2x无损放大图片](http://waifu2x.udp.jp/index.zh-CN.html) | [图片无限变大](http://bigjpg.com/zh)
 [数字绘](https://www.myshuju.net/Home) | [drawio](https://www.draw.io/)
+
 
 #### 系统/软件下载
 [IT之家](https://www.ithome.com/) |  [系统之家](http://www.xitongzhijia.net/) |  [系统天地](http://www.xitongtiandi.net/) |  [Win10专业版官网](http://www.win10zyb.com/)                                                              |  [Win10之家](http://www.xh52.com/)                                                              |  [系统圣地](http://www.285868.com/)
 [黑苹果乐园](https://imac.hk/)	  |  [黑果小兵](https://blog.daliansky.net/)  |  [从零开始的黑苹果安装教程](http://tieba.baidu.com/p/5179866130#)
-[绿盟](http://www.xdowns.com/)    |  [zd423](http://www.zdfans.com/)          |  [行客工作室](http://www.runker.net/) | [金狐维护盘](http://www.jinhu.me/) | [小众软件](https://www.appinn.com/)
+[绿盟](http://www.xdowns.com/)    |  [zd423](http://www.zdfans.com/)          |  [行客工作室](http://www.runker.net/) | [金狐维护盘](http://www.jinhu.me/) | [小众软件](https://www.appinn.com/) | [我爱分享网](http://www.zhanshaoyi.com/rjxz.html)
 [浏览迷](http://liulanmi.com/)    |  [Chrome浏览器插件下载中心](https://www.chromefor.com/) | [FlashPlayer下载地址1](http://get.adobe.com/cn/flashplayer/otherversions/)  |  [FlashPlayer下载地址2](http://www.adobe.com/support/flashplayer/downloads.html)  |  [Debugger Version地址](http://kb2.adobe.com/cps/155/tn_15507.html)
 
 #### 社区
@@ -59,7 +50,9 @@ description: "记录有用的到的网址"
 
 #### 资源
 [MSDN](http://msdn.itellyou.cn/?gytyzs=0z1zl) | [矢量图标库](http://www.iconfont.cn/) | [最好的12个Icon图标资源网站整理分享出来](https://blog.csdn.net/xiawj8957/article/details/45130263)
+[优品PPT](http://www.ypppt.com)
 [Tracker服务器地址1](https://newtrackon.com/) | [Tracker服务器地址2](https://github.com/ngosang/trackerslist)
+[小白盘](https://www.xiaobaipan.com)
 
 #### 文章/教程
 [B/S，C/S，B/S和C/S混合模式的概念区别优缺点及前景分析](http://www.ufidawhy.com/mfufida/613.html) | [一种电子病历系统软件框架思想——B/S与C/S混合架构](http://www.hit180.com/21534.html)
@@ -142,6 +135,7 @@ description: "记录有用的到的网址"
 [各种主流.net混淆加密软件对比:](https://blog.csdn.net/mituan1234567/article/details/89671799)
 [.net反编译的九款神器](https://www.cnblogs.com/zsuxiong/p/5117465.html)
 [C#提升性能"数据库连接打开与关闭"经验分享(附：优化过的DBHelper类) 之配餐系统的开发](https://www.cnblogs.com/know/archive/2011/03/10/1979751.html)
+[winform 导出 Excel](https://blog.csdn.net/MrBaymax/article/details/88049852)
 
 #### Eclipse
 [eclipse安装lombok插件](https://blog.csdn.net/qq_25646191/article/details/79639633)
@@ -202,6 +196,7 @@ description: "记录有用的到的网址"
 #### Idea
 [IntelliJ IDEA 注册码](http://idea.lanyus.com/)
 [IntelliJ IDEA 使用教程(2019图文版) ——从入门到上瘾](https://blog.csdn.net/qq_39507276/article/details/87875508)
+[IntelliJ IDEA 超实用使用技巧分享](https://blog.csdn.net/weixin_38405253/article/details/102583954)
 
 #### Java
 [SSM框架——详细整合教程（Spring+SpringMVC+MyBatis）](http://blog.csdn.net/zhshulin/article/details/37956105)
@@ -224,6 +219,7 @@ description: "记录有用的到的网址"
 [Kettle的一些常见问题](http://blog.csdn.net/iquicksandi/article/details/7635031)                                                                |  [Kettle连接数据库超时的参数设置](http://www.ukettle.org/thread-502-1-4.html)
 
 #### Linux
+[一份 Linux 基础命令使用清单](https://blog.csdn.net/z694644032/article/details/97620078)
 [对 Linux 新手非常有用的 20 个命令](http://www.oschina.net/translate/useful-linux-commands-for-newbies)
 [linux数据盘，系统盘](http://blog.csdn.net/Truong/article/details/70171661)
 [数据盘分区以及格式化](http://blog.csdn.net/Truong/article/details/70171699)
@@ -233,7 +229,7 @@ description: "记录有用的到的网址"
 [SUSE Linux 系统加固](https://blog.csdn.net/vianoz/article/details/20864323)
 
 #### Markdown
-[Markdown在线编辑](http://www.ctrlshift.net/project/markdowneditor/)  |  [Windows在线markdown工具](https://www.zybuluo.com/mdeditor)
+[Windows在线markdown工具](https://www.zybuluo.com/mdeditor)
 [Markdown 语法 示例 字体 字号 颜色](http://blog.csdn.net/u011419965/article/details/50536937)
 [Markdown支持的语言](http://blog.csdn.net/peng_hong_fu/article/details/52805408)
 
