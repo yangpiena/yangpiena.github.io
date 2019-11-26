@@ -639,7 +639,7 @@ var SimpleCore = {
         SimpleCore.printGreeting();
         SimpleCore.lazyLoadPostsImages();
         SimpleCore.registerESCKeyEvent();
-        SimpleCore.registerFKeyEvent();
+        //SimpleCore.registerFKeyEvent();
         SimpleCore.setDefaultReadingMode();
     },
     goTop: function () {

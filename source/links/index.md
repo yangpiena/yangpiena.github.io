@@ -18,7 +18,7 @@ description: "记录有用的到的网址"
 [CSDN.NET](http://www.csdn.net/) | [V2EX](https://www.v2ex.com/) | [免费吧](http://www.mianfeib.me/)  |  [老D博客](https://laod.cn/) | [VeryCD 电驴大全](http://www.verycd.com/) | [360doc个人图书馆](http://www.360doc.com/)  |[cnBeta](http://www.cnbeta.com/)    |  [果壳](http://www.guokr.com/)                 |  [少数派](https://sspai.com/)                |  [数字尾巴](http://www.dgtle.com/)
 
 #### 音乐
-[听雨](http://rain.xxoojoke.com/) |  [AeKun](https://www.aekun.com/ )  |  [VIP付费音乐解析下载](http://music.zhuolin.wang/)  |  [网易云音乐](http://music.163.com)
+[听雨](http://rain.xxoojoke.com/) |  [AeKun](https://www.aekun.com/ )  |  [VIP付费音乐解析下载](http://music.zhuolin.wang/)  |  [网易云音乐](http://music.163.com) | [音乐磁场](https://www.hifini.com/)
 
 #### 电影
 [全民解析](http://www.qmaile.com/) | [今日影视](http://www.2w2w.tv/) | [天天美剧](http://www.ttmeiju.me/) | [99美剧网](https://www.jjmeiju.com/) | [预告片世界](http://www.yugaopian.cn/)  |  [人人影视字幕](http://www.yyets.com/)
@@ -31,7 +31,8 @@ description: "记录有用的到的网址"
 [it.me](http://www.topit.pro/) | [WallpaperHub](https://wallpaperhub.app/) |  [笔记本桌面壁纸下载](http://bbs.zol.com.cn/nbbbs/d33943.html)
 
 #### 在线工具
-[天气万年历](https://wannianli.tianqi.com/today/zhou/) | [生成随机密码](https://suijimimashengcheng.51240.com/) |[密码强度检测](https://mimaqiangdu.51240.com/)| [在线工具](http://tool.lu/)  |  [在线工具](http://tool.oschina.net/) | [JSON在线解析及格式化验证](http://www.json.cn/)  |  [转换json格式为C#类](http://json2csharp.chahuo.com/)
+[天气万年历](https://wannianli.tianqi.com/today/zhou/) | [生成随机密码](https://suijimimashengcheng.51240.com/) |[密码强度检测](https://mimaqiangdu.51240.com/)
+[独特工具箱](https://www.dute.org/) | [在线工具](http://tool.lu/)  |  [在线工具](http://tool.oschina.net/) | [JSON在线解析及格式化验证](http://www.json.cn/)  |  [转换json格式为C#类](http://json2csharp.chahuo.com/)
 [PMD5](http://pmd5.com/#)  |  [输入让你无语的MD5](https://www.somd5.com/)   |  [在线MD5暴力破解](http://www.atool.org/md5-crack.php) | [核心价值编码器](https://sym233.github.io/core-values-encoder/)  |  [核心价值编码器源码](https://github.com/sym233/core-values-encoder)
 [png在线转ico](http://www.easyicon.net/covert/)  |  [MakePic.com 图片制造](http://www.makepic.com/)  |  [草料二维码美化器](http://mh.cli.im/)  |  [在线制作您的Logo](https://www.logaster.cn/)
 [Remove Image Background照片抠图和证件照换底色](https://www.remove.bg/ ) | [waifu2x无损放大图片](http://waifu2x.udp.jp/index.zh-CN.html) | [图片无限变大](http://bigjpg.com/zh)
@@ -136,6 +137,11 @@ description: "记录有用的到的网址"
 [.net反编译的九款神器](https://www.cnblogs.com/zsuxiong/p/5117465.html)
 [C#提升性能"数据库连接打开与关闭"经验分享(附：优化过的DBHelper类) 之配餐系统的开发](https://www.cnblogs.com/know/archive/2011/03/10/1979751.html)
 [winform 导出 Excel](https://blog.csdn.net/MrBaymax/article/details/88049852)
+[C#快速开发平台(C/S架构+Winform+DevExpress+FastReport)](https://www.cnblogs.com/jonnysun/p/9520716.html)
+[开源DataGridView扩展（1） 扩展支持全选的CheckBox列。](https://www.cnblogs.com/gxjiang/archive/2012/04/27/datagridviewex.html?spm=a2c4e.10696291.0.0.406e19a4BEBjm5)
+[开源DataGridView扩展（5） 简单实现统计行，有更好的方法吗？](https://www.cnblogs.com/gxjiang/archive/2012/05/15/2502345.html?spm=a2c4e.10696291.0.0.e1d819a4BmUXhz)
+[WinForm控件设计：DataGridView的行统计实现](https://www.cnblogs.com/yyj/archive/2010/10/21/1857518.html)
+
 
 #### Eclipse
 [eclipse安装lombok插件](https://blog.csdn.net/qq_25646191/article/details/79639633)
@@ -148,6 +154,10 @@ description: "记录有用的到的网址"
 
 #### Everything
 [Everything必知必会搜索教程](https://blog.csdn.net/xiake001/article/details/76094559)
+
+
+#### Excel
+[Excel中如何批量合并相同内容单元格](http://www.wordlm.com/Excel/wzsj/6765.html)
 
 #### Flex
 [Flex下载地址](http://www.adobe.com/support/flashplayer/downloads.html)                                                              |  [查看浏览器FLash版本、Debug Player](http://kb2.adobe.com/cps/155/tn_15507.html)
@@ -242,6 +252,13 @@ description: "记录有用的到的网址"
 [完美解决SetupFactory 打包后安装出现注册表错误](https://blog.csdn.net/huruyiye_123/article/details/72649777)
 [C#之使用AutoUpdater自动更新客户端](https://www.cnblogs.com/GardenofEden/p/10337744.html)
 
+
+#### SQLite
+[(C#) SQLite数据库连接字符串](https://www.cnblogs.com/waw/p/5667409.html)
+[C#利用System.Data.SQLite实现对SQLite的操作](https://blog.csdn.net/weixin_41732430/article/details/83753628)
+[Sqlite大数据写入性能优化](https://www.cnblogs.com/yisen-code/p/6897524.html)
+
+
 #### Sublime Text
 [Sublime Text 2/3安装使用及常用插件](http://www.cnblogs.com/dudumao/p/4054086.html)
 [Sublime Text PackageControl](https://packagecontrol.io/)
@@ -259,6 +276,11 @@ description: "记录有用的到的网址"
 [VB动态调用类模块中的函数的方法 - CSDN博客](https://blog.csdn.net/keikisou/article/details/50564156)
 [VB几种函数参数传递方法，Variant，数组，Optional，ParamArray](https://blog.csdn.net/whchensir/article/details/52050796)
 [VB调用c++写的Dll的一点总结](https://blog.csdn.net/emma_he/article/details/3023337)
+
+
+#### VBox
+[如何清理Virtualbox虚拟机VDI镜像文件的空间大小](https://blog.csdn.net/LEON1741/article/details/81627176)
+
 
 #### Vue.js
 [Vue.js官网](http://cn.vuejs.org/)
