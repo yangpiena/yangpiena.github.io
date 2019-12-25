@@ -21,8 +21,8 @@ description: "记录有用的到的网址"
 [听雨](http://rain.xxoojoke.com/) |  [AeKun](https://www.aekun.com/ )  |  [VIP付费音乐解析下载](http://music.zhuolin.wang/)  |  [网易云音乐](http://music.163.com) | [音乐磁场](https://www.hifini.com/)
 
 #### 电影
-[全民解析](http://www.qmaile.com/) | [今日影视](http://www.2w2w.tv/) | [天天美剧](http://www.ttmeiju.me/) | [99美剧网](https://www.jjmeiju.com/) | [预告片世界](http://www.yugaopian.cn/)  |  [人人影视字幕](http://www.yyets.com/)
-[BT之家](http://www.btbtt33.com/)   |  [BT之家](http://www.415.net)         |  [BT之家](http://www.btbtt.com)      |  [第二度](https://deardu.com/) | [破晓电影](http://www.poxiao.com) |  [迅雷电影下载](http://www.xlpu.cc/)  |  [快播电影](http://www.bubulai.com/) |  [BT电影天堂](http://www.btbttv.net/)
+[全民解析](http://www.qmaile.com/) | [今日影视](http://www.2w2w.tv/)  | [1090影视](https://1090ys.com/) | [完美看看](https://www.wanmeikk.me/) | [天天美剧](http://www.ttmeiju.me/) | [99美剧网](https://www.jjmeiju.com/) | [预告片世界](http://www.yugaopian.cn/)  |  [人人影视字幕](http://www.yyets.com/)
+[BT之家](http://www.btbtt33.com/)  |  [BT之家](http://www.415.net)    | [BT之家](http://www.btbtt.com)  | [第二度](https://deardu.com/)      | [破晓电影](http://www.poxiao.com) |  [迅雷电影下载](http://www.xlpu.cc/)  |  [快播电影](http://www.bubulai.com/) |  [BT电影天堂](http://www.btbttv.net/)
 
 #### 游戏
 [Chatroulette](http://chatroulette.com/) | [三国杀](http://web.sanguosha.com/)  |  [好蜀门私服](http://www.haosm.com/)
@@ -82,6 +82,10 @@ description: "记录有用的到的网址"
 [不同数据库之间表数据的实时同步-发布与订阅](https://blog.csdn.net/rand_muse/article/details/81326879)
 [Sqlserver 高并发和大数据存储方案](https://www.cnblogs.com/zfthm/p/6271346.html)
 [sqlserver 发布订阅的弊端](https://blog.csdn.net/yangzhawen/article/details/8019921)
+
+
+#### 规则引擎
+[Drools](http://www.drools.org.cn/)
 
 #### Angular
 [AngularJS官网](https://angularjs.org/)                       |  [AngularJS中文官网](https://angular.cn/)                                                              |  [AngularUI官网](http://angular-ui.github.io/)
