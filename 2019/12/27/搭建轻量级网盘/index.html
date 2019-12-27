@@ -24,11 +24,11 @@
 <link rel="shortcut icon" href="/img/avatar/favicon.ico">
 
 
-<title>flash builder常见问题 - 昜丿捺</title>
+<title>搭建轻量级网盘 - 昜丿捺</title>
 
 <meta name="keywords" content="undefined">
 
-<meta name="description " content="整理自YPN">
+<meta name="description " content="没有阳光，沉默而居">
 
     <script type="text/x-mathjax-config">
         MathJax.Hub.Config({
@@ -137,10 +137,10 @@
 <div class="main-inner">
     <article class="post" itemscope="" itemtype="http://schema.org/BlogPosting">
         <div class="post-header">
-            <h2 class="post-title" style="text-align: center">Flash Builder常见问题</h2>
+            <h2 class="post-title" style="text-align: center">搭建轻量级网盘</h2>
 			<div class="post-meta" style="text-align: center">
 				<i class="fa fa-calendar-o"></i>&nbsp;
-				<span title="最后编辑于&nbsp;2016-12-27">2016-12-27</span>
+				<span title="最后编辑于&nbsp;2019-12-27">2019-12-27</span>
 				<!-- YPN Edit 2019-03-25 -->
 				<!-- 您是第&nbsp;<span id="busuanzi_value_page_pv"><i class="fa fa-spinner fa-spin"></i></span>位看到它们的小伙伴 -->
 				&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa fa-eye"></i>&nbsp;
@@ -148,18 +148,15 @@
 			</div>
         </div>
         <div class="post-content markdown-body">
-            <p>以下记录Flash Builder在使用过程中出现的问题和解决方法：<br><a id="more"></a></p>
-<h4 id="1-重新连接“数据-服务”时，出现错误，如“数据类型重复”等问题"><a href="#1-重新连接“数据-服务”时，出现错误，如“数据类型重复”等问题" class="headerlink" title="1. 重新连接“数据/服务”时，出现错误，如“数据类型重复”等问题"></a>1. 重新连接“数据/服务”时，出现错误，如“数据类型重复”等问题</h4><p>此时，只需将数据服务彻底删除干净后再重新连接即可。删除方法：</p>
-<ul>
-<li>删除文件夹services和valueObjects；</li>
-<li>删除xx.fml文件中的数据/服务内容。保留model标签和annotation标签内容，其它全删除。<pre><code>&lt;model xmlns=&quot;http://ns.adobe.com/Fiber/1.0&quot;&gt;
-        &lt;annotation name=&quot;ActionScriptGeneration&quot;&gt;
-        &lt;item name=&quot;FullyQualifyReferences&quot;&gt;true&lt;/item&gt;
-        &lt;/annotation&gt;
-    ...
-&lt;/model&gt;
-</code></pre></li>
-</ul>
+            <h2 id="搭建环境"><a href="#搭建环境" class="headerlink" title="搭建环境"></a>搭建环境</h2><h4 id="1-网盘软件webd"><a href="#1-网盘软件webd" class="headerlink" title="1. 网盘软件webd"></a>1. 网盘软件webd</h4><p>webd 轻量级(self-hosted)自建网盘软件<br>程序仅 60 ~ 90 KB，含 server 端，无其它依赖，速度快资源占用低<br>纯便携软件，解压即用<br>支持 Windows、Linux、OpenWrt、Armbian<br>界面简洁易用，无繁琐设置，支持移动设备<br><a href="https://webd.cf/" target="_blank" rel="noopener">官网地址</a><br><a href="https://webd.cf/latest/" target="_blank" rel="noopener">下载地址</a></p>
+<h4 id="2-服务器"><a href="#2-服务器" class="headerlink" title="2. 服务器"></a>2. 服务器</h4><p>本次使用服务器环境为SUSE Linux Enterprise Server 12。</p>
+<h2 id="搭建步骤"><a href="#搭建步骤" class="headerlink" title="搭建步骤"></a>搭建步骤</h2><h4 id="1-首先设定安装包变量"><a href="#1-首先设定安装包变量" class="headerlink" title="1. 首先设定安装包变量"></a>1. 首先设定安装包变量</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">pkg=webd-linux-x86_64.tar.gz</span><br><span class="line">cd /tmp</span><br><span class="line">wget http://webd.cf/latest/$&#123;pkg&#125;</span><br><span class="line">tar -xzvf $&#123;pkg&#125;</span><br><span class="line">cp -fv webd/webd /usr/bin/</span><br><span class="line">cp -fv webd/webd.conf /etc/</span><br><span class="line">rm -rf /tmp/webd /tmp/$&#123;pkg&#125; # 删除无用的残留文件</span><br></pre></td></tr></table></figure>
+<h4 id="2-假设要把硬盘挂载目录-fileDisk-webdRoot-当作网盘目录"><a href="#2-假设要把硬盘挂载目录-fileDisk-webdRoot-当作网盘目录" class="headerlink" title="2. 假设要把硬盘挂载目录 /fileDisk/webdRoot 当作网盘目录"></a>2. 假设要把硬盘挂载目录 /fileDisk/webdRoot 当作网盘目录</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mkdir -pv mkdir -p /fileDisk/webdRoot/.Trash # 创建回收站文件夹，否则不能删除文件</span><br></pre></td></tr></table></figure>
+<h4 id="3-根据官网-配置文件-环节的说明编辑-etc-webd-conf"><a href="#3-根据官网-配置文件-环节的说明编辑-etc-webd-conf" class="headerlink" title="3. 根据官网 [配置文件] 环节的说明编辑 /etc/webd.conf"></a>3. 根据官网 [配置文件] 环节的说明编辑 /etc/webd.conf</h4><p>设置 Webd.Root 为 /fileDisk/webdRoot 以及设置用户名密码权限等。</p>
+<h4 id="4-修改防火墙配置，添加端口（默认端口9212）"><a href="#4-修改防火墙配置，添加端口（默认端口9212）" class="headerlink" title="4. 修改防火墙配置，添加端口（默认端口9212）"></a>4. 修改防火墙配置，添加端口（默认端口9212）</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">vim /etc/sysconfig/SuSEfirewall2</span><br><span class="line">rcSuSEfirewall2 restart</span><br></pre></td></tr></table></figure>
+<h4 id="5-添加开机脚本-注意不要漏掉引号"><a href="#5-添加开机脚本-注意不要漏掉引号" class="headerlink" title="5. 添加开机脚本, 注意不要漏掉引号"></a>5. 添加开机脚本, 注意不要漏掉引号</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">echo &quot;/usr/bin/webd &amp;&gt;/dev/null &amp;&quot; &gt;&gt; /etc/init.d/boot.local</span><br></pre></td></tr></table></figure>
+<h4 id="6-重启生效"><a href="#6-重启生效" class="headerlink" title="6. 重启生效"></a>6. 重启生效</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">reboot</span><br></pre></td></tr></table></figure>
+<h2 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h2><p>局域网内访问 <a href="http://IP:9212" target="_blank" rel="noopener">http://IP:9212</a> 即可使用。</p>
 
         </div>
         <div class="post-tool">
@@ -170,9 +167,9 @@
         
         <div class="post-tags">标签：
             
-            <a href="/tags/flash-builder/">flash builder</a>
+            <a href="/tags/Linux/">Linux</a>
             
-            <a href="/tags/FAQ/">FAQ</a>
+            <a href="/tags/webd/">webd</a>
             
         </div>
         
@@ -183,8 +180,8 @@
 		</a>
 		<p><span class="label">作者</span>
 			<a href="https://yangpiena.coding.me" target="_blank">昜丿捺</a>
-			<span title="最后编辑于&nbsp;2016-12-27">2016-12-27</span>
-			，共 439 字 
+			<span title="最后编辑于&nbsp;2019-12-27">2019-12-27</span>
+			，共 858 字 
 		</p>		
 		<!-- <p>null</p> -->
 		

@@ -4,6 +4,33 @@
   
     
     <entry>
+      <title>搭建轻量级网盘</title>
+      <link href="/2019/12/27/%E6%90%AD%E5%BB%BA%E8%BD%BB%E9%87%8F%E7%BA%A7%E7%BD%91%E7%9B%98/"/>
+      <url>/2019/12/27/%E6%90%AD%E5%BB%BA%E8%BD%BB%E9%87%8F%E7%BA%A7%E7%BD%91%E7%9B%98/</url>
+      
+        <content type="html"><![CDATA[<h2 id="搭建环境"><a href="#搭建环境" class="headerlink" title="搭建环境"></a>搭建环境</h2><h4 id="1-网盘软件webd"><a href="#1-网盘软件webd" class="headerlink" title="1. 网盘软件webd"></a>1. 网盘软件webd</h4><p>webd 轻量级(self-hosted)自建网盘软件<br>程序仅 60 ~ 90 KB，含 server 端，无其它依赖，速度快资源占用低<br>纯便携软件，解压即用<br>支持 Windows、Linux、OpenWrt、Armbian<br>界面简洁易用，无繁琐设置，支持移动设备<br><a href="https://webd.cf/" target="_blank" rel="noopener">官网地址</a><br><a href="https://webd.cf/latest/" target="_blank" rel="noopener">下载地址</a></p><h4 id="2-服务器"><a href="#2-服务器" class="headerlink" title="2. 服务器"></a>2. 服务器</h4><p>本次使用服务器环境为SUSE Linux Enterprise Server 12。</p><h2 id="搭建步骤"><a href="#搭建步骤" class="headerlink" title="搭建步骤"></a>搭建步骤</h2><h4 id="1-首先设定安装包变量"><a href="#1-首先设定安装包变量" class="headerlink" title="1. 首先设定安装包变量"></a>1. 首先设定安装包变量</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">pkg=webd-linux-x86_64.tar.gz</span><br><span class="line">cd /tmp</span><br><span class="line">wget http://webd.cf/latest/$&#123;pkg&#125;</span><br><span class="line">tar -xzvf $&#123;pkg&#125;</span><br><span class="line">cp -fv webd/webd /usr/bin/</span><br><span class="line">cp -fv webd/webd.conf /etc/</span><br><span class="line">rm -rf /tmp/webd /tmp/$&#123;pkg&#125; # 删除无用的残留文件</span><br></pre></td></tr></table></figure><h4 id="2-假设要把硬盘挂载目录-fileDisk-webdRoot-当作网盘目录"><a href="#2-假设要把硬盘挂载目录-fileDisk-webdRoot-当作网盘目录" class="headerlink" title="2. 假设要把硬盘挂载目录 /fileDisk/webdRoot 当作网盘目录"></a>2. 假设要把硬盘挂载目录 /fileDisk/webdRoot 当作网盘目录</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mkdir -pv mkdir -p /fileDisk/webdRoot/.Trash # 创建回收站文件夹，否则不能删除文件</span><br></pre></td></tr></table></figure><h4 id="3-根据官网-配置文件-环节的说明编辑-etc-webd-conf"><a href="#3-根据官网-配置文件-环节的说明编辑-etc-webd-conf" class="headerlink" title="3. 根据官网 [配置文件] 环节的说明编辑 /etc/webd.conf"></a>3. 根据官网 [配置文件] 环节的说明编辑 /etc/webd.conf</h4><p>设置 Webd.Root 为 /fileDisk/webdRoot 以及设置用户名密码权限等。</p><h4 id="4-修改防火墙配置，添加端口（默认端口9212）"><a href="#4-修改防火墙配置，添加端口（默认端口9212）" class="headerlink" title="4. 修改防火墙配置，添加端口（默认端口9212）"></a>4. 修改防火墙配置，添加端口（默认端口9212）</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">vim /etc/sysconfig/SuSEfirewall2</span><br><span class="line">rcSuSEfirewall2 restart</span><br></pre></td></tr></table></figure><h4 id="5-添加开机脚本-注意不要漏掉引号"><a href="#5-添加开机脚本-注意不要漏掉引号" class="headerlink" title="5. 添加开机脚本, 注意不要漏掉引号"></a>5. 添加开机脚本, 注意不要漏掉引号</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">echo &quot;/usr/bin/webd &amp;&gt;/dev/null &amp;&quot; &gt;&gt; /etc/init.d/boot.local</span><br></pre></td></tr></table></figure><h4 id="6-重启生效"><a href="#6-重启生效" class="headerlink" title="6. 重启生效"></a>6. 重启生效</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">reboot</span><br></pre></td></tr></table></figure><h2 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h2><p>局域网内访问 <a href="http://IP:9212" target="_blank" rel="noopener">http://IP:9212</a> 即可使用。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 技术 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Linux </tag>
+            
+            <tag> webd </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Windows利用robocopy命令实现文件同步</title>
       <link href="/2019/06/17/Windows%E5%88%A9%E7%94%A8robocopy%E5%91%BD%E4%BB%A4%E5%AE%9E%E7%8E%B0%E6%96%87%E4%BB%B6%E5%90%8C%E6%AD%A5/"/>
       <url>/2019/06/17/Windows%E5%88%A9%E7%94%A8robocopy%E5%91%BD%E4%BB%A4%E5%AE%9E%E7%8E%B0%E6%96%87%E4%BB%B6%E5%90%8C%E6%AD%A5/</url>
@@ -878,9 +905,9 @@
       
         <tags>
             
-            <tag> FAQ </tag>
-            
             <tag> flash builder </tag>
+            
+            <tag> FAQ </tag>
             
         </tags>
       
@@ -905,9 +932,9 @@
       
         <tags>
             
-            <tag> flash builder </tag>
-            
             <tag> flex </tag>
+            
+            <tag> flash builder </tag>
             
         </tags>
       
@@ -932,9 +959,9 @@
       
         <tags>
             
-            <tag> flash builder </tag>
-            
             <tag> flex </tag>
+            
+            <tag> flash builder </tag>
             
         </tags>
       
