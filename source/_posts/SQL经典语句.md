@@ -361,7 +361,7 @@ ALTER TABLE dbo.CONTRACTINFO DROP CONSTRAINT FK_CONTRACTINFO_ATTACHMENTDOC
 ## 31. 查找指定数据库表的字段名，类型，注释
 SQL SERVER 2000
 ```sql
-    SELECT sysobjects.name AS 表名, syscolumns.name AS 列名, systypes.name AS 数据类型, syscolumns.length AS 数据长度, CONVERT(char, sysproperties.[value]) AS 注释
+    SELECT sysobjects.name AS 表名, syscolumns.name AS 列名, systypes.name AS 数据类型, syscolumns.length AS 数据长度, sysproperties.[value] AS 注释
       FROM sysproperties
 RIGHT JOIN sysobjects
 INNER JOIN syscolumns ON sysobjects.id    = syscolumns.id
@@ -369,7 +369,7 @@ INNER JOIN systypes   ON syscolumns.xtype = systypes.xtype
                       ON sysproperties.id = syscolumns.id AND sysproperties.smallid = syscolumns.colid
      WHERE (sysobjects.xtype = 'u' OR sysobjects.xtype = 'v')
        AND (systypes.name <> 'sysname')
-       AND CONVERT(char,sysproperties.[value]) <> 'null' --查询注释不为'null'的记录
+       AND sysproperties.[value] IS NOT NULL --查询注释不为 NULL 的记录
        AND (sysobjects.name = '指定数据库表')
   ORDER BY 1, 2;
 ```
@@ -382,7 +382,7 @@ INNER JOIN sys.tables                AS ta ON c.object_id = ta.object_id
 INNER JOIN (SELECT name, system_type_id
               FROM sys.types
              WHERE name <> 'sysname') AS t ON c.system_type_id = t.system_type_id
-     WHERE ta.name = 'xx_sjb'
+     WHERE ta.name = '指定数据库表'
        AND ex.[value] IS NOT NULL
   ORDER BY 1, 2;
 ```
