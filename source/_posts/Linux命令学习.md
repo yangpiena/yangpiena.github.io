@@ -21,14 +21,16 @@ tags: [Linux, 命令]
 | uname -a                                     | 查看内核版本                                                               |
 | lsb_release -a                               | 查看系统版本                                                               |
 | cat /etc/issue                               | 查看系统版本                                                               |
-| cat /etc/redhat-release                      | 查看系统版本（只适合Redhat系）                                             |
+| cat /etc/redhat-release                      | 查看系统版本（适合Redhat系）                                               |
+| cat /etc/*-release                           | 查看系统版本（适合SUSE系）                                                 |
 | getconf LONG_BIT                             | 查看系统位数                                                               |
 | cat /proc/cpuinfo                            | 查看CPU型号                                                                |
 | top                                          | 查看实时CPU使用率                                                          |
 | ps aux&#124;head -1;ps aux&#124;grep -v PID&#124;sort -rn -k +3&#124;head | 查看占用CPU最多的10个进程。head默认取前10行，自定义K行时，在后面跟-K即可 |
 | free -m                                      | 查看内存                                                                   |
 | ps aux&#124;head -1;ps aux&#124;grep -v PID&#124;sort -rn -k +4&#124;head | 查看占用内存最多的10个进程。head默认取前10行，自定义K行时，在后面跟-K即可 |
-| df -l                                        | 查看硬盘空间情况                                                           |
+| fdisk -l                                     | 查看硬盘，可查看未分区和格式化的数据盘                                     |
+| df -h                                        | 查看硬盘空间情况                                                           |
 | du -sh ./*                                   | 查看当前目录下各文件/文件夹的大小                                          |
 | jps                                          | 查看当前所有Java进程pid的命令                                              |
 | kill                                         | 删除执行中的程序或工作                                                     |
@@ -79,6 +81,25 @@ tags: [Linux, 命令]
 | ---------------                              | :---------------                                                           |
 | netstat -apn                                 | 查看所有的进程和端口使用情况                                               |
 | netstat -nptl                                | 查看端口使用情况                                                           |
+| lsof                                         | 查看端口使用情况（openSUSE Leap 15.0），如lsof -i:80                       |
+
+### 防火墙（openSUSE Leap 15.0）
+| 命令                                         						| 说明                                               	|
+| ---------------                              						| :---------------                                      |
+| firewall-cmd --permanent --zone=public --add-service=ssh			| 添加永久的服务                                        |
+| firewall-cmd --permanent --zone=public --add-port=8080-8081/tcp	| 添加永久的端口                                        |
+| firewall-cmd --zone=public --add-port=8080-8081/tcp             	| 添加临时的端口                                        |
+| firewall-cmd --permanent --zone=public --list-ports             	| 查看开启的端口                                        |
+| firewall-cmd --permanent --zone=public --list-services          	| 查看开启的服务                                        |
+| firewall-cmd --reload  											| 重新加载配置（重启加载后才能生效）                    |
+| firewall-cmd --state   											| 查看防火墙运行状态                                    |
+| firewall-cmd --query-service ssh								    |                                                       |
+| firewall-cmd --query-service ftp								    |                                                       |
+| firewall-cmd --query-service http								    |                                                       |
+| firewall-cmd --query-service https				         	    |                                                       |
+| firewall-cmd --list-all      										| 显示当前区域的网卡配置参数、资源、端口以及服务等信息  |
+| service firewalld stop       										| 关闭防火墙                                            |
+| service firewalld start      										| 开户防火墙                                            |
 
 ### vi
 | 命令                                         | 说明                                                                       |
