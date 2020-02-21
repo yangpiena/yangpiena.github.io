@@ -1013,9 +1013,9 @@
       
         <tags>
             
-            <tag> flex </tag>
-            
             <tag> 属性 </tag>
+            
+            <tag> flex </tag>
             
         </tags>
       
@@ -1544,31 +1544,6 @@
     
     
     <entry>
-      <title>Hexo博客搭建记录</title>
-      <link href="/2016/11/09/Hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E8%AE%B0%E5%BD%95/"/>
-      <url>/2016/11/09/Hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E8%AE%B0%E5%BD%95/</url>
-      
-        <content type="html"><![CDATA[<p>个人博客已搭建完成，下面记录一下搭建步骤。<br>搭建步骤主要参考WX_JIN的博文<a href="http://blog.csdn.net/wx_jin/article/details/51027783" target="_blank" rel="noopener">Windows下使用Hexo+GithubPage搭建博客</a>搭建的，感谢WX_JIN的分享。<br><a id="more"></a><br>博客主题来源于<a href="https://github.com/levblanc/hexo-theme-aero-dual" target="_blank" rel="noopener">Aero Dual Hexo Theme</a></p><h5 id="另附其它主题链接："><a href="#另附其它主题链接：" class="headerlink" title="另附其它主题链接："></a>另附其它主题链接：</h5><p>博客主题大全：<a href="https://github.com/hexojs/hexo/wiki/Themes" target="_blank" rel="noopener">https://github.com/hexojs/hexo/wiki/Themes</a><br>Hexo官方主题：<a href="https://hexo.io/themes/" target="_blank" rel="noopener">https://hexo.io/themes/</a></p><h5 id="使用工具"><a href="#使用工具" class="headerlink" title="使用工具"></a>使用工具</h5><ul><li>Node.js  v6.9.1</li><li>Git      v2.10.1</li><li>hexo     v3.2.2</li></ul>]]></content>
-      
-      
-      <categories>
-          
-          <category> 技术 </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> hexo </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>Hexo博客发表Hello World</title>
       <link href="/2016/11/09/Hexo%E5%8D%9A%E5%AE%A2%E5%8F%91%E8%A1%A8hello-world/"/>
       <url>/2016/11/09/Hexo%E5%8D%9A%E5%AE%A2%E5%8F%91%E8%A1%A8hello-world/</url>
@@ -1599,6 +1574,31 @@
       <url>/2016/11/09/%E6%9B%B4%E6%8D%A2%E7%94%B5%E8%84%91%E5%90%8E%E5%A6%82%E4%BD%95%E4%BF%AE%E6%94%B9hexo%E5%8D%9A%E5%AE%A2/</url>
       
         <content type="html"><![CDATA[<h1 id="当重装电脑，或者想在其它电脑上修改博客，可以使用下列步骤："><a href="#当重装电脑，或者想在其它电脑上修改博客，可以使用下列步骤：" class="headerlink" title="当重装电脑，或者想在其它电脑上修改博客，可以使用下列步骤："></a>当重装电脑，或者想在其它电脑上修改博客，可以使用下列步骤：</h1><ol><li>使用git clone git@github.com:yangpiena/yangpiena.github.io.git拷贝仓库（默认分支为source）；</li><li><p>在本地新拷贝的yangpiena.github.io文件夹下通过Git bash依次执行下列指令：</p><pre><code>npm install hexonpm install npm install hexo-deployer-git --save</code></pre><p>（切记不要执行hexo init这条指令，否则会删除.git文件夹）</p></li></ol><blockquote><p>遇到错误时：</p><ol><li>更新npm的源：npm config set registry <a href="https://registry.npm.taobao.org" target="_blank" rel="noopener">https://registry.npm.taobao.org</a></li><li>cmd进入博客当前文件夹路径</li><li>执行 npm install</li><li>执行 hexo server</li><li>执行成功后,再到博客下的git中执行 hexo d /hexo g 发现可以执行成功。</li></ol></blockquote><a id="more"></a>]]></content>
+      
+      
+      <categories>
+          
+          <category> 技术 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> hexo </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Hexo博客搭建记录</title>
+      <link href="/2016/11/09/Hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E8%AE%B0%E5%BD%95/"/>
+      <url>/2016/11/09/Hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E8%AE%B0%E5%BD%95/</url>
+      
+        <content type="html"><![CDATA[<p>个人博客已搭建完成，下面记录一下搭建步骤。<br>搭建步骤主要参考WX_JIN的博文<a href="http://blog.csdn.net/wx_jin/article/details/51027783" target="_blank" rel="noopener">Windows下使用Hexo+GithubPage搭建博客</a>搭建的，感谢WX_JIN的分享。<br><a id="more"></a><br>博客主题来源于<a href="https://github.com/levblanc/hexo-theme-aero-dual" target="_blank" rel="noopener">Aero Dual Hexo Theme</a></p><h5 id="另附其它主题链接："><a href="#另附其它主题链接：" class="headerlink" title="另附其它主题链接："></a>另附其它主题链接：</h5><p>博客主题大全：<a href="https://github.com/hexojs/hexo/wiki/Themes" target="_blank" rel="noopener">https://github.com/hexojs/hexo/wiki/Themes</a><br>Hexo官方主题：<a href="https://hexo.io/themes/" target="_blank" rel="noopener">https://hexo.io/themes/</a></p><h5 id="使用工具"><a href="#使用工具" class="headerlink" title="使用工具"></a>使用工具</h5><ul><li>Node.js  v6.9.1</li><li>Git      v2.10.1</li><li>hexo     v3.2.2</li></ul>]]></content>
       
       
       <categories>
