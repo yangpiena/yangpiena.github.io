@@ -23,17 +23,21 @@ description: "记录有用的到的网址"
 #### 音乐
 [听雨](http://rain.xxoojoke.com/) |  [AeKun](https://www.aekun.com/ )  |  [VIP付费音乐解析下载](http://music.zhuolin.wang/)  |  [网易云音乐](http://music.163.com) | [音乐磁场](https://www.hifini.com/)
 
+
 #### 电影
-[全民解析](http://www.qmaile.com/) | [今日影视](http://www.2w2w.tv/)  | [1090影视](https://1090ys.com/) | [嗨哆咪](https://www.haiduomi.cc)| [完美看看](https://www.wanmeikk.me/) | [天天美剧](http://www.ttmeiju.me/) | [99美剧网](https://www.jjmeiju.com/) | [预告片世界](http://www.yugaopian.cn/)  |  [人人影视字幕](http://www.yyets.com/)
-[BT之家](http://www.btbtt33.com/)  |  [BT之家](http://www.415.net)    | [BT之家](http://www.btbtt.com)  | [第二度](https://deardu.com/)      | [破晓电影](http://www.poxiao.com) |  [迅雷电影下载](http://www.xlpu.cc/)  |  [快播电影](http://www.bubulai.com/) |  [BT电影天堂](http://www.btbttv.net/)
-[U3C3](https://u3c3.com/)
+[全民解析](http://www.qmaile.com/) | [今日影视](http://www.2w2w.tv/)      | [1090影视](https://1090ys.com/) | [嗨哆咪](https://www.haiduomi.cc) | [完美看看](https://www.wanmeikk.me/) 
+[天天美剧](http://www.ttmeiju.me/) | [99美剧网](https://www.jjmeiju.com/) | [美剧粉](http://www.mjf2020.com/)
+[BT之家](http://www.btbtt33.com/)  |  [BT之家](http://www.415.net)        | [BT之家](http://www.btbtt.com)  | [破晓电影](http://www.poxiao.com) | [迅雷电影下载](http://www.xlpu.cc/)  |  [快播电影](http://www.bubulai.com/) |  [BT电影天堂](http://www.btbttv.net/) | [U3C3](https://u3c3.com/)
+[预告片世界](http://www.yugaopian.cn/)  |  [人人影视字幕](http://www.yyets.com/)
 
 
 #### 游戏
 [Chatroulette](http://chatroulette.com/) | [三国杀](http://web.sanguosha.com/)  |  [好蜀门私服](http://www.haosm.com/)
 
+
 #### 美图
 [it.me](http://www.topit.pro/) | [WallpaperHub](https://wallpaperhub.app/) |  [笔记本桌面壁纸下载](http://bbs.zol.com.cn/nbbbs/d33943.html)
+
 
 #### 在线工具
 [天气万年历](https://wannianli.tianqi.com/today/zhou/) | [生成随机密码](https://suijimimashengcheng.51240.com/) |[密码强度检测](https://mimaqiangdu.51240.com/)
@@ -50,15 +54,18 @@ description: "记录有用的到的网址"
 [绿盟](http://www.xdowns.com/)    |  [zd423](http://www.zdfans.com/)          |  [行客工作室](http://www.runker.net/) | [金狐维护盘](http://www.jinhu.me/) | [小众软件](https://www.appinn.com/) | [我爱分享网](http://www.zhanshaoyi.com/rjxz.html)
 [浏览迷](https://liulanmi.com/)    |  [Chrome浏览器插件下载中心](https://www.chromefor.com/) | [FlashPlayer下载地址1](http://get.adobe.com/cn/flashplayer/otherversions/)  |  [FlashPlayer下载地址2](http://www.adobe.com/support/flashplayer/downloads.html)  |  [Debugger Version地址](http://kb2.adobe.com/cps/155/tn_15507.html)
 
+
 #### 社区
 [博客园](http://www.cnblogs.com/cmt/) | [互联网技术图谱](https://techmap.canmeng.net/#) | [开源中国社区](http://www.oschina.net/)| [HTM5中国产业联盟](http://www.html5plus.org/)
 [菜鸟教程](http://www.runoob.com/) | [SQLite 教程](http://www.runoob.com/sqlite/sqlite-tutorial.html) | [channel9](https://channel9.msdn.com/)
+
 
 #### 资源
 [MSDN](http://msdn.itellyou.cn/?gytyzs=0z1zl) | [矢量图标库](http://www.iconfont.cn/) | [最好的12个Icon图标资源网站整理分享出来](https://blog.csdn.net/xiawj8957/article/details/45130263)
 [优品PPT](http://www.ypppt.com)
 [Tracker服务器地址1](https://newtrackon.com/) | [Tracker服务器地址2](https://github.com/ngosang/trackerslist)
 [小白盘](https://www.xiaobaipan.com) | [webd](https://webd.cf/)
+
 
 #### 文章/教程
 [B/S，C/S，B/S和C/S混合模式的概念区别优缺点及前景分析](http://www.ufidawhy.com/mfufida/613.html) | [一种电子病历系统软件框架思想——B/S与C/S混合架构](http://www.hit180.com/21534.html)
@@ -70,12 +77,14 @@ description: "记录有用的到的网址"
 [Flex转型Html学习随笔1——关于Html页面的div布局（上）](http://www.cnblogs.com/momoko8443/p/4302879.html) | [Flex转型Html学习随笔1——关于Html页面的div布局（下）](http://www.cnblogs.com/momoko8443/p/4303829.html)
 [OneAPM 工作两年总结](http://www.ituring.com.cn/article/497377)
 
+
 #### 前端/案例
 [蓝蓝设计](http://www.lanlanwork.com/)
 [前端网](http://www.qdfuns.com/) | [LayUI](https://www.layui.com/) | [HeyUI](https://www.heyui.top/) | [HeyUI Admin](https://admin.heyui.top/)
 [10个顶级的CSS UI开源框架](http://www.codeceo.com/article/top-10-css-ui-framework.html) | [Android酷炫实用的开源框架（UI框架）](http://www.runoob.com/w3cnote/android-ui-framework.html) | [后台界面模板](http://www.mycodes.net/154/3.htm)
 [不落阁](http://www.lyblogs.cn/) | [网络培训系统界面设计UI](http://www.th7.cn/Design/ui/201312/199261.shtml) | [公司某项目前端技术积累](http://blog.csdn.net/sunyingyuan/article/details/38237139)
 [H-ui前端框架](http://www.h-ui.net/H-ui.admin.shtml)
+
 
 #### 数据库
 [SQL Server 2008(R2)支持将数据导出为脚本](http://xcc313.iteye.com/blog/1331468)
@@ -92,6 +101,7 @@ description: "记录有用的到的网址"
 #### 规则引擎
 [Drools](http://www.drools.org.cn/)
 
+
 #### Angular
 [AngularJS官网](https://angularjs.org/)                       |  [AngularJS中文官网](https://angular.cn/)                                                              |  [AngularUI官网](http://angular-ui.github.io/)
 [AngularJS所有版本下载](https://code.angularjs.org/)
@@ -101,9 +111,11 @@ description: "记录有用的到的网址"
 [NgNice站点是由一批AngularJS爱好者发起的，致力于打造一个AngularJS的学习和经验分享平台。](http://www.ngnice.com/)
 [2013年度最强AngularJS资源合集](http://www.iteye.com/news/28651-AngularJS-Google-resource)                                                              |  [20个免费的 AngularJS 资源和开发教程](http://www.html5cn.org/article-9473-1.html)
 
+
 #### C++
 [C#调用C++ dll导出函数提示找不到指定模块](http://www.bubuko.com/infodetail-1761193.html)
 [C#多线程编程](https://www.cnblogs.com/luxiaoxun/p/3280146.html)
+
 
 #### C&#35;
 [C#教程](http://www.runoob.com/csharp/csharp-program-structure.html)
@@ -155,11 +167,13 @@ description: "记录有用的到的网址"
 #### Eclipse
 [eclipse安装lombok插件](https://blog.csdn.net/qq_25646191/article/details/79639633)
 
+
 #### ERP/微服务
 [ERP系统架构](https://www.cnblogs.com/Leo_wl/p/7978014.html#top)
 [互联网保险O2O平台微服务架构设计](https://www.cnblogs.com/firstdream/p/6973598.html)
 [微服务架构实践](https://www.cnblogs.com/exceptioneye/p/9334303.html#4025251)
 [微服务架构理解[架构图]](https://blog.csdn.net/bcqtt/article/details/79649296)
+
 
 #### Everything
 [Everything必知必会搜索教程](https://blog.csdn.net/xiake001/article/details/76094559)
@@ -167,6 +181,7 @@ description: "记录有用的到的网址"
 
 #### Excel
 [Excel中如何批量合并相同内容单元格](http://www.wordlm.com/Excel/wzsj/6765.html)
+
 
 #### Flex
 [Flex下载地址](http://www.adobe.com/support/flashplayer/downloads.html)                                                              |  [查看浏览器FLash版本、Debug Player](http://kb2.adobe.com/cps/155/tn_15507.html)
@@ -179,11 +194,14 @@ description: "记录有用的到的网址"
 [一名优秀的Flex开发者需要知道的10样东西](http://www.cnblogs.com/kakaflex/archive/2010/12/02/1894142.html)
 [Flex 3 AdvancedDataGrid的使用(三)](http://www.cnblogs.com/xuehai/archive/2009/09/26/1574533.html)
 
+
 #### Freemarker
 [Freemarker的基本语法及入门基础](https://www.cnblogs.com/JealousGirl/p/6914122.html)
 
+
 #### fpSpread
 [Spread for Windows Forms高级主题(7)---自定义打印的外观](http://www.cnblogs.com/powertoolsteam/archive/2011/08/22/2149009.html)
+
 
 #### Git
 [常用 Git 命令清单](http://www.ruanyifeng.com/blog/2015/12/git-cheat-sheet.html)
@@ -191,8 +209,10 @@ description: "记录有用的到的网址"
 [推荐！手把手教你使用Git](http://blog.jobbole.com/78960/)
 [Git服务器搭建全过程分步详解](http://developer.51cto.com/art/201507/483448.htm)
 
+
 #### GitHub
 [AutoUpdater.NET](https://github.com/ravibpatel/AutoUpdater.NET)
+
 
 #### Haproxy
 [首页](https://www.haproxy.org/)
@@ -204,6 +224,7 @@ description: "记录有用的到的网址"
 [5月16日发布HAProxy,实现八种负载算法](http://blog.51cto.com/1234567aaa/317891)
 [](https://www.cnblogs.com/qige2017/p/7783402.html)
 
+
 #### Hexo
 [hexo常用命令笔记](https://segmentfault.com/a/1190000002632530)
 [Windows下使用Hexo+GithubPage搭建博客](http://blog.csdn.net/wx_jin/article/details/51027783)
@@ -212,10 +233,12 @@ description: "记录有用的到的网址"
 [Hexo官方主题](https://hexo.io/themes/)                        |  [Hexo主题](https://github.com/hexojs/hexo/wiki/Themes)
 [Hexo博客主题从Jacman切换到NexT.Mist ](http://codepub.cn/2016/03/20/Hexo-blog-theme-switching-from-Jacman-to-NexT-Mist/)
 
+
 #### Idea
 [IntelliJ IDEA 注册码](http://idea.lanyus.com/)
 [IntelliJ IDEA 使用教程(2019图文版) ——从入门到上瘾](https://blog.csdn.net/qq_39507276/article/details/87875508)
 [IntelliJ IDEA 超实用使用技巧分享](https://blog.csdn.net/weixin_38405253/article/details/102583954)
+
 
 #### Java
 [SSM框架——详细整合教程（Spring+SpringMVC+MyBatis）](http://blog.csdn.net/zhshulin/article/details/37956105)
@@ -226,16 +249,19 @@ description: "记录有用的到的网址"
 [编程中国JSP教程和技术资料](http://old.bccn.net/Article/web/jsp/Index.html)
 [【FAQ】org.apache.maven.archiver.MavenArchiver.getManifest错误](http://www.cnblogs.com/asderx/p/6541945.html)
 
+
 #### JQuery
 [jQuery插件库](http://www.jq22.com/)
 [36个引人注目JQuery导航菜单](http://www.cnblogs.com/ywqu/archive/2009/08/15/1546559.html)
 [JQuery DrawSVG](http://leocs.me/jquery-drawsvg/)
+
 
 #### Kettle
 [Kettle官网下载](http://kettle.pentaho.org/)                    |  [Kettle各版本下载](http://sourceforge.net/projects/pentaho/files/Data%20Integration/)
 [Kettle开源社区](http://www.ukettle.org/)
 [Kettle基本概念学习](http://www.cnblogs.com/hapjin/p/4578738.html)    |  [kettle使用命令行来运行ktr和kjb](http://www.cnblogs.com/wxjnew/p/3620792.html)
 [Kettle的一些常见问题](http://blog.csdn.net/iquicksandi/article/details/7635031)                                                                |  [Kettle连接数据库超时的参数设置](http://www.ukettle.org/thread-502-1-4.html)
+
 
 #### Linux
 [一份 Linux 基础命令使用清单](https://blog.csdn.net/z694644032/article/details/97620078)
@@ -247,10 +273,12 @@ description: "记录有用的到的网址"
 [SUSE安装、配置APR和Tomcat-Native](https://blog.csdn.net/ClementAD/article/details/50749597)
 [SUSE Linux 系统加固](https://blog.csdn.net/vianoz/article/details/20864323)
 
+
 #### Markdown
 [Windows在线markdown工具](https://www.zybuluo.com/mdeditor)
 [Markdown 语法 示例 字体 字号 颜色](http://blog.csdn.net/u011419965/article/details/50536937)
 [Markdown支持的语言](http://blog.csdn.net/peng_hong_fu/article/details/52805408)
+
 
 #### Setup Factory
 [安装包制作工具 SetupFactory使用2 API清单](https://www.cnblogs.com/SavionZhang/p/4107761.html)
@@ -273,8 +301,10 @@ description: "记录有用的到的网址"
 [Sublime Text PackageControl](https://packagecontrol.io/)
 [Sublime Text 3 快捷键](https://segmentfault.com/a/1190000002570753)
 
+
 #### SVN
 [apache网站下载](http://subversion.apache.org/packages.html#windows)
+
 
 #### VB
 [VB源码](http://www.codesky.net/vb/)
@@ -295,8 +325,10 @@ description: "记录有用的到的网址"
 [Vue.js官网](http://cn.vuejs.org/)
 [JSFiddle Hello World](https://jsfiddle.net/chrisvfritz/50wL7mdz/)
 
+
 #### Windows
 [robocopy的用法](https://www.cnblogs.com/zhanglei1371/p/6724167.html)
+
 
 #### 民生
 [宁夏人事考试中心](http://www.nxpta.gov.cn/)  |  [宁夏专业技术人员继续教育培训网](http://nxzj.chinahrt.com/)
