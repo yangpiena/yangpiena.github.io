@@ -329,6 +329,7 @@ description: "记录有用的到的网址"
 
 #### Windows
 [robocopy的用法](https://www.cnblogs.com/zhanglei1371/p/6724167.html)
+[WIN10 永久 禁用数字签名的方法](https://www.cnblogs.com/HunterK/p/11556929.html)
 
 
 #### 民生
