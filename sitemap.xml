@@ -2,9 +2,30 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://yangpiena.coding.me/2020/03/01/JavaScript%E5%AE%9E%E7%8E%B0%E9%BB%91%E5%AE%A2%E5%B8%9D%E5%9B%BD%E6%95%B0%E5%AD%97%E9%9B%A8/</loc>
+    
+    <lastmod>2020-02-29T17:16:24.818Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yangpiena.coding.me/2020/02/24/Chrome%E6%B5%8F%E8%A7%88%E5%99%A8%E5%B8%B8%E7%94%A8%E6%8F%92%E4%BB%B6/</loc>
+    
+    <lastmod>2020-02-29T17:11:05.394Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yangpiena.coding.me/asset/hkdgWait6S.html</loc>
+    
+    <lastmod>2020-02-29T16:51:58.263Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://yangpiena.coding.me/links/index.html</loc>
     
-    <lastmod>2020-02-29T15:01:02.917Z</lastmod>
+    <lastmod>2020-02-29T16:46:30.560Z</lastmod>
     
   </url>
   
@@ -16,9 +37,16 @@
   </url>
   
   <url>
-    <loc>http://yangpiena.coding.me/2020/02/24/Chrome%E6%B5%8F%E8%A7%88%E5%99%A8%E5%B8%B8%E7%94%A8%E6%8F%92%E4%BB%B6/</loc>
+    <loc>http://yangpiena.coding.me/asset/hkdg.html</loc>
     
-    <lastmod>2020-02-24T14:15:45.168Z</lastmod>
+    <lastmod>2020-02-08T13:49:30.217Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yangpiena.coding.me/asset/hkdgNumbers.html</loc>
+    
+    <lastmod>2020-02-08T13:16:47.868Z</lastmod>
     
   </url>
   
@@ -254,20 +282,6 @@
   </url>
   
   <url>
-    <loc>http://yangpiena.coding.me/help/index.html</loc>
-    
-    <lastmod>2019-03-25T02:24:18.274Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://yangpiena.coding.me/about/index.html</loc>
-    
-    <lastmod>2019-03-25T01:13:18.864Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://yangpiena.coding.me/404.html</loc>
     
     <lastmod>2019-03-25T01:11:04.523Z</lastmod>
@@ -488,13 +502,6 @@
     <loc>http://yangpiena.coding.me/2018/12/19/Git%E4%B8%8B%E8%BD%BD%E5%AE%89%E8%A3%85/</loc>
     
     <lastmod>2019-03-22T15:41:36.722Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://yangpiena.coding.me/timeline/index.html</loc>
-    
-    <lastmod>2019-03-22T08:44:03.296Z</lastmod>
     
   </url>
   
