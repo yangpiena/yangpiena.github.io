@@ -1,16 +1,25 @@
 ---
 layout: links
-title: 收藏夹
+title: 
 date: 2016-11-11 12:31:37
 description: "记录有用的到的网址"
 ---
 <!-- YPN Add 2017-06-20 新增搜索框 -->
-<div class="search-wrapper" style="padding:0em 0em 0em 0em;">
+<div class="search-wrapper" style="padding: 0em 0em 0em 0em;">
+	<p align="center" style="margin-top: -150px;margin-left: 0">
 	<form id="search-form" action="//www.baidu.com/baidu" target="_blank" style="">
 		<input name="q" type="hidden" id="q-word" />
-		<input type="text" id="b-word" name="word" size="40" placeholder="秘迹搜索，安全、聚合百度、360、Bing、搜狗等 | 多吉搜索，侧重于知乎、博客园、CSDN等"/>
-		<input type="submit" id="b-btn" value="百度一下"/> <input id="q-btn" type="submit" value="Google"/> <input id="w-btn" type="submit" value="Bing"/> <input id="m-btn" type="submit" value="秘迹搜索"/> <input id="d-btn" type="submit" value="多吉搜索"/>
+		<input type="text" id="b-word" name="word" size="40" placeholder="秘迹搜索：安全、聚合百度、360、Bing、搜狗等 | 多吉搜索：侧重于知乎、博客园、CSDN等" style="margin-bottom: 1.3px"/>
+		<input type="submit" id="b-btn" class="btn-edge" value="百度一下"/> <input id="q-btn" class="btn-edge" type="submit" value="Google"/> <input id="w-btn" class="btn-edge" type="submit" value="Bing"/> <input id="m-btn" class="btn-edge" type="submit" value="秘迹搜索"/> <input id="d-btn" class="btn-edge" type="submit" value="多吉搜索"/>
 	</form>
+</div>
+
+
+#### 新闻
+<!-- YPN Add 2020-02-29 新增滚动新闻 -->
+<div>
+	<p align="center" style="margin-top: -61.3px;margin-left: 0">
+	<iframe frameborder="0" width="100%" height="210" scrolling="auto" src="https://www.jin10.com/example/jin10.com.html?fontSize=14px&theme=white"></iframe>
 </div>
 
 
@@ -18,7 +27,7 @@ description: "记录有用的到的网址"
 [百度翻译](https://fanyi.baidu.com/) | [Google翻译](https://translate.google.cn/?hl=zh-CN&tab=TT) | [必应在线翻译](https://cn.bing.com/translator/) | [百度云](https://pan.baidu.com/) |  [腾讯云](https://cloud.tencent.com/) |  [贴图库](http://www.tietuku.com/) | [拷贝兔](https://cp.anyknew.com/)
 [CSDN.NET](http://www.csdn.net/)  | [V2EX](https://www.v2ex.com/) | [免费吧](http://www.mianfeib.me/)  |  [老D博客](https://laod.cn/) | [VeryCD 电驴大全](http://www.verycd.com/) | [360doc个人图书馆](http://www.360doc.com/)  |[cnBeta](http://www.cnbeta.com/)    |  [果壳](http://www.guokr.com/)                 |  [少数派](https://sspai.com/)                |  [数字尾巴](http://www.dgtle.com/)
 [今日热榜](https://tophub.today/) | [果汁排行榜](http://guozhivip.com/rank/) | [AnyKnew](https://www.anyknew.com/#/) | [科塔学术导航](https://site.sciping.com/) | [金十数据](https://www.jin10.com/) | [手机抢购网](http://www.qianggou5.com/price/) | [医学微视](https://www.mvyxws.com/) | [药房网](https://www.yaofangwang.com/) | [WikiHow](https://zh.wikihow.com/%E9%A6%96%E9%A1%B5)
-[希赛网](https://www.educity.cn/) | 
+[希赛网](https://www.educity.cn/)
 
 
 #### 音乐
@@ -28,7 +37,7 @@ description: "记录有用的到的网址"
 #### 电影
 [全民解析](http://www.qmaile.com/) | [今日影视](http://www.2w2w.tv/)      | [1090影视](https://1090ys.com/) | [嗨哆咪](https://www.haiduomi.cc) | [完美看看](https://www.wanmeikk.me/) 
 [天天美剧](http://www.ttmeiju.me/) | [99美剧网](https://www.jjmeiju.com/) | [美剧粉](http://www.mjf2020.com/)
-[BT之家](https://www.415.net)      | [BT之家](https://www.btbtt.com)      | [破晓电影](http://www.poxiao.com) | [迅雷电影下载](http://www.xlpu.cc/)  |  [快播电影](http://www.bubulai.com/) |  [BT电影天堂](http://www.btbttv.net/) | [U3C3](https://u3c3.com/)
+[BT之家](https://www.415.net)      | [BT之家](https://www.btjia.com)      | [BT之家](https://www.btbtt.com) | [破晓电影](http://www.poxiao.com) | [迅雷电影下载](http://www.xlpu.cc/)  |  [快播电影](http://www.bubulai.com/) |  [BT电影天堂](http://www.btbttv.net/) | [U3C3](https://u3c3.com/)
 [预告片世界](http://www.yugaopian.cn/)  |  [人人影视字幕](http://www.yyets.com/)
 
 
@@ -47,6 +56,7 @@ description: "记录有用的到的网址"
 [png在线转ico](http://www.easyicon.net/covert/)  |  [MakePic.com 图片制造](http://www.makepic.com/)  |  [草料二维码美化器](http://mh.cli.im/)  |  [在线制作您的Logo](https://www.logaster.cn/)
 [Remove Image Background照片抠图和证件照换底色](https://www.remove.bg/ ) | [waifu2x无损放大图片](http://waifu2x.udp.jp/index.zh-CN.html) | [图片无限变大](http://bigjpg.com/zh)
 [数字绘](https://www.myshuju.net/Home) | [drawio](https://www.draw.io/)
+[双拼练习](https://api.ihint.me/shuang/)
 
 
 #### 系统/软件下载
@@ -336,3 +346,16 @@ description: "记录有用的到的网址"
 [宁夏人事考试中心](http://www.nxpta.gov.cn/)  |  [宁夏专业技术人员继续教育培训网](http://nxzj.chinahrt.com/)
 [宁夏人力资源和社会保障网上服务大厅](http://www.12333nx.gov.cn/nxwsrs/personlogin)
 [宁夏回族自治区专业技术人员服务平台——个人职称申报登录窗口](http://124.224.239.164:8088/)
+
+<style class="btn-styles">       
+        .btn-edge
+        {
+            cursor: pointer;
+            padding: 5px 20px;
+        }
+        .btn-edge:hover
+        {
+			color: #FFF;
+            background-color: #3385FF;
+        }
+</style>
