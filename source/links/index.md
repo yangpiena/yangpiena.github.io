@@ -18,7 +18,7 @@ description: "记录有用的到的网址"
 #### 新闻
 <!-- YPN Add 2020-02-29 新增滚动新闻 -->
 <div>
-	<p align="center" style="margin-top: -61.3px;margin-left: 0">
+	<p align="center" style="margin-top: -65px;margin-left: 0">
 	<iframe frameborder="0" width="100%" height="210" scrolling="auto" src="https://www.jin10.com/example/jin10.com.html?fontSize=14px&theme=white"></iframe>
 </div>
 
@@ -346,6 +346,7 @@ description: "记录有用的到的网址"
 [宁夏人事考试中心](http://www.nxpta.gov.cn/)  |  [宁夏专业技术人员继续教育培训网](http://nxzj.chinahrt.com/)
 [宁夏人力资源和社会保障网上服务大厅](http://www.12333nx.gov.cn/nxwsrs/personlogin)
 [宁夏回族自治区专业技术人员服务平台——个人职称申报登录窗口](http://124.224.239.164:8088/)
+
 
 <style class="btn-styles">       
         .btn-edge

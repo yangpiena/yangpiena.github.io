@@ -4,11 +4,30 @@
   
     
     <entry>
+      <title>JavaScript实现黑客帝国数字雨</title>
+      <link href="/2020/03/01/JavaScript%E5%AE%9E%E7%8E%B0%E9%BB%91%E5%AE%A2%E5%B8%9D%E5%9B%BD%E6%95%B0%E5%AD%97%E9%9B%A8/"/>
+      <url>/2020/03/01/JavaScript%E5%AE%9E%E7%8E%B0%E9%BB%91%E5%AE%A2%E5%B8%9D%E5%9B%BD%E6%95%B0%E5%AD%97%E9%9B%A8/</url>
+      
+        <content type="html"><![CDATA[<ul><li><p><a href="/asset/hkdg.html">黑客帝国数字雨</a></p></li><li><p><a href="/asset/hkdgNumbers.html">黑客帝国数字雨（纯数字）</a></p></li><li><p><a href="/asset/hkdgWait6S.html">黑客帝国数字雨（页面静止不动6S后自动播放）</a></p></li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> 技术 </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Chrome浏览器常用插件</title>
       <link href="/2020/02/24/Chrome%E6%B5%8F%E8%A7%88%E5%99%A8%E5%B8%B8%E7%94%A8%E6%8F%92%E4%BB%B6/"/>
       <url>/2020/02/24/Chrome%E6%B5%8F%E8%A7%88%E5%99%A8%E5%B8%B8%E7%94%A8%E6%8F%92%E4%BB%B6/</url>
       
-        <content type="html"><![CDATA[<h4 id="广告过滤"><a href="#广告过滤" class="headerlink" title="广告过滤"></a>广告过滤</h4><p>uBlock Origin</p>]]></content>
+        <content type="html"><![CDATA[<ul><li>广告过滤<br>uBlock Origin</li></ul><ul><li>鼠标控制<br>CrxMouse</li></ul>]]></content>
       
       
       <categories>
@@ -930,9 +949,9 @@
       
         <tags>
             
-            <tag> FAQ </tag>
-            
             <tag> flash builder </tag>
+            
+            <tag> FAQ </tag>
             
         </tags>
       
@@ -957,9 +976,9 @@
       
         <tags>
             
-            <tag> flash builder </tag>
-            
             <tag> flex </tag>
+            
+            <tag> flash builder </tag>
             
         </tags>
       
@@ -984,9 +1003,9 @@
       
         <tags>
             
-            <tag> flash builder </tag>
-            
             <tag> flex </tag>
+            
+            <tag> flash builder </tag>
             
         </tags>
       
@@ -1594,11 +1613,11 @@
     
     
     <entry>
-      <title>更换电脑后如何修改Hexo博客</title>
-      <link href="/2016/11/09/%E6%9B%B4%E6%8D%A2%E7%94%B5%E8%84%91%E5%90%8E%E5%A6%82%E4%BD%95%E4%BF%AE%E6%94%B9hexo%E5%8D%9A%E5%AE%A2/"/>
-      <url>/2016/11/09/%E6%9B%B4%E6%8D%A2%E7%94%B5%E8%84%91%E5%90%8E%E5%A6%82%E4%BD%95%E4%BF%AE%E6%94%B9hexo%E5%8D%9A%E5%AE%A2/</url>
+      <title>Hexo博客发表Hello World</title>
+      <link href="/2016/11/09/Hexo%E5%8D%9A%E5%AE%A2%E5%8F%91%E8%A1%A8hello-world/"/>
+      <url>/2016/11/09/Hexo%E5%8D%9A%E5%AE%A2%E5%8F%91%E8%A1%A8hello-world/</url>
       
-        <content type="html"><![CDATA[<h1 id="当重装电脑，或者想在其它电脑上修改博客，可以使用下列步骤："><a href="#当重装电脑，或者想在其它电脑上修改博客，可以使用下列步骤：" class="headerlink" title="当重装电脑，或者想在其它电脑上修改博客，可以使用下列步骤："></a>当重装电脑，或者想在其它电脑上修改博客，可以使用下列步骤：</h1><ol><li>使用git clone git@github.com:yangpiena/yangpiena.github.io.git拷贝仓库（默认分支为source）；</li><li><p>在本地新拷贝的yangpiena.github.io文件夹下通过Git bash依次执行下列指令：</p><pre><code>npm install hexonpm install npm install hexo-deployer-git --save</code></pre><p>（切记不要执行hexo init这条指令，否则会删除.git文件夹）</p></li></ol><blockquote><p>遇到错误时：</p><ol><li>更新npm的源：npm config set registry <a href="https://registry.npm.taobao.org" target="_blank" rel="noopener">https://registry.npm.taobao.org</a></li><li>cmd进入博客当前文件夹路径</li><li>执行 npm install</li><li>执行 hexo server</li><li>执行成功后,再到博客下的git中执行 hexo d /hexo g 发现可以执行成功。</li></ol></blockquote><a id="more"></a>]]></content>
+        <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a><br><a id="more"></a></p>]]></content>
       
       
       <categories>
@@ -1619,11 +1638,11 @@
     
     
     <entry>
-      <title>Hexo博客发表Hello World</title>
-      <link href="/2016/11/09/Hexo%E5%8D%9A%E5%AE%A2%E5%8F%91%E8%A1%A8hello-world/"/>
-      <url>/2016/11/09/Hexo%E5%8D%9A%E5%AE%A2%E5%8F%91%E8%A1%A8hello-world/</url>
+      <title>更换电脑后如何修改Hexo博客</title>
+      <link href="/2016/11/09/%E6%9B%B4%E6%8D%A2%E7%94%B5%E8%84%91%E5%90%8E%E5%A6%82%E4%BD%95%E4%BF%AE%E6%94%B9hexo%E5%8D%9A%E5%AE%A2/"/>
+      <url>/2016/11/09/%E6%9B%B4%E6%8D%A2%E7%94%B5%E8%84%91%E5%90%8E%E5%A6%82%E4%BD%95%E4%BF%AE%E6%94%B9hexo%E5%8D%9A%E5%AE%A2/</url>
       
-        <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a><br><a id="more"></a></p>]]></content>
+        <content type="html"><![CDATA[<h1 id="当重装电脑，或者想在其它电脑上修改博客，可以使用下列步骤："><a href="#当重装电脑，或者想在其它电脑上修改博客，可以使用下列步骤：" class="headerlink" title="当重装电脑，或者想在其它电脑上修改博客，可以使用下列步骤："></a>当重装电脑，或者想在其它电脑上修改博客，可以使用下列步骤：</h1><ol><li>使用git clone git@github.com:yangpiena/yangpiena.github.io.git拷贝仓库（默认分支为source）；</li><li><p>在本地新拷贝的yangpiena.github.io文件夹下通过Git bash依次执行下列指令：</p><pre><code>npm install hexonpm install npm install hexo-deployer-git --save</code></pre><p>（切记不要执行hexo init这条指令，否则会删除.git文件夹）</p></li></ol><blockquote><p>遇到错误时：</p><ol><li>更新npm的源：npm config set registry <a href="https://registry.npm.taobao.org" target="_blank" rel="noopener">https://registry.npm.taobao.org</a></li><li>cmd进入博客当前文件夹路径</li><li>执行 npm install</li><li>执行 hexo server</li><li>执行成功后,再到博客下的git中执行 hexo d /hexo g 发现可以执行成功。</li></ol></blockquote><a id="more"></a>]]></content>
       
       
       <categories>

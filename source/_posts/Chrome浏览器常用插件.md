@@ -8,5 +8,9 @@ authorDesc:
 tags: Chrome
 description:
 ---
-#### 广告过滤
+- 广告过滤
 uBlock Origin
+
+
+- 鼠标控制
+CrxMouse
