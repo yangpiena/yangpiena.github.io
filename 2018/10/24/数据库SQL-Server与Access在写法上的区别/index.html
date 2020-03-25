@@ -161,12 +161,12 @@
 <p>SQL Server<br><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">CONVERT(VARCHAR(20),GETDATE(),23)</span><br><span class="line">CONVERT(VARCHAR(20),GETDATE(),120)</span><br></pre></td></tr></table></figure></p>
 <h3 id="7-参数化更新或新增数据时，SQl-语句中的字段顺序需与参数列表的顺序保持一致"><a href="#7-参数化更新或新增数据时，SQl-语句中的字段顺序需与参数列表的顺序保持一致" class="headerlink" title="7. 参数化更新或新增数据时，SQl 语句中的字段顺序需与参数列表的顺序保持一致"></a>7. 参数化更新或新增数据时，SQl 语句中的字段顺序需与参数列表的顺序保持一致</h3><p>如更新SQL：<br><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">UPDATE</span> 表 <span class="keyword">SET</span> <span class="keyword">Name</span> = @<span class="keyword">Name</span>, Age = @Age <span class="keyword">WHERE</span> <span class="keyword">ID</span> = @<span class="keyword">ID</span></span><br></pre></td></tr></table></figure></p>
 <p>则参数必须定义为：</p>
-<pre><code>OleDbParameter[] param = new OleDbParameter
-{
-    new OleDbParameter(&quot;@Name&quot;, model.Name),
-    new OleDbParameter(&quot;@Age&quot;, model.Age),
-    new OleDbParameter(&quot;@ID&quot;, model.ID), 
- }
+<pre><code>  OleDbParameter[] param = new OleDbParameter
+  {
+      new OleDbParameter(&quot;@Name&quot;, model.Name),
+      new OleDbParameter(&quot;@Age&quot;, model.Age),
+      new OleDbParameter(&quot;@ID&quot;, model.ID), 
+   }
 </code></pre><h3 id="8-Access类似于SQL-Server的函数ISNULL"><a href="#8-Access类似于SQL-Server的函数ISNULL" class="headerlink" title="8. Access类似于SQL Server的函数ISNULL()"></a>8. Access类似于SQL Server的函数ISNULL()</h3><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">IIF(IsA = '' OR IsA IS NULL, '', IsA)</span><br></pre></td></tr></table></figure>
 <h3 id="9-Access创建表或添加列时，必须附带默认约束（Defualt）"><a href="#9-Access创建表或添加列时，必须附带默认约束（Defualt）" class="headerlink" title="9. Access创建表或添加列时，必须附带默认约束（Defualt）"></a>9. Access创建表或添加列时，必须附带默认约束（Defualt）</h3><h3 id="10-Access创建新列时，如果未添加默认约束，在采用内置函数STR-A-查询时会显示null值"><a href="#10-Access创建新列时，如果未添加默认约束，在采用内置函数STR-A-查询时会显示null值" class="headerlink" title="10. Access创建新列时，如果未添加默认约束，在采用内置函数STR(A)查询时会显示null值"></a>10. Access创建新列时，如果未添加默认约束，在采用内置函数STR(A)查询时会显示null值</h3><p>如下：<br><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">ALTER</span> <span class="keyword">TABLE</span> 表 <span class="keyword">ADD</span> A <span class="built_in">VARCHAR</span>(<span class="number">23</span>)</span><br><span class="line"><span class="keyword">SELECT</span> <span class="keyword">IIF</span>(<span class="keyword">STR</span>(A) <span class="keyword">IS</span> <span class="literal">NULL</span>, <span class="string">'空'</span>, <span class="string">'非空'</span>) <span class="keyword">FROM</span> 表</span><br></pre></td></tr></table></figure></p>
 <h3 id="11-当表从Access数据库导入到SQL-Server中时，原表中的自增长列会丢失，需要重新建立自增长标识。"><a href="#11-当表从Access数据库导入到SQL-Server中时，原表中的自增长列会丢失，需要重新建立自增长标识。" class="headerlink" title="11. 当表从Access数据库导入到SQL Server中时，原表中的自增长列会丢失，需要重新建立自增长标识。"></a>11. 当表从Access数据库导入到SQL Server中时，原表中的自增长列会丢失，需要重新建立自增长标识。</h3><h3 id="12-当表从Access数据库导入到SQL-Server中时，Access的数据如果存在密码，则以独立的方式清空Access原设置的密码即可。"><a href="#12-当表从Access数据库导入到SQL-Server中时，Access的数据如果存在密码，则以独立的方式清空Access原设置的密码即可。" class="headerlink" title="12. 当表从Access数据库导入到SQL Server中时，Access的数据如果存在密码，则以独立的方式清空Access原设置的密码即可。"></a>12. 当表从Access数据库导入到SQL Server中时，Access的数据如果存在密码，则以独立的方式清空Access原设置的密码即可。</h3><h3 id="13-多表关联查询"><a href="#13-多表关联查询" class="headerlink" title="13. 多表关联查询"></a>13. 多表关联查询</h3><p>Access（可理解为始终是两表间的操作）<br><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> * <span class="keyword">FROM</span>  (A <span class="keyword">INNER</span> <span class="keyword">JOIN</span> B <span class="keyword">ON</span> A.ID = B.ID ) <span class="keyword">INNER</span> <span class="keyword">JOIN</span> C <span class="keyword">ON</span> B.ID = C.ID;</span><br><span class="line"><span class="keyword">SELECT</span> * <span class="keyword">FROM</span> ((A <span class="keyword">INNER</span> <span class="keyword">JOIN</span> B <span class="keyword">ON</span> A.ID = B.ID ) <span class="keyword">INNER</span> <span class="keyword">JOIN</span> C <span class="keyword">ON</span> B.ID = C.ID) <span class="keyword">INNER</span> <span class="keyword">JOIN</span> D <span class="keyword">ON</span> C.ID = D.ID;</span><br></pre></td></tr></table></figure></p>
@@ -197,7 +197,7 @@
 		<p><span class="label">作者</span>
 			<a href="https://yangpiena.coding.me" target="_blank">昜丿捺</a>
 			<span title="最后编辑于&nbsp;2018-10-24">2018-10-24</span>
-			，共 1858 字 
+			，共 1870 字 
 		</p>		
 		<!-- <p>null</p> -->
 		
@@ -443,5 +443,21 @@
         
     });
 </script>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<!-- <script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script> -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script>
 <script src="/live2dw/lib/L2Dwidget.min.js?0c58a1486de42ac6cc1c59c7d98ae887"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"log":false,"model":{"jsonPath":"/live2dw/assets/hijiki.model.json"},"display":{"position":"right","width":70,"height":90,"hOffset":-37,"vOffset":-20},"mobile":{"show":false}});</script></body>
 </html>

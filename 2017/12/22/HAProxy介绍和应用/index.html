@@ -236,19 +236,19 @@ option forwardfor except 127.0.0.1
 </code></pre><h5 id="HAProxy实现会话保持"><a href="#HAProxy实现会话保持" class="headerlink" title="HAProxy实现会话保持"></a>HAProxy实现会话保持</h5><ol>
 <li><p>源地址hash（用户IP识别）Haroxy 将用户IP经过hash计算后 指定到固定的真实服务器上（类似于nginx的IP hash 指令）。<br>缺点：当后端一台服务器挂了以后会造成部分session丢失</p>
 <p> backend SOURCE_srv</p>
-<pre><code>mode    http
-balance source
-server  app-node1 10.31.1.179:80 check port 80 inter 3000 rise 3 fall 3
-server  app-node2 10.31.1.191:80 check port 80 inter 3000 rise 3 fall 3
-server  app-node3 10.31.0.35:80 check port 80 inter 3000 rise 3 fall 3
+<pre><code>     mode    http
+     balance source
+     server  app-node1 10.31.1.179:80 check port 80 inter 3000 rise 3 fall 3
+     server  app-node2 10.31.1.191:80 check port 80 inter 3000 rise 3 fall 3
+     server  app-node3 10.31.0.35:80 check port 80 inter 3000 rise 3 fall 3
 </code></pre></li>
 <li><p>cookie 识别 HAProxy 将WEB服务端返回给客户端的cookie中插入HAProxy中特定的字符串(或添加前缀)在后端的服务器COOKIE ID。</p>
 <p> backend COOKIE_srv</p>
-<pre><code>mode   http
-cookie SERVERID insert indirect nocache
-server app-node1 10.31.1.179:80 check port 80 cookie a inter 3000 rise 3 fall 3
-server app-node2 10.31.1.191:80 check port 80 cookie b inter 3000 rise 3 fall 3
-server app-node3 10.31.0.251:80 check port 80 cookie c inter 3000 rise 3 fall 3
+<pre><code>     mode   http
+     cookie SERVERID insert indirect nocache
+     server app-node1 10.31.1.179:80 check port 80 cookie a inter 3000 rise 3 fall 3
+     server app-node2 10.31.1.191:80 check port 80 cookie b inter 3000 rise 3 fall 3
+     server app-node3 10.31.0.251:80 check port 80 cookie c inter 3000 rise 3 fall 3
 </code></pre><p>在LB1上配置好HAProxy后，LB1将接受用户的所有请求。如果一个用户请求不包含任何cookie，那这个请求将被HAProxy转发到一台可用的WEB服务器。可能是webA,webB，webC。然后HAProxy将把处理这个请求的WEB服务器的cookie值插入到请求响应中。如SERVERID=A。当这个客户端再次访问 并在HTTP请求头中带有SERVERID=A,HAProxy将会把它的请求直接转发给webA处理。在请求到达 webA之前，cookie将被移除，webA将不会看到这个cookie。如果webA不可用，对应的请求将被转发到其他可用的WEB服务器，相应的cookie值也将被重新设置。</p>
 </li>
 </ol>
@@ -275,7 +275,7 @@ server app-node3 10.31.0.251:80 check port 80 cookie c inter 3000 rise 3 fall 3
 		<p><span class="label">作者</span>
 			<a href="https://yangpiena.coding.me" target="_blank">昜丿捺</a>
 			<span title="最后编辑于&nbsp;2017-12-22">2017-12-22</span>
-			，共 4578 字 
+			，共 4628 字 
 		</p>		
 		<!-- <p>null</p> -->
 		
@@ -521,5 +521,21 @@ server app-node3 10.31.0.251:80 check port 80 cookie c inter 3000 rise 3 fall 3
         
     });
 </script>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<!-- <script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script> -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script>
 <script src="/live2dw/lib/L2Dwidget.min.js?0c58a1486de42ac6cc1c59c7d98ae887"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"log":false,"model":{"jsonPath":"/live2dw/assets/hijiki.model.json"},"display":{"position":"right","width":70,"height":90,"hOffset":-37,"vOffset":-20},"mobile":{"show":false}});</script></body>
 </html>

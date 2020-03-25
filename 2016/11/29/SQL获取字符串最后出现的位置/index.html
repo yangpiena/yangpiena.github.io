@@ -152,9 +152,9 @@
 <pre><code>Integer:12
 </code></pre><a id="more"></a>
 <h3 id="2-如：’6-7-8-2-3-4-x’得到最后一个’-’前面的字符串："><a href="#2-如：’6-7-8-2-3-4-x’得到最后一个’-’前面的字符串：" class="headerlink" title="2. 如：’6.7.8.2.3.4.x’得到最后一个’.’前面的字符串："></a>2. 如：’6.7.8.2.3.4.x’得到最后一个’.’前面的字符串：</h3><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">DECLARE</span> @str2 <span class="built_in">VARCHAR</span> (<span class="number">50</span>)</span><br><span class="line"><span class="keyword">SET</span> @str2 = <span class="string">'6.7.8.2.3.4.x'</span> </span><br><span class="line"><span class="keyword">SELECT</span> <span class="keyword">SUBSTRING</span> (@str2, <span class="number">1</span>, (<span class="keyword">LEN</span>(@str2) - <span class="keyword">CHARINDEX</span>(<span class="string">'.'</span>, <span class="keyword">REVERSE</span>(@str2)) ) )</span><br></pre></td></tr></table></figure>
-<pre><code>string:&apos;6.7.8.2.3.4&apos;
+<pre><code>string:&#39;6.7.8.2.3.4&#39;
 </code></pre><h3 id="3-如：’6-7-8-2-3-4-x’得到最后一个’-’后面的字符串："><a href="#3-如：’6-7-8-2-3-4-x’得到最后一个’-’后面的字符串：" class="headerlink" title="3. 如：’6.7.8.2.3.4.x’得到最后一个’.’后面的字符串："></a>3. 如：’6.7.8.2.3.4.x’得到最后一个’.’后面的字符串：</h3><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">DECLARE</span> @str1 <span class="built_in">VARCHAR</span> (<span class="number">50</span>)</span><br><span class="line"><span class="keyword">SET</span> @str1 = <span class="string">'6.7.8.2.3.4.x'</span> </span><br><span class="line"><span class="keyword">SELECT</span> <span class="keyword">REVERSE</span>(<span class="keyword">SUBSTRING</span> (<span class="keyword">REVERSE</span>(@str1), <span class="number">1</span>, <span class="keyword">CHARINDEX</span>(<span class="string">'.'</span>, <span class="keyword">REVERSE</span>(@str1)) - <span class="number">1</span>) )</span><br></pre></td></tr></table></figure>
-<pre><code>string:&apos;x&apos;
+<pre><code>string:&#39;x&#39;
 </code></pre>
         </div>
         <div class="post-tool">
@@ -179,7 +179,7 @@
 		<p><span class="label">作者</span>
 			<a href="https://yangpiena.coding.me" target="_blank">昜丿捺</a>
 			<span title="最后编辑于&nbsp;2016-11-29">2016-11-29</span>
-			，共 559 字 
+			，共 555 字 
 		</p>		
 		<!-- <p>null</p> -->
 		
@@ -425,5 +425,21 @@
         
     });
 </script>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<!-- <script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script> -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script>
 <script src="/live2dw/lib/L2Dwidget.min.js?0c58a1486de42ac6cc1c59c7d98ae887"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"log":false,"model":{"jsonPath":"/live2dw/assets/hijiki.model.json"},"display":{"position":"right","width":70,"height":90,"hOffset":-37,"vOffset":-20},"mobile":{"show":false}});</script></body>
 </html>

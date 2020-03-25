@@ -150,14 +150,14 @@
         <div class="post-content markdown-body">
             <p>Flash Builder 4.6编译慢、报java heap space堆空间异常错误的优化方法：</p>
 <ol>
-<li>在安装路径下找到<code>FlexBuilder.ini</code>文件，进行编辑，加入以下参数：<pre><code>-vmargs
--Xms128m
--Xmx512m
--XX:MaxPermSize=256m
--XX:PermSize=64m                    #不要设置太高，否则会更加慢
--Djava.net.preferIPv4Stack=true
+<li>在安装路径下找到<code>FlexBuilder.ini</code>文件，进行编辑，加入以下参数：<pre><code> -vmargs
+ -Xms128m
+ -Xmx512m
+ -XX:MaxPermSize=256m
+ -XX:PermSize=64m                    #不要设置太高，否则会更加慢
+ -Djava.net.preferIPv4Stack=true
 </code></pre>加入后可以明显加快编译速度数倍，第3条可以明显减低FB挂掉的几率。<a id="more"></a></li>
-<li>由于Flex Builder compiler shell有memory leak的问题，而SDK默认的的 JVM heap size 只有312M，当compile比较大的project时内存容易不够，所以只要修改SDK的JVM参数就可以。即编辑<code>{Flex SDK}</code>安装路径<code>/bin/jvm.config</code>文件如下：<pre><code>java.args=-Xmx512m -Dsun.io.useCanonCaches=false
+<li>由于Flex Builder compiler shell有memory leak的问题，而SDK默认的的 JVM heap size 只有312M，当compile比较大的project时内存容易不够，所以只要修改SDK的JVM参数就可以。即编辑<code>{Flex SDK}</code>安装路径<code>/bin/jvm.config</code>文件如下：<pre><code> java.args=-Xmx512m -Dsun.io.useCanonCaches=false
 </code></pre>如果还是有Error，可以增加到1024或者更多试试。<blockquote>
 <p>我的flex4.6安装路径中的sdk位置：D:\Adobe\Adobe Flash Builder 4\sdks\4.0.0\bin\jvm.config，只需在这里调整即可！</p>
 </blockquote>
@@ -187,7 +187,7 @@
 		<p><span class="label">作者</span>
 			<a href="https://yangpiena.coding.me" target="_blank">昜丿捺</a>
 			<span title="最后编辑于&nbsp;2016-12-27">2016-12-27</span>
-			，共 581 字 
+			，共 588 字 
 		</p>		
 		<!-- <p>null</p> -->
 		
@@ -433,5 +433,21 @@
         
     });
 </script>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<!-- <script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script> -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script>
 <script src="/live2dw/lib/L2Dwidget.min.js?0c58a1486de42ac6cc1c59c7d98ae887"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"log":false,"model":{"jsonPath":"/live2dw/assets/hijiki.model.json"},"display":{"position":"right","width":70,"height":90,"hOffset":-37,"vOffset":-20},"mobile":{"show":false}});</script></body>
 </html>

@@ -149,21 +149,21 @@
         </div>
         <div class="post-content markdown-body">
             <h4 id="Linux"><a href="#Linux" class="headerlink" title="Linux"></a>Linux</h4><p>在/usr/local/apache-tomcat-7.0.57/bin目录下的catalina.sh中添加：</p>
-<pre><code>JAVA_OPTS=&apos;-Xms512m -Xmx1024m&apos;
+<pre><code>JAVA_OPTS=&#39;-Xms512m -Xmx1024m&#39;
 </code></pre><blockquote>
 <p>-Xms：初始值<br>-Xmx：最大值<br>-Xmn：最小值</p>
 </blockquote>
 <a id="more"></a>
 <h4 id="Windows"><a href="#Windows" class="headerlink" title="Windows"></a>Windows</h4><ul>
 <li><p>若使用startup.bat启动tomcat，则在C:\apache-tomcat-7.0.57\bin\catalina.bat最前面加入：</p>
-<pre><code>set JAVA_OPTS=-Xms512m -Xmx1024m
+<pre><code>  set JAVA_OPTS=-Xms512m -Xmx1024m
 </code></pre></li>
 <li><p>而如果利用windows的系统服务启动tomcat服务，那上面的设置就不生效了，windows服务执行的是bin/tomcat.exe。他读取注册表中的值，而不是catalina.bat的设置。<br><strong>解决办法：</strong><br>修改注册表HKEY_LOCAL_MACHINE/SOFTWARE/Apache Software Foundation/Tomcat Service Manager/Tomcat5/Parameters/JavaOptions<br>原值为</p>
-<pre><code>-Dcatalina.home=&quot;C:/ApacheGroup/Tomcat 5.0&quot;
--Djava.endorsed.dirs=&quot;C:/ApacheGroup/Tomcat 5.0/common/endorsed&quot;
--Xrs
+<pre><code>  -Dcatalina.home=&quot;C:/ApacheGroup/Tomcat 5.0&quot;
+  -Djava.endorsed.dirs=&quot;C:/ApacheGroup/Tomcat 5.0/common/endorsed&quot;
+  -Xrs
 </code></pre><p>在最后加入</p>
-<pre><code>-Xms300m -Xmx350m  
+<pre><code>  -Xms300m -Xmx350m  
 </code></pre><p>退出注册表，重起tomcat服务，设置生效。</p>
 </li>
 </ul>
@@ -189,7 +189,7 @@
 		<p><span class="label">作者</span>
 			<a href="https://yangpiena.coding.me" target="_blank">昜丿捺</a>
 			<span title="最后编辑于&nbsp;2016-12-28">2016-12-28</span>
-			，共 648 字 
+			，共 656 字 
 		</p>		
 		<!-- <p>null</p> -->
 		
@@ -435,5 +435,21 @@
         
     });
 </script>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<!-- <script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script> -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script>
 <script src="/live2dw/lib/L2Dwidget.min.js?0c58a1486de42ac6cc1c59c7d98ae887"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"log":false,"model":{"jsonPath":"/live2dw/assets/hijiki.model.json"},"display":{"position":"right","width":70,"height":90,"hOffset":-37,"vOffset":-20},"mobile":{"show":false}});</script></body>
 </html>

@@ -199,7 +199,7 @@ RETVAL=0
 start() {
   quiet_check
   if [ $? -ne 0 ]; then
-    echo &quot;Errors found in configuration file, check it with &apos;$BASENAME check&apos;.&quot;
+    echo &quot;Errors found in configuration file, check it with &#39;$BASENAME check&#39;.&quot;
     return 1
   fi
 
@@ -224,7 +224,7 @@ stop() {
 restart() {
   quiet_check
   if [ $? -ne 0 ]; then
-    echo &quot;Errors found in configuration file, check it with &apos;$BASENAME check&apos;.&quot;
+    echo &quot;Errors found in configuration file, check it with &#39;$BASENAME check&#39;.&quot;
     return 1
   fi
   stop
@@ -238,7 +238,7 @@ reload() {
 
   quiet_check
   if [ $? -ne 0 ]; then
-    echo &quot;Errors found in configuration file, check it with &apos;$BASENAME check&apos;.&quot;
+    echo &quot;Errors found in configuration file, check it with &#39;$BASENAME check&#39;.&quot;
     return 1
   fi
   $BIN -D -f $CFG -p $PIDFILE -sf $(cat $PIDFILE)
@@ -294,7 +294,7 @@ exit $?
 <p>如果出现结果： <em>service haproxy does not support chkconfig</em><br>解决办法是在 <strong>/etc/rc.d/init.d/haproxy</strong> 中添加下面两句到 <strong>#!/bin/bash</strong> 之后:</p>
 <pre><code>#chkconfig: 2345 10 90
 #description:haproxy
-</code></pre><p>—-其中2345是默认启动级别，级别有0-6共7个级别。<br>—-等级0表示：表示关机<br>—-等级1表示：单用户模式<br>—-等级2表示：无网络连接的多用户命令行模式<br>—-等级3表示：有网络连接的多用户命令行模式<br>—-等级4表示：不可用<br>—-等级5表示：带图形界面的多用户模式<br>—-等级6表示：重新启动<br>—-10是启动优先级，90是停机优先级，优先级范围是0-100，数字越大，优先级越低。</p>
+</code></pre><p>——其中2345是默认启动级别，级别有0-6共7个级别。<br>——等级0表示：表示关机<br>——等级1表示：单用户模式<br>——等级2表示：无网络连接的多用户命令行模式<br>——等级3表示：有网络连接的多用户命令行模式<br>——等级4表示：不可用<br>——等级5表示：带图形界面的多用户模式<br>——等级6表示：重新启动<br>——10是启动优先级，90是停机优先级，优先级范围是0-100，数字越大，优先级越低。</p>
 <blockquote>
 <p>添加后效果如下：<br>    [root@Linux-xx ~]# cat /etc/rc.d/init.d/haproxy</p>
 <pre><code>#!/bin/bash
@@ -309,20 +309,20 @@ start()
 <h4 id="3-启动与关闭"><a href="#3-启动与关闭" class="headerlink" title="3. 启动与关闭"></a>3. 启动与关闭</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">service haproxy start</span><br><span class="line">service haproxy stop</span><br></pre></td></tr></table></figure>
 <hr>
 <h3 id="Suse-Linux-Enterprise-12下实现脚本启动和关闭"><a href="#Suse-Linux-Enterprise-12下实现脚本启动和关闭" class="headerlink" title="Suse Linux Enterprise 12下实现脚本启动和关闭"></a>Suse Linux Enterprise 12下实现脚本启动和关闭</h3><h4 id="1-在-目录下，执行下面命令"><a href="#1-在-目录下，执行下面命令" class="headerlink" title="1. 在~目录下，执行下面命令"></a>1. 在~目录下，执行下面命令</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vim .profile</span><br></pre></td></tr></table></figure>
-<h4 id="2-在-profile文件中定义HAPROXY-HOME变量，并将变量追加到PATH后面，效果如下："><a href="#2-在-profile文件中定义HAPROXY-HOME变量，并将变量追加到PATH后面，效果如下：" class="headerlink" title="2. 在.profile文件中定义HAPROXY_HOME变量，并将变量追加到PATH后面，效果如下："></a>2. 在.profile文件中定义HAPROXY_HOME变量，并将变量追加到PATH后面，效果如下：</h4><pre><code># .profile
+<h4 id="2-在-profile文件中定义HAPROXY-HOME变量，并将变量追加到PATH后面，效果如下："><a href="#2-在-profile文件中定义HAPROXY-HOME变量，并将变量追加到PATH后面，效果如下：" class="headerlink" title="2. 在.profile文件中定义HAPROXY_HOME变量，并将变量追加到PATH后面，效果如下："></a>2. 在.profile文件中定义HAPROXY_HOME变量，并将变量追加到PATH后面，效果如下：</h4><pre><code>    # .profile
 
-# Get the aliases and functions
-if [ -f ~/.bashrc ]; then
-        . ~/.bashrc
-fi
+    # Get the aliases and functions
+    if [ -f ~/.bashrc ]; then
+            . ~/.bashrc
+    fi
 
-# User specific environment and startup programs
+    # User specific environment and startup programs
 
-HAPROXY_HOME=/usr/local/haproxy
-PATH=$PATH:$HOME/bin:$HAPROXY_HOME
+    HAPROXY_HOME=/usr/local/haproxy
+    PATH=$PATH:$HOME/bin:$HAPROXY_HOME
 
-export HAPROXY_HOME
-export PATH
+    export HAPROXY_HOME
+    export PATH
 </code></pre><p>保存并退出。</p>
 <h4 id="3-执行下面命令，使立即生效"><a href="#3-执行下面命令，使立即生效" class="headerlink" title="3. 执行下面命令，使立即生效"></a>3. 执行下面命令，使立即生效</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">source ~/.profile</span><br></pre></td></tr></table></figure>
 <h4 id="4-执行下面命令，在HAPROXY-HOME目录下创建脚本文件，"><a href="#4-执行下面命令，在HAPROXY-HOME目录下创建脚本文件，" class="headerlink" title="4. 执行下面命令，在HAPROXY_HOME目录下创建脚本文件，"></a>4. 执行下面命令，在HAPROXY_HOME目录下创建脚本文件，</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vim /usr/local/haproxy/haproxy</span><br></pre></td></tr></table></figure>
@@ -373,7 +373,7 @@ fi
 		<p><span class="label">作者</span>
 			<a href="https://yangpiena.coding.me" target="_blank">昜丿捺</a>
 			<span title="最后编辑于&nbsp;2018-02-01">2018-02-01</span>
-			，共 4704 字 
+			，共 4738 字 
 		</p>		
 		<!-- <p>null</p> -->
 		
@@ -619,5 +619,21 @@ fi
         
     });
 </script>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<!-- <script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script> -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script>
 <script src="/live2dw/lib/L2Dwidget.min.js?0c58a1486de42ac6cc1c59c7d98ae887"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"log":false,"model":{"jsonPath":"/live2dw/assets/hijiki.model.json"},"display":{"position":"right","width":70,"height":90,"hOffset":-37,"vOffset":-20},"mobile":{"show":false}});</script></body>
 </html>

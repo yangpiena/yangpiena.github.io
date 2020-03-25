@@ -226,7 +226,7 @@ if [ &quot;$1&quot;x = &quot;start&quot;x ]; then
   nohup /usr/local/ftpserver/bin/ftpd.sh res/conf/ftpd-typical.xml 1&gt;/usr/local/ftpserver/res/log/ftpd.log 2&gt;&amp;1 &amp;
 fi
 if [ &quot;$1&quot;x = &quot;stop&quot;x ]; then
-  kill $(ps aux|grep &quot;ftpserver&quot; | grep -v grep |awk &apos;{print $2}&apos;)
+  kill $(ps aux|grep &quot;ftpserver&quot; | grep -v grep |awk &#39;{print $2}&#39;)
 fi
 if [ &quot;$1&quot;x = &quot;check&quot;x ]; then
   ps -aux|grep &quot;ftpserver&quot; | grep -v grep
@@ -264,7 +264,7 @@ fi
 		<p><span class="label">作者</span>
 			<a href="https://yangpiena.coding.me" target="_blank">昜丿捺</a>
 			<span title="最后编辑于&nbsp;2018-04-10">2018-04-10</span>
-			，共 3530 字 
+			，共 3528 字 
 		</p>		
 		<!-- <p>null</p> -->
 		
@@ -510,5 +510,21 @@ fi
         
     });
 </script>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<!-- <script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script> -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script>
 <script src="/live2dw/lib/L2Dwidget.min.js?0c58a1486de42ac6cc1c59c7d98ae887"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"log":false,"model":{"jsonPath":"/live2dw/assets/hijiki.model.json"},"display":{"position":"right","width":70,"height":90,"hOffset":-37,"vOffset":-20},"mobile":{"show":false}});</script></body>
 </html>

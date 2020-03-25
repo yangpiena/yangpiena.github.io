@@ -149,7 +149,7 @@
         </div>
         <div class="post-content markdown-body">
             <h3 id="CentOS-6-x"><a href="#CentOS-6-x" class="headerlink" title="CentOS 6.x"></a>CentOS 6.x</h3><p>VMware克隆CentOS 6导致网络连接system eth0不可用的解决办法</p>
-<h6 id="1-打开下面文件，注释掉原eth0，将eth1改为eth0"><a href="#1-打开下面文件，注释掉原eth0，将eth1改为eth0" class="headerlink" title="1. 打开下面文件，注释掉原eth0，将eth1改为eth0"></a>1. 打开下面文件，注释掉原eth0，将eth1改为eth0</h6><pre><code>vim /etc/udev/rules.d/70-persistent-net.rules
+<h6 id="1-打开下面文件，注释掉原eth0，将eth1改为eth0"><a href="#1-打开下面文件，注释掉原eth0，将eth1改为eth0" class="headerlink" title="1. 打开下面文件，注释掉原eth0，将eth1改为eth0"></a>1. 打开下面文件，注释掉原eth0，将eth1改为eth0</h6><pre><code>    vim /etc/udev/rules.d/70-persistent-net.rules
 </code></pre><p>一般能看到eth0、eth1两个配置规则，注释掉NAME=”eth0”的配置规则，将另一个配置规则的NAME=”eth1”改成NAME=”eth0”。</p>
 <h6 id="2-将改后eth0的ATTR-address-”00-50-56-a9-4c-f9”中的网卡地址修改到下面文件"><a href="#2-将改后eth0的ATTR-address-”00-50-56-a9-4c-f9”中的网卡地址修改到下面文件" class="headerlink" title="2. 将改后eth0的ATTR{address}==”00:50:56:a9:4c:f9”中的网卡地址修改到下面文件"></a>2. 将改后eth0的ATTR{address}==”00:50:56:a9:4c:f9”中的网卡地址修改到下面文件</h6><pre><code>vim /etc/sysconfig/network-scripts/ifcfg-eth0
 </code></pre><p>保存到HWADDR=”00:50:56:a9:4c:f9”处。</p>
@@ -175,7 +175,7 @@
 		<p><span class="label">作者</span>
 			<a href="https://yangpiena.coding.me" target="_blank">昜丿捺</a>
 			<span title="最后编辑于&nbsp;2018-02-13">2018-02-13</span>
-			，共 340 字 
+			，共 344 字 
 		</p>		
 		<!-- <p>null</p> -->
 		
@@ -421,5 +421,21 @@
         
     });
 </script>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<!-- <script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script> -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script>
 <script src="/live2dw/lib/L2Dwidget.min.js?0c58a1486de42ac6cc1c59c7d98ae887"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"log":false,"model":{"jsonPath":"/live2dw/assets/hijiki.model.json"},"display":{"position":"right","width":70,"height":90,"hOffset":-37,"vOffset":-20},"mobile":{"show":false}});</script></body>
 </html>

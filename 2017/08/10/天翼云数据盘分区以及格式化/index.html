@@ -281,14 +281,14 @@ tmpfs           783M     0  783M   0% /run/user/0
 </blockquote>
 <p>使用下面的命令添加分区信息，最后查看添加结果：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">echo &apos;/dev/vdb1 /fimeson ext3 defaults 0 0&apos; &gt;&gt; /etc/fstab</span><br><span class="line">cat /etc/fstab</span><br></pre></td></tr></table></figure></p>
 <p>出现以下信息表示添加分区信息成功。</p>
-<pre><code>[root@iZwe12zdi799668qfxdm5oZ ~]# echo &apos;/dev/vdb1 /fimeson ext3 defaults 0 0&apos; &gt;&gt; /etc/fstab
+<pre><code>[root@iZwe12zdi799668qfxdm5oZ ~]# echo &#39;/dev/vdb1 /fimeson ext3 defaults 0 0&#39; &gt;&gt; /etc/fstab
 [root@iZwe12zdi799668qfxdm5oZ ~]# cat /etc/fstab
 
 #
 # /etc/fstab
 # Created by anaconda on Fri Jun  2 07:36:28 2017
 #
-# Accessible filesystems, by reference, are maintained under &apos;/dev/disk&apos;
+# Accessible filesystems, by reference, are maintained under &#39;/dev/disk&#39;
 # See man pages fstab(5), findfs(8), mount(8) and/or blkid(8) for more info
 #
 UUID=83e59f2d-45ce-4124-939a-3302e6cc6afa /                       ext4    defaults        1 1
@@ -316,7 +316,7 @@ UUID=83e59f2d-45ce-4124-939a-3302e6cc6afa /                       ext4    defaul
 		<p><span class="label">作者</span>
 			<a href="https://yangpiena.coding.me" target="_blank">昜丿捺</a>
 			<span title="最后编辑于&nbsp;2017-08-10">2017-08-10</span>
-			，共 5466 字 
+			，共 5462 字 
 		</p>		
 		<!-- <p>null</p> -->
 		
@@ -562,5 +562,21 @@ UUID=83e59f2d-45ce-4124-939a-3302e6cc6afa /                       ext4    defaul
         
     });
 </script>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<!-- <script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script> -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script>
 <script src="/live2dw/lib/L2Dwidget.min.js?0c58a1486de42ac6cc1c59c7d98ae887"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"log":false,"model":{"jsonPath":"/live2dw/assets/hijiki.model.json"},"display":{"position":"right","width":70,"height":90,"hOffset":-37,"vOffset":-20},"mobile":{"show":false}});</script></body>
 </html>
