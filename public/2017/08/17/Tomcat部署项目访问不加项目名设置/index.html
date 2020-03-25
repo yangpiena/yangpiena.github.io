@@ -152,29 +152,29 @@
 <li><p>打开conf目录下server.xml；</p>
 </li>
 <li><p>在Host内添加如下Context，其中docBase改为自己的项目路径即可。</p>
-<pre><code>&lt;Context path=&quot;&quot; docBase=&quot;/usr/tomcat/webapps/xxExpert&quot; reloadable=&quot;false&quot; /&gt;
+<pre><code> &lt;Context path=&quot;&quot; docBase=&quot;/usr/tomcat/webapps/xxExpert&quot; reloadable=&quot;false&quot; /&gt;
 </code></pre><a id="more"></a>
 </li>
 <li><p>添加后效果如下：</p>
-<pre><code>&lt;Host name=&quot;localhost&quot;  appBase=&quot;webapps&quot;
-    unpackWARs=&quot;true&quot; autoDeploy=&quot;true&quot;&gt;
+<pre><code> &lt;Host name=&quot;localhost&quot;  appBase=&quot;webapps&quot;
+     unpackWARs=&quot;true&quot; autoDeploy=&quot;true&quot;&gt;
 
-    &lt;!-- SingleSignOn valve, share authentication between web applications
-         Documentation at: /docs/config/valve.html --&gt;
-    &lt;!--
-    &lt;Valve className=&quot;org.apache.catalina.authenticator.SingleSignOn&quot; /&gt;
-    --&gt;
+     &lt;!-- SingleSignOn valve, share authentication between web applications
+          Documentation at: /docs/config/valve.html --&gt;
+     &lt;!--
+     &lt;Valve className=&quot;org.apache.catalina.authenticator.SingleSignOn&quot; /&gt;
+     --&gt;
 
-    &lt;!-- Access log processes all example.
-         Documentation at: /docs/config/valve.html
-         Note: The pattern used is equivalent to using pattern=&quot;common&quot; --&gt;
-    &lt;Valve className=&quot;org.apache.catalina.valves.AccessLogValve&quot; directory=&quot;logs&quot;
-           prefix=&quot;localhost_access_log.&quot; suffix=&quot;.txt&quot;
-           pattern=&quot;%h %l %u %t &amp;quot;%r&amp;quot; %s %b&quot; /&gt;
+     &lt;!-- Access log processes all example.
+          Documentation at: /docs/config/valve.html
+          Note: The pattern used is equivalent to using pattern=&quot;common&quot; --&gt;
+     &lt;Valve className=&quot;org.apache.catalina.valves.AccessLogValve&quot; directory=&quot;logs&quot;
+            prefix=&quot;localhost_access_log.&quot; suffix=&quot;.txt&quot;
+            pattern=&quot;%h %l %u %t &amp;quot;%r&amp;quot; %s %b&quot; /&gt;
 
-    &lt;Context path=&quot;&quot; docBase=&quot;/usr/tomcat/webapps/xxExpert&quot; reloadable=&quot;false&quot; /&gt;
+     &lt;Context path=&quot;&quot; docBase=&quot;/usr/tomcat/webapps/xxExpert&quot; reloadable=&quot;false&quot; /&gt;
 
-&lt;/Host&gt;
+ &lt;/Host&gt;
 </code></pre></li>
 </ol>
 
@@ -199,7 +199,7 @@
 		<p><span class="label">作者</span>
 			<a href="https://yangpiena.coding.me" target="_blank">昜丿捺</a>
 			<span title="最后编辑于&nbsp;2017-08-17">2017-08-17</span>
-			，共 1148 字 
+			，共 1164 字 
 		</p>		
 		<!-- <p>null</p> -->
 		
@@ -445,5 +445,21 @@
         
     });
 </script>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<!-- <script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script> -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script>
 <script src="/live2dw/lib/L2Dwidget.min.js?0c58a1486de42ac6cc1c59c7d98ae887"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"log":false,"model":{"jsonPath":"/live2dw/assets/hijiki.model.json"},"display":{"position":"right","width":70,"height":90,"hOffset":-37,"vOffset":-20},"mobile":{"show":false}});</script></body>
 </html>

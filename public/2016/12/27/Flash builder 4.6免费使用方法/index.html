@@ -152,12 +152,12 @@
 <ol>
 <li>到Adobe官网下载FlashBuilder 4.6，有简体中文版；<a id="more"></a></li>
 <li>安装时，不用序列号，直接选择安装试用版；</li>
-<li>安装完成后在安装目录下依次修改下列3个文件：<br>(1)<code>.eclipse\plugins\com.adobe.flexbuilder.project_4.6.0.328916\META-INF</code>下面的<code>MANIFEST.MF</code>修改：<pre><code>Bundle-Version: 0.0.0
-</code></pre>(2)<code>.eclipse\features\com.adobe.flexide.feature_4.6.0.328916</code>下面的<code>feature.xml</code>修改：<pre><code>&lt;plugin
- id=&quot;com.adobe.flexbuilder.project&quot;
- download-size=&quot;0&quot;
- install-size=&quot;0&quot;
- version=&quot;0.0.0&quot;/&gt;
+<li>安装完成后在安装目录下依次修改下列3个文件：<br>(1)<code>.eclipse\plugins\com.adobe.flexbuilder.project_4.6.0.328916\META-INF</code>下面的<code>MANIFEST.MF</code>修改：<pre><code>  Bundle-Version: 0.0.0
+</code></pre>(2)<code>.eclipse\features\com.adobe.flexide.feature_4.6.0.328916</code>下面的<code>feature.xml</code>修改：<pre><code> &lt;plugin
+  id=&quot;com.adobe.flexbuilder.project&quot;
+  download-size=&quot;0&quot;
+  install-size=&quot;0&quot;
+  version=&quot;0.0.0&quot;/&gt;
 </code></pre>(3)<code>.eclipse\plugins\com.adobe.flexbuilder.flex_4.6.0.328916</code>下面，复制<code>config.xml</code>并重命名为<code>config_builder.xml</code>即可。</li>
 </ol>
 <blockquote>
@@ -187,7 +187,7 @@
 		<p><span class="label">作者</span>
 			<a href="https://yangpiena.coding.me" target="_blank">昜丿捺</a>
 			<span title="最后编辑于&nbsp;2016-12-27">2016-12-27</span>
-			，共 612 字 
+			，共 619 字 
 		</p>		
 		<!-- <p>null</p> -->
 		
@@ -433,5 +433,21 @@
         
     });
 </script>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<!-- <script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script> -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script>
 <script src="/live2dw/lib/L2Dwidget.min.js?0c58a1486de42ac6cc1c59c7d98ae887"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"log":false,"model":{"jsonPath":"/live2dw/assets/hijiki.model.json"},"display":{"position":"right","width":70,"height":90,"hOffset":-37,"vOffset":-20},"mobile":{"show":false}});</script></body>
 </html>

@@ -148,7 +148,8 @@
 			</div>
         </div>
         <div class="post-content markdown-body">
-            <h2 id="基础命令"><a href="#基础命令" class="headerlink" title="基础命令"></a>基础命令</h2><h3 id="系统"><a href="#系统" class="headerlink" title="系统"></a>系统</h3><table>
+            <h2 id="基础命令"><a href="#基础命令" class="headerlink" title="基础命令"></a>基础命令</h2><h3 id="系统"><a href="#系统" class="headerlink" title="系统"></a>系统</h3><div class="table-container">
+<table>
 <thead>
 <tr>
 <th>命令</th>
@@ -270,9 +271,11 @@
 </tr>
 </tbody>
 </table>
+</div>
 <a id="more"></a>
 <hr>
-<h3 id="文件"><a href="#文件" class="headerlink" title="文件"></a>文件</h3><table>
+<h3 id="文件"><a href="#文件" class="headerlink" title="文件"></a>文件</h3><div class="table-container">
+<table>
 <thead>
 <tr>
 <th>命令</th>
@@ -406,7 +409,9 @@
 </tr>
 </tbody>
 </table>
-<h3 id="网络"><a href="#网络" class="headerlink" title="网络"></a>网络</h3><table>
+</div>
+<h3 id="网络"><a href="#网络" class="headerlink" title="网络"></a>网络</h3><div class="table-container">
+<table>
 <thead>
 <tr>
 <th>命令</th>
@@ -428,7 +433,9 @@
 </tr>
 </tbody>
 </table>
-<h3 id="防火墙（openSUSE-Leap-15-0）"><a href="#防火墙（openSUSE-Leap-15-0）" class="headerlink" title="防火墙（openSUSE Leap 15.0）"></a>防火墙（openSUSE Leap 15.0）</h3><table>
+</div>
+<h3 id="防火墙（openSUSE-Leap-15-0）"><a href="#防火墙（openSUSE-Leap-15-0）" class="headerlink" title="防火墙（openSUSE Leap 15.0）"></a>防火墙（openSUSE Leap 15.0）</h3><div class="table-container">
+<table>
 <thead>
 <tr>
 <th>命令</th>
@@ -437,51 +444,51 @@
 </thead>
 <tbody>
 <tr>
-<td>firewall-cmd –permanent –zone=public –add-service=ssh</td>
+<td>firewall-cmd —permanent —zone=public —add-service=ssh</td>
 <td style="text-align:left">添加永久的服务</td>
 </tr>
 <tr>
-<td>firewall-cmd –permanent –zone=public –add-port=8080-8081/tcp</td>
+<td>firewall-cmd —permanent —zone=public —add-port=8080-8081/tcp</td>
 <td style="text-align:left">添加永久的端口</td>
 </tr>
 <tr>
-<td>firewall-cmd –zone=public –add-port=8080-8081/tcp</td>
+<td>firewall-cmd —zone=public —add-port=8080-8081/tcp</td>
 <td style="text-align:left">添加临时的端口</td>
 </tr>
 <tr>
-<td>firewall-cmd –permanent –zone=public –list-ports</td>
+<td>firewall-cmd —permanent —zone=public —list-ports</td>
 <td style="text-align:left">查看开启的端口</td>
 </tr>
 <tr>
-<td>firewall-cmd –permanent –zone=public –list-services</td>
+<td>firewall-cmd —permanent —zone=public —list-services</td>
 <td style="text-align:left">查看开启的服务</td>
 </tr>
 <tr>
-<td>firewall-cmd –reload</td>
+<td>firewall-cmd —reload</td>
 <td style="text-align:left">重新加载配置（重启加载后才能生效）</td>
 </tr>
 <tr>
-<td>firewall-cmd –state</td>
+<td>firewall-cmd —state</td>
 <td style="text-align:left">查看防火墙运行状态</td>
 </tr>
 <tr>
-<td>firewall-cmd –query-service ssh</td>
+<td>firewall-cmd —query-service ssh</td>
 <td style="text-align:left"></td>
 </tr>
 <tr>
-<td>firewall-cmd –query-service ftp</td>
+<td>firewall-cmd —query-service ftp</td>
 <td style="text-align:left"></td>
 </tr>
 <tr>
-<td>firewall-cmd –query-service http</td>
+<td>firewall-cmd —query-service http</td>
 <td style="text-align:left"></td>
 </tr>
 <tr>
-<td>firewall-cmd –query-service https</td>
+<td>firewall-cmd —query-service https</td>
 <td style="text-align:left"></td>
 </tr>
 <tr>
-<td>firewall-cmd –list-all</td>
+<td>firewall-cmd —list-all</td>
 <td style="text-align:left">显示当前区域的网卡配置参数、资源、端口以及服务等信息</td>
 </tr>
 <tr>
@@ -494,7 +501,9 @@
 </tr>
 </tbody>
 </table>
-<h3 id="vi"><a href="#vi" class="headerlink" title="vi"></a>vi</h3><table>
+</div>
+<h3 id="vi"><a href="#vi" class="headerlink" title="vi"></a>vi</h3><div class="table-container">
+<table>
 <thead>
 <tr>
 <th>命令</th>
@@ -976,6 +985,7 @@
 </tr>
 </tbody>
 </table>
+</div>
 
         </div>
         <div class="post-tool">
@@ -1000,7 +1010,7 @@
 		<p><span class="label">作者</span>
 			<a href="https://yangpiena.coding.me" target="_blank">昜丿捺</a>
 			<span title="最后编辑于&nbsp;2016-11-22">2016-11-22</span>
-			，共 5378 字 
+			，共 5388 字 
 		</p>		
 		<!-- <p>null</p> -->
 		
@@ -1246,5 +1256,21 @@
         
     });
 </script>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<!-- <script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script> -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script>
 <script src="/live2dw/lib/L2Dwidget.min.js?0c58a1486de42ac6cc1c59c7d98ae887"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"log":false,"model":{"jsonPath":"/live2dw/assets/hijiki.model.json"},"display":{"position":"right","width":70,"height":90,"hOffset":-37,"vOffset":-20},"mobile":{"show":false}});</script></body>
 </html>

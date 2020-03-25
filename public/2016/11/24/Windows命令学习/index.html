@@ -148,7 +148,8 @@
 			</div>
         </div>
         <div class="post-content markdown-body">
-            <h2 id="系统"><a href="#系统" class="headerlink" title="系统"></a>系统</h2><table>
+            <h2 id="系统"><a href="#系统" class="headerlink" title="系统"></a>系统</h2><div class="table-container">
+<table>
 <thead>
 <tr>
 <th>命令</th>
@@ -384,7 +385,9 @@
 </tr>
 </tbody>
 </table>
-<h2 id="Dos命令"><a href="#Dos命令" class="headerlink" title="Dos命令"></a>Dos命令</h2><table>
+</div>
+<h2 id="Dos命令"><a href="#Dos命令" class="headerlink" title="Dos命令"></a>Dos命令</h2><div class="table-container">
+<table>
 <thead>
 <tr>
 <th>命令</th>
@@ -454,7 +457,9 @@
 </tr>
 </tbody>
 </table>
-<h2 id="其他命令"><a href="#其他命令" class="headerlink" title="其他命令"></a>其他命令</h2><table>
+</div>
+<h2 id="其他命令"><a href="#其他命令" class="headerlink" title="其他命令"></a>其他命令</h2><div class="table-container">
+<table>
 <thead>
 <tr>
 <th>命令</th>
@@ -482,6 +487,7 @@
 </tr>
 </tbody>
 </table>
+</div>
 
         </div>
         <div class="post-tool">
@@ -506,7 +512,7 @@
 		<p><span class="label">作者</span>
 			<a href="https://yangpiena.coding.me" target="_blank">昜丿捺</a>
 			<span title="最后编辑于&nbsp;2016-11-24">2016-11-24</span>
-			，共 1970 字 
+			，共 1976 字 
 		</p>		
 		<!-- <p>null</p> -->
 		
@@ -752,5 +758,21 @@
         
     });
 </script>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<!-- <script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script> -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script>
 <script src="/live2dw/lib/L2Dwidget.min.js?0c58a1486de42ac6cc1c59c7d98ae887"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"log":false,"model":{"jsonPath":"/live2dw/assets/hijiki.model.json"},"display":{"position":"right","width":70,"height":90,"hOffset":-37,"vOffset":-20},"mobile":{"show":false}});</script></body>
 </html>

@@ -152,12 +152,12 @@
 <h4 id="1-重新连接“数据-服务”时，出现错误，如“数据类型重复”等问题"><a href="#1-重新连接“数据-服务”时，出现错误，如“数据类型重复”等问题" class="headerlink" title="1. 重新连接“数据/服务”时，出现错误，如“数据类型重复”等问题"></a>1. 重新连接“数据/服务”时，出现错误，如“数据类型重复”等问题</h4><p>此时，只需将数据服务彻底删除干净后再重新连接即可。删除方法：</p>
 <ul>
 <li>删除文件夹services和valueObjects；</li>
-<li>删除xx.fml文件中的数据/服务内容。保留model标签和annotation标签内容，其它全删除。<pre><code>&lt;model xmlns=&quot;http://ns.adobe.com/Fiber/1.0&quot;&gt;
-        &lt;annotation name=&quot;ActionScriptGeneration&quot;&gt;
-        &lt;item name=&quot;FullyQualifyReferences&quot;&gt;true&lt;/item&gt;
-        &lt;/annotation&gt;
-    ...
-&lt;/model&gt;
+<li>删除xx.fml文件中的数据/服务内容。保留model标签和annotation标签内容，其它全删除。<pre><code>  &lt;model xmlns=&quot;http://ns.adobe.com/Fiber/1.0&quot;&gt;
+          &lt;annotation name=&quot;ActionScriptGeneration&quot;&gt;
+          &lt;item name=&quot;FullyQualifyReferences&quot;&gt;true&lt;/item&gt;
+          &lt;/annotation&gt;
+      ...
+  &lt;/model&gt;
 </code></pre></li>
 </ul>
 
@@ -184,7 +184,7 @@
 		<p><span class="label">作者</span>
 			<a href="https://yangpiena.coding.me" target="_blank">昜丿捺</a>
 			<span title="最后编辑于&nbsp;2016-12-27">2016-12-27</span>
-			，共 439 字 
+			，共 451 字 
 		</p>		
 		<!-- <p>null</p> -->
 		
@@ -430,5 +430,21 @@
         
     });
 </script>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<!-- <script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script> -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script>
 <script src="/live2dw/lib/L2Dwidget.min.js?0c58a1486de42ac6cc1c59c7d98ae887"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"log":false,"model":{"jsonPath":"/live2dw/assets/hijiki.model.json"},"display":{"position":"right","width":70,"height":90,"hOffset":-37,"vOffset":-20},"mobile":{"show":false}});</script></body>
 </html>

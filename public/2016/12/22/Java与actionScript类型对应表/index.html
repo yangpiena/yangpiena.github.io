@@ -149,7 +149,8 @@
         </div>
         <div class="post-content markdown-body">
             <p>采用Java+Flex架构，通过BlazeDS中间件技术，使服务端Java数据和客户端Flex数据进行互通时，底层数据类型是不一致的，BlazeDS对其进行了映射，具体映射关系如下：<br><a id="more"></a></p>
-<h2 id="Java-gt-ActionScript"><a href="#Java-gt-ActionScript" class="headerlink" title="Java -&gt; ActionScript"></a>Java -&gt; ActionScript</h2><table>
+<h2 id="Java-gt-ActionScript"><a href="#Java-gt-ActionScript" class="headerlink" title="Java -&gt; ActionScript"></a>Java -&gt; ActionScript</h2><div class="table-container">
+<table>
 <thead>
 <tr>
 <th>Java</th>
@@ -231,7 +232,9 @@
 </tr>
 </tbody>
 </table>
-<h2 id="ActionScript-gt-Java"><a href="#ActionScript-gt-Java" class="headerlink" title="ActionScript -&gt; Java"></a>ActionScript -&gt; Java</h2><table>
+</div>
+<h2 id="ActionScript-gt-Java"><a href="#ActionScript-gt-Java" class="headerlink" title="ActionScript -&gt; Java"></a>ActionScript -&gt; Java</h2><div class="table-container">
+<table>
 <thead>
 <tr>
 <th>ActionScript</th>
@@ -285,6 +288,7 @@
 </tr>
 </tbody>
 </table>
+</div>
 <blockquote>
 <p>Java里的List、Arraylist对应到Flex里可以用常用ArrayCollection来接收。<br>例如：通过调用java端某方法返回一个arraylist，该arraylist里放的一般是用户自定义类型。Flex端接收到的肯定是个Object，这个时候可以强制转换成ArrayCollection:event.result as ArrayCollection。然后通过遍历该ArrayCollection，来取得存每条数据的Object。 当as这边定义了与自定义类型定义的类型对应的类时，也可以强制转换成该类型。</p>
 </blockquote>
@@ -312,7 +316,7 @@
 		<p><span class="label">作者</span>
 			<a href="https://yangpiena.coding.me" target="_blank">昜丿捺</a>
 			<span title="最后编辑于&nbsp;2016-12-22">2016-12-22</span>
-			，共 1316 字 
+			，共 1320 字 
 		</p>		
 		<!-- <p>null</p> -->
 		
@@ -558,5 +562,21 @@
         
     });
 </script>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<!-- <script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script> -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script>
 <script src="/live2dw/lib/L2Dwidget.min.js?0c58a1486de42ac6cc1c59c7d98ae887"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"log":false,"model":{"jsonPath":"/live2dw/assets/hijiki.model.json"},"display":{"position":"right","width":70,"height":90,"hOffset":-37,"vOffset":-20},"mobile":{"show":false}});</script></body>
 </html>

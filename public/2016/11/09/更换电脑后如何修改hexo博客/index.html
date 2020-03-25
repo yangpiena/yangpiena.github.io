@@ -151,9 +151,9 @@
             <h1 id="当重装电脑，或者想在其它电脑上修改博客，可以使用下列步骤："><a href="#当重装电脑，或者想在其它电脑上修改博客，可以使用下列步骤：" class="headerlink" title="当重装电脑，或者想在其它电脑上修改博客，可以使用下列步骤："></a>当重装电脑，或者想在其它电脑上修改博客，可以使用下列步骤：</h1><ol>
 <li>使用git clone git@github.com:yangpiena/yangpiena.github.io.git拷贝仓库（默认分支为source）；</li>
 <li><p>在本地新拷贝的yangpiena.github.io文件夹下通过Git bash依次执行下列指令：</p>
-<pre><code>npm install hexo
-npm install 
-npm install hexo-deployer-git --save
+<pre><code> npm install hexo
+ npm install 
+ npm install hexo-deployer-git --save
 </code></pre><p>（切记不要执行hexo init这条指令，否则会删除.git文件夹）</p>
 </li>
 </ol>
@@ -189,7 +189,7 @@ npm install hexo-deployer-git --save
 		<p><span class="label">作者</span>
 			<a href="https://yangpiena.coding.me" target="_blank">昜丿捺</a>
 			<span title="最后编辑于&nbsp;2016-11-09">2016-11-09</span>
-			，共 427 字 
+			，共 430 字 
 		</p>		
 		<!-- <p>null</p> -->
 		
@@ -435,5 +435,21 @@ npm install hexo-deployer-git --save
         
     });
 </script>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<!-- <script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script> -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script>
 <script src="/live2dw/lib/L2Dwidget.min.js?0c58a1486de42ac6cc1c59c7d98ae887"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"log":false,"model":{"jsonPath":"/live2dw/assets/hijiki.model.json"},"display":{"position":"right","width":70,"height":90,"hOffset":-37,"vOffset":-20},"mobile":{"show":false}});</script></body>
 </html>

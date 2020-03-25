@@ -167,10 +167,10 @@
 &lt;script type=&quot;text/javascript&quot; src=&quot;/js/jquery.easing.1.3.js&quot;&gt;&lt;/script&gt;
 &lt;script type=&quot;text/javascript&quot;&gt;
     $(window).load(function(){
-        var $iw_thumbs            = $(&apos;#iw_thumbs&apos;),
-            $iw_ribbon            = $(&apos;#iw_ribbon&apos;),
-            $iw_ribbon_close    = $iw_ribbon.children(&apos;span.iw_close&apos;),
-            $iw_ribbon_zoom        = $iw_ribbon.children(&apos;span.iw_zoom&apos;);
+        var $iw_thumbs            = $(&#39;#iw_thumbs&#39;),
+            $iw_ribbon            = $(&#39;#iw_ribbon&#39;),
+            $iw_ribbon_close    = $iw_ribbon.children(&#39;span.iw_close&#39;),
+            $iw_ribbon_zoom        = $iw_ribbon.children(&#39;span.iw_zoom&#39;);
 
             ImageWall    = (function() {
                     // window width and height
@@ -180,8 +180,8 @@
                     isRibbonShown        = false,
                     isFullMode            = false,
                     // ribbon / images animation settings
-                    ribbonAnim            = {speed : 500, easing : &apos;easeOutExpo&apos;},
-                    imgAnim                = {speed : 400, easing : &apos;jswing&apos;},
+                    ribbonAnim            = {speed : 500, easing : &#39;easeOutExpo&#39;},
+                    imgAnim                = {speed : 400, easing : &#39;jswing&#39;},
                     // init function : call masonry, calculate window dimentions, initialize some events
                     init                = function() {
                         $iw_thumbs.imagesLoaded(function(){
@@ -203,18 +203,18 @@
                     initEventsHandler    = function() {
 
                         // click on a image
-                        $iw_thumbs.delegate(&apos;li&apos;, &apos;click&apos;, function() {
-                            if($iw_ribbon.is(&apos;:animated&apos;)) return false;
+                        $iw_thumbs.delegate(&#39;li&#39;, &#39;click&#39;, function() {
+                            if($iw_ribbon.is(&#39;:animated&#39;)) return false;
 
                             var $el = $(this);
 
-                            if($el.data(&apos;ribbon&apos;)) {
+                            if($el.data(&#39;ribbon&#39;)) {
                                 showFullImage($el);
                             }
                             else if(!isRibbonShown) {
                                 isRibbonShown = true;
 
-                                $el.data(&apos;ribbon&apos;,true);
+                                $el.data(&#39;ribbon&#39;,true);
 
                                 // set the current
                                 current = $el.index();
@@ -224,71 +224,71 @@
                         });
 
                         // click ribbon close
-                        $iw_ribbon_close.bind(&apos;click&apos;, closeRibbon);
+                        $iw_ribbon_close.bind(&#39;click&#39;, closeRibbon);
 
                         // on window resize we need to recalculate the window dimentions
-                        $(window).bind(&apos;resize&apos;, function() {
+                        $(window).bind(&#39;resize&#39;, function() {
                                     getWindowsDim();
-                                    if($iw_ribbon.is(&apos;:animated&apos;))
+                                    if($iw_ribbon.is(&#39;:animated&#39;))
                                         return false;
                                     closeRibbon();
                                  })
-                                 .bind(&apos;scroll&apos;, function() {
-                                    if($iw_ribbon.is(&apos;:animated&apos;))
+                                 .bind(&#39;scroll&#39;, function() {
+                                    if($iw_ribbon.is(&#39;:animated&#39;))
                                         return false;
                                     closeRibbon();
                                  });
 
                     },
                     showRibbon            = function($el) {
-                        var    $img    = $el.children(&apos;img&apos;),
+                        var    $img    = $el.children(&#39;img&#39;),
                             $descrp    = $img.next();
 
                         // fadeOut all the other images
-                        $iw_thumbs.children(&apos;li&apos;).not($el).animate({opacity : 0.2}, imgAnim.speed);
+                        $iw_thumbs.children(&#39;li&#39;).not($el).animate({opacity : 0.2}, imgAnim.speed);
 
                         // increase the image z-index, and set the height to 100px (default height)
-                        $img.css(&apos;z-index&apos;, 100)
-                            .data(&apos;originalHeight&apos;,$img.height())
+                        $img.css(&#39;z-index&#39;, 100)
+                            .data(&#39;originalHeight&#39;,$img.height())
                             .stop()
                             .animate({
-                                height         : &apos;100px&apos;
+                                height         : &#39;100px&#39;
                             }, imgAnim.speed, imgAnim.easing);
 
                         // the ribbon will animate from the left or right
                         // depending on the position of the image
                         var ribbonCssParam         = {
-                                top    : $el.offset().top - $(window).scrollTop() - 6 + &apos;px&apos;
+                                top    : $el.offset().top - $(window).scrollTop() - 6 + &#39;px&#39;
                             },
                             descriptionCssParam,
                             dir;
 
                         if( $el.offset().left &lt; (w_dim.width / 2) ) {
-                            dir = &apos;left&apos;;
+                            dir = &#39;left&#39;;
                             ribbonCssParam.left     = 0;
-                            ribbonCssParam.right     = &apos;auto&apos;;
+                            ribbonCssParam.right     = &#39;auto&#39;;
                         }
                         else {
-                            dir = &apos;right&apos;;
+                            dir = &#39;right&#39;;
                             ribbonCssParam.right     = 0;
-                            ribbonCssParam.left     = &apos;auto&apos;;
+                            ribbonCssParam.left     = &#39;auto&#39;;
                         }
 
                         $iw_ribbon.css(ribbonCssParam)
                                   .show()
                                   .stop()
-                                  .animate({width : &apos;100%&apos;}, ribbonAnim.speed, ribbonAnim.easing, function() {
+                                  .animate({width : &#39;100%&#39;}, ribbonAnim.speed, ribbonAnim.easing, function() {
                                         switch(dir) {
-                                            case &apos;left&apos; :
+                                            case &#39;left&#39; :
                                                 descriptionCssParam        = {
-                                                    &apos;left&apos;             : $img.outerWidth(true) + &apos;px&apos;,
-                                                    &apos;text-align&apos;     : &apos;left&apos;
+                                                    &#39;left&#39;             : $img.outerWidth(true) + &#39;px&#39;,
+                                                    &#39;text-align&#39;     : &#39;left&#39;
                                                 };
                                                 break;
-                                            case &apos;right&apos; :    
+                                            case &#39;right&#39; :    
                                                 descriptionCssParam        = {
-                                                    &apos;left&apos;             : &apos;-200px&apos;,
-                                                    &apos;text-align&apos;     : &apos;right&apos;
+                                                    &#39;left&#39;             : &#39;-200px&#39;,
+                                                    &#39;text-align&#39;     : &#39;right&#39;
                                                 };
                                                 break;
                                         };
@@ -311,63 +311,63 @@
                         if(!isFullMode) {
 
                             // current wall image
-                            var $el             = $iw_thumbs.children(&apos;li&apos;).eq(current);
+                            var $el             = $iw_thumbs.children(&#39;li&#39;).eq(current);
 
                             resetWall($el);
 
                             // slide out ribbon
                             $iw_ribbon.stop()
-                                      .animate({width : &apos;0%&apos;}, ribbonAnim.speed, ribbonAnim.easing); 
+                                      .animate({width : &#39;0%&#39;}, ribbonAnim.speed, ribbonAnim.easing); 
 
                         }
                         else {
                             $iw_ribbon.stop().animate({
                                 opacity        : 0.8,
-                                height         : &apos;0px&apos;,
-                                marginTop    : w_dim.height/2 + &apos;px&apos; // half of window height
+                                height         : &#39;0px&#39;,
+                                marginTop    : w_dim.height/2 + &#39;px&#39; // half of window height
                             }, ribbonAnim.speed, function() {
                                 $iw_ribbon.css({
-                                    &apos;width&apos;        : &apos;0%&apos;,
-                                    &apos;height&apos;    : &apos;126px&apos;,
-                                    &apos;margin-top&apos;: &apos;0px&apos;
-                                }).children(&apos;img&apos;).remove();
+                                    &#39;width&#39;        : &#39;0%&#39;,
+                                    &#39;height&#39;    : &#39;126px&#39;,
+                                    &#39;margin-top&#39;: &#39;0px&#39;
+                                }).children(&#39;img&#39;).remove();
                             });
 
                             isFullMode    = false;
                         }
                     },
                     resetWall            = function($el) {
-                        var $img        = $el.children(&apos;img&apos;),
+                        var $img        = $el.children(&#39;img&#39;),
                             $descrp        = $img.next();
 
-                        $el.data(&apos;ribbon&apos;,false);
+                        $el.data(&#39;ribbon&#39;,false);
 
                         // reset the image z-index and height
-                        $img.css(&apos;z-index&apos;,1).stop().animate({
-                            height         : $img.data(&apos;originalHeight&apos;)
+                        $img.css(&#39;z-index&#39;,1).stop().animate({
+                            height         : $img.data(&#39;originalHeight&#39;)
                         }, imgAnim.speed,imgAnim.easing);
 
                         // fadeOut the description
                         $descrp.fadeOut();
 
                         // fadeIn all the other images
-                        $iw_thumbs.children(&apos;li&apos;).not($el).animate({opacity : 1}, imgAnim.speed);                                
+                        $iw_thumbs.children(&#39;li&#39;).not($el).animate({opacity : 1}, imgAnim.speed);                                
                     },
                     showFullImage        = function($el) {
                         isFullMode    = true;
 
                         $iw_ribbon_close.hide();
 
-                        var    $img    = $el.children(&apos;img&apos;),
-                            large    = $img.data(&apos;img&apos;),
+                        var    $img    = $el.children(&#39;img&#39;),
+                            large    = $img.data(&#39;img&#39;),
 
                             // add a loading image on top of the image
-                            $loading = $(&apos;&lt;span class=&quot;iw_loading&quot;&gt;&lt;/span&gt;&apos;);
+                            $loading = $(&#39;&lt;span class=&quot;iw_loading&quot;&gt;&lt;/span&gt;&#39;);
 
                         $el.append($loading);
 
                         // preload large image
-                        $(&apos;&lt;img/&gt;&apos;).load(function() {
+                        $(&#39;&lt;img/&gt;&#39;).load(function() {
                             var $largeImage    = $(this);
 
                             $loading.remove();
@@ -382,8 +382,8 @@
                             // animate ribbon in and out
                             $iw_ribbon.stop().animate({
                                 opacity        : 1,
-                                height         : &apos;0px&apos;,
-                                marginTop    : &apos;63px&apos; // half of ribbons height
+                                height         : &#39;0px&#39;,
+                                marginTop    : &#39;63px&#39; // half of ribbons height
                             }, ribbonAnim.speed, function() {
                                 // add the large image to the DOM
                                 $iw_ribbon.prepend($largeImage);
@@ -391,12 +391,12 @@
                                 $iw_ribbon_close.show();
 
                                 $iw_ribbon.animate({
-                                    height         : &apos;100%&apos;,
-                                    marginTop    : &apos;0px&apos;,
-                                    top            : &apos;0px&apos;
+                                    height         : &#39;100%&#39;,
+                                    marginTop    : &#39;0px&#39;,
+                                    top            : &#39;0px&#39;
                                 }, ribbonAnim.speed);
                             });
-                        }).attr(&apos;src&apos;,large);
+                        }).attr(&#39;src&#39;,large);
 
                     },
                     resizeImage            = function($image) {
@@ -450,10 +450,10 @@
                         }
 
                         $image.css({
-                            &apos;width&apos;            : theImage.width + &apos;px&apos;,
-                            &apos;height&apos;        : theImage.height + &apos;px&apos;,
-                            &apos;margin-left&apos;    : -theImage.width / 2 + &apos;px&apos;,
-                            &apos;margin-top&apos;    : -theImage.height / 2 + &apos;px&apos;
+                            &#39;width&#39;            : theImage.width + &#39;px&#39;,
+                            &#39;height&#39;        : theImage.height + &#39;px&#39;,
+                            &#39;margin-left&#39;    : -theImage.width / 2 + &#39;px&#39;,
+                            &#39;margin-top&#39;    : -theImage.height / 2 + &#39;px&#39;
                         });                            
                     };
 
@@ -525,7 +525,7 @@
 		<p><span class="label">作者</span>
 			<a href="https://yangpiena.coding.me" target="_blank">昜丿捺</a>
 			<span title="最后编辑于&nbsp;2019-03-27">2019-03-27</span>
-			，共 23062 字 
+			，共 22920 字 
 		</p>		
 		<!-- <p>null</p> -->
 		
@@ -771,5 +771,21 @@
         
     });
 </script>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<!-- <script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script> -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script>
 <script src="/live2dw/lib/L2Dwidget.min.js?0c58a1486de42ac6cc1c59c7d98ae887"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"log":false,"model":{"jsonPath":"/live2dw/assets/hijiki.model.json"},"display":{"position":"right","width":70,"height":90,"hOffset":-37,"vOffset":-20},"mobile":{"show":false}});</script></body>
 </html>

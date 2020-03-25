@@ -135,7 +135,7 @@
 <div class="main-inner">
     <article class="post" itemscope="" itemtype="http://schema.org/BlogPosting">
         <div class="post-header">
-            <h3 class="post-title">本站目前涉及39个领域</h3>
+            <h3 class="post-title">本站目前涉及41个领域</h3>
         </div>
 		<!-- YPN Del 2019-03-22 -->
         <!-- <p><img src="/images/tags-bg.png" alt="tags-bg"></p> -->
@@ -164,11 +164,15 @@
                 
                 <li><a href="/tags/HAProxy/">HAProxy(6)</a></li>
                 
-                <li><a href="/tags/JavaScript/">JavaScript(1)</a></li>
+                <li><a href="/tags/JavaScript/">JavaScript(2)</a></li>
                 
                 <li><a href="/tags/Kettle/">Kettle(1)</a></li>
                 
                 <li><a href="/tags/Linux/">Linux(8)</a></li>
+                
+                <li><a href="/tags/Markdown/">Markdown(1)</a></li>
+                
+                <li><a href="/tags/MathJax/">MathJax(1)</a></li>
                 
                 <li><a href="/tags/Oracle/">Oracle(2)</a></li>
                 
@@ -362,5 +366,21 @@
         
     });
 </script>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<!-- <script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script> -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script>
 <script src="/live2dw/lib/L2Dwidget.min.js?0c58a1486de42ac6cc1c59c7d98ae887"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"log":false,"model":{"jsonPath":"/live2dw/assets/hijiki.model.json"},"display":{"position":"right","width":70,"height":90,"hOffset":-37,"vOffset":-20},"mobile":{"show":false}});</script></body>
 </html>

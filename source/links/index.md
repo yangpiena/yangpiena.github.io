@@ -31,7 +31,7 @@ description: "记录有用的到的网址"
 
 
 #### 音乐
-[听雨](http://rain.xxoojoke.com/) |  [AeKun](https://www.aekun.com/ )  |  [VIP付费音乐解析下载](http://music.zhuolin.wang/)  |  [网易云音乐](http://music.163.com) | [音乐磁场](https://www.hifini.com/)
+[听雨](http://rain.xxoojoke.com/) |  [AeKun](https://www.aekun.com/ )  |  [VIP付费音乐解析下载](https://music.zhuolin.wang/)  |  [网易云音乐](http://music.163.com) | [音乐磁场](https://www.hifini.com/)
 
 
 #### 电影
@@ -243,6 +243,7 @@ description: "记录有用的到的网址"
 [Hexo常见问题](http://wp.huangshiyang.com/hexo%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88)                                                               |  [Hexo博客优化](http://xwartz.xyz/blog/2016/09/reduce-blog-load-time/)
 [Hexo官方主题](https://hexo.io/themes/)                        |  [Hexo主题](https://github.com/hexojs/hexo/wiki/Themes)
 [Hexo博客主题从Jacman切换到NexT.Mist ](http://codepub.cn/2016/03/20/Hexo-blog-theme-switching-from-Jacman-to-NexT-Mist/)
+[hexo支持mathjax](https://www.cnblogs.com/SHOR/p/9581661.html)
 
 
 #### Idea
@@ -285,10 +286,17 @@ description: "记录有用的到的网址"
 [SUSE Linux 系统加固](https://blog.csdn.net/vianoz/article/details/20864323)
 
 
+#### LabVIEW
+[LabVIEW Unicode Programming Tools](https://forums.ni.com/t5/Reference-Design-Content/LabVIEW-Unicode-Programming-Tools/ta-p/3493021?profile.language=zh-CN)
+[LabVIEW download](http://download.ni.com/)
+[LabVIEW VI解密](https://www.hmilch.net/h/labview)
+
+
 #### Markdown
 [Windows在线markdown工具](https://www.zybuluo.com/mdeditor)
 [Markdown 语法 示例 字体 字号 颜色](http://blog.csdn.net/u011419965/article/details/50536937)
 [Markdown支持的语言](http://blog.csdn.net/peng_hong_fu/article/details/52805408)
+[MathJax](https://math.meta.stackexchange.com/questions/5020/mathjax-basic-tutorial-and-quick-reference)
 
 
 #### Setup Factory

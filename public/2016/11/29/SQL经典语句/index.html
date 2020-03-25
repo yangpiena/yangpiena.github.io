@@ -236,7 +236,7 @@ select a,b,c, from table1 where a not between 数值1 and 数值2
 </code></pre><h2 id="9-in-的使用方法"><a href="#9-in-的使用方法" class="headerlink" title="9. in 的使用方法"></a>9. in 的使用方法</h2><pre><code>select * from table1 where a [not] in (‘值1’,’值2’,’值4’,’值6’)
 </code></pre><h2 id="10-两张关联表，删除主表中已经在副表中没有的信息"><a href="#10-两张关联表，删除主表中已经在副表中没有的信息" class="headerlink" title="10. 两张关联表，删除主表中已经在副表中没有的信息"></a>10. 两张关联表，删除主表中已经在副表中没有的信息</h2><pre><code>delete from table1 where not exists ( select * from table2 where table1.field1=table2.field1 )
 </code></pre><h2 id="11-四表联查问题"><a href="#11-四表联查问题" class="headerlink" title="11. 四表联查问题"></a>11. 四表联查问题</h2><pre><code>select * from a left inner join b on a.a=b.b right inner join c on a.a=c.c inner join d on a.a=d.d where .....
-</code></pre><h2 id="12-日程安排提前五分钟提醒"><a href="#12-日程安排提前五分钟提醒" class="headerlink" title="12. 日程安排提前五分钟提醒"></a>12. 日程安排提前五分钟提醒</h2><pre><code>select * from 日程安排 where datediff(&apos;minute&apos;,f开始时间,getdate())&gt;5
+</code></pre><h2 id="12-日程安排提前五分钟提醒"><a href="#12-日程安排提前五分钟提醒" class="headerlink" title="12. 日程安排提前五分钟提醒"></a>12. 日程安排提前五分钟提醒</h2><pre><code>select * from 日程安排 where datediff(&#39;minute&#39;,f开始时间,getdate())&gt;5
 </code></pre><h2 id="13-一条sql语句搞定数据库分页"><a href="#13-一条sql语句搞定数据库分页" class="headerlink" title="13. 一条sql语句搞定数据库分页"></a>13. 一条sql语句搞定数据库分页</h2><pre><code>select top 10 b.* from (select top 20 主键字段,排序字段 from 表名 order by 排序字段 desc) a,表名 b where b.主键字段 = a.主键字段 order by a.排序字段
 </code></pre><p>关于数据库分页：</p>
 <pre><code>declare @start int,@end int
@@ -272,10 +272,11 @@ add column_b int identity(1,1)    --添加一个自增列
 delete from tablename where column_b not in(
 select max(column_b) from tablename group by column1,column2,...)
 alter table tablename drop column column_b
-</code></pre><h2 id="20-列出数据库里所有的表名"><a href="#20-列出数据库里所有的表名" class="headerlink" title="20. 列出数据库里所有的表名"></a>20. 列出数据库里所有的表名</h2><pre><code>select name from sysobjects where type=&apos;U&apos; // U代表用户
-</code></pre><h2 id="21-列出表里的所有的列名"><a href="#21-列出表里的所有的列名" class="headerlink" title="21. 列出表里的所有的列名"></a>21. 列出表里的所有的列名</h2><pre><code>select name from syscolumns where id=object_id(&apos;TableName&apos;)
+</code></pre><h2 id="20-列出数据库里所有的表名"><a href="#20-列出数据库里所有的表名" class="headerlink" title="20. 列出数据库里所有的表名"></a>20. 列出数据库里所有的表名</h2><pre><code>select name from sysobjects where type=&#39;U&#39; // U代表用户
+</code></pre><h2 id="21-列出表里的所有的列名"><a href="#21-列出表里的所有的列名" class="headerlink" title="21. 列出表里的所有的列名"></a>21. 列出表里的所有的列名</h2><pre><code>select name from syscolumns where id=object_id(&#39;TableName&#39;)
 </code></pre><h2 id="22-列示type、vender、pcs字段，以type字段排列，case可以方便地实现多重选择，类似select-中的case。"><a href="#22-列示type、vender、pcs字段，以type字段排列，case可以方便地实现多重选择，类似select-中的case。" class="headerlink" title="22. 列示type、vender、pcs字段，以type字段排列，case可以方便地实现多重选择，类似select 中的case。"></a>22. 列示type、vender、pcs字段，以type字段排列，case可以方便地实现多重选择，类似select 中的case。</h2><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> <span class="keyword">type</span>,<span class="keyword">sum</span>(<span class="keyword">case</span> vender <span class="keyword">when</span> <span class="string">'A'</span> <span class="keyword">then</span> pcs <span class="keyword">else</span> <span class="number">0</span> <span class="keyword">end</span>),<span class="keyword">sum</span>(<span class="keyword">case</span> vender <span class="keyword">when</span> <span class="string">'C'</span> <span class="keyword">then</span> pcs <span class="keyword">else</span> <span class="number">0</span> <span class="keyword">end</span>),<span class="keyword">sum</span>(<span class="keyword">case</span> vender <span class="keyword">when</span> <span class="string">'B'</span> <span class="keyword">then</span> pcs <span class="keyword">else</span> <span class="number">0</span> <span class="keyword">end</span>) <span class="keyword">FROM</span> tablename <span class="keyword">group</span> <span class="keyword">by</span> <span class="keyword">type</span></span><br></pre></td></tr></table></figure>
 <p>显示结果：</p>
+<div class="table-container">
 <table>
 <thead>
 <tr>
@@ -317,6 +318,7 @@ alter table tablename drop column column_b
 </tr>
 </tbody>
 </table>
+</div>
 <h2 id="23-初始化表"><a href="#23-初始化表" class="headerlink" title="23. 初始化表"></a>23. 初始化表</h2><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">TRUNCATE</span> <span class="keyword">TABLE</span> table1</span><br></pre></td></tr></table></figure>
 <h2 id="24-选择从10到15的记录"><a href="#24-选择从10到15的记录" class="headerlink" title="24. 选择从10到15的记录"></a>24. 选择从10到15的记录</h2><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> top <span class="number">5</span> * <span class="keyword">from</span> (<span class="keyword">select</span> top <span class="number">15</span> * <span class="keyword">from</span> <span class="keyword">table</span> <span class="keyword">order</span> <span class="keyword">by</span> <span class="keyword">id</span> <span class="keyword">asc</span>) table_别名 <span class="keyword">order</span> <span class="keyword">by</span> <span class="keyword">id</span> <span class="keyword">desc</span></span><br></pre></td></tr></table></figure>
 <h2 id="25-临时表"><a href="#25-临时表" class="headerlink" title="25. 临时表"></a>25. 临时表</h2><h4 id="创建临时表"><a href="#创建临时表" class="headerlink" title="创建临时表"></a>创建临时表</h4><ul>
@@ -345,6 +347,7 @@ alter table tablename drop column column_b
 <h2 id="32-同步表数据"><a href="#32-同步表数据" class="headerlink" title="32. 同步表数据"></a>32. 同步表数据</h2><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">INSERT</span> 表<span class="number">2</span> </span><br><span class="line"><span class="keyword">SELECT</span> * <span class="keyword">FROM</span> 表<span class="number">1</span> <span class="keyword">AS</span> a <span class="keyword">WHERE</span> <span class="keyword">NOT</span> <span class="keyword">EXISTS</span>(<span class="keyword">SELECT</span> <span class="number">1</span> <span class="keyword">FROM</span> 表<span class="number">2</span> <span class="keyword">WHERE</span> <span class="keyword">ID</span> = a.ID);</span><br></pre></td></tr></table></figure>
 <h2 id="33-判断某列中是否包含中文字符或者英文字符"><a href="#33-判断某列中是否包含中文字符或者英文字符" class="headerlink" title="33. 判断某列中是否包含中文字符或者英文字符"></a>33. 判断某列中是否包含中文字符或者英文字符</h2><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> * <span class="keyword">FROM</span> 表名 <span class="keyword">WHERE</span> 某列 <span class="keyword">LIKE</span> <span class="string">'%[吖-座]%'</span></span><br><span class="line"><span class="keyword">SELECT</span> * <span class="keyword">FROM</span> 表名 <span class="keyword">WHERE</span> 某列 <span class="keyword">LIKE</span> <span class="string">'%[a-z]%'</span></span><br></pre></td></tr></table></figure>
 <h2 id="34-行转列，将多行数据合并成一行（SQL-SERVER-2005以上支持）"><a href="#34-行转列，将多行数据合并成一行（SQL-SERVER-2005以上支持）" class="headerlink" title="34. 行转列，将多行数据合并成一行（SQL SERVER 2005以上支持）"></a>34. 行转列，将多行数据合并成一行（SQL SERVER 2005以上支持）</h2><p>例如，表Table1中有两列数据：</p>
+<div class="table-container">
 <table>
 <thead>
 <tr>
@@ -375,7 +378,9 @@ alter table tablename drop column column_b
 </tr>
 </tbody>
 </table>
+</div>
 <p>行转列，想变成如下格式：</p>
+<div class="table-container">
 <table>
 <thead>
 <tr>
@@ -394,6 +399,7 @@ alter table tablename drop column column_b
 </tr>
 </tbody>
 </table>
+</div>
 <p>可用如下SQL实现：<br><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">  <span class="keyword">SELECT</span> code, <span class="keyword">name</span> = (<span class="keyword">STUFF</span>((<span class="keyword">SELECT</span> <span class="string">','</span> + <span class="keyword">name</span> </span><br><span class="line">                                <span class="keyword">FROM</span> Table1 </span><br><span class="line">                               <span class="keyword">WHERE</span> code = a.code <span class="keyword">FOR</span> <span class="keyword">xml</span> <span class="keyword">PATH</span>(<span class="string">''</span>)),<span class="number">1</span>,<span class="number">1</span>,<span class="string">''</span>))</span><br><span class="line">    <span class="keyword">FROM</span> Table1 a </span><br><span class="line"><span class="keyword">GROUP</span> <span class="keyword">BY</span> code</span><br></pre></td></tr></table></figure></p>
 <h2 id="35-去除字段中空格、换行符、回车符"><a href="#35-去除字段中空格、换行符、回车符" class="headerlink" title="35. 去除字段中空格、换行符、回车符"></a>35. 去除字段中空格、换行符、回车符</h2><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">UPDATE</span> xx_sjb <span class="keyword">SET</span> sl = <span class="keyword">LTRIM</span>(<span class="keyword">RTRIM</span>(<span class="keyword">REPLACE</span>(<span class="keyword">REPLACE</span>(sl, <span class="built_in">CHAR</span>(<span class="number">10</span>), <span class="string">''</span>), <span class="built_in">CHAR</span> (<span class="number">13</span>), <span class="string">''</span>)))</span><br></pre></td></tr></table></figure>
 <hr>
@@ -416,6 +422,7 @@ alter table tablename drop column column_b
 <h2 id="9-存储更改全部表"><a href="#9-存储更改全部表" class="headerlink" title="9. 存储更改全部表"></a>9. 存储更改全部表</h2><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">CREATE</span> <span class="keyword">PROCEDURE</span> dbo.User_ChangeObjectOwnerBatch</span><br><span class="line">@OldOwner <span class="keyword">as</span> <span class="keyword">NVARCHAR</span>(<span class="number">128</span>),</span><br><span class="line">@NewOwner <span class="keyword">as</span> <span class="keyword">NVARCHAR</span>(<span class="number">128</span>)</span><br><span class="line"><span class="keyword">AS</span></span><br><span class="line"><span class="keyword">DECLARE</span> @<span class="keyword">Name</span>    <span class="keyword">as</span> <span class="keyword">NVARCHAR</span>(<span class="number">128</span>)</span><br><span class="line"><span class="keyword">DECLARE</span> @Owner   <span class="keyword">as</span> <span class="keyword">NVARCHAR</span>(<span class="number">128</span>)</span><br><span class="line"><span class="keyword">DECLARE</span> @OwnerName   <span class="keyword">as</span> <span class="keyword">NVARCHAR</span>(<span class="number">128</span>)</span><br><span class="line"><span class="keyword">DECLARE</span> curObject <span class="keyword">CURSOR</span> <span class="keyword">FOR</span> </span><br><span class="line"><span class="keyword">select</span> <span class="string">'Name'</span>    = <span class="keyword">name</span>,</span><br><span class="line">   <span class="string">'Owner'</span>    = user_name(uid)</span><br><span class="line"><span class="keyword">from</span> sysobjects</span><br><span class="line"><span class="keyword">where</span> user_name(uid)=@OldOwner</span><br><span class="line"><span class="keyword">order</span> <span class="keyword">by</span> <span class="keyword">name</span></span><br><span class="line"><span class="keyword">OPEN</span>   curObject</span><br><span class="line"><span class="keyword">FETCH</span> <span class="keyword">NEXT</span> <span class="keyword">FROM</span> curObject <span class="keyword">INTO</span> @<span class="keyword">Name</span>, @Owner</span><br><span class="line"><span class="keyword">WHILE</span>(@@FETCH_STATUS=<span class="number">0</span>)</span><br><span class="line"><span class="keyword">BEGIN</span>     </span><br><span class="line"><span class="keyword">if</span> @Owner=@OldOwner </span><br><span class="line"><span class="keyword">begin</span></span><br><span class="line">   <span class="keyword">set</span> @OwnerName = @OldOwner + <span class="string">'.'</span> + <span class="keyword">rtrim</span>(@<span class="keyword">Name</span>)</span><br><span class="line">   exec sp_changeobjectowner @OwnerName, @NewOwner</span><br><span class="line"><span class="keyword">end</span></span><br><span class="line"><span class="comment">-- select @name,@NewOwner,@OldOwner</span></span><br><span class="line"><span class="keyword">FETCH</span> <span class="keyword">NEXT</span> <span class="keyword">FROM</span> curObject <span class="keyword">INTO</span> @<span class="keyword">Name</span>, @Owner</span><br><span class="line"><span class="keyword">END</span></span><br><span class="line"><span class="keyword">close</span> curObject</span><br><span class="line"><span class="keyword">deallocate</span> curObject</span><br><span class="line"><span class="keyword">GO</span></span><br></pre></td></tr></table></figure>
 <h2 id="10-SQL-SERVER中直接循环写入数据"><a href="#10-SQL-SERVER中直接循环写入数据" class="headerlink" title="10. SQL SERVER中直接循环写入数据"></a>10. SQL SERVER中直接循环写入数据</h2><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">declare</span> @i <span class="built_in">int</span></span><br><span class="line"><span class="keyword">set</span> @i=<span class="number">1</span></span><br><span class="line"><span class="keyword">while</span> @i&lt;<span class="number">30</span></span><br><span class="line"><span class="keyword">begin</span></span><br><span class="line"><span class="keyword">insert</span> <span class="keyword">into</span> <span class="keyword">test</span> (userid) <span class="keyword">values</span>(@i)</span><br><span class="line"><span class="keyword">set</span> @i=@i+<span class="number">1</span></span><br><span class="line"><span class="keyword">end</span></span><br></pre></td></tr></table></figure>
 <p>案例：有如下表，要求就表中所有沒有及格的成绩，在每次增长0.1的基础上，使他们刚好及格:</p>
+<div class="table-container">
 <table>
 <thead>
 <tr>
@@ -442,6 +449,7 @@ alter table tablename drop column column_b
 </tr>
 </tbody>
 </table>
+</div>
 <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">while((<span class="keyword">select</span> <span class="keyword">min</span>(score) <span class="keyword">from</span> tb_table)&lt;<span class="number">60</span>)</span><br><span class="line"><span class="keyword">begin</span></span><br><span class="line"><span class="keyword">update</span> tb_table <span class="keyword">set</span> score =score*<span class="number">1.01</span></span><br><span class="line"><span class="keyword">where</span> score&lt;<span class="number">60</span></span><br><span class="line"><span class="keyword">if</span> (<span class="keyword">select</span> <span class="keyword">min</span>(score) <span class="keyword">from</span> tb_table)&gt;<span class="number">60</span></span><br><span class="line">break</span><br><span class="line"><span class="keyword">else</span></span><br><span class="line">continue</span><br><span class="line"><span class="keyword">end</span></span><br></pre></td></tr></table></figure>
 <h2 id="11-查看数据库属性"><a href="#11-查看数据库属性" class="headerlink" title="11. 查看数据库属性"></a>11. 查看数据库属性</h2><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sp_helpdb 数据库名</span><br></pre></td></tr></table></figure>
 <h2 id="12-按姓氏笔画排序"><a href="#12-按姓氏笔画排序" class="headerlink" title="12. 按姓氏笔画排序:"></a>12. 按姓氏笔画排序:</h2><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">Select</span> * <span class="keyword">From</span> TableName <span class="keyword">Order</span> <span class="keyword">By</span> CustomerName <span class="keyword">Collate</span> Chinese_PRC_Stroke_ci_as //从少到多</span><br></pre></td></tr></table></figure>
@@ -582,7 +590,7 @@ alter table tablename drop column column_b
 		<p><span class="label">作者</span>
 			<a href="https://yangpiena.coding.me" target="_blank">昜丿捺</a>
 			<span title="最后编辑于&nbsp;2016-11-29">2016-11-29</span>
-			，共 19694 字 
+			，共 19696 字 
 		</p>		
 		<!-- <p>null</p> -->
 		
@@ -828,5 +836,21 @@ alter table tablename drop column column_b
         
     });
 </script>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<!-- <script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script> -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script>
 <script src="/live2dw/lib/L2Dwidget.min.js?0c58a1486de42ac6cc1c59c7d98ae887"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"log":false,"model":{"jsonPath":"/live2dw/assets/hijiki.model.json"},"display":{"position":"right","width":70,"height":90,"hOffset":-37,"vOffset":-20},"mobile":{"show":false}});</script></body>
 </html>
