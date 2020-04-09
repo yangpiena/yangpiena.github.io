@@ -42,26 +42,11 @@ description: "记录有用的到的网址"
 
 
 #### 电子书
-[鸠摩搜索](https://www.jiumodiary.com/) ：电子书搜索引擎，提供各类电子书搜索下载，有多种格式。
-[Library Genesis](http://gen.lib.rus.ec/) ：英文电子书搜索引擎，可搜索英文原版的电子书，格式包含 PDF、MOBI 和 EPUB。
-[i-Book.in](https://book.tstrs.me/) ： 基于索引IPFS链接的电子书搜索引擎。
-[epubee](http://cn.epubee.com/) ：在线电子书转换器，同时也推荐一些电子书下载。
-[书单网](https://www.shudan.vip/) ：电子书搜索网站，抓取第三方网站的资源，也有很多资源是通过城通网赚网盘下载。
-[书舟网](http://kindle.archiew.top/) ：电子书搜索下载网站，资源通过城通网赚网盘下载。
-[Mobilism](https://forum.mobilism.org/viewforum.php?f=19) ：电子书论坛，提供英文原版电子书下载。
-[七彩英语](http://www.qcenglish.com/) ：提供PDF或TXT格式的英文原版电子书下载。
-[ePUBw](https://epubw.com) ：多格式电子书下载网站，百度网盘分享下载。
-[好读](http://www.haodoo.net/) ：多格式电子书下载网站，很老的一个站。
-[读书369](http://www.dushu369.com) ：基于名著小说在线阅读网站。
-[100本](https://www.100ben.net/) ：电子书在线阅读网站，整理了一生必读的100本书。
-[云海电子图书馆](http://www.pdfbook.cn/) ：基于城通网赚网盘下载的电子书网站。
-[中医学电子书](https://github.com/scienceasdf/medical-books/releases) ：貌似都是PDF格式的，作者一直还在更新中。
-[医学电子书在线阅读](https://yixueshu.gitee.io/) ：不错的医学电子书在线阅读网站，体验不错。
-[编程随想](https://github.com/programthink/books) ：基于编程随想博主收录的电子书，多学科。
-[A+医学百科](http://www.a-hospital.com/) ：在线医学百科全书。
-[全历史](https://www.allhistory.com/) ： 全方位了解历史的网站，也是一个不错的网站。
-[瑞文网教材](https://www.ruiwen.com/jiaocai/) ：提供人教版、北师大、苏教版、沪教版、浙教版、鲁科版、仁爱版英语等电子课本在线阅读。 
-[人教版中小学教材](https://bp.pep.com.cn/jc/) ：人民教育出版社提供的中小学教材电子版下载。（转自：免费吧 &raquo; [电子书下载网站大汇总](https://www.mianfeib.me/ebook-download-website.html)）
+[鸠摩搜索](https://www.jiumodiary.com/ "电子书搜索引擎，提供各类电子书搜索下载，有多种格式")  |  [Library Genesis](http://gen.lib.rus.ec/ "英文电子书搜索引擎，可搜索英文原版的电子书，格式包含 PDF、MOBI 和 EPUB")  |  [i-Book.in](https://book.tstrs.me/ " 基于索引IPFS链接的电子书搜索引擎")  |  [epubee](http://cn.epubee.com/ "在线电子书转换器，同时也推荐一些电子书下载")
+[书单网](https://www.shudan.vip/ "电子书搜索网站，抓取第三方网站的资源，也有很多资源是通过城通网赚网盘下载")  |  [书舟网](http://kindle.archiew.top/ "电子书搜索下载网站，资源通过城通网赚网盘下载")  |  [Mobilism](https://forum.mobilism.org/viewforum.php?f=19 "电子书论坛，提供英文原版电子书下载")  |  [七彩英语](http://www.qcenglish.com/ "提供PDF或TXT格式的英文原版电子书下载")
+[ePUBw](https://epubw.com "多格式电子书下载网站，百度网盘分享下载")  |  [好读](http://www.haodoo.net/ "多格式电子书下载网站，很老的一个站")  |  [读书369](http://www.dushu369.com "基于名著小说在线阅读网站")  |  [100本](https://www.100ben.net/ "电子书在线阅读网站，整理了一生必读的100本书")
+[云海电子图书馆](http://www.pdfbook.cn/ "基于城通网赚网盘下载的电子书网站")  |  [中医学电子书](https://github.com/scienceasdf/medical-books/releases "貌似都是PDF格式的，作者一直还在更新中")  |  [医学电子书在线阅读](https://yixueshu.gitee.io/ "不错的医学电子书在线阅读网站，体验不错")  |  [编程随想](https://github.com/programthink/books "基于编程随想博主收录的电子书，多学科")
+[A+医学百科](http://www.a-hospital.com/ "在线医学百科全书")  |  [全历史](https://www.allhistory.com/ " 全方位了解历史的网站，也是一个不错的网站")  |  [瑞文网教材](https://www.ruiwen.com/jiaocai/ "提供人教版、北师大、苏教版、沪教版、浙教版、鲁科版、仁爱版英语等电子课本在线阅读")   |  [人教版中小学教材](https://bp.pep.com.cn/jc/ "人民教育出版社提供的中小学教材电子版下载（转自：免费吧 &raquo; 电子书下载网站大汇总(https://www.mianfeib.me/ebook-download-website.html)）")
 
 
 #### 游戏
