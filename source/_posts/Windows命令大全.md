@@ -1,5 +1,5 @@
 ---
-title: Windows命令学习
+title: Windows命令大全
 layout: post
 comments: true
 date: 2016-11-24 12:25:31

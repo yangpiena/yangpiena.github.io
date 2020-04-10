@@ -1,10 +1,10 @@
 ---
-title: FPSpread之fpComboAdo的初始化
+title: fpSpread之fpComboAdo的初始化
 layout: post
 comments: true
 date: 2016-12-22 11:53:28
 categories: 技术
-tags: [FPSpread]
+tags: [fpSpread]
 keywords: 初始化
 description:
 ---

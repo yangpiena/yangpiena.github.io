@@ -1,10 +1,10 @@
 ---
-title: FPSpread属性说明
+title: fpSpread属性说明
 layout: post
 comments: true
 date: 2016-12-22 11:06:35
 categories: 技术
-tags: [FPSpread, 属性]
+tags: [fpSpread, 属性]
 keywords:
 description:
 ---
@@ -67,30 +67,41 @@ description:
 |`/p`											|打印属性：页码
 |`/date`										|打印属性：日期
 |`/time`										|打印属性：时间
-打印实例
-```vb
-With Sg2
-    Sg2.MaxRows = Mrec.RecordCount
-    Set Sg2.DataSource = Mrec
-    .ColWidth(1) = 9
-    .ColWidth(2) = 8
-    .ColWidth(3) = 8
-    .ColWidth(4) = 33
-    .ColWidth(5) = 33
-End With
 
-Private Sub fpSpreadPrint()
-    Dim Tsbj, Txbj, Tzbj, Tybj, Ti As Long
-    Dim tableHead, tableBodyRow1, tableBodyRow2, tableFoot As String
+打印实例（VB6.0）：
+```vb
+'给表格fpSpread加载数据
+Private Sub LoadfpSpread()
+    Call CloseMRec
+    MRec.Open "SELECT * FROM Table", MConn, 1, 3
+	With fpS1
+		.MaxRows = Mrec.RecordCount
+		If MRec.RecordCount > 0 Then
+			Set .DataSource = Mrec
+			.ColWidth(1) = 9
+			.ColWidth(2) = 8
+			.ColWidth(3) = 8
+			.ColWidth(4) = 33
+			.ColWidth(5) = 33
+		End If
+	End With
+End Sub
+
+'打印fpSpread
+Private Sub PrintfpSpread()
+    Dim tableHead     As String
+    Dim tableBodyRow1 As String
+    Dim tableBodyRow2 As String
+    Dim tableFoot     As String
     
-    With Sg2
-        Dim customerName, f_orderNo, code, operator, operatDate, repealReason
-        Sg1.GetText 1, Sg1.activeRow, code
-        Sg1.GetText 2, Sg1.activeRow, f_orderNo
-        Sg1.GetText 3, Sg1.activeRow, customerName
-        Sg1.GetText 4, Sg1.activeRow, operator
-        Sg1.GetText 5, Sg1.activeRow, operatDate
-        Sg1.GetText 6, Sg1.activeRow, repealReason
+    With fpS1
+        Dim customerName, forderNo, code, operator, operatDate, repealReason		
+        fpS2.GetText 1, fpS2.activeRow, code
+        fpS2.GetText 2, fpS2.activeRow, forderNo
+        fpS2.GetText 3, fpS2.activeRow, customerName
+        fpS2.GetText 4, fpS2.activeRow, operator
+        fpS2.GetText 5, fpS2.activeRow, operatDate
+        fpS2.GetText 6, fpS2.activeRow, repealReason
         
         .MaxRows = .MaxRows + 1
         .SetText 2, .MaxRows, "撤销依据"
@@ -104,23 +115,19 @@ Private Sub fpSpreadPrint()
         .Row = 1
         .PrintType = PrintTypeCellRange
         
-        Tsbj = 9
-        Txbj = 5
-        Tzbj = 8
-        Tybj = 6
-        Ti = 56.7
-        .PrintMarginTop = Tsbj * Ti
-        .PrintMarginBottom = Txbj * Ti
-        .PrintMarginLeft = Tzbj * Ti
-        .PrintMarginRight = Tybj * Ti
+        .PrintMarginTop = 540
+        .PrintMarginBottom = 300
+        .PrintMarginLeft = 480
+        .PrintMarginRight = 480
         
         tableHead = "合同撤销通知单/n/n"
-        tableBodyRow1 = "单据编号：" & code & "      " & "份合同号：" & f_orderNo & "      " & "订货单位名称：" & customerName & "" & "/n/n"
+        tableBodyRow1 = "单据编号：" & code & "      " & "份合同号：" & forderNo & "      " & "订货单位名称：" & customerName & "" & "/n/n"
         tableBodyRow2 = "部门领导：" & "                " & "经办人：" & operator & "            " & "撤销日期：" & operatDate & "/n"
         
         .PrintHeader = "/c/fb1/fz""20""" & tableHead & "/l/fb0/fz""10""" & tableBodyRow1 & tableBodyRow2
         .PrintFooter = "/n/c/p//" & .PrintPageCount
-                
+		
+        '调用打印预览界面
         FormPrint.PrintState = False
         FormPrint.PrintCount = 0
         FormPrint.SSP.hWndSpread = .hwnd
@@ -132,6 +139,5 @@ Private Sub fpSpreadPrint()
             FormPrint.PrintState = False
         End If
     End With
-    Call SG1_Click(Sg1.Col, Sg1.activeRow)
 End Sub
 ```

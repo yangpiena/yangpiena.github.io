@@ -5,7 +5,7 @@ categories: 技术
 timestamp: 1586482724
 date: 2020-04-10 09:38:44
 authorDesc:
-tags: [Linux, 命令, vi命令]
+tags: [Linux, 命令]
 description:
 ---
 # vi全屏幕编辑器
@@ -13,7 +13,7 @@ description:
 
 vi(Visual)是以视觉为导向的全屏幕编辑器、共分为三种方式（mode):
 - command方式：
-任何输入都会作为编辑命令，而不会出现在屏幕上，若输入错误则有“岬”的声音；任何输入都引起立即反映 
+任何输入都会作为编辑命令，而不会出现在屏幕上，若输入错误则有“岬”的声音；任何输入都引起立即反映。
 - insert方式：
 任何输入的数据都置于编辑寄存器。在command方式下输入（I,a,A等）,可进入insert方式，insert方式下按ESC，可跳回command方式。
 - escape方式：
