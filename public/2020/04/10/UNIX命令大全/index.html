@@ -1,0 +1,507 @@
+<!DOCTYPE HTML>
+<html class="no-js" lang="zh-CN">
+<head><meta name="generator" content="Hexo 3.8.0">
+    <!--[if lte IE 9]>
+<meta http-equiv="refresh" content="0;url=http://yangpiena.coding.me/warn.html">
+<![endif]-->
+<meta charset="utf-8">
+<meta http-equiv="X-DNS-Prefetch-Control" content="on">
+<link rel="dns-prefetch" href="http://yangpiena.coding.me">
+<link rel="dns-prefetch" href="//www.google-analytics.com">
+<link rel="prefetch" href="http://yangpiena.coding.me">
+<link rel="prefetch" href="//www.google-analytics.com">
+
+
+<link rel="prerender" href="http://yangpiena.coding.me">
+
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<meta name="renderer" content="webkit">
+<meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=no">
+<meta http-equiv="mobile-agent" content="format=html5; url=http://yangpiena.coding.me">
+<meta name="author" content="昜丿捺">
+<link rel="stylesheet" href="/css/JSimple.css">
+
+<link rel="shortcut icon" href="/img/avatar/favicon.ico">
+
+
+<title>unix命令大全 - 昜丿捺</title>
+
+<meta name="keywords" content="undefined">
+
+<meta name="description " content="没有阳光，沉默而居">
+
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({
+            tex2jax: {
+                inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+                processEscapes: true
+            }
+        });
+    </script>
+
+
+<!-- YPN Add 2019-03-25 增加相册所需js -->
+<script type="text/javascript" src="/js/jquery-1.11.3.min.js"></script>
+    
+
+    
+
+</head>
+<body>
+<div id="nav">
+    <nav class="nav-menu">
+        <a class="site-name current" href="/" title="昜">昜</a>
+        <a class="site-index current" href="/"><i class="fa fa-home"></i><span>首页</span></a>
+        <a href="/archives" title="归档"><i class="fa fa-archives"></i><span>归档</span></a>
+        <a href="/tags" title="标签"><i class="fa fa-tags"></i><span>标签</span></a>
+        <!-- custom single page of menus -->
+        
+        
+        <a href="/links" title="收藏">
+            <i class="fa fa-star"></i>
+            <span>收藏</span>
+        </a>
+        
+        
+        <a href="/photos" title="相册">
+            <i class="fa fa-camera"></i>
+            <span>相册</span>
+        </a>
+        
+    </nav>
+</div>
+
+<div class="nav-user">
+    <a class="btn-search" href="#"><i class="fa fa-search"></i></a>
+    <a class="btn-read-mode" href="#"><i class="fa fa-sun-o"></i></a>
+	<!-- YPN Del 2019-03-22 -->
+    <!-- <a class="btn-sns-qr" href="javascript:"><i class="fa fa-telegram"></i></a> -->
+</div>
+
+<div id="wrapper" class="clearfix">
+    <div id="body">
+        <div class="main" id="main">
+            <div id="cover">
+    <div class="cover-img"></div>
+    <div class="cover-info">
+        
+        <h1 class="cover-siteName">昜丿捺</h1>
+        <h3 class="cover-siteTitle">个人博客</h3>
+        <p class="cover-siteDesc">没有阳光，沉默而居</p>
+        <div class="cover-sns">
+            
+    &nbsp;&nbsp;<div class="btn btn-github">
+        <a href="https://github.com/yangpiena" target="_blank" title="github" ref="friend">
+            <i class="fa fa-github"></i>
+        </a>
+    </div>
+
+    &nbsp;&nbsp;<div class="btn btn-github-alt">
+        <a href="https://coding.net/u/yangpiena" target="_blank" title="github-alt" ref="friend">
+            <i class="fa fa-github-alt"></i>
+        </a>
+    </div>
+
+    &nbsp;&nbsp;<div class="btn btn-weibo">
+        <a href="http://weibo.com/yangpiena" target="_blank" title="weibo" ref="friend">
+            <i class="fa fa-weibo"></i>
+        </a>
+    </div>
+
+    &nbsp;&nbsp;<div class="btn btn-envelope">
+        <a href="yangpiena@163.com" target="_blank" title="envelope" ref="friend">
+            <i class="fa fa-envelope"></i>
+        </a>
+    </div>
+
+
+        </div>
+    </div>
+</div>
+
+            <div class="page-title">
+    <ul>
+        <li><a href="/">最近</a></li>
+        
+            
+        
+        <li class="page-search">
+    <form id="search" class="search-form">
+        <input type="text" readonly="readonly" id="local-search-input-tip" placeholder="点击或按F键搜索">
+        <button type="button" disabled="disabled" class="search-form-submit"><i class="fa fa-search"></i></button>
+    </form>
+</li>
+
+    </ul>
+</div>
+<div class="main-inner">
+    <article class="post" itemscope="" itemtype="http://schema.org/BlogPosting">
+        <div class="post-header">
+            <h2 class="post-title" style="text-align: center">UNIX命令大全</h2>
+			<div class="post-meta" style="text-align: center">
+				<i class="fa fa-calendar-o"></i>&nbsp;
+				<span title="最后编辑于&nbsp;2020-04-10">2020-04-10</span>
+				<!-- YPN Edit 2019-03-25 -->
+				<!-- 您是第&nbsp;<span id="busuanzi_value_page_pv"><i class="fa fa-spinner fa-spin"></i></span>位看到它们的小伙伴 -->
+				&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa fa-eye"></i>&nbsp;
+				<span id="busuanzi_value_page_pv"><i class="fa fa-spinner fa-spin"></i></span>&nbsp;
+			</div>
+        </div>
+        <div class="post-content markdown-body">
+            <h3 id="1、root登陆"><a href="#1、root登陆" class="headerlink" title="1、root登陆"></a>1、root登陆</h3><p>一般系统不允许root登陆 ，可以用另一个用户登陆后再用 su 切换到root用户<br>如：</p>
+<pre><code>zhgj-dc-/tmp/108434-17&gt; su #回车
+Password:   #输入密码 成了root登陆了
+</code></pre><h3 id="2、solaris补丁的安装"><a href="#2、solaris补丁的安装" class="headerlink" title="2、solaris补丁的安装"></a>2、solaris补丁的安装</h3><p>solaris的补丁分为两类，一类是Point补丁，另一类是Cluster补丁</p>
+<pre><code>ls /var/sadm/patch #查看安装的补丁    
+</code></pre><p>patchadd用来安装解压缩后的补丁程序。patchadd通过调用pkgadd 命令来安装补丁。安装补丁前，我们需要将补丁解压到/var/tmp下安装。安装补丁如下命令： </p>
+<pre><code>cd /var/tmp
+patchadd 110668-04
+</code></pre><p>同样，solaris提供了另一命令来查看已安装的patch：</p>
+<pre><code>showrev -p
+</code></pre><p>补丁的卸载用pkgrm 命令</p>
+<h3 id="3、cp"><a href="#3、cp" class="headerlink" title="3、cp"></a>3、cp</h3><pre><code>cp &lt;源文件&gt; &lt;目的文件&gt; 
+</code></pre><p>相当于DOS的copy,和DOS的copy不一样的是,必须指定源文件名和目的文件名.cp -r &lt;源文件&gt; &lt;目的文件&gt; 相当于DOS的xcopy,带子目录的拷贝.例如:cp file1 file2 将文件 file1 复制成 file2 </p>
+<pre><code>cp file1 dir1 将文件 file1 复制到目录 dir1 下,文件名仍为 file1. 
+cp -r /tmp/file1 . 将目录 /tmp 下的文件 file1 复制到当前目录下，文件名仍为 file1。 注意有个.
+cp /tmp/file1 file2 将目录 /tmp 下的文件 file1 复制到现行目录下，文件名为 file2 
+cp -r dir1 dir2 复制整个目录。若目录 dir2 已经存在，则将目录 dir1，及其所有文件和子目录，复制到目录 dir2 下，新目录名称为 dir1，即dir2/dir1。若目录 dir2 不存在，则将dir1，及其所有文件和子目录，复制为目录 dir2。 
+</code></pre><h3 id="4、ftp命令"><a href="#4、ftp命令" class="headerlink" title="4、ftp命令"></a>4、ftp命令</h3><pre><code>ftp ip    
+</code></pre><p>输入用户名<br>输入密码</p>
+<pre><code>bi（改成2进制）
+get 文件名 #下载文件
+</code></pre><h3 id="5、查看磁盘空间"><a href="#5、查看磁盘空间" class="headerlink" title="5、查看磁盘空间"></a>5、查看磁盘空间</h3><pre><code>df -k
+</code></pre><p>保证以下几个磁盘分区的使用率最多不超过60％：</p>
+<pre><code>/opt，/var，/tmp
+</code></pre><p>如果发现使用率过高的磁盘，在相应目录下执行命令：</p>
+<pre><code>du -k
+</code></pre><p>找出大的文件和目录，对无用的文件执行删除操作。</p>
+<h3 id="6、打包、压缩、解压"><a href="#6、打包、压缩、解压" class="headerlink" title="6、打包、压缩、解压"></a>6、打包、压缩、解压</h3><p>.tar</p>
+<pre><code>解包：tar -xvf FileName.tar
+打包：tar -cvf FileName.tar DirName（打包目录）
+</code></pre><p>（注：tar是打包，不是压缩！）</p>
+<p>.Z</p>
+<pre><code>解压：uncompress FileName.Z
+压缩：compress FileName
+</code></pre><p>.zip</p>
+<pre><code>解压：unzip FileName.zip
+压缩：zip FileName.zip DirName
+</code></pre><p>.gz</p>
+<pre><code>解压1：gunzip FileName.gz
+解压2：gzip -d FileName.gz
+压缩：gzip FileName.tar.gz
+解压：tar zxvf FileName.tar.gz
+压缩：tar zcvf FileName.tar.gz DirName
+</code></pre><p>.bz2</p>
+<pre><code>解压1：bzip2 -d FileName.bz2
+解压2：bunzip2 FileName.bz2
+压缩： bzip2 -z FileName.tar.bz2
+解压：tar jxvf FileName.tar.bz2
+压缩：tar jcvf FileName.tar.bz2 DirName
+</code></pre><p>.bz</p>
+<pre><code>解压1：bzip2 -d FileName.bz
+解压2：bunzip2 FileName.bz
+压缩：未知.tar.bz
+解压：tar jxvf FileName.tar.bz
+压缩：未知
+</code></pre><p>.tar.Z</p>
+<pre><code>解压：tar Zxvf FileName.tar.Z
+压缩：tar Zcvf FileName.tar.Z DirName
+</code></pre><p>.tgz</p>
+<pre><code>解压：tar zxvf FileName.tgz
+压缩：未知.tar.tgz
+解压：tar zxvf FileName.tar.tgz
+压缩：tar zcvf FileName.tar.tgz FileName
+</code></pre><p>.rar</p>
+<pre><code>解压：rar a FileName.rar
+压缩：r ar e FileName.rar
+</code></pre><h3 id="7、创建文件"><a href="#7、创建文件" class="headerlink" title="7、创建文件"></a>7、创建文件</h3><pre><code>mkdir aa #建立aa文件夹（目录）
+</code></pre><h3 id="8、进informix-数据库，查看数据库"><a href="#8、进informix-数据库，查看数据库" class="headerlink" title="8、进informix 数据库，查看数据库"></a>8、进informix 数据库，查看数据库</h3><pre><code>dbaccess 进入数据库 回车进入下一层 最底层退出点Esc 在点回车 退出 其选择exit
+dbaccess 确定将要备份的数据库名称：dbaccess回车 database 回车select 再回车可以看到所有数据库名称
+</code></pre>
+        </div>
+        <div class="post-tool">
+            <a class="btn-thumbs-up" href="javascript:void(0);" data-cid="52" title="95">
+                <i class="fa fa-thumbs-up" aria-hidden="true"></i> 打赏
+            </a>
+        </div>
+        
+        <div class="post-tags">标签：
+            
+            <a href="/tags/命令/">命令</a>
+            
+            <a href="/tags/UNIX/">UNIX</a>
+            
+        </div>
+        
+    </article>
+	<div class="post-author clearfix">
+		<a class="avatar fleft" href="https://yangpiena.coding.me" target="_blank">
+			<img width="48" src="/img/avatar/ironman.png" alt="avatar">
+		</a>
+		<p><span class="label">作者</span>
+			<a href="https://yangpiena.coding.me" target="_blank">昜丿捺</a>
+			<span title="最后编辑于&nbsp;2020-04-10">2020-04-10</span>
+			，共 2004 字 
+		</p>		
+		<!-- <p>null</p> -->
+		
+		<!-- YPN Add 2019-03-22 没有authorDesc时，显示一言经典语句-->
+		
+			<!-- <script type="text/javascript" src="https://api.lwl12.com/hitokoto/v1?encode=js&charset=utf-8"></script>-->
+			<!-- <p><span id="lwlhitokoto"><script>lwlhitokoto()</script></span></p>-->
+			<p><span id="lwlhitokoto"><script>
+				var binft = function (r) {
+					function t() {
+					return b[Math.floor(Math.random() * b.length)]
+					}  
+					function e() {
+					return String.fromCharCode(94 * Math.random() + 33)
+					}
+					function n(r) {
+					for (var n = document.createDocumentFragment(), i = 0; r > i; i++) {
+					  var l = document.createElement("span");
+					  l.textContent = e(), l.style.color = t(), n.appendChild(l)
+					}
+					return n
+					}
+					function i() {
+						//var t = o[c.skillI];
+						var t = v_yiYan;
+						c.step ? c.step-- : (c.step = g, c.prefixP < l.length ? (c.prefixP >= 0 && (c.text += l[c.prefixP]), c.prefixP++) : "forward" === c.direction ? c.skillP < t.length ? (c.text += t[c.skillP], c.skillP++) : c.delay ? c.delay-- : (c.direction = "backward", c.delay = a) : c.skillP > 0 ? (c.text = c.text.slice(0, -1), c.skillP--) : (c.skillI = (c.skillI + 1) % o.length, c.direction = "forward")), r.textContent = c.text, r.appendChild(n(c.prefixP < l.length ? Math.min(s, s + c.prefixP) : Math.min(s, t.length - c.skillP))), setTimeout(i, d)
+					}
+					var l = "",
+					o = ["青青陵上柏，磊磊涧中石。", "人生天地间，忽如远行客。","斗酒相娱乐，聊厚不为薄。", "驱车策驽马，游戏宛与洛。","洛中何郁郁，冠带自相索。","长衢罗夹巷，王侯多第宅。","两宫遥相望，双阙百余尺。","极宴娱心意，戚戚何所迫？"].map(function (r) {
+						return r + ""
+					}),
+					a = 2,
+					g = 1,
+					s = 5,
+					d = 75,
+					b = ["rgb(110,64,170)", "rgb(150,61,179)", "rgb(191,60,175)", "rgb(228,65,157)", "rgb(254,75,131)", "rgb(255,94,99)", "rgb(255,120,71)", "rgb(251,150,51)", "rgb(226,183,47)", "rgb(198,214,60)", "rgb(175,240,91)", "rgb(127,246,88)", "rgb(82,246,103)", "rgb(48,239,130)", "rgb(29,223,163)", "rgb(26,199,194)", "rgb(35,171,216)", "rgb(54,140,225)", "rgb(76,110,219)", "rgb(96,84,200)"],
+					c = {
+						text: "",
+						prefixP: -s,
+						skillI: 0,
+						skillP: 0,
+						direction: "forward",
+						delay: a,
+						step: g
+					};	  
+					//YPN Add 2019-03-29 请求获得从7种分类中随机抽取一个句子，并以纯文本格式输出：https://v1.hitokoto.cn/?encode=text
+					//https://v1.hitokoto.cn/（从7种分类中随机抽取）
+					//https://v1.hitokoto.cn/?c=b （请求获得一个分类是漫画的句子）
+					//https://v1.hitokoto.cn/?c=f&encode=text （请求获得一个来自网络的句子，并以纯文本格式输出）
+					var v_yiYan = "让我安静一会儿";
+					var xhr = new XMLHttpRequest();
+					xhr.onreadystatechange = function () {
+						if (xhr.readyState === 4) {
+							v_yiYan = xhr.responseText;
+						}
+					}
+					xhr.open("GET", "https://v1.hitokoto.cn/?encode=text",true);
+					xhr.send();
+					i()
+				};
+				binft(document.getElementById('lwlhitokoto'));
+			</script></span></p>
+		
+	</div>
+	
+	<!-- YPN Add 2019-03-29 增加背景音乐Aplayer-->
+	<!-- 参数如下：（粗体为必填项） -->
+	<!-- data-id: 歌曲/专辑/歌单 ID -->	
+		<!-- data-server: 音乐平台，支持如下参数 -->
+		<!-- netease （网易云音乐） -->
+		<!-- tencent （qq音乐） -->
+		<!-- xiami （虾米音乐） -->
+		<!-- kugou （酷狗音乐） -->
+		<!-- baidu （百度音乐） -->	
+	<!-- data-type: 请求类型，支持如下参数 -->
+		<!-- song （单曲） -->
+		<!-- album （专辑） -->
+		<!-- playlist （歌单） -->
+		<!-- search （搜索） -->
+	<!-- data-mode: 播放模式 -->
+		<!-- random （随机） -->
+		<!-- single （单曲） -->
+		<!-- circulation （列表循环） -->
+		<!-- order （列表） -->
+	<!-- data-autoplay: 自动播放  -->
+		<!-- true -->
+		<!-- false -->
+	<section class="music">
+		<div class="content material">
+			<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer@1.7.0/dist/APlayer.min.css">
+			<div class="aplayer" data-theme="#1BCDFC" data-mode="random" data-server="netease" data-type="playlist" data-id="745065239" data-volume="0.7">
+			</div>
+			<script src="https://cdn.jsdelivr.net/npm/aplayer@1.7.0/dist/APlayer.min.js"></script>
+			<script src="https://cdn.jsdelivr.net/npm/meting@1.1.0/dist/Meting.min.js"></script>
+		</div>
+	</section>
+	
+	<!-- 
+    
+    <p style="text-align: center">本文代表个人观点，内容仅供参考。若有不恰当之处，望不吝赐教！</p>
+    
+	-->
+    
+
+    
+
+</div>
+<script src="/js/busuanzi.pure.mini.js"></script>
+
+
+        </div><!-- end #main-->
+    </div><!-- end #body -->
+    <footer class="footer">
+    <div class="footer-inner" style="text-align: center">
+        <p>
+            <a href="/about" title="关于">关于</a>&nbsp;&nbsp<em>·</em>&nbsp;&nbsp
+            <!-- 自定义链接 -->
+            <a href="/help" title="帮助">帮助</a>&nbsp;&nbsp<em>·</em>&nbsp;&nbsp
+            <a href="/links" title="友链">友链</a>&nbsp;&nbsp<em>·</em>&nbsp;&nbsp
+            <a href="/sitemap.xml" title="地图">地图</a>
+        </p>
+        <p>
+            本站已建立&nbsp<a href="/timeline" id="siteBuildingTime"></a>&nbsp天，<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" rel="licence">采用知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议创作</a><br>
+            ©2016-<span id="cpYear"></span> 基于&nbsp<a href="http://hexo.io" target="_blank" rel="nofollow">Hexo</a>
+            ，主题采用&nbsp&nbsp<a href="https://github.com/tangkunyin/hexo-theme-jsimple" target="_blank" rel="bookmark">JSimple</a>
+            ，作者&nbsp<a href="https://yangpiena.coding.me" target="_blank" rel="friend">昜丿捺</a>
+            ，Hosted by <a href="https://coding.net/" target="_blank" rel="nofollow">Coding Pages</a>
+        </p>
+    </div>
+</footer>
+<script src="/js/SimpleCore.js"></script>
+
+
+<!--2017-10-06 YPN Add 添加鼠标点击特效 -->
+<script type="text/javascript">
+  /* 鼠标点击特效 */
+  var a_idx = 0;
+  jQuery(document).ready(function($) {
+      $("body").click(function(e) {
+  var a = new Array("富强", "民主", "文明", "和谐", "自由", "平等", "公正" ,"法治", "爱国", "敬业", "诚信", "友善");
+  var $i = $("<span/>").text(a[a_idx]);
+          a_idx = (a_idx + 1) % a.length;
+  var x = e.pageX,
+          y = e.pageY;
+          $i.css({
+  "z-index": 999999999999999999999999999999999999999999999999999999999999999999999,
+  "top": y - 20,
+  "left": x,
+  "cursor":"default",
+  "position": "absolute",
+  "font-weight": "bold",
+  "color": "#ff6651"
+          });
+          $("body").append($i);
+          $i.animate({
+  "top": y - 180,
+  "opacity": 0
+          },
+          1500,
+  function() {
+              $i.remove();
+          });
+      });
+  });
+</script>
+
+<!--2017-10-06 YPN Add 添加输入框特效。 -->
+<script src="/js/activate-power-mode.js"></script>
+<script>
+  POWERMODE.colorful = true;  // 控制开启/开启礼花特效  
+  POWERMODE.shake    = false; // 控制开启/关闭屏幕震动特效  
+  document.body.addEventListener('input', POWERMODE);
+</script>
+
+<!--动态线条背景
+<script type="text/javascript" color="231,129,112" opacity='0.7' zIndex="-2" count="200" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js"></script>-->
+
+<!-- YPN 2019-10-22 Create 搜索框 -->
+<script>
+	var favObj = {
+		init: function() {
+			var s = this;
+			s.band();
+		},
+		band: function() {
+			$('#b-btn, #q-btn, #m-btn, #d-btn, #p-btn, #w-btn').focus(function() {
+					var id = this.id;
+					var urlArr = {
+						'b-btn': '//www.baidu.com/baidu',
+						'q-btn': '//www.google.com/search',
+						'm-btn': 'https://mijisou.com/',
+						'd-btn': 'https://www.dogedoge.com/',
+						'w-btn': 'https://cn.bing.com/'
+					}
+					$('#search-form').attr('action', urlArr[id]);
+			});
+			$('#search-form').on('submit', function() {
+				$('#q-word').val($('#b-word').val());
+			});
+			//alert("");
+		}
+	};
+	favObj.init();
+</script>
+</div>
+<!-- search pop -->
+<div class="popup search-popup local-search-popup">
+    <div class="local-search-header clearfix">
+        <span class="search-icon">
+            <i class="fa fa-search"></i>
+        </span>
+        <span class="popup-btn-close">
+            <i class="fa fa-times-circle"></i>
+        </span>
+        <div class="local-search-input-wrapper">
+            <input id="local-search-input" spellcheck="false" type="text" autocomplete="off" placeholder="输入关键字开始搜索">
+        </div>
+    </div>
+    <div id="local-search-result"></div>
+</div>
+<div class="fixed-btn">
+    <a class="btn-gotop" href="javascript:"> <i class="fa fa-angle-up"></i></a>
+</div>
+<script>
+    $(function () {
+        var jsi_config = {
+            buildingTime: '01/20/2018',
+            current: $('.post-tags').length > 0 ? 'post' : 'archive',
+            snsQRCode: '/images/sns-qrcode.png',
+            donateImg: '/images/donate-qr.png',
+            localSearch: { dbPath: '' },
+            readMode: 'day'
+        };
+        
+            jsi_config.localSearch = {
+                dbPath: '/search.xml',
+                trigger: 'auto',
+                topN: '1',
+                unescape: 'false'
+            }
+        
+        SimpleCore.init(jsi_config);
+        
+    });
+</script>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<!-- <script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script> -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+<script src="/live2dw/lib/L2Dwidget.min.js?0c58a1486de42ac6cc1c59c7d98ae887"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"log":false,"model":{"jsonPath":"/live2dw/assets/hijiki.model.json"},"display":{"position":"right","width":70,"height":90,"hOffset":-37,"vOffset":-20},"mobile":{"show":false}});</script></body>
+</html>
