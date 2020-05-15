@@ -252,6 +252,7 @@ description: "记录有用的到的网址"
 [Hexo官方主题](https://hexo.io/themes/)                        |  [Hexo主题](https://github.com/hexojs/hexo/wiki/Themes)
 [Hexo博客主题从Jacman切换到NexT.Mist ](http://codepub.cn/2016/03/20/Hexo-blog-theme-switching-from-Jacman-to-NexT-Mist/)
 [hexo支持mathjax](https://www.cnblogs.com/SHOR/p/9581661.html)
+[3-hexo](https://yelog.org/)
 
 
 #### Idea
@@ -359,10 +360,10 @@ description: "记录有用的到的网址"
 
 
 #### 民生
-[宁夏人事考试中心](http://www.nxpta.gov.cn/)  |  [宁夏专业技术人员继续教育培训网](http://nxzj.chinahrt.com/)
+[宁夏人事考试中心](http://www.nxpta.gov.cn/)  |  [宁夏专业技术人员继续教育培训网](http://nxzj.chinahrt.com/) | [宁夏机械工程学会](http://www.nxjxgcxh.cn/)
 [宁夏人力资源和社会保障网上服务大厅](http://www.12333nx.gov.cn/nxwsrs/personlogin)
 [宁夏回族自治区专业技术人员服务平台——个人职称申报登录窗口](http://124.224.239.164:8088/)
-[宁夏机械工程学会](http://www.nxjxgcxh.cn/)
+[宁夏人事人才管理信息系统-职称评审](http://218.95.135.211:8005/zcps/)
 
 
 <style class="btn-styles">       

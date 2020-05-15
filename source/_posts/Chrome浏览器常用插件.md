@@ -11,6 +11,8 @@ description:
 - 广告过滤
 uBlock Origin
 
-
 - 鼠标控制
-CrxMouse
+CrxMouse Chrome 手势
+
+- 自动刷新网页
+Super Auto Refresh Plus
