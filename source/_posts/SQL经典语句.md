@@ -29,6 +29,7 @@ EXEC sp_addumpdevice 'disk', 'testBack', 'c:\mssql7backup\MyNwind_1.dat'
 ```sql
 BACKUP DATABASE pubs TO testBack 
 ```
+
 <!-- more -->
 
 ## 4. 创建新表
