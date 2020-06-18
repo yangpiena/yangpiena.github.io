@@ -18,6 +18,9 @@ sudo yast2
 ```
 yast2 firewall
 ```
+
+<!-- more -->
+
 #### 2. 开放服务
 选择Allowed Services -> Add，可以添加如ssh, http, https等服务。
 #### 3. 开放端口

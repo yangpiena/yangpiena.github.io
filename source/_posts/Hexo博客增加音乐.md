@@ -10,6 +10,9 @@ description:
 ---
 根据你的需求，在合适地方加入音乐。例如，打开主题layout下的文件common-article.ejs，加入：
 
+<!-- more -->
+
+
 	<!-- YPN Add 2019-03-29 增加背景音乐Aplayer-->
 	<!-- 参数如下：（粗体为必填项） -->
 	<!-- data-id: 歌曲/专辑/歌单 ID -->	

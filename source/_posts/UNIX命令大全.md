@@ -8,15 +8,14 @@ authorDesc:
 tags: [UNIX, 命令]
 description:
 ---
-
-<!-- more -->
-
 ### 1. root登陆
 一般系统不允许root登陆 ，可以用另一个用户登陆后再用 su 切换到root用户
 如：
 
 	zhgj-dc-/tmp/108434-17> su #回车
 	Password:   #输入密码 成了root登陆了
+
+<!-- more -->
 
 ### 2. solaris补丁的安装
 solaris的补丁分为两类，一类是Point补丁，另一类是Cluster补丁

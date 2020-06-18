@@ -10,6 +10,9 @@ description:
 ---
 ### CentOS 6.x
 VMware克隆CentOS 6导致网络连接system eth0不可用的解决办法
+
+<!-- more -->
+
 ###### 1. 打开下面文件，注释掉原eth0，将eth1改为eth0
 
 		vim /etc/udev/rules.d/70-persistent-net.rules

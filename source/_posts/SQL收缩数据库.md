@@ -15,6 +15,8 @@ SELECT * FROM sysfiles;
 ```
 > 记录查询结果的fileid值，在第2、3步要使用
 
+<!-- more -->
+
 #### 2. 收缩数据库
 ```sql
 DBCC SHRINKDATABASE('数据库名');

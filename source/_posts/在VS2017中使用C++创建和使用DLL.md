@@ -14,6 +14,8 @@ description:
 ![](https://picturebed-1258146968.cos.ap-beijing.myqcloud.com/newProject.png)
 ![](https://picturebed-1258146968.cos.ap-beijing.myqcloud.com/newProject2.png)
 
+<!-- more -->
+
 2、右键项目》添加》新建项》头文件(.h)
 ![](https://picturebed-1258146968.cos.ap-beijing.myqcloud.com/newh.png)
 在头文件中输入以下代码：

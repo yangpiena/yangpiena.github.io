@@ -21,6 +21,9 @@ FROM
 WHERE
 	resource_type = 'OBJECT';
 ```
+
+<!-- more -->
+
 ```sql
 SELECT
 	标志,

@@ -14,6 +14,9 @@ description:
 ```
 vi /etc/rc.d/init.d/haproxy
 ```
+
+<!-- more -->
+
 本身不存在此文件，使用以上命令，进入vi编辑器，再使用命令保存退出即可新建此文件。
 打开文件haproxy，贴入如下内容：
 

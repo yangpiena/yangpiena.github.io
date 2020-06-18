@@ -4,18 +4,17 @@
 
 # Site
 title: 昜丿捺                      #网站的标题
-subtitle: Blog                     #副标题
+subtitle: 没有阳光，沉默而居       #副标题
 description: 没有阳光，沉默而居    #描述
 author: 昜丿捺                     #作者信息
 avatar: /img/avatar/ironman.png    #头像，图片位置在相应主题目录下的images
-language: zh-cn                    #中文简体(jsimple)
-#language: zh-Hans                  #简体中文
+language: zh-CN                    #简体中文
 email: yangpiena@163.com
 timezone:
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: http://yangpiena.coding.me
+url: http://ynn5ru.coding-pages.com
 root: /
 # permalink: :category/:entitle-:timestamp.html
 permalink: :year/:month/:day/:title/
@@ -70,16 +69,19 @@ pagination_dir: page
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-theme: jsimple #配置主题，这里使用 jsimple 主题
-#theme: next
+#theme: jsimple #配置主题，这里使用 jsimple 主题
+theme: next
 
 stylus:
   compress: true #自适应布局
 
+# 本地搜索
 search:
   path: search.xml
   field: post
   content: true
+  format: html
+  limit: 10000
 
 # 看板娘
 # 作者博客：https://huaji8.top/post/live2d-plugin-2.0/
@@ -97,21 +99,21 @@ live2d:
     use: live2d-widget-model-hijiki #模型选择，黑猫
     #use: live2d-widget-model-tororo #模型选择，白猫
   display:
-    position: right #模型位置
+    position: left  #模型位置
     width: 70       #模型宽度
     height: 90      #模型高度
-    hOffset: -37
+    hOffset: 0
     vOffset: -20
   mobile:
     show: false      #是否在手机端显示
   
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
-#deploy:
-#  type: git #部署环境，基于hexo+githubpage,所以这里使用git。注意：不同版本的hexo，type有可能不同，3.x以后应使用git,具体参看官方文档
-#  repo:
-#    github: git@github.com:yangpiena/yangpiena.github.io.git,master
-#    coding: https://git.coding.net/yangpiena/yangpiena.git,master  #git仓库地址，替换成你的username即可，其他保持不变，后面会提到如何创建git仓库
+# deploy:
+## type: git #部署环境，基于hexo+githubpage,所以这里使用git。注意：不同版本的hexo，type有可能不同，3.x以后应使用git,具体参看官方文档
+## repo:
+## github: git@github.com:yangpiena/yangpiena.github.io.git,master
+## coding: https://git.coding.net/yangpiena/yangpiena.git,master  #git仓库地址，替换成你的username即可，其他保持不变，后面会提到如何创建git仓库
 
 deploy: 
 - type: git

@@ -11,6 +11,8 @@ description:
 exp		导出命令
 imp		导入命令
 
+<!-- more -->
+
 **exp导出模式**
 full模式：导出整个数据库
 user模式：导出指定的用户
@@ -28,7 +30,7 @@ indexs：指定是否导出索引
 grants：表示是否导出授权
 query：定查询条件,允许用户导出表的一部分数据
 triggers：指定是否导出触发器
-<!-- more -->
+
 ## exp/imp使用方法
 ```
 imp username/password@connect_string param=value …

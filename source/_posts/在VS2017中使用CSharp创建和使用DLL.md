@@ -14,6 +14,8 @@ description:
 1、打开Visual Studio 2017，创建如下图的工程：
 ![](https://picturebed-1258146968.cos.ap-beijing.myqcloud.com/newProject3.png)
 
+<!-- more -->
+
 2、在类中定义接口类和接口实现类
 ![](https://picturebed-1258146968.cos.ap-beijing.myqcloud.com/newCSharp.png)
 输入以下代码：

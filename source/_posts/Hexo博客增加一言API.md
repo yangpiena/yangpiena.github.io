@@ -9,6 +9,9 @@ authorDesc:
 description:
 ---
 根据你的需求，在合适地方加入一言。例如，打开主题layout下的文件common-article.ejs，加入一言：
+
+<!-- more -->
+
 ## 增加普通一言
 
 

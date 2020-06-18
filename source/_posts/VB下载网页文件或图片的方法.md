@@ -26,6 +26,8 @@ Private Sub test()
 End Sub
 ```
 
+<!-- more -->
+
 #### 二、使用API函数OleLoadPicturePath，下载图片文件到变量，注意要勾选引用：OLE Automation
 引入API：
 

@@ -1,6 +1,7 @@
 ---
 title: Windows利用robocopy命令实现文件同步
 author: 昜丿捺
+copyright: true
 categories: 技术
 timestamp: 1560763053
 date: 2019-06-17 17:17:33
@@ -9,8 +10,12 @@ tags: [Windows, 命令]
 description:
 ---
 Robocopy是Microsoft在Windows Server 2003 Resource Kit Tools提供的复制工具。
+
+<!-- more -->
+
 ### 1. [下载rktools.exe](http://download.microsoft.com/download/8/e/c/8ec3a7d8-05b4-440a-a71e-ca3ee25fe057/rktools.exe)
 使用默认选项安装即可。一般情况下Windows Server 2003不带robocopy，所以需要安装。
+
 ### 2. 使用命令robocopy，实现镜像同步，且输出日志到log.txt
     robocpy C:\源文件夹\ D:\目标文件夹\ /LOG+:C:\log.txt /MIR
     

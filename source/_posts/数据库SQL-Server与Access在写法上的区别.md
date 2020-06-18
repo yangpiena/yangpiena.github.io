@@ -19,6 +19,8 @@ AND IsA = 1;
 AND IsA = 'true';
 ```
 
+<!-- more -->
+
 ### 2. 查询语句WHERE条件带日期时
 ```sql
 SELECT * FROM 表 WHERE TimeTag = FORMAT('2016-1-6','yyyy-MM-dd hh:mm:ss');

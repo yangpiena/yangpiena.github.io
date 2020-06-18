@@ -11,6 +11,8 @@ description:
 #### 1. 增加菜单，命令如下：
 	hexo new page photos
 
+<!-- more -->
+
 #### 2. 编辑菜单photos下的文件index.md，添加如下内容：
 	<div class="content">
 		<div class="iw_wrapper">

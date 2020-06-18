@@ -11,6 +11,8 @@ description:
 
 SUN系统管理员常用概念/命令
 
+<!-- more -->
+
 ### 1. Solaris 操作系统 
 操作系统的版本：Solaris 1.x(sunos4.1.x)，Solaris 2.x(sunos 5.x)，Solaris 7，Solaris 8
 特点：多用户，多任务(or 多进程，多线程)，分布式计算(处理)

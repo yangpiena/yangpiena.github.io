@@ -14,7 +14,7 @@ $(document).ready(function(){
         var html, li = "";
         // for (var i = begin; i < end && i < data.length; i++) {
         for (var i = 0; i < data.length; i++) {
-            li += '<li style="list-style-type:none"><p><span class="label">'+ data[i].title +'</span> 创建于'+ data[i].desc +'</p><img src="' + data[i].url + '" data-img="' + data[i].url + '" alt="Thumb'+ i +'"/></li>';
+            li += '<li style="list-style-type:none"><p><span class="label">'+ data[i].title +'</span> 创建于'+ data[i].desc +'</p><img src="' + data[i].url + '" data-img="' + data[i].url + '" alt="Thumb'+ i +'"></li>';
         }
         $(".iw_thumbs").append(li);
         // $(".img-box-ul").lazyload();

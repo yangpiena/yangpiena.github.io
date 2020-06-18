@@ -23,6 +23,8 @@ vi /etc/samba/smb.conf
 	        create mask = 0777
 	        directory mask = 0777
 
+<!-- more -->
+
 ### 2. 给共享目录设置相应的权限 
 ```
 chmod -R 777 /filedisk/xxFileServer

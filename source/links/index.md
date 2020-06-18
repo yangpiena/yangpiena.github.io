@@ -2,18 +2,17 @@
 layout: links
 title: 
 date: 2016-11-11 12:31:37
-description: "记录有用的到的网址"
+description: ""
 ---
 <!-- YPN Add 2017-06-20 新增搜索框 -->
 <div class="search-wrapper" style="padding: 0em 0em 0em 0em;">
 	<p align="center" style="margin-top: -65px;margin-left: 0">
 	<form id="search-form" action="//www.baidu.com/baidu" target="_blank" style="">
 		<input name="q" type="hidden" id="q-word" />
-		<input type="text" id="b-word" name="word" size="40" placeholder="秘迹搜索：安全、聚合百度、360、Bing、搜狗等 | 多吉搜索：侧重于知乎、博客园、CSDN等" style="margin-bottom: 1.3px"/>
+		<input type="text" id="b-word" name="word" size="40" placeholder="秘迹搜索：安全、聚合百度、360、Bing、搜狗等 | 多吉搜索：侧重于知乎、博客园、CSDN等" style="margin-bottom: 1.3px;width:100%;height:30px;"/>
 		<input type="submit" id="b-btn" class="btn-edge" value="百度一下"/> <input id="q-btn" class="btn-edge" type="submit" value="Google"/> <input id="w-btn" class="btn-edge" type="submit" value="Bing"/> <input id="m-btn" class="btn-edge" type="submit" value="秘迹搜索"/> <input id="d-btn" class="btn-edge" type="submit" value="多吉搜索"/>
 	</form>
 </div>
-
 
 #### 新闻
 <!-- YPN Add 2020-02-29 新增滚动新闻 -->
@@ -59,8 +58,8 @@ description: "记录有用的到的网址"
 
 
 #### 在线工具
-[生成随机密码](https://suijimimashengcheng.51240.com/) |[密码强度检测](https://mimaqiangdu.51240.com/)
 [独特工具箱](https://www.dute.org/) | [在线工具](http://tool.lu/)  |  [在线工具](http://tool.oschina.net/) | [JSON在线解析及格式化验证](http://www.json.cn/)  |  [转换json格式为C#类](http://json2csharp.chahuo.com/)
+[生成随机密码](https://suijimimashengcheng.51240.com/) | [密码强度检测](https://mimaqiangdu.51240.com/)
 [PMD5](http://pmd5.com/#)  |  [输入让你无语的MD5](https://www.somd5.com/)   |  [在线MD5暴力破解](http://www.atool.org/md5-crack.php) | [核心价值编码器](https://sym233.github.io/core-values-encoder/)  |  [核心价值编码器源码](https://github.com/sym233/core-values-encoder)
 [做好图](http://www.zuohaotu.com/)  |  [png在线转ico](http://www.easyicon.net/covert/)  |  [MakePic.com 图片制造](http://www.makepic.com/)  |  [Remove Image Background照片抠图和证件照换底色](https://www.remove.bg/ ) | [waifu2x无损放大图片](http://waifu2x.udp.jp/index.zh-CN.html) | [图片无限变大](http://bigjpg.com/zh)
 [草料二维码美化器](http://mh.cli.im/)  | [在线制作您的Logo](https://www.logaster.cn/)
@@ -255,7 +254,7 @@ description: "记录有用的到的网址"
 [Hexo博客主题从Jacman切换到NexT.Mist ](http://codepub.cn/2016/03/20/Hexo-blog-theme-switching-from-Jacman-to-NexT-Mist/)
 [hexo支持mathjax](https://www.cnblogs.com/SHOR/p/9581661.html)
 [为 Hexo 博客创建本地搜索引擎](https://liam.page/2017/09/21/local-search-engine-in-Hexo-site/)	|	[hexo-generator-search](https://github.com/wzpan/hexo-generator-search)
-[3-hexo](https://yelog.org/)
+[3-hexo](https://yelog.org/)	|	[Xu's Blog](https://hasaik.com/)
 
 
 #### Idea
