@@ -27,7 +27,7 @@ description: "记录有用的到的网址"
 [百度翻译](https://fanyi.baidu.com/) | [Google翻译](https://translate.google.cn/?hl=zh-CN&tab=TT) | [必应在线翻译](https://cn.bing.com/translator/) | [百度云](https://pan.baidu.com/) |  [腾讯云](https://cloud.tencent.com/) |  [贴图库](http://www.tietuku.com/) | [拷贝兔](https://cp.anyknew.com/)
 [CSDN.NET](http://www.csdn.net/)  | [V2EX](https://www.v2ex.com/) | [免费吧](http://www.mianfeib.me/)  |  [老D博客](https://laod.cn/) | [VeryCD 电驴大全](http://www.verycd.com/) | [360doc个人图书馆](http://www.360doc.com/)  |[cnBeta](http://www.cnbeta.com/)    |  [果壳](http://www.guokr.com/)                 |  [少数派](https://sspai.com/)                |  [数字尾巴](http://www.dgtle.com/)
 [今日热榜](https://tophub.today/) | [果汁排行榜](http://guozhivip.com/rank/) | [AnyKnew](https://www.anyknew.com/#/) | [科塔学术导航](https://site.sciping.com/) | [金十数据](https://www.jin10.com/) | [手机抢购网](http://www.qianggou5.com/price/) | [医学微视](https://www.mvyxws.com/) | [药房网](https://www.yaofangwang.com/) | [WikiHow](https://zh.wikihow.com/%E9%A6%96%E9%A1%B5)
-[希赛网](https://www.educity.cn/)
+[天气万年历](https://wannianli.tianqi.com/today/zhou/) | [希赛网](https://www.educity.cn/)
 
 
 #### 音乐
@@ -42,6 +42,7 @@ description: "记录有用的到的网址"
 
 
 #### 电子书
+[秘密花园](http://www.yini.org)
 [鸠摩搜索](https://www.jiumodiary.com/ "电子书搜索引擎，提供各类电子书搜索下载，有多种格式")  |  [Library Genesis](http://gen.lib.rus.ec/ "英文电子书搜索引擎，可搜索英文原版的电子书，格式包含 PDF、MOBI 和 EPUB")  |  [i-Book.in](https://book.tstrs.me/ " 基于索引IPFS链接的电子书搜索引擎")  |  [epubee](http://cn.epubee.com/ "在线电子书转换器，同时也推荐一些电子书下载")
 [书单网](https://www.shudan.vip/ "电子书搜索网站，抓取第三方网站的资源，也有很多资源是通过城通网赚网盘下载")  |  [书舟网](http://kindle.archiew.top/ "电子书搜索下载网站，资源通过城通网赚网盘下载")  |  [Mobilism](https://forum.mobilism.org/viewforum.php?f=19 "电子书论坛，提供英文原版电子书下载")  |  [七彩英语](http://www.qcenglish.com/ "提供PDF或TXT格式的英文原版电子书下载")
 [ePUBw](https://epubw.com "多格式电子书下载网站，百度网盘分享下载")  |  [好读](http://www.haodoo.net/ "多格式电子书下载网站，很老的一个站")  |  [读书369](http://www.dushu369.com "基于名著小说在线阅读网站")  |  [100本](https://www.100ben.net/ "电子书在线阅读网站，整理了一生必读的100本书")
@@ -58,11 +59,11 @@ description: "记录有用的到的网址"
 
 
 #### 在线工具
-[天气万年历](https://wannianli.tianqi.com/today/zhou/) | [生成随机密码](https://suijimimashengcheng.51240.com/) |[密码强度检测](https://mimaqiangdu.51240.com/)
+[生成随机密码](https://suijimimashengcheng.51240.com/) |[密码强度检测](https://mimaqiangdu.51240.com/)
 [独特工具箱](https://www.dute.org/) | [在线工具](http://tool.lu/)  |  [在线工具](http://tool.oschina.net/) | [JSON在线解析及格式化验证](http://www.json.cn/)  |  [转换json格式为C#类](http://json2csharp.chahuo.com/)
 [PMD5](http://pmd5.com/#)  |  [输入让你无语的MD5](https://www.somd5.com/)   |  [在线MD5暴力破解](http://www.atool.org/md5-crack.php) | [核心价值编码器](https://sym233.github.io/core-values-encoder/)  |  [核心价值编码器源码](https://github.com/sym233/core-values-encoder)
-[png在线转ico](http://www.easyicon.net/covert/)  |  [MakePic.com 图片制造](http://www.makepic.com/)  |  [草料二维码美化器](http://mh.cli.im/)  |  [在线制作您的Logo](https://www.logaster.cn/)
-[Remove Image Background照片抠图和证件照换底色](https://www.remove.bg/ ) | [waifu2x无损放大图片](http://waifu2x.udp.jp/index.zh-CN.html) | [图片无限变大](http://bigjpg.com/zh)
+[做好图](http://www.zuohaotu.com/)  |  [png在线转ico](http://www.easyicon.net/covert/)  |  [MakePic.com 图片制造](http://www.makepic.com/)  |  [Remove Image Background照片抠图和证件照换底色](https://www.remove.bg/ ) | [waifu2x无损放大图片](http://waifu2x.udp.jp/index.zh-CN.html) | [图片无限变大](http://bigjpg.com/zh)
+[草料二维码美化器](http://mh.cli.im/)  | [在线制作您的Logo](https://www.logaster.cn/)
 [数字绘](https://www.myshuju.net/Home) | [drawio](https://www.draw.io/)
 [双拼练习](https://api.ihint.me/shuang/)
 
@@ -83,7 +84,7 @@ description: "记录有用的到的网址"
 [MSDN](http://msdn.itellyou.cn/?gytyzs=0z1zl) | [矢量图标库](http://www.iconfont.cn/) | [最好的12个Icon图标资源网站整理分享出来](https://blog.csdn.net/xiawj8957/article/details/45130263)
 [优品PPT](http://www.ypppt.com)
 [Tracker服务器地址1](https://newtrackon.com/) | [Tracker服务器地址2](https://github.com/ngosang/trackerslist)
-[小白盘](https://www.xiaobaipan.com) | [webd](https://webd.cf/)
+[小白盘](https://www.xiaobaipan.com) | [webd](https://webd.cf/) | [Nextcloud](https://nextcloud.com/)
 
 
 #### 文章/教程
@@ -103,6 +104,7 @@ description: "记录有用的到的网址"
 [10个顶级的CSS UI开源框架](http://www.codeceo.com/article/top-10-css-ui-framework.html) | [Android酷炫实用的开源框架（UI框架）](http://www.runoob.com/w3cnote/android-ui-framework.html) | [后台界面模板](http://www.mycodes.net/154/3.htm)
 [不落阁](http://www.lyblogs.cn/) | [网络培训系统界面设计UI](http://www.th7.cn/Design/ui/201312/199261.shtml) | [公司某项目前端技术积累](http://blog.csdn.net/sunyingyuan/article/details/38237139)
 [H-ui前端框架](http://www.h-ui.net/H-ui.admin.shtml)
+[思美电商](http://test.8sk.cn/html/M0493/index.html)
 
 
 #### 数据库
@@ -260,6 +262,7 @@ description: "记录有用的到的网址"
 [IntelliJ IDEA 注册码](http://idea.lanyus.com/)
 [IntelliJ IDEA 使用教程(2019图文版) ——从入门到上瘾](https://blog.csdn.net/qq_39507276/article/details/87875508)
 [IntelliJ IDEA 超实用使用技巧分享](https://blog.csdn.net/weixin_38405253/article/details/102583954)
+[lookdiv(密码lookdiv)](http://www.lookdiv.com)
 
 
 #### Java
