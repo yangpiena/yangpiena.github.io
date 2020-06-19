@@ -1,5 +1,7 @@
 ---
 title: CentOS网络连接system eth0不可用解决办法
+author: 昜丿捺
+copyright: true
 layout: post
 comments: true
 date: 2018-02-13 10:41:43

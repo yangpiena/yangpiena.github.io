@@ -1,5 +1,7 @@
 ---
 title: fpSpread之fpComboAdo的初始化
+author: 昜丿捺
+copyright: true
 layout: post
 comments: true
 date: 2016-12-22 11:53:28

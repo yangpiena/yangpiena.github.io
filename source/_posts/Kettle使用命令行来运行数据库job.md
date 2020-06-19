@@ -1,5 +1,7 @@
 ---
 title: Kettle使用命令行来运行数据库job
+author: 昜丿捺
+copyright: true
 layout: post
 comments: true
 date: 2016-12-28 10:48:13

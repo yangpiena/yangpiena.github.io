@@ -1,5 +1,7 @@
 ---
 title: Tomcat启动jvm内存设置
+author: 昜丿捺
+copyright: true
 layout: post
 comments: true
 date: 2016-12-28 10:06:29

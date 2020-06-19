@@ -1,5 +1,7 @@
 ---
 title: Linux共享目录和远程挂载
+author: 昜丿捺
+copyright: true
 layout: post
 comments: true
 date: 2018-04-11 22:31:31

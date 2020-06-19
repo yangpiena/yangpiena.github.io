@@ -1,5 +1,7 @@
 ---
 title: Linux命令大全
+author: 昜丿捺
+copyright: true
 date: 2016-11-22 15:02:51
 categories: 技术
 tags: [Linux, 命令]

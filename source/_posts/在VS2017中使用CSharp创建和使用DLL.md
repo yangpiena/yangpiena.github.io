@@ -1,5 +1,7 @@
 ---
 title: '在VS2017中使用C#创建和使用DLL'
+author: 昜丿捺
+copyright: true
 layout: post
 comments: true
 date: 2018-07-03 15:05:32

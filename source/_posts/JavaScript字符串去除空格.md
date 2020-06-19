@@ -1,5 +1,7 @@
 ---
 title: JavaScript字符串去除空格
+author: 昜丿捺
+copyright: true
 layout: post
 comments: true
 date: 2016-11-28 16:50:37

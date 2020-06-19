@@ -1,5 +1,7 @@
 ---
 title: Oracle之imp和exp语句
+author: 昜丿捺
+copyright: true
 layout: post
 comments: true
 date: 2016-11-29 10:33:32

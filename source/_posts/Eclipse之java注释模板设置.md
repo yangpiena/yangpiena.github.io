@@ -1,5 +1,7 @@
 ---
 title: Eclipse之java注释模板设置
+author: 昜丿捺
+copyright: true
 layout: post
 comments: true
 date: 2016-12-27 10:27:15

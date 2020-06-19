@@ -1,5 +1,7 @@
 ---
 title: CSS常见中文字体的英文名
+author: 昜丿捺
+copyright: true
 layout: post
 comments: true
 date: 2016-11-28 17:15:38

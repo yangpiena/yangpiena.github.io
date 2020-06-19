@@ -1,6 +1,7 @@
 ---
 title: Linux之SUN常用命令
 author: 昜丿捺
+copyright: true
 categories: 技术
 timestamp: 1586481303
 date: 2020-04-10 09:15:03

@@ -1,5 +1,7 @@
 ---
 title: fpSpread属性说明
+author: 昜丿捺
+copyright: true
 layout: post
 comments: true
 date: 2016-12-22 11:06:35

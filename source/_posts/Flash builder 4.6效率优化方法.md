@@ -1,5 +1,7 @@
 ---
 title: Flash builder 4.6效率优化方法
+author: 昜丿捺
+copyright: true
 layout: post
 comments: true
 date: 2016-12-27 15:42:09

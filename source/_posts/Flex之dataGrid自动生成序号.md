@@ -1,5 +1,7 @@
 ---
 title: Flex之dataGrid自动生成序号
+author: 昜丿捺
+copyright: true
 layout: post
 comments: true
 date: 2016-12-22 16:23:55

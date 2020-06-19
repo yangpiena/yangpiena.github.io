@@ -1,6 +1,7 @@
 ---
 title: Hexo博客增加一言API
 author: 昜丿捺
+copyright: true
 categories: 技术
 tags: [hexo]
 timestamp: 1553267229

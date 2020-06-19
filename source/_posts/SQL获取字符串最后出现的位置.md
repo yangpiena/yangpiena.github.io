@@ -1,5 +1,7 @@
 ---
 title: SQL获取字符串最后出现的位置
+author: 昜丿捺
+copyright: true
 layout: post
 comments: true
 date: 2016-11-29 15:24:58

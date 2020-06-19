@@ -1,5 +1,7 @@
 ---
 title: log4j.properties
+author: 昜丿捺
+copyright: true
 layout: post
 comments: true
 date: 2016-12-22 12:26:51

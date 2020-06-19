@@ -1,5 +1,7 @@
 ---
 title: 更换电脑后如何修改hexo博客
+author: 昜丿捺
+copyright: true
 layout: post
 date: 2016-11-09
 comments: true

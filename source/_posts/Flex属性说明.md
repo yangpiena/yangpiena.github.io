@@ -1,5 +1,7 @@
 ---
 title: Flex属性说明
+author: 昜丿捺
+copyright: true
 layout: post
 comments: true
 date: 2016-12-22 16:42:48

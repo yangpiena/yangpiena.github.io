@@ -1,5 +1,7 @@
 ---
 title: SQL常见问题
+author: 昜丿捺
+copyright: true
 layout: post
 comments: true
 date: 2016-11-29 09:53:02

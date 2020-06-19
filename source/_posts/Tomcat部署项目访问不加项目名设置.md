@@ -1,6 +1,7 @@
 ---
 title: Tomcat部署项目访问不加项目名设置
 author: 昜丿捺
+copyright: true
 categories: 技术
 timestamp: 1560763353
 date: 2017-08-17 10:19:48

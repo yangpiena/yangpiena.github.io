@@ -1,5 +1,7 @@
 ---
 title: VB下载网页文件或图片的方法
+author: 昜丿捺
+copyright: true
 layout: post
 comments: true
 date: 2018-04-26 17:21:46

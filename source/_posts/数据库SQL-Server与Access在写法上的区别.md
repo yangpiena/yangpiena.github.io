@@ -1,5 +1,7 @@
 ---
 title: 数据库SQL Server与Access在写法上的区别
+author: 昜丿捺
+copyright: true
 layout: post
 comments: true
 date: 2018-10-24 22:19:18

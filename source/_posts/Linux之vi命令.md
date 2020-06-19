@@ -1,6 +1,7 @@
 ---
 title: Linux之vi命令
 author: 昜丿捺
+copyright: true
 categories: 技术
 timestamp: 1586482724
 date: 2020-04-10 09:38:44

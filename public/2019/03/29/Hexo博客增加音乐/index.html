@@ -104,7 +104,7 @@
 <meta property="og:site_name" content="昜丿捺">
 <meta property="og:description" content="根据你的需求，在合适地方加入音乐。例如，打开主题layout下的文件common-article.ejs，加入：">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2020-06-18T06:02:09.274Z">
+<meta property="og:updated_time" content="2020-06-19T04:12:41.843Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Hexo博客增加音乐">
 <meta name="twitter:description" content="根据你的需求，在合适地方加入音乐。例如，打开主题layout下的文件common-article.ejs，加入：">
@@ -450,7 +450,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2020-06-18 14:02:09" itemprop="dateModified" datetime="2020-06-18T14:02:09+08:00">2020-06-18</time>
+                <time title="修改时间：2020-06-19 12:12:41" itemprop="dateModified" datetime="2020-06-19T12:12:41+08:00">2020-06-19</time>
               
             
           </span>
@@ -502,7 +502,7 @@
                 
                   <span class="post-meta-item-text">本文字数：</span>
                 
-                <span title="本文字数">1.7k</span>
+                <span title="本文字数">4k</span>
               
 
               
@@ -516,7 +516,7 @@
                 
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
-                <span title="阅读时长">2 分钟</span>
+                <span title="阅读时长">4 分钟</span>
               
             </div>
           
@@ -538,45 +538,7 @@
       
         <p>根据你的需求，在合适地方加入音乐。例如，打开主题layout下的文件common-article.ejs，加入：</p>
 <a id="more"></a>
-<pre><code>&lt;!-- YPN Add 2019-03-29 增加背景音乐Aplayer--&gt;
-&lt;!-- 参数如下：（粗体为必填项） --&gt;
-&lt;!-- data-id: 歌曲/专辑/歌单 ID --&gt;    
-    &lt;!-- data-server: 音乐平台，支持如下参数 --&gt;
-    &lt;!-- netease （网易云音乐） --&gt;
-    &lt;!-- tencent （qq音乐） --&gt;
-    &lt;!-- xiami （虾米音乐） --&gt;
-    &lt;!-- kugou （酷狗音乐） --&gt;
-    &lt;!-- baidu （百度音乐） --&gt;    
-&lt;!-- data-type: 请求类型，支持如下参数 --&gt;
-    &lt;!-- song （单曲） --&gt;
-    &lt;!-- album （专辑） --&gt;
-    &lt;!-- playlist （歌单） --&gt;
-    &lt;!-- search （搜索） --&gt;
-&lt;!-- data-mode: 播放模式 --&gt;
-    &lt;!-- random （随机） --&gt;
-    &lt;!-- single （单曲） --&gt;
-    &lt;!-- circulation （列表循环） --&gt;
-    &lt;!-- order （列表） --&gt;
-&lt;!-- data-autoplay: 自动播放  --&gt;
-    &lt;!-- true --&gt;
-    &lt;!-- false --&gt;
-&lt;section class=&#39;music&#39;&gt;
-    &lt;div class=&#39;content material&#39;&gt;
-        &lt;link rel=&quot;stylesheet&quot; href=&quot;https://cdn.jsdelivr.net/npm/aplayer@1.7.0/dist/APlayer.min.css&quot;&gt;
-        &lt;div class=&quot;aplayer&quot;
-            data-server=&quot;netease&quot;
-            data-id=&quot;745065239&quot;
-            data-theme=&quot;#1BCDFC&quot;
-            data-type=&quot;playlist&quot;
-            data-mode=&quot;random&quot;
-            data-autoplay=false
-            data-volume=&quot;0.7&quot;&gt;
-        &lt;/div&gt;
-        &lt;script src=&quot;https://cdn.jsdelivr.net/npm/aplayer@1.7.0/dist/APlayer.min.js&quot;&gt;&lt;/script&gt;
-        &lt;script src=&quot;https://cdn.jsdelivr.net/npm/meting@1.1.0/dist/Meting.min.js&quot;&gt;&lt;/script&gt;
-    &lt;/div&gt;
-&lt;/section&gt;
-</code></pre>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line">&lt;!-- YPN Add 2019-03-29 增加背景音乐Aplayer--&gt;</span><br><span class="line">&lt;!-- 参数如下：（粗体为必填项） --&gt;</span><br><span class="line">&lt;!-- data-id: 歌曲/专辑/歌单 ID --&gt;	</span><br><span class="line">	&lt;!-- data-server: 音乐平台，支持如下参数 --&gt;</span><br><span class="line">	&lt;!-- netease （网易云音乐） --&gt;</span><br><span class="line">	&lt;!-- tencent （qq音乐） --&gt;</span><br><span class="line">	&lt;!-- xiami （虾米音乐） --&gt;</span><br><span class="line">	&lt;!-- kugou （酷狗音乐） --&gt;</span><br><span class="line">	&lt;!-- baidu （百度音乐） --&gt;	</span><br><span class="line">&lt;!-- data-type: 请求类型，支持如下参数 --&gt;</span><br><span class="line">	&lt;!-- song （单曲） --&gt;</span><br><span class="line">	&lt;!-- album （专辑） --&gt;</span><br><span class="line">	&lt;!-- playlist （歌单） --&gt;</span><br><span class="line">	&lt;!-- search （搜索） --&gt;</span><br><span class="line">&lt;!-- data-mode: 播放模式 --&gt;</span><br><span class="line">	&lt;!-- random （随机） --&gt;</span><br><span class="line">	&lt;!-- single （单曲） --&gt;</span><br><span class="line">	&lt;!-- circulation （列表循环） --&gt;</span><br><span class="line">	&lt;!-- order （列表） --&gt;</span><br><span class="line">&lt;!-- data-autoplay: 自动播放  --&gt;</span><br><span class="line">	&lt;!-- true --&gt;</span><br><span class="line">	&lt;!-- false --&gt;</span><br><span class="line">&lt;section class=&apos;music&apos;&gt;</span><br><span class="line">	&lt;div class=&apos;content material&apos;&gt;</span><br><span class="line">		&lt;link rel=&quot;stylesheet&quot; href=&quot;https://cdn.jsdelivr.net/npm/aplayer@1.7.0/dist/APlayer.min.css&quot;&gt;</span><br><span class="line">		&lt;div class=&quot;aplayer&quot;</span><br><span class="line">			data-theme=&quot;#1BCDFC&quot;</span><br><span class="line">			data-mode=&quot;random&quot;</span><br><span class="line">			data-server=&quot;netease&quot;</span><br><span class="line">			data-type=&quot;playlist&quot;</span><br><span class="line">			data-list-folded=&quot;false&quot;</span><br><span class="line">			data-id=&quot;745065239&quot;</span><br><span class="line">			data-volume=&quot;0.7&quot;&gt;</span><br><span class="line">		&lt;/div&gt;</span><br><span class="line">		&lt;script src=&quot;https://cdn.jsdelivr.net/npm/aplayer@1.7.0/dist/APlayer.min.js&quot;&gt;&lt;/script&gt;</span><br><span class="line">		&lt;script src=&quot;https://cdn.jsdelivr.net/npm/meting@1.1.0/dist/Meting.min.js&quot;&gt;&lt;/script&gt;</span><br><span class="line">	&lt;/div&gt;</span><br><span class="line">&lt;/section&gt;</span><br></pre></td></tr></table></figure>
       
     </div>
 
@@ -643,6 +605,35 @@
 	<div>
       
         
+<div class="my_post_copyright">
+  <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
+
+  <!-- JS库 sweetalert 可修改路径 -->
+  <script src="https://cdn.bootcss.com/jquery/2.0.0/jquery.min.js"></script>
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+  <p><span>本文标题:</span><a href="/2019/03/29/Hexo博客增加音乐/">Hexo博客增加音乐</a></p>
+  <p><span>文章作者:</span><a href="/" title="访问 昜丿捺 的个人博客">昜丿捺</a></p>
+  <p><span>发布时间:</span>2019年03月29日 - 15:35:03</p>
+  <p><span>最后更新:</span>2020年06月19日 - 12:12:41</p>
+  <p><span>原始链接:</span><a href="/2019/03/29/Hexo博客增加音乐/" title="Hexo博客增加音乐">http://ynn5ru.coding-pages.com/2019/03/29/Hexo博客增加音乐/</a>
+    <span class="copy-path" title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="http://ynn5ru.coding-pages.com/2019/03/29/Hexo博客增加音乐/" aria-label="复制成功！"></i></span>
+  </p>
+  <p><span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" title="Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)">署名-非商业性使用-禁止演绎 4.0 国际</a> 转载请保留原文链接及作者。</p>
+</div>
+<script>
+    var clipboard = new Clipboard('.fa-clipboard');
+    $(".fa-clipboard").click(function(){
+      clipboard.on('success', function(){
+        swal({
+          title: "",
+          text: '复制成功',
+          icon: "success",
+          showConfirmButton: true
+          });
+    });
+    });
+</script>
+
       	  
 	</div>
 	 
@@ -728,7 +719,11 @@
               <img class="site-author-image" itemprop="image" src="/img/avatar/ironman.png" alt="昜丿捺">
             
               <p class="site-author-name" itemprop="name">昜丿捺</p>
-              <p class="site-description motion-element" itemprop="description">没有阳光，沉默而居</p>
+              <p class="site-description motion-element" itemprop="description">
+				<!-- 没有阳光，沉默而居 -->
+				<!-- YPN 2020-06-19 显示一言经典语句 -->
+				<span id="lwlhitokoto"></span>			
+			  </p>
           </div>
 
           
@@ -912,13 +907,48 @@
           
 
         </div>
+	
+	
+		<!-- YPN Add 2019-03-29 增加背景音乐Aplayer-->
+		<!-- 参数如下：（粗体为必填项） -->
+		<!-- data-id: 歌曲/专辑/歌单 ID -->	
+			<!-- data-server: 音乐平台，支持如下参数 -->
+			<!-- netease （网易云音乐） -->
+			<!-- tencent （qq音乐） -->
+			<!-- xiami （虾米音乐） -->
+			<!-- kugou （酷狗音乐） -->
+			<!-- baidu （百度音乐） -->	
+		<!-- data-type: 请求类型，支持如下参数 -->
+			<!-- song （单曲） -->
+			<!-- album （专辑） -->
+			<!-- playlist （歌单） -->
+			<!-- search （搜索） -->
+		<!-- data-mode: 播放模式 -->
+			<!-- random （随机） -->
+			<!-- single （单曲） -->
+			<!-- circulation （列表循环） -->
+			<!-- order （列表） -->
+		<!-- data-autoplay: 自动播放  -->
+			<!-- true -->
+			<!-- false -->
+		<section class="music">
+			<div class="content material">
+				<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer@1.7.0/dist/APlayer.min.css">
+				<div class="aplayer" data-theme="#1BCDFC" data-mode="random" data-server="netease" data-type="playlist" data-list-folded="false" data-id="745065239" data-volume="0.7">
+				</div>
+				<script src="https://cdn.jsdelivr.net/npm/aplayer@1.7.0/dist/APlayer.min.js"></script>
+				<script src="https://cdn.jsdelivr.net/npm/meting@1.1.0/dist/Meting.min.js"></script>
+			</div>
+		</section>
+
+
       </div>
 
       
 
       
 
-    </div>
+    </div>	
   </aside>
 
 
@@ -949,7 +979,7 @@
       <i class="fa fa-coffee"></i>
     </span>
     
-    <span title="站点阅读时长">2:50</span>
+    <span title="站点阅读时长">2:51</span>
   
 </div>
 
@@ -1573,11 +1603,14 @@ show_date_time();
   document.body.addEventListener('input', POWERMODE);
 </script>
 
-<!-- 崩溃欺骗
-<script type="text/javascript" src="/js/ypn.js/crash-cheat.js"></script>-->
+<!-- 崩溃欺骗 -->
+<script type="text/javascript" src="/js/ypn.js/crash-cheat.js"></script>
 
 <!-- 收藏页搜索按钮动作 -->
 <script type="text/javascript" src="/js/ypn.js/searchButton.js"></script>
+
+<!-- 一言 -->
+<script type="text/javascript" src="/js/ypn.js/yiYanJingDianYuJu.js"></script>
 
 <script src="/live2dw/lib/L2Dwidget.min.js?0c58a1486de42ac6cc1c59c7d98ae887"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"log":false,"model":{"jsonPath":"/live2dw/assets/hijiki.model.json"},"display":{"position":"left","width":70,"height":90,"hOffset":0,"vOffset":-20},"mobile":{"show":false}});</script></body>
 </html>

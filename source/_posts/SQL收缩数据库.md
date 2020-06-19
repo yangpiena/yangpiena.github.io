@@ -1,5 +1,7 @@
 ---
 title: SQL收缩数据库
+author: 昜丿捺
+copyright: true
 layout: post
 comments: true
 date: 2018-10-29 15:56:44

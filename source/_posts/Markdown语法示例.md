@@ -1,6 +1,7 @@
 ---
 title: Markdown语法示例
 author: 昜丿捺
+copyright: true
 categories: 技术
 timestamp: 1585098371
 date: 2020-03-25 09:06:11

@@ -18,10 +18,11 @@ fixed: false
 	</div>
 </div>
 
-<script type="text/javascript" src="/js/addphoto.js"></script>
-<script type="text/javascript" src="/js/jquery.min.js"></script>
-<script type="text/javascript" src="/js/jquery.masonry.min.js"></script>
-<script type="text/javascript" src="/js/jquery.easing.1.3.js"></script>
+
+<script type="text/javascript" src="/js/ypn.js/jquery.min.js"></script>
+<script type="text/javascript" src="/js/ypn.js/jquery.masonry.min.js"></script>
+<script type="text/javascript" src="/js/ypn.js/jquery.easing.1.3.js"></script>
+<!-- 查看图片 -->
 <script type="text/javascript">
 	$(window).load(function(){
 		var $iw_thumbs			= $('#iw_thumbs'),
@@ -319,4 +320,31 @@ fixed: false
 		
 		ImageWall.init();
 	});
+</script>
+
+<!-- 加载图片 -->
+<script type="text/javascript">
+$(document).ready(function(){
+    var that = this;
+    var page = 1;
+    var offset = 20;
+
+    $.getJSON("../../photos/data.json", function (data) {
+        render(data);
+        // that.scroll(data);
+    });
+    function render(data) {
+        // var begin = (page - 1) * this.offset;
+        // var end = page * this.offset;
+        // if (begin < data.length) return;
+        var html, li = "";
+        // for (var i = begin; i < end && i < data.length; i++) {
+        for (var i = 0; i < data.length; i++) {
+            li += '<li style="list-style-type:none"><p><span class="authorLabel">'+ data[i].title +'</span> 创建于 '+ data[i].desc +'</p><img src="' + data[i].url + '" data-img="' + data[i].url + '" alt="Thumb'+ i +'"/></li>';
+        }
+        $(".iw_thumbs").append(li);
+        // $(".img-box-ul").lazyload();
+        // $("a[rel=example_group]").fancybox();
+    }
+})
 </script>

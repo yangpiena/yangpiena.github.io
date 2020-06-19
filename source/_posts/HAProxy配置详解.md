@@ -1,5 +1,7 @@
 ---
 title: HAProxy配置详解
+author: 昜丿捺
+copyright: true
 layout: post
 comments: true
 date: 2017-12-22 09:10:25

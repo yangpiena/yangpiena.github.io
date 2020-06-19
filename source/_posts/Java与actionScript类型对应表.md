@@ -1,5 +1,7 @@
 ---
 title: Java与actionScript类型对应表
+author: 昜丿捺
+copyright: true
 layout: post
 comments: true
 date: 2016-12-22 15:55:28

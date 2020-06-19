@@ -1,6 +1,7 @@
 ---
 title: UNIX命令大全
 author: 昜丿捺
+copyright: true
 categories: 技术
 timestamp: 1586483535
 date: 2020-04-10 09:52:15

@@ -1,5 +1,7 @@
 ---
 title: Linux系统盘和数据盘
+author: 昜丿捺
+copyright: true
 layout: post
 comments: true
 date: 2017-08-10 10:47:43

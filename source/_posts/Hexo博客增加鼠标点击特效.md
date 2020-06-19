@@ -1,6 +1,7 @@
 ---
 title: Hexo博客增加鼠标点击特效
 author: 昜丿捺
+copyright: true
 categories: 技术
 timestamp: 1553668241
 date: 2019-03-27 14:30:41

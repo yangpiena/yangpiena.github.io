@@ -1,5 +1,7 @@
 ---
 title: HAProxy脚本启动和关闭
+author: 昜丿捺
+copyright: true
 layout: post
 comments: true
 date: 2018-02-01 16:11:00

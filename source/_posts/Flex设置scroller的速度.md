@@ -1,5 +1,7 @@
 ---
 title: Flex设置scroller的速度
+author: 昜丿捺
+copyright: true
 layout: post
 comments: true
 date: 2016-12-22 16:38:11

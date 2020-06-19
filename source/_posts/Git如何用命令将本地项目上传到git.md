@@ -1,5 +1,7 @@
 ---
 title: Git如何用命令将本地项目上传到git
+author: 昜丿捺
+copyright: true
 layout: post
 comments: true
 date: 2017-06-20 10:31:07

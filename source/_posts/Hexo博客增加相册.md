@@ -1,6 +1,7 @@
 ---
 title: Hexo博客增加相册
 author: 昜丿捺
+copyright: true
 categories: 技术
 timestamp: 1553668821
 date: 2019-03-27 14:40:21

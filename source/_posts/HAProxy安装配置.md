@@ -1,5 +1,7 @@
 ---
 title: HAProxy安装配置
+author: 昜丿捺
+copyright: true
 layout: post
 comments: true
 date: 2017-12-19 15:34:42

@@ -1,5 +1,7 @@
 ---
 title: Hexo博客搭建记录
+author: 昜丿捺
+copyright: true
 layout: post
 date: 2016-11-09
 categories: 技术

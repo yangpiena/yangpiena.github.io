@@ -1,5 +1,7 @@
 ---
 title: HAProxy介绍和应用
+author: 昜丿捺
+copyright: true
 layout: post
 comments: true
 date: 2017-12-22 15:15:53

@@ -1,5 +1,7 @@
 ---
 title: Jdk下载安装
+author: 昜丿捺
+copyright: true
 layout: post
 comments: true
 date: 2016-12-28 09:29:53

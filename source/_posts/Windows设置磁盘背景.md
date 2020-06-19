@@ -1,5 +1,7 @@
 ---
 title: Windows设置磁盘背景
+author: 昜丿捺
+copyright: true
 layout: post
 comments: true
 date: 2017-05-15 15:06:55

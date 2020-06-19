@@ -1,5 +1,7 @@
 ---
 title: Oracle删除和创建表空间及用户
+author: 昜丿捺
+copyright: true
 layout: post
 comments: true
 date: 2016-11-29 10:23:08

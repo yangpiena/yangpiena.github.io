@@ -1,5 +1,7 @@
 ---
 title: CentOS使用iptables
+author: 昜丿捺
+copyright: true
 layout: post
 comments: true
 date: 2017-08-11 14:35:35

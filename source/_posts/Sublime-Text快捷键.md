@@ -1,5 +1,7 @@
 ---
 title: Sublime Text快捷键
+author: 昜丿捺
+copyright: true
 layout: post
 comments: true
 date: 2017-05-15 15:59:04

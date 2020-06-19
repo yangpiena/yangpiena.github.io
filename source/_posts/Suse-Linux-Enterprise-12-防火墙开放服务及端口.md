@@ -1,5 +1,7 @@
 ---
 title: Suse Linux Enterprise 12 防火墙开放服务及端口
+author: 昜丿捺
+copyright: true
 layout: post
 comments: true
 date: 2018-02-01 17:06:18

@@ -1,5 +1,7 @@
 ---
 title: HAProxy之ACL规则定义
+author: 昜丿捺
+copyright: true
 layout: post
 comments: true
 date: 2017-12-20 10:03:51

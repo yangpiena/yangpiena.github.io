@@ -1,5 +1,7 @@
 ---
 title: SQL查询死锁和阻塞
+author: 昜丿捺
+copyright: true
 layout: post
 comments: true
 date: 2016-11-29 15:13:06

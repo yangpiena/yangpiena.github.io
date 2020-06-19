@@ -1,5 +1,7 @@
 ---
 title: Git下载安装
+author: 昜丿捺
+copyright: true
 layout: post
 comments: true
 date: 2018-12-19 15:49:38

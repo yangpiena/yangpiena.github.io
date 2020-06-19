@@ -1,5 +1,7 @@
 ---
 title: Apache ftpserver安装配置
+author: 昜丿捺
+copyright: true
 layout: post
 comments: true
 date: 2018-04-10 12:11:26
