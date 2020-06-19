@@ -5,6 +5,10 @@ date: 2016-11-11 12:31:37
 description: ""
 ---
 <!-- YPN Add 2017-06-20 新增搜索框 -->
+<style class="btn-styles">       
+	.btn-edge{cursor: pointer; padding: 5px 20px;}
+	.btn-edge:hover{color: #FFF; background-color: #3385FF;}
+</style>
 <div class="search-wrapper" style="padding: 0em 0em 0em 0em;">
 	<p align="center" style="margin-top: -65px;margin-left: 0">
 	<form id="search-form" action="//www.baidu.com/baidu" target="_blank" style="">
@@ -369,15 +373,43 @@ description: ""
 [宁夏朝觐报名网](https://www.nxmslcj.cn/index.shtml)
 
 
-<style class="btn-styles">       
-        .btn-edge
-        {
-            cursor: pointer;
-            padding: 5px 20px;
-        }
-        .btn-edge:hover
-        {
-			color: #FFF;
-            background-color: #3385FF;
-        }
-</style>
+
+<section class='music'>
+	<!-- YPN Add 2019-03-29 增加背景音乐Aplayer-->
+	<!-- 参数如下：（粗体为必填项） -->
+	<!-- data-id: 歌曲/专辑/歌单 ID -->	
+		<!-- data-server: 音乐平台，支持如下参数 -->
+		<!-- netease （网易云音乐） -->
+		<!-- tencent （qq音乐） -->
+		<!-- xiami （虾米音乐） -->
+		<!-- kugou （酷狗音乐） -->
+		<!-- baidu （百度音乐） -->	
+	<!-- data-type: 请求类型，支持如下参数 -->
+		<!-- song （单曲） -->
+		<!-- album （专辑） -->
+		<!-- playlist （歌单） -->
+		<!-- search （搜索） -->
+	<!-- data-mode: 播放模式 -->
+		<!-- random （随机） -->
+		<!-- single （单曲） -->
+		<!-- circulation （列表循环） -->
+		<!-- order （列表） -->
+	<!-- data-autoplay: 自动播放  -->
+		<!-- true -->
+		<!-- false -->
+	<div class='content material'>
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer@1.7.0/dist/APlayer.min.css">
+		<div class="aplayer"
+			data-theme="#1BCDFC"
+			data-mode="random"
+			data-server="netease"
+			data-type="playlist"
+			data-list-folded="true"
+			data-autoplay="true"
+			data-id="745065239"
+			data-volume="0.7">
+		</div>
+		<script src="https://cdn.jsdelivr.net/npm/aplayer@1.7.0/dist/APlayer.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/meting@1.1.0/dist/Meting.min.js"></script>
+	</div>
+</section>
