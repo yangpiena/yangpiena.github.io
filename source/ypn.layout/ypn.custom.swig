@@ -31,3 +31,6 @@
 
 <!-- 一言 -->
 <script type="text/javascript" src="/js/ypn.js/yiYanJingDianYuJu.js"></script>
+
+<!-- 图片点击放大效果 -->
+<script type="text/javascript" src="/js/ypn.js/image.js"></script>
