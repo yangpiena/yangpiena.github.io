@@ -2,6 +2,34 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://ynn5ru.coding-pages.com/photos/index.html</loc>
+    
+    <lastmod>2020-06-20T02:51:57.566Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://ynn5ru.coding-pages.com/ypn.layout/ypn.custom.html</loc>
+    
+    <lastmod>2020-06-20T02:49:38.092Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://ynn5ru.coding-pages.com/2020/06/20/Hexo%E5%8D%9A%E5%AE%A2%E6%9B%B4%E6%8D%A2NexT%E4%B8%BB%E9%A2%98/</loc>
+    
+    <lastmod>2020-06-20T02:27:50.157Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://ynn5ru.coding-pages.com/2016/11/09/%E6%9B%B4%E6%8D%A2%E7%94%B5%E8%84%91%E5%90%8E%E5%A6%82%E4%BD%95%E4%BF%AE%E6%94%B9hexo%E5%8D%9A%E5%AE%A2/</loc>
+    
+    <lastmod>2020-06-20T02:25:51.903Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://ynn5ru.coding-pages.com/links/index.html</loc>
     
     <lastmod>2020-06-19T06:12:53.091Z</lastmod>
@@ -415,13 +443,6 @@
   </url>
   
   <url>
-    <loc>http://ynn5ru.coding-pages.com/2016/11/09/%E6%9B%B4%E6%8D%A2%E7%94%B5%E8%84%91%E5%90%8E%E5%A6%82%E4%BD%95%E4%BF%AE%E6%94%B9hexo%E5%8D%9A%E5%AE%A2/</loc>
-    
-    <lastmod>2020-06-19T04:25:57.937Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://ynn5ru.coding-pages.com/2016/11/28/%E6%9C%8D%E5%8A%A1%E5%99%A8%E8%99%9A%E6%8B%9F%E5%8C%96%E7%9A%84%E5%A5%BD%E5%A4%84/</loc>
     
     <lastmod>2020-06-19T04:25:57.929Z</lastmod>
@@ -492,13 +513,6 @@
   </url>
   
   <url>
-    <loc>http://ynn5ru.coding-pages.com/ypn.layout/ypn.custom.html</loc>
-    
-    <lastmod>2020-06-19T04:15:30.266Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://ynn5ru.coding-pages.com/2019/03/29/Hexo%E5%8D%9A%E5%AE%A2%E5%A2%9E%E5%8A%A0%E9%9F%B3%E4%B9%90/</loc>
     
     <lastmod>2020-06-19T04:12:41.843Z</lastmod>
@@ -516,13 +530,6 @@
     <loc>http://ynn5ru.coding-pages.com/photos/data.json</loc>
     
     <lastmod>2020-06-19T03:11:33.347Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://ynn5ru.coding-pages.com/photos/index.html</loc>
-    
-    <lastmod>2020-06-19T03:09:00.431Z</lastmod>
     
   </url>
   
