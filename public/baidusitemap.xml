@@ -1,10 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>http://ynn5ru.coding-pages.com/2020/03/24/%E7%A7%91%E5%AD%A6%E5%BF%AB%E9%80%9F%E5%8F%A3%E7%AE%97%E6%B3%95/</loc>
+    <loc>http://ynn5ru.coding-pages.com/2020/06/25/Git%E5%91%BD%E4%BB%A4%E5%A4%A7%E5%85%A8/</loc>
     <lastmod>2020-06-25</lastmod>
   </url>  <url>
-    <loc>http://ynn5ru.coding-pages.com/2020/06/25/Git%E5%91%BD%E4%BB%A4%E5%A4%A7%E5%85%A8/</loc>
+    <loc>http://ynn5ru.coding-pages.com/2020/04/10/Linux%E4%B9%8Bvi%E5%91%BD%E4%BB%A4/</loc>
+    <lastmod>2020-06-25</lastmod>
+  </url>  <url>
+    <loc>http://ynn5ru.coding-pages.com/2016/11/22/Linux%E5%8F%91%E5%B1%95%E5%8F%B2/</loc>
+    <lastmod>2020-06-25</lastmod>
+  </url>  <url>
+    <loc>http://ynn5ru.coding-pages.com/2020/03/24/%E7%A7%91%E5%AD%A6%E5%BF%AB%E9%80%9F%E5%8F%A3%E7%AE%97%E6%B3%95/</loc>
     <lastmod>2020-06-25</lastmod>
   </url>  <url>
     <loc>http://ynn5ru.coding-pages.com/2020/06/20/Hexo%E5%8D%9A%E5%AE%A2%E6%9B%B4%E6%8D%A2NexT%E4%B8%BB%E9%A2%98/</loc>
@@ -64,9 +70,6 @@
     <loc>http://ynn5ru.coding-pages.com/2016/12/22/log4j-properties/</loc>
     <lastmod>2020-06-19</lastmod>
   </url>  <url>
-    <loc>http://ynn5ru.coding-pages.com/2020/04/10/Linux%E4%B9%8Bvi%E5%91%BD%E4%BB%A4/</loc>
-    <lastmod>2020-06-19</lastmod>
-  </url>  <url>
     <loc>http://ynn5ru.coding-pages.com/2020/04/10/Linux%E4%B9%8BSUN%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</loc>
     <lastmod>2020-06-19</lastmod>
   </url>  <url>
@@ -77,9 +80,6 @@
     <lastmod>2020-06-19</lastmod>
   </url>  <url>
     <loc>http://ynn5ru.coding-pages.com/2018/04/11/Linux%E5%85%B1%E4%BA%AB%E7%9B%AE%E5%BD%95%E5%92%8C%E8%BF%9C%E7%A8%8B%E6%8C%82%E8%BD%BD/</loc>
-    <lastmod>2020-06-19</lastmod>
-  </url>  <url>
-    <loc>http://ynn5ru.coding-pages.com/2016/11/22/Linux%E5%8F%91%E5%B1%95%E5%8F%B2/</loc>
     <lastmod>2020-06-19</lastmod>
   </url>  <url>
     <loc>http://ynn5ru.coding-pages.com/2016/12/28/Kettle%E4%BD%BF%E7%94%A8%E5%91%BD%E4%BB%A4%E8%A1%8C%E6%9D%A5%E8%BF%90%E8%A1%8C%E6%95%B0%E6%8D%AE%E5%BA%93job/</loc>

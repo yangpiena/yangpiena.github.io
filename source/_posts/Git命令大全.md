@@ -9,11 +9,13 @@ authorDesc:
 tags: [Git, 命令]
 description:
 ---
+![Git](/img/screenshots/Git资源库图解.jpg)
+<!-- more -->
+![Git常用命令速查表](/img/screenshots/Git常用命令速查表.jpg)
 ## 1. 添加当前目录的所有文件到暂存区
 ```
 git add .
 ```
-<!-- more -->
 ## 2. 提交暂存区到仓库区
 ```
 git commit - m [message]
