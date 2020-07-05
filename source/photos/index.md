@@ -7,6 +7,12 @@ aplayer: true
 fixed: false
 ---
 <div class="content">
+	<div class="vidage" style="margin-top: -110px;">
+		<video class="vidage-video" width="830" height="480" preload="metadata" loop autoplay muted>
+			<source src="/photos/photos/bg.webm" type="video/webm">
+			<source src="/photos/photos/bg.mp4" type="video/mp4">
+		</video>
+	</div>
 	<div class="iw_wrapper">
 		<ul class="iw_thumbs" id="iw_thumbs">
 			<li>
