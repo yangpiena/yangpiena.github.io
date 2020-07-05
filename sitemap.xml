@@ -2,6 +2,20 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://ynn5ru.coding-pages.com/photos/index.html</loc>
+    
+    <lastmod>2020-07-05T08:57:15.996Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://ynn5ru.coding-pages.com/links/index.html</loc>
+    
+    <lastmod>2020-07-05T08:15:46.077Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://ynn5ru.coding-pages.com/2020/06/25/Git%E5%91%BD%E4%BB%A4%E5%A4%A7%E5%85%A8/</loc>
     
     <lastmod>2020-06-25T06:44:48.587Z</lastmod>
@@ -12,13 +26,6 @@
     <loc>http://ynn5ru.coding-pages.com/photos/data.json</loc>
     
     <lastmod>2020-06-25T06:42:53.550Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://ynn5ru.coding-pages.com/photos/index.html</loc>
-    
-    <lastmod>2020-06-25T06:35:09.095Z</lastmod>
     
   </url>
   
@@ -40,13 +47,6 @@
     <loc>http://ynn5ru.coding-pages.com/2020/03/24/%E7%A7%91%E5%AD%A6%E5%BF%AB%E9%80%9F%E5%8F%A3%E7%AE%97%E6%B3%95/</loc>
     
     <lastmod>2020-06-25T03:00:10.663Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://ynn5ru.coding-pages.com/links/index.html</loc>
-    
-    <lastmod>2020-06-25T02:05:42.726Z</lastmod>
     
   </url>
   
