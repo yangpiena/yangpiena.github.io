@@ -372,6 +372,8 @@ description: ""
 [宁夏专业技术人员继续教育培训网](http://nxzj.chinahrt.com/)
 [宁夏机械工程学会](http://www.nxjxgcxh.cn/)	|	[宁夏人事人才管理信息系统-职称评审](http://218.95.135.211:8005/zcps/)
 [宁夏朝觐报名网](https://www.nxmslcj.cn/index.shtml)
+[利通区县域中小学招生转学服务平台](http://www.wzrxbm.cn)
+[ICP/IP地址/域名信息备案管理系统](http://www.beian.miit.gov.cn)
 
 
 
