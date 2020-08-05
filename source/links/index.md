@@ -88,7 +88,18 @@ description: ""
 [MSDN](http://msdn.itellyou.cn/?gytyzs=0z1zl) | [矢量图标库](http://www.iconfont.cn/) | [最好的12个Icon图标资源网站整理分享出来](https://blog.csdn.net/xiawj8957/article/details/45130263) | [FontAwesome图标](http://www.fontawesome.com.cn/faicons/)
 [优品PPT](http://www.ypppt.com)
 [Tracker服务器地址1](https://newtrackon.com/) | [Tracker服务器地址2](https://github.com/ngosang/trackerslist)
-[小白盘](https://www.xiaobaipan.com) | [webd](https://webd.cf/) | [Nextcloud](https://nextcloud.com/)
+[小白盘](https://www.xiaobaipan.com)
+
+
+#### 网盘
+[webd](https://webd.cf/) | [Nextcloud](https://nextcloud.com/)
+[Nextcloud通过不被信任的域名访问解决方法 Nextcloud 您正在访问来自不信任域名的服务器](https://blog.csdn.net/g313105910/article/details/106381380)
+[nextcloud修改域名、IP或端口](https://www.cnblogs.com/mrcoolfuyu/p/13355522.html)
+[搭建自己私人网盘-Nextcloud](https://blog.csdn.net/qq_43099160/article/details/107081157)
+[CentOS 7下安装Nextcloud搭建个人网盘](https://www.linuxidc.com/Linux/2018-11/155310.htm)
+[openSUSE 安装LAMP记录](https://www.cnblogs.com/fsong/p/6736030.html)
+[【伐木厮】使用Nextcloud搭建私有云储存](https://www.bilibili.com/read/cv4853751/)
+[如何安装Seafile与Nginx在openSUSE Leap 42.1](https://www.howtoing.com/how-to-install-seafile-with-nginx-on-opensuse-leap-42.1)
 
 
 #### 文章/教程
@@ -301,6 +312,7 @@ description: ""
 [suse-zypper常用命令大全及软件仓库配置](http://www.bubuko.com/infodetail-2112148.html)
 [SUSE安装、配置APR和Tomcat-Native](https://blog.csdn.net/ClementAD/article/details/50749597)
 [SUSE Linux 系统加固](https://blog.csdn.net/vianoz/article/details/20864323)
+[zypper关于源的操作和常用的国内源](https://blog.csdn.net/hunjiancuo5340/article/details/81772733)
 
 
 #### LabVIEW
