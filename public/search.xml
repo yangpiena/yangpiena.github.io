@@ -4,6 +4,25 @@
   
     
     <entry>
+      <title>收缩VirtualBox虚拟硬盘文件的大小</title>
+      <link href="/2020/08/06/%E6%94%B6%E7%BC%A9VirtualBox%E8%99%9A%E6%8B%9F%E7%A1%AC%E7%9B%98%E6%96%87%E4%BB%B6%E7%9A%84%E5%A4%A7%E5%B0%8F/"/>
+      <url>/2020/08/06/%E6%94%B6%E7%BC%A9VirtualBox%E8%99%9A%E6%8B%9F%E7%A1%AC%E7%9B%98%E6%96%87%E4%BB%B6%E7%9A%84%E5%A4%A7%E5%B0%8F/</url>
+      
+        <content type="html"><![CDATA[<p>VirtualBox的虚拟硬盘文件大小随着使用时间越来越大，可按如下步骤收缩：</p><a id="more"></a><h2 id="释放空闲空间"><a href="#释放空闲空间" class="headerlink" title="释放空闲空间"></a>释放空闲空间</h2><p>进入虚拟机，执行下面的命令释放。<br>Linux下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo dd if=/dev/zero of=/EMPTY bs=1M</span><br></pre></td></tr></table></figure></p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo rm -f /EMPTY</span><br></pre></td></tr></table></figure><p>Windows下，需要先下载安装 <a href="https://docs.microsoft.com/zh-cn/sysinternals/downloads/sysinternals-suite" target="_blank" rel="noopener">Sysinternals Suite</a> 后执行下面命令：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sdelete –z d:</span><br></pre></td></tr></table></figure></p><blockquote><p>必需先进入sdelete所在目录下再执行命令，其中d为要释放的盘符。</p></blockquote><h2 id="收缩虚拟硬盘"><a href="#收缩虚拟硬盘" class="headerlink" title="收缩虚拟硬盘"></a>收缩虚拟硬盘</h2><p>先关闭虚拟机，再进入VBoxManage命令所在目录下，如：<code>cd C:\Program Files\Oracle\VirtualBox</code><br>如果要收缩的虚拟硬盘是VirtualBox自己的VDI格式，找到你的虚拟硬盘文件，如：<code>D:\YPN.VirtualOS\Win7EN\Win7EN.vdi</code>，执行命令：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">VBoxManage modifyhd D:\YPN.VirtualOS\Win7EN\Win7EN.vdi --compact</span><br></pre></td></tr></table></figure></p><p>如果虚拟硬盘是Vmware的VMDK格式，因为VirtualBox不支持直接压缩VMDK格式，可以先转换成VDI后再收缩，最后转回VMDK。执行命令：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">VBoxManage clonehd &quot;old.vmdk&quot; &quot;new.vdi&quot; --format vdi</span><br></pre></td></tr></table></figure></p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">VBoxManage modifyhd new.vdi --compact</span><br></pre></td></tr></table></figure><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">VBoxManage clonehd &quot;new.vdi&quot; &quot;old.vmdk&quot; --format vmdk</span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      <categories>
+          
+          <category> 技术 </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>搭建私有云同步云盘Nextcloud</title>
       <link href="/2020/07/30/%E6%90%AD%E5%BB%BA%E7%A7%81%E6%9C%89%E4%BA%91%E5%90%8C%E6%AD%A5%E4%BA%91%E7%9B%98Nextcloud/"/>
       <url>/2020/07/30/%E6%90%AD%E5%BB%BA%E7%A7%81%E6%9C%89%E4%BA%91%E5%90%8C%E6%AD%A5%E4%BA%91%E7%9B%98Nextcloud/</url>
@@ -1195,9 +1214,9 @@
       
         <tags>
             
-            <tag> FAQ </tag>
-            
             <tag> flash builder </tag>
+            
+            <tag> FAQ </tag>
             
         </tags>
       
@@ -1222,9 +1241,9 @@
       
         <tags>
             
-            <tag> flash builder </tag>
-            
             <tag> flex </tag>
+            
+            <tag> flash builder </tag>
             
         </tags>
       
@@ -1249,9 +1268,9 @@
       
         <tags>
             
-            <tag> flash builder </tag>
-            
             <tag> flex </tag>
+            
+            <tag> flash builder </tag>
             
         </tags>
       
@@ -1834,11 +1853,11 @@
     
     
     <entry>
-      <title>更换电脑后如何修改Hexo博客</title>
-      <link href="/2016/11/09/%E6%9B%B4%E6%8D%A2%E7%94%B5%E8%84%91%E5%90%8E%E5%A6%82%E4%BD%95%E4%BF%AE%E6%94%B9hexo%E5%8D%9A%E5%AE%A2/"/>
-      <url>/2016/11/09/%E6%9B%B4%E6%8D%A2%E7%94%B5%E8%84%91%E5%90%8E%E5%A6%82%E4%BD%95%E4%BF%AE%E6%94%B9hexo%E5%8D%9A%E5%AE%A2/</url>
+      <title>Hexo博客搭建记录</title>
+      <link href="/2016/11/09/Hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E8%AE%B0%E5%BD%95/"/>
+      <url>/2016/11/09/Hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E8%AE%B0%E5%BD%95/</url>
       
-        <content type="html"><![CDATA[<p>当重装电脑，或者想在其它电脑上修改博客，可以使用下列步骤：</p><ol><li><p>使用下面命令拷贝个人仓库（默认分支为source）到本地</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git clone git@github.com:yangpiena/yangpiena.github.io.git</span><br></pre></td></tr></table></figure></li><li><p>在本地新拷贝的yangpiena.github.io文件夹下通过Git bash依次执行下列命令：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo</span><br><span class="line">npm install </span><br><span class="line">npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure></li></ol><blockquote><p>切记不要执行 hexo init 这条指令，否则会删除.git文件夹</p></blockquote><p>遇到错误时：</p><ol><li>更新npm的源：npm config set registry <a href="https://registry.npm.taobao.org" target="_blank" rel="noopener">https://registry.npm.taobao.org</a></li><li>cmd进入博客当前文件夹路径</li><li>执行 npm install</li><li>执行 hexo server</li><li>执行成功后，再到博客下的git中执行 hexo d /hexo g 发现可以执行成功。</li></ol><a id="more"></a>]]></content>
+        <content type="html"><![CDATA[<p>个人博客已搭建完成，下面记录一下搭建步骤。<br>搭建步骤主要参考WX_JIN的博文<a href="http://blog.csdn.net/wx_jin/article/details/51027783" target="_blank" rel="noopener">Windows下使用Hexo+GithubPage搭建博客</a>搭建的，感谢WX_JIN的分享。<br><a id="more"></a><br>博客主题来源于<a href="https://github.com/levblanc/hexo-theme-aero-dual" target="_blank" rel="noopener">Aero Dual Hexo Theme</a></p><h5 id="另附其它主题链接："><a href="#另附其它主题链接：" class="headerlink" title="另附其它主题链接："></a>另附其它主题链接：</h5><p>博客主题大全：<a href="https://github.com/hexojs/hexo/wiki/Themes" target="_blank" rel="noopener">https://github.com/hexojs/hexo/wiki/Themes</a><br>Hexo官方主题：<a href="https://hexo.io/themes/" target="_blank" rel="noopener">https://hexo.io/themes/</a></p><h5 id="使用工具"><a href="#使用工具" class="headerlink" title="使用工具"></a>使用工具</h5><ul><li>Node.js  v6.9.1</li><li>Git      v2.10.1</li><li>hexo     v3.2.2</li></ul>]]></content>
       
       
       <categories>
@@ -1859,11 +1878,11 @@
     
     
     <entry>
-      <title>Hexo博客搭建记录</title>
-      <link href="/2016/11/09/Hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E8%AE%B0%E5%BD%95/"/>
-      <url>/2016/11/09/Hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E8%AE%B0%E5%BD%95/</url>
+      <title>更换电脑后如何修改Hexo博客</title>
+      <link href="/2016/11/09/%E6%9B%B4%E6%8D%A2%E7%94%B5%E8%84%91%E5%90%8E%E5%A6%82%E4%BD%95%E4%BF%AE%E6%94%B9hexo%E5%8D%9A%E5%AE%A2/"/>
+      <url>/2016/11/09/%E6%9B%B4%E6%8D%A2%E7%94%B5%E8%84%91%E5%90%8E%E5%A6%82%E4%BD%95%E4%BF%AE%E6%94%B9hexo%E5%8D%9A%E5%AE%A2/</url>
       
-        <content type="html"><![CDATA[<p>个人博客已搭建完成，下面记录一下搭建步骤。<br>搭建步骤主要参考WX_JIN的博文<a href="http://blog.csdn.net/wx_jin/article/details/51027783" target="_blank" rel="noopener">Windows下使用Hexo+GithubPage搭建博客</a>搭建的，感谢WX_JIN的分享。<br><a id="more"></a><br>博客主题来源于<a href="https://github.com/levblanc/hexo-theme-aero-dual" target="_blank" rel="noopener">Aero Dual Hexo Theme</a></p><h5 id="另附其它主题链接："><a href="#另附其它主题链接：" class="headerlink" title="另附其它主题链接："></a>另附其它主题链接：</h5><p>博客主题大全：<a href="https://github.com/hexojs/hexo/wiki/Themes" target="_blank" rel="noopener">https://github.com/hexojs/hexo/wiki/Themes</a><br>Hexo官方主题：<a href="https://hexo.io/themes/" target="_blank" rel="noopener">https://hexo.io/themes/</a></p><h5 id="使用工具"><a href="#使用工具" class="headerlink" title="使用工具"></a>使用工具</h5><ul><li>Node.js  v6.9.1</li><li>Git      v2.10.1</li><li>hexo     v3.2.2</li></ul>]]></content>
+        <content type="html"><![CDATA[<p>当重装电脑，或者想在其它电脑上修改博客，可以使用下列步骤：</p><ol><li><p>使用下面命令拷贝个人仓库（默认分支为source）到本地</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git clone git@github.com:yangpiena/yangpiena.github.io.git</span><br></pre></td></tr></table></figure></li><li><p>在本地新拷贝的yangpiena.github.io文件夹下通过Git bash依次执行下列命令：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo</span><br><span class="line">npm install </span><br><span class="line">npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure></li></ol><blockquote><p>切记不要执行 hexo init 这条指令，否则会删除.git文件夹</p></blockquote><p>遇到错误时：</p><ol><li>更新npm的源：npm config set registry <a href="https://registry.npm.taobao.org" target="_blank" rel="noopener">https://registry.npm.taobao.org</a></li><li>cmd进入博客当前文件夹路径</li><li>执行 npm install</li><li>执行 hexo server</li><li>执行成功后，再到博客下的git中执行 hexo d /hexo g 发现可以执行成功。</li></ol><a id="more"></a>]]></content>
       
       
       <categories>
