@@ -1214,9 +1214,9 @@
       
         <tags>
             
-            <tag> flash builder </tag>
-            
             <tag> FAQ </tag>
+            
+            <tag> flash builder </tag>
             
         </tags>
       
@@ -1241,9 +1241,9 @@
       
         <tags>
             
-            <tag> flex </tag>
-            
             <tag> flash builder </tag>
+            
+            <tag> flex </tag>
             
         </tags>
       
@@ -1268,9 +1268,9 @@
       
         <tags>
             
-            <tag> flex </tag>
-            
             <tag> flash builder </tag>
+            
+            <tag> flex </tag>
             
         </tags>
       
@@ -1853,31 +1853,6 @@
     
     
     <entry>
-      <title>Hexo博客搭建记录</title>
-      <link href="/2016/11/09/Hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E8%AE%B0%E5%BD%95/"/>
-      <url>/2016/11/09/Hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E8%AE%B0%E5%BD%95/</url>
-      
-        <content type="html"><![CDATA[<p>个人博客已搭建完成，下面记录一下搭建步骤。<br>搭建步骤主要参考WX_JIN的博文<a href="http://blog.csdn.net/wx_jin/article/details/51027783" target="_blank" rel="noopener">Windows下使用Hexo+GithubPage搭建博客</a>搭建的，感谢WX_JIN的分享。<br><a id="more"></a><br>博客主题来源于<a href="https://github.com/levblanc/hexo-theme-aero-dual" target="_blank" rel="noopener">Aero Dual Hexo Theme</a></p><h5 id="另附其它主题链接："><a href="#另附其它主题链接：" class="headerlink" title="另附其它主题链接："></a>另附其它主题链接：</h5><p>博客主题大全：<a href="https://github.com/hexojs/hexo/wiki/Themes" target="_blank" rel="noopener">https://github.com/hexojs/hexo/wiki/Themes</a><br>Hexo官方主题：<a href="https://hexo.io/themes/" target="_blank" rel="noopener">https://hexo.io/themes/</a></p><h5 id="使用工具"><a href="#使用工具" class="headerlink" title="使用工具"></a>使用工具</h5><ul><li>Node.js  v6.9.1</li><li>Git      v2.10.1</li><li>hexo     v3.2.2</li></ul>]]></content>
-      
-      
-      <categories>
-          
-          <category> 技术 </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> hexo </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>更换电脑后如何修改Hexo博客</title>
       <link href="/2016/11/09/%E6%9B%B4%E6%8D%A2%E7%94%B5%E8%84%91%E5%90%8E%E5%A6%82%E4%BD%95%E4%BF%AE%E6%94%B9hexo%E5%8D%9A%E5%AE%A2/"/>
       <url>/2016/11/09/%E6%9B%B4%E6%8D%A2%E7%94%B5%E8%84%91%E5%90%8E%E5%A6%82%E4%BD%95%E4%BF%AE%E6%94%B9hexo%E5%8D%9A%E5%AE%A2/</url>
@@ -1908,6 +1883,31 @@
       <url>/2016/11/09/Hexo%E5%8D%9A%E5%AE%A2%E5%8F%91%E8%A1%A8hello-world/</url>
       
         <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a><br><a id="more"></a></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 技术 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> hexo </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Hexo博客搭建记录</title>
+      <link href="/2016/11/09/Hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E8%AE%B0%E5%BD%95/"/>
+      <url>/2016/11/09/Hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E8%AE%B0%E5%BD%95/</url>
+      
+        <content type="html"><![CDATA[<p>个人博客已搭建完成，下面记录一下搭建步骤。<br>搭建步骤主要参考WX_JIN的博文<a href="http://blog.csdn.net/wx_jin/article/details/51027783" target="_blank" rel="noopener">Windows下使用Hexo+GithubPage搭建博客</a>搭建的，感谢WX_JIN的分享。<br><a id="more"></a><br>博客主题来源于<a href="https://github.com/levblanc/hexo-theme-aero-dual" target="_blank" rel="noopener">Aero Dual Hexo Theme</a></p><h5 id="另附其它主题链接："><a href="#另附其它主题链接：" class="headerlink" title="另附其它主题链接："></a>另附其它主题链接：</h5><p>博客主题大全：<a href="https://github.com/hexojs/hexo/wiki/Themes" target="_blank" rel="noopener">https://github.com/hexojs/hexo/wiki/Themes</a><br>Hexo官方主题：<a href="https://hexo.io/themes/" target="_blank" rel="noopener">https://hexo.io/themes/</a></p><h5 id="使用工具"><a href="#使用工具" class="headerlink" title="使用工具"></a>使用工具</h5><ul><li>Node.js  v6.9.1</li><li>Git      v2.10.1</li><li>hexo     v3.2.2</li></ul>]]></content>
       
       
       <categories>
