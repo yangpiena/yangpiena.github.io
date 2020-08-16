@@ -29,7 +29,7 @@ description: "URL收藏夹"
 
 #### 常用
 [百度翻译](https://fanyi.baidu.com/) | [Google翻译](https://translate.google.cn/?hl=zh-CN&tab=TT) | [必应在线翻译](https://cn.bing.com/translator/) | [百度云](https://pan.baidu.com/) |  [腾讯云](https://cloud.tencent.com/) |  [贴图库](http://www.tietuku.com/) | [拷贝兔](https://cp.anyknew.com/)
-[CSDN.NET](http://www.csdn.net/)  | [V2EX](https://www.v2ex.com/) | [不死鸟](https://hao.su/)	| [小部落](https://www.xbl100.com/) | [免费吧](http://www.mianfeib.me/)  |  [老D博客](https://laod.cn/) | [VeryCD 电驴大全](http://www.verycd.com/) | [360doc个人图书馆](http://www.360doc.com/)  |[cnBeta](http://www.cnbeta.com/)    |  [果壳](http://www.guokr.com/)                 |  [少数派](https://sspai.com/)                |  [数字尾巴](http://www.dgtle.com/)
+[CSDN.NET](http://www.csdn.net/)  | [V2EX](https://www.v2ex.com/) | [不死鸟](https://hao.su/)	| [小部落](https://www.xbl100.com/) | [免费吧](http://www.mianfeib.me/)  |  [老D博客](https://laod.cn/) | [VeryCD 电驴大全](http://www.verycd.com/) | [360doc个人图书馆](http://www.360doc.com/)  |[cnBeta](http://www.cnbeta.com/)    |  [果壳](http://www.guokr.com/)                 |  [少数派](https://sspai.com/)                |  [数字尾巴](http://www.dgtle.com/) | [telegram 中文搜索](http://www.sssoou.com/)
 [今日热榜](https://tophub.today/) | [果汁排行榜](http://guozhivip.com/rank/) | [AnyKnew](https://www.anyknew.com/#/) | [科塔学术导航](https://site.sciping.com/) | [金十数据](https://www.jin10.com/) | [手机抢购网](http://www.qianggou5.com/price/) | [医学微视](https://www.mvyxws.com/) | [药房网](https://www.yaofangwang.com/) | [WikiHow](https://zh.wikihow.com/%E9%A6%96%E9%A1%B5)
 [天气万年历](https://wannianli.tianqi.com/today/zhou/) | [希赛网](https://www.educity.cn/) | [中国国际人才交流基金会项目管理网站](http://exam.chinapmp.cn/) | [PMI](https://www.pmi.org/)
 
@@ -39,7 +39,7 @@ description: "URL收藏夹"
 
 
 #### 电影
-[全民解析](http://www.qmaile.com/) | [今日影视](http://www.2w2w.tv/)      | [1090影视](https://1090ys.com/) | [嗨哆咪](https://www.haiduomi.cc) | [完美看看](https://www.wanmeikk.me/) | [影视天堂](https://www.ystt5.com/)
+[全民解析](http://www.qmaile.com/) | [今日影视](http://www.2w2w.tv/)      | [1090影视](https://1090ys.com/) | [嗨哆咪](https://www.haiduomi.cc) | [完美看看](https://www.wanmeikk.me/) | [影视天堂](https://www.ystt5.com/) | [山雀影视](https://video.rsk.cool/) | [蒙面大侠](https://www.mengmiandaxia.com/) | [欧亚影视](http://www.oy37.com/) | [神鸡影视](http://n7f6.cn/) | [新奇遇电影](https://www.newqiyu.com/) | [剧汇TV](https://www.juhuitv.com/)
 [天天美剧](http://www.ttmeiju.me/) | [99美剧网](https://www.jjmeiju.com/) | [美剧粉](http://www.mjf2020.com/)
 [BT之家](https://www.415.net)      | [BT之家](https://www.btjia.com)      | [BT之家](https://www.btbtt.com) | [破晓电影](http://www.poxiao.com) | [迅雷电影下载](http://www.xlpu.cc/)  |  [快播电影](http://www.bubulai.com/) |  [BT电影天堂](http://www.btbttv.net/) | [U3C3](https://u3c3.com/)
 [预告片世界](http://www.yugaopian.cn/)  |  [人人影视字幕](http://www.yyets.com/)
@@ -59,23 +59,29 @@ description: "URL收藏夹"
 
 
 #### 美图
-[it.me](http://www.topit.pro/) | [WallpaperHub](https://wallpaperhub.app/) |  [笔记本桌面壁纸下载](http://bbs.zol.com.cn/nbbbs/d33943.html)
+[it.me](http://www.topit.pro/) | [lala 图库](https://233.fi/explore/trending) | [网红精选(https://xn--wcsw84dcxi8ta.xyz/)
+[WallpaperHub](https://wallpaperhub.app/) |  [笔记本桌面壁纸下载](http://bbs.zol.com.cn/nbbbs/d33943.html)
+[鸡霸图床](https://gejiba.com/)
 
 
 #### 在线工具
-[独特工具箱](https://www.dute.org/) | [在线工具](http://tool.lu/)  |  [在线工具](http://tool.oschina.net/) | [JSON在线解析及格式化验证](http://www.json.cn/)  |  [转换json格式为C#类](http://json2csharp.chahuo.com/)
+[短链接](https://url.4qo.cn/#/) | [域名查询](https://lab.feifanju.com/domain-query/)
+[独特工具箱](https://www.dute.org/) | [在线工具](http://tool.lu/)  |  [在线工具](http://tool.oschina.net/)
+[JSON在线解析及格式化验证](http://www.json.cn/)  |  [转换json格式为C#类](http://json2csharp.chahuo.com/)
+[在线HTTP POST/GET接口测试工具](https://lab.feifanju.com/http/index.html)
 [生成随机密码](https://suijimimashengcheng.51240.com/) | [密码强度检测](https://mimaqiangdu.51240.com/)
 [PMD5](http://pmd5.com/#)  |  [输入让你无语的MD5](https://www.somd5.com/)   |  [在线MD5暴力破解](http://www.atool.org/md5-crack.php) | [核心价值编码器](https://sym233.github.io/core-values-encoder/)  |  [核心价值编码器源码](https://github.com/sym233/core-values-encoder)
-[做好图](http://www.zuohaotu.com/)  |  [png在线转ico](http://www.easyicon.net/covert/)  |  [MakePic.com 图片制造](http://www.makepic.com/)  |  [Remove Image Background照片抠图和证件照换底色](https://www.remove.bg/ ) | [waifu2x无损放大图片](http://waifu2x.udp.jp/index.zh-CN.html) | [图片无限变大](http://bigjpg.com/zh)
+[在线格式转换](https://www.alltoall.net/) |  [png在线转ico](http://www.easyicon.net/covert/) 
+[做好图](http://www.zuohaotu.com/)  |  [MakePic.com 图片制造](http://www.makepic.com/)  |  [removebg图片背景消除](https://www.remove.bg/ ) | [waifu2x无损放大图片](http://waifu2x.udp.jp/index.zh-CN.html) | [图片无限变大](http://bigjpg.com/zh)
 [草料二维码美化器](http://mh.cli.im/)  | [在线制作您的Logo](https://www.logaster.cn/)
-[数字绘](https://www.myshuju.net/Home) | [drawio](https://www.draw.io/)
-[双拼练习](https://api.ihint.me/shuang/)
+[田字格笔顺 字帖生成器](https://lab.feifanju.com/zitie/)
+
 
 
 #### 系统/软件下载
 [IT之家](https://www.ithome.com/) |  [系统之家](http://www.xitongzhijia.net/) |  [系统天地](http://www.xitongtiandi.net/) |  [Win10专业版官网](http://www.win10zyb.com/)                                                              |  [Win10之家](http://www.xh52.com/)                                                              |  [系统圣地](http://www.285868.com/)
 [黑苹果乐园](https://imac.hk/)	  |  [黑果小兵](https://blog.daliansky.net/)  |  [从零开始的黑苹果安装教程](http://tieba.baidu.com/p/5179866130#)
-[绿盟](http://www.xdowns.com/)    |  [zd423](http://www.zdfans.com/)          |  [行客工作室](http://www.runker.net/) | [金狐维护盘](http://www.jinhu.me/) | [小众软件](https://www.appinn.com/) | [我爱分享网](http://www.zhanshaoyi.com/rjxz.html)
+[绿盟](http://www.xdowns.com/)    |  [zd423](http://www.zdfans.com/)          |  [行客工作室](http://www.runker.net/) | [金狐维护盘](http://www.jinhu.me/) | [小众软件](https://www.appinn.com/) | [我爱分享网](http://www.zhanshaoyi.com/rjxz.html) | [夜雨聆风](http://www.yeyulingfeng.com/) | [云库网](https://www.lisect.xyz/)
 [浏览迷](https://liulanmi.com/)    |  [Chrome浏览器插件下载中心](https://www.chromefor.com/) | [FlashPlayer下载地址1](http://get.adobe.com/cn/flashplayer/otherversions/)  |  [FlashPlayer下载地址2](http://www.adobe.com/support/flashplayer/downloads.html)  |  [Debugger Version地址](http://kb2.adobe.com/cps/155/tn_15507.html)
 
 
@@ -85,6 +91,7 @@ description: "URL收藏夹"
 
 
 #### 资源
+[库问搜索](http://www.koovin.com/)
 [MSDN](http://msdn.itellyou.cn/?gytyzs=0z1zl) | [矢量图标库](http://www.iconfont.cn/) | [最好的12个Icon图标资源网站整理分享出来](https://blog.csdn.net/xiawj8957/article/details/45130263) | [FontAwesome图标](http://www.fontawesome.com.cn/faicons/)
 [优品PPT](http://www.ypppt.com)
 [Tracker服务器地址1](https://newtrackon.com/) | [Tracker服务器地址2](https://github.com/ngosang/trackerslist)
@@ -100,6 +107,7 @@ description: "URL收藏夹"
 [openSUSE 安装LAMP记录](https://www.cnblogs.com/fsong/p/6736030.html)
 [【伐木厮】使用Nextcloud搭建私有云储存](https://www.bilibili.com/read/cv4853751/)
 [如何安装Seafile与Nginx在openSUSE Leap 42.1](https://www.howtoing.com/how-to-install-seafile-with-nginx-on-opensuse-leap-42.1)
+[zaix.ru一个俄罗斯网盘](https://zaix.ru/)
 
 
 #### 文章/教程
