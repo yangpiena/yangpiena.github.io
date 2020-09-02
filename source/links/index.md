@@ -2,7 +2,7 @@
 layout: links
 title: 收藏
 date: 2016-11-11 12:31:37
-description: "URL收藏夹"
+description:
 ---
 <!-- YPN Add 2017-06-20 新增搜索框 -->
 <style class="btn-styles">       
@@ -28,9 +28,9 @@ description: "URL收藏夹"
 
 
 #### 常用
-[百度翻译](https://fanyi.baidu.com/) | [Google翻译](https://translate.google.cn/?hl=zh-CN&tab=TT) | [必应在线翻译](https://cn.bing.com/translator/) | [百度云](https://pan.baidu.com/) |  [腾讯云](https://cloud.tencent.com/) |  [贴图库](http://www.tietuku.com/) | [拷贝兔](https://cp.anyknew.com/)
-[CSDN.NET](http://www.csdn.net/)  | [V2EX](https://www.v2ex.com/) | [不死鸟](https://hao.su/)	| [小部落](https://www.xbl100.com/) | [免费吧](http://www.mianfeib.me/)  |  [老D博客](https://laod.cn/) | [VeryCD 电驴大全](http://www.verycd.com/) | [360doc个人图书馆](http://www.360doc.com/)  |[cnBeta](http://www.cnbeta.com/)    |  [果壳](http://www.guokr.com/)                 |  [少数派](https://sspai.com/)                |  [数字尾巴](http://www.dgtle.com/) | [telegram 中文搜索](http://www.sssoou.com/)
-[今日热榜](https://tophub.today/) | [果汁排行榜](http://guozhivip.com/rank/) | [AnyKnew](https://www.anyknew.com/#/) | [科塔学术导航](https://site.sciping.com/) | [金十数据](https://www.jin10.com/) | [手机抢购网](http://www.qianggou5.com/price/) | [医学微视](https://www.mvyxws.com/) | [药房网](https://www.yaofangwang.com/) | [WikiHow](https://zh.wikihow.com/%E9%A6%96%E9%A1%B5)
+[百度翻译](https://fanyi.baidu.com/) | [Google翻译](https://translate.google.cn/?hl=zh-CN&tab=TT) | [必应在线翻译](https://cn.bing.com/translator/) | [百度云](https://pan.baidu.com/) |  [腾讯云](https://cloud.tencent.com/) |  [贴图库](http://www.tietuku.com/) | [拷贝兔](https://cp.anyknew.com/) | [鸡毛信](https://cmd.im/)
+[CSDN.NET](http://www.csdn.net/)  | [V2EX](https://www.v2ex.com/) | [不死鸟](https://hao.su/)	| [小部落](https://www.xbl100.com/) | [免费吧](http://www.mianfeib.me/) | [老D博客](https://laod.cn/) | [VeryCD 电驴大全](http://www.verycd.com/) | [360doc个人图书馆](http://www.360doc.com/)  |[cnBeta](http://www.cnbeta.com/) | [果壳](http://www.guokr.com/) | [少数派](https://sspai.com/) | [数字尾巴](http://www.dgtle.com/) | [telegram 中文搜索](http://www.sssoou.com/)
+[OneGo导航](https://ionego.net/) | [今日热榜](https://tophub.today/) | [果汁排行榜](http://guozhivip.com/rank/) | [AnyKnew](https://www.anyknew.com/#/) | [科塔学术导航](https://site.sciping.com/) | [金十数据](https://www.jin10.com/) | [手机抢购网](http://www.qianggou5.com/price/) | [医学微视](https://www.mvyxws.com/) | [药房网](https://www.yaofangwang.com/) | [WikiHow](https://zh.wikihow.com/%E9%A6%96%E9%A1%B5)
 [天气万年历](https://wannianli.tianqi.com/today/zhou/) | [希赛网](https://www.educity.cn/) | [中国国际人才交流基金会项目管理网站](http://exam.chinapmp.cn/) | [PMI](https://www.pmi.org/)
 
 
@@ -39,10 +39,11 @@ description: "URL收藏夹"
 
 
 #### 电影
-[全民解析](http://www.qmaile.com/) | [今日影视](http://www.2w2w.tv/)      | [1090影视](https://1090ys.com/) | [嗨哆咪](https://www.haiduomi.cc) | [完美看看](https://www.wanmeikk.me/) | [影视天堂](https://www.ystt5.com/) | [山雀影视](https://video.rsk.cool/) | [蒙面大侠](https://www.mengmiandaxia.com/) | [欧亚影视](http://www.oy37.com/) | [神鸡影视](http://n7f6.cn/) | [新奇遇电影](https://www.newqiyu.com/) | [剧汇TV](https://www.juhuitv.com/)
+[港澳台电视直播](https://mtime.info/) | [全民解析](http://www.qmaile.com/) | [今日影视](http://www.2w2w.tv/)      | [1090影视](https://1090ys.com/) | [嗨哆咪](https://www.haiduomi.cc) | [完美看看](https://www.wanmeikk.me/) | [影视天堂](https://www.ystt5.com/) | [山雀影视](https://video.rsk.cool/) | [蒙面大侠](https://www.mengmiandaxia.com/) | [欧亚影视](http://www.oy37.com/) | [神鸡影视](http://n7f6.cn/) | [新奇遇电影](https://www.newqiyu.com/) | [剧汇TV](https://www.juhuitv.com/)
 [天天美剧](http://www.ttmeiju.me/) | [99美剧网](https://www.jjmeiju.com/) | [美剧粉](http://www.mjf2020.com/)
 [BT之家](https://www.415.net)      | [BT之家](https://www.btjia.com)      | [BT之家](https://www.btbtt.com) | [破晓电影](http://www.poxiao.com) | [迅雷电影下载](http://www.xlpu.cc/)  |  [快播电影](http://www.bubulai.com/) |  [BT电影天堂](http://www.btbttv.net/) | [U3C3](https://u3c3.com/)
 [预告片世界](http://www.yugaopian.cn/)  |  [人人影视字幕](http://www.yyets.com/)
+[尘落电影网](https://hao.su/531/#menu_index_6)
 
 
 #### 电子书
@@ -59,7 +60,7 @@ description: "URL收藏夹"
 
 
 #### 美图
-[it.me](http://www.topit.pro/) | [lala 图库](https://233.fi/explore/trending) | [网红精选(https://xn--wcsw84dcxi8ta.xyz/)
+[it.me](http://www.topit.pro/) | [lala 图库](https://233.fi/explore/trending) | [网红精选](https://xn--wcsw84dcxi8ta.xyz/)
 [WallpaperHub](https://wallpaperhub.app/) |  [笔记本桌面壁纸下载](http://bbs.zol.com.cn/nbbbs/d33943.html)
 [鸡霸图床](https://gejiba.com/)
 
@@ -83,6 +84,7 @@ description: "URL收藏夹"
 [黑苹果乐园](https://imac.hk/)	  |  [黑果小兵](https://blog.daliansky.net/)  |  [从零开始的黑苹果安装教程](http://tieba.baidu.com/p/5179866130#)
 [绿盟](http://www.xdowns.com/)    |  [zd423](http://www.zdfans.com/)          |  [行客工作室](http://www.runker.net/) | [金狐维护盘](http://www.jinhu.me/) | [小众软件](https://www.appinn.com/) | [我爱分享网](http://www.zhanshaoyi.com/rjxz.html) | [夜雨聆风](http://www.yeyulingfeng.com/) | [云库网](https://www.lisect.xyz/)
 [浏览迷](https://liulanmi.com/)    |  [Chrome浏览器插件下载中心](https://www.chromefor.com/) | [FlashPlayer下载地址1](http://get.adobe.com/cn/flashplayer/otherversions/)  |  [FlashPlayer下载地址2](http://www.adobe.com/support/flashplayer/downloads.html)  |  [Debugger Version地址](http://kb2.adobe.com/cps/155/tn_15507.html)
+[PanDownload复刻版](http://pan.yuantuo.firadio.net.web72.feieryun.cn:82/baidu/) | [kurukurumi](https://kurukurumi.tk/)
 
 
 #### 社区
@@ -280,6 +282,9 @@ description: "URL收藏夹"
 [为 Hexo 博客创建本地搜索引擎](https://liam.page/2017/09/21/local-search-engine-in-Hexo-site/)	|	[hexo-generator-search](https://github.com/wzpan/hexo-generator-search)
 [3-hexo](https://yelog.org/)	|	[Xu's Blog](https://hasaik.com/)
 
+
+#### Hosts
+[GitHub520](https://github.com/521xueweihan/GitHub520)
 
 #### Idea
 [IntelliJ IDEA 注册码](http://idea.lanyus.com/)
