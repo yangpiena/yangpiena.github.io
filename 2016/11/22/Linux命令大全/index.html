@@ -108,7 +108,7 @@
 <meta property="og:site_name" content="昜丿捺">
 <meta property="og:description" content="基础命令系统    命令 说明     reboot 重启系统   shutdown -r now 重启系统   shutdown -c 取消重启   halt 立刻关机   poweroff 立刻关机   shutdown -h now 立刻关机（root用户使用）   shutdown -h 10 10分钟后自动关机   yum update 升级Linux，升级所有包同时也升级软件和系统内核">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2020-06-19T04:25:58.354Z">
+<meta property="og:updated_time" content="2020-10-31T08:14:24.693Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Linux命令大全">
 <meta name="twitter:description" content="基础命令系统    命令 说明     reboot 重启系统   shutdown -r now 重启系统   shutdown -c 取消重启   halt 立刻关机   poweroff 立刻关机   shutdown -h now 立刻关机（root用户使用）   shutdown -h 10 10分钟后自动关机   yum update 升级Linux，升级所有包同时也升级软件和系统内核">
@@ -454,7 +454,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2020-06-19 12:25:58" itemprop="dateModified" datetime="2020-06-19T12:25:58+08:00">2020-06-19</time>
+                <time title="修改时间：2020-10-31 16:14:24" itemprop="dateModified" datetime="2020-10-31T16:14:24+08:00">2020-10-31</time>
               
             
           </span>
@@ -506,7 +506,7 @@
                 
                   <span class="post-meta-item-text">本文字数：</span>
                 
-                <span title="本文字数">7.4k</span>
+                <span title="本文字数">10k</span>
               
 
               
@@ -520,7 +520,7 @@
                 
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
-                <span title="阅读时长">7 分钟</span>
+                <span title="阅读时长">9 分钟</span>
               
             </div>
           
@@ -826,6 +826,130 @@
 </tbody>
 </table>
 </div>
+<h3 id="systemctl命令的使用"><a href="#systemctl命令的使用" class="headerlink" title="systemctl命令的使用"></a>systemctl命令的使用</h3><div class="table-container">
+<table>
+<thead>
+<tr>
+<th>命令</th>
+<th style="text-align:left">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>systemctl list-units</td>
+<td style="text-align:left">##列出当前系统服务的状态</td>
+</tr>
+<tr>
+<td>systemctl list-unit-files</td>
+<td style="text-align:left">##列出服务的开机状态</td>
+</tr>
+<tr>
+<td>systemctl status sshd</td>
+<td style="text-align:left">##查看指定服务的状态</td>
+</tr>
+<tr>
+<td>systemctl stop sshd</td>
+<td style="text-align:left">##关闭指定服务</td>
+</tr>
+<tr>
+<td>systemctl start sshd</td>
+<td style="text-align:left">##开启指定服务</td>
+</tr>
+<tr>
+<td>systemctl restart sshd</td>
+<td style="text-align:left">##从新启动服务</td>
+</tr>
+<tr>
+<td>systemctl enable sshd</td>
+<td style="text-align:left">##设定指定服务开机开启</td>
+</tr>
+<tr>
+<td>systemctl disable sshd</td>
+<td style="text-align:left">##设定指定服务开机关闭</td>
+</tr>
+<tr>
+<td>systemctl reload sshd</td>
+<td style="text-align:left">##使指定服务从新加载配置</td>
+</tr>
+<tr>
+<td>systemctl list-dependencies sshd</td>
+<td style="text-align:left">##查看指定服务的倚赖关系</td>
+</tr>
+<tr>
+<td>systemctl mask  sshd</td>
+<td style="text-align:left">##冻结指定服务</td>
+</tr>
+<tr>
+<td>systemctl unmask sshd</td>
+<td style="text-align:left">##启用服务</td>
+</tr>
+<tr>
+<td>systemctl set-default multi-user.target</td>
+<td style="text-align:left">##开机不开启图形</td>
+</tr>
+<tr>
+<td>systemctl set-default graphical.target</td>
+<td style="text-align:left">##开机启动图形</td>
+</tr>
+<tr>
+<td>setterm</td>
+<td style="text-align:left">##文本界面设定color</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h3 id="服务状态"><a href="#服务状态" class="headerlink" title="服务状态"></a>服务状态</h3><div class="table-container">
+<table>
+<thead>
+<tr>
+<th>命令</th>
+<th style="text-align:left">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>systemctl status 服务名称</td>
+<td style="text-align:left">##查看服务状态</td>
+</tr>
+<tr>
+<td>loaded</td>
+<td style="text-align:left">##系统服务已经初始化完成，加载过配置</td>
+</tr>
+<tr>
+<td>active（running）</td>
+<td style="text-align:left">##正有一个或多个程序正在系统中执行， vsftpd就是这种模式</td>
+</tr>
+<tr>
+<td>atcive（exited）</td>
+<td style="text-align:left">##僅執行一次就正常結束的服務， 目前並沒有任何程序在系統中執行</td>
+</tr>
+<tr>
+<td>atcive（waiting）</td>
+<td style="text-align:left">##正在執行當中，不過還再等待其他的事件才能继续处理</td>
+</tr>
+<tr>
+<td>inactive</td>
+<td style="text-align:left">##服务关闭</td>
+</tr>
+<tr>
+<td>enbaled</td>
+<td style="text-align:left">##服务开机启动</td>
+</tr>
+<tr>
+<td>disabled</td>
+<td style="text-align:left">##服务开机不自启</td>
+</tr>
+<tr>
+<td>static</td>
+<td style="text-align:left">##服务开机启动项不可被管理</td>
+</tr>
+<tr>
+<td>failed</td>
+<td style="text-align:left">##系统配置错误</td>
+</tr>
+</tbody>
+</table>
+</div>
 <h3 id="防火墙（openSUSE-Leap-15-0）"><a href="#防火墙（openSUSE-Leap-15-0）" class="headerlink" title="防火墙（openSUSE Leap 15.0）"></a>防火墙（openSUSE Leap 15.0）</h3><div class="table-container">
 <table>
 <thead>
@@ -970,7 +1094,7 @@
   <p><span>本文标题:</span><a href="/2016/11/22/Linux命令大全/">Linux命令大全</a></p>
   <p><span>文章作者:</span><a href="/" title="访问 昜丿捺 的个人博客">昜丿捺</a></p>
   <p><span>发布时间:</span>2016年11月22日 - 15:02:51</p>
-  <p><span>最后更新:</span>2020年06月19日 - 12:25:58</p>
+  <p><span>最后更新:</span>2020年10月31日 - 16:14:24</p>
   <p><span>原始链接:</span><a href="/2016/11/22/Linux命令大全/" title="Linux命令大全">http://ynn5ru.coding-pages.com/2016/11/22/Linux命令大全/</a>
     <span class="copy-path" title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="http://ynn5ru.coding-pages.com/2016/11/22/Linux命令大全/" aria-label="复制成功！"></i></span>
   </p>
@@ -1012,8 +1136,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/11/09/Hexo博客发表hello-world/" rel="next" title="Hexo博客发表Hello World">
-                <i class="fa fa-chevron-left"></i> Hexo博客发表Hello World
+              <a href="/2016/11/09/更换电脑后如何修改hexo博客/" rel="next" title="更换电脑后如何修改Hexo博客">
+                <i class="fa fa-chevron-left"></i> 更换电脑后如何修改Hexo博客
               </a>
             
           </div>
@@ -1100,7 +1224,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">76</span>
+                    <span class="site-state-item-count">77</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -1216,7 +1340,13 @@
                     
                       
                     
-                    <span class="site-state-item-count">43</span>
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">45</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>
@@ -1349,7 +1479,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#基础命令"><span class="nav-number">1.</span> <span class="nav-text">基础命令</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#系统"><span class="nav-number">1.1.</span> <span class="nav-text">系统</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#文件"><span class="nav-number">1.2.</span> <span class="nav-text">文件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#网络"><span class="nav-number">1.3.</span> <span class="nav-text">网络</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#防火墙（openSUSE-Leap-15-0）"><span class="nav-number">1.4.</span> <span class="nav-text">防火墙（openSUSE Leap 15.0）</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#基础命令"><span class="nav-number">1.</span> <span class="nav-text">基础命令</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#系统"><span class="nav-number">1.1.</span> <span class="nav-text">系统</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#文件"><span class="nav-number">1.2.</span> <span class="nav-text">文件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#网络"><span class="nav-number">1.3.</span> <span class="nav-text">网络</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#systemctl命令的使用"><span class="nav-number">1.4.</span> <span class="nav-text">systemctl命令的使用</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#服务状态"><span class="nav-number">1.5.</span> <span class="nav-text">服务状态</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#防火墙（openSUSE-Leap-15-0）"><span class="nav-number">1.6.</span> <span class="nav-text">防火墙（openSUSE Leap 15.0）</span></a></li></ol></li></ol></div>
             
 
           </div>
@@ -1381,7 +1511,7 @@
       <i class="fa fa-area-chart"></i>
     </span>
     
-    <span title="站点总字数">196k</span>
+    <span title="站点总字数">202k</span>
   
 
   
@@ -1390,7 +1520,7 @@
       <i class="fa fa-coffee"></i>
     </span>
     
-    <span title="站点阅读时长">2:58</span>
+    <span title="站点阅读时长">3:04</span>
   
 </div>
 
