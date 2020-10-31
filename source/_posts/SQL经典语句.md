@@ -771,7 +771,25 @@ INNER JOIN 本地表 b ON a.column1 = b.column1
     INSERT OPENDATASOURCE('SQLOLEDB', 'server=sql服务器名或IP地址;uid=用户名;pwd=密码').数据库名.架构名.表名
     SELECT * FROM 本地表
     ```
-   
+> 如果出现如下错误：SQL Server 阻止了对组件“Ad Hoc Distributed Queries”的STATEMENT“OpenRowset/OpenDatasource”的访问，因为此组件已作为此服务器安全配置的一部分而被关闭。系统管理员可以通过使用 sp_configure 启用“Ad Hoc Distributed Queries”。有关启用“Ad Hoc Distributed Queries”
+则解决办法是参照下面命令：
+
+1. 开启Ad Hoc Distributed Queries组件，在sql查询编辑器中执行如下语句：
+```sql
+exec sp_configure 'show advanced options',1
+reconfigure
+exec sp_configure 'Ad Hoc Distributed Queries',1
+reconfigure
+```
+2. 关闭Ad Hoc Distributed Queries组件，在sql查询编辑器中执行如下语句：
+```sql
+exec sp_configure 'Ad Hoc Distributed Queries',0
+reconfigure
+exec sp_configure 'show advanced options',0
+reconfigure
+```
+
+
 ## 26. 删除数据库下面的所有表
 ```sql
 use 数据库名(是要删除表的所在的那个数据库的名称)
@@ -810,6 +828,43 @@ SELECT  A.name                                                     AS "逻辑名
 EXEC sp_password 'OldPassword','NewPassword','sa';
 ```
 > 不知道OldPassword时，可用NULL代替。
+
+## 29. 查询表的索引
+```sql
+  SELECT 表名 = c.name,
+         索引名称 = a.name,
+         索引字段名 = d.name,
+         索引字段位置 = d.colid,
+         c.status
+    FROM sysindexes   a
+    JOIN sysindexkeys b ON a.id = b.id AND a.indid = b.indid
+    JOIN sysobjects   c ON b.id = c.id
+    JOIN syscolumns   d ON b.id = d.id AND b.colid = d.colid
+   WHERE a.indid NOT IN (0, 255)
+     AND c.xtype = 'U'
+  -- AND c.status > 0 --查所有用户表
+     AND c.name = 'order' --查指定表
+ORDER BY c.name,a.name,d.name;
+```
+
+## 30. 查询没有索引的表
+```sql
+  SELECT *
+    FROM sysobjects
+   WHERE xtype = 'U'
+     AND name NOT IN (
+	       SELECT c.name
+	         FROM sysindexes   a
+	         JOIN sysindexkeys b ON a.id = b.id AND a.indid = b.indid
+	         JOIN sysobjects   c ON b.id = c.id
+	         JOIN syscolumns   d ON b.id = d.id AND b.colid = d.colid
+	        WHERE a.indid NOT IN (0, 255)
+	          AND c.xtype = 'U'
+            --AND c.status > 0 --查所有用户表
+	        --AND c.name = 'order' --查指定表
+         )
+ORDER BY name
+```
 
 ---
 

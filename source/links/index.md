@@ -39,9 +39,9 @@ description:
 
 
 #### 电影
-[港澳台电视直播](https://mtime.info/) | [全民解析](http://www.qmaile.com/) | [今日影视](http://www.2w2w.tv/)      | [1090影视](https://1090ys.com/) | [嗨哆咪](https://www.haiduomi.cc) | [完美看看](https://www.wanmeikk.me/) | [影视天堂](https://www.ystt5.com/) | [山雀影视](https://video.rsk.cool/) | [蒙面大侠](https://www.mengmiandaxia.com/) | [欧亚影视](http://www.oy37.com/) | [神鸡影视](http://n7f6.cn/) | [新奇遇电影](https://www.newqiyu.com/) | [剧汇TV](https://www.juhuitv.com/) | [电影推荐MVCAT](https://www.mvcat.com/)
+[免费的在线影视网站汇总](https://hao.su/531/) | [港澳台电视直播](https://mtime.info/) | [全民解析](http://www.qmaile.com/) | [今日影视](http://www.2w2w.tv/)      | [1090影视](https://1090ys.com/) | [嗨哆咪](https://www.haiduomi.cc) | [完美看看](https://www.wanmeikk.me/) | [影视天堂](https://www.ystt5.com/) | [山雀影视](https://video.rsk.cool/) | [蒙面大侠](https://www.mengmiandaxia.com/) | [欧亚影视](http://www.oy37.com/) | [神鸡影视](http://n7f6.cn/) | [新奇遇电影](https://www.newqiyu.com/) | [剧汇TV](https://www.juhuitv.com/) | [电影推荐MVCAT](https://www.mvcat.com/)
 [天天美剧](http://www.ttmeiju.me/) | [99美剧网](https://www.jjmeiju.com/) | [美剧粉](http://www.mjf2020.com/)
-[BT之家](https://www.415.net)      | [BT之家](https://www.btjia.com)      | [BT之家](https://www.btbtt.com) | [破晓电影](http://www.poxiao.com) | [迅雷电影下载](http://www.xlpu.cc/)  |  [快播电影](http://www.bubulai.com/) |  [BT电影天堂](http://www.btbttv.net/) | [U3C3](https://u3c3.com/)
+[BT之家](https://www.415.net)      | [BT之家](https://www.btjia.com)      | [BT之家](https://btbtt.us/) | [破晓电影](http://www.poxiao.com) | [迅雷电影下载](http://www.xlpu.cc/)  |  [快播电影](http://www.bubulai.com/) |  [BT电影天堂](http://www.btbttv.net/) | [U3C3](https://u3c3.com/)
 [预告片世界](http://www.yugaopian.cn/)  |  [人人影视字幕](http://www.yyets.com/)
 [尘落电影网](https://hao.su/531/#menu_index_6)
 
@@ -81,7 +81,7 @@ description:
 #### 系统/软件下载
 [IT之家](https://www.ithome.com/) | [系统之家](http://www.xitongzhijia.net/) | [系统天地](http://www.xitongtiandi.net/) | [Win10专业版官网](http://www.win10zyb.com/) | [Win10之家](http://www.xh52.com/) | [系统圣地](http://www.285868.com/) | [吻妻出品专注 win7](http://www.newxitong.com/) | [吻妻出品专注 win10](https://iwin10.net/)
 [黑苹果乐园](https://imac.hk/)	  |  [黑果小兵](https://blog.daliansky.net/)  |  [从零开始的黑苹果安装教程](http://tieba.baidu.com/p/5179866130#)
-[zd423](http://www.zdfans.com/)          |  [行客工作室](http://www.runker.net/) | [金狐维护盘](http://www.jinhu.me/) | [小众软件](https://www.appinn.com/) | [我爱分享网](http://www.zhanshaoyi.com/rjxz.html) | [夜雨聆风](http://www.yeyulingfeng.com/) | [云库网](https://www.lisect.xyz/)
+[zd423](http://www.zdfans.com/) | [423down](https://www.423down.com/) |  [行客工作室](http://www.runker.net/) | [金狐维护盘](http://www.jinhu.me/) | [小众软件](https://www.appinn.com/) | [我爱分享网](http://www.zhanshaoyi.com/rjxz.html) | [夜雨聆风](http://www.yeyulingfeng.com/) | [云库网](https://www.lisect.xyz/)
 [浏览迷](https://liulanmi.com/)    |  [Chrome浏览器插件下载中心](https://www.chromefor.com/) | [FlashPlayer下载地址1](http://get.adobe.com/cn/flashplayer/otherversions/)  |  [FlashPlayer下载地址2](http://www.adobe.com/support/flashplayer/downloads.html)  |  [Debugger Version地址](http://kb2.adobe.com/cps/155/tn_15507.html)
 [PanDownload复刻版](http://pan.yuantuo.firadio.net.web72.feieryun.cn:82/baidu/) | [kurukurumi](https://kurukurumi.tk/)
 
@@ -339,6 +339,10 @@ description:
 [Markdown支持的语言](http://blog.csdn.net/peng_hong_fu/article/details/52805408)
 [MathJax](https://math.meta.stackexchange.com/questions/5020/mathjax-basic-tutorial-and-quick-reference)
 
+
+#### Python
+[如果不想在django 的settings中保存mysql数据库的密码](https://www.cnblogs.com/worldinmyeyes/p/12109371.html)
+[Python/Django – 避免在源代码中保存密码](http://www.voidcn.com/article/p-eoxnnhgp-bst.html)
 
 #### Setup Factory
 [安装包制作工具 SetupFactory使用2 API清单](https://www.cnblogs.com/SavionZhang/p/4107761.html)

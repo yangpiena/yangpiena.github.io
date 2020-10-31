@@ -48,3 +48,9 @@ git push -u origin master
 ```
 git status
 ```
+>master给位main后，会报错`error: src refspec main does not match any.`，可执行下面命令将本地创建分支的信息推送到github上
+
+```
+git push origin HEAD -u
+```
+最后可在GitHub上修改master为默认。
