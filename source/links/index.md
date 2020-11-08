@@ -343,6 +343,10 @@ description:
 #### Python
 [如果不想在django 的settings中保存mysql数据库的密码](https://www.cnblogs.com/worldinmyeyes/p/12109371.html)
 [Python/Django – 避免在源代码中保存密码](http://www.voidcn.com/article/p-eoxnnhgp-bst.html)
+[Windows下利用Apache部署多个Django项目](https://www.cnblogs.com/luodaxia/p/12505153.html)
+[django界面上弹出bootstrap modal对话框，对话框中包含iframe并请求一个新的页面](https://blog.csdn.net/u012561176/article/details/106539639)
+[jango 用户认证 user对象](https://blog.csdn.net/m0_38061194/article/details/73369164)
+[django-ORM外键删除操作详解](https://www.cnblogs.com/ifdashui/p/11869949.html)
 
 #### Setup Factory
 [安装包制作工具 SetupFactory使用2 API清单](https://www.cnblogs.com/SavionZhang/p/4107761.html)
