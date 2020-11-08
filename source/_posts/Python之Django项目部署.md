@@ -10,8 +10,7 @@ tags: [Python, Django]
 description: 本教程主要记录在Windows上如何部署Django项目
 ---
 # 安装Mysql
-官网下载：https://dev.mysql.com/downloads/mysql/
-选择自定义安装，并根据操作系统的版本选择32位或64位，且后续软件也必须保持统一。本教程安装64位版本：mysql-installer-community-5.7.32.0.msi
+具体如何安装请参考：[MySQL安装配置](/2020/11/08/MySQL安装配置/)
 
 # 安装Python
 官网下载：https://www.python.org/getit/
@@ -50,7 +49,10 @@ Type "help", "copyright", "credits" or "license" for more information.
 
 ## 配置数据库
 1. 创建数据库
+```
 create database xxgl; 
+```
+	其它数据库操作命令请参照 [MySQL安装配置](/2020/11/08/MySQL安装配置/) 里的**使用**章节。
 2. 修改项目下settings.py中DATABASES配置
 ```
 'default': {
@@ -127,6 +129,8 @@ pip install django-pyodbc-azure pyodbc
 ```python
 python manage.py makemigrations 
 ```
+	> 此时可能会报一些错误，尝试将项目app的 `migrations` 下面，除了 `__init__.py` 文件，其它全部删了再执行一遍命令试试。
+
 2. 通过迁移文件同步表
 ```python
 python manage.py migrate  
@@ -220,3 +224,19 @@ Alias /static C:\xxgl\static
 ```
 	其中xxgl为我的工程文件夹。编辑完成后保存文件，回到服务器管理器，找到apache2.4服务，重启服务。
 	如果之前配置都没问题，浏览器输入http://127.0.0.1:80 ，就会见到Django页面了。
+
+# 升级Django项目
+1. 更新需要升级的文件
+利用文件对比工具（如Beyond Compare），以二进制比较，查找和更新文件。切记不要更新文件夹 `migrations` 下的任何文件。
+2. 重新编译，记录改动到迁移文件
+以管理员方式打开cmd，进入项目根目录，执行下面命令：
+```python
+python manage.py makemigrations 
+```
+3. 通过迁移文件同步表
+以管理员方式打开cmd，进入项目根目录，执行下面命令：
+```python
+python manage.py migrate  
+```
+4. 重启Apache服务
+

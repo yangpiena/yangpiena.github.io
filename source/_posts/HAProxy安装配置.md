@@ -6,7 +6,7 @@ layout: post
 comments: true
 date: 2017-12-19 15:34:42
 categories: 技术
-tags: [HAProxy]
+tags: [HAProxy, 安装配置]
 keywords:
 description:
 ---

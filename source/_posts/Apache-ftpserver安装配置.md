@@ -6,7 +6,7 @@ layout: post
 comments: true
 date: 2018-04-10 12:11:26
 categories: 技术
-tags: [FTP]
+tags: [FTP, 安装配置]
 description:
 ---
 ### apache ftpserver下载
