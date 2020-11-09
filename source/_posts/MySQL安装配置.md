@@ -148,3 +148,49 @@ CREATE TABLE new_table()
 ```
 DROP TABLE new_table
 ```
+
+# 备份
+## Windows下
+1. 编写bat脚本
+```
+@echo off
+set "Ymd=%date:~,4%%date:~5,2%%date:~8,2%"
+cd C:\Program Files\MySQL\MySQL Server 5.7\bin\
+mysqldump --opt -u root --password=root --host=127.0.0.1 --port=3306 --default-character-set=utf8 new_database > C:\YPN\MYSQLDATAAUTOBACKUP\new_database_backup_%Ymd%.sql
+@echo on
+```
+	其中，先进入MySQL安装目录bin下，执行`mysqldump`命令即可，具体参数如下：
+	
+		--user      用户名                   
+		--password  密码                     
+		--host      地址                      
+		--port      端口                      
+		--default-character-set  字符编码              
+		--all-databases          备份整个数据库        
+		--databases new_database 备份指定数据库            
+		new_database new_table   备份指定数据库的指定表    
+		new_database new_table1 new_table2  备份指定数据库的多个指定表
+	
+2. 设置Windows定时任务
+
+# 恢复
+1. 以管理员方式打开cmd，进入MySQL安装目录bin下：
+```
+cd C:\Program Files\MySQL\MySQL Server 5.7\bin\
+```
+2. 进入MySQL
+```
+mysql -u root -p root
+```
+3. 查看数据库列表
+```
+show databases;
+```
+4. 选择要恢复的数据库
+```
+use xxx;
+```
+5. 执行恢复命令
+```
+source C:\YPN\MYSQLDATAAUTOBACKUP\new_database_backup_20201109.sql;
+```
