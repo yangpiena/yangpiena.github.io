@@ -47,12 +47,12 @@ Type "help", "copyright", "credits" or "license" for more information.
 
 # 配置Django项目（基于admin管理工具）
 
-## 配置数据库
+## 配置MySQL数据库
 1. 创建数据库
 ```
 create database xxgl; 
 ```
-	其它数据库操作命令请参照 [MySQL安装配置](/2020/11/08/MySQL安装配置/) 里的**使用**章节。
+	其它的数据库操作命令请参照 [MySQL安装配置](/2020/11/08/MySQL安装配置/) 里的**使用**章节。
 2. 修改项目下settings.py中DATABASES配置
 ```
 'default': {
@@ -63,6 +63,29 @@ create database xxgl;
 	'HOST': '127.0.0.1',
 }
 ```
+## 配置Oracle数据库
+1. 修改项目下settings.py中DATABASES配置
+```
+'default': {
+	'ENGINE': 'django.db.backends.oracle',
+	'NAME': 'orcl',
+	'USER': 'yonghu',
+	'PASSWORD': 'mima',
+	'HOST': "xx.xx.xx.xx",
+	'PORT': '1521',
+}
+```
+2. 安装驱动模块 `cx_Oracle`
+```
+pip install cx_Oracle
+```
+	安装完成后出现如下所示，表示安装成功：
+		Collecting cx_Oracle
+		  Downloading cx_Oracle-8.0.1-cp37-cp37m-win_amd64.whl (201 kB)
+			 |████████████████████████████████| 201 kB 33 kB/s
+		Installing collected packages: cx-Oracle
+		Successfully installed cx-Oracle-8.0.1
+3. 最后将Oracle客户端安装路径下的 `oci.dll`  `oraocci11.dll`  `oraociei11.dll` 这三个文件拷贝到python安装路径的 lib/site-packages 下面，就OK了。
 
 ## 安装Django依赖包
 

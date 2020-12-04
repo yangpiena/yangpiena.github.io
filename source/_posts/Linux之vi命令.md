@@ -10,7 +10,7 @@ tags: [Linux, 命令]
 description:
 ---
 # vi全屏幕编辑器
-![vi键盘图](http://i2.tiimg.com/715788/cd955f2b14e11c80.png)
+![vi键盘图](/img/screenshots/vi键盘图.png)
 
 <!-- more -->
 

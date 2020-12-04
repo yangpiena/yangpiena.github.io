@@ -65,23 +65,31 @@ users.properties文件存放的是用户名及密码权限等配置信息，通�
 vim ftpd-typical.xml
 ```
 修改配置文件ftpd-file.xml，增加encrypt-passwords="clear"，将密码加密方式修改为clear，默认为MD5加密方式。
-
+	
 	<?xml version="1.0" encoding="UTF-8"?>
 	<server xmlns="http://mina.apache.org/ftpserver/spring/v1"
-	        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	        xsi:schemaLocation="
-	           http://mina.apache.org/ftpserver/spring/v1 http://mina.apache.org/ftpserver/ftpserver-1.0.xsd        
-	           "
-	        id="myServer">
-	        <listeners>
-	                <nio-listener name="default" port="21">
-	                    <ssl>
-	                         <keystore file="./res/ftpserver.jks" password="password" />
-	                    </ssl>
-	                </nio-listener>
-	        </listeners>
-	        <file-user-manager file="./res/conf/users.properties" encrypt-passwords="clear" />
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://mina.apache.org/ftpserver/spring/v1 http://mina.apache.org/ftpserver/ftpserver-1.0.xsd"
+        id="myServer" max-logins="999999" max-threads="9999" anon-enabled="true" max-anon-logins="10">
+		<!-- anon-enabled 表示是否开通匿名访问；max-anon-logins 表示匿名访问的数量限制-->
+        <listeners>
+                <nio-listener name="default" port="21">
+                    <ssl>
+                        <keystore file="./res/ftpserver.jks" password="password" />
+                    </ssl>
+					<!--设置多少时间后关闭一个闲置的链接，单位是秒-->
+					<data-connection idle-timeout="1">
+						<!--设置主动链接配置，端口号“2120”-->
+						<!--<active local-port="2120"/>-->
+						
+						<!--设置被动链接配置，端口设置为“2120”，或者开通更多端口“2120-3120”，扩展地址为“0.0.0.0”。当客户端连接时，服务器使用 0.0.0.0:2120-3120 为客户端提供数据传输服务。-->
+						<passive ports="2120-3120" address="0.0.0.0" external-address=""/>
+					</data-connection>
+                </nio-listener>
+        </listeners>
+        <file-user-manager file="./res/conf/users.properties" encrypt-passwords="clear" />
 	</server>
+
 
 ##### 1.5 启动
 在ftpserver目录下，执行命令：
@@ -170,4 +178,12 @@ ftpserver check
 ```
 
 #### 7. 随系统自启动
-> 暂未找到解决办法
+打开linux设置开启启动的文件，将下面的配置写入此文件的最后：
+```
+vim /etc/rc.d/after.local
+```
+配置：
+```
+# 启动ftpserver服务
+nohup /usr/local/ftpserver/bin/ftpd.sh res/conf/ftpd-typical.xml 1>/usr/local/ftpserver/res/log/ftpd.log 2>&1 &
+```

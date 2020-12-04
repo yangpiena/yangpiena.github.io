@@ -108,7 +108,7 @@
 <meta property="og:site_name" content="昜丿捺">
 <meta property="og:description" content="生命在于折腾">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2020-06-20T02:25:51.903Z">
+<meta property="og:updated_time" content="2020-12-02T14:19:15.945Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="更换电脑后如何修改Hexo博客">
 <meta name="twitter:description" content="生命在于折腾">
@@ -454,7 +454,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2020-06-20 10:25:51" itemprop="dateModified" datetime="2020-06-20T10:25:51+08:00">2020-06-20</time>
+                <time title="修改时间：2020-12-02 22:19:15" itemprop="dateModified" datetime="2020-12-02T22:19:15+08:00">2020-12-02</time>
               
             
           </span>
@@ -506,7 +506,7 @@
                 
                   <span class="post-meta-item-text">本文字数：</span>
                 
-                <span title="本文字数">1.2k</span>
+                <span title="本文字数">3k</span>
               
 
               
@@ -520,7 +520,7 @@
                 
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
-                <span title="阅读时长">1 分钟</span>
+                <span title="阅读时长">3 分钟</span>
               
             </div>
           
@@ -548,21 +548,38 @@
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git clone git@github.com:yangpiena/yangpiena.github.io.git</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>在本地新拷贝的yangpiena.github.io文件夹下通过Git bash依次执行下列命令：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo</span><br><span class="line">npm install </span><br><span class="line">npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cnpm install -g hexo</span><br></pre></td></tr></table></figure>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cnpm install</span><br></pre></td></tr></table></figure>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cnpm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure>
 </li>
 </ol>
 <blockquote>
 <p>切记不要执行 hexo init 这条指令，否则会删除.git文件夹</p>
 </blockquote>
-<p>遇到错误时：</p>
+<p>遇到安装失败时，可更换npm的源再尝试：</p>
+<ul>
+<li>国内优秀npm镜像<br><strong>淘宝npm镜像</strong><br>搜索地址：<a href="http://npm.taobao.org/" target="_blank" rel="noopener">http://npm.taobao.org/</a><br>registry地址：<a href="http://registry.npm.taobao.org/" target="_blank" rel="noopener">http://registry.npm.taobao.org/</a><br><strong>cnpmjs镜像</strong><br>搜索地址：<a href="http://cnpmjs.org/" target="_blank" rel="noopener">http://cnpmjs.org/</a><br>registry地址：<a href="http://r.cnpmjs.org/" target="_blank" rel="noopener">http://r.cnpmjs.org/</a></li>
+<li><p>临时使用</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm --registry https://registry.npm.taobao.org install express</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>持久使用</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm config set registry https://registry.npm.taobao.org</span><br></pre></td></tr></table></figure>
+<p>  配置后可通过下面方式来验证是否成功</p>
+  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm config get registry</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>通过 <code>cnpm</code> 命令</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install -g cnpm --registry=https://registry.npm.taobao.org</span><br></pre></td></tr></table></figure>
+<p>  安装完后，使用cnpm命令安装：<code>cnpm install expresstall express</code></p>
+</li>
+</ul>
+<p>如果还有错误：</p>
 <ol>
-<li>更新npm的源：npm config set registry <a href="https://registry.npm.taobao.org" target="_blank" rel="noopener">https://registry.npm.taobao.org</a></li>
 <li>cmd进入博客当前文件夹路径</li>
 <li>执行 npm install</li>
 <li>执行 hexo server</li>
 <li>执行成功后，再到博客下的git中执行 hexo d /hexo g 发现可以执行成功。</li>
 </ol>
-<a id="more"></a>
+
       
     </div>
 
@@ -638,7 +655,7 @@
   <p><span>本文标题:</span><a href="/2016/11/09/更换电脑后如何修改hexo博客/">更换电脑后如何修改Hexo博客</a></p>
   <p><span>文章作者:</span><a href="/" title="访问 昜丿捺 的个人博客">昜丿捺</a></p>
   <p><span>发布时间:</span>2016年11月09日 - 00:00:00</p>
-  <p><span>最后更新:</span>2020年06月20日 - 10:25:51</p>
+  <p><span>最后更新:</span>2020年12月02日 - 22:19:15</p>
   <p><span>原始链接:</span><a href="/2016/11/09/更换电脑后如何修改hexo博客/" title="更换电脑后如何修改Hexo博客">http://ynn5ru.coding-pages.com/2016/11/09/更换电脑后如何修改hexo博客/</a>
     <span class="copy-path" title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="http://ynn5ru.coding-pages.com/2016/11/09/更换电脑后如何修改hexo博客/" aria-label="复制成功！"></i></span>
   </p>
@@ -678,18 +695,14 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/11/09/Hexo博客搭建记录/" rel="next" title="Hexo博客搭建记录">
-                <i class="fa fa-chevron-left"></i> Hexo博客搭建记录
-              </a>
-            
           </div>
 
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2016/11/22/Linux命令大全/" rel="prev" title="Linux命令大全">
-                Linux命令大全 <i class="fa fa-chevron-right"></i>
+              <a href="/2016/11/09/Hexo博客搭建记录/" rel="prev" title="Hexo博客搭建记录">
+                Hexo博客搭建记录 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -1029,7 +1042,7 @@
       <i class="fa fa-area-chart"></i>
     </span>
     
-    <span title="站点总字数">206k</span>
+    <span title="站点总字数">208k</span>
   
 
   
@@ -1038,7 +1051,7 @@
       <i class="fa fa-coffee"></i>
     </span>
     
-    <span title="站点阅读时长">3:07</span>
+    <span title="站点阅读时长">3:09</span>
   
 </div>
 

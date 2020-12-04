@@ -69,7 +69,7 @@ character-set-server=utf8
 # 创建新表时将使用的默认存储引擎  
 default-storage-engine=INNODB
 ```
-	其中内容中的 `basedir` 和 `datadir` 是解压缩后的指定安装目录。
+	其中内容中的 `basedir` 和 `datadir` 是解压缩后的指定安装目录，注意 `datadir` 后面要增加 **`data`**。
 
 ### 建立默认数据库
 1. 以管理员方式打开cmd，进入安装目录：

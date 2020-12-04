@@ -28,10 +28,19 @@ description:
 
 
 #### 常用
-[百度翻译](https://fanyi.baidu.com/) | [Google翻译](https://translate.google.cn/?hl=zh-CN&tab=TT) | [必应在线翻译](https://cn.bing.com/translator/) | [百度云](https://pan.baidu.com/) |  [腾讯云](https://cloud.tencent.com/) |  [贴图库](http://www.tietuku.com/) | [拷贝兔](https://cp.anyknew.com/) | [鸡毛信](https://cmd.im/)
-[CSDN.NET](http://www.csdn.net/)  | [V2EX](https://www.v2ex.com/) | [不死鸟](https://hao.su/)	| [小部落](https://www.xbl100.com/) | [免费吧](http://www.mianfeib.me/) | [老D博客](https://laod.cn/) |[cnBeta](http://www.cnbeta.com/) | [telegram 中文搜索](http://www.sssoou.com/)
-[OneGo导航](https://ionego.net/) | [今日热榜](https://tophub.today/) | [果汁排行榜](http://guozhivip.com/rank/) | [AnyKnew](https://www.anyknew.com/#/) | [科塔学术导航](https://site.sciping.com/) | [金十数据](https://www.jin10.com/) | [手机抢购网](http://www.qianggou5.com/price/) | [医学微视](https://www.mvyxws.com/) | [药房网](https://www.yaofangwang.com/) | [WikiHow](https://zh.wikihow.com/%E9%A6%96%E9%A1%B5)
-[天气万年历](https://wannianli.tianqi.com/today/zhou/) | [希赛网](https://www.educity.cn/) | [中国国际人才交流基金会项目管理网站](http://exam.chinapmp.cn/) | [PMI](https://www.pmi.org/)
+[百度翻译](https://fanyi.baidu.com/) | [Google翻译](https://translate.google.cn/?hl=zh-CN&tab=TT) | [天气万年历](https://wannianli.tianqi.com/today/zhou/) | [百度云](https://pan.baidu.com/) |  [腾讯云](https://cloud.tencent.com/)
+[CSDN.NET](http://www.csdn.net/) |[cnBeta](http://www.cnbeta.com/)  | [V2EX](https://www.v2ex.com/) | [不死鸟发布页](https://bde.su/) | [不死鸟](https://iao.su/)	| [小部落](https://www.xbl100.com/) | [老D博客](https://laod.cn/) | [免费吧](http://www.mianfeib.me/)
+[今日热榜](https://tophub.today/) | [果汁排行榜](http://guozhivip.com/rank/) | [AnyKnew](https://www.anyknew.com/#/) | [科塔学术导航](https://site.sciping.com/) | [手机抢购网](http://www.qianggou5.com/price/) | [医学微视](https://www.mvyxws.com/) | [药房网](https://www.yaofangwang.com/) | [WikiHow](https://zh.wikihow.com/%E9%A6%96%E9%A1%B5)
+[希赛网](https://www.educity.cn/) | [中国国际人才交流基金会项目管理网站](http://exam.chinapmp.cn/) | [PMI](https://www.pmi.org/)
+
+
+#### 在线工具
+[drawio](https://app.diagrams.net/) | [百度脑图](https://naotu.baidu.com/home) | [GitMind](https://gitmind.cn/)
+[拷贝兔](https://cp.anyknew.com/) | [鸡毛信](https://cmd.im/) | [鸡霸图床](https://gejiba.com/) | [田字格笔顺 字帖生成器](https://lab.feifanju.com/zitie/)
+[短链接](https://url.4qo.cn/#/) | [域名查询](https://lab.feifanju.com/domain-query/) | [在线HTTP POST/GET接口测试工具](https://lab.feifanju.com/http/index.html)
+[独特工具箱](https://www.dute.org/) | [在线工具](http://tool.lu/)  |  [在线工具](http://tool.oschina.net/) | [UU在线工具](https://uutool.cn/) | [JSON在线解析及格式化验证](http://www.json.cn/)  |  [转换json格式为C#类](http://json2csharp.chahuo.com/)
+[生成随机密码](https://suijimimashengcheng.51240.com/) | [密码强度检测](https://mimaqiangdu.51240.com/) | [PMD5](http://pmd5.com/#)  |  [输入让你无语的MD5](https://www.somd5.com/)   |  [在线MD5暴力破解](http://www.atool.org/md5-crack.php) | [核心价值编码器](https://sym233.github.io/core-values-encoder/)  |  [核心价值编码器源码](https://github.com/sym233/core-values-encoder)
+[在线格式转换](https://www.alltoall.net/) |  [png在线转ico](http://www.easyicon.net/covert/) | [做好图](http://www.zuohaotu.com/)  |  [MakePic.com 图片制造](http://www.makepic.com/)  |  [removebg图片背景消除](https://www.remove.bg/ ) | [waifu2x无损放大图片](http://waifu2x.udp.jp/index.zh-CN.html) | [图片无限变大](http://bigjpg.com/zh) | [草料二维码美化器](http://mh.cli.im/)  | [在线制作您的Logo](https://www.logaster.cn/)
 
 
 #### 音乐
@@ -39,11 +48,10 @@ description:
 
 
 #### 电影
-[免费的在线影视网站汇总](https://hao.su/531/) | [港澳台电视直播](https://mtime.info/) | [全民解析](http://www.qmaile.com/) | [今日影视](http://www.2w2w.tv/)      | [1090影视](https://1090ys.com/) | [嗨哆咪](https://www.haiduomi.cc) | [完美看看](https://www.wanmeikk.me/) | [影视天堂](https://www.ystt5.com/) | [山雀影视](https://video.rsk.cool/) | [蒙面大侠](https://www.mengmiandaxia.com/) | [欧亚影视](http://www.oy37.com/) | [神鸡影视](http://n7f6.cn/) | [新奇遇电影](https://www.newqiyu.com/) | [剧汇TV](https://www.juhuitv.com/) | [电影推荐MVCAT](https://www.mvcat.com/)
+[映像讯](http://mkv.cn/) | [电影推荐MVCAT](https://www.mvcat.com/) | [预告片世界](http://www.yugaopian.cn/)  |  [人人影视字幕](http://www.yyets.com/)
+[免费的在线影视网站汇总](https://iao.su/531/) | [港澳台电视直播](https://mtime.info/) | [全民解析](http://www.qmaile.com/) | [今日影视](http://www.2w2w.tv/)      | [1090影视](https://1090ys.com/) | [嗨哆咪](https://www.haiduomi.cc) | [完美看看](https://www.wanmeikk.me/) | [影视天堂](https://www.ystt5.com/) | [山雀影视](https://video.rsk.cool/) | [蒙面大侠](https://www.mengmiandaxia.com/) | [欧亚影视](http://www.oy37.com/) | [神鸡影视](http://n7f6.cn/) | [新奇遇电影](https://www.newqiyu.com/) | [剧汇TV](https://www.juhuitv.com/)
 [天天美剧](http://www.ttmeiju.me/) | [99美剧网](https://www.jjmeiju.com/) | [美剧粉](http://www.mjf2020.com/)
-[BT之家](https://www.415.net)      | [BT之家](https://www.btjia.com)      | [BT之家](https://btbtt.us/) | [破晓电影](http://www.poxiao.com) | [迅雷电影下载](http://www.xlpu.cc/)  |  [快播电影](http://www.bubulai.com/) |  [BT电影天堂](http://www.btbttv.net/) | [U3C3](https://u3c3.com/)
-[预告片世界](http://www.yugaopian.cn/)  |  [人人影视字幕](http://www.yyets.com/)
-[尘落电影网](https://hao.su/531/#menu_index_6)
+[BT之家](https://www.91btbtt.com/)      | [BT之家](https://www.52btbtt.com/)      | [BT之家](https://btbtt.us/) | [破晓电影](http://www.poxiao.com) | [迅雷电影下载](http://www.xlpu.cc/)  |  [快播电影](http://www.bubulai.com/) |  [BT电影天堂](http://www.btbttv.net/) | [U3C3](https://u3c3.com/)
 
 
 #### 电子书
@@ -60,30 +68,7 @@ description:
 
 
 #### 美图
-[it.me](http://www.topit.pro/) | [lala 图库](https://233.fi/explore/trending) | [网红精选](https://xn--wcsw84dcxi8ta.xyz/)
-[WallpaperHub](https://wallpaperhub.app/) |  [笔记本桌面壁纸下载](http://bbs.zol.com.cn/nbbbs/d33943.html)
-[鸡霸图床](https://gejiba.com/)
-
-
-#### 在线工具
-[短链接](https://url.4qo.cn/#/) | [域名查询](https://lab.feifanju.com/domain-query/)
-[独特工具箱](https://www.dute.org/) | [在线工具](http://tool.lu/)  |  [在线工具](http://tool.oschina.net/) | [UU在线工具](https://uutool.cn/)
-[JSON在线解析及格式化验证](http://www.json.cn/)  |  [转换json格式为C#类](http://json2csharp.chahuo.com/)
-[在线HTTP POST/GET接口测试工具](https://lab.feifanju.com/http/index.html)
-[生成随机密码](https://suijimimashengcheng.51240.com/) | [密码强度检测](https://mimaqiangdu.51240.com/)
-[PMD5](http://pmd5.com/#)  |  [输入让你无语的MD5](https://www.somd5.com/)   |  [在线MD5暴力破解](http://www.atool.org/md5-crack.php) | [核心价值编码器](https://sym233.github.io/core-values-encoder/)  |  [核心价值编码器源码](https://github.com/sym233/core-values-encoder)
-[在线格式转换](https://www.alltoall.net/) |  [png在线转ico](http://www.easyicon.net/covert/) 
-[做好图](http://www.zuohaotu.com/)  |  [MakePic.com 图片制造](http://www.makepic.com/)  |  [removebg图片背景消除](https://www.remove.bg/ ) | [waifu2x无损放大图片](http://waifu2x.udp.jp/index.zh-CN.html) | [图片无限变大](http://bigjpg.com/zh)
-[草料二维码美化器](http://mh.cli.im/)  | [在线制作您的Logo](https://www.logaster.cn/)
-[田字格笔顺 字帖生成器](https://lab.feifanju.com/zitie/)
-
-
-#### 系统/软件下载
-[IT之家](https://www.ithome.com/) | [系统之家](http://www.xitongzhijia.net/) | [系统天地](http://www.xitongtiandi.net/) | [Win10专业版官网](http://www.win10zyb.com/) | [Win10之家](http://www.xh52.com/) | [系统圣地](http://www.285868.com/) | [吻妻出品专注 win7](http://www.newxitong.com/) | [吻妻出品专注 win10](https://iwin10.net/)
-[黑苹果乐园](https://imac.hk/)	  |  [黑果小兵](https://blog.daliansky.net/)  |  [从零开始的黑苹果安装教程](http://tieba.baidu.com/p/5179866130#)
-[zd423](http://www.zdfans.com/) | [423down](https://www.423down.com/) |  [行客工作室](http://www.runker.net/) | [金狐维护盘](http://www.jinhu.me/) | [小众软件](https://www.appinn.com/) | [我爱分享网](http://www.zhanshaoyi.com/rjxz.html) | [夜雨聆风](http://www.yeyulingfeng.com/) | [云库网](https://www.lisect.xyz/)
-[浏览迷](https://liulanmi.com/)    |  [Chrome浏览器插件下载中心](https://www.chromefor.com/) | [FlashPlayer下载地址1](http://get.adobe.com/cn/flashplayer/otherversions/)  |  [FlashPlayer下载地址2](http://www.adobe.com/support/flashplayer/downloads.html)  |  [Debugger Version地址](http://kb2.adobe.com/cps/155/tn_15507.html)
-[PanDownload复刻版](http://pan.yuantuo.firadio.net.web72.feieryun.cn:82/baidu/) | [kurukurumi](https://kurukurumi.tk/)
+[it.me](http://www.topit.pro/) | [lala 图库](https://233.fi/explore/trending) | [网红精选](https://xn--wcsw84dcxi8ta.xyz/) | [WallpaperHub](https://wallpaperhub.app/) |  [笔记本桌面壁纸下载](http://bbs.zol.com.cn/nbbbs/d33943.html)
 
 
 #### 社区
@@ -92,23 +77,18 @@ description:
 
 
 #### 资源
-[库问搜索](http://www.koovin.com/)
+[库问搜索](http://www.koovin.com/) | [telegram 中文搜索](http://www.sssoou.com/) | [小白盘](https://www.xiaobaipan.com)
 [MSDN](http://msdn.itellyou.cn/?gytyzs=0z1zl) | [矢量图标库](http://www.iconfont.cn/) | [最好的12个Icon图标资源网站整理分享出来](https://blog.csdn.net/xiawj8957/article/details/45130263) | [FontAwesome图标](http://www.fontawesome.com.cn/faicons/)
 [优品PPT](http://www.ypppt.com)
 [Tracker服务器地址1](https://newtrackon.com/) | [Tracker服务器地址2](https://github.com/ngosang/trackerslist)
-[小白盘](https://www.xiaobaipan.com)
 
 
-#### 网盘
-[webd](https://webd.cf/) | [Nextcloud](https://nextcloud.com/)
-[Nextcloud通过不被信任的域名访问解决方法 Nextcloud 您正在访问来自不信任域名的服务器](https://blog.csdn.net/g313105910/article/details/106381380)
-[nextcloud修改域名、IP或端口](https://www.cnblogs.com/mrcoolfuyu/p/13355522.html)
-[搭建自己私人网盘-Nextcloud](https://blog.csdn.net/qq_43099160/article/details/107081157)
-[CentOS 7下安装Nextcloud搭建个人网盘](https://www.linuxidc.com/Linux/2018-11/155310.htm)
-[openSUSE 安装LAMP记录](https://www.cnblogs.com/fsong/p/6736030.html)
-[【伐木厮】使用Nextcloud搭建私有云储存](https://www.bilibili.com/read/cv4853751/)
-[如何安装Seafile与Nginx在openSUSE Leap 42.1](https://www.howtoing.com/how-to-install-seafile-with-nginx-on-opensuse-leap-42.1)
-[zaix.ru一个俄罗斯网盘](https://zaix.ru/)
+#### 系统/软件下载
+[IT之家](https://www.ithome.com/) | [系统之家](http://www.xitongzhijia.net/) | [系统天地](http://www.xitongtiandi.net/) | [Win10专业版官网](http://www.win10zyb.com/) | [Win10之家](http://www.xh52.com/) | [系统圣地](http://www.285868.com/) | [吻妻出品专注 win7](http://www.newxitong.com/) | [吻妻出品专注 win10](https://iwin10.net/)
+[黑苹果乐园](https://imac.hk/)	  |  [黑果小兵](https://blog.daliansky.net/)  |  [从零开始的黑苹果安装教程](http://tieba.baidu.com/p/5179866130#)
+[zd423](http://www.zdfans.com/) | [423down](https://www.423down.com/) |  [行客工作室](http://www.runker.net/) | [金狐维护盘](http://www.jinhu.me/) | [小众软件](https://www.appinn.com/) | [我爱分享网](http://www.zhanshaoyi.com/rjxz.html) | [夜雨聆风](http://www.yeyulingfeng.com/) | [云库网](https://www.lisect.xyz/)
+[吾爱破解](https://www.52pojie.cn/) | [浏览迷](https://liulanmi.com/)    |  [Chrome浏览器插件下载中心](https://www.chromefor.com/) | [FlashPlayer下载地址1](http://get.adobe.com/cn/flashplayer/otherversions/)  |  [FlashPlayer下载地址2](http://www.adobe.com/support/flashplayer/downloads.html)  |  [Debugger Version地址](http://kb2.adobe.com/cps/155/tn_15507.html)
+[PanDownload复刻版](https://imwcr.cn/api/bdwp/) | [Yuan_Tuo](https://imwcr.cn/) | [kurukurumi](https://kurukurumi.tk/)
 
 
 #### 文章/教程
@@ -120,15 +100,15 @@ description:
 [Win10怎么把批处理文件固定到开始菜单](http://www.jb51.net/os/win10/483729.html) | [解决TCP/IP筛选的实用设置问题](https://jingyan.baidu.com/article/851fbc37dc1e513e1f15ab27.html) | [如何在不重装服务器的情况下尝试解决sqlmaint.exe失败的问题](http://blog.csdn.net/zhaoyonghui100/article/details/8939950) | [Sql Server 2000清除日志方法介绍](https://yq.aliyun.com/ziliao/22450)
 [Flex转型Html学习随笔1——关于Html页面的div布局（上）](http://www.cnblogs.com/momoko8443/p/4302879.html) | [Flex转型Html学习随笔1——关于Html页面的div布局（下）](http://www.cnblogs.com/momoko8443/p/4303829.html)
 [OneAPM 工作两年总结](http://www.ituring.com.cn/article/497377)
+[竞品分析－SWOT分析](https://zhuanlan.zhihu.com/p/181668340)
 
 
 #### 前端/案例
 [蓝蓝设计](http://www.lanlanwork.com/)
-[前端网](http://www.qdfuns.com/) | [LayUI](https://www.layui.com/) | [HeyUI](https://www.heyui.top/) | [HeyUI Admin](https://admin.heyui.top/)
-[10个顶级的CSS UI开源框架](http://www.codeceo.com/article/top-10-css-ui-framework.html) | [Android酷炫实用的开源框架（UI框架）](http://www.runoob.com/w3cnote/android-ui-framework.html) | [后台界面模板](http://www.mycodes.net/154/3.htm)
-[不落阁](http://www.lyblogs.cn/) | [网络培训系统界面设计UI](http://www.th7.cn/Design/ui/201312/199261.shtml) | [公司某项目前端技术积累](http://blog.csdn.net/sunyingyuan/article/details/38237139)
-[H-ui前端框架](http://www.h-ui.net/H-ui.admin.shtml)
+[LayUI](https://www.layui.com/) | [HeyUI](https://www.heyui.top/) | [H-ui前端框架](http://www.h-ui.net/H-ui.admin.shtml) | [Android酷炫实用的开源框架（UI框架）](http://www.runoob.com/w3cnote/android-ui-framework.html)
+[Bootstrap模板](http://www.bootstrapmb.com/) | [后台界面模板](http://www.mycodes.net/154/3.htm)
 [思美电商](http://test.8sk.cn/html/M0493/index.html)
+[公司某项目前端技术积累](http://blog.csdn.net/sunyingyuan/article/details/38237139)
 
 
 #### 数据库
@@ -145,6 +125,23 @@ description:
 
 #### 规则引擎
 [Drools](http://www.drools.org.cn/)
+
+
+#### 网盘
+[webd](https://webd.cf/) | [Nextcloud](https://nextcloud.com/)
+[Nextcloud通过不被信任的域名访问解决方法 Nextcloud 您正在访问来自不信任域名的服务器](https://blog.csdn.net/g313105910/article/details/106381380)
+[nextcloud修改域名、IP或端口](https://www.cnblogs.com/mrcoolfuyu/p/13355522.html)
+[搭建自己私人网盘-Nextcloud](https://blog.csdn.net/qq_43099160/article/details/107081157)
+[CentOS 7下安装Nextcloud搭建个人网盘](https://www.linuxidc.com/Linux/2018-11/155310.htm)
+[openSUSE 安装LAMP记录](https://www.cnblogs.com/fsong/p/6736030.html)
+[【伐木厮】使用Nextcloud搭建私有云储存](https://www.bilibili.com/read/cv4853751/)
+[如何安装Seafile与Nginx在openSUSE Leap 42.1](https://www.howtoing.com/how-to-install-seafile-with-nginx-on-opensuse-leap-42.1)
+[zaix.ru一个俄罗斯网盘](https://zaix.ru/)
+
+
+#### API
+[QQPusher推送服务](http://qqpusher.yanxianjun.com/doc/#/)
+[WxPusher微信推送服务](https://wxpusher.dingliqc.com/docs/#/)
 
 
 #### Angular
@@ -280,6 +277,7 @@ description:
 [hexo支持mathjax](https://www.cnblogs.com/SHOR/p/9581661.html)
 [为 Hexo 博客创建本地搜索引擎](https://liam.page/2017/09/21/local-search-engine-in-Hexo-site/)	|	[hexo-generator-search](https://github.com/wzpan/hexo-generator-search)
 [3-hexo](https://yelog.org/)	|	[Xu's Blog](https://hasaik.com/)
+[使用Django重写我的Hexo博客](https://www.sqlsec.com/2020/03/djangoblog.html)
 
 
 #### Hosts
@@ -340,13 +338,17 @@ description:
 [MathJax](https://math.meta.stackexchange.com/questions/5020/mathjax-basic-tutorial-and-quick-reference)
 
 
-#### Python
+#### Python / Django
+[Python 实现定时任务](https://www.cnblogs.com/fengff/p/11011000.html)
+[Django](https://www.cnblogs.com/suoning/p/5818869.html)
+[Django 的认识，面试题](https://www.cnblogs.com/chongdongxiaoyu/p/9403399.html)
 [如果不想在django 的settings中保存mysql数据库的密码](https://www.cnblogs.com/worldinmyeyes/p/12109371.html)
 [Python/Django – 避免在源代码中保存密码](http://www.voidcn.com/article/p-eoxnnhgp-bst.html)
 [Windows下利用Apache部署多个Django项目](https://www.cnblogs.com/luodaxia/p/12505153.html)
 [django界面上弹出bootstrap modal对话框，对话框中包含iframe并请求一个新的页面](https://blog.csdn.net/u012561176/article/details/106539639)
 [jango 用户认证 user对象](https://blog.csdn.net/m0_38061194/article/details/73369164)
 [django-ORM外键删除操作详解](https://www.cnblogs.com/ifdashui/p/11869949.html)
+[Django 2.2 基础教程](https://code.ziqiangxuetang.com/django/django-tutorial.html)
 
 #### Setup Factory
 [安装包制作工具 SetupFactory使用2 API清单](https://www.cnblogs.com/SavionZhang/p/4107761.html)
