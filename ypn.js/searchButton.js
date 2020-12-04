@@ -10,7 +10,7 @@ var favObj = {
 					'b-btn': '//www.baidu.com/baidu',
 					'q-btn': '//www.google.com/search',
 					'm-btn': 'https://mijisou.com/',
-					'd-btn': 'https://www.dogedoge.com/',
+					'd-btn': 'https://www.dogedoge.com/results',
 					'w-btn': 'https://cn.bing.com/'
 				}
 				$('#search-form').attr('action', urlArr[id]);
