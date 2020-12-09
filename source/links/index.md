@@ -40,7 +40,7 @@ description:
 [短链接](https://url.4qo.cn/#/) | [域名查询](https://lab.feifanju.com/domain-query/) | [在线HTTP POST/GET接口测试工具](https://lab.feifanju.com/http/index.html)
 [独特工具箱](https://www.dute.org/) | [在线工具](http://tool.lu/)  |  [在线工具](http://tool.oschina.net/) | [UU在线工具](https://uutool.cn/) | [JSON在线解析及格式化验证](http://www.json.cn/)  |  [转换json格式为C#类](http://json2csharp.chahuo.com/)
 [生成随机密码](https://suijimimashengcheng.51240.com/) | [密码强度检测](https://mimaqiangdu.51240.com/) | [PMD5](http://pmd5.com/#)  |  [输入让你无语的MD5](https://www.somd5.com/)   |  [在线MD5暴力破解](http://www.atool.org/md5-crack.php) | [核心价值编码器](https://sym233.github.io/core-values-encoder/)  |  [核心价值编码器源码](https://github.com/sym233/core-values-encoder)
-[在线格式转换](https://www.alltoall.net/) |  [png在线转ico](http://www.easyicon.net/covert/) | [做好图](http://www.zuohaotu.com/)  |  [MakePic.com 图片制造](http://www.makepic.com/)  |  [removebg图片背景消除](https://www.remove.bg/ ) | [waifu2x无损放大图片](http://waifu2x.udp.jp/index.zh-CN.html) | [图片无限变大](http://bigjpg.com/zh) | [草料二维码美化器](http://mh.cli.im/)  | [在线制作您的Logo](https://www.logaster.cn/)
+[在线格式转换](https://www.alltoall.net/) |  [png在线转ico](http://www.easyicon.net/covert/) | [做好图](http://www.zuohaotu.com/)  |  [MakePic.com 图片制造](http://www.makepic.com/)  |  [removebg图片背景消除](https://www.remove.bg/ ) | [waifu2x无损放大图片](http://waifu2x.udp.jp/index.zh-CN.html) | [图片无限变大](http://bigjpg.com/zh) | [草料二维码美化器](http://mh.cli.im/)  | [在线制作您的Logo](https://www.logaster.cn/) | [滚动横幅](https://www.iamverylovely.com/scroll/)
 
 
 #### 音乐
@@ -68,7 +68,8 @@ description:
 
 
 #### 美图
-[it.me](http://www.topit.pro/) | [lala 图库](https://233.fi/explore/trending) | [网红精选](https://xn--wcsw84dcxi8ta.xyz/) | [WallpaperHub](https://wallpaperhub.app/) |  [笔记本桌面壁纸下载](http://bbs.zol.com.cn/nbbbs/d33943.html)
+[it.me](http://www.topit.pro/) | [lala 图库](https://233.fi/explore/trending) | [网红精选](https://xn--wcsw84dcxi8ta.xyz/)
+[WallpaperHub](https://wallpaperhub.app/) |  [笔记本桌面壁纸下载](http://bbs.zol.com.cn/nbbbs/d33943.html) | [火雨壁纸](https://huoyu.kfsafe.cn/index.html) | [Lively Wallpaper](https://www.xitmi.com/8512.html)
 
 
 #### 社区
@@ -336,6 +337,7 @@ description:
 [Markdown 语法 示例 字体 字号 颜色](http://blog.csdn.net/u011419965/article/details/50536937)
 [Markdown支持的语言](http://blog.csdn.net/peng_hong_fu/article/details/52805408)
 [MathJax](https://math.meta.stackexchange.com/questions/5020/mathjax-basic-tutorial-and-quick-reference)
+[Editor.md](https://github.com/pandao/editor.md)
 
 
 #### Python / Django
@@ -349,6 +351,8 @@ description:
 [jango 用户认证 user对象](https://blog.csdn.net/m0_38061194/article/details/73369164)
 [django-ORM外键删除操作详解](https://www.cnblogs.com/ifdashui/p/11869949.html)
 [Django 2.2 基础教程](https://code.ziqiangxuetang.com/django/django-tutorial.html)
+[Django3.1教程](https://www.liujiangblog.com/course/django/2)
+
 
 #### Setup Factory
 [安装包制作工具 SetupFactory使用2 API清单](https://www.cnblogs.com/SavionZhang/p/4107761.html)
