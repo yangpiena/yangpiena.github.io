@@ -37,7 +37,7 @@ var binft = function (r) {
 		delay: a,
 		step: g
 	};	  
-	//YPN Add 2019-03-29 请求获得从7种分类中随机抽取一个句子，并以纯文本格式输出：https://v1.hitokoto.cn/?encode=text
+	//YPN Add 2019-03-29 一言开发者中心：https://developer.hitokoto.cn/
 	//https://v1.hitokoto.cn/（从7种分类中随机抽取）
 	//https://v1.hitokoto.cn/?c=b （请求获得一个分类是漫画的句子）
 	//https://v1.hitokoto.cn/?c=f&encode=text （请求获得一个来自网络的句子，并以纯文本格式输出）
