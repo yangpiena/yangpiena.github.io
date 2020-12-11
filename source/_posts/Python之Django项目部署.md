@@ -194,9 +194,10 @@ ServerName 127.0.0.1:80
 4. 创建Apache服务
 打开命令行（管理员），cd进入`C:\Apache24\bin`文件夹，输入如下代码创建服务：
 ```
-httpd.exe -k install -n "apache2.4"  
+httpd.exe -k install -n "Apache24"
 ```
-	其中apache2.4是所创建服务器名称，可更改。如果出现successfully installed说明服务创建成功。同时后面可能会跟一些其他信息，说明你的配置是否正确。
+	其中 Apache24 是所创建服务器名称，可更改。如果出现successfully installed说明服务创建成功。同时后面可能会跟一些其他信息，说明你的配置是否正确。
+	如果需要卸载服务，则执行 `httpd.exe -k uninstall -n "Apache24"` 命令即可
 5. 测试Apache
 在浏览器地址栏输入在配置文件中配置的地址，如：http://127.0.0.1:80
 
