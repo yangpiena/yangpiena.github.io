@@ -51,7 +51,7 @@ description:
 
 ## 美图
 [it.me](http://www.topit.pro/) | [lala 图库](https://233.fi/explore/trending) | [网红精选](https://xn--wcsw84dcxi8ta.xyz/)
-[WallpaperHub](https://wallpaperhub.app/) |  [笔记本桌面壁纸下载](http://bbs.zol.com.cn/nbbbs/d33943.html) | [火雨壁纸](https://huoyu.kfsafe.cn/index.html) | [Lively Wallpaper](https://www.xitmi.com/8512.html)
+[WallpaperHub](https://wallpaperhub.app/) |  [笔记本桌面壁纸下载](http://bbs.zol.com.cn/nbbbs/d33943.html) | [火雨壁纸](https://huoyu.kfsafe.cn/index.html) | [Lively Wallpaper](https://www.xitmi.com/8512.html) | [360°航拍全景](https://airpano.org.cn/)
 
 
 # 在线工具
@@ -367,17 +367,21 @@ description:
 # P
 
 ## Python / Django
-[Python 实现定时任务](https://www.cnblogs.com/fengff/p/11011000.html)
+[Python小白教程](http://www.zglg.work/?page_id=535)
+[Python 经典小例子](https://github.com/jackzhenguo/python-small-examples)
+[Python 实现定时任务](https://lz5z.com/Python%E5%AE%9A%E6%97%B6%E4%BB%BB%E5%8A%A1%E7%9A%84%E5%AE%9E%E7%8E%B0%E6%96%B9%E5%BC%8F/) | [Python 实现定时任务](https://www.cnblogs.com/fengff/p/11011000.html)
+[Python实现自动化监控远程服务器](https://www.cnblogs.com/IT-LearnHall/p/9426235.html)
+[你都用 Python 来做什么？](https://www.zhihu.com/question/20799742)
 [Django](https://www.cnblogs.com/suoning/p/5818869.html)
 [Django 的认识，面试题](https://www.cnblogs.com/chongdongxiaoyu/p/9403399.html)
-[如果不想在django 的settings中保存mysql数据库的密码](https://www.cnblogs.com/worldinmyeyes/p/12109371.html)
 [Python/Django – 避免在源代码中保存密码](http://www.voidcn.com/article/p-eoxnnhgp-bst.html)
-[Windows下利用Apache部署多个Django项目](https://www.cnblogs.com/luodaxia/p/12505153.html)
 [django界面上弹出bootstrap modal对话框，对话框中包含iframe并请求一个新的页面](https://blog.csdn.net/u012561176/article/details/106539639)
-[jango 用户认证 user对象](https://blog.csdn.net/m0_38061194/article/details/73369164)
+[django 用户认证 user对象](https://blog.csdn.net/m0_38061194/article/details/73369164)
 [django-ORM外键删除操作详解](https://www.cnblogs.com/ifdashui/p/11869949.html)
 [Django 2.2 基础教程](https://code.ziqiangxuetang.com/django/django-tutorial.html)
 [Django3.1教程](https://www.liujiangblog.com/course/django/2)
+[如果不想在django 的settings中保存mysql数据库的密码](https://www.cnblogs.com/worldinmyeyes/p/12109371.html)
+[Windows下利用Apache部署多个Django项目](https://www.cnblogs.com/luodaxia/p/12505153.html)
 
 
 # S
