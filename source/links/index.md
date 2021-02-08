@@ -29,9 +29,9 @@ description:
 
 # 常用
 [百度翻译](https://fanyi.baidu.com/) | [Google翻译](https://translate.google.cn/?hl=zh-CN&tab=TT) | [天气万年历](https://wannianli.tianqi.com/today/zhou/) | [百度云](https://pan.baidu.com/) |  [腾讯云](https://cloud.tencent.com/)
-[CSDN.NET](http://www.csdn.net/) |[cnBeta](http://www.cnbeta.com/)  | [V2EX](https://www.v2ex.com/) | [不死鸟发布页](https://bde.su/) | [不死鸟](https://iao.su/)	| [小部落](https://www.xbl100.com/) | [老D博客](https://laod.cn/) | [免费吧](http://www.mianfeib.me/)
+[CSDN.NET](http://www.csdn.net/) |[cnBeta](http://www.cnbeta.com/)  | [V2EX](https://www.v2ex.com/) | [不死鸟发布页](https://bde.su/) | [不死鸟](https://iao.su/)	| [小部落](https://www.xbl100.com/) | [老D博客](https://laod.cn/) | [免费吧](http://www.mianfeib.me/) | [分享网络有趣资源(https://gg0.net/)
 [今日热榜](https://tophub.today/) | [果汁排行榜](http://guozhivip.com/rank/) | [AnyKnew](https://www.anyknew.com/#/) | [科塔学术导航](https://site.sciping.com/) | [手机抢购网](http://www.qianggou5.com/price/) | [医学微视](https://www.mvyxws.com/) | [药房网](https://www.yaofangwang.com/) | [WikiHow](https://zh.wikihow.com/%E9%A6%96%E9%A1%B5)
-[希赛网](https://www.educity.cn/) | [中国国际人才交流基金会项目管理网站](http://exam.chinapmp.cn/) | [PMI](https://www.pmi.org/)
+[希赛网](https://www.educity.cn/) | [中国国际人才交流基金会项目管理网站](http://exam.chinapmp.cn/) | [PMI](https://www.pmi.org/) | [Teams](https://teams.microsoft.com/_#/calendarv2)
 
 
 ## 音乐
@@ -57,10 +57,10 @@ description:
 # 在线工具
 [drawio](https://app.diagrams.net/) | [百度脑图](https://naotu.baidu.com/home) | [GitMind](https://gitmind.cn/)
 [拷贝兔](https://cp.anyknew.com/) | [鸡毛信](https://cmd.im/) | [鸡霸图床](https://gejiba.com/) | [田字格笔顺 字帖生成器](https://lab.feifanju.com/zitie/)
-[短链接](https://url.4qo.cn/#/) | [域名查询](https://lab.feifanju.com/domain-query/) | [在线HTTP POST/GET接口测试工具](https://lab.feifanju.com/http/index.html)
-[独特工具箱](https://www.dute.org/) | [在线工具](http://tool.lu/)  |  [在线工具](http://tool.oschina.net/) | [UU在线工具](https://uutool.cn/) | [JSON在线解析及格式化验证](http://www.json.cn/)  |  [转换json格式为C#类](http://json2csharp.chahuo.com/)
+[短链接](https://url.4qo.cn/#/) | [域名查询](https://lab.feifanju.com/domain-query/) | [在线HTTP POST/GET接口测试工具](https://lab.feifanju.com/http/index.html) | [临时邮箱](https://linshiyouxiang.net/) | [临时手机号](https://jiemahao.com/)
+[网页在线工具汇总](https://iao.su/1492/)[独特工具箱](https://www.dute.org/) | [在线工具](http://tool.lu/)  |  [在线工具](http://tool.oschina.net/) | [UU在线工具](https://uutool.cn/) | [JSON在线解析及格式化验证](http://www.json.cn/)  |  [转换json格式为C#类](http://json2csharp.chahuo.com/)
 [生成随机密码](https://suijimimashengcheng.51240.com/) | [密码强度检测](https://mimaqiangdu.51240.com/) | [PMD5](http://pmd5.com/#)  |  [输入让你无语的MD5](https://www.somd5.com/)   |  [在线MD5暴力破解](http://www.atool.org/md5-crack.php) | [核心价值编码器](https://sym233.github.io/core-values-encoder/)  |  [核心价值编码器源码](https://github.com/sym233/core-values-encoder)
-[在线格式转换](https://www.alltoall.net/) |  [png在线转ico](http://www.easyicon.net/covert/) | [做好图](http://www.zuohaotu.com/)  |  [MakePic.com 图片制造](http://www.makepic.com/)  |  [removebg图片背景消除](https://www.remove.bg/ ) | [waifu2x无损放大图片](http://waifu2x.udp.jp/index.zh-CN.html) | [图片无限变大](http://bigjpg.com/zh) | [草料二维码美化器](http://mh.cli.im/)  | [在线制作您的Logo](https://www.logaster.cn/) | [滚动横幅](https://www.iamverylovely.com/scroll/)
+[在线文件转换器](https://cn.office-converter.com/) | [在线格式转换](https://www.alltoall.net/) |  [png在线转ico](http://www.easyicon.net/covert/) | [做好图](http://www.zuohaotu.com/)  |  [MakePic.com 图片制造](http://www.makepic.com/)  |  [removebg图片背景消除](https://www.remove.bg/ ) | [waifu2x无损放大图片](http://waifu2x.udp.jp/index.zh-CN.html) | [图片无限变大](http://bigjpg.com/zh) | [草料二维码美化器](http://mh.cli.im/)  | [在线制作您的Logo](https://www.logaster.cn/) | [滚动横幅](https://www.iamverylovely.com/scroll/)
 
 
 # 社区
@@ -70,7 +70,7 @@ description:
 
 # 资源
 [库问搜索](http://www.koovin.com/) | [telegram 中文搜索](http://www.sssoou.com/) | [小白盘](https://www.xiaobaipan.com)
-[MSDN](http://msdn.itellyou.cn/?gytyzs=0z1zl) | [矢量图标库](http://www.iconfont.cn/) | [最好的12个Icon图标资源网站整理分享出来](https://blog.csdn.net/xiawj8957/article/details/45130263) | [FontAwesome图标](http://www.fontawesome.com.cn/faicons/)
+[MSDN](http://msdn.itellyou.cn/?gytyzs=0z1zl) | [站长素材](https://sc.chinaz.com/) | [矢量图标库](http://www.iconfont.cn/) | [最好的12个Icon图标资源网站整理分享出来](https://blog.csdn.net/xiawj8957/article/details/45130263) | [FontAwesome图标](http://www.fontawesome.com.cn/faicons/) | [中国色](http://zhongguose.com/)
 [优品PPT](http://www.ypppt.com)
 [Tracker服务器地址1](https://newtrackon.com/) | [Tracker服务器地址2](https://github.com/ngosang/trackerslist)
 
@@ -129,7 +129,7 @@ description:
 
 
 ## 网盘
-[webd](https://webd.cf/) | [Nextcloud](https://nextcloud.com/)
+[webd](https://webd.cf/) | [Nextcloud](https://nextcloud.com/) | [悦库](http://www.ydisk.cn/index.html)
 [Nextcloud通过不被信任的域名访问解决方法 Nextcloud 您正在访问来自不信任域名的服务器](https://blog.csdn.net/g313105910/article/details/106381380)
 [nextcloud修改域名、IP或端口](https://www.cnblogs.com/mrcoolfuyu/p/13355522.html)
 [搭建自己私人网盘-Nextcloud](https://blog.csdn.net/qq_43099160/article/details/107081157)
@@ -382,6 +382,7 @@ description:
 [Django3.1教程](https://www.liujiangblog.com/course/django/2)
 [如果不想在django 的settings中保存mysql数据库的密码](https://www.cnblogs.com/worldinmyeyes/p/12109371.html)
 [Windows下利用Apache部署多个Django项目](https://www.cnblogs.com/luodaxia/p/12505153.html)
+[老师，没装Python怎么运行Python工具啊？](https://www.bilibili.com/read/cv5401504/)
 
 
 # S
@@ -418,6 +419,7 @@ description:
 [VB源码](http://www.codesky.net/vb/)
 [VB函数大全](http://www10.zzu.edu.cn/ie_wangjunfeng/daquan/function/index.aspx)
 [MZ-Tools的博客](https://www.mztools.com/blog/moving-from-mz-tools-3-0-to-8-0/)
+[vbRichClient](http://www.vbrichclient.com/) | [使用 VBRichClient 库](http://www.office-cn.net/home.php?mod=space&uid=230471&do=blog&id=15201) | [vbRichClient学习分享](http://www.360doc.com/content/18/0228/22/541242_733278096.shtml)
 [VB下的插件开发](https://blog.csdn.net/guyehanxinlei/article/details/1506461)
 [VB实现Base64 编解码](http://blog.csdn.net/iamlaosong/article/details/38229755)
 [VB动态调用类模块中的函数的方法 - CSDN博客](https://blog.csdn.net/keikisou/article/details/50564156)

@@ -287,6 +287,8 @@ crontab -e
 ```
 */15 * * * * -u wwwrun /usr/bin/php -f /srv/www/htdocs/nextcloud/cron.php
 ```
+> 注意 cron.php 的权限：chown -R wwwrun:www cron.php
+
 crontab命令用法：
 1)设置定时器的设置文件, 文件名称为mycronset.txt(名称可自行设定)
 ```
