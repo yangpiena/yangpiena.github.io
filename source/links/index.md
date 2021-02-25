@@ -28,19 +28,19 @@ description:
 
 
 # 常用
-[百度翻译](https://fanyi.baidu.com/) | [Google翻译](https://translate.google.cn/?hl=zh-CN&tab=TT) | [天气万年历](https://wannianli.tianqi.com/today/zhou/) | [百度云](https://pan.baidu.com/) |  [腾讯云](https://cloud.tencent.com/)
-[CSDN.NET](http://www.csdn.net/) |[cnBeta](http://www.cnbeta.com/)  | [V2EX](https://www.v2ex.com/) | [不死鸟发布页](https://bde.su/) | [不死鸟](https://iao.su/)	| [小部落](https://www.xbl100.com/) | [老D博客](https://laod.cn/) | [免费吧](http://www.mianfeib.me/) | [分享网络有趣资源(https://gg0.net/)
+[百度翻译](https://fanyi.baidu.com/) | [Google翻译](https://translate.google.cn/?hl=zh-CN&tab=TT) | [天气万年历](https://wannianli.tianqi.com/today/zhou/) | [百度云](https://pan.baidu.com/) |  [腾讯云](https://cloud.tencent.com/) | [Google1](https://www.sanzhima.com/)
+[CSDN.NET](http://www.csdn.net/) |[cnBeta](http://www.cnbeta.com/)  | [V2EX](https://www.v2ex.com/) | [不死鸟发布页](https://bde.su/) | [不死鸟](https://iao.su/)	| [小部落](https://www.xbl100.com/) | [老D博客](https://laod.cn/) | [免费吧](http://www.mianfeib.me/) | [分享网络有趣资源](https://gg0.net/)
 [今日热榜](https://tophub.today/) | [果汁排行榜](http://guozhivip.com/rank/) | [AnyKnew](https://www.anyknew.com/#/) | [科塔学术导航](https://site.sciping.com/) | [手机抢购网](http://www.qianggou5.com/price/) | [医学微视](https://www.mvyxws.com/) | [药房网](https://www.yaofangwang.com/) | [WikiHow](https://zh.wikihow.com/%E9%A6%96%E9%A1%B5)
 [希赛网](https://www.educity.cn/) | [中国国际人才交流基金会项目管理网站](http://exam.chinapmp.cn/) | [PMI](https://www.pmi.org/) | [Teams](https://teams.microsoft.com/_#/calendarv2)
 
 
 ## 音乐
-[听雨](http://rain.xxoojoke.com/) |  [AeKun](https://www.aekun.com/ )  |  [VIP付费音乐解析下载](https://music.zhuolin.wang/)  |  [网易云音乐](http://music.163.com) | [音乐磁场](https://www.hifini.com/)
+[听雨](http://rain.xxoojoke.com/) |  [AeKun](https://www.aekun.com/ )  |  [VIP付费音乐解析下载](https://music.zhuolin.wang/)  |  [网易云音乐](http://music.163.com) | [音乐磁场](https://www.hifini.com/) | [麦田音乐网](https://www.mtyyw.com/) | [疯狂音乐搜索](http://music.ifkdy.com/)
 
 
 ## 电影
 [映像讯](http://mkv.cn/) | [电影推荐MVCAT](https://www.mvcat.com/) | [预告片世界](http://www.yugaopian.cn/)  |  [人人影视字幕](http://www.yyets.com/)
-[免费的在线影视网站汇总](https://iao.su/531/) | [港澳台电视直播](https://mtime.info/) | [全民解析](http://www.qmaile.com/) | [今日影视](http://www.2w2w.tv/)      | [1090影视](https://1090ys.com/) | [嗨哆咪](https://www.haiduomi.cc) | [完美看看](https://www.wanmeikk.me/) | [影视天堂](https://www.ystt5.com/) | [山雀影视](https://video.rsk.cool/) | [蒙面大侠](https://www.mengmiandaxia.com/) | [欧亚影视](http://www.oy37.com/) | [神鸡影视](http://n7f6.cn/) | [新奇遇电影](https://www.newqiyu.com/) | [剧汇TV](https://www.juhuitv.com/)
+[免费的在线影视网站汇总](https://iao.su/531/) | [港澳台电视直播](https://mtime.info/) | [全民解析](http://www.qmaile.com/) | [今日影视](http://www.2w2w.tv/)      | [1090影视](https://1090ys.com/) | [嗨哆咪](https://www.haiduomi.cc) | [完美看看](https://www.wanmeikk.me/) | [影视天堂](https://www.ystt5.com/) | [泡饭影视(https://www.paofans.com/) | [欧亚影视](http://www.oy37.com/) | [神鸡影视](http://n7f6.cn/) | [新奇遇电影](https://www.newqiyu.com/) | [4K鸭](https://4kya.com/)
 [天天美剧](http://www.ttmeiju.me/) | [99美剧网](https://www.jjmeiju.com/) | [美剧粉](http://www.mjf2020.com/)
 [BT之家](https://www.91btbtt.com/)      | [BT之家](https://www.52btbtt.com/)      | [BT之家](https://btbtt.us/) | [破晓电影](http://www.poxiao.com) | [迅雷电影下载](http://www.xlpu.cc/)  |  [快播电影](http://www.bubulai.com/) |  [BT电影天堂](http://www.btbttv.net/) | [U3C3](https://u3c3.com/)
 
@@ -60,7 +60,7 @@ description:
 [短链接](https://url.4qo.cn/#/) | [域名查询](https://lab.feifanju.com/domain-query/) | [在线HTTP POST/GET接口测试工具](https://lab.feifanju.com/http/index.html) | [临时邮箱](https://linshiyouxiang.net/) | [临时手机号](https://jiemahao.com/)
 [网页在线工具汇总](https://iao.su/1492/)[独特工具箱](https://www.dute.org/) | [在线工具](http://tool.lu/)  |  [在线工具](http://tool.oschina.net/) | [UU在线工具](https://uutool.cn/) | [JSON在线解析及格式化验证](http://www.json.cn/)  |  [转换json格式为C#类](http://json2csharp.chahuo.com/)
 [生成随机密码](https://suijimimashengcheng.51240.com/) | [密码强度检测](https://mimaqiangdu.51240.com/) | [PMD5](http://pmd5.com/#)  |  [输入让你无语的MD5](https://www.somd5.com/)   |  [在线MD5暴力破解](http://www.atool.org/md5-crack.php) | [核心价值编码器](https://sym233.github.io/core-values-encoder/)  |  [核心价值编码器源码](https://github.com/sym233/core-values-encoder)
-[在线文件转换器](https://cn.office-converter.com/) | [在线格式转换](https://www.alltoall.net/) |  [png在线转ico](http://www.easyicon.net/covert/) | [做好图](http://www.zuohaotu.com/)  |  [MakePic.com 图片制造](http://www.makepic.com/)  |  [removebg图片背景消除](https://www.remove.bg/ ) | [waifu2x无损放大图片](http://waifu2x.udp.jp/index.zh-CN.html) | [图片无限变大](http://bigjpg.com/zh) | [草料二维码美化器](http://mh.cli.im/)  | [在线制作您的Logo](https://www.logaster.cn/) | [滚动横幅](https://www.iamverylovely.com/scroll/)
+[在线文件转换器](https://cn.office-converter.com/) | [在线格式转换](https://www.alltoall.net/) |  [png在线转ico](http://www.easyicon.net/covert/) | [做好图](http://www.zuohaotu.com/)  |  [MakePic.com 图片制造](http://www.makepic.com/)  |  [removebg图片背景消除](https://www.remove.bg/ ) | [waifu2x无损放大图片](http://waifu2x.udp.jp/index.zh-CN.html) | [图片无限变大](http://bigjpg.com/zh) | [草料二维码美化器](http://mh.cli.im/)  | [在线制作您的Logo](https://www.logaster.cn/) | [滚动横幅](https://www.iamverylovely.com/scroll/) | [在线短信轰炸](https://qinggongju.com/dx/)
 
 
 # 社区
@@ -73,6 +73,7 @@ description:
 [MSDN](http://msdn.itellyou.cn/?gytyzs=0z1zl) | [站长素材](https://sc.chinaz.com/) | [矢量图标库](http://www.iconfont.cn/) | [最好的12个Icon图标资源网站整理分享出来](https://blog.csdn.net/xiawj8957/article/details/45130263) | [FontAwesome图标](http://www.fontawesome.com.cn/faicons/) | [中国色](http://zhongguose.com/)
 [优品PPT](http://www.ypppt.com)
 [Tracker服务器地址1](https://newtrackon.com/) | [Tracker服务器地址2](https://github.com/ngosang/trackerslist)
+[中华珍宝馆](https://ltfc.net/)
 
 
 ## 电子书
@@ -89,7 +90,7 @@ description:
 [黑苹果乐园](https://imac.hk/)	  |  [黑果小兵](https://blog.daliansky.net/)  |  [从零开始的黑苹果安装教程](http://tieba.baidu.com/p/5179866130#)
 [zd423](http://www.zdfans.com/) | [423down](https://www.423down.com/) |  [行客工作室](http://www.runker.net/) | [金狐维护盘](http://www.jinhu.me/) | [小众软件](https://www.appinn.com/) | [我爱分享网](http://www.zhanshaoyi.com/rjxz.html) | [夜雨聆风](http://www.yeyulingfeng.com/) | [云库网](https://www.lisect.xyz/)
 [吾爱破解](https://www.52pojie.cn/) | [浏览迷](https://liulanmi.com/)    |  [Chrome浏览器插件下载中心](https://www.chromefor.com/) | [FlashPlayer下载地址1](http://get.adobe.com/cn/flashplayer/otherversions/)  |  [FlashPlayer下载地址2](http://www.adobe.com/support/flashplayer/downloads.html)  |  [Debugger Version地址](http://kb2.adobe.com/cps/155/tn_15507.html)
-[PanDownload复刻版](https://imwcr.cn/api/bdwp/) | [Yuan_Tuo](https://imwcr.cn/) | [kurukurumi](https://kurukurumi.tk/)
+[PanDownload复刻版](https://imwcr.cn/api/bdwp/) | [Yuan_Tuo](https://imwcr.cn/) | [kurukurumi](https://kurukurumi.tk/) | [Joplin：一款完全免费开源笔记软件](https://joplinapp.org/)
 
 
 ## 文章/教程
@@ -102,6 +103,7 @@ description:
 [Flex转型Html学习随笔1——关于Html页面的div布局（上）](http://www.cnblogs.com/momoko8443/p/4302879.html) | [Flex转型Html学习随笔1——关于Html页面的div布局（下）](http://www.cnblogs.com/momoko8443/p/4303829.html)
 [OneAPM 工作两年总结](http://www.ituring.com.cn/article/497377)
 [竞品分析－SWOT分析](https://zhuanlan.zhihu.com/p/181668340)
+[ffmpeg 常用命令汇总](https://blog.csdn.net/kingvon_liwei/article/details/79271361)
 
 
 ## 前端/案例
