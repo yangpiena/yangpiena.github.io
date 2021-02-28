@@ -40,7 +40,7 @@ description:
 
 ## 电影
 [映像讯](http://mkv.cn/) | [电影推荐MVCAT](https://www.mvcat.com/) | [预告片世界](http://www.yugaopian.cn/)  |  [人人影视字幕](http://www.yyets.com/)
-[免费的在线影视网站汇总](https://iao.su/531/) | [港澳台电视直播](https://mtime.info/) | [全民解析](http://www.qmaile.com/) | [今日影视](http://www.2w2w.tv/)      | [1090影视](https://1090ys.com/) | [嗨哆咪](https://www.haiduomi.cc) | [完美看看](https://www.wanmeikk.me/) | [影视天堂](https://www.ystt5.com/) | [泡饭影视(https://www.paofans.com/) | [欧亚影视](http://www.oy37.com/) | [神鸡影视](http://n7f6.cn/) | [新奇遇电影](https://www.newqiyu.com/) | [4K鸭](https://4kya.com/)
+[免费的在线影视网站汇总](https://iao.su/531/) | [港澳台电视直播](https://mtime.info/) | [全民解析](http://www.qmaile.com/) | [今日影视](http://www.2w2w.tv/)      | [1090影视](https://1090ys.com/) | [嗨哆咪](https://www.haiduomi.cc) | [完美看看](https://www.wanmeikk.me/) | [泡饭影视](https://www.paofans.com/) | [欧亚影视](http://www.oy37.com/) | [神鸡影视](http://n7f6.cn/) | [新奇遇电影](https://www.newqiyu.com/) | [4K鸭](https://4kya.com/)
 [天天美剧](http://www.ttmeiju.me/) | [99美剧网](https://www.jjmeiju.com/) | [美剧粉](http://www.mjf2020.com/)
 [BT之家](https://www.91btbtt.com/)      | [BT之家](https://www.52btbtt.com/)      | [BT之家](https://btbtt.us/) | [破晓电影](http://www.poxiao.com) | [迅雷电影下载](http://www.xlpu.cc/)  |  [快播电影](http://www.bubulai.com/) |  [BT电影天堂](http://www.btbttv.net/) | [U3C3](https://u3c3.com/)
 
@@ -76,8 +76,8 @@ description:
 [中华珍宝馆](https://ltfc.net/)
 
 
-## 电子书
-[秘密花园](http://www.yini.org)
+## 阅读/电子书
+[秘密花园](http://www.yini.org) | [微信读书排行榜 ~ 热门标注](http://klib.me/weread/hot/all.html)
 [鸠摩搜索](https://www.jiumodiary.com/ "电子书搜索引擎，提供各类电子书搜索下载，有多种格式")  |  [Library Genesis](http://gen.lib.rus.ec/ "英文电子书搜索引擎，可搜索英文原版的电子书，格式包含 PDF、MOBI 和 EPUB")  |  [i-Book.in](https://book.tstrs.me/ " 基于索引IPFS链接的电子书搜索引擎")  |  [epubee](http://cn.epubee.com/ "在线电子书转换器，同时也推荐一些电子书下载")
 [书单网](https://www.shudan.vip/ "电子书搜索网站，抓取第三方网站的资源，也有很多资源是通过城通网赚网盘下载")  |  [书舟网](http://kindle.archiew.top/ "电子书搜索下载网站，资源通过城通网赚网盘下载")  |  [Mobilism](https://forum.mobilism.org/viewforum.php?f=19 "电子书论坛，提供英文原版电子书下载")  |  [七彩英语](http://www.qcenglish.com/ "提供PDF或TXT格式的英文原版电子书下载")
 [ePUBw](https://epubw.com "多格式电子书下载网站，百度网盘分享下载")  |  [好读](http://www.haodoo.net/ "多格式电子书下载网站，很老的一个站")  |  [读书369](http://www.dushu369.com "基于名著小说在线阅读网站")  |  [100本](https://www.100ben.net/ "电子书在线阅读网站，整理了一生必读的100本书")
