@@ -108,7 +108,7 @@
 <meta property="og:site_name" content="昜丿捺">
 <meta property="og:description" content="基础命令系统    命令 说明     reboot 重启系统   shutdown -r now 重启系统   shutdown -c 取消重启   halt 立刻关机   poweroff 立刻关机   shutdown -h now 立刻关机（root用户使用）   shutdown -h 10 10分钟后自动关机   yum update 升级Linux，升级所有包同时也升级软件和系统内核">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2020-10-31T08:14:24.693Z">
+<meta property="og:updated_time" content="2021-03-07T10:02:55.029Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Linux命令大全">
 <meta name="twitter:description" content="基础命令系统    命令 说明     reboot 重启系统   shutdown -r now 重启系统   shutdown -c 取消重启   halt 立刻关机   poweroff 立刻关机   shutdown -h now 立刻关机（root用户使用）   shutdown -h 10 10分钟后自动关机   yum update 升级Linux，升级所有包同时也升级软件和系统内核">
@@ -454,7 +454,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2020-10-31 16:14:24" itemprop="dateModified" datetime="2020-10-31T16:14:24+08:00">2020-10-31</time>
+                <time title="修改时间：2021-03-07 18:02:55" itemprop="dateModified" datetime="2021-03-07T18:02:55+08:00">2021-03-07</time>
               
             
           </span>
@@ -506,7 +506,7 @@
                 
                   <span class="post-meta-item-text">本文字数：</span>
                 
-                <span title="本文字数">10k</span>
+                <span title="本文字数">11k</span>
               
 
               
@@ -520,7 +520,7 @@
                 
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
-                <span title="阅读时长">9 分钟</span>
+                <span title="阅读时长">10 分钟</span>
               
             </div>
           
@@ -1018,6 +1018,38 @@
 </tbody>
 </table>
 </div>
+<h3 id="防火墙（CentOS8）"><a href="#防火墙（CentOS8）" class="headerlink" title="防火墙（CentOS8）"></a>防火墙（CentOS8）</h3><div class="table-container">
+<table>
+<thead>
+<tr>
+<th>命令</th>
+<th style="text-align:left">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>systemctl status firewalld.service</td>
+<td style="text-align:left">查看状态</td>
+</tr>
+<tr>
+<td>systemctl start firewalld.service</td>
+<td style="text-align:left">打开防火墙</td>
+</tr>
+<tr>
+<td>systemctl stop  firewalld.service</td>
+<td style="text-align:left">关闭防火墙</td>
+</tr>
+<tr>
+<td>systemctl enable  firewalld.service</td>
+<td style="text-align:left">开启防火墙</td>
+</tr>
+<tr>
+<td>systemctl disable firewalld.service</td>
+<td style="text-align:left">禁用防火墙</td>
+</tr>
+</tbody>
+</table>
+</div>
 
       
     </div>
@@ -1094,7 +1126,7 @@
   <p><span>本文标题:</span><a href="/2016/11/22/Linux命令大全/">Linux命令大全</a></p>
   <p><span>文章作者:</span><a href="/" title="访问 昜丿捺 的个人博客">昜丿捺</a></p>
   <p><span>发布时间:</span>2016年11月22日 - 15:02:51</p>
-  <p><span>最后更新:</span>2020年10月31日 - 16:14:24</p>
+  <p><span>最后更新:</span>2021年03月07日 - 18:02:55</p>
   <p><span>原始链接:</span><a href="/2016/11/22/Linux命令大全/" title="Linux命令大全">http://ynn5ru.coding-pages.com/2016/11/22/Linux命令大全/</a>
     <span class="copy-path" title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="http://ynn5ru.coding-pages.com/2016/11/22/Linux命令大全/" aria-label="复制成功！"></i></span>
   </p>
@@ -1224,7 +1256,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">78</span>
+                    <span class="site-state-item-count">79</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -1481,7 +1513,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#基础命令"><span class="nav-number">1.</span> <span class="nav-text">基础命令</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#系统"><span class="nav-number">1.1.</span> <span class="nav-text">系统</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#文件"><span class="nav-number">1.2.</span> <span class="nav-text">文件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#网络"><span class="nav-number">1.3.</span> <span class="nav-text">网络</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#systemctl命令的使用"><span class="nav-number">1.4.</span> <span class="nav-text">systemctl命令的使用</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#服务状态"><span class="nav-number">1.5.</span> <span class="nav-text">服务状态</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#防火墙（openSUSE-Leap-15-0）"><span class="nav-number">1.6.</span> <span class="nav-text">防火墙（openSUSE Leap 15.0）</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#基础命令"><span class="nav-number">1.</span> <span class="nav-text">基础命令</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#系统"><span class="nav-number">1.1.</span> <span class="nav-text">系统</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#文件"><span class="nav-number">1.2.</span> <span class="nav-text">文件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#网络"><span class="nav-number">1.3.</span> <span class="nav-text">网络</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#systemctl命令的使用"><span class="nav-number">1.4.</span> <span class="nav-text">systemctl命令的使用</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#服务状态"><span class="nav-number">1.5.</span> <span class="nav-text">服务状态</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#防火墙（openSUSE-Leap-15-0）"><span class="nav-number">1.6.</span> <span class="nav-text">防火墙（openSUSE Leap 15.0）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#防火墙（CentOS8）"><span class="nav-number">1.7.</span> <span class="nav-text">防火墙（CentOS8）</span></a></li></ol></li></ol></div>
             
 
           </div>
@@ -1513,7 +1545,7 @@
       <i class="fa fa-area-chart"></i>
     </span>
     
-    <span title="站点总字数">208k</span>
+    <span title="站点总字数">214k</span>
   
 
   
@@ -1522,7 +1554,7 @@
       <i class="fa fa-coffee"></i>
     </span>
     
-    <span title="站点阅读时长">3:09</span>
+    <span title="站点阅读时长">3:15</span>
   
 </div>
 

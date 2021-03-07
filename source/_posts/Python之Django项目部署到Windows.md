@@ -98,6 +98,10 @@ pip install -r requirements.txt
 ```python
 pip freeze > requirements.txt
 ```
+> - 上面命令生成的是开发环境所有的依赖包，不相关的依赖包也会包含进来，如果只想生成与本项目有关的依赖包，则需先安装 `pip install pipreqs` ，再到项目根目录下执行命令：
+```python
+pipreqs ./ --encoding=utf-8 --force
+```
 > - 如果执行安装命令有报错或安装失败，可尝试下面命令：
 ```python
 pip --default-timeout=100 install -r requirements.txt

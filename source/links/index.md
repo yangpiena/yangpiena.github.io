@@ -109,7 +109,7 @@ description:
 ## 前端/案例
 [蓝蓝设计](http://www.lanlanwork.com/)
 [LayUI](https://www.layui.com/) | [HeyUI](https://www.heyui.top/) | [H-ui前端框架](http://www.h-ui.net/H-ui.admin.shtml) | [Android酷炫实用的开源框架（UI框架）](http://www.runoob.com/w3cnote/android-ui-framework.html)
-[Bootstrap模板](http://www.bootstrapmb.com/) | [后台界面模板](http://www.mycodes.net/154/3.htm)
+[Bootstrap模板](http://www.bootstrapmb.com/) | [后台界面模板](http://www.mycodes.net/154/3.htm) | [X-admin](http://x.xuebingsi.com/)
 [思美电商](http://test.8sk.cn/html/M0493/index.html)
 [公司某项目前端技术积累](http://blog.csdn.net/sunyingyuan/article/details/38237139)
 
@@ -211,6 +211,12 @@ description:
 [开源DataGridView扩展（1） 扩展支持全选的CheckBox列。](https://www.cnblogs.com/gxjiang/archive/2012/04/27/datagridviewex.html?spm=a2c4e.10696291.0.0.406e19a4BEBjm5)
 [开源DataGridView扩展（5） 简单实现统计行，有更好的方法吗？](https://www.cnblogs.com/gxjiang/archive/2012/05/15/2502345.html?spm=a2c4e.10696291.0.0.e1d819a4BmUXhz)
 [WinForm控件设计：DataGridView的行统计实现](https://www.cnblogs.com/yyj/archive/2010/10/21/1857518.html)
+[C# Sftp操作](https://www.cnblogs.com/xihao/p/7746068.html)
+[VS2010 中更改项目名称](https://blog.csdn.net/jjp837661103/article/details/23332999)
+
+
+##CentOS
+[virtualbox安装centos并设置静态IP](https://blog.csdn.net/asdf_1234_/article/details/91470680)
 
 
 # E
@@ -374,17 +380,20 @@ description:
 [Python 实现定时任务](https://lz5z.com/Python%E5%AE%9A%E6%97%B6%E4%BB%BB%E5%8A%A1%E7%9A%84%E5%AE%9E%E7%8E%B0%E6%96%B9%E5%BC%8F/) | [Python 实现定时任务](https://www.cnblogs.com/fengff/p/11011000.html)
 [Python实现自动化监控远程服务器](https://www.cnblogs.com/IT-LearnHall/p/9426235.html)
 [你都用 Python 来做什么？](https://www.zhihu.com/question/20799742)
-[Django](https://www.cnblogs.com/suoning/p/5818869.html)
-[Django 的认识，面试题](https://www.cnblogs.com/chongdongxiaoyu/p/9403399.html)
-[Python/Django – 避免在源代码中保存密码](http://www.voidcn.com/article/p-eoxnnhgp-bst.html)
+
+[Django](https://www.cnblogs.com/suoning/p/5818869.html) | [Django 的认识，面试题](https://www.cnblogs.com/chongdongxiaoyu/p/9403399.html) | [Django 2.2 基础教程](https://code.ziqiangxuetang.com/django/django-tutorial.html) | [Django3.1教程](https://www.liujiangblog.com/course/django/2)
+[Django3.1连接SQL Server2017配置指引](https://www.pythonheidong.com/blog/article/274751/16b135ed6cdd5ce8d437/)
+[阿里云部署django实现公网访问](https://www.cnblogs.com/xiaobingqianrui/p/9825174.html)
+[Python/Django – 避免在源代码中保存密码](http://www.voidcn.com/article/p-eoxnnhgp-bst.html) | [如果不想在django 的settings中保存mysql数据库的密码](https://www.cnblogs.com/worldinmyeyes/p/12109371.html)
 [django界面上弹出bootstrap modal对话框，对话框中包含iframe并请求一个新的页面](https://blog.csdn.net/u012561176/article/details/106539639)
-[django 用户认证 user对象](https://blog.csdn.net/m0_38061194/article/details/73369164)
 [django-ORM外键删除操作详解](https://www.cnblogs.com/ifdashui/p/11869949.html)
-[Django 2.2 基础教程](https://code.ziqiangxuetang.com/django/django-tutorial.html)
-[Django3.1教程](https://www.liujiangblog.com/course/django/2)
-[如果不想在django 的settings中保存mysql数据库的密码](https://www.cnblogs.com/worldinmyeyes/p/12109371.html)
 [Windows下利用Apache部署多个Django项目](https://www.cnblogs.com/luodaxia/p/12505153.html)
 [老师，没装Python怎么运行Python工具啊？](https://www.bilibili.com/read/cv5401504/)
+[DJANGO ADMIN 一些有用的设置](https://www.cnblogs.com/wumingxiaoyao/p/6928297.html) | [Django - 用户认证、用户组、用户权限](https://www.cnblogs.com/alice-bj/p/9579833.html) | [django 用户认证 user对象](https://blog.csdn.net/m0_38061194/article/details/73369164)
+[DRF 三大认证的配置及使用方法](https://www.cnblogs.com/bowendown/p/12150431.html)
+[CSRF token的原理](https://www.cnblogs.com/mengbin0546/p/9966431.html) | [Django rest-framework框架-CSRF验证](https://blog.csdn.net/dlm520947/article/details/102112965) | [Django之CSRF、token验证、csrf装饰器、auth模块方法大全](https://www.cnblogs.com/guyouyin123/p/12194181.html) | [对于rest_framework,django自带的csrf组件居然不生效](https://www.cnblogs.com/python001-vip/p/12676333.html)
+[Django REST framework 使用JWT认证方式](https://blog.csdn.net/qq_41475058/article/details/113405639) | [django-rest-framework框架 第四篇 认证Authentication](https://www.cnblogs.com/zhichao123/p/10597267.html)
+[Django REST framework中的APIView的使用](https://blog.csdn.net/li944254211/article/details/109485799)
 
 
 # S
