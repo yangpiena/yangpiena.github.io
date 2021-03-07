@@ -6,7 +6,7 @@ categories: 技术
 timestamp: 1614668259
 date: 2021-03-02 14:57:39
 authorDesc:
-tags:
+tags: [Python, Django]
 description: 本教程主要记录在Linux上如何部署Django项目
 ---
 # 部署环境

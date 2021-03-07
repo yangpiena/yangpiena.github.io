@@ -1,5 +1,5 @@
 ---
-title: Python之Django项目部署
+title: Python之Django项目部署到Windows
 author: 昜丿捺
 copyright: true
 categories: 技术
