@@ -18,6 +18,14 @@
       </categories>
       
       
+        <tags>
+            
+            <tag> Python </tag>
+            
+            <tag> Django </tag>
+            
+        </tags>
+      
     </entry>
     
     
@@ -50,7 +58,7 @@
     
     
     <entry>
-      <title>Python之Django项目部署</title>
+      <title>Python之Django项目部署到Windows</title>
       <link href="/2020/10/30/Python%E4%B9%8BDjango%E9%A1%B9%E7%9B%AE%E9%83%A8%E7%BD%B2%E5%88%B0Windows/"/>
       <url>/2020/10/30/Python%E4%B9%8BDjango%E9%A1%B9%E7%9B%AE%E9%83%A8%E7%BD%B2%E5%88%B0Windows/</url>
       
