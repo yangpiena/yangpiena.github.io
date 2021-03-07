@@ -9,7 +9,7 @@ authorDesc:
 tags:
 description: 本教程主要记录在Linux上如何部署Django项目
 ---
-# 部署方式
+# 部署环境
 - ** Python 3.7.9 + Django 3.1.7 + Gunicorn + Nginx + CentOS8 **
 
 
@@ -24,7 +24,7 @@ tar -zxvf Python-3.7.9.tgz
 	```
 
 1. 配置
-安装到路径：`/usr/local/python3`
+配置安装到路径：`/usr/local/python3`
 ```
 ./configure --prefix=/usr/local/python3 --with-ssl
 ```
@@ -45,7 +45,7 @@ ln -s /usr/local/python3/bin/python3 /usr/bin/python
 ```
 ln -s /usr/local/python3/bin/pip3 /usr/bin/pip
 ```
-或删除已有链接
+如果链接已存在，可删除已有链接
 ```
 rm -rf /usr/bin/python3
 rm -rf /usr/bin/pip3
@@ -60,9 +60,9 @@ python --version
 ------------
 
 
-# 安装pip3
+## 安装pip3
 有时安装完python后，缺少pip，可用以下方法尝试安装。
-## 方法一：安装setuptools
+### 方法一：安装setuptools
 1. 下载
 ```
 wget --no-check-certificate  https://pypi.python.org/packages/source/s/setuptools/setuptools-19.6.tar.gz#md5=c607dd118eae682c44ed146367a17e26
@@ -92,7 +92,7 @@ ln -s /usr/local/python3/bin/pip3 /usr/bin/pip3
 pip3 -V
 ```
 
-## 方法二：get-pip.py
+### 方法二：get-pip.py
 1. 下载get-pip.py 文件
 https://pip.pypa.io/en/stable/installing/
 1. python get-pip.py
@@ -123,7 +123,8 @@ pip install mysqlclient
 
 
 # 安装MySQL5.7
->  [Linux安装MySQL5.7完整版流程](https://www.suibibk.com/topic/721421244804628480)
+
+> 可参考[Linux安装MySQL5.7完整版流程](https://www.suibibk.com/topic/721421244804628480)
 
 1. 解压安装包
 ```
@@ -247,28 +248,30 @@ update user set host = '%' where user = 'root';
 ------------
 
 
-# 安装gunicorn
+# 安装 Gunicorn
+Gunicorn 绿色独角兽'是一个Python WSGI UNIX的HTTP服务器。这是一个pre-fork worker的模型，从Ruby的独角兽（Unicorn ）项目移植。该Gunicorn服务器大致与各种Web框架兼容，只需非常简单的执行，轻量级的资源消耗，以及相当迅速。
+安装命令：
 ```python
  pip install gunicorn
 ```
-## 设置gunicorn的软连接
+## 创建软连接
 ```
 ln -s /usr/local/python3/bin/gunicorn /usr/bin/gunicorn
 ```
 ## 启动
-- 命令行启动gunicorn
+### 命令行启动
 进入项目根目录下执行：
 ```python
 gunicorn cam.wsgi:application -w 2 -b 0.0.0.0:8000
 ```
-	> cam.wsgi:application cam是你django工程的名称，后面不用改
-	-w --workers 意思是要启动的进程数量
-	-b --bind 绑定的IP地址和端口
-	-k --worker-class 启动的worker类型（gthread,sync,eventlet,gevent,tornado）,默认是同步阻塞方式启动
+> cam.wsgi:application cam是你django工程的名称，后面不用改
+-w --workers 意思是要启动的进程数量
+-b --bind 绑定的IP地址和端口
+-k --worker-class 启动的worker类型（gthread,sync,eventlet,gevent,tornado）,默认是同步阻塞方式启动
 
-	访问：0.0.0.0:8000
+访问：0.0.0.0:8000
 
-- 配置文件启动
+### 配置文件启动
 在项目根目录下创建配置文件 `gunicorn-config.py`（与setting.py同级目录）
 ```
 import multiprocessing
@@ -286,28 +289,30 @@ timeout = 65
 graceful_timeout = 10
 worker_connections = 100
 ```
-
-	启动可在任意路径下执行：
+启动可在任意路径下执行：
 ```
 gunicorn cam.wsgi:application -k gthread -c /usr/local/cam/gunicorn-config.py
 ```
 
-## 配置系统服务 systemctl 启动方式
-建立服务文件
+## 创建服务
+- 建立服务文件
 ```
 vi /usr/lib/systemd/system/gunicorn.service
 ```
-    [Unit]
-    After=syslog.target network.target remote-fs.target nss-lookup.target
-    [Service]
-    User=root
-    WorkingDirectory=/usr/local/cam
-    ExecStart=gunicorn cam.wsgi:application -k gthread -c /usr/local/cam/gunicorn-config.py
-    Restart=on-failure
-    [Install]
-    WantedBy=multi-user.target
+	粘入下面内容：
+	```
+	[Unit]
+	After=syslog.target network.target remote-fs.target nss-lookup.target
+	[Service]
+	User=root
+	WorkingDirectory=/usr/local/cam
+	ExecStart=gunicorn cam.wsgi:application -k gthread -c /usr/local/cam/gunicorn-config.py
+	Restart=on-failure
+	[Install]
+	WantedBy=multi-user.target
+	```
 
-使文件生效
+- 使文件生效
 ```
 systemctl daemon-reload
 ```
@@ -332,7 +337,7 @@ make
 ```
 make install
 ```
-## 测试是否安装成功
+## 测试
 ```
 cd /usr/local/nginx/
 ```
@@ -344,7 +349,7 @@ cd /usr/local/nginx/
     nginx: the configuration file /usr/local/nginx/conf/nginx.conf syntax is ok
     nginx: configuration file /usr/local/nginx/conf/nginx.conf test is successful
 
-## 启动nginx
+## 启动
 ```
 cd /usr/local/nginx/sbin
 ```
@@ -356,70 +361,59 @@ cd /usr/local/nginx/sbin
 验证配置文件是否合法：/usr/local/nginx/sbin/nginx -t
 命令帮助：/usr/local/nginx/sbin/nginx -h
 
-## 配置系统服务 systemctl 启动方式
-建立服务文件
+## 创建服务
+- 建立服务文件
 ```
 vi /usr/lib/systemd/system/nginx.service
 ```
+	粘如下面内容：
+	```
 	[Unit]
 	Description=nginx - high performance web server
 	After=network.target remote-fs.target nss-lookup.target
-
 	[Service]
 	Type=forking
 	ExecStart=/usr/local/nginx/sbin/nginx
 	ExecReload=/usr/local/nginx/sbin/nginx -s reload
 	ExecStop=/usr/local/nginx/sbin/nginx -s stop
-
 	[Install]
 	WantedBy=multi-user.target
+	```
 
-> 文件内容解释 [Unit]: 服务的说明
-Description:描述服务
-After:描述服务类别
-[Service]服务运行参数的设置
-Type=forking是后台运行的形式
-ExecStart为服务的具体运行命令
-ExecReload为重启命令
-ExecStop为停止命令
-PrivateTmp=True表示给服务分配独立的临时空间
-注意：启动、重启、停止命令全部要求使用绝对路径
-[Install]服务安装的相关设置，可设置为多用户
+	> 文件内容解释: [Unit]: 服务的说明
+	Description:描述服务
+	After:描述服务类别
+	[Service]服务运行参数的设置
+	Type=forking是后台运行的形式
+	ExecStart为服务的具体运行命令
+	ExecReload为重启命令
+	ExecStop为停止命令
+	PrivateTmp=True表示给服务分配独立的临时空间
+	注意：启动、重启、停止命令全部要求使用绝对路径
+	[Install]服务安装的相关设置，可设置为多用户
 
-使文件生效
+- 使文件生效
 ```
 systemctl daemon-reload
 ```
-如果启动服务失败，则以754的权限保存在目录：
-```
-Chmod +754 /usr/lib/systemd/system/nginx.service
-```
-设置开机自启动
-systemctl enable nginx.service
-启动nginx服务
-systemctl start nginx.service
-停止开机自启动
-systemctl disable nginx.service
-查看服务当前状态
-systemctl status nginx.service
-重新启动服务
-systemctl restart nginx.service
-查看所有已启动的服务
-systemctl list-units --type=service
+	如果启动服务失败，则以754的权限保存在目录：
+	Chmod +754 /usr/lib/systemd/system/nginx.service
+	设置开机自启动
+	systemctl enable nginx.service
+	启动nginx服务
+	```
+	systemctl start nginx.service
+	```
+	停止开机自启动
+	systemctl disable nginx.service
+	查看服务当前状态
+	systemctl status nginx.service
+	重新启动服务
+	systemctl restart nginx.service
+	查看所有已启动的服务
+	systemctl list-units --type=service
 
-> 命令集合
-systemctl is-enabled servicename.service #查询服务是否开机启动
-systemctl enable *.service #开机运行服务
-systemctl disable *.service #取消开机运行
-systemctl start *.service #启动服务
-systemctl stop *.service #停止服务
-systemctl restart *.service #重启服务
-systemctl reload *.service #重新加载服务配置文件
-systemctl status *.service #查询服务运行状态
-systemctl --failed #显示启动失败的服务
-注：*代表某个服务的名字，如http的服务名为httpd
-
-查询nginx主进程号
+## 查询nginx主进程号
 ```
 ps -ef | grep nginx
 ```

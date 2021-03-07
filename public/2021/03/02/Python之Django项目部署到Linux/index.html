@@ -107,7 +107,7 @@
 <meta property="og:site_name" content="昜丿捺">
 <meta property="og:description" content="本教程主要记录在Linux上如何部署Django项目">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2021-03-07T12:14:54.792Z">
+<meta property="og:updated_time" content="2021-03-07T13:48:41.438Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Python之Django项目部署到Linux">
 <meta name="twitter:description" content="本教程主要记录在Linux上如何部署Django项目">
@@ -453,7 +453,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2021-03-07 20:14:54" itemprop="dateModified" datetime="2021-03-07T20:14:54+08:00">2021-03-07</time>
+                <time title="修改时间：2021-03-07 21:48:41" itemprop="dateModified" datetime="2021-03-07T21:48:41+08:00">2021-03-07</time>
               
             
           </span>
@@ -505,7 +505,7 @@
                 
                   <span class="post-meta-item-text">本文字数：</span>
                 
-                <span title="本文字数">23k</span>
+                <span title="本文字数">24k</span>
               
 
               
@@ -519,7 +519,7 @@
                 
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
-                <span title="阅读时长">21 分钟</span>
+                <span title="阅读时长">22 分钟</span>
               
             </div>
           
@@ -541,7 +541,7 @@
       
 
       
-        <h1 id="部署方式"><a href="#部署方式" class="headerlink" title="部署方式"></a>部署方式</h1><ul>
+        <h1 id="部署环境"><a href="#部署环境" class="headerlink" title="部署环境"></a>部署环境</h1><ul>
 <li><strong> Python 3.7.9 + Django 3.1.7 + Gunicorn + Nginx + CentOS8 </strong></li>
 </ul>
 <h1 id="安装Python3"><a href="#安装Python3" class="headerlink" title="安装Python3"></a>安装Python3</h1><ol>
@@ -549,7 +549,7 @@
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tar -zxvf Python-3.7.9.tgz</span><br></pre></td></tr></table></figure>
  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cd Python-3.7.9</span><br></pre></td></tr></table></figure>
 </li>
-<li><p>配置<br>安装到路径：<code>/usr/local/python3</code></p>
+<li><p>配置<br>配置安装到路径：<code>/usr/local/python3</code></p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">./configure --prefix=/usr/local/python3 --with-ssl</span><br></pre></td></tr></table></figure>
 <blockquote>
 <p>如果缺少c或gcc，则按此<a href="https://blog.csdn.net/weixin_40861358/article/details/83960692" target="_blank" rel="noopener">链接</a>安装。</p>
@@ -564,11 +564,11 @@
 </ol>
 <h2 id="创建软链接"><a href="#创建软链接" class="headerlink" title="创建软链接"></a>创建软链接</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ln -s /usr/local/python3/bin/python3 /usr/bin/python</span><br></pre></td></tr></table></figure>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ln -s /usr/local/python3/bin/pip3 /usr/bin/pip</span><br></pre></td></tr></table></figure>
-<p>或删除已有链接<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">rm -rf /usr/bin/python3</span><br><span class="line">rm -rf /usr/bin/pip3</span><br></pre></td></tr></table></figure></p>
+<p>如果链接已存在，可删除已有链接<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">rm -rf /usr/bin/python3</span><br><span class="line">rm -rf /usr/bin/pip3</span><br></pre></td></tr></table></figure></p>
 <h2 id="测试"><a href="#测试" class="headerlink" title="测试"></a>测试</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">python --version</span><br></pre></td></tr></table></figure>
 <hr>
-<h1 id="安装pip3"><a href="#安装pip3" class="headerlink" title="安装pip3"></a>安装pip3</h1><p>有时安装完python后，缺少pip，可用以下方法尝试安装。</p>
-<h2 id="方法一：安装setuptools"><a href="#方法一：安装setuptools" class="headerlink" title="方法一：安装setuptools"></a>方法一：安装setuptools</h2><ol>
+<h2 id="安装pip3"><a href="#安装pip3" class="headerlink" title="安装pip3"></a>安装pip3</h2><p>有时安装完python后，缺少pip，可用以下方法尝试安装。</p>
+<h3 id="方法一：安装setuptools"><a href="#方法一：安装setuptools" class="headerlink" title="方法一：安装setuptools"></a>方法一：安装setuptools</h3><ol>
 <li><p>下载</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wget --no-check-certificate  https://pypi.python.org/packages/source/s/setuptools/setuptools-19.6.tar.gz#md5=c607dd118eae682c44ed146367a17e26</span><br></pre></td></tr></table></figure>
 </li>
@@ -591,7 +591,7 @@
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip3 -V</span><br></pre></td></tr></table></figure>
 </li>
 </ol>
-<h2 id="方法二：get-pip-py"><a href="#方法二：get-pip-py" class="headerlink" title="方法二：get-pip.py"></a>方法二：get-pip.py</h2><ol>
+<h3 id="方法二：get-pip-py"><a href="#方法二：get-pip-py" class="headerlink" title="方法二：get-pip.py"></a>方法二：get-pip.py</h3><ol>
 <li>下载get-pip.py 文件<br><a href="https://pip.pypa.io/en/stable/installing/" target="_blank" rel="noopener">https://pip.pypa.io/en/stable/installing/</a></li>
 <li>python get-pip.py</li>
 <li>重新安装python3<blockquote>
@@ -607,7 +607,7 @@
 </blockquote>
 <hr>
 <h1 id="安装MySQL5-7"><a href="#安装MySQL5-7" class="headerlink" title="安装MySQL5.7"></a>安装MySQL5.7</h1><blockquote>
-<p> <a href="https://www.suibibk.com/topic/721421244804628480" target="_blank" rel="noopener">Linux安装MySQL5.7完整版流程</a></p>
+<p>可参考<a href="https://www.suibibk.com/topic/721421244804628480" target="_blank" rel="noopener">Linux安装MySQL5.7完整版流程</a></p>
 </blockquote>
 <ol>
 <li><p>解压安装包</p>
@@ -671,72 +671,58 @@ LimitNOFILE = 5000
 </li>
 </ul>
 <hr>
-<h1 id="安装gunicorn"><a href="#安装gunicorn" class="headerlink" title="安装gunicorn"></a>安装gunicorn</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip install gunicorn</span><br></pre></td></tr></table></figure>
-<h2 id="设置gunicorn的软连接"><a href="#设置gunicorn的软连接" class="headerlink" title="设置gunicorn的软连接"></a>设置gunicorn的软连接</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ln -s /usr/local/python3/bin/gunicorn /usr/bin/gunicorn</span><br></pre></td></tr></table></figure>
-<h2 id="启动-1"><a href="#启动-1" class="headerlink" title="启动"></a>启动</h2><ul>
-<li><p>命令行启动gunicorn<br>进入项目根目录下执行：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">gunicorn cam.wsgi:application -w <span class="number">2</span> -b <span class="number">0.0</span><span class="number">.0</span><span class="number">.0</span>:<span class="number">8000</span></span><br></pre></td></tr></table></figure>
+<h1 id="安装-Gunicorn"><a href="#安装-Gunicorn" class="headerlink" title="安装 Gunicorn"></a>安装 Gunicorn</h1><p>Gunicorn 绿色独角兽’是一个Python WSGI UNIX的HTTP服务器。这是一个pre-fork worker的模型，从Ruby的独角兽（Unicorn ）项目移植。该Gunicorn服务器大致与各种Web框架兼容，只需非常简单的执行，轻量级的资源消耗，以及相当迅速。<br>安装命令：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip install gunicorn</span><br></pre></td></tr></table></figure></p>
+<h2 id="创建软连接"><a href="#创建软连接" class="headerlink" title="创建软连接"></a>创建软连接</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ln -s /usr/local/python3/bin/gunicorn /usr/bin/gunicorn</span><br></pre></td></tr></table></figure>
+<h2 id="启动-1"><a href="#启动-1" class="headerlink" title="启动"></a>启动</h2><h3 id="命令行启动"><a href="#命令行启动" class="headerlink" title="命令行启动"></a>命令行启动</h3><p>进入项目根目录下执行：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">gunicorn cam.wsgi:application -w <span class="number">2</span> -b <span class="number">0.0</span><span class="number">.0</span><span class="number">.0</span>:<span class="number">8000</span></span><br></pre></td></tr></table></figure></p>
 <blockquote>
-<p>cam.wsgi:application cam是你django工程的名称，后面不用改<br>  -w —workers 意思是要启动的进程数量<br>  -b —bind 绑定的IP地址和端口<br>  -k —worker-class 启动的worker类型（gthread,sync,eventlet,gevent,tornado）,默认是同步阻塞方式启动</p>
+<p>cam.wsgi:application cam是你django工程的名称，后面不用改<br>-w —workers 意思是要启动的进程数量<br>-b —bind 绑定的IP地址和端口<br>-k —worker-class 启动的worker类型（gthread,sync,eventlet,gevent,tornado）,默认是同步阻塞方式启动</p>
 </blockquote>
-<p>  访问：0.0.0.0:8000</p>
+<p>访问：0.0.0.0:8000</p>
+<h3 id="配置文件启动"><a href="#配置文件启动" class="headerlink" title="配置文件启动"></a>配置文件启动</h3><p>在项目根目录下创建配置文件 <code>gunicorn-config.py</code>（与setting.py同级目录）<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">import multiprocessing</span><br><span class="line">bind = &quot;0.0.0.0:8888&quot; # 与nginx配置的端口一致</span><br><span class="line">chdir = &quot;/usr/local/cam&quot;</span><br><span class="line">timeout = 30</span><br><span class="line">workers = 2</span><br><span class="line">errorlog = &apos; ~/cam/log/error.log&apos;</span><br><span class="line">accesslog = &apos; ~/cam/log/access.log&apos;</span><br><span class="line">#loglevel = &apos;info&apos;</span><br><span class="line">loglevel = &apos;error&apos;</span><br><span class="line">proc_name = &apos;cam&apos;      # 工程名</span><br><span class="line">keepalive = 6</span><br><span class="line">timeout = 65</span><br><span class="line">graceful_timeout = 10</span><br><span class="line">worker_connections = 100</span><br></pre></td></tr></table></figure></p>
+<p>启动可在任意路径下执行：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">gunicorn cam.wsgi:application -k gthread -c /usr/local/cam/gunicorn-config.py</span><br></pre></td></tr></table></figure></p>
+<h2 id="创建服务"><a href="#创建服务" class="headerlink" title="创建服务"></a>创建服务</h2><ul>
+<li><p>建立服务文件</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vi /usr/lib/systemd/system/gunicorn.service</span><br></pre></td></tr></table></figure>
+<p>  粘入下面内容：</p>
+  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">[Unit]</span><br><span class="line">After=syslog.target network.target remote-fs.target nss-lookup.target</span><br><span class="line">[Service]</span><br><span class="line">User=root</span><br><span class="line">WorkingDirectory=/usr/local/cam</span><br><span class="line">ExecStart=gunicorn cam.wsgi:application -k gthread -c /usr/local/cam/gunicorn-config.py</span><br><span class="line">Restart=on-failure</span><br><span class="line">[Install]</span><br><span class="line">WantedBy=multi-user.target</span><br></pre></td></tr></table></figure>
 </li>
-<li><p>配置文件启动<br>在项目根目录下创建配置文件 <code>gunicorn-config.py</code>（与setting.py同级目录）</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">import multiprocessing</span><br><span class="line">bind = &quot;0.0.0.0:8888&quot; # 与nginx配置的端口一致</span><br><span class="line">chdir = &quot;/usr/local/cam&quot;</span><br><span class="line">timeout = 30</span><br><span class="line">workers = 2</span><br><span class="line">errorlog = &apos; ~/cam/log/error.log&apos;</span><br><span class="line">accesslog = &apos; ~/cam/log/access.log&apos;</span><br><span class="line">#loglevel = &apos;info&apos;</span><br><span class="line">loglevel = &apos;error&apos;</span><br><span class="line">proc_name = &apos;cam&apos;      # 工程名</span><br><span class="line">keepalive = 6</span><br><span class="line">timeout = 65</span><br><span class="line">graceful_timeout = 10</span><br><span class="line">worker_connections = 100</span><br></pre></td></tr></table></figure>
-<p>  启动可在任意路径下执行：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">gunicorn cam.wsgi:application -k gthread -c /usr/local/cam/gunicorn-config.py</span><br></pre></td></tr></table></figure>
+<li><p>使文件生效</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">systemctl daemon-reload</span><br></pre></td></tr></table></figure>
 </li>
 </ul>
-<h2 id="配置系统服务-systemctl-启动方式"><a href="#配置系统服务-systemctl-启动方式" class="headerlink" title="配置系统服务 systemctl 启动方式"></a>配置系统服务 systemctl 启动方式</h2><p>建立服务文件<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vi /usr/lib/systemd/system/gunicorn.service</span><br></pre></td></tr></table></figure></p>
-<pre><code>[Unit]
-After=syslog.target network.target remote-fs.target nss-lookup.target
-[Service]
-User=root
-WorkingDirectory=/usr/local/cam
-ExecStart=gunicorn cam.wsgi:application -k gthread -c /usr/local/cam/gunicorn-config.py
-Restart=on-failure
-[Install]
-WantedBy=multi-user.target
-</code></pre><p>使文件生效<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">systemctl daemon-reload</span><br></pre></td></tr></table></figure></p>
 <hr>
 <h1 id="安装Nginx"><a href="#安装Nginx" class="headerlink" title="安装Nginx"></a>安装Nginx</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tar -zxvf nginx-1.18.0.tar.gz</span><br></pre></td></tr></table></figure>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cd nginx-1.18.0</span><br></pre></td></tr></table></figure>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">./configure --prefix=/usr/local/nginx</span><br></pre></td></tr></table></figure>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">make</span><br></pre></td></tr></table></figure>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">make install</span><br></pre></td></tr></table></figure>
-<h2 id="测试是否安装成功"><a href="#测试是否安装成功" class="headerlink" title="测试是否安装成功"></a>测试是否安装成功</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cd /usr/local/nginx/</span><br></pre></td></tr></table></figure>
+<h2 id="测试-1"><a href="#测试-1" class="headerlink" title="测试"></a>测试</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cd /usr/local/nginx/</span><br></pre></td></tr></table></figure>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">./sbin/nginx -t</span><br></pre></td></tr></table></figure>
 <p>正常情况信息输出：</p>
 <pre><code>nginx: the configuration file /usr/local/nginx/conf/nginx.conf syntax is ok
 nginx: configuration file /usr/local/nginx/conf/nginx.conf test is successful
-</code></pre><h2 id="启动nginx"><a href="#启动nginx" class="headerlink" title="启动nginx"></a>启动nginx</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cd /usr/local/nginx/sbin</span><br></pre></td></tr></table></figure>
+</code></pre><h2 id="启动-2"><a href="#启动-2" class="headerlink" title="启动"></a>启动</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cd /usr/local/nginx/sbin</span><br></pre></td></tr></table></figure>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">./nginx</span><br></pre></td></tr></table></figure>
 <blockquote>
 <p>启动：/usr/local/nginx/sbin/nginx<br>停止/重新加载：/usr/local/nginx/sbin/nginx -s stop(quit、reload)<br>验证配置文件是否合法：/usr/local/nginx/sbin/nginx -t<br>命令帮助：/usr/local/nginx/sbin/nginx -h</p>
 </blockquote>
-<h2 id="配置系统服务-systemctl-启动方式-1"><a href="#配置系统服务-systemctl-启动方式-1" class="headerlink" title="配置系统服务 systemctl 启动方式"></a>配置系统服务 systemctl 启动方式</h2><p>建立服务文件<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vi /usr/lib/systemd/system/nginx.service</span><br></pre></td></tr></table></figure></p>
-<pre><code>[Unit]
-Description=nginx - high performance web server
-After=network.target remote-fs.target nss-lookup.target
-
-[Service]
-Type=forking
-ExecStart=/usr/local/nginx/sbin/nginx
-ExecReload=/usr/local/nginx/sbin/nginx -s reload
-ExecStop=/usr/local/nginx/sbin/nginx -s stop
-
-[Install]
-WantedBy=multi-user.target
-</code></pre><blockquote>
-<p>文件内容解释 [Unit]: 服务的说明<br>Description:描述服务<br>After:描述服务类别<br>[Service]服务运行参数的设置<br>Type=forking是后台运行的形式<br>ExecStart为服务的具体运行命令<br>ExecReload为重启命令<br>ExecStop为停止命令<br>PrivateTmp=True表示给服务分配独立的临时空间<br>注意：启动、重启、停止命令全部要求使用绝对路径<br>[Install]服务安装的相关设置，可设置为多用户</p>
-</blockquote>
-<p>使文件生效<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">systemctl daemon-reload</span><br></pre></td></tr></table></figure></p>
-<p>如果启动服务失败，则以754的权限保存在目录：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Chmod +754 /usr/lib/systemd/system/nginx.service</span><br></pre></td></tr></table></figure></p>
-<p>设置开机自启动<br>systemctl enable nginx.service<br>启动nginx服务<br>systemctl start nginx.service<br>停止开机自启动<br>systemctl disable nginx.service<br>查看服务当前状态<br>systemctl status nginx.service<br>重新启动服务<br>systemctl restart nginx.service<br>查看所有已启动的服务<br>systemctl list-units —type=service</p>
+<h2 id="创建服务-1"><a href="#创建服务-1" class="headerlink" title="创建服务"></a>创建服务</h2><ul>
+<li><p>建立服务文件</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vi /usr/lib/systemd/system/nginx.service</span><br></pre></td></tr></table></figure>
+<p>  粘如下面内容：</p>
+  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">[Unit]</span><br><span class="line">Description=nginx - high performance web server</span><br><span class="line">After=network.target remote-fs.target nss-lookup.target</span><br><span class="line">[Service]</span><br><span class="line">Type=forking</span><br><span class="line">ExecStart=/usr/local/nginx/sbin/nginx</span><br><span class="line">ExecReload=/usr/local/nginx/sbin/nginx -s reload</span><br><span class="line">ExecStop=/usr/local/nginx/sbin/nginx -s stop</span><br><span class="line">[Install]</span><br><span class="line">WantedBy=multi-user.target</span><br></pre></td></tr></table></figure>
 <blockquote>
-<p>命令集合<br>systemctl is-enabled servicename.service #查询服务是否开机启动<br>systemctl enable <em>.service #开机运行服务<br>systemctl disable </em>.service #取消开机运行<br>systemctl start <em>.service #启动服务<br>systemctl stop </em>.service #停止服务<br>systemctl restart <em>.service #重启服务<br>systemctl reload </em>.service #重新加载服务配置文件<br>systemctl status <em>.service #查询服务运行状态<br>systemctl —failed #显示启动失败的服务<br>注：</em>代表某个服务的名字，如http的服务名为httpd</p>
+<p>文件内容解释: [Unit]: 服务的说明<br>  Description:描述服务<br>  After:描述服务类别<br>  [Service]服务运行参数的设置<br>  Type=forking是后台运行的形式<br>  ExecStart为服务的具体运行命令<br>  ExecReload为重启命令<br>  ExecStop为停止命令<br>  PrivateTmp=True表示给服务分配独立的临时空间<br>  注意：启动、重启、停止命令全部要求使用绝对路径<br>  [Install]服务安装的相关设置，可设置为多用户</p>
 </blockquote>
-<p>查询nginx主进程号<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ps -ef | grep nginx</span><br></pre></td></tr></table></figure></p>
+</li>
+<li><p>使文件生效</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">systemctl daemon-reload</span><br></pre></td></tr></table></figure>
+<p>  如果启动服务失败，则以754的权限保存在目录：<br>  Chmod +754 /usr/lib/systemd/system/nginx.service<br>  设置开机自启动<br>  systemctl enable nginx.service<br>  启动nginx服务</p>
+  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">systemctl start nginx.service</span><br></pre></td></tr></table></figure>
+<p>  停止开机自启动<br>  systemctl disable nginx.service<br>  查看服务当前状态<br>  systemctl status nginx.service<br>  重新启动服务<br>  systemctl restart nginx.service<br>  查看所有已启动的服务<br>  systemctl list-units —type=service</p>
+</li>
+</ul>
+<h2 id="查询nginx主进程号"><a href="#查询nginx主进程号" class="headerlink" title="查询nginx主进程号"></a>查询nginx主进程号</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ps -ef | grep nginx</span><br></pre></td></tr></table></figure>
 <p>从容停止 kill -QUIT 主进程号<br>快速停止 kill -TERM 主进程号<br>强制停止 kill -9 nginx</p>
 <h1 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h1><ul>
 <li><a href="https://www.dusaiphoto.com/article/71/" target="_blank" rel="noopener">Django 搭建个人博客教程</a></li>
@@ -817,7 +803,7 @@ WantedBy=multi-user.target
   <p><span>本文标题:</span><a href="/2021/03/02/Python之Django项目部署到Linux/">Python之Django项目部署到Linux</a></p>
   <p><span>文章作者:</span><a href="/" title="访问 昜丿捺 的个人博客">昜丿捺</a></p>
   <p><span>发布时间:</span>2021年03月02日 - 14:57:39</p>
-  <p><span>最后更新:</span>2021年03月07日 - 20:14:54</p>
+  <p><span>最后更新:</span>2021年03月07日 - 21:48:41</p>
   <p><span>原始链接:</span><a href="/2021/03/02/Python之Django项目部署到Linux/" title="Python之Django项目部署到Linux">http://ynn5ru.coding-pages.com/2021/03/02/Python之Django项目部署到Linux/</a>
     <span class="copy-path" title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="http://ynn5ru.coding-pages.com/2021/03/02/Python之Django项目部署到Linux/" aria-label="复制成功！"></i></span>
   </p>
@@ -1192,7 +1178,7 @@ WantedBy=multi-user.target
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#部署方式"><span class="nav-number">1.</span> <span class="nav-text">部署方式</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#安装Python3"><span class="nav-number">2.</span> <span class="nav-text">安装Python3</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#创建软链接"><span class="nav-number">2.1.</span> <span class="nav-text">创建软链接</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#测试"><span class="nav-number">2.2.</span> <span class="nav-text">测试</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#安装pip3"><span class="nav-number">3.</span> <span class="nav-text">安装pip3</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#方法一：安装setuptools"><span class="nav-number">3.1.</span> <span class="nav-text">方法一：安装setuptools</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#方法二：get-pip-py"><span class="nav-number">3.2.</span> <span class="nav-text">方法二：get-pip.py</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#安装Django"><span class="nav-number">4.</span> <span class="nav-text">安装Django</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#安装MySQL5-7"><span class="nav-number">5.</span> <span class="nav-text">安装MySQL5.7</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#启动"><span class="nav-number">5.1.</span> <span class="nav-text">启动</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#登录mysql，修改root用户的密码"><span class="nav-number">5.2.</span> <span class="nav-text">登录mysql，修改root用户的密码</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#远程连接"><span class="nav-number">5.3.</span> <span class="nav-text">远程连接</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#安装gunicorn"><span class="nav-number">6.</span> <span class="nav-text">安装gunicorn</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#设置gunicorn的软连接"><span class="nav-number">6.1.</span> <span class="nav-text">设置gunicorn的软连接</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#启动-1"><span class="nav-number">6.2.</span> <span class="nav-text">启动</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#配置系统服务-systemctl-启动方式"><span class="nav-number">6.3.</span> <span class="nav-text">配置系统服务 systemctl 启动方式</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#安装Nginx"><span class="nav-number">7.</span> <span class="nav-text">安装Nginx</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#测试是否安装成功"><span class="nav-number">7.1.</span> <span class="nav-text">测试是否安装成功</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#启动nginx"><span class="nav-number">7.2.</span> <span class="nav-text">启动nginx</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#配置系统服务-systemctl-启动方式-1"><span class="nav-number">7.3.</span> <span class="nav-text">配置系统服务 systemctl 启动方式</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#参考"><span class="nav-number">8.</span> <span class="nav-text">参考</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#部署环境"><span class="nav-number">1.</span> <span class="nav-text">部署环境</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#安装Python3"><span class="nav-number">2.</span> <span class="nav-text">安装Python3</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#创建软链接"><span class="nav-number">2.1.</span> <span class="nav-text">创建软链接</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#测试"><span class="nav-number">2.2.</span> <span class="nav-text">测试</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#安装pip3"><span class="nav-number">2.3.</span> <span class="nav-text">安装pip3</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#方法一：安装setuptools"><span class="nav-number">2.3.1.</span> <span class="nav-text">方法一：安装setuptools</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#方法二：get-pip-py"><span class="nav-number">2.3.2.</span> <span class="nav-text">方法二：get-pip.py</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#安装Django"><span class="nav-number">3.</span> <span class="nav-text">安装Django</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#安装MySQL5-7"><span class="nav-number">4.</span> <span class="nav-text">安装MySQL5.7</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#启动"><span class="nav-number">4.1.</span> <span class="nav-text">启动</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#登录mysql，修改root用户的密码"><span class="nav-number">4.2.</span> <span class="nav-text">登录mysql，修改root用户的密码</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#远程连接"><span class="nav-number">4.3.</span> <span class="nav-text">远程连接</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#安装-Gunicorn"><span class="nav-number">5.</span> <span class="nav-text">安装 Gunicorn</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#创建软连接"><span class="nav-number">5.1.</span> <span class="nav-text">创建软连接</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#启动-1"><span class="nav-number">5.2.</span> <span class="nav-text">启动</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#命令行启动"><span class="nav-number">5.2.1.</span> <span class="nav-text">命令行启动</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#配置文件启动"><span class="nav-number">5.2.2.</span> <span class="nav-text">配置文件启动</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#创建服务"><span class="nav-number">5.3.</span> <span class="nav-text">创建服务</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#安装Nginx"><span class="nav-number">6.</span> <span class="nav-text">安装Nginx</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#测试-1"><span class="nav-number">6.1.</span> <span class="nav-text">测试</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#启动-2"><span class="nav-number">6.2.</span> <span class="nav-text">启动</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#创建服务-1"><span class="nav-number">6.3.</span> <span class="nav-text">创建服务</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#查询nginx主进程号"><span class="nav-number">6.4.</span> <span class="nav-text">查询nginx主进程号</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#参考"><span class="nav-number">7.</span> <span class="nav-text">参考</span></a></li></ol></div>
             
 
           </div>
