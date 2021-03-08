@@ -13,6 +13,23 @@ description: 本教程主要记录在Linux上如何部署Django项目
 - ** Python 3.7.9 + Django 3.1.7 + Gunicorn + Nginx + CentOS8 **
 
 
+------------
+
+
+# 准备CentOS8
+root用户下安装相应的编译工具
+```
+yum -y groupinstall "Development tools"
+yum -y install zlib-devel bzip2-devel openssl-devel ncurses-devel sqlite-devel readline-devel tk-devel gdbm-devel db4-devel libpcap-devel xz-devel
+yum install -y libffi-devel zlib1g-dev
+yum install zlib* -y
+yum install gcc
+```
+
+
+------------
+
+
 # 安装Python3
 1. 下载和解压
 下载安装包到路径：`/user/local/download`
@@ -24,11 +41,17 @@ tar -zxvf Python-3.7.9.tgz
 	```
 
 1. 配置
-配置安装到路径：`/usr/local/python3`
+指定安装路径：`/usr/local/python3`
 ```
-./configure --prefix=/usr/local/python3 --with-ssl
+./configure --prefix=/usr/local/python3 --enable-optimizations --with-ssl
 ```
-	> 如果缺少c或gcc，则按此[链接](https://blog.csdn.net/weixin_40861358/article/details/83960692)安装。
+	参数解释：
+	- 第一个指定安装的路径,不指定的话,安装过程中可能软件所需要的文件复制到其他不同目录,删除软件很不方便,复制软件也不方便.
+	- 第二个可以提高python10%-20%代码运行速度.
+	- 第三个是为了安装pip需要用到ssl,后面报错会有提到.
+
+  > Suse Linux无网络情况下如果缺少c或gcc，则按此[链接](https://blog.csdn.net/weixin_40861358/article/details/83960692)安装。
+
 1. 编译
 ```
 make
@@ -55,10 +78,34 @@ rm -rf /usr/bin/pip3
 ```
 python --version
 ```
+如果出现下面错误：
 
+	localhost:/usr/local/download/Python-3.7.9 # python --version
+	Could not find platform dependent libraries <exec_prefix>
+	Consider setting $PYTHONHOME to <prefix>[:<exec_prefix>]
+	Python 3.7.9
+则在文件系统的etc目录下的profile文件中加入下面的语句：
+```
+vi /etc/profile 
+```
+```
+export PYTHONHOME=/usr/local/python3/lib/python3.7
+export PYTHONPATH=.:$PYTHONHOME:$PYTHONHOME/site-packages
+export PATH=$PATH:$PYTHONHOME:$PYTHONPATH
+```
+如果出现下面错误：
 
-------------
+	Python 3.7.9 (default, Mar  8 2021, 14:58:53) 
+	[GCC 7.5.0] on linux
+	Type "help", "copyright", "credits" or "license" for more information.
+	Traceback (most recent call last):
+	  File "/etc/pythonstart", line 7, in <module>
+		import readline
+	ModuleNotFoundError: No module named 'readline'
 
+则执行下面命令安装：
+
+	zypper in zlib-devel bzip2-devel openssl-devel ncurses-devel sqlite-devel readline-devel tk-devel gdbm-devel db4-devel libpcap-devel xz-devel libffi-devel
 
 ## 安装pip3
 有时安装完python后，缺少pip，可用以下方法尝试安装。
@@ -248,7 +295,7 @@ update user set host = '%' where user = 'root';
 ------------
 
 
-# 安装 Gunicorn
+# 安装Gunicorn
 Gunicorn 绿色独角兽'是一个Python WSGI UNIX的HTTP服务器。这是一个pre-fork worker的模型，从Ruby的独角兽（Unicorn ）项目移植。该Gunicorn服务器大致与各种Web框架兼容，只需非常简单的执行，轻量级的资源消耗，以及相当迅速。
 安装命令：
 ```python
