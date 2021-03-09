@@ -393,6 +393,231 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://ynn5ru.coding-pages.com/2016/12/28/Tomcat下载和安装/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="昜丿捺">
+      <meta itemprop="description" content="没有阳光，沉默而居">
+      <meta itemprop="image" content="/img/avatar/ironman.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="昜丿捺">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/2016/12/28/Tomcat下载和安装/" class="post-title-link" itemprop="url">Tomcat下载和安装</a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2016-12-28 09:49:28" itemprop="dateCreated datePublished" datetime="2016-12-28T09:49:28+08:00">2016-12-28</time>
+            
+
+            
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2020-06-19 12:25:58" itemprop="dateModified" datetime="2020-06-19T12:25:58+08:00">2020-06-19</time>
+              
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/tech-notes/" itemprop="url" rel="index"><span itemprop="name">技术</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-symbolscount">
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">本文字数：</span>
+                
+                <span title="本文字数">17k</span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">15 分钟</span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <h3 id="Tomcat官网下载"><a href="#Tomcat官网下载" class="headerlink" title="Tomcat官网下载"></a>Tomcat<a href="https://tomcat.apache.org/" target="_blank" rel="noopener">官网下载</a></h3><hr>
+<h3 id="Tomcat安装"><a href="#Tomcat安装" class="headerlink" title="Tomcat安装"></a>Tomcat安装</h3><h4 id="1-Windows下"><a href="#1-Windows下" class="headerlink" title="1. Windows下"></a>1. Windows下</h4><h5 id="1-1-将下载的apache-tomcat-6-0-35-windows-x86-zip压缩包解压。"><a href="#1-1-将下载的apache-tomcat-6-0-35-windows-x86-zip压缩包解压。" class="headerlink" title="1.1 将下载的apache-tomcat-6.0.35-windows-x86.zip压缩包解压。"></a>1.1 将下载的apache-tomcat-6.0.35-windows-x86.zip压缩包解压。</h5><h5 id="1-2-修改-bin-startup-bat文件，在第一行前面加入以下内容："><a href="#1-2-修改-bin-startup-bat文件，在第一行前面加入以下内容：" class="headerlink" title="1.2 修改\bin\startup.bat文件，在第一行前面加入以下内容："></a>1.2 修改\bin\startup.bat文件，在第一行前面加入以下内容：</h5><pre><code>REM JDK安装所在的路径
+SET JAVA_HOME=D:\Program Files\Java\jdk1.6.0_30
+REM 免安装的Tomcat解压后的路径
+SET CATALINA_HOME=D:\Program Files\tomcat6.0.35
+</code></pre><p>如果需要使用shutdown.bat关闭服务器的话，也按照上面加入。</p>
+<h5 id="1-3-这样，运行startup-bat就可以启动Tomcat，运行shutdown-bat就可以关闭服务器了。"><a href="#1-3-这样，运行startup-bat就可以启动Tomcat，运行shutdown-bat就可以关闭服务器了。" class="headerlink" title="1.3 这样，运行startup.bat就可以启动Tomcat，运行shutdown.bat就可以关闭服务器了。"></a>1.3 这样，运行startup.bat就可以启动Tomcat，运行shutdown.bat就可以关闭服务器了。</h5><h5 id="1-4-修改-conf-tomcat-users-xml文件，在-lt-tomcat-users-gt-标签内加入"><a href="#1-4-修改-conf-tomcat-users-xml文件，在-lt-tomcat-users-gt-标签内加入" class="headerlink" title="1.4 修改\conf\tomcat-users.xml文件，在&lt;tomcat-users&gt;标签内加入"></a>1.4 修改\conf\tomcat-users.xml文件，在<code>&lt;tomcat-users&gt;</code>标签内加入</h5><pre><code>&lt;role rolename=&quot;manager&quot;/&gt;
+&lt;role rolename=&quot;admin&quot;/&gt;
+&lt;user username=&quot;admin&quot; password=&quot;admin&quot; roles=&quot;admin,manager&quot;/&gt;
+</code></pre><p>这样才可以使用Tomcat的管理界面。</p>
+          <!--noindex-->
+          
+            <div class="post-button text-center">
+              <a class="btn" href="/2016/12/28/Tomcat下载和安装/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+
+	<!-- YPN 2020-06-18 增加 每篇文章末尾添加致谢 -->
+	<div>
+		
+	</div>
+	
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+	
+	<!-- YPN 2020-06-18 增加 版权 -->
+	<div>
+      	  
+	</div>
+	 
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://ynn5ru.coding-pages.com/2016/12/28/Jdk下载安装/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
@@ -2331,222 +2556,6 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://ynn5ru.coding-pages.com/2016/12/22/Java与actionScript类型对应表/">
-
-    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="昜丿捺">
-      <meta itemprop="description" content="没有阳光，沉默而居">
-      <meta itemprop="image" content="/img/avatar/ironman.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="昜丿捺">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/2016/12/22/Java与actionScript类型对应表/" class="post-title-link" itemprop="url">Java与actionScript类型对应表</a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-
-              
-                
-              
-
-              <time title="创建时间：2016-12-22 15:55:28" itemprop="dateCreated datePublished" datetime="2016-12-22T15:55:28+08:00">2016-12-22</time>
-            
-
-            
-              
-
-              
-                
-                <span class="post-meta-divider">|</span>
-                
-
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">更新于</span>
-                
-                <time title="修改时间：2020-06-19 12:25:58" itemprop="dateModified" datetime="2020-06-19T12:25:58+08:00">2020-06-19</time>
-              
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/tech-notes/" itemprop="url" rel="index"><span itemprop="name">技术</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-            <div class="post-symbolscount">
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">本文字数：</span>
-                
-                <span title="本文字数">3.4k</span>
-              
-
-              
-                <span class="post-meta-divider">|</span>
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-clock-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
-                
-                <span title="阅读时长">3 分钟</span>
-              
-            </div>
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <p>采用Java+Flex架构，通过BlazeDS中间件技术，使服务端Java数据和客户端Flex数据进行互通时，底层数据类型是不一致的，BlazeDS对其进行了映射，具体映射关系如下：<br>
-          <!--noindex-->
-          
-            <div class="post-button text-center">
-              <a class="btn" href="/2016/12/22/Java与actionScript类型对应表/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          
-          <!--/noindex-->
-        
-      
-    </p></div>
-
-    
-
-	<!-- YPN 2020-06-18 增加 每篇文章末尾添加致谢 -->
-	<div>
-		
-	</div>
-	
-    
-    
-    
-
-    
-
-    
-      
-    
-    
-
-    
-	
-	<!-- YPN 2020-06-18 增加 版权 -->
-	<div>
-      	  
-	</div>
-	 
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -2600,7 +2609,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">79</span>
+                    <span class="site-state-item-count">80</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -2872,7 +2881,7 @@
       <i class="fa fa-area-chart"></i>
     </span>
     
-    <span title="站点总字数">216k</span>
+    <span title="站点总字数">222k</span>
   
 
   
@@ -2881,7 +2890,7 @@
       <i class="fa fa-coffee"></i>
     </span>
     
-    <span title="站点阅读时长">3:16</span>
+    <span title="站点阅读时长">3:22</span>
   
 </div>
 

@@ -382,7 +382,7 @@ description:
 [你都用 Python 来做什么？](https://www.zhihu.com/question/20799742)
 
 [Django](https://www.cnblogs.com/suoning/p/5818869.html) | [Django 的认识，面试题](https://www.cnblogs.com/chongdongxiaoyu/p/9403399.html) | [Django 2.2 基础教程](https://code.ziqiangxuetang.com/django/django-tutorial.html) | [Django3.1教程](https://www.liujiangblog.com/course/django/2)
-[Django3.1连接SQL Server2017配置指引](https://www.pythonheidong.com/blog/article/274751/16b135ed6cdd5ce8d437/)
+[Django3.1连接SQL Server2017配置指引](https://www.pythonheidong.com/blog/article/274751/16b135ed6cdd5ce8d437/) | [linux python连接oracle数据库](https://www.cnblogs.com/ruiy/p/12876358.html) | [centos下用python连接oracle](https://www.cnblogs.com/haoyiyang/p/11309760.html)
 [阿里云部署django实现公网访问](https://www.cnblogs.com/xiaobingqianrui/p/9825174.html)
 [Python/Django – 避免在源代码中保存密码](http://www.voidcn.com/article/p-eoxnnhgp-bst.html) | [如果不想在django 的settings中保存mysql数据库的密码](https://www.cnblogs.com/worldinmyeyes/p/12109371.html)
 [django界面上弹出bootstrap modal对话框，对话框中包含iframe并请求一个新的页面](https://blog.csdn.net/u012561176/article/details/106539639)

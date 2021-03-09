@@ -154,16 +154,189 @@ sudo make && sudo make install
 ------------
 
 
- # 安装Django
+# 安装Django
 ```python
 pip install django==3.1.7
 ```
+
+## 配置MySQL
 安装mysqlclient依赖
 ```python
 pip install mysqlclient
 ```
->  报错解决：从No match for argument: gcc-devel 到centos8 的dnf
- https://blog.csdn.net/zw3413/article/details/105152826
+>  报错解决：
+[OSError: mysql_config not found](https://blog.csdn.net/weixin_30416871/article/details/98711474)
+[从No match for argument: gcc-devel 到centos8 的dnf](https://blog.csdn.net/zw3413/article/details/105152826)
+
+## 配置Oracle
+必需组件：cx_Oracle、Oracle Instant Client
+### cx_Oracle 使用 `pip install cx-Oracle==8.0.1` 安装即可。
+
+### Oracle Instant Client（Oracle提供的一个简单访问Oracle的组件）
+1. 从[官网下载](http://www.oracle.com/technetwork/database/database-technologies/instant-client/)
+下载时检查Oracle数据库的版本以及系统类型，下载相应的文件，如Oracle11.2，centos7.9下载 `instantclient-basic-linux.x64-11.2.0.4.0.zip` 和 `instantclient-sdk-linux.x64-11.2.0.4.0.zip`。
+2. 解压两个压缩包到同一目录 `instantclient_11_2` 下
+3. 拷贝 `instantclient_11_2` 到CentOS7目录 `/usr/local/oracle` 下
+4. 配置环境变量 `./bash_profile` 文件
+```
+vi /root/.bash_profile
+```
+ 添加内容：
+```
+export ORACLE_HOME=/usr/local/oracle/instantclient_11_2
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$ORACLE_HOME
+```
+ 使配置生效:
+```
+source /root/.bash_profile
+```
+4. 创建快捷键
+```
+cd $ORACLE_HOME
+ln -s  libclntsh.so.11.2  libclntsh.so
+ln -s /usr/local/oracle/instantclient_11_2 /usr/local/oracle/instantclient_11_2/lib
+```
+5. 添加共享目录
+打开配置文件：
+```
+vi /etc/ld.so.conf
+```
+ 添加下面内容：
+```
+/usr/local/oracle/instantclient_11_2
+```
+ 执行命令使生效：
+```
+ldconfig
+```
+最后，测试是否正常，或重启服务器后再测试。
+
+## 配置SQL Server
+必需组件：unixODBC、Microsoft ODBC Driver 11 for linux
+### ODBC驱动安装
+用于数据库连接的驱动：
+```
+yum -y install unixODBC* 
+```
+### 微软ODBC for linux驱动安装
+1. [官网下载地址](http://download.microsoft.com/download/6/A/B/6AB27E13-46AE-4CE9-AFFD-406367CADC1D/Linux6/sqlncli-11.0.1790.0.tar.gz)
+如果你需要更高版本的驱动程序请转到官网下载，附[官网地址](https://docs.microsoft.com/en-us/sql/connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server?view=sql-server-2017
+)(建议旧版安装成功后再选择性升级)
+2. 解压并验证安装条件
+```
+cd /usr/local/download
+tar -zxvf sqlncli-11.0.1790.0.tar.gz
+cd sqlncli-11.0.1790.0
+./install.sh verify
+```
+ 以下为验证信息
+```
+Microsoft SQL Server ODBC Driver V1.0 for Linux Installation Script
+Copyright Microsoft Corp.
+Starting install for Microsoft SQL Server ODBC Driver V1.0 for Linux
+Checking for 64 bit Linux compatible OS ..................................... OK
+Checking required libs are installed ........................................ OK
+unixODBC utilities (odbc_config and odbcinst) installed ..................... OK
+unixODBC Driver Manager version 2.3.0 installed ......................... FAILED
+unixODBC Driver Manager configuration correct ...................... NOT CHECKED
+Microsoft SQL Server ODBC Driver V1.0 for Linux already installed .. NOT CHECKED
+See /tmp/sqlncli.10874.17476.965/install.log for more information about installation failures.
+```
+ 查看依赖包
+```
+ldd lib64/libsqlncli*
+```
+	```
+	linux-vdso.so.1 =>  (0x00007fff973fe000)
+	libcrypto.so.10 => /lib64/libcrypto.so.10 (0x00007f2deb899000)
+	libdl.so.2 => /lib64/libdl.so.2 (0x00007f2deb695000)
+	librt.so.1 => /lib64/librt.so.1 (0x00007f2deb48c000)
+	libssl.so.10 => /lib64/libssl.so.10 (0x00007f2deb21a000)
+	libuuid.so.1 => /lib64/libuuid.so.1 (0x00007f2deb015000)
+	libodbcinst.so.1 => /lib64/libodbcinst.so.1 (0x00007f2deae02000)
+	libkrb5.so.3 => /lib64/libkrb5.so.3 (0x00007f2deab1a000)
+	libgssapi_krb5.so.2 => /lib64/libgssapi_krb5.so.2 (0x00007f2dea8cd000)
+	libstdc++.so.6 => /lib64/libstdc++.so.6 (0x00007f2dea5c4000)
+	libm.so.6 => /lib64/libm.so.6 (0x00007f2dea2c2000)
+	libgcc_s.so.1 => /lib64/libgcc_s.so.1 (0x00007f2dea0ac000)
+	libpthread.so.0 => /lib64/libpthread.so.0 (0x00007f2de9e8f000)
+	libc.so.6 => /lib64/libc.so.6 (0x00007f2de9acc000)
+	libz.so.1 => /lib64/libz.so.1 (0x00007f2de98b6000)
+	/lib64/ld-linux-x86-64.so.2 (0x00007f2dec053000)
+	libcom_err.so.2 => /lib64/libcom_err.so.2 (0x00007f2de96b1000)
+	libk5crypto.so.3 => /lib64/libk5crypto.so.3 (0x00007f2de947e000)
+	libltdl.so.7 => /lib64/libltdl.so.7 (0x00007f2de9274000)
+	libkrb5support.so.0 => /lib64/libkrb5support.so.0 (0x00007f2de9065000)
+	libkeyutils.so.1 => /lib64/libkeyutils.so.1 (0x00007f2de8e61000)
+	libresolv.so.2 => /lib64/libresolv.so.2 (0x00007f2de8c47000)
+	libselinux.so.1 => /lib64/libselinux.so.1 (0x00007f2de8a1f000)
+	libpcre.so.1 => /usr/local/lib/libpcre.so.1 (0x00007f2de8802000)
+	```
+ 如果遇到没有找到的依赖环境组件，如 `libodbcinst.so.1 => not found` ，可以建立个此缺少环境组件名称的软连接并指向此环境组件的高版本，如：
+```
+cd /usr/lib64
+ln -s libodbcinst.so.2.0.0 libodbcinst.so.1
+```
+ 完成后可以使用ldd再次验证，确认全部可行后再进行下一步:
+```
+ldd lib64/libsqlncli*
+```
+3. 正式安装
+使用install安装命令进行安装:
+```
+./install.sh install --force
+```
+ 声明文件敲空格阅读，最后输入 `YES` 同意安装（注意YES必须使大写）：
+```
+Enter YES to accept the license or anything else to terminate the installation: YES
+ 
+Checking for 64 bit Linux compatible OS ..................................... OK
+Checking required libs are installed ........................................ OK
+unixODBC utilities (odbc_config and odbcinst) installed ..................... OK
+unixODBC Driver Manager version 2.3.0 installed ......................... FAILED
+unixODBC Driver Manager configuration correct ...................... NOT CHECKED
+Microsoft SQL Server ODBC Driver V1.0 for Linux already installed .. NOT CHECKED
+Microsoft SQL Server ODBC Driver V1.0 for Linux files copied ................ OK
+Symbolic links for bcp and sqlcmd created ................................... OK
+Microsoft SQL Server ODBC Driver V1.0 for Linux registered ........... INSTALLED
+ 
+Install log created at /tmp/sqlncli.2486.13833.4245/install.log.
+ 
+One or more steps may have an *. See README for more information regarding
+these steps.
+ 
+```
+ 如果出现目录 `/opt/microsoft/sqlncli/lib64/libsqlncli-11.0.so.1790.0`，表示驱动安装完成。
+4. 配置unixOBDC
+```
+vi /etc/odbcinst.ini
+```
+	```
+	[SQL Server Native Client 11.0]
+	Description=Microsoft SQL Server ODBC Driver V1.0 for Linux
+	Driver=/opt/microsoft/sqlncli/lib64/libsqlncli-11.0.so.1790.0
+	Threading=1
+	UsageCount=1
+	```
+### django 配置
+进入Django项目目录，修改配置文件 `vi setting.py`，在数据库配置项中配置以下信息（基本和Windows配置一样）
+```
+DATABASES = {
+  'default': {
+    'ENGINE': 'sql_server.pyodbc',      # odbc连接固定写法
+    'NAME': 'Mydata',                   # 需要连接的数据库名称
+    'USER': 'sa',                       # 数据库连接账户
+    'PASSWORD': '123456',               # 数据库连接密码
+    'HOST': '192.168.88.81',            # 数据库服务地址
+    'PORT': '1433',                     # 数据库连接端口
+    'OPTIONS':{
+        'driver':'SQL Server Native Client 11.0',
+        'MARS_Connection': True,
+    }
+  }
+}
+```
+配置完成后需要重启uwsgi服务才生效。
 
 
 ------------
@@ -341,6 +514,15 @@ worker_connections = 100
 gunicorn cam.wsgi:application -k gthread -c /usr/local/cam/gunicorn-config.py
 ```
 
+## 开机启动
+```
+vi /etc/rc.d/rc.local
+```
+加入内容：
+```
+gunicorn cam.wsgi:application -k gthread -c /usr/local/cam/gunicorn-config.py
+```
+
 ## 创建服务
 - 建立服务文件
 ```
@@ -384,6 +566,34 @@ make
 ```
 make install
 ```
+
+## 配置
+修改配置文件：
+```
+vi /usr/local/nginx/conf/nginx.conf
+```
+在 `server` 里增加下面配置：
+
+        listen       80;
+        server_name  localhost;
+
+        #charset koi8-r;
+
+        #access_log  logs/host.access.log  main;
+
+        location / {
+           #root   html;
+           #index  index.html index.htm;
+           proxy_pass http://127.0.0.1:8000; #gunicorn
+           proxy_set_header Host $host;
+           proxy_set_header X-Real-IP $remote_addr;
+           proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        }
+
+        location /static {
+           alias /usr/local/cam/statics; # your Django project's static files - amend as required
+        }
+
 ## 测试
 ```
 cd /usr/local/nginx/
@@ -471,3 +681,4 @@ ps -ef | grep nginx
 
 # 参考
 - [Django 搭建个人博客教程](https://www.dusaiphoto.com/article/71/)
+- [Django2.1连接使用SQL Server(linux版)](https://blog.csdn.net/weixin_34004750/article/details/92541378)

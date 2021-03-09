@@ -148,7 +148,7 @@ tags: [Linux, 命令]
 ### 防火墙（CentOS8）
 | 命令                                         						| 说明                                               	|
 | ---------------                              						| :---------------                                      |
-| systemctl status firewalld.service			| 查看状态                                       |
+| systemctl status firewalld.service			| 查看服务状态                                       |
 | systemctl start firewalld.service				| 打开防火墙                                       |
 | systemctl stop  firewalld.service				| 关闭防火墙                                       |
 | systemctl enable  firewalld.service			| 开启防火墙                                      |
