@@ -1,5 +1,5 @@
 ---
-title: 天翼云数据盘分区以及格式化'
+title: Linux数据盘分区以及格式化
 author: 昜丿捺
 copyright: true
 layout: post
@@ -10,14 +10,14 @@ tags: [Linux]
 keywords:
 description:
 ---
-#### 1. 首先切换到root账户下
+# 首先切换到root账户下
 ```
 sudo -i
 ```
 
 <!-- more -->
 
-#### 2. 查看数据盘信息
+# 查看数据盘信息
 登录Linux云主机后，使用命令`fdisk -l`查看数据盘相关信息。
 > 使用命令`df -h`是无法查看到未分区和格式化的数据盘的。
 
@@ -48,7 +48,13 @@ sudo -i
 
 	[root@iZwe12zdi799668qfxdm5oZ ~]# 
 
-#### 3. 数据盘分区
+
+----
+
+
+# fdisk分区（最大支持2T）
+
+## 数据盘分区
 执行以下命令，对数据盘进行分区。
 ```
 fdisk /dev/vdb
@@ -83,7 +89,7 @@ fdisk /dev/vdb
 	Syncing disks.
 	[root@iZwe12zdi799668qfxdm5oZ ~]# 
 
-#### 4. 查看新分区
+## 查看新分区
 使用命令`fdisk -l`，即可查看到，新的分区vdb1已经创建完成。
 
 	[root@iZwe12zdi799668qfxdm5oZ ~]# fdisk -l
@@ -109,7 +115,7 @@ fdisk /dev/vdb
 	/dev/vdb1            2048   209715199   104856576   83  Linux
 	[root@iZwe12zdi799668qfxdm5oZ ~]# 
 
-#### 5. 格式化新分区
+## 格式化新分区
 使用下面的命令对新分区进行格式化：
 ```
 mkfs.ext3 /dev/vdb1
@@ -143,7 +149,7 @@ mkfs.ext3 /dev/vdb1
 
 	[root@iZwe12zdi799668qfxdm5oZ ~]# 
 
-#### 6. 挂载新分区
+## 挂载新分区
 使用下面的命令，先创建fimeson目录（目录名可自定义），再手动挂载新分区，最后查看挂载结果。
 ```
 mkdir /fimeson
@@ -165,13 +171,15 @@ df -h
 	/dev/vdb1        99G   60M   94G   1% /fimeson
 	[root@iZwe12zdi799668qfxdm5oZ ~]# 
 
-#### 7. 添加分区信息
+## 添加分区信息
 如果希望云主机在重启或开机时能自动挂载数据盘，必须将分区信息添加到/etc/fstab中。如果没有添加，则云主机重启或开机后，都不能自动挂载数据盘。
 > 注意：请确认分区路径是否为 “/dev/vdb1”，若路径错误，将会造成云主机重启失败
 
 使用下面的命令添加分区信息，最后查看添加结果：
 ```
 echo '/dev/vdb1 /fimeson ext3 defaults 0 0' >> /etc/fstab
+```
+```
 cat /etc/fstab
 ```
 出现以下信息表示添加分区信息成功。
@@ -189,3 +197,142 @@ cat /etc/fstab
 	UUID=83e59f2d-45ce-4124-939a-3302e6cc6afa /                       ext4    defaults        1 1
 	/dev/vdb1 /fimeson ext3 defaults 0 0
 	[root@iZwe12zdi799668qfxdm5oZ ~]# 
+
+
+----
+
+
+# parted分区（支持2T以上）
+
+## 数据盘分区
+依次执行下面命令：
+```
+parted /dev/sdc
+```
+```
+mklabel gpt
+```
+```
+print
+```
+```
+mkpart primary 0KB 3299GB
+```
+```
+Yes
+```
+```
+i
+```
+```
+print
+```
+```
+quit
+```
+整体执行结果如下：
+
+	ftp:~ # parted /dev/sdc
+	GNU Parted 3.2
+	Using /dev/sdc
+	Welcome to GNU Parted! Type 'help' to view a list of commands.
+	(parted) mklabel gpt                                                      
+	Warning: The existing disk label on /dev/sdc will be destroyed and all data on this disk will be lost. Do you want to continue?
+	Yes/No? Yes
+	(parted) print                                                            
+	Model: VMware Virtual disk (scsi)
+	Disk /dev/sdc: 3299GB
+	Sector size (logical/physical): 512B/512B
+	Partition Table: gpt
+	Disk Flags: 
+
+	Number  Start  End  Size  File system  Name  Flags
+
+	(parted) mkpart primary 0KB 3299GB                                        
+	Warning: You requested a partition from 0.00B to 3299GB (sectors 0..6442450943).
+	The closest location we can manage is 17.4kB to 3299GB (sectors 34..6442450910).
+	Is this still acceptable to you?
+	Yes/No? Yes                                                               
+	Warning: The resulting partition is not properly aligned for best performance.
+	Ignore/Cancel? i                                                          
+	(parted) print                                                            
+	Model: VMware Virtual disk (scsi)
+	Disk /dev/sdc: 3299GB
+	Sector size (logical/physical): 512B/512B
+	Partition Table: gpt
+	Disk Flags: 
+
+	Number  Start   End     Size    File system  Name     Flags
+	 1      17.4kB  3299GB  3299GB               primary
+
+	(parted) quit                                                             
+	Information: You may need to update /etc/fstab.
+
+
+## 查看新分区
+```
+fdisk -l
+```
+结果如下：
+
+	Disk /dev/sdc: 3 TiB, 3298534883328 bytes, 6442450944 sectors
+	Units: sectors of 1 * 512 = 512 bytes
+	Sector size (logical/physical): 512 bytes / 512 bytes
+	I/O size (minimum/optimal): 512 bytes / 512 bytes
+	Disklabel type: gpt
+	Disk identifier: 09E8A9B1-0BF5-4801-98C1-0211C39B8EF9
+
+	Device     Start        End    Sectors Size Type
+	/dev/sdc1     34 6442450910 6442450877   3T Linux filesystem
+
+
+## 格式化新分区
+```
+mkfs.ext4 /dev/sdc1
+```
+结果如下：
+
+	mke2fs 1.43.8 (1-Jan-2018)
+	Creating filesystem with 805306359 4k blocks and 201326592 inodes
+	Filesystem UUID: 1c69270c-532f-4ad3-a922-e922abcdbf58
+	Superblock backups stored on blocks: 
+			32768, 98304, 163840, 229376, 294912, 819200, 884736, 1605632, 2654208, 
+			4096000, 7962624, 11239424, 20480000, 23887872, 71663616, 78675968, 
+			102400000, 214990848, 512000000, 550731776, 644972544
+
+	Allocating group tables: done                            
+	Writing inode tables: done                            
+	Creating journal (262144 blocks): done
+	Writing superblocks and filesystem accounting information: done       
+
+	You have new mail in /var/mail/root
+
+
+## 挂载新分区
+```
+mkdir /wzyb
+```
+```
+mount /dev/sdc1 /wzyb
+```
+```
+df -h
+```
+结果如下：
+
+	/dev/sdc1       3.0T   89M  2.9T   1% /wzyb
+
+## 添加分区信息
+```
+echo '/dev/sdc1 /wzyb ext4 defaults 0 0' >> /etc/fstab
+```
+```
+cat /etc/fstab
+```
+结果如下：
+
+	/dev/sdc1 /wzyb ext4 defaults 0 0
+
+
+# 检查
+保证添加分区信息无误后，重启操作系统，使用 `df -h` 命令查看结果。
