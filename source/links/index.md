@@ -167,7 +167,7 @@ description:
 
 
 ## C&#35;
-[C#教程](http://www.runoob.com/csharp/csharp-program-structure.html)
+[C#教程](http://www.runoob.com/csharp/csharp-program-structure.html) | [ReoGrid](https://reogrid.net/document/)
 [辉耀应用程序框架学习网](http://www.huiyaosoft.com/winformlist.htm)
 [Winform开发框架的重要特性总结](https://www.cnblogs.com/wuhuacong/p/3199829.html)
 [Vs解决方案的目录结构设置和管理](https://blog.csdn.net/lp310018931/article/details/47991759)
@@ -354,6 +354,7 @@ description:
 [SUSE安装、配置APR和Tomcat-Native](https://blog.csdn.net/ClementAD/article/details/50749597)
 [SUSE Linux 系统加固](https://blog.csdn.net/vianoz/article/details/20864323)
 [zypper关于源的操作和常用的国内源](https://blog.csdn.net/hunjiancuo5340/article/details/81772733)
+[Linux软链接的创建，删除，修改](https://blog.csdn.net/qq_21386275/article/details/79881543)
 
 
 ## LabVIEW
@@ -458,7 +459,7 @@ description:
 # 民生
 [宁夏人事考试中心](http://www.nxpta.gov.cn/)
 [宁夏专业技术人员继续教育培训网](http://nxzj.chinahrt.com/)
-[宁夏机械工程学会](http://www.nxjxgcxh.cn/)	|	[宁夏人事人才管理信息系统-职称评审](http://218.95.135.211:8005/zcps/)
+[宁夏机械工程学会](http://www.nxjxgcxh.cn/)	|	[宁夏人事人才管理信息系统-职称评审](http://218.95.135.211:8005/zcps)
 [宁夏朝觐报名网](https://www.nxmslcj.cn/index.shtml)
 [利通区县域中小学招生转学服务平台](http://www.wzrxbm.cn)
 [ICP/IP地址/域名信息备案管理系统](http://www.beian.miit.gov.cn)
