@@ -108,7 +108,7 @@
 <meta property="og:site_name" content="昜丿捺">
 <meta property="og:description" content="本教程主要记录在Linux上如何部署Django项目">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2021-03-09T14:31:51.588Z">
+<meta property="og:updated_time" content="2021-03-31T16:45:25.122Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Python之Django项目部署到Linux">
 <meta name="twitter:description" content="本教程主要记录在Linux上如何部署Django项目">
@@ -454,7 +454,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2021-03-09 22:31:51" itemprop="dateModified" datetime="2021-03-09T22:31:51+08:00">2021-03-09</time>
+                <time title="修改时间：2021-04-01 00:45:25" itemprop="dateModified" datetime="2021-04-01T00:45:25+08:00">2021-04-01</time>
               
             
           </span>
@@ -506,7 +506,7 @@
                 
                   <span class="post-meta-item-text">本文字数：</span>
                 
-                <span title="本文字数">44k</span>
+                <span title="本文字数">45k</span>
               
 
               
@@ -520,7 +520,7 @@
                 
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
-                <span title="阅读时长">40 分钟</span>
+                <span title="阅读时长">41 分钟</span>
               
             </div>
           
@@ -734,6 +734,7 @@ Group=mysql
 ExecStart=/usr/local/mysql/bin/mysqld --defaults-file=/etc/my.cnf
 LimitNOFILE = 5000
 </code></pre><p>使文件生效<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">systemctl daemon-reload</span><br></pre></td></tr></table></figure></p>
+<p>最后，启动mysql服务<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">service mysql start</span><br></pre></td></tr></table></figure></p>
 <h2 id="登录mysql，修改root用户的密码"><a href="#登录mysql，修改root用户的密码" class="headerlink" title="登录mysql，修改root用户的密码"></a>登录mysql，修改root用户的密码</h2><p>bin目录下<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">./mysql -u root -p</span><br></pre></td></tr></table></figure></p>
 <p>密码为初始化的时候生成的随机密码串。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">SET PASSWORD = PASSWORD(&apos;123456&apos;);</span><br></pre></td></tr></table></figure></p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ALTER USER &apos;root&apos;@&apos;localhost&apos; PASSWORD EXPIRE NEVER;</span><br></pre></td></tr></table></figure>
@@ -750,9 +751,11 @@ LimitNOFILE = 5000
 </li>
 </ul>
 <hr>
-<h1 id="安装Gunicorn"><a href="#安装Gunicorn" class="headerlink" title="安装Gunicorn"></a>安装Gunicorn</h1><p>Gunicorn 绿色独角兽’是一个Python WSGI UNIX的HTTP服务器。这是一个pre-fork worker的模型，从Ruby的独角兽（Unicorn ）项目移植。该Gunicorn服务器大致与各种Web框架兼容，只需非常简单的执行，轻量级的资源消耗，以及相当迅速。<br>安装命令：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip install gunicorn</span><br></pre></td></tr></table></figure></p>
+<h1 id="安装Gunicorn"><a href="#安装Gunicorn" class="headerlink" title="安装Gunicorn"></a>安装Gunicorn</h1><p>Gunicorn 绿色独角兽’是一个Python WSGI UNIX的HTTP服务器。这是一个pre-fork worker的模型，从Ruby的独角兽（Unicorn ）项目移植。该Gunicorn服务器大致与各种Web框架兼容，只需非常简单的执行，轻量级的资源消耗，以及相当迅速。<br>Gunicorn 服务器作为wsgi app的容器，能够与各种Web框架兼容（flask，django等）,得益于gevent等技术，使用Gunicorn能够在基本不改变wsgi app代码的前提下，大幅度提高wsgi app的性能。<br>安装命令：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip install gunicorn</span><br></pre></td></tr></table></figure></p>
 <h2 id="创建软连接"><a href="#创建软连接" class="headerlink" title="创建软连接"></a>创建软连接</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ln -s /usr/local/python3/bin/gunicorn /usr/bin/gunicorn</span><br></pre></td></tr></table></figure>
-<h2 id="启动-1"><a href="#启动-1" class="headerlink" title="启动"></a>启动</h2><h3 id="命令行启动"><a href="#命令行启动" class="headerlink" title="命令行启动"></a>命令行启动</h3><p>进入项目根目录下执行：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">gunicorn cam.wsgi:application -w <span class="number">2</span> -b <span class="number">0.0</span><span class="number">.0</span><span class="number">.0</span>:<span class="number">8000</span></span><br></pre></td></tr></table></figure></p>
+<h2 id="启动-1"><a href="#启动-1" class="headerlink" title="启动"></a>启动</h2><p>Gunicorn可以以三种方式读取配置信息。<br>第一种方式:从framework定义的配置信息中读取,目前只对 Paster 框架有效。本方式较少用到。<br>第二种方式:在命令行中定义,命令行中定义的配置信息将会覆盖掉框架中定义的相同的参数名的值。<br>第三种方式:将所有的参数信息,放到一个python文件中,只要是在命令行中可以定义的参数中,在配置文件中都可以定义。</p>
+<h3 id="命令行启动"><a href="#命令行启动" class="headerlink" title="命令行启动"></a>命令行启动</h3><p>命令行有哪些参数可以通过gunicorn -h 查到。<br>常用的有:</p>
+<p>参数    短参数    说明    默认值<br>–bind    -b    绑定服务的IP和端口号。<br>–workers INT    -w    工作线程数量    1<br>–backlog        服务器中在pending状态的最大连接数，即client处于waiting的数目。超过这个数目， client连接会得到一个error。建议值64-2048。<br>–worker_connections        客户端最大同时连接数。只适用于eventlet， gevent工作方式。<br>–pidfile        pid存储文件路径。<br>–access-logfile FILE        访问日志文件<br>–error-logfile FILE    –log-file    错误日志文件<br>–daemon    -D    后台运行    False<br>–worker-class    -k    有 sync, eventlet(并发), gevent, tornado, gthread选项    sync(同步)<br>–reload        当代码有修改时，自动重启workers。适用于开发环境。<br>–reload_extra_files        扩展reload配置，增加templates，configurations等文件修改监控。<br>–check_config        检查配置<br>进入项目根目录下执行：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">gunicorn cam.wsgi:application -w <span class="number">2</span> -b <span class="number">0.0</span><span class="number">.0</span><span class="number">.0</span>:<span class="number">8000</span></span><br></pre></td></tr></table></figure></p>
 <blockquote>
 <p>cam.wsgi:application cam是你django工程的名称，后面不用改<br>-w —workers 意思是要启动的进程数量<br>-b —bind 绑定的IP地址和端口<br>-k —worker-class 启动的worker类型（gthread,sync,eventlet,gevent,tornado）,默认是同步阻塞方式启动</p>
 </blockquote>
@@ -906,7 +909,7 @@ nginx: configuration file /usr/local/nginx/conf/nginx.conf test is successful
   <p><span>本文标题:</span><a href="/2021/03/02/Python之Django项目部署到Linux/">Python之Django项目部署到Linux</a></p>
   <p><span>文章作者:</span><a href="/" title="访问 昜丿捺 的个人博客">昜丿捺</a></p>
   <p><span>发布时间:</span>2021年03月02日 - 14:57:39</p>
-  <p><span>最后更新:</span>2021年03月09日 - 22:31:51</p>
+  <p><span>最后更新:</span>2021年04月01日 - 00:45:25</p>
   <p><span>原始链接:</span><a href="/2021/03/02/Python之Django项目部署到Linux/" title="Python之Django项目部署到Linux">http://ynn5ru.coding-pages.com/2021/03/02/Python之Django项目部署到Linux/</a>
     <span class="copy-path" title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="http://ynn5ru.coding-pages.com/2021/03/02/Python之Django项目部署到Linux/" aria-label="复制成功！"></i></span>
   </p>
@@ -1325,7 +1328,7 @@ nginx: configuration file /usr/local/nginx/conf/nginx.conf test is successful
       <i class="fa fa-area-chart"></i>
     </span>
     
-    <span title="站点总字数">224k</span>
+    <span title="站点总字数">225k</span>
   
 
   
