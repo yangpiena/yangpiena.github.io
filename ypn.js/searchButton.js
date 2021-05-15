@@ -4,14 +4,14 @@ var favObj = {
 		s.band();
 	},
 	band: function() {
-		$('#b-btn, #q-btn, #m-btn, #d-btn, #p-btn, #w-btn').focus(function() {
+		$('#b-btn, #g-btn, #o-btn, #w-btn, #m-btn').focus(function() {
 				var id = this.id;
 				var urlArr = {
 					'b-btn': '//www.baidu.com/baidu',
-					'q-btn': '//www.google.com/search',
-					'm-btn': 'https://mijisou.com/',
-					'd-btn': 'https://www.dogedoge.com/results',
-					'w-btn': 'https://cn.bing.com/'
+					'g-btn': '//www.google.com/search',
+					'o-btn': '//www.sanzhima.com/search',
+					'w-btn': '//cn.bing.com/',
+					'm-btn': '//mijisou.com/'
 				}
 				$('#search-form').attr('action', urlArr[id]);
 		});
