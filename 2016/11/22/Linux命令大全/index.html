@@ -108,7 +108,7 @@
 <meta property="og:site_name" content="昜丿捺">
 <meta property="og:description" content="基础命令系统    命令 说明     reboot 重启系统   shutdown -r now 重启系统   shutdown -c 取消重启   halt 立刻关机   poweroff 立刻关机   shutdown -h now 立刻关机（root用户使用）   shutdown -h 10 10分钟后自动关机   yum update 升级Linux，升级所有包同时也升级软件和系统内核">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2021-04-23T09:39:29.688Z">
+<meta property="og:updated_time" content="2021-05-21T09:55:42.061Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Linux命令大全">
 <meta name="twitter:description" content="基础命令系统    命令 说明     reboot 重启系统   shutdown -r now 重启系统   shutdown -c 取消重启   halt 立刻关机   poweroff 立刻关机   shutdown -h now 立刻关机（root用户使用）   shutdown -h 10 10分钟后自动关机   yum update 升级Linux，升级所有包同时也升级软件和系统内核">
@@ -454,7 +454,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2021-04-23 17:39:29" itemprop="dateModified" datetime="2021-04-23T17:39:29+08:00">2021-04-23</time>
+                <time title="修改时间：2021-05-21 17:55:42" itemprop="dateModified" datetime="2021-05-21T17:55:42+08:00">2021-05-21</time>
               
             
           </span>
@@ -1004,6 +1004,10 @@
 <td style="text-align:left">添加永久的端口</td>
 </tr>
 <tr>
+<td>firewall-cmd —permanent —zone=public —remove-port=80/tcp</td>
+<td style="text-align:left">删除端口</td>
+</tr>
+<tr>
 <td>firewall-cmd —zone=public —add-port=8080-8081/tcp</td>
 <td style="text-align:left">添加临时的端口</td>
 </tr>
@@ -1040,7 +1044,7 @@
 <td style="text-align:left"></td>
 </tr>
 <tr>
-<td>firewall-cmd —list-all</td>
+<td>firewall-cmd /—list-all</td>
 <td style="text-align:left">显示当前区域的网卡配置参数、资源、端口以及服务等信息</td>
 </tr>
 <tr>
@@ -1162,7 +1166,7 @@
   <p><span>本文标题:</span><a href="/2016/11/22/Linux命令大全/">Linux命令大全</a></p>
   <p><span>文章作者:</span><a href="/" title="访问 昜丿捺 的个人博客">昜丿捺</a></p>
   <p><span>发布时间:</span>2016年11月22日 - 15:02:51</p>
-  <p><span>最后更新:</span>2021年04月23日 - 17:39:29</p>
+  <p><span>最后更新:</span>2021年05月21日 - 17:55:42</p>
   <p><span>原始链接:</span><a href="/2016/11/22/Linux命令大全/" title="Linux命令大全">http://ynn5ru.coding-pages.com/2016/11/22/Linux命令大全/</a>
     <span class="copy-path" title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="http://ynn5ru.coding-pages.com/2016/11/22/Linux命令大全/" aria-label="复制成功！"></i></span>
   </p>
@@ -1292,7 +1296,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">80</span>
+                    <span class="site-state-item-count">82</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -1585,7 +1589,7 @@
       <i class="fa fa-area-chart"></i>
     </span>
     
-    <span title="站点总字数">225k</span>
+    <span title="站点总字数">228k</span>
   
 
   
@@ -1594,7 +1598,7 @@
       <i class="fa fa-coffee"></i>
     </span>
     
-    <span title="站点阅读时长">3:24</span>
+    <span title="站点阅读时长">3:27</span>
   
 </div>
 
