@@ -99,9 +99,9 @@ live2d:
     use: live2d-widget-model-hijiki # 模型选择，黑猫
    #use: live2d-widget-model-tororo # 模型选择，白猫
   display:
-    position: left  #模型位置
-    width: 70       #模型宽度
-    height: 90      #模型高度
+    position: left  # 模型位置
+    width: 70       # 模型宽度
+    height: 90      # 模型高度
     hOffset: 0
     vOffset: -20
   mobile:
