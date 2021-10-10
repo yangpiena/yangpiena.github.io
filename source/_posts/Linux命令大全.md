@@ -38,6 +38,8 @@ tags: [Linux, 命令]
 | kill                                         | 删除执行中的程序或工作                                                     |
 | kill -9                                      | 强制终止执行中的程序或工作                                                 |
 | passwd                                       | 修改用户密码，命令后跟用户名即可                                           |
+| vim /etc/HOSTNAME                            | 修改主机名字                                                               |
+| hostname -F /etc/HOSTNAME                    | 使修改立刻生效                                                             |
 
 <!-- more -->
 
@@ -88,60 +90,63 @@ tags: [Linux, 命令]
 ### systemctl命令的使用
 | 命令                                         | 说明                                                                       |
 | ---------------                              | :---------------                                                           |
-| systemctl list-units                         | ##列出当前系统服务的状态                                                   |
-| systemctl list-unit-files                    | ##列出服务的开机状态                                                       |
-| systemctl status sshd                        | ##查看指定服务的状态                                                       |
-| systemctl stop sshd                          | ##关闭指定服务                                                             |
-| systemctl start sshd                         | ##开启指定服务                                                             |
-| systemctl restart sshd                       | ##从新启动服务                                                             |
-| systemctl enable sshd                        | ##设定指定服务开机开启                                                     |
-| systemctl disable sshd                       | ##设定指定服务开机关闭                                                     |
-| systemctl reload sshd                        | ##使指定服务从新加载配置                                                   |
-| systemctl list-dependencies sshd             | ##查看指定服务的倚赖关系                                                   |
-| systemctl mask  sshd                         | ##冻结指定服务                                                             |
-| systemctl unmask sshd                        | ##启用服务                                                                 |
-| systemctl set-default multi-user.target      | ##开机不开启图形                                                           |
-| systemctl set-default graphical.target       | ##开机启动图形                                                             |
-| setterm                                      | ##文本界面设定color                                                        |
+| systemctl list-units                         | 列出当前系统服务的状态                                                     |
+| systemctl list-units --type=service          | 查看所有已启动的服务                                                       |
+| systemctl list-unit-files                    | 列出服务的开机状态                                                         |
+| systemctl status sshd                        | 查看指定服务的状态                                                         |
+| systemctl stop sshd                          | 关闭指定服务                                                               |
+| systemctl start sshd                         | 开启指定服务                                                               |
+| systemctl restart sshd                       | 从新启动服务                                                               |
+| systemctl is-enabled servicename.service     | 查询服务是否开机启动                                                       |
+| systemctl enable sshd                        | 设定指定服务开机开启                                                       |
+| systemctl disable sshd                       | 设定指定服务开机关闭                                                       |
+| systemctl reload sshd                        | 使指定服务从新加载配置                                                     |
+| systemctl list-dependencies sshd             | 查看指定服务的倚赖关系                                                     |
+| systemctl mask  sshd                         | 冻结指定服务                                                               |
+| systemctl unmask sshd                        | 启用服务                                                                   |
+| systemctl set-default multi-user.target      | 开机不开启图形                                                             |
+| systemctl set-default graphical.target       | 开机启动图形                                                               |
+| systemctl —failed                            | 显示启动失败的服务                                                         |
+| setterm                                      | 文本界面设定color                                                          |
+| 服务状态                                     | 状态说明                                                                   |
+| ---------------                              | :---------------                                                           |
+| loaded                                       | 系统服务已经初始化完成，加载过配置                                         |
+| active（running）                            | 正有一个或多个程序正在系统中执行， vsftpd就是这种模式                      |
+| atcive（exited）                             | 仅执行一次就正常結束的服務， 目前並沒有任何程序在系統中執行                |
+| atcive（waiting）                            | 正在執行當中，不過還再等待其他的事件才能继续处理                           |
+| inactive                                     | 服务关闭                                                                   |
+| enbaled                                      | 服务开机启动                                                               |
+| disabled                                     | 服务开机不自启                                                             |
+| static                                       | 服务开机启动项不可被管理                                                   |
+| failed                                       | 系统配置错误                                                               |
 
-
-### 服务状态
+### 防火墙（SUSE Linux Enterprise Server 12）
 | 命令                                         | 说明                                                                       |
 | ---------------                              | :---------------                                                           |
-| systemctl is-enabled servicename.service     | 查询服务是否开机启动                                                       |
-| systemctl enable servicename.service         | 开机运行服务                                                               |
-| systemctl disable servicename.service        | 取消开机运行                                                               |
-| systemctl start servicename.service          | 启动服务                                                                   |
-| systemctl stop servicename.service           | 停止服务                                                                   |
-| systemctl restart servicename.service        | 重启服务                                                                   |
-| systemctl reload servicename.service         | 重新加载服务配置文件                                                       |
-| systemctl status servicename.service         | 查询服务运行状态                                                           |
-| systemctl —failed                            | 显示启动失败的服务                                                         |
-| loaded                                       | ##系统服务已经初始化完成，加载过配置                                       |
-| active（running）                            | ##正有一个或多个程序正在系统中执行， vsftpd就是这种模式                    |
-| atcive（exited）                             | ##僅執行一次就正常結束的服務， 目前並沒有任何程序在系統中執行              |
-| atcive（waiting）                            | ##正在執行當中，不過還再等待其他的事件才能继续处理                         |
-| inactive                                     | ##服务关闭                                                                 |
-| enbaled                                      | ##服务开机启动                                                             |
-| disabled                                     | ##服务开机不自启                                                           |
-| static                                       | ##服务开机启动项不可被管理                                                 |
-| failed                                       | ##系统配置错误                                                             |
+| vim /etc/sysconfig/SuSEfirewall2             | 编辑防火墙设置，FW_SERVICES_EXT_TCP="22"                                   |
+| rcSuSEfirewall2 restart                      | 重启防火墙使生效                                                           |
+| rcSuSEfirewall2 status                       | 查看防火墙状态                                                             |
+| systemctl stop SuSEfirewall2.service         | 关闭防火墙                                                                 |
+| systemctl start SuSEfirewall2.service        | 开启防火墙                                                                 |
+| systemctl enable SuSEfirewall2.service       | 开机启动防火墙                                                             |
+| systemctl disable SuSEfirewall2.service      | 取消开机启动防火墙                                                         |
 
 ### 防火墙（openSUSE Leap 15.0）
 | 命令                                         						| 说明                                               	|
 | ---------------                              						| :---------------                                      |
-| firewall-cmd --permanent --zone=public --add-service=ssh			| 添加永久的服务                                        |
-| firewall-cmd --permanent --zone=public --add-port=8080-8081/tcp	| 添加永久的端口                                        |
-| firewall-cmd --zone=public --add-port=8080-8081/tcp             	| 添加临时的端口                                        |
-| firewall-cmd --permanent --zone=public --list-ports             	| 查看开启的端口                                        |
-| firewall-cmd --permanent --zone=public --list-services          	| 查看开启的服务                                        |
-| firewall-cmd --reload  											| 重新加载配置（重启加载后才能生效）                    |
-| firewall-cmd --state   											| 查看防火墙运行状态                                    |
-| firewall-cmd --query-service ssh								    |                                                       |
-| firewall-cmd --query-service ftp								    |                                                       |
-| firewall-cmd --query-service http								    |                                                       |
-| firewall-cmd --query-service https				         	    |                                                       |
-| firewall-cmd --list-all      										| 显示当前区域的网卡配置参数、资源、端口以及服务等信息  |
+| `firewall-cmd --permanent --zone=public --add-service=ssh`		| 添加永久的服务                                        |
+| `firewall-cmd --permanent --zone=public --add-port=8080-8081/tcp`	| 添加永久的端口                                        |
+| `firewall-cmd --permanent --zone=public --remove-port=80/tcp`     | 删除端口                                              |
+| `firewall-cmd --zone=public --add-port=8080-8081/tcp`             | 添加临时的端口                                        |
+| `firewall-cmd --permanent --zone=public --list-ports`             | 查看开启的端口                                        |
+| `firewall-cmd --permanent --zone=public --list-services`          | 查看开启的服务                                        |
+| `firewall-cmd --reload`  											| 重新加载配置（重启加载后才能生效）                    |
+| `firewall-cmd --state`   											| 查看防火墙运行状态                                    |
+| `firewall-cmd --query-service ssh`								|                                                       |
+| `firewall-cmd --query-service ftp`								|                                                       |
+| `firewall-cmd --query-service http`								|                                                       |
+| `firewall-cmd --query-service https`				         	    |                                                       |
+| `firewall-cmd --list-all`      									| 显示当前区域的网卡配置参数、资源、端口以及服务等信息  |
 | service firewalld stop       										| 关闭防火墙                                            |
 | service firewalld start      										| 开户防火墙                                            |
 

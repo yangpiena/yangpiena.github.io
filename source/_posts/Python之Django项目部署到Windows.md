@@ -166,6 +166,12 @@ python manage.py migrate
 ```python
 python manage.py createsuperuser  
 ```
+> 更改admin密码：
+from user.models import UserProfile
+user=UserProfile.objects.filter(username='admin')[0]
+user.set_password('admin123')
+user.save()
+
 ## 启动项目（在开发环境下）
 ```python
 python manage.py runserver 0.0.0.0:8000  

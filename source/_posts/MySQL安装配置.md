@@ -173,6 +173,94 @@ mysqldump --opt -u root --password=root --host=127.0.0.1 --port=3306 --default-c
 	
 2. 设置Windows定时任务
 
+
+## Linux下
+
+1. 新建目录
+```
+mkdir -p /data/mysqlbak/data
+mkdir -p /data/mysqlbak/scripts
+mkdir -p /data/mysqlbak/logs
+```
+2. 创建备份脚本
+```
+cd /data/mysqlbak/scripts
+```
+	```
+	vim backup.sh
+	```
+	```
+	#!/bin/bash
+
+	#备份目录
+	BACKUP_ROOT=/data/mysqlbak
+	BACKUP_FILEDIR=$BACKUP_ROOT/data
+
+	#当前日期
+	DATE=$(date +%Y%m%d)
+
+	######备份######
+
+	#查询所有数据库
+	#-uroot -p123456表示使用root账号执行命令，且root账号的密码为:123456
+	DATABASES=$(mysql -uroot -p123456 -e "show databases" | grep -Ev "Database|sys|information_schema|performance_schema|mysql")
+	#循环数据库进行备份
+	for db in $DATABASES
+	do
+	echo
+	echo ----------$BACKUP_FILEDIR/${db}_$DATE.sql.gz BEGIN----------
+	mysqldump -uroot -p123456 --default-character-set=utf8 -q --lock-all-tables --flush-logs -E -R --triggers -B ${db} | gzip > $BACKUP_FILEDIR/${db}_$DATE.sql.gz
+	echo ----------$BACKUP_FILEDIR/${db}_$DATE.sql.gz COMPLETE----------
+	echo
+	done
+
+	echo "done"
+	```
+3. 设置脚本的执行权限
+```
+chmod 777 backup.sh
+```
+4. 将备份操作加入到定时任务(每天凌晨2点定时执行)
+```
+crontab -e
+```
+	```
+	00 2 * * * /data/mysqlbak/scripts/backup.sh > /data/mysqlbak/logs/backup.log 2>&1
+	```
+	> 如果执行脚本出现异常：`/data/mysqlbak/scripts/backup.sh: line 14: mysql: command not found`
+	解决办法：
+		1、查找mysql安装路径
+		find / -name mysql
+		通常mysql安装路径在:/usr/local/mysql/bin/mysql
+		2、mysql:command not found 建立软连接
+		ln -s  /usr/local/mysql/bin/mysql  /usr/bin
+		3、mysqldump:command not found 建立软连接
+		ln -s  /usr/local/mysql/bin/mysqldump  /usr/bin
+5. 创建删除脚本(定时删除7天前的备份数据)
+```
+vim backup_clean.sh
+```
+	```
+	#!/bin/bash
+	echo ----------CLEAN BEGIN----------
+	find /data/mysqlbak/data -mtime +7 -name "*.gz" -exec rm -rf {} \;
+	echo ----------CLEAN COMPLETE----------
+	```
+6. 设置脚本的执行权限
+```
+chmod 777 backup_clean.sh
+```
+7. 将删除操作加入到定时任务(每天凌晨1点定时执行)
+```
+00 1 * * * /data/mysqlbak/scripts/backup_clean.sh > /data/mysqlbak/logs/backup_full_clean.log 2>&1
+```
+8. 最后查看定时任务
+```
+crontab -l
+```
+	> 如果需要备份到另外一台机器，可以备份完scp到另外一台机器，具体内容参考[Linux下Mysql每天自动备份](https://www.cnblogs.com/blazeZzz/p/10881297.html)
+
+
 # 恢复
 1. 以管理员方式打开cmd，进入MySQL安装目录bin下：
 ```
@@ -180,17 +268,20 @@ cd C:\Program Files\MySQL\MySQL Server 5.7\bin\
 ```
 2. 进入MySQL
 ```
-mysql -u root -p root
+mysql -u root -p
 ```
+	按照提示输入密码。
 3. 查看数据库列表
 ```
 show databases;
 ```
+	注意命令后面的分号。
 4. 选择要恢复的数据库
 ```
 use xxx;
 ```
 5. 执行恢复命令
 ```
-source C:\YPN\MYSQLDATAAUTOBACKUP\new_database_backup_20201109.sql;
+source C:\YPN\MYSQLDATAAUTOBACKUP\new_database_backup_20201109.sql
 ```
+	路径中不能有空格。

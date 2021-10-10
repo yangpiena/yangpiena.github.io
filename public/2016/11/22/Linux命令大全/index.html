@@ -104,11 +104,11 @@
 <meta name="keywords" content="Linux,命令">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Linux命令大全">
-<meta property="og:url" content="http://ynn5ru.coding-pages.com/2016/11/22/Linux命令大全/index.html">
+<meta property="og:url" content="http://yangpiena.github.io/2016/11/22/Linux命令大全/index.html">
 <meta property="og:site_name" content="昜丿捺">
 <meta property="og:description" content="基础命令系统    命令 说明     reboot 重启系统   shutdown -r now 重启系统   shutdown -c 取消重启   halt 立刻关机   poweroff 立刻关机   shutdown -h now 立刻关机（root用户使用）   shutdown -h 10 10分钟后自动关机   yum update 升级Linux，升级所有包同时也升级软件和系统内核">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2021-03-09T02:27:13.191Z">
+<meta property="og:updated_time" content="2021-05-28T06:26:14.998Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Linux命令大全">
 <meta name="twitter:description" content="基础命令系统    命令 说明     reboot 重启系统   shutdown -r now 重启系统   shutdown -c 取消重启   halt 立刻关机   poweroff 立刻关机   shutdown -h now 立刻关机（root用户使用）   shutdown -h 10 10分钟后自动关机   yum update 升级Linux，升级所有包同时也升级软件和系统内核">
@@ -118,7 +118,7 @@
 
 
 
-  <link rel="canonical" href="http://ynn5ru.coding-pages.com/2016/11/22/Linux命令大全/">
+  <link rel="canonical" href="http://yangpiena.github.io/2016/11/22/Linux命令大全/">
 
 
 
@@ -394,7 +394,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://ynn5ru.coding-pages.com/2016/11/22/Linux命令大全/">
+    <link itemprop="mainEntityOfPage" href="http://yangpiena.github.io/2016/11/22/Linux命令大全/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="昜丿捺">
@@ -454,7 +454,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2021-03-09 10:27:13" itemprop="dateModified" datetime="2021-03-09T10:27:13+08:00">2021-03-09</time>
+                <time title="修改时间：2021-05-28 14:26:14" itemprop="dateModified" datetime="2021-05-28T14:26:14+08:00">2021-05-28</time>
               
             
           </span>
@@ -661,6 +661,14 @@
 <td>passwd</td>
 <td style="text-align:left">修改用户密码，命令后跟用户名即可</td>
 </tr>
+<tr>
+<td>vim /etc/HOSTNAME</td>
+<td style="text-align:left">修改主机名字</td>
+</tr>
+<tr>
+<td>hostname -F /etc/HOSTNAME</td>
+<td style="text-align:left">使修改立刻生效</td>
+</tr>
 </tbody>
 </table>
 </div>
@@ -837,68 +845,124 @@
 <tbody>
 <tr>
 <td>systemctl list-units</td>
-<td style="text-align:left">##列出当前系统服务的状态</td>
+<td style="text-align:left">列出当前系统服务的状态</td>
+</tr>
+<tr>
+<td>systemctl list-units —type=service</td>
+<td style="text-align:left">查看所有已启动的服务</td>
 </tr>
 <tr>
 <td>systemctl list-unit-files</td>
-<td style="text-align:left">##列出服务的开机状态</td>
+<td style="text-align:left">列出服务的开机状态</td>
 </tr>
 <tr>
 <td>systemctl status sshd</td>
-<td style="text-align:left">##查看指定服务的状态</td>
+<td style="text-align:left">查看指定服务的状态</td>
 </tr>
 <tr>
 <td>systemctl stop sshd</td>
-<td style="text-align:left">##关闭指定服务</td>
+<td style="text-align:left">关闭指定服务</td>
 </tr>
 <tr>
 <td>systemctl start sshd</td>
-<td style="text-align:left">##开启指定服务</td>
+<td style="text-align:left">开启指定服务</td>
 </tr>
 <tr>
 <td>systemctl restart sshd</td>
-<td style="text-align:left">##从新启动服务</td>
+<td style="text-align:left">从新启动服务</td>
+</tr>
+<tr>
+<td>systemctl is-enabled servicename.service</td>
+<td style="text-align:left">查询服务是否开机启动</td>
 </tr>
 <tr>
 <td>systemctl enable sshd</td>
-<td style="text-align:left">##设定指定服务开机开启</td>
+<td style="text-align:left">设定指定服务开机开启</td>
 </tr>
 <tr>
 <td>systemctl disable sshd</td>
-<td style="text-align:left">##设定指定服务开机关闭</td>
+<td style="text-align:left">设定指定服务开机关闭</td>
 </tr>
 <tr>
 <td>systemctl reload sshd</td>
-<td style="text-align:left">##使指定服务从新加载配置</td>
+<td style="text-align:left">使指定服务从新加载配置</td>
 </tr>
 <tr>
 <td>systemctl list-dependencies sshd</td>
-<td style="text-align:left">##查看指定服务的倚赖关系</td>
+<td style="text-align:left">查看指定服务的倚赖关系</td>
 </tr>
 <tr>
 <td>systemctl mask  sshd</td>
-<td style="text-align:left">##冻结指定服务</td>
+<td style="text-align:left">冻结指定服务</td>
 </tr>
 <tr>
 <td>systemctl unmask sshd</td>
-<td style="text-align:left">##启用服务</td>
+<td style="text-align:left">启用服务</td>
 </tr>
 <tr>
 <td>systemctl set-default multi-user.target</td>
-<td style="text-align:left">##开机不开启图形</td>
+<td style="text-align:left">开机不开启图形</td>
 </tr>
 <tr>
 <td>systemctl set-default graphical.target</td>
-<td style="text-align:left">##开机启动图形</td>
+<td style="text-align:left">开机启动图形</td>
+</tr>
+<tr>
+<td>systemctl —failed</td>
+<td style="text-align:left">显示启动失败的服务</td>
 </tr>
 <tr>
 <td>setterm</td>
-<td style="text-align:left">##文本界面设定color</td>
+<td style="text-align:left">文本界面设定color</td>
+</tr>
+<tr>
+<td>服务状态</td>
+<td style="text-align:left">状态说明</td>
+</tr>
+<tr>
+<td>———————-</td>
+<td style="text-align:left">:———————-</td>
+</tr>
+<tr>
+<td>loaded</td>
+<td style="text-align:left">系统服务已经初始化完成，加载过配置</td>
+</tr>
+<tr>
+<td>active（running）</td>
+<td style="text-align:left">正有一个或多个程序正在系统中执行， vsftpd就是这种模式</td>
+</tr>
+<tr>
+<td>atcive（exited）</td>
+<td style="text-align:left">仅执行一次就正常結束的服務， 目前並沒有任何程序在系統中執行</td>
+</tr>
+<tr>
+<td>atcive（waiting）</td>
+<td style="text-align:left">正在執行當中，不過還再等待其他的事件才能继续处理</td>
+</tr>
+<tr>
+<td>inactive</td>
+<td style="text-align:left">服务关闭</td>
+</tr>
+<tr>
+<td>enbaled</td>
+<td style="text-align:left">服务开机启动</td>
+</tr>
+<tr>
+<td>disabled</td>
+<td style="text-align:left">服务开机不自启</td>
+</tr>
+<tr>
+<td>static</td>
+<td style="text-align:left">服务开机启动项不可被管理</td>
+</tr>
+<tr>
+<td>failed</td>
+<td style="text-align:left">系统配置错误</td>
 </tr>
 </tbody>
 </table>
 </div>
-<h3 id="服务状态"><a href="#服务状态" class="headerlink" title="服务状态"></a>服务状态</h3><div class="table-container">
+<h3 id="防火墙（SUSE-Linux-Enterprise-Server-12）"><a href="#防火墙（SUSE-Linux-Enterprise-Server-12）" class="headerlink" title="防火墙（SUSE Linux Enterprise Server 12）"></a>防火墙（SUSE Linux Enterprise Server 12）</h3><div class="table-container">
 <table>
 <thead>
 <tr>
@@ -908,76 +972,32 @@
 </thead>
 <tbody>
 <tr>
-<td>systemctl is-enabled servicename.service</td>
-<td style="text-align:left">查询服务是否开机启动</td>
+<td>vim /etc/sysconfig/SuSEfirewall2</td>
+<td style="text-align:left">编辑防火墙设置，FW_SERVICES_EXT_TCP=”22”</td>
 </tr>
 <tr>
-<td>systemctl enable servicename.service</td>
-<td style="text-align:left">开机运行服务</td>
+<td>rcSuSEfirewall2 restart</td>
+<td style="text-align:left">重启防火墙使生效</td>
 </tr>
 <tr>
-<td>systemctl disable servicename.service</td>
-<td style="text-align:left">取消开机运行</td>
+<td>rcSuSEfirewall2 status</td>
+<td style="text-align:left">查看防火墙状态</td>
 </tr>
 <tr>
-<td>systemctl start servicename.service</td>
-<td style="text-align:left">启动服务</td>
+<td>systemctl stop SuSEfirewall2.service</td>
+<td style="text-align:left">关闭防火墙</td>
 </tr>
 <tr>
-<td>systemctl stop servicename.service</td>
-<td style="text-align:left">停止服务</td>
+<td>systemctl start SuSEfirewall2.service</td>
+<td style="text-align:left">开启防火墙</td>
 </tr>
 <tr>
-<td>systemctl restart servicename.service</td>
-<td style="text-align:left">重启服务</td>
+<td>systemctl enable SuSEfirewall2.service</td>
+<td style="text-align:left">开机启动防火墙</td>
 </tr>
 <tr>
-<td>systemctl reload servicename.service</td>
-<td style="text-align:left">重新加载服务配置文件</td>
-</tr>
-<tr>
-<td>systemctl status servicename.service</td>
-<td style="text-align:left">查询服务运行状态</td>
-</tr>
-<tr>
-<td>systemctl —failed</td>
-<td style="text-align:left">显示启动失败的服务</td>
-</tr>
-<tr>
-<td>loaded</td>
-<td style="text-align:left">##系统服务已经初始化完成，加载过配置</td>
-</tr>
-<tr>
-<td>active（running）</td>
-<td style="text-align:left">##正有一个或多个程序正在系统中执行， vsftpd就是这种模式</td>
-</tr>
-<tr>
-<td>atcive（exited）</td>
-<td style="text-align:left">##僅執行一次就正常結束的服務， 目前並沒有任何程序在系統中執行</td>
-</tr>
-<tr>
-<td>atcive（waiting）</td>
-<td style="text-align:left">##正在執行當中，不過還再等待其他的事件才能继续处理</td>
-</tr>
-<tr>
-<td>inactive</td>
-<td style="text-align:left">##服务关闭</td>
-</tr>
-<tr>
-<td>enbaled</td>
-<td style="text-align:left">##服务开机启动</td>
-</tr>
-<tr>
-<td>disabled</td>
-<td style="text-align:left">##服务开机不自启</td>
-</tr>
-<tr>
-<td>static</td>
-<td style="text-align:left">##服务开机启动项不可被管理</td>
-</tr>
-<tr>
-<td>failed</td>
-<td style="text-align:left">##系统配置错误</td>
+<td>systemctl disable SuSEfirewall2.service</td>
+<td style="text-align:left">取消开机启动防火墙</td>
 </tr>
 </tbody>
 </table>
@@ -992,51 +1012,55 @@
 </thead>
 <tbody>
 <tr>
-<td>firewall-cmd —permanent —zone=public —add-service=ssh</td>
+<td><code>firewall-cmd --permanent --zone=public --add-service=ssh</code></td>
 <td style="text-align:left">添加永久的服务</td>
 </tr>
 <tr>
-<td>firewall-cmd —permanent —zone=public —add-port=8080-8081/tcp</td>
+<td><code>firewall-cmd --permanent --zone=public --add-port=8080-8081/tcp</code></td>
 <td style="text-align:left">添加永久的端口</td>
 </tr>
 <tr>
-<td>firewall-cmd —zone=public —add-port=8080-8081/tcp</td>
+<td><code>firewall-cmd --permanent --zone=public --remove-port=80/tcp</code></td>
+<td style="text-align:left">删除端口</td>
+</tr>
+<tr>
+<td><code>firewall-cmd --zone=public --add-port=8080-8081/tcp</code></td>
 <td style="text-align:left">添加临时的端口</td>
 </tr>
 <tr>
-<td>firewall-cmd —permanent —zone=public —list-ports</td>
+<td><code>firewall-cmd --permanent --zone=public --list-ports</code></td>
 <td style="text-align:left">查看开启的端口</td>
 </tr>
 <tr>
-<td>firewall-cmd —permanent —zone=public —list-services</td>
+<td><code>firewall-cmd --permanent --zone=public --list-services</code></td>
 <td style="text-align:left">查看开启的服务</td>
 </tr>
 <tr>
-<td>firewall-cmd —reload</td>
+<td><code>firewall-cmd --reload</code></td>
 <td style="text-align:left">重新加载配置（重启加载后才能生效）</td>
 </tr>
 <tr>
-<td>firewall-cmd —state</td>
+<td><code>firewall-cmd --state</code></td>
 <td style="text-align:left">查看防火墙运行状态</td>
 </tr>
 <tr>
-<td>firewall-cmd —query-service ssh</td>
+<td><code>firewall-cmd --query-service ssh</code></td>
 <td style="text-align:left"></td>
 </tr>
 <tr>
-<td>firewall-cmd —query-service ftp</td>
+<td><code>firewall-cmd --query-service ftp</code></td>
 <td style="text-align:left"></td>
 </tr>
 <tr>
-<td>firewall-cmd —query-service http</td>
+<td><code>firewall-cmd --query-service http</code></td>
 <td style="text-align:left"></td>
 </tr>
 <tr>
-<td>firewall-cmd —query-service https</td>
+<td><code>firewall-cmd --query-service https</code></td>
 <td style="text-align:left"></td>
 </tr>
 <tr>
-<td>firewall-cmd —list-all</td>
+<td><code>firewall-cmd --list-all</code></td>
 <td style="text-align:left">显示当前区域的网卡配置参数、资源、端口以及服务等信息</td>
 </tr>
 <tr>
@@ -1158,9 +1182,9 @@
   <p><span>本文标题:</span><a href="/2016/11/22/Linux命令大全/">Linux命令大全</a></p>
   <p><span>文章作者:</span><a href="/" title="访问 昜丿捺 的个人博客">昜丿捺</a></p>
   <p><span>发布时间:</span>2016年11月22日 - 15:02:51</p>
-  <p><span>最后更新:</span>2021年03月09日 - 10:27:13</p>
-  <p><span>原始链接:</span><a href="/2016/11/22/Linux命令大全/" title="Linux命令大全">http://ynn5ru.coding-pages.com/2016/11/22/Linux命令大全/</a>
-    <span class="copy-path" title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="http://ynn5ru.coding-pages.com/2016/11/22/Linux命令大全/" aria-label="复制成功！"></i></span>
+  <p><span>最后更新:</span>2021年05月28日 - 14:26:14</p>
+  <p><span>原始链接:</span><a href="/2016/11/22/Linux命令大全/" title="Linux命令大全">http://yangpiena.github.io/2016/11/22/Linux命令大全/</a>
+    <span class="copy-path" title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="http://yangpiena.github.io/2016/11/22/Linux命令大全/" aria-label="复制成功！"></i></span>
   </p>
   <p><span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" title="Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)">署名-非商业性使用-禁止演绎 4.0 国际</a> 转载请保留原文链接及作者。</p>
 </div>
@@ -1288,7 +1312,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">80</span>
+                    <span class="site-state-item-count">84</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -1444,6 +1468,28 @@
                   
                     
                   
+                  <a href="https://yangpiena.coding.net" title="CODING &rarr; https://yangpiena.coding.net" rel="noopener" target="_blank"><i class="fa fa-fw fa-github-alt"></i>CODING</a>
+                </span>
+              
+                <span class="links-of-author-item">
+                  
+                  
+                    
+                  
+                  
+                    
+                  
+                  <a href="https://gitee.com/yangpiena" title="Gitee &rarr; https://gitee.com/yangpiena" rel="noopener" target="_blank"><i class="fa fa-fw fa-glide"></i>Gitee</a>
+                </span>
+              
+                <span class="links-of-author-item">
+                  
+                  
+                    
+                  
+                  
+                    
+                  
                   <a href="mailto:yangpiena@gmail.com" title="E-Mail &rarr; mailto:yangpiena@gmail.com" rel="noopener" target="_blank"><i class="fa fa-fw fa-envelope"></i>E-Mail</a>
                 </span>
               
@@ -1456,17 +1502,6 @@
                     
                   
                   <a href="https://weibo.com/yangpiena" title="Weibo &rarr; https://weibo.com/yangpiena" rel="noopener" target="_blank"><i class="fa fa-fw fa-weibo"></i>Weibo</a>
-                </span>
-              
-                <span class="links-of-author-item">
-                  
-                  
-                    
-                  
-                  
-                    
-                  
-                  <a href="https://yangpiena.coding.net" title="CODING &rarr; https://yangpiena.coding.net" rel="noopener" target="_blank"><i class="fa fa-fw fa-github-alt"></i>CODING</a>
                 </span>
               
             </div>
@@ -1484,7 +1519,11 @@
               <ul class="links-of-blogroll-list">
                 
                   <li class="links-of-blogroll-item">
-                    <a href="https://yangpiena.github.io/" title="https://yangpiena.github.io/" rel="noopener" target="_blank">昜丿捺</a>
+                    <a href="https://yangpiena.github.io/" title="https://yangpiena.github.io/">昜丿捺(GitHub)</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="http://coding-pages-bucket-407450-1059047-17379-602648-1258146968.cos-website.ap-hongkong.myqcloud.com/" title="http://coding-pages-bucket-407450-1059047-17379-602648-1258146968.cos-website.ap-hongkong.myqcloud.com/" rel="noopener" target="_blank">昜丿捺(Coding)</a>
                   </li>
                 
               </ul>
@@ -1545,7 +1584,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#基础命令"><span class="nav-number">1.</span> <span class="nav-text">基础命令</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#系统"><span class="nav-number">1.1.</span> <span class="nav-text">系统</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#文件"><span class="nav-number">1.2.</span> <span class="nav-text">文件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#网络"><span class="nav-number">1.3.</span> <span class="nav-text">网络</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#systemctl命令的使用"><span class="nav-number">1.4.</span> <span class="nav-text">systemctl命令的使用</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#服务状态"><span class="nav-number">1.5.</span> <span class="nav-text">服务状态</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#防火墙（openSUSE-Leap-15-0）"><span class="nav-number">1.6.</span> <span class="nav-text">防火墙（openSUSE Leap 15.0）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#防火墙（CentOS8）"><span class="nav-number">1.7.</span> <span class="nav-text">防火墙（CentOS8）</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#基础命令"><span class="nav-number">1.</span> <span class="nav-text">基础命令</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#系统"><span class="nav-number">1.1.</span> <span class="nav-text">系统</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#文件"><span class="nav-number">1.2.</span> <span class="nav-text">文件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#网络"><span class="nav-number">1.3.</span> <span class="nav-text">网络</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#systemctl命令的使用"><span class="nav-number">1.4.</span> <span class="nav-text">systemctl命令的使用</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#防火墙（SUSE-Linux-Enterprise-Server-12）"><span class="nav-number">1.5.</span> <span class="nav-text">防火墙（SUSE Linux Enterprise Server 12）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#防火墙（openSUSE-Leap-15-0）"><span class="nav-number">1.6.</span> <span class="nav-text">防火墙（openSUSE Leap 15.0）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#防火墙（CentOS8）"><span class="nav-number">1.7.</span> <span class="nav-text">防火墙（CentOS8）</span></a></li></ol></li></ol></div>
             
 
           </div>
@@ -1577,7 +1616,7 @@
       <i class="fa fa-area-chart"></i>
     </span>
     
-    <span title="站点总字数">224k</span>
+    <span title="站点总字数">234k</span>
   
 
   
@@ -1586,7 +1625,7 @@
       <i class="fa fa-coffee"></i>
     </span>
     
-    <span title="站点阅读时长">3:24</span>
+    <span title="站点阅读时长">3:33</span>
   
 </div>
 

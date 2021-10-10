@@ -14,7 +14,7 @@ timezone:
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: http://ynn5ru.coding-pages.com
+url: http://yangpiena.github.io
 root: /
 # permalink: :category/:entitle-:timestamp.html
 permalink: :year/:month/:day/:title/
@@ -118,6 +118,10 @@ live2d:
 deploy: 
 - type: git
   repo: git@github.com:yangpiena/yangpiena.github.io.git
+  branch: master
+  
+- type: git
+  repo: git@gitee.com:yangpiena/yangpiena.gitee.io.git
   branch: master
   
 - type: git

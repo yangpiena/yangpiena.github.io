@@ -232,7 +232,7 @@ http://localhost/phpMyAdmin
 
 
 
-## 安装 Nextcloud
+## 安装Nextcloud
 从[官网](https://nextcloud.com/)下载Nextcloud，这里下载的是：https://download.nextcloud.com/server/releases/nextcloud-19.0.1.zip
 上传下载好的压缩包`nextcloud-19.0.1.zip`到目录`/srv/www/htdocs/`下，并解压：
 ```
@@ -280,16 +280,18 @@ vim /srv/www/htdocs/nextcloud/config/config.php
 
 ## Nextcloud优化
 ### 设置后台任务，cron执行
+启用wwwrun用户（如已经启用可以忽略，根据自己web服务的用户组和用户而定）
+在root用户下执行
 ```
-crontab -e
+crontab -u wwwrun -e
 ```
 追加以下内容：
 ```
-*/15 * * * * -u wwwrun /usr/bin/php -f /srv/www/htdocs/nextcloud/cron.php
+*/5 * * * * php -f /srv/www/htdocs/nextcloud/cron.php
 ```
 > 注意 cron.php 的权限：chown -R wwwrun:www cron.php
 
-crontab命令用法：
+可参考crontab命令用法：
 1)设置定时器的设置文件, 文件名称为mycronset.txt(名称可自行设定)
 ```
 cat mycronset.txt
@@ -442,3 +444,17 @@ ps -ef | grep memcached
 
 	root     26084     1  0 14:41 ?        00:00:00 memcached -d -m 10 -u root -l 10.1.90.40 -p 12000 -c 256 -P /home/javadev/memcached_pid/
 	root     26095  9798  0 14:41 pts/0    00:00:00 grep --color=auto memcached
+
+
+
+### 重置密码
+假如管理员密码忘了，可利用OCC命令按以下步骤重置：
+1. 进入nextcloud目录下
+2. 查看用户
+```
+sudo -u wwwrun php occ user:list
+```
+3. 重置admin的密码
+```
+sudo -u wwwrun php occ user:resetpassword admin
+```

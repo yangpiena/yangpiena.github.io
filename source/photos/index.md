@@ -21,6 +21,18 @@ fixed: false
 			</li>
 		</ul>
 	</div>
+	<div>
+		<img src="https://api88.net/api/bing/rand" alt="随机图片">
+		<img src="https://api88.net/api/img/rand/" alt="随机图片">
+		<img src="https://www.dmoe.cc/random.php" alt="随机图片">
+		<img src="https://api.btstu.cn/sjbz/zsy.php" alt="随机图片">
+		<img src="https://api.btstu.cn/sjbz/?lx=dongman" alt="随机图片">
+		<img src="http://api.btstu.cn/sjbz/?lx=meizi" alt="随机图片">
+		<img src="http://api.btstu.cn/sjbz/?lx=m_meizi" alt="随机图片">
+		<img src="http://api.btstu.cn/sjbz/?lx=suiji" alt="随机图片">
+		<img src="https://3650000.xyz/api/360.php" alt="随机图片">
+		<img src="https://3650000.xyz/api/bing.php" alt="随机图片">
+	</div>
 </div>
 
 

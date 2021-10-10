@@ -433,6 +433,13 @@ vi /usr/lib/systemd/system/mysql.service
 ```
 systemctl daemon-reload
 ```
+最后，启动mysql服务
+```
+service mysql start
+```
+> [其它服务命令参考](/2016/11/22/Linux命令大全/)
+
+
 ## 登录mysql，修改root用户的密码
 bin目录下
 ```
@@ -470,6 +477,7 @@ update user set host = '%' where user = 'root';
 
 # 安装Gunicorn
 Gunicorn 绿色独角兽'是一个Python WSGI UNIX的HTTP服务器。这是一个pre-fork worker的模型，从Ruby的独角兽（Unicorn ）项目移植。该Gunicorn服务器大致与各种Web框架兼容，只需非常简单的执行，轻量级的资源消耗，以及相当迅速。
+Gunicorn 服务器作为wsgi app的容器，能够与各种Web框架兼容（flask，django等）,得益于gevent等技术，使用Gunicorn能够在基本不改变wsgi app代码的前提下，大幅度提高wsgi app的性能。
 安装命令：
 ```python
  pip install gunicorn
@@ -479,7 +487,27 @@ Gunicorn 绿色独角兽'是一个Python WSGI UNIX的HTTP服务器。这是一�
 ln -s /usr/local/python3/bin/gunicorn /usr/bin/gunicorn
 ```
 ## 启动
+Gunicorn可以以三种方式读取配置信息。
+第一种方式:从framework定义的配置信息中读取,目前只对 Paster 框架有效。本方式较少用到。
+第二种方式:在命令行中定义,命令行中定义的配置信息将会覆盖掉框架中定义的相同的参数名的值。
+第三种方式:将所有的参数信息,放到一个python文件中,只要是在命令行中可以定义的参数中,在配置文件中都可以定义。
 ### 命令行启动
+命令行有哪些参数可以通过gunicorn -h 查到。
+常用的有:
+
+参数	短参数	说明	默认值
+–bind	-b	绑定服务的IP和端口号。	
+–workers INT	-w	工作线程数量	1
+–backlog		服务器中在pending状态的最大连接数，即client处于waiting的数目。超过这个数目， client连接会得到一个error。建议值64-2048。	
+–worker_connections		客户端最大同时连接数。只适用于eventlet， gevent工作方式。	
+–pidfile		pid存储文件路径。	
+–access-logfile FILE		访问日志文件	
+–error-logfile FILE	–log-file	错误日志文件	
+**–daemon	-D	后台运行	False**
+–worker-class	-k	有 sync, eventlet(并发), gevent, tornado, gthread选项	sync(同步)
+–reload		当代码有修改时，自动重启workers。适用于开发环境。	
+–reload_extra_files		扩展reload配置，增加templates，configurations等文件修改监控。	
+–check_config		检查配置	
 进入项目根目录下执行：
 ```python
 gunicorn cam.wsgi:application -w 2 -b 0.0.0.0:8000
@@ -535,17 +563,23 @@ vi /usr/lib/systemd/system/gunicorn.service
 	[Service]
 	User=root
 	WorkingDirectory=/usr/local/cam
-	ExecStart=gunicorn cam.wsgi:application -k gthread -c /usr/local/cam/gunicorn-config.py
+	ExecStart=/bin/bash -c 'gunicorn cam.wsgi:application -k gthread -c /usr/local/cam/gunicorn-config.py'
 	Restart=on-failure
 	[Install]
 	WantedBy=multi-user.target
 	```
+	> 注意：systemd 不接受非绝对路径执行命令，需要依赖bush-ism，如：`/bin/bash -c 'gunicorn cam.wsgi:application -k gthread -c /usr/local/cam/gunicorn-config.py'`，否则会出现 Executable path is not absolute 的问题 (systemctl status gunicorn.service 中)
 
-- 使文件生效
+- 使服务文件生效
 ```
 systemctl daemon-reload
 ```
 
+- 启动gunicorn服务
+```
+systemctl start gunicorn.service
+```
+	> [其它服务命令参考](/2016/11/22/Linux命令大全/)
 
 ------------
 
@@ -649,26 +683,18 @@ vi /usr/lib/systemd/system/nginx.service
 	注意：启动、重启、停止命令全部要求使用绝对路径
 	[Install]服务安装的相关设置，可设置为多用户
 
-- 使文件生效
+- 使服务文件生效
 ```
 systemctl daemon-reload
 ```
-	如果启动服务失败，则以754的权限保存在目录：
+	> 如果启动服务失败，则以754的权限保存在目录：
 	Chmod +754 /usr/lib/systemd/system/nginx.service
-	设置开机自启动
-	systemctl enable nginx.service
-	启动nginx服务
-	```
-	systemctl start nginx.service
-	```
-	停止开机自启动
-	systemctl disable nginx.service
-	查看服务当前状态
-	systemctl status nginx.service
-	重新启动服务
-	systemctl restart nginx.service
-	查看所有已启动的服务
-	systemctl list-units --type=service
+
+- 启动gunicorn服务
+```
+systemctl start nginx.service
+```
+	> [其它服务命令参考](/2016/11/22/Linux命令大全/)
 
 ## 查询nginx主进程号
 ```
@@ -680,5 +706,6 @@ ps -ef | grep nginx
 
 
 # 参考
+
 - [Django 搭建个人博客教程](https://www.dusaiphoto.com/article/71/)
 - [Django2.1连接使用SQL Server(linux版)](https://blog.csdn.net/weixin_34004750/article/details/92541378)

@@ -4,13 +4,13 @@ $(window).load(function () {
     var titleTime;
     document.addEventListener('visibilitychange', function () {
         if (document.hidden) {
-            $('[rel="icon"]').attr('href', "../../img/avatar/ironman2.png");
-            $('[rel="shortcut icon"]').attr('href', "../../img/avatar/ironman2.png");
+            $('[rel="icon"]').attr('href', "../../img/avatar/favicon-dark.png");
+            $('[rel="shortcut icon"]').attr('href', "../../img/avatar/favicon-dark.png");
             document.title = v_yiYan;
             clearTimeout(titleTime);
         } else {
-            $('[rel="icon"]').attr('href', "../../img/avatar/ironman.png");
-            $('[rel="shortcut icon"]').attr('href', "../../img/avatar/ironman.png");
+            $('[rel="icon"]').attr('href', "../../img/avatar/favicon.png");
+            $('[rel="shortcut icon"]').attr('href', "../../img/avatar/favicon.png");
             document.title = '没有阳光，沉默而居';
             titleTime = setTimeout(function () {
                 document.title = OriginTitile;

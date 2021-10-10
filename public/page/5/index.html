@@ -103,7 +103,7 @@
   <meta name="description" content="没有阳光，沉默而居">
 <meta property="og:type" content="website">
 <meta property="og:title" content="昜丿捺">
-<meta property="og:url" content="http://ynn5ru.coding-pages.com/page/5/index.html">
+<meta property="og:url" content="http://yangpiena.github.io/page/5/index.html">
 <meta property="og:site_name" content="昜丿捺">
 <meta property="og:description" content="没有阳光，沉默而居">
 <meta property="og:locale" content="zh-CN">
@@ -116,7 +116,7 @@
 
 
 
-  <link rel="canonical" href="http://ynn5ru.coding-pages.com/page/5/">
+  <link rel="canonical" href="http://yangpiena.github.io/page/5/">
 
 
 
@@ -393,7 +393,882 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://ynn5ru.coding-pages.com/2017/12/19/HAProxy安装配置/">
+    <link itemprop="mainEntityOfPage" href="http://yangpiena.github.io/2017/12/22/HAProxy介绍和应用/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="昜丿捺">
+      <meta itemprop="description" content="没有阳光，沉默而居">
+      <meta itemprop="image" content="/img/avatar/ironman.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="昜丿捺">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/2017/12/22/HAProxy介绍和应用/" class="post-title-link" itemprop="url">HAProxy介绍和应用</a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2017-12-22 15:15:53" itemprop="dateCreated datePublished" datetime="2017-12-22T15:15:53+08:00">2017-12-22</time>
+            
+
+            
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2020-06-19 12:25:58" itemprop="dateModified" datetime="2020-06-19T12:25:58+08:00">2020-06-19</time>
+              
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/tech-notes/" itemprop="url" rel="index"><span itemprop="name">技术</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-symbolscount">
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">本文字数：</span>
+                
+                <span title="本文字数">6.4k</span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">6 分钟</span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <h3 id="HAProxy简介"><a href="#HAProxy简介" class="headerlink" title="HAProxy简介"></a>HAProxy简介</h3><p>HAProxy是一个使用C语言编写的自由及开放源代码软件，其提供高可用性、负载均衡，以及基于TCP和HTTP的应用程序代理。</p>
+<p>HAProxy特别适用于那些负载特大的web站点，这些站点通常又需要会话保持或七层处理。HAProxy运行在当前的硬件上，完全可以支持数以万计的并发连接。并且它的运行模式使得它可以很简单安全的整合进您当前的架构中， 同时可以保护你的web服务器不被暴露到网络上。</p>
+<p>HAProxy实现了一种事件驱动, 单一进程模型，此模型支持非常大的并发连接数。多进程或多线程模型受内存限制 、系统调度器限制以及无处不在的锁限制，很少能处理数千并发连接。事件驱动模型因为在有更好的资源和时间管理的用户空间(User-Space) 实现所有这些任务，所以没有这些问题。此模型的弊端是，在多核系统上，这些程序通常扩展性较差。这就是为什么他们必须进行优化以 使每个CPU时间片(Cycle)做更多的工作。</p>
+<p>包括 GitHub、Bitbucket、Stack Overflow、Reddit、Tumblr、Twitter和 Tuenti在内的知名网站，及亚马逊网络服务系统都使用了HAProxy。</p>
+<p>HAProxy是法国人Willy Tarreau开发的一个开源软件，是一款应对客户端10000以上的同时连接的高性能的TCP和 HTTP负载均衡器。其功能是用来提供基于cookie的持久性， 基于内容的交换，过载保护的高级流量管制，自动故障切换 ，以正则表达式为基础的标题控制运行时间，基于Web的报表，高级日志记录以帮助排除故障的应用或网络及其他功能。</p>
+          <!--noindex-->
+          
+            <div class="post-button text-center">
+              <a class="btn" href="/2017/12/22/HAProxy介绍和应用/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+
+	<!-- YPN 2020-06-18 增加 每篇文章末尾添加致谢 -->
+	<div>
+		
+	</div>
+	
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+	
+	<!-- YPN 2020-06-18 增加 版权 -->
+	<div>
+      	  
+	</div>
+	 
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yangpiena.github.io/2017/12/22/HAProxy配置详解/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="昜丿捺">
+      <meta itemprop="description" content="没有阳光，沉默而居">
+      <meta itemprop="image" content="/img/avatar/ironman.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="昜丿捺">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/2017/12/22/HAProxy配置详解/" class="post-title-link" itemprop="url">HAProxy配置详解</a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2017-12-22 09:10:25" itemprop="dateCreated datePublished" datetime="2017-12-22T09:10:25+08:00">2017-12-22</time>
+            
+
+            
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2020-06-19 12:25:58" itemprop="dateModified" datetime="2020-06-19T12:25:58+08:00">2020-06-19</time>
+              
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/tech-notes/" itemprop="url" rel="index"><span itemprop="name">技术</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-symbolscount">
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">本文字数：</span>
+                
+                <span title="本文字数">14k</span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">13 分钟</span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <h3 id="配置文件"><a href="#配置文件" class="headerlink" title="配置文件"></a>配置文件</h3><p>haproxy.cfg主要有两部分组成：global和proxies配置段</p>
+<h5 id="global：全局配置段"><a href="#global：全局配置段" class="headerlink" title="global：全局配置段"></a>global：全局配置段</h5><p>进程及安全配置相关的参数<br>性能调整相关参数<br>Debug参数</p>
+<h5 id="proxies：代理配置段"><a href="#proxies：代理配置段" class="headerlink" title="proxies：代理配置段"></a>proxies：代理配置段</h5><ul>
+<li>defaults：为frontend, backend, listen提供默认配置</li>
+<li>fronted：接收请求的前端虚拟节点，frontend可以增加规则直接指定具体使用后端的backend</li>
+<li>backend：后端服务集群的配置，真实服务器，一个backend对应一个或者多个实体服务器</li>
+<li>listen：同时拥有前端和后端,适用于一对一环境。fronted和backend的组合体，比如haproxy实例状态监控部分配置</li>
+</ul>
+          <!--noindex-->
+          
+            <div class="post-button text-center">
+              <a class="btn" href="/2017/12/22/HAProxy配置详解/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+
+	<!-- YPN 2020-06-18 增加 每篇文章末尾添加致谢 -->
+	<div>
+		
+	</div>
+	
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+	
+	<!-- YPN 2020-06-18 增加 版权 -->
+	<div>
+      	  
+	</div>
+	 
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yangpiena.github.io/2017/12/20/HAProxy之ACL规则定义/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="昜丿捺">
+      <meta itemprop="description" content="没有阳光，沉默而居">
+      <meta itemprop="image" content="/img/avatar/ironman.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="昜丿捺">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/2017/12/20/HAProxy之ACL规则定义/" class="post-title-link" itemprop="url">HAProxy之ACL规则定义</a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2017-12-20 10:03:51" itemprop="dateCreated datePublished" datetime="2017-12-20T10:03:51+08:00">2017-12-20</time>
+            
+
+            
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2020-06-19 12:25:58" itemprop="dateModified" datetime="2020-06-19T12:25:58+08:00">2020-06-19</time>
+              
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/tech-notes/" itemprop="url" rel="index"><span itemprop="name">技术</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-symbolscount">
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">本文字数：</span>
+                
+                <span title="本文字数">6.8k</span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">6 分钟</span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <p>HAProxy的ACL具有很强大的功能，能够定义三到七层的规则。ACL的作用，就是为了匹配一些特别的请求，然后对其进行修改或者分发到不同的服务器组中。<br>HAProxy的ACL用于实现基于请求报文的首部、响应报文的内容或 其它的环境状态信息来做出转发决策，这大大增强了其配置弹性。 其配置法则通常分为两步，首先去定义ACL，即定义一个测试条件 ，而后在条件得到满足时执行某特定的动作，如阻止请求或转发至 某特定的后端。</p>
+          <!--noindex-->
+          
+            <div class="post-button text-center">
+              <a class="btn" href="/2017/12/20/HAProxy之ACL规则定义/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+
+	<!-- YPN 2020-06-18 增加 每篇文章末尾添加致谢 -->
+	<div>
+		
+	</div>
+	
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+	
+	<!-- YPN 2020-06-18 增加 版权 -->
+	<div>
+      	  
+	</div>
+	 
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yangpiena.github.io/2017/12/20/HAProxy负载均衡算法/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="昜丿捺">
+      <meta itemprop="description" content="没有阳光，沉默而居">
+      <meta itemprop="image" content="/img/avatar/ironman.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="昜丿捺">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/2017/12/20/HAProxy负载均衡算法/" class="post-title-link" itemprop="url">HAProxy负载均衡算法</a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2017-12-20 10:03:35" itemprop="dateCreated datePublished" datetime="2017-12-20T10:03:35+08:00">2017-12-20</time>
+            
+
+            
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2020-06-19 12:25:58" itemprop="dateModified" datetime="2020-06-19T12:25:58+08:00">2020-06-19</time>
+              
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/tech-notes/" itemprop="url" rel="index"><span itemprop="name">技术</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-symbolscount">
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">本文字数：</span>
+                
+                <span title="本文字数">4.4k</span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">4 分钟</span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <p>使用balance定义负载均衡算法，可用于“defaults”、“listen”和“backend”。用于在负载均衡场景中挑选一个server，其仅应用于用户新请求或需要将一个连接重新派发至另一个服务器时。常用的算法有：undrobin、source和lestconn。</p>
+          <!--noindex-->
+          
+            <div class="post-button text-center">
+              <a class="btn" href="/2017/12/20/HAProxy负载均衡算法/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+
+	<!-- YPN 2020-06-18 增加 每篇文章末尾添加致谢 -->
+	<div>
+		
+	</div>
+	
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+	
+	<!-- YPN 2020-06-18 增加 版权 -->
+	<div>
+      	  
+	</div>
+	 
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yangpiena.github.io/2017/12/19/HAProxy安装配置/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="昜丿捺">
@@ -609,7 +1484,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://ynn5ru.coding-pages.com/2017/08/17/Tomcat部署项目访问不加项目名设置/">
+    <link itemprop="mainEntityOfPage" href="http://yangpiena.github.io/2017/08/17/Tomcat部署项目访问不加项目名设置/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="昜丿捺">
@@ -830,7 +1705,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://ynn5ru.coding-pages.com/2017/08/11/CentOS使用iptables/">
+    <link itemprop="mainEntityOfPage" href="http://yangpiena.github.io/2017/08/11/CentOS使用iptables/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="昜丿捺">
@@ -1048,7 +1923,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://ynn5ru.coding-pages.com/2017/08/10/Linux数据盘分区以及格式化/">
+    <link itemprop="mainEntityOfPage" href="http://yangpiena.github.io/2017/08/10/Linux数据盘分区以及格式化/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="昜丿捺">
@@ -1264,7 +2139,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://ynn5ru.coding-pages.com/2017/08/10/Linux系统盘和数据盘/">
+    <link itemprop="mainEntityOfPage" href="http://yangpiena.github.io/2017/08/10/Linux系统盘和数据盘/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="昜丿捺">
@@ -1480,7 +2355,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://ynn5ru.coding-pages.com/2017/06/20/Git如何用命令将本地项目上传到git/">
+    <link itemprop="mainEntityOfPage" href="http://yangpiena.github.io/2017/06/20/Git如何用命令将本地项目上传到git/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="昜丿捺">
@@ -1681,930 +2556,11 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://ynn5ru.coding-pages.com/2017/05/15/Sublime-Text快捷键/">
-
-    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="昜丿捺">
-      <meta itemprop="description" content="没有阳光，沉默而居">
-      <meta itemprop="image" content="/img/avatar/ironman.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="昜丿捺">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/2017/05/15/Sublime-Text快捷键/" class="post-title-link" itemprop="url">Sublime Text快捷键</a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-
-              
-                
-              
-
-              <time title="创建时间：2017-05-15 15:59:04" itemprop="dateCreated datePublished" datetime="2017-05-15T15:59:04+08:00">2017-05-15</time>
-            
-
-            
-              
-
-              
-                
-                <span class="post-meta-divider">|</span>
-                
-
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">更新于</span>
-                
-                <time title="修改时间：2020-06-19 12:25:58" itemprop="dateModified" datetime="2020-06-19T12:25:58+08:00">2020-06-19</time>
-              
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/tech-notes/" itemprop="url" rel="index"><span itemprop="name">技术</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-            <div class="post-symbolscount">
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">本文字数：</span>
-                
-                <span title="本文字数">696</span>
-              
-
-              
-                <span class="post-meta-divider">|</span>
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-clock-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
-                
-                <span title="阅读时长">1 分钟</span>
-              
-            </div>
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <div class="table-container">
-<table>
-<thead>
-<tr>
-<th>快捷键</th>
-<th style="text-align:left">说明</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Ctrl+X</td>
-<td style="text-align:left">删除当前行</td>
-</tr>
-<tr>
-<td>Ctrl+Shift+D</td>
-<td style="text-align:left">复制光标所在整行，插入到下一行</td>
-</tr>
-<tr>
-<td>Ctrl+Shift+↑</td>
-<td style="text-align:left">将光标所在行和上一行代码互换（将光标所在行插入到上一行之前）</td>
-</tr>
-<tr>
-<td>Ctrl+Shift+↓</td>
-<td style="text-align:left">将光标所在行和下一行代码互换（将光标所在行插入到下一行之后）</td>
-</tr>
-<tr>
-<td>Shift+鼠标右键拖动</td>
-<td style="text-align:left">列编辑模式</td>
-</tr>
-<tr>
-<td>Ctrl+K+U</td>
-<td style="text-align:left">转换大写</td>
-</tr>
-<tr>
-<td>Ctrl+K+L</td>
-<td style="text-align:left">转换小写</td>
-</tr>
-</tbody>
-</table>
-</div>
-
-          
-        
-      
-    </div>
-
-    
-
-	<!-- YPN 2020-06-18 增加 每篇文章末尾添加致谢 -->
-	<div>
-		
-	</div>
-	
-    
-    
-    
-
-    
-
-    
-      
-    
-    
-
-    
-	
-	<!-- YPN 2020-06-18 增加 版权 -->
-	<div>
-      	  
-	</div>
-	 
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://ynn5ru.coding-pages.com/2017/05/15/Windows设置磁盘背景/">
-
-    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="昜丿捺">
-      <meta itemprop="description" content="没有阳光，沉默而居">
-      <meta itemprop="image" content="/img/avatar/ironman.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="昜丿捺">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/2017/05/15/Windows设置磁盘背景/" class="post-title-link" itemprop="url">Windows设置磁盘背景</a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-
-              
-                
-              
-
-              <time title="创建时间：2017-05-15 15:06:55" itemprop="dateCreated datePublished" datetime="2017-05-15T15:06:55+08:00">2017-05-15</time>
-            
-
-            
-              
-
-              
-                
-                <span class="post-meta-divider">|</span>
-                
-
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">更新于</span>
-                
-                <time title="修改时间：2020-06-19 12:25:57" itemprop="dateModified" datetime="2020-06-19T12:25:57+08:00">2020-06-19</time>
-              
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/tech-notes/" itemprop="url" rel="index"><span itemprop="name">技术</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-            <div class="post-symbolscount">
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">本文字数：</span>
-                
-                <span title="本文字数">522</span>
-              
-
-              
-                <span class="post-meta-divider">|</span>
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-clock-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
-                
-                <span title="阅读时长">1 分钟</span>
-              
-            </div>
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <p>如何将磁盘背景设置为自己喜欢的图片，具体操作步骤如下：</p>
-<ul>
-<li>首先，准备一张自己喜欢的图片。例如：D:\图片\其它\1741962.jpeg </li>
-<li>在要设置背景的盘符或文件夹下，新建一个文本文档，将下面代码粘贴到文本中，替换自己的图片路径。<pre><code>  [ExtShellFolderViews] 
-  {BE098140-A513-11D0-A3A4-00C04FD706EC}={BE098140-A513-11D0-A3A4-00C04FD706EC} 
-  [{BE098140-A513-11D0-A3A4-00C04FD706EC}] 
-  Attributes=1 
-  IconArea_Image=D:\图片\其它\1741962.jpeg
-  IconArea_Text=0x00000000 
-  [.ShellClassInfo] 
-  ConfirmFileOp=0 
-  [Ctrl+A Select All] 
-</code></pre></li>
-<li>最后，将文档另存为desktop.ini即可。
-          <!--noindex-->
-          
-            <div class="post-button text-center">
-              <a class="btn" href="/2017/05/15/Windows设置磁盘背景/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          
-          <!--/noindex-->
-        
-      
-    </li></ul></div>
-
-    
-
-	<!-- YPN 2020-06-18 增加 每篇文章末尾添加致谢 -->
-	<div>
-		
-	</div>
-	
-    
-    
-    
-
-    
-
-    
-      
-    
-    
-
-    
-	
-	<!-- YPN 2020-06-18 增加 版权 -->
-	<div>
-      	  
-	</div>
-	 
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://ynn5ru.coding-pages.com/2016/12/28/Kettle使用命令行来运行数据库job/">
-
-    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="昜丿捺">
-      <meta itemprop="description" content="没有阳光，沉默而居">
-      <meta itemprop="image" content="/img/avatar/ironman.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="昜丿捺">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/2016/12/28/Kettle使用命令行来运行数据库job/" class="post-title-link" itemprop="url">Kettle使用命令行来运行数据库job</a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-
-              
-                
-              
-
-              <time title="创建时间：2016-12-28 10:48:13" itemprop="dateCreated datePublished" datetime="2016-12-28T10:48:13+08:00">2016-12-28</time>
-            
-
-            
-              
-
-              
-                
-                <span class="post-meta-divider">|</span>
-                
-
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">更新于</span>
-                
-                <time title="修改时间：2020-06-19 12:25:58" itemprop="dateModified" datetime="2020-06-19T12:25:58+08:00">2020-06-19</time>
-              
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/tech-notes/" itemprop="url" rel="index"><span itemprop="name">技术</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-            <div class="post-symbolscount">
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">本文字数：</span>
-                
-                <span title="本文字数">527</span>
-              
-
-              
-                <span class="post-meta-divider">|</span>
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-clock-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
-                
-                <span title="阅读时长">1 分钟</span>
-              
-            </div>
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <p>当您的Job是在数据库中存储，并需要通过命令行（.bat）方式运行时，如下编辑.bat文件即可：</p>
-<pre><code>d:
-cd d:\data-integration
-kitchen /rep xxKettle /dir taby /user admin /pass admin /job tabyToXX_Job /level basic /logfile D:\KettleLog\kettlelog.log
-pause
-</code></pre>
-          <!--noindex-->
-          
-            <div class="post-button text-center">
-              <a class="btn" href="/2016/12/28/Kettle使用命令行来运行数据库job/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-
-	<!-- YPN 2020-06-18 增加 每篇文章末尾添加致谢 -->
-	<div>
-		
-	</div>
-	
-    
-    
-    
-
-    
-
-    
-      
-    
-    
-
-    
-	
-	<!-- YPN 2020-06-18 增加 版权 -->
-	<div>
-      	  
-	</div>
-	 
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://ynn5ru.coding-pages.com/2016/12/28/Tomcat启动jvm内存设置/">
-
-    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="昜丿捺">
-      <meta itemprop="description" content="没有阳光，沉默而居">
-      <meta itemprop="image" content="/img/avatar/ironman.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="昜丿捺">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/2016/12/28/Tomcat启动jvm内存设置/" class="post-title-link" itemprop="url">Tomcat启动jvm内存设置</a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-
-              
-                
-              
-
-              <time title="创建时间：2016-12-28 10:06:29" itemprop="dateCreated datePublished" datetime="2016-12-28T10:06:29+08:00">2016-12-28</time>
-            
-
-            
-              
-
-              
-                
-                <span class="post-meta-divider">|</span>
-                
-
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">更新于</span>
-                
-                <time title="修改时间：2020-06-19 12:25:58" itemprop="dateModified" datetime="2020-06-19T12:25:58+08:00">2020-06-19</time>
-              
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/tech-notes/" itemprop="url" rel="index"><span itemprop="name">技术</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-            <div class="post-symbolscount">
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">本文字数：</span>
-                
-                <span title="本文字数">1.1k</span>
-              
-
-              
-                <span class="post-meta-divider">|</span>
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-clock-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
-                
-                <span title="阅读时长">1 分钟</span>
-              
-            </div>
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <h4 id="Linux"><a href="#Linux" class="headerlink" title="Linux"></a>Linux</h4><p>在/usr/local/apache-tomcat-7.0.57/bin目录下的catalina.sh中添加：</p>
-<pre><code>JAVA_OPTS=&#39;-Xms512m -Xmx1024m&#39;
-</code></pre><blockquote>
-<p>-Xms：初始值<br>-Xmx：最大值<br>-Xmn：最小值</p>
-</blockquote>
-          <!--noindex-->
-          
-            <div class="post-button text-center">
-              <a class="btn" href="/2016/12/28/Tomcat启动jvm内存设置/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-
-	<!-- YPN 2020-06-18 增加 每篇文章末尾添加致谢 -->
-	<div>
-		
-	</div>
-	
-    
-    
-    
-
-    
-
-    
-      
-    
-    
-
-    
-	
-	<!-- YPN 2020-06-18 增加 版权 -->
-	<div>
-      	  
-	</div>
-	 
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/page/4/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/4/">4</a><span class="page-number current">5</span><a class="page-number" href="/page/6/">6</a><span class="space">&hellip;</span><a class="page-number" href="/page/8/">8</a><a class="extend next" rel="next" href="/page/6/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
+    <a class="extend prev" rel="prev" href="/page/4/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/4/">4</a><span class="page-number current">5</span><a class="page-number" href="/page/6/">6</a><span class="space">&hellip;</span><a class="page-number" href="/page/9/">9</a><a class="extend next" rel="next" href="/page/6/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
   </nav>
 
 
@@ -2653,7 +2609,7 @@ pause
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">80</span>
+                    <span class="site-state-item-count">84</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -2809,6 +2765,28 @@ pause
                   
                     
                   
+                  <a href="https://yangpiena.coding.net" title="CODING &rarr; https://yangpiena.coding.net" rel="noopener" target="_blank"><i class="fa fa-fw fa-github-alt"></i>CODING</a>
+                </span>
+              
+                <span class="links-of-author-item">
+                  
+                  
+                    
+                  
+                  
+                    
+                  
+                  <a href="https://gitee.com/yangpiena" title="Gitee &rarr; https://gitee.com/yangpiena" rel="noopener" target="_blank"><i class="fa fa-fw fa-glide"></i>Gitee</a>
+                </span>
+              
+                <span class="links-of-author-item">
+                  
+                  
+                    
+                  
+                  
+                    
+                  
                   <a href="mailto:yangpiena@gmail.com" title="E-Mail &rarr; mailto:yangpiena@gmail.com" rel="noopener" target="_blank"><i class="fa fa-fw fa-envelope"></i>E-Mail</a>
                 </span>
               
@@ -2821,17 +2799,6 @@ pause
                     
                   
                   <a href="https://weibo.com/yangpiena" title="Weibo &rarr; https://weibo.com/yangpiena" rel="noopener" target="_blank"><i class="fa fa-fw fa-weibo"></i>Weibo</a>
-                </span>
-              
-                <span class="links-of-author-item">
-                  
-                  
-                    
-                  
-                  
-                    
-                  
-                  <a href="https://yangpiena.coding.net" title="CODING &rarr; https://yangpiena.coding.net" rel="noopener" target="_blank"><i class="fa fa-fw fa-github-alt"></i>CODING</a>
                 </span>
               
             </div>
@@ -2849,7 +2816,11 @@ pause
               <ul class="links-of-blogroll-list">
                 
                   <li class="links-of-blogroll-item">
-                    <a href="https://yangpiena.github.io/" title="https://yangpiena.github.io/" rel="noopener" target="_blank">昜丿捺</a>
+                    <a href="https://yangpiena.github.io/" title="https://yangpiena.github.io/">昜丿捺(GitHub)</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="http://coding-pages-bucket-407450-1059047-17379-602648-1258146968.cos-website.ap-hongkong.myqcloud.com/" title="http://coding-pages-bucket-407450-1059047-17379-602648-1258146968.cos-website.ap-hongkong.myqcloud.com/" rel="noopener" target="_blank">昜丿捺(Coding)</a>
                   </li>
                 
               </ul>
@@ -2925,7 +2896,7 @@ pause
       <i class="fa fa-area-chart"></i>
     </span>
     
-    <span title="站点总字数">224k</span>
+    <span title="站点总字数">234k</span>
   
 
   
@@ -2934,7 +2905,7 @@ pause
       <i class="fa fa-coffee"></i>
     </span>
     
-    <span title="站点阅读时长">3:24</span>
+    <span title="站点阅读时长">3:33</span>
   
 </div>
 

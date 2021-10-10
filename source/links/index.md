@@ -5,16 +5,20 @@ date: 2016-11-11 12:31:37
 description:
 ---
 <!-- YPN Add 2017-06-20 新增搜索框 -->
-<style class="btn-styles">       
+<style class="btn-styles">
 	.btn-edge{cursor: pointer; padding: 5px 20px;}
 	.btn-edge:hover{color: #FFF; background-color: #3385FF;}
 </style>
 <div class="search-wrapper" style="padding: 0em 0em 0em 0em;">
 	<p align="center" style="margin-top: -65px;margin-left: 0">
 	<form id="search-form" action="//www.baidu.com/baidu" target="_blank" style="">
-		<input name="q" type="hidden" id="q-word" />
-		<input type="text" id="b-word" name="word" size="40" placeholder="秘迹搜索：安全、聚合百度、360、Bing、搜狗等 | 多吉搜索：侧重于知乎、博客园、CSDN等" style="margin-bottom: 1.3px;width:100%;height:30px;"/>
-		<input type="submit" id="b-btn" class="btn-edge" value="百度一下"/> <input id="q-btn" class="btn-edge" type="submit" value="Google"/> <input id="w-btn" class="btn-edge" type="submit" value="Bing"/> <input id="m-btn" class="btn-edge" type="submit" value="秘迹搜索"/> <input id="d-btn" class="btn-edge" type="submit" value="多吉搜索"/>
+		<input id="q-word" type="hidden" name="q"/>
+		<input id="b-word" type="text"   name="word" size="40" style="margin-bottom: 1.3px;width:100%;height:30px;" placeholder="秘迹搜索：安全、聚合百度、360、Bing、搜狗等" />
+		<input id="b-btn" class="btn-edge" type="submit" value="百度一下"/>
+		<input id="g-btn" class="btn-edge" type="submit" value="Google"/>
+		<input id="o-btn" class="btn-edge" type="submit" value="聚合搜索"/>
+		<input id="w-btn" class="btn-edge" type="submit" value="Bing"/>
+		<input id="m-btn" class="btn-edge" type="submit" value="秘迹搜索"/>
 	</form>
 </div>
 
@@ -28,51 +32,54 @@ description:
 
 
 # 常用
-[百度翻译](https://fanyi.baidu.com/) | [Google翻译](https://translate.google.cn/?hl=zh-CN&tab=TT) | [天气万年历](https://wannianli.tianqi.com/today/zhou/) | [百度云](https://pan.baidu.com/) |  [腾讯云](https://cloud.tencent.com/) | [Google1](https://www.sanzhima.com/)
-[CSDN.NET](http://www.csdn.net/) |[cnBeta](http://www.cnbeta.com/)  | [V2EX](https://www.v2ex.com/) | [不死鸟发布页](https://bde.su/) | [不死鸟](https://iao.su/)	| [小部落](https://www.xbl100.com/) | [老D博客](https://laod.cn/) | [免费吧](http://www.mianfeib.me/) | [分享网络有趣资源](https://gg0.net/)
-[今日热榜](https://tophub.today/) | [果汁排行榜](http://guozhivip.com/rank/) | [AnyKnew](https://www.anyknew.com/#/) | [科塔学术导航](https://site.sciping.com/) | [手机抢购网](http://www.qianggou5.com/price/) | [医学微视](https://www.mvyxws.com/) | [药房网](https://www.yaofangwang.com/) | [WikiHow](https://zh.wikihow.com/%E9%A6%96%E9%A1%B5)
-[希赛网](https://www.educity.cn/) | [中国国际人才交流基金会项目管理网站](http://exam.chinapmp.cn/) | [PMI](https://www.pmi.org/) | [Teams](https://teams.microsoft.com/_#/calendarv2)
+[百度翻译](https://fanyi.baidu.com/) | [Google翻译](https://translate.google.cn/?hl=zh-CN&tab=TT) | [天气万年历](https://wannianli.tianqi.com/today/zhou/) | [实况摄像头](https://www.skylinewebcams.com/zh/webcam/maldives/lhaviyani-atoll/kurendhoo/kuredu-island.html)
+[cnBeta](http://www.cnbeta.com/)  | [不死鸟发布页](https://dalao.ru/) | [不死鸟](https://iao.su/) | [分享网络有趣资源](https://gg0.net/) | [免费吧](http://www.mianfeib.me/) | [小部落](https://www.xbl100.com/) | [老D博客](https://laod.cn/) | [有意思吧](https://www.youyisi8.com/) | [tiktok 在线观看](https://urlebird.com/)
+[今日热榜](https://tophub.today/) | [科塔学术导航](https://site.sciping.com/) | [手机抢购网](http://www.qianggou5.com/price/) | [药房网](https://www.yaofangwang.com/) | [医学微视](https://www.mvyxws.com/) | [WikiHow](https://zh.wikihow.com/%E9%A6%96%E9%A1%B5)
+[希赛网](https://www.educity.cn/) | [中国国际人才交流基金会项目管理网站](http://exam.chinapmp.cn/) | [PMI](https://www.pmi.org/)
 
 
 ## 音乐
-[听雨](http://rain.xxoojoke.com/) |  [AeKun](https://www.aekun.com/ )  |  [VIP付费音乐解析下载](https://music.zhuolin.wang/)  |  [网易云音乐](http://music.163.com) | [音乐磁场](https://www.hifini.com/) | [麦田音乐网](https://www.mtyyw.com/) | [疯狂音乐搜索](http://music.ifkdy.com/)
+[听雨](http://rain.xxoojoke.com/) |  [AeKun](https://www.aekun.com/ ) | [天天静听](http://47.112.23.238/) | [网易云音乐](http://music.163.com) | [音乐磁场](https://www.hifini.com/) | [麦田音乐网](https://www.mtyyw.com/) | [Music Today](https://themusic.today/)
+[VIP付费音乐解析下载](https://music.zhuolin.wang/) | [音乐直链搜索](https://music.liuzhijin.cn/) | [音乐搜索器](http://www.xieqian.vip/music/) | [音乐搜索器](http://www.guqiankun.com/tools/music/) | [网易云音乐下载](http://y.jsososo.com)
 
 
 ## 电影
-[映像讯](http://mkv.cn/) | [电影推荐MVCAT](https://www.mvcat.com/) | [预告片世界](http://www.yugaopian.cn/)  |  [人人影视字幕](http://www.yyets.com/)
-[免费的在线影视网站汇总](https://iao.su/531/) | [港澳台电视直播](https://mtime.info/) | [全民解析](http://www.qmaile.com/) | [今日影视](http://www.2w2w.tv/)      | [1090影视](https://1090ys.com/) | [嗨哆咪](https://www.haiduomi.cc) | [完美看看](https://www.wanmeikk.me/) | [泡饭影视](https://www.paofans.com/) | [欧亚影视](http://www.oy37.com/) | [神鸡影视](http://n7f6.cn/) | [新奇遇电影](https://www.newqiyu.com/) | [4K鸭](https://4kya.com/)
+[映像讯](http://mkv.cn/) | [影视森林](http://www.549.tv/) | [免费的在线影视网站汇总](https://iao.su/531/)
+[破晓电影](http://www.poxiao.com) |  [爱剧网](https://www.aitvplay.com/) | [谷易电影](https://www.guyidy.com/) | [泡饭影视](https://www.paofans.com/) | [神鸡影视](http://n7f6.cn/) | [新奇遇电影](https://www.newqiyu.com/) | [4K鸭](https://4kya.com/) | [哔嘀影视](https://bde4.cc/)
 [天天美剧](http://www.ttmeiju.me/) | [99美剧网](https://www.jjmeiju.com/) | [美剧粉](http://www.mjf2020.com/)
-[BT之家](https://www.91btbtt.com/)      | [BT之家](https://www.52btbtt.com/)      | [BT之家](https://btbtt.us/) | [破晓电影](http://www.poxiao.com) | [迅雷电影下载](http://www.xlpu.cc/)  |  [快播电影](http://www.bubulai.com/) |  [BT电影天堂](http://www.btbttv.net/) | [U3C3](https://u3c3.com/)
+[BT之家](https://www.91btbtt.com/) | [BT之家](https://www.52btbtt.com/)
 
 
 ## 游戏
-[Chatroulette](http://chatroulette.com/) | [三国杀](http://web.sanguosha.com/)  |  [好蜀门私服](http://www.haosm.com/)
+[Chatroulette](http://chatroulette.com/) | [三国杀](http://web.sanguosha.com/)  |  [好蜀门私服](http://www.haosm.com/) | [小霸王](https://www.yikm.net/) | [摸鱼游戏](https://poki.com/)
 
 
 ## 美图
-[it.me](http://www.topit.pro/) | [lala 图库](https://233.fi/explore/trending) | [网红精选](https://xn--wcsw84dcxi8ta.xyz/)
-[WallpaperHub](https://wallpaperhub.app/) |  [笔记本桌面壁纸下载](http://bbs.zol.com.cn/nbbbs/d33943.html) | [火雨壁纸](https://huoyu.kfsafe.cn/index.html) | [Lively Wallpaper](https://www.xitmi.com/8512.html) | [360°航拍全景](https://airpano.org.cn/)
+[it.me](http://www.topit.pro/) | [CNU视觉联盟](http://www.cnu.cc/inspirationPage/recent-0) | [lala 图库](https://233.fi/explore/trending) | [网红精选](https://xn--wcsw84dcxi8ta.xyz/) | [360°航拍全景](https://airpano.org.cn/) | [免费版权图片搜索](https://www.logosc.cn/so/) | [抖你妹](https://www.dounimei.net/)
 
 
 # 在线工具
+[Guidebook数字生活指南](https://nav.guidebook.top/)
 [drawio](https://app.diagrams.net/) | [百度脑图](https://naotu.baidu.com/home) | [GitMind](https://gitmind.cn/)
-[拷贝兔](https://cp.anyknew.com/) | [鸡毛信](https://cmd.im/) | [鸡霸图床](https://gejiba.com/) | [田字格笔顺 字帖生成器](https://lab.feifanju.com/zitie/)
+[分享笔记](https://sharenote.app/) | [拷贝兔](https://cp.anyknew.com/) | [鸡毛信](https://cmd.im/) | [鸡霸图床](https://gejiba.com/) | [田字格笔顺 字帖生成器](https://lab.feifanju.com/zitie/) | [滚动横幅](https://www.iamverylovely.com/scroll/)
 [短链接](https://url.4qo.cn/#/) | [域名查询](https://lab.feifanju.com/domain-query/) | [在线HTTP POST/GET接口测试工具](https://lab.feifanju.com/http/index.html) | [临时邮箱](https://linshiyouxiang.net/) | [临时手机号](https://jiemahao.com/)
-[网页在线工具汇总](https://iao.su/1492/)[独特工具箱](https://www.dute.org/) | [在线工具](http://tool.lu/)  |  [在线工具](http://tool.oschina.net/) | [UU在线工具](https://uutool.cn/) | [JSON在线解析及格式化验证](http://www.json.cn/)  |  [转换json格式为C#类](http://json2csharp.chahuo.com/)
-[生成随机密码](https://suijimimashengcheng.51240.com/) | [密码强度检测](https://mimaqiangdu.51240.com/) | [PMD5](http://pmd5.com/#)  |  [输入让你无语的MD5](https://www.somd5.com/)   |  [在线MD5暴力破解](http://www.atool.org/md5-crack.php) | [核心价值编码器](https://sym233.github.io/core-values-encoder/)  |  [核心价值编码器源码](https://github.com/sym233/core-values-encoder)
-[在线文件转换器](https://cn.office-converter.com/) | [在线格式转换](https://www.alltoall.net/) |  [png在线转ico](http://www.easyicon.net/covert/) | [做好图](http://www.zuohaotu.com/)  |  [MakePic.com 图片制造](http://www.makepic.com/)  |  [removebg图片背景消除](https://www.remove.bg/ ) | [waifu2x无损放大图片](http://waifu2x.udp.jp/index.zh-CN.html) | [图片无限变大](http://bigjpg.com/zh) | [草料二维码美化器](http://mh.cli.im/)  | [在线制作您的Logo](https://www.logaster.cn/) | [滚动横幅](https://www.iamverylovely.com/scroll/) | [在线短信轰炸](https://qinggongju.com/dx/)
+[独特工具箱](https://www.dute.org/) | [在线工具](http://tool.lu/)  |  [在线工具](http://tool.oschina.net/) | [UU在线工具](https://uutool.cn/) | [JSON在线解析及格式化验证](http://www.json.cn/)  |  [转换json格式为C#类](http://json2csharp.chahuo.com/)
+[生成随机密码](https://suijimimashengcheng.51240.com/) | [密码强度检测](https://mimaqiangdu.51240.com/) | [PMD5](http://pmd5.com/#)  |  [输入让你无语的MD5](https://www.somd5.com/)   |  [在线MD5暴力破解](http://www.atool.org/md5-crack.php) | [核心价值编码器](https://sym233.github.io/core-values-encoder/)
+[在线文件转换器](https://cn.office-converter.com/) | [在线格式转换](https://www.alltoall.net/) | [PDF派](https://www.pdfpai.com/) |  [png在线转ico](http://www.easyicon.net/covert/) | [图片背景变成透明](https://transparent.zhaoxi.net/) | [做好图](http://www.zuohaotu.com/)  |  [MakePic.com 图片制造](http://www.makepic.com/)  |  [removebg图片背景消除](https://www.remove.bg/ ) | [waifu2x无损放大图片](http://waifu2x.udp.jp/index.zh-CN.html) | [图片无限变大](http://bigjpg.com/zh) | [草料二维码美化器](http://mh.cli.im/) | [头像生成器](https://www.moubao.vip/)
+[在线制作您的Logo](https://www.logaster.cn/) | [小米LOGO生成器](https://mi-logo.lvwzhen.com/) | [免费logo在线制作](http://www.uugai.com/)
+[在线短信轰炸](https://qinggongju.com/dx/)
 
 
 # 社区
-[博客园](http://www.cnblogs.com/cmt/) | [互联网技术图谱](https://techmap.canmeng.net/#) | [开源中国社区](http://www.oschina.net/)| [HTM5中国产业联盟](http://www.html5plus.org/)
-[菜鸟教程](http://www.runoob.com/) | [SQLite 教程](http://www.runoob.com/sqlite/sqlite-tutorial.html) | [channel9](https://channel9.msdn.com/)
+[博客园](http://www.cnblogs.com/cmt/) | [开源中国社区](http://www.oschina.net/)| [HTM5中国产业联盟](http://www.html5plus.org/)
 
 
 # 资源
+[MSDN](http://msdn.itellyou.cn/?gytyzs=0z1zl) | [GitHub镜像](https://github.com.cnpmjs.org/)
 [库问搜索](http://www.koovin.com/) | [telegram 中文搜索](http://www.sssoou.com/) | [小白盘](https://www.xiaobaipan.com)
-[MSDN](http://msdn.itellyou.cn/?gytyzs=0z1zl) | [站长素材](https://sc.chinaz.com/) | [矢量图标库](http://www.iconfont.cn/) | [最好的12个Icon图标资源网站整理分享出来](https://blog.csdn.net/xiawj8957/article/details/45130263) | [FontAwesome图标](http://www.fontawesome.com.cn/faicons/) | [中国色](http://zhongguose.com/)
+[站长素材](https://sc.chinaz.com/) | [矢量图标库](http://www.iconfont.cn/) | [免费开源图标下载](https://iconduck.com/) | [FontAwesome图标](http://www.fontawesome.com.cn/faicons/) | [最好的12个Icon图标资源网站整理分享出来](https://blog.csdn.net/xiawj8957/article/details/45130263)
+[中国色](http://zhongguose.com/)
 [优品PPT](http://www.ypppt.com)
-[Tracker服务器地址1](https://newtrackon.com/) | [Tracker服务器地址2](https://github.com/ngosang/trackerslist)
 [中华珍宝馆](https://ltfc.net/)
 
 
@@ -86,32 +93,36 @@ description:
 
 
 ## 系统/软件下载
-[IT之家](https://www.ithome.com/) | [系统之家](http://www.xitongzhijia.net/) | [系统天地](http://www.xitongtiandi.net/) | [Win10专业版官网](http://www.win10zyb.com/) | [Win10之家](http://www.xh52.com/) | [系统圣地](http://www.285868.com/) | [吻妻出品专注 win7](http://www.newxitong.com/) | [吻妻出品专注 win10](https://iwin10.net/)
-[黑苹果乐园](https://imac.hk/)	  |  [黑果小兵](https://blog.daliansky.net/)  |  [从零开始的黑苹果安装教程](http://tieba.baidu.com/p/5179866130#)
-[zd423](http://www.zdfans.com/) | [423down](https://www.423down.com/) |  [行客工作室](http://www.runker.net/) | [金狐维护盘](http://www.jinhu.me/) | [小众软件](https://www.appinn.com/) | [我爱分享网](http://www.zhanshaoyi.com/rjxz.html) | [夜雨聆风](http://www.yeyulingfeng.com/) | [云库网](https://www.lisect.xyz/)
-[吾爱破解](https://www.52pojie.cn/) | [浏览迷](https://liulanmi.com/)    |  [Chrome浏览器插件下载中心](https://www.chromefor.com/) | [FlashPlayer下载地址1](http://get.adobe.com/cn/flashplayer/otherversions/)  |  [FlashPlayer下载地址2](http://www.adobe.com/support/flashplayer/downloads.html)  |  [Debugger Version地址](http://kb2.adobe.com/cps/155/tn_15507.html)
-[PanDownload复刻版](https://imwcr.cn/api/bdwp/) | [Yuan_Tuo](https://imwcr.cn/) | [kurukurumi](https://kurukurumi.tk/) | [Joplin：一款完全免费开源笔记软件](https://joplinapp.org/)
+[IT之家](https://www.ithome.com/) | [系统之家](http://www.xitongzhijia.net/) | [系统天地](http://www.xitongtiandi.net/) | [系统圣地](http://www.285868.com/) | [Win10专业版官网](http://www.win10zyb.com/) | [吻妻出品专注 win10](https://iwin10.net/) | [吻妻出品专注 win7](http://www.newxitong.com/)
+[黑苹果乐园](https://imac.hk/)	  |  [黑果小兵](https://blog.daliansky.net/)
+[小众软件](https://www.appinn.com/) | [zd423](http://www.zdfans.com/) | [423down](https://www.423down.com/) | [我爱分享网](http://www.zhanshaoyi.com/rjxz.html) | [夜雨聆风](http://www.yeyulingfeng.com/) | [金狐维护盘](http://www.jinhu.me/) | [行客工作室](http://www.runker.net/) | [软猫下载](https://www.softmall.net/)
+[浏览迷](https://liulanmi.com/)    |  [Chrome浏览器插件下载中心](https://www.chromefor.com/)
+[阅读](http://www.legado.top/MyBookshelf/index.html)
 
 
 ## 文章/教程
+[菜鸟教程](http://www.runoob.com/)
 [B/S，C/S，B/S和C/S混合模式的概念区别优缺点及前景分析](http://www.ufidawhy.com/mfufida/613.html) | [一种电子病历系统软件框架思想——B/S与C/S混合架构](http://www.hit180.com/21534.html)
 [LB 负载均衡的层次结构](http://www.cnblogs.com/mindwind/p/5339657.html) | [Nginx 0.5.31 + PHP 5.2.4（FastCGI）搭建可承受3万以上并发连接数，胜过Apache 10倍的Web服务器[原创]](http://zyan.cc/post/297/)
 [GitHub上优秀的开源项目](http://blog.csdn.net/ren1027538427/article/details/52450294) | [2017 码云最火爆开源项目 TOP 50，你都用过哪些？](https://www.oschina.net/news/92438/2017-mayun-top-50)
 [项目目录结构规范](https://segmentfault.com/a/1190000002471120) | [好的用户界面-界面设计的一些技巧](https://www.cnblogs.com/Wayou/p/goodui.html#home) | [MIUI更新日志](http://www.miui.com/home.php?mod=space&uid=8&do=thread&view=me&from=space)
 [Linux删除乱码文件](http://www.cnblogs.com/quanweiru/p/3764003.html) | [SUSE Linux启用SSH](http://tophandxing.blog.163.com/blog/static/109714820124123438513/) | [黑苹果macOS High Sierra 10.13.6详细安装新手菜鸟教程](http://tzit.net/htmlitjs/2018-10-25/2234.html)
-[Win10怎么把批处理文件固定到开始菜单](http://www.jb51.net/os/win10/483729.html) | [解决TCP/IP筛选的实用设置问题](https://jingyan.baidu.com/article/851fbc37dc1e513e1f15ab27.html) | [如何在不重装服务器的情况下尝试解决sqlmaint.exe失败的问题](http://blog.csdn.net/zhaoyonghui100/article/details/8939950) | [Sql Server 2000清除日志方法介绍](https://yq.aliyun.com/ziliao/22450)
+[Win10怎么把批处理文件固定到开始菜单](http://www.jb51.net/os/win10/483729.html) | [解决TCP/IP筛选的实用设置问题](https://jingyan.baidu.com/article/851fbc37dc1e513e1f15ab27.html) | 
 [Flex转型Html学习随笔1——关于Html页面的div布局（上）](http://www.cnblogs.com/momoko8443/p/4302879.html) | [Flex转型Html学习随笔1——关于Html页面的div布局（下）](http://www.cnblogs.com/momoko8443/p/4303829.html)
-[OneAPM 工作两年总结](http://www.ituring.com.cn/article/497377)
+[OneAPM 工作两年总结](http://www.ituring.com.cn/article/497377) | [网站软件系统开发服务流程](https://www.gy52.com/show-75.html)
 [竞品分析－SWOT分析](https://zhuanlan.zhihu.com/p/181668340)
 [ffmpeg 常用命令汇总](https://blog.csdn.net/kingvon_liwei/article/details/79271361)
+[网易邮箱配置](http://www.163mailbox.cn/client-outlook-foxmail-settings.html)
+[折纸俱乐部](http://cn.origami-club.com/index.html) | [手艺活](https://www.shouyihuo.com/)
+[独立观察员•博客](http://dlgcy.com)
 
 
 ## 前端/案例
 [蓝蓝设计](http://www.lanlanwork.com/)
-[LayUI](https://www.layui.com/) | [HeyUI](https://www.heyui.top/) | [H-ui前端框架](http://www.h-ui.net/H-ui.admin.shtml) | [Android酷炫实用的开源框架（UI框架）](http://www.runoob.com/w3cnote/android-ui-framework.html)
-[Bootstrap模板](http://www.bootstrapmb.com/) | [后台界面模板](http://www.mycodes.net/154/3.htm) | [X-admin](http://x.xuebingsi.com/)
-[思美电商](http://test.8sk.cn/html/M0493/index.html)
+[LayUI](https://www.layui.com/) | [HeyUI](https://www.heyui.top/) | [H-ui前端框架](http://www.h-ui.net/H-ui.admin.shtml)
+[后台界面模板](http://www.mycodes.net/154/3.htm) | [Bootstrap模板](http://www.bootstrapmb.com/) | [Android酷炫实用的开源框架（UI框架）](http://www.runoob.com/w3cnote/android-ui-framework.html)
 [公司某项目前端技术积累](http://blog.csdn.net/sunyingyuan/article/details/38237139)
+[C/S框架网](http://www.csframework.com/)
 
 
 ## 数据库
@@ -124,6 +135,7 @@ description:
 [不同数据库之间表数据的实时同步-发布与订阅](https://blog.csdn.net/rand_muse/article/details/81326879)
 [Sqlserver 高并发和大数据存储方案](https://www.cnblogs.com/zfthm/p/6271346.html)
 [sqlserver 发布订阅的弊端](https://blog.csdn.net/yangzhawen/article/details/8019921)
+[如何在不重装服务器的情况下尝试解决sqlmaint.exe失败的问题](http://blog.csdn.net/zhaoyonghui100/article/details/8939950) | [Sql Server 2000清除日志方法介绍](https://yq.aliyun.com/ziliao/22450)
 
 
 ## 规则引擎
@@ -146,7 +158,7 @@ description:
 
 ## API
 [QQPusher推送服务](http://qqpusher.yanxianjun.com/doc/#/)
-[WxPusher微信推送服务](https://wxpusher.dingliqc.com/docs/#/)
+[WxPusher](https://wxpusher.zjiecode.com/admin/main) | [WxPusher微信推送服务API](https://wxpusher.dingliqc.com/docs/#/)
 
 
 ## Angular
@@ -158,6 +170,10 @@ description:
 [NgNice站点是由一批AngularJS爱好者发起的，致力于打造一个AngularJS的学习和经验分享平台。](http://www.ngnice.com/)
 [2013年度最强AngularJS资源合集](http://www.iteye.com/news/28651-AngularJS-Google-resource)                                                              |  [20个免费的 AngularJS 资源和开发教程](http://www.html5cn.org/article-9473-1.html)
 
+
+# B
+## BootStrap
+[Bootstrap：弹出框和提示框效果以及代码展示](https://www.cnblogs.com/cpcpc/p/7233898.html)
 
 # C
 
@@ -213,11 +229,18 @@ description:
 [WinForm控件设计：DataGridView的行统计实现](https://www.cnblogs.com/yyj/archive/2010/10/21/1857518.html)
 [C# Sftp操作](https://www.cnblogs.com/xihao/p/7746068.html)
 [VS2010 中更改项目名称](https://blog.csdn.net/jjp837661103/article/details/23332999)
+[C#winform 在任务栏中右键软件后的名字如何更改](https://bbs.csdn.net/topics/391544131?page=3)
+[让 CefSharp.WinForms 应用程序同时支持32位（x86）和64位（x64）的解决方案](https://my.oschina.net/u/4314113/blog/4772387)
+[如何：确定已安装的 .NET Framework 版本](https://blog.csdn.net/weixin_30341735/article/details/102210317)
+[WinForm中重绘滚动条以及用重绘的滚动条控制ListBox的滚动](https://www.cnblogs.com/airfey/archive/2009/04/01/1427590.html)
 
 
 ##CentOS
 [virtualbox安装centos并设置静态IP](https://blog.csdn.net/asdf_1234_/article/details/91470680)
 
+
+# D
+[DuiLib入门简明教程](https://blog.csdn.net/mao834099514/article/details/74837766)
 
 # E
 
@@ -272,7 +295,16 @@ description:
 
 
 ## GitHub
+下载方法：
+在本地用git克隆，在克隆的时候把地址稍微修改一下，也就是把github的镜像换成我们国内的，只需要在github.com域名后面加上.cnpmjs.org就可以了：
+例如： https://github.com/myproject/myapp.git
+改为： https://github.com.cnpmjs.org/myproject/myapp.git
 [AutoUpdater.NET](https://github.com/ravibpatel/AutoUpdater.NET)
+
+
+## Gogs
+[Gogs官网](https://gogs.io/)
+[Gogs基本使用介绍](https://www.cnblogs.com/Sungeek/p/9203038.html)
 
 
 # H
@@ -330,7 +362,8 @@ description:
 [jQuery插件库](http://www.jq22.com/)
 [36个引人注目JQuery导航菜单](http://www.cnblogs.com/ywqu/archive/2009/08/15/1546559.html)
 [JQuery DrawSVG](http://leocs.me/jquery-drawsvg/)
-[Datatables](https://datatables.net/download/)
+[Datatables](https://datatables.net/download/) | [jQuery - 第三方表格插件DataTables使用详解5（宽高尺寸、滚动条的设置）](https://www.hangge.com/blog/cache/detail_1986.html)
+[jquery-confirm](http://craftpip.github.io/jquery-confirm/)
 
 
 # K
@@ -375,14 +408,40 @@ description:
 
 # P
 
-## Python / Django
+## Python
 [Python小白教程](http://www.zglg.work/?page_id=535)
 [Python 经典小例子](https://github.com/jackzhenguo/python-small-examples)
-[Python 实现定时任务](https://lz5z.com/Python%E5%AE%9A%E6%97%B6%E4%BB%BB%E5%8A%A1%E7%9A%84%E5%AE%9E%E7%8E%B0%E6%96%B9%E5%BC%8F/) | [Python 实现定时任务](https://www.cnblogs.com/fengff/p/11011000.html)
+[Python 实现定时任务](https://lz5z.com/Python%E5%AE%9A%E6%97%B6%E4%BB%BB%E5%8A%A1%E7%9A%84%E5%AE%9E%E7%8E%B0%E6%96%B9%E5%BC%8F/)
 [Python实现自动化监控远程服务器](https://www.cnblogs.com/IT-LearnHall/p/9426235.html)
 [你都用 Python 来做什么？](https://www.zhihu.com/question/20799742)
+[老师，没装Python怎么运行Python工具啊？](https://www.bilibili.com/read/cv5401504/)
+### 爬虫
+### 数据分析
+### 机器学习
+### APP开发
+#### Kivy
+官网安装：https://kivy.org/doc/stable/installation/installation-windows.html
+或者通过下面方法安装。
+下载地址：https://www.lfd.uci.edu/~gohlke/pythonlibs/
+下载文件`Kivy-1.8.0-cp34-none-win_amd64.whl`
+[kivy--入门（一）（Windows）python](https://blog.csdn.net/liudadaxuexi/article/details/117607492)
+[Python Kivy（App开发） Windows安装打包步骤](https://blog.csdn.net/qq_37030400/article/details/107620264?utm_term=kivy%E6%89%93%E5%8C%85&utm_medium=distribute.pc_aggpage_search_result.none-task-blog-2~all~sobaiduweb~default-1-107620264&spm=3001.4430)
+[Kivy转apk——使用打包虚拟机（亲测~）](https://blog.csdn.net/tscaxx/article/details/107164787)
+[python打包apk闪退问题以及美化](https://blog.csdn.net/python__reported/article/details/108007036)
+[Kivy官方文档中文翻译g](https://www.kancloud.cn/gthank/kivydoc/127793)
+
+### 游戏开发
+#### Pygame
+### 自动化脚本
+### 网站开发
+#### Flask
+#### Django
+[Django中文网](https://www.django.cn/article/show-15.html)
+主题/框架：[Django-Vue-Admin](https://django-vue-admin.com/) | [django-vue-admin-pro](https://gitee.com/dvadmin/django-vue-admin-pro)
 
 [Django](https://www.cnblogs.com/suoning/p/5818869.html)  | [Django官方文档](https://docs.djangoproject.com/en/3.1/) | [Django 的认识，面试题](https://www.cnblogs.com/chongdongxiaoyu/p/9403399.html) | [Django 2.2 基础教程](https://code.ziqiangxuetang.com/django/django-tutorial.html) | [Django3.1教程](https://www.liujiangblog.com/course/django/2)
+表单：[django ModelForm操作及验证](https://www.jianshu.com/p/dee5806b27a1)
+
 [Django3.1连接SQL Server2017配置指引](https://www.pythonheidong.com/blog/article/274751/16b135ed6cdd5ce8d437/) | [linux python连接oracle数据库](https://www.cnblogs.com/ruiy/p/12876358.html) | [centos下用python连接oracle](https://www.cnblogs.com/haoyiyang/p/11309760.html)
 [django 权限设置-菜单显示](https://www.cnblogs.com/zhangqing979797/p/9962680.html)
 [阿里云部署django实现公网访问](https://www.cnblogs.com/xiaobingqianrui/p/9825174.html)
@@ -390,12 +449,15 @@ description:
 [django界面上弹出bootstrap modal对话框，对话框中包含iframe并请求一个新的页面](https://blog.csdn.net/u012561176/article/details/106539639)
 [django-ORM外键删除操作详解](https://www.cnblogs.com/ifdashui/p/11869949.html)
 [Windows下利用Apache部署多个Django项目](https://www.cnblogs.com/luodaxia/p/12505153.html)
-[老师，没装Python怎么运行Python工具啊？](https://www.bilibili.com/read/cv5401504/)
 [DJANGO ADMIN 一些有用的设置](https://www.cnblogs.com/wumingxiaoyao/p/6928297.html) | [Django - 用户认证、用户组、用户权限](https://www.cnblogs.com/alice-bj/p/9579833.html) | [django 用户认证 user对象](https://blog.csdn.net/m0_38061194/article/details/73369164)
 [DRF 三大认证的配置及使用方法](https://www.cnblogs.com/bowendown/p/12150431.html)
 [CSRF token的原理](https://www.cnblogs.com/mengbin0546/p/9966431.html) | [Django rest-framework框架-CSRF验证](https://blog.csdn.net/dlm520947/article/details/102112965) | [Django之CSRF、token验证、csrf装饰器、auth模块方法大全](https://www.cnblogs.com/guyouyin123/p/12194181.html) | [对于rest_framework,django自带的csrf组件居然不生效](https://www.cnblogs.com/python001-vip/p/12676333.html)
 [Django REST framework 使用JWT认证方式](https://blog.csdn.net/qq_41475058/article/details/113405639) | [django-rest-framework框架 第四篇 认证Authentication](https://www.cnblogs.com/zhichao123/p/10597267.html)
 [Django REST framework中的APIView的使用](https://blog.csdn.net/li944254211/article/details/109485799)
+[Django_web](https://github.com/StrayCamel247/Django_web)
+[序列化器 (Serializers)](https://www.cnblogs.com/catgatp/p/12898937.html)
+[Gunicorn简介、安装、配置、启动](https://blog.csdn.net/sitebus/article/details/104849817/)
+### BottleDjango
 
 
 # S
@@ -408,9 +470,11 @@ description:
 [用Setup Factory打包基于.Net的WinForm程序](https://blog.csdn.net/snlei/article/details/4083037)
 [完美解决SetupFactory 打包后安装出现注册表错误](https://blog.csdn.net/huruyiye_123/article/details/72649777)
 [C#之使用AutoUpdater自动更新客户端](https://www.cnblogs.com/GardenofEden/p/10337744.html)
+[SetupFactory-脚本](https://www.cnblogs.com/rcg714786690/p/12584473.html)
 
 
 ## SQLite
+[SQLite 教程](http://www.runoob.com/sqlite/sqlite-tutorial.html)
 [(C#) SQLite数据库连接字符串](https://www.cnblogs.com/waw/p/5667409.html)
 [C#利用System.Data.SQLite实现对SQLite的操作](https://blog.csdn.net/weixin_41732430/article/details/83753628)
 [Sqlite大数据写入性能优化](https://www.cnblogs.com/yisen-code/p/6897524.html)
