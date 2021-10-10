@@ -73,7 +73,7 @@ pagination_dir: page
 theme: next
 
 stylus:
-  compress: true #自适应布局
+  compress: true # 自适应布局
 
 # 本地搜索
 search:
