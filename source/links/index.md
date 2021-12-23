@@ -11,14 +11,13 @@ description:
 </style>
 <div class="search-wrapper" style="padding: 0em 0em 0em 0em;">
 	<p align="center" style="margin-top: -65px;margin-left: 0">
-	<form id="search-form" action="//www.baidu.com/baidu" target="_blank" style="">
+	<form id="search-form" action="//www.baidu.com/baidu" target="_blank">
 		<input id="q-word" type="hidden" name="q"/>
-		<input id="b-word" type="text"   name="word" size="40" style="margin-bottom: 1.3px;width:100%;height:30px;" placeholder="秘迹搜索：安全、聚合百度、360、Bing、搜狗等" />
+		<input id="b-word" type="text"   name="word" size="40" style="margin-bottom: 1.3px;width:100%;height:30px;" placeholder="辅助狗：搜索开源软件" />
 		<input id="b-btn" class="btn-edge" type="submit" value="百度一下"/>
 		<input id="g-btn" class="btn-edge" type="submit" value="Google"/>
-		<input id="o-btn" class="btn-edge" type="submit" value="聚合搜索"/>
-		<input id="w-btn" class="btn-edge" type="submit" value="Bing"/>
-		<input id="m-btn" class="btn-edge" type="submit" value="秘迹搜索"/>
+		<input id="m-btn" class="btn-edge" type="submit" value="Bing"/>
+		<input id="f-btn" class="btn-edge" type="submit" value="辅助狗"/>
 	</form>
 </div>
 
@@ -33,21 +32,21 @@ description:
 
 # 常用
 [百度翻译](https://fanyi.baidu.com/) | [Google翻译](https://translate.google.cn/?hl=zh-CN&tab=TT) | [天气万年历](https://wannianli.tianqi.com/today/zhou/) | [实况摄像头](https://www.skylinewebcams.com/zh/webcam/maldives/lhaviyani-atoll/kurendhoo/kuredu-island.html)
-[cnBeta](http://www.cnbeta.com/)  | [不死鸟发布页](https://dalao.ru/) | [不死鸟](https://iao.su/) | [分享网络有趣资源](https://gg0.net/) | [免费吧](http://www.mianfeib.me/) | [小部落](https://www.xbl100.com/) | [老D博客](https://laod.cn/) | [有意思吧](https://www.youyisi8.com/) | [tiktok 在线观看](https://urlebird.com/)
-[今日热榜](https://tophub.today/) | [科塔学术导航](https://site.sciping.com/) | [手机抢购网](http://www.qianggou5.com/price/) | [药房网](https://www.yaofangwang.com/) | [医学微视](https://www.mvyxws.com/) | [WikiHow](https://zh.wikihow.com/%E9%A6%96%E9%A1%B5)
+[今日热榜](https://tophub.today/) | [cnBeta](http://www.cnbeta.com/)  | [Hacker News](https://hackernews.cc/) | [不死鸟发布页](https://dalao.ru/) | [不死鸟](https://iao.su/) | [小部落](https://www.xbl100.com/) | [老D博客](https://laod.cn/) | [有意思吧](https://www.youyisi8.com/)
+[科塔学术导航](https://site.sciping.com/) | [手机抢购网](http://www.qianggou5.com/price/) | [药房网](https://www.yaofangwang.com/) | [医学微视](https://www.mvyxws.com/) | [WikiHow](https://zh.wikihow.com/%E9%A6%96%E9%A1%B5)
 [希赛网](https://www.educity.cn/) | [中国国际人才交流基金会项目管理网站](http://exam.chinapmp.cn/) | [PMI](https://www.pmi.org/)
+[Guidebook数字生活指南](https://nav.guidebook.top/)
 
 
 ## 音乐
-[听雨](http://rain.xxoojoke.com/) |  [AeKun](https://www.aekun.com/ ) | [天天静听](http://47.112.23.238/) | [网易云音乐](http://music.163.com) | [音乐磁场](https://www.hifini.com/) | [麦田音乐网](https://www.mtyyw.com/) | [Music Today](https://themusic.today/)
-[VIP付费音乐解析下载](https://music.zhuolin.wang/) | [音乐直链搜索](https://music.liuzhijin.cn/) | [音乐搜索器](http://www.xieqian.vip/music/) | [音乐搜索器](http://www.guqiankun.com/tools/music/) | [网易云音乐下载](http://y.jsososo.com)
+[AeKun](https://www.aekun.com/) | [音乐磁场](https://www.hifini.com/) | [麦田音乐网](https://www.mtyyw.com/) | [网易云音乐](http://music.163.com)
+[VIP付费音乐解析下载](https://music.zhuolin.wang/) | [音乐直链搜索](https://music.liuzhijin.cn/) | [天天静听](http://47.112.23.238/)
 
 
 ## 电影
 [映像讯](http://mkv.cn/) | [影视森林](http://www.549.tv/) | [免费的在线影视网站汇总](https://iao.su/531/)
-[破晓电影](http://www.poxiao.com) |  [爱剧网](https://www.aitvplay.com/) | [谷易电影](https://www.guyidy.com/) | [泡饭影视](https://www.paofans.com/) | [神鸡影视](http://n7f6.cn/) | [新奇遇电影](https://www.newqiyu.com/) | [4K鸭](https://4kya.com/) | [哔嘀影视](https://bde4.cc/)
-[天天美剧](http://www.ttmeiju.me/) | [99美剧网](https://www.jjmeiju.com/) | [美剧粉](http://www.mjf2020.com/)
-[BT之家](https://www.91btbtt.com/) | [BT之家](https://www.52btbtt.com/)
+[破晓电影](http://www.poxiao.com) | [泡饭影视](https://www.paofans.com/)
+[美剧粉](http://www.mjf2020.com/)
 
 
 ## 游戏
@@ -55,19 +54,19 @@ description:
 
 
 ## 美图
-[it.me](http://www.topit.pro/) | [CNU视觉联盟](http://www.cnu.cc/inspirationPage/recent-0) | [lala 图库](https://233.fi/explore/trending) | [网红精选](https://xn--wcsw84dcxi8ta.xyz/) | [360°航拍全景](https://airpano.org.cn/) | [免费版权图片搜索](https://www.logosc.cn/so/) | [抖你妹](https://www.dounimei.net/)
+[it.me](http://www.topit.pro/) | [CNU视觉联盟](http://www.cnu.cc/inspirationPage/recent-0) | [360°航拍全景](https://airpano.org.cn/) | [免费版权图片搜索](https://www.logosc.cn/so/)
 
 
 # 在线工具
-[Guidebook数字生活指南](https://nav.guidebook.top/)
 [drawio](https://app.diagrams.net/) | [百度脑图](https://naotu.baidu.com/home) | [GitMind](https://gitmind.cn/)
 [分享笔记](https://sharenote.app/) | [拷贝兔](https://cp.anyknew.com/) | [鸡毛信](https://cmd.im/) | [鸡霸图床](https://gejiba.com/) | [田字格笔顺 字帖生成器](https://lab.feifanju.com/zitie/) | [滚动横幅](https://www.iamverylovely.com/scroll/)
-[短链接](https://url.4qo.cn/#/) | [域名查询](https://lab.feifanju.com/domain-query/) | [在线HTTP POST/GET接口测试工具](https://lab.feifanju.com/http/index.html) | [临时邮箱](https://linshiyouxiang.net/) | [临时手机号](https://jiemahao.com/)
+[短链接](https://url.4qo.cn/#/) | [Ping](https://ping.eu/ping/) | [域名查询](https://lab.feifanju.com/domain-query/) | [在线HTTP POST/GET接口测试工具](https://lab.feifanju.com/http/index.html) | [临时邮箱](https://linshiyouxiang.net/) | [临时手机号](https://jiemahao.com/)
 [独特工具箱](https://www.dute.org/) | [在线工具](http://tool.lu/)  |  [在线工具](http://tool.oschina.net/) | [UU在线工具](https://uutool.cn/) | [JSON在线解析及格式化验证](http://www.json.cn/)  |  [转换json格式为C#类](http://json2csharp.chahuo.com/)
 [生成随机密码](https://suijimimashengcheng.51240.com/) | [密码强度检测](https://mimaqiangdu.51240.com/) | [PMD5](http://pmd5.com/#)  |  [输入让你无语的MD5](https://www.somd5.com/)   |  [在线MD5暴力破解](http://www.atool.org/md5-crack.php) | [核心价值编码器](https://sym233.github.io/core-values-encoder/)
 [在线文件转换器](https://cn.office-converter.com/) | [在线格式转换](https://www.alltoall.net/) | [PDF派](https://www.pdfpai.com/) |  [png在线转ico](http://www.easyicon.net/covert/) | [图片背景变成透明](https://transparent.zhaoxi.net/) | [做好图](http://www.zuohaotu.com/)  |  [MakePic.com 图片制造](http://www.makepic.com/)  |  [removebg图片背景消除](https://www.remove.bg/ ) | [waifu2x无损放大图片](http://waifu2x.udp.jp/index.zh-CN.html) | [图片无限变大](http://bigjpg.com/zh) | [草料二维码美化器](http://mh.cli.im/) | [头像生成器](https://www.moubao.vip/)
 [在线制作您的Logo](https://www.logaster.cn/) | [小米LOGO生成器](https://mi-logo.lvwzhen.com/) | [免费logo在线制作](http://www.uugai.com/)
 [在线短信轰炸](https://qinggongju.com/dx/)
+[体验网盘不限速下载，验证码：6845](http://o.jamfer.com/bdwp.php)
 
 
 # 社区
@@ -190,7 +189,7 @@ description:
 [C#（Net）软件开发常用工具汇总，提高你的开发效率](https://www.cnblogs.com/Jeremy2001/p/6066553.html)
 [Winform自动更新组件分享](http://www.cnblogs.com/KnightsWarrior/archive/2010/10/20/1856255.html#3754564)
 [Winform(C#.NET)自动更新组件的使用及部分功能实现](https://www.cnblogs.com/24la/p/autoupdater-component.html)
-[C#之使用AutoUpdater自动更新客户端](https://www.e-learn.cn/content/net/1985327)
+[C#之使用AutoUpdater自动更新客户端](https://www.cnblogs.com/GardenofEden/p/10337744.html)
 [厚积薄发，丰富的公用类库积累，助你高效进行系统开发（8）----非对称加密、BASE64加密、MD5等常用加密处理](http://www.cnblogs.com/wuhuacong/archive/2011/11/28/2266694.html)
 [Winform开发框架主界面设计展示](http://www.cnblogs.com/wuhuacong/p/3360648.html)
 [仿Office的程序载入窗体](https://www.cnblogs.com/HopeGi/p/3510809.html)
@@ -363,7 +362,8 @@ description:
 [36个引人注目JQuery导航菜单](http://www.cnblogs.com/ywqu/archive/2009/08/15/1546559.html)
 [JQuery DrawSVG](http://leocs.me/jquery-drawsvg/)
 [Datatables](https://datatables.net/download/) | [jQuery - 第三方表格插件DataTables使用详解5（宽高尺寸、滚动条的设置）](https://www.hangge.com/blog/cache/detail_1986.html)
-[jquery-confirm](http://craftpip.github.io/jquery-confirm/)
+[jquery-confirm](http://craftpip.github.io/jquery-confirm/) | [jquery-confirm中文网](https://www.jquery-confirm.cn/)
+[如何用纯js做一个大富翁游戏](https://www.cnblogs.com/PeggyChan/p/11075066.html)
 
 
 # K
@@ -457,6 +457,9 @@ description:
 [Django_web](https://github.com/StrayCamel247/Django_web)
 [序列化器 (Serializers)](https://www.cnblogs.com/catgatp/p/12898937.html)
 [Gunicorn简介、安装、配置、启动](https://blog.csdn.net/sitebus/article/details/104849817/)
+定时任务：
+[django-apscheduler定时任务](https://www.cnblogs.com/weidaijie/p/12747685.html) | [django apscheduler 定时任务（下篇）](https://www.cnblogs.com/SunshineKimi/p/14879465.html)
+
 ### BottleDjango
 
 
@@ -469,8 +472,8 @@ description:
 [Winform打包工具SetupFactory 9 的使用](https://www.cnblogs.com/iiwen/p/5310246.html)
 [用Setup Factory打包基于.Net的WinForm程序](https://blog.csdn.net/snlei/article/details/4083037)
 [完美解决SetupFactory 打包后安装出现注册表错误](https://blog.csdn.net/huruyiye_123/article/details/72649777)
-[C#之使用AutoUpdater自动更新客户端](https://www.cnblogs.com/GardenofEden/p/10337744.html)
 [SetupFactory-脚本](https://www.cnblogs.com/rcg714786690/p/12584473.html)
+[免费的打包软件 Inno Setup](https://jrsoftware.org/isdl.php)
 
 
 ## SQLite
@@ -514,6 +517,10 @@ description:
 
 
 # W
+
+## WeChat微信小程序
+[微信官方文档](https://developers.weixin.qq.com/miniprogram/dev/framework/)
+[微信小程序登录流程（自定义账号绑定功能）](https://www.freesion.com/article/62801422805/) | [java 微信根据code获取openid](https://blog.csdn.net/lihe_983798789/article/details/99540796)
 
 ## Windows
 [robocopy的用法](https://www.cnblogs.com/zhanglei1371/p/6724167.html)

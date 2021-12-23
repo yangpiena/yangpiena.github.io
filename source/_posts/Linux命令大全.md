@@ -151,10 +151,14 @@ tags: [Linux, 命令]
 | service firewalld start      										| 开户防火墙                                            |
 
 ### 防火墙（CentOS8）
-| 命令                                         						| 说明                                               	|
-| ---------------                              						| :---------------                                      |
-| systemctl status firewalld.service			| 查看服务状态                                       |
+| 命令                                         	| 说明                                             |
+| ---------------                              	| :---------------                                 |
+| systemctl status firewalld.service			| 查看服务状态                                     |
 | systemctl start firewalld.service				| 打开防火墙                                       |
 | systemctl stop  firewalld.service				| 关闭防火墙                                       |
-| systemctl enable  firewalld.service			| 开启防火墙                                      |
+| systemctl enable  firewalld.service			| 开启防火墙                                       |
 | systemctl disable firewalld.service			| 禁用防火墙                                       |
+| ---------------                               | :---------------                                 |
+| firewall-cmd --list-all                       | 查看已经开放的端口                               |
+| firewall-cmd --add-port=8848/tcp --permanent  | 增加目标端口                                     |
+| firewall-cmd --reload                         | 重启防火墙                                       |

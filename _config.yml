@@ -115,15 +115,15 @@ live2d:
 ## github: git@github.com:yangpiena/yangpiena.github.io.git,master
 ## coding: https://git.coding.net/yangpiena/yangpiena.git,master  #git仓库地址，替换成你的username即可，其他保持不变，后面会提到如何创建git仓库
 
-deploy: 
+deploy:  
+- type: git
+  repo: git@gitee.com:yangpiena/yangpiena.git
+  branch: master
+  
 - type: git
   repo: git@github.com:yangpiena/yangpiena.github.io.git
   branch: master
   
 - type: git
-  repo: git@gitee.com:yangpiena/yangpiena.gitee.io.git
-  branch: master
-  
-- type: git
-  repo: https://git.coding.net/yangpiena/yangpiena.git
+  repo: git@e.coding.net:yangpiena/yangpiena/yangpiena.git
   branch: master

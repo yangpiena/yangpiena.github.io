@@ -310,8 +310,13 @@ drop table #临时表名;
 drop table ##临时表名;
 ```
 ## 26. 关联表更新
+SQL SERVER
 ```sql
-UPDATE A SET A.b=B.d FROM tableA A INNER JOIN tableB B ON A.a = B.a
+UPDATE A SET A.b=B.d FROM tableA A INNER JOIN tableB B ON A.a = B.a;
+```
+MYSQL
+```sql
+UPDATE tableA A INNER JOIN tableB B ON A.a = B.a SET A.b=B.d;
 ```
 ## 27. 查看表的所有外键关系
 ```sql

@@ -119,9 +119,13 @@ pip --default-timeout=100 install requirements.txt -i http://pypi.douban.com/sim
 ```python
 pip install pytz
 ```
-> - 如果使用了数据库驱动：SQL Server Native Client 11.0，则要安装：
+> - 如果使用了数据库驱动：SQL Server Native Client 11.0，则要安装（仅限Django2）：
 ```python
 pip install django-pyodbc-azure pyodbc
+```
+> - 如果使用了数据库驱动：SQL Server Native Client 10.0，首先安装驱动程序 SQL Server Native Client 10.0 ，可直接安装navicat11会自带，或在navicat的安装目录中找到 sqlncli_x64.msi 安装，最后再安装（适用于Django3以上，且该安装包必须最后一步安装才能生效）：
+```
+pip install django-mssql-backend
 ```
 ### 离线安装
 1. 有网络下，先下载离线包
@@ -255,8 +259,10 @@ Alias /static C:\xxgl\static
     Options None  
     Require all granted  
 </Directory>
+WSGIApplicationGroup %{GLOBAL} 
 ```
 	其中xxgl为我的工程文件夹。编辑完成后保存文件，回到服务器管理器，找到apache2.4服务，重启服务。
+	如果项目配置了Apscheduler定时服务，服务启动后无法正常访问，一直转圈中，则必需增加`WSGIApplicationGroup %{GLOBAL} `
 	如果之前配置都没问题，浏览器输入http://127.0.0.1:80 ，就会见到Django页面了。
 
 # 升级Django项目

@@ -108,7 +108,7 @@
 <meta property="og:site_name" content="昜丿捺">
 <meta property="og:description" content="本教程主要记录在Windows上如何部署Django项目">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2021-08-13T05:14:05.728Z">
+<meta property="og:updated_time" content="2021-11-29T08:42:54.962Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Python之Django项目部署到Windows">
 <meta name="twitter:description" content="本教程主要记录在Windows上如何部署Django项目">
@@ -454,7 +454,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2021-08-13 13:14:05" itemprop="dateModified" datetime="2021-08-13T13:14:05+08:00">2021-08-13</time>
+                <time title="修改时间：2021-11-29 16:42:54" itemprop="dateModified" datetime="2021-11-29T16:42:54+08:00">2021-11-29</time>
               
             
           </span>
@@ -599,8 +599,11 @@
 <li><p>如果启动项目时提示缺少<code>pytz</code>，可执行下面命令安装：</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip install pytz</span><br></pre></td></tr></table></figure>
 </li>
-<li><p>如果使用了数据库驱动：SQL Server Native Client 11.0，则要安装：</p>
+<li><p>如果使用了数据库驱动：SQL Server Native Client 11.0，则要安装（仅限Django2）：</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip install django-pyodbc-azure pyodbc</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>如果使用了数据库驱动：SQL Server Native Client 10.0，首先安装驱动程序 SQL Server Native Client 10.0 ，可直接安装navicat11会自带，或在navicat的安装目录中找到 sqlncli_x64.msi 安装，最后再安装（适用于Django3以上，且该安装包必须最后一步安装才能生效）：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip install django-mssql-backend</span><br></pre></td></tr></table></figure>
 </li>
 </ul>
 </blockquote>
@@ -668,8 +671,8 @@
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">LoadFile &quot;c:/program files/python37/python37.dll&quot;</span><br><span class="line">LoadModule wsgi_module &quot;c:/program files/python37/lib/site-packages/mod_wsgi/server/mod_wsgi.cp37-win_amd64.pyd&quot;</span><br><span class="line">WSGIPythonHome &quot;c:/program files/python37&quot;</span><br></pre></td></tr></table></figure>
 <p> 至此，mod_wsgi安装成功。</p>
 <h2 id="部署Django项目到Apache"><a href="#部署Django项目到Apache" class="headerlink" title="部署Django项目到Apache"></a>部署Django项目到Apache</h2><p>再次打开httpd.conf文件，在最末尾添加如下代码：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">#安装wsgi模块后，出来的三行字符，直接复制过来</span><br><span class="line">LoadFile &quot;c:/program files/python37/python37.dll&quot;</span><br><span class="line">LoadModule wsgi_module &quot;c:/program files/python37/lib/site-packages/mod_wsgi/server/mod_wsgi.cp37-win_amd64.pyd&quot;</span><br><span class="line">WSGIPythonHome &quot;c:/program files/python37&quot;</span><br><span class="line">#设置工程中的wsgi路径</span><br><span class="line">WSGIScriptAlias / C:\xxgl\xxgl\wsgi.py</span><br><span class="line">#设置工程路径</span><br><span class="line">WSGIPythonPath C:\xxgl</span><br><span class="line">#设置wsgi路径</span><br><span class="line">&lt;Directory C:\xxgl\xxgl&gt;</span><br><span class="line">    &lt;Files wsgi.py&gt;</span><br><span class="line">        Require all granted</span><br><span class="line">    &lt;/Files&gt;</span><br><span class="line">&lt;/Directory&gt;</span><br><span class="line">#设置静态文件路径</span><br><span class="line">Alias /static C:\xxgl\static</span><br><span class="line">&lt;Directory C:\xxgl\static&gt;  </span><br><span class="line">    AllowOverride None  </span><br><span class="line">    Options None  </span><br><span class="line">    Require all granted  </span><br><span class="line">&lt;/Directory&gt;</span><br></pre></td></tr></table></figure>
-<p> 其中xxgl为我的工程文件夹。编辑完成后保存文件，回到服务器管理器，找到apache2.4服务，重启服务。<br> 如果之前配置都没问题，浏览器输入<a href="http://127.0.0.1:80" target="_blank" rel="noopener">http://127.0.0.1:80</a> ，就会见到Django页面了。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">#安装wsgi模块后，出来的三行字符，直接复制过来</span><br><span class="line">LoadFile &quot;c:/program files/python37/python37.dll&quot;</span><br><span class="line">LoadModule wsgi_module &quot;c:/program files/python37/lib/site-packages/mod_wsgi/server/mod_wsgi.cp37-win_amd64.pyd&quot;</span><br><span class="line">WSGIPythonHome &quot;c:/program files/python37&quot;</span><br><span class="line">#设置工程中的wsgi路径</span><br><span class="line">WSGIScriptAlias / C:\xxgl\xxgl\wsgi.py</span><br><span class="line">#设置工程路径</span><br><span class="line">WSGIPythonPath C:\xxgl</span><br><span class="line">#设置wsgi路径</span><br><span class="line">&lt;Directory C:\xxgl\xxgl&gt;</span><br><span class="line">    &lt;Files wsgi.py&gt;</span><br><span class="line">        Require all granted</span><br><span class="line">    &lt;/Files&gt;</span><br><span class="line">&lt;/Directory&gt;</span><br><span class="line">#设置静态文件路径</span><br><span class="line">Alias /static C:\xxgl\static</span><br><span class="line">&lt;Directory C:\xxgl\static&gt;  </span><br><span class="line">    AllowOverride None  </span><br><span class="line">    Options None  </span><br><span class="line">    Require all granted  </span><br><span class="line">&lt;/Directory&gt;</span><br><span class="line">WSGIApplicationGroup %&#123;GLOBAL&#125;</span><br></pre></td></tr></table></figure>
+<p> 其中xxgl为我的工程文件夹。编辑完成后保存文件，回到服务器管理器，找到apache2.4服务，重启服务。<br> 如果项目配置了Apscheduler定时服务，服务启动后无法正常访问，一直转圈中，则必需增加<code>WSGIApplicationGroup %{GLOBAL}</code><br> 如果之前配置都没问题，浏览器输入<a href="http://127.0.0.1:80" target="_blank" rel="noopener">http://127.0.0.1:80</a> ，就会见到Django页面了。</p>
 </li>
 </ol>
 <h1 id="升级Django项目"><a href="#升级Django项目" class="headerlink" title="升级Django项目"></a>升级Django项目</h1><ol>
@@ -759,7 +762,7 @@
   <p><span>本文标题:</span><a href="/2020/10/30/Python之Django项目部署到Windows/">Python之Django项目部署到Windows</a></p>
   <p><span>文章作者:</span><a href="/" title="访问 昜丿捺 的个人博客">昜丿捺</a></p>
   <p><span>发布时间:</span>2020年10月30日 - 23:37:22</p>
-  <p><span>最后更新:</span>2021年08月13日 - 13:14:05</p>
+  <p><span>最后更新:</span>2021年11月29日 - 16:42:54</p>
   <p><span>原始链接:</span><a href="/2020/10/30/Python之Django项目部署到Windows/" title="Python之Django项目部署到Windows">http://yangpiena.github.io/2020/10/30/Python之Django项目部署到Windows/</a>
     <span class="copy-path" title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="http://yangpiena.github.io/2020/10/30/Python之Django项目部署到Windows/" aria-label="复制成功！"></i></span>
   </p>
@@ -889,7 +892,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">84</span>
+                    <span class="site-state-item-count">85</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -1193,7 +1196,7 @@
       <i class="fa fa-area-chart"></i>
     </span>
     
-    <span title="站点总字数">234k</span>
+    <span title="站点总字数">238k</span>
   
 
   
@@ -1202,7 +1205,7 @@
       <i class="fa fa-coffee"></i>
     </span>
     
-    <span title="站点阅读时长">3:33</span>
+    <span title="站点阅读时长">3:36</span>
   
 </div>
 

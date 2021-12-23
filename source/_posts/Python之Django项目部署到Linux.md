@@ -20,11 +20,23 @@ description: 本教程主要记录在Linux上如何部署Django项目
 root用户下安装相应的编译工具
 ```
 yum -y groupinstall "Development tools"
+```
+```
 yum -y install zlib-devel bzip2-devel openssl-devel ncurses-devel sqlite-devel readline-devel tk-devel gdbm-devel db4-devel libpcap-devel xz-devel
+```
+```
 yum install -y libffi-devel zlib1g-dev
+```
+```
 yum install zlib* -y
+```
+```
 yum install gcc
 ```
+```
+yum install -y pcre-devel
+```
+[如果需要磁盘分区和格式化参考](/2017/08/10/Linux数据盘分区以及格式化/)
 
 
 ------------
@@ -78,6 +90,10 @@ rm -rf /usr/bin/pip3
 ```
 python --version
 ```
+或
+```
+python -V
+```
 如果出现下面错误：
 
 	localhost:/usr/local/download/Python-3.7.9 # python --version
@@ -107,7 +123,14 @@ export PATH=$PATH:$PYTHONHOME:$PYTHONPATH
 
 	zypper in zlib-devel bzip2-devel openssl-devel ncurses-devel sqlite-devel readline-devel tk-devel gdbm-devel db4-devel libpcap-devel xz-devel libffi-devel
 
-## 安装pip3
+## 测试和安装pip3
+```
+pip --version
+```
+或
+```
+pip -V
+```
 有时安装完python后，缺少pip，可用以下方法尝试安装。
 ### 方法一：安装setuptools
 1. 下载
@@ -158,6 +181,7 @@ sudo make && sudo make install
 ```python
 pip install django==3.1.7
 ```
+> 其它Django配置参考[Python之Django项目部署到Windows](/2020/10/30/Python之Django项目部署到Windows/)
 
 ## 配置MySQL
 安装mysqlclient依赖
@@ -167,6 +191,11 @@ pip install mysqlclient
 >  报错解决：
 [OSError: mysql_config not found](https://blog.csdn.net/weixin_30416871/article/details/98711474)
 [从No match for argument: gcc-devel 到centos8 的dnf](https://blog.csdn.net/zw3413/article/details/105152826)
+安装时报错ModuleNotFoundError: No module named '_ctypes'的解决办法：
+```
+yum install libffi-devel
+```
+然后重新编译安装python
 
 ## 配置Oracle
 必需组件：cx_Oracle、Oracle Instant Client
@@ -471,6 +500,15 @@ update user set host = '%' where user = 'root';
 	FLUSH PRIVILEGES;
 	```
 
+## 自动备份
+[MySQL自动备份参考](/2020/11/08/MySQL安装配置/)
+
+
+## 创建数据库
+```
+CREATE DATABASE `database_name` DEFAULT CHARACTER SET utf8 COLLATE utf8_unicode_ci;
+```
+
 
 ------------
 
@@ -478,11 +516,13 @@ update user set host = '%' where user = 'root';
 # 安装Gunicorn
 Gunicorn 绿色独角兽'是一个Python WSGI UNIX的HTTP服务器。这是一个pre-fork worker的模型，从Ruby的独角兽（Unicorn ）项目移植。该Gunicorn服务器大致与各种Web框架兼容，只需非常简单的执行，轻量级的资源消耗，以及相当迅速。
 Gunicorn 服务器作为wsgi app的容器，能够与各种Web框架兼容（flask，django等）,得益于gevent等技术，使用Gunicorn能够在基本不改变wsgi app代码的前提下，大幅度提高wsgi app的性能。
-安装命令：
+
+
+执行安装命令
 ```python
  pip install gunicorn
 ```
-## 创建软连接
+创建软连接
 ```
 ln -s /usr/local/python3/bin/gunicorn /usr/bin/gunicorn
 ```
@@ -491,6 +531,7 @@ Gunicorn可以以三种方式读取配置信息。
 第一种方式:从framework定义的配置信息中读取,目前只对 Paster 框架有效。本方式较少用到。
 第二种方式:在命令行中定义,命令行中定义的配置信息将会覆盖掉框架中定义的相同的参数名的值。
 第三种方式:将所有的参数信息,放到一个python文件中,只要是在命令行中可以定义的参数中,在配置文件中都可以定义。
+
 ### 命令行启动
 命令行有哪些参数可以通过gunicorn -h 查到。
 常用的有:
@@ -507,79 +548,130 @@ Gunicorn可以以三种方式读取配置信息。
 –worker-class	-k	有 sync, eventlet(并发), gevent, tornado, gthread选项	sync(同步)
 –reload		当代码有修改时，自动重启workers。适用于开发环境。	
 –reload_extra_files		扩展reload配置，增加templates，configurations等文件修改监控。	
-–check_config		检查配置	
-进入项目根目录下执行：
+–check_config		检查配置
+
+**进入项目根目录下执行**：
 ```python
-gunicorn cam.wsgi:application -w 2 -b 0.0.0.0:8000
+gunicorn cam.wsgi:application -w 2 -b 127.0.0.1:8000
 ```
 > cam.wsgi:application cam是你django工程的名称，后面不用改
 -w --workers 意思是要启动的进程数量
 -b --bind 绑定的IP地址和端口
 -k --worker-class 启动的worker类型（gthread,sync,eventlet,gevent,tornado）,默认是同步阻塞方式启动
 
-访问：0.0.0.0:8000
-
 ### 配置文件启动
 在项目根目录下创建配置文件 `gunicorn-config.py`（与setting.py同级目录）
 ```
+# 配置详解地址：https://blog.csdn.net/wenboyu/article/details/103083395?utm_medium=distribute.pc_aggpage_search_result.none-task-blog-2~aggregatepage~first_rank_v2~rank_aggregation-1-103083395.pc_agg_rank_aggregation&utm_term=gunicorn+%E5%8F%82%E6%95%B0%E9%85%8D%E7%BD%AE&spm=1000.2123.3001.4430
+# 服务访问地址：http://192.168.56.101/
+
 import multiprocessing
-bind = "0.0.0.0:8888" # 与nginx配置的端口一致
-chdir = "/usr/local/cam"
-timeout = 30
-workers = 2
-errorlog = ' ~/cam/log/error.log'
-accesslog = ' ~/cam/log/access.log'
-#loglevel = 'info'
-loglevel = 'error'
-proc_name = 'cam'      # 工程名
-keepalive = 6
-timeout = 65
-graceful_timeout = 10
-worker_connections = 100
+import os
+
+# 监听地址和端口
+bind = "127.0.0.1:8000"  # 与nginx配置的端口一致
+
+# 进程
+workers = multiprocessing.cpu_count() * 2 + 1  # 进程数量
+# 工作模式：
+# worker_class = 'gevent'  # 使用gevent模式，还可以使用sync模式（默认模式）
+# 同步Worker：sync 默认模式，也就是一次只处理一个请求
+# 异步Worker：通过 Eventlet、Gevent 实现的异步模式
+# 异步IO Worker：目前支持 gthread 和 gaiohttp 两种类型
+worker_connections = 100  # 客户端最大同时连接数，使用于 gevent 和 eventlet 工作模式时
+# 线程数：
+# threads = 2 # 指定每个进程开启的线程数
+# 工作进程中线程的数，建议值2-4 x CPU核心数
+# 此配置只适用于 gthread 进程工作方式， 因为gevent这种使用的是协程工作方式。
+timeout = 30  # worker超时时间，超时重启
+graceful_timeout = 10  # 接收到restart信号后，worker可以在graceful_timeout时间内，继续处理完当前requests
+keepalive = 5  # 连接上等待请求的秒数，默认情况下值为2。一般设定在1~5秒之间。
+
+# 调试
+reload = True  # 当代码有修改时，自动重启workers。适用于开发环境。
+# reload_extra_files = []  # 扩展reload配置，增加templates，configurations等文件修改监控。
+
+# server 机制
+path_of_current_file = os.path.abspath(__file__)
+path_of_current_dir = os.path.split(path_of_current_file)[0]
+chdir = path_of_current_dir  # 在app加载之前，进入到此目录
+# pidfile = ''               # 存储pid的文件路径
+
+# 日志
+loglevel = 'info'  # 日志等级：debug, info, warning, error, critical. 指的是错误日志的级别，而访问日志的级别无法设置
+# capture_output   # 重定向stdout/stderr到error log file
+accesslog = '/usr/local/tps/logs/access.log'  # 接收访问日志文件路径
+access_log_format = '%(t)s %(p)s %(h)s "%(r)s" %(s)s %(L)s %(b)s %(f)s" "%(a)s"'  # 设置gunicorn生成的访问日志格式，错误日志无法设置
+"""
+其每个选项的含义如下：
+h          remote address
+l          '-'
+u          currently '-', may be user name in future releases
+t          date of the request
+r          status line (e.g. ``GET / HTTP/1.1``)
+s          status
+b          response length or '-'
+f          referer
+a          user agent
+T          request time in seconds
+D          request time in microseconds
+L          request time in decimal seconds
+p          process ID
+"""
+errorlog = '/usr/local/tps/logs/error.log'  # 错误日志文件路径
+
+# 进程名
+# proc_name
+# 设置进程名(setproctitle)，在ps，top等命令中会看到. 缺省值为default_proc_name配置。
 ```
 启动可在任意路径下执行：
 ```
 gunicorn cam.wsgi:application -k gthread -c /usr/local/cam/gunicorn-config.py
 ```
 
-## 开机启动
+#### 开机启动
+编辑启动文件
 ```
 vi /etc/rc.d/rc.local
 ```
-加入内容：
+加入以下内容
 ```
 gunicorn cam.wsgi:application -k gthread -c /usr/local/cam/gunicorn-config.py
 ```
 
-## 创建服务
-- 建立服务文件
+### 服务启动
+建立服务文件
 ```
 vi /usr/lib/systemd/system/gunicorn.service
 ```
-	粘入下面内容：
-	```
-	[Unit]
-	After=syslog.target network.target remote-fs.target nss-lookup.target
-	[Service]
-	User=root
-	WorkingDirectory=/usr/local/cam
-	ExecStart=/bin/bash -c 'gunicorn cam.wsgi:application -k gthread -c /usr/local/cam/gunicorn-config.py'
-	Restart=on-failure
-	[Install]
-	WantedBy=multi-user.target
-	```
-	> 注意：systemd 不接受非绝对路径执行命令，需要依赖bush-ism，如：`/bin/bash -c 'gunicorn cam.wsgi:application -k gthread -c /usr/local/cam/gunicorn-config.py'`，否则会出现 Executable path is not absolute 的问题 (systemctl status gunicorn.service 中)
+粘入下面内容：
+```
+[Unit]
+After=syslog.target network.target remote-fs.target nss-lookup.target
+[Service]
+User=root
+WorkingDirectory=/usr/local/cam
+ExecStart=/bin/bash -c 'gunicorn cam.wsgi:application -k gthread -c /usr/local/cam/gunicorn-config.py'
+Restart=on-failure
+[Install]
+WantedBy=multi-user.target
+```
+> 注意：systemd 不接受非绝对路径执行命令，需要依赖bush-ism，如：`/bin/bash -c 'gunicorn cam.wsgi:application -k gthread -c /usr/local/cam/gunicorn-config.py'`，否则会出现 Executable path is not absolute 的问题 (systemctl status gunicorn.service 中)
 
-- 使服务文件生效
+使服务文件生效
 ```
 systemctl daemon-reload
 ```
 
-- 启动gunicorn服务
+启动服务
 ```
 systemctl start gunicorn.service
 ```
-	> [其它服务命令参考](/2016/11/22/Linux命令大全/)
+> [其它服务命令参考](/2016/11/22/Linux命令大全/)
+
+## 访问
+http://127.0.0.1:8000
+
 
 ------------
 
@@ -653,48 +745,48 @@ cd /usr/local/nginx/sbin
 命令帮助：/usr/local/nginx/sbin/nginx -h
 
 ## 创建服务
-- 建立服务文件
+建立服务文件
 ```
 vi /usr/lib/systemd/system/nginx.service
 ```
-	粘如下面内容：
-	```
-	[Unit]
-	Description=nginx - high performance web server
-	After=network.target remote-fs.target nss-lookup.target
-	[Service]
-	Type=forking
-	ExecStart=/usr/local/nginx/sbin/nginx
-	ExecReload=/usr/local/nginx/sbin/nginx -s reload
-	ExecStop=/usr/local/nginx/sbin/nginx -s stop
-	[Install]
-	WantedBy=multi-user.target
-	```
+加入下面内容：
+```
+[Unit]
+Description=nginx - high performance web server
+After=network.target remote-fs.target nss-lookup.target
+[Service]
+Type=forking
+ExecStart=/usr/local/nginx/sbin/nginx
+ExecReload=/usr/local/nginx/sbin/nginx -s reload
+ExecStop=/usr/local/nginx/sbin/nginx -s stop
+[Install]
+WantedBy=multi-user.target
+```
 
-	> 文件内容解释: [Unit]: 服务的说明
-	Description:描述服务
-	After:描述服务类别
-	[Service]服务运行参数的设置
-	Type=forking是后台运行的形式
-	ExecStart为服务的具体运行命令
-	ExecReload为重启命令
-	ExecStop为停止命令
-	PrivateTmp=True表示给服务分配独立的临时空间
-	注意：启动、重启、停止命令全部要求使用绝对路径
-	[Install]服务安装的相关设置，可设置为多用户
+> 文件内容解释: [Unit]: 服务的说明
+Description:描述服务
+After:描述服务类别
+[Service]服务运行参数的设置
+Type=forking是后台运行的形式
+ExecStart为服务的具体运行命令
+ExecReload为重启命令
+ExecStop为停止命令
+PrivateTmp=True表示给服务分配独立的临时空间
+注意：启动、重启、停止命令全部要求使用绝对路径
+[Install]服务安装的相关设置，可设置为多用户
 
-- 使服务文件生效
+使服务文件生效
 ```
 systemctl daemon-reload
 ```
-	> 如果启动服务失败，则以754的权限保存在目录：
-	Chmod +754 /usr/lib/systemd/system/nginx.service
+> 如果启动服务失败，则以754的权限保存在目录：
+Chmod +754 /usr/lib/systemd/system/nginx.service
 
-- 启动gunicorn服务
+启动服务
 ```
 systemctl start nginx.service
 ```
-	> [其它服务命令参考](/2016/11/22/Linux命令大全/)
+> [其它服务命令参考](/2016/11/22/Linux命令大全/)
 
 ## 查询nginx主进程号
 ```
@@ -703,6 +795,17 @@ ps -ef | grep nginx
 从容停止 kill -QUIT 主进程号
 快速停止 kill -TERM 主进程号
 强制停止 kill -9 nginx
+
+
+------------
+
+
+# 开启防火墙
+为了安全，建议开启防火墙，只允许指定端口。
+> [防火墙服务命令参考](/2016/11/22/Linux命令大全/)
+
+
+------------
 
 
 # 参考

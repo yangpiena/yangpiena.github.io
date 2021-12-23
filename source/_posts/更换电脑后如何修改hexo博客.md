@@ -9,7 +9,13 @@ categories: 技术
 tags: [hexo]
 description: 生命在于折腾
 ---
-当重装电脑，或者想在其它电脑上修改博客，可以使用下列步骤：
+# 如果拷贝了项目目录：
+直接安装相对应版本的 hexo 即可正常使用。
+```
+cnpm install -g hexo@3.8.0
+```
+
+# 如果重新下载项目目录：
 1. 使用下面命令拷贝个人仓库（默认分支为source）到本地
 ```
 git clone git@github.com:yangpiena/yangpiena.github.io.git
@@ -23,6 +29,9 @@ cnpm install -g hexo
 	```
 	```
 	cnpm install hexo-deployer-git --save
+	```
+	```
+	cnpm install hexo-renderer-pug --save
 	```
 > 切记不要执行 hexo init 这条指令，否则会删除.git文件夹
 
