@@ -11,13 +11,15 @@ description:
 </style>
 <div class="search-wrapper" style="padding: 0em 0em 0em 0em;">
 	<p align="center" style="margin-top: -65px;margin-left: 0">
-	<form id="search-form" action="//www.baidu.com/baidu" target="_blank">
+	<form id="search-form" action="" target="_blank">
 		<input id="q-word" type="hidden" name="q"/>
 		<input id="b-word" type="text"   name="word" size="40" style="margin-bottom: 1.3px;width:100%;height:30px;" placeholder="辅助狗：搜索开源软件" />
 		<input id="b-btn" class="btn-edge" type="submit" value="百度一下"/>
 		<input id="g-btn" class="btn-edge" type="submit" value="Google"/>
 		<input id="m-btn" class="btn-edge" type="submit" value="Bing"/>
 		<input id="f-btn" class="btn-edge" type="submit" value="辅助狗"/>
+		<input id="d-btn" class="btn-edge" type="submit" value="多吉搜索"/>
+		<input id="c-btn" class="btn-edge" type="submit" value="F搜"/>
 	</form>
 </div>
 
@@ -40,7 +42,7 @@ description:
 
 ## 音乐
 [AeKun](https://www.aekun.com/) | [音乐磁场](https://www.hifini.com/) | [麦田音乐网](https://www.mtyyw.com/) | [网易云音乐](http://music.163.com)
-[VIP付费音乐解析下载](https://music.zhuolin.wang/) | [音乐直链搜索](https://music.liuzhijin.cn/) | [天天静听](http://47.112.23.238/)
+[VIP付费音乐解析下载](https://music.zhuolin.wang/) | [音乐直链搜索](https://music.liuzhijin.cn/) | [天天静听](http://47.112.23.238/) | [YesPlayMusic](https://music.qier222.com/)
 
 
 ## 电影
@@ -89,6 +91,7 @@ description:
 [ePUBw](https://epubw.com "多格式电子书下载网站，百度网盘分享下载")  |  [好读](http://www.haodoo.net/ "多格式电子书下载网站，很老的一个站")  |  [读书369](http://www.dushu369.com "基于名著小说在线阅读网站")  |  [100本](https://www.100ben.net/ "电子书在线阅读网站，整理了一生必读的100本书")
 [云海电子图书馆](http://www.pdfbook.cn/ "基于城通网赚网盘下载的电子书网站")  |  [中医学电子书](https://github.com/scienceasdf/medical-books/releases "貌似都是PDF格式的，作者一直还在更新中")  |  [医学电子书在线阅读](https://yixueshu.gitee.io/ "不错的医学电子书在线阅读网站，体验不错")  |  [编程随想](https://github.com/programthink/books "基于编程随想博主收录的电子书，多学科")
 [A+医学百科](http://www.a-hospital.com/ "在线医学百科全书")  |  [全历史](https://www.allhistory.com/ " 全方位了解历史的网站，也是一个不错的网站")  |  [瑞文网教材](https://www.ruiwen.com/jiaocai/ "提供人教版、北师大、苏教版、沪教版、浙教版、鲁科版、仁爱版英语等电子课本在线阅读")   |  [人教版中小学教材](https://bp.pep.com.cn/jc/ "人民教育出版社提供的中小学教材电子版下载（转自：免费吧 &raquo; 电子书下载网站大汇总(https://www.mianfeib.me/ebook-download-website.html)）")
+[无限小说网](https://www.555x.org/read/6977/6058577.html)
 
 
 ## 系统/软件下载
@@ -433,6 +436,8 @@ description:
 ### 游戏开发
 #### Pygame
 ### 自动化脚本
+[Selenium使用ChromeOptions启动参数](https://www.cnblogs.com/superhin/p/12607074.html)
+
 ### 网站开发
 #### Flask
 #### Django
