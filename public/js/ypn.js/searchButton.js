@@ -10,6 +10,7 @@ var favObj = {
 					'b-btn': 'https://www.baidu.com/baidu',
 					'g-btn': 'https://swag.pw/search',
 					'm-btn': 'https://cn.bing.com/search',
+					'p-btn': 'https://petalsearch.com/search',
 					'f-btn': 'https://www.fuzhugou.com/find',
 					'd-btn': 'https://www.dogdoggo.com/search',
 					'c-btn': 'https://fsou.cc/search'

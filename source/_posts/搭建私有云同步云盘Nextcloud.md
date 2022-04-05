@@ -447,14 +447,36 @@ ps -ef | grep memcached
 
 
 
+## OCC命令的用法
+occ命令是ownCloud/Nextcloud的命令行界面。您可以使用occ执行许多常见的服务器操作，例如安装和升级ownCloud/Nextcloud，管理用户，加密，密码，LDAP设置等。
+一般格式是这样的：
+```
+sudo -u www-data php occ [options] [arguments]
+```
+更多命令可参考：[ownCloud/Nextcloud OCC命令行工具详解](https://www.orgleaf.com/1719.html)
+
 ### 重置密码
+user相关命令：
+```
+user:add                            添加一个用户
+user:delete                         删除特定用户
+user:disable                        禁用特定用户
+user:enable                         激活特定用户
+user:info                           显示用户信息
+user:lastseen                       显示用户最后登陆了时间
+user:list                           列出所有用户
+user:report                         显示有多少用户访问
+user:resetpassword                  为一个用户重置密码
+user:setting                        读取和修改用户设置
+```
 假如管理员密码忘了，可利用OCC命令按以下步骤重置：
 1. 进入nextcloud目录下
-2. 查看用户
+2. 查看已有用户名列表
 ```
 sudo -u wwwrun php occ user:list
 ```
-3. 重置admin的密码
+3. 重置管理员账号admin的密码
 ```
 sudo -u wwwrun php occ user:resetpassword admin
 ```
+4. 按提示输入新密码即可。

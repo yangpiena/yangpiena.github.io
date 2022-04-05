@@ -17,6 +17,7 @@ description:
 		<input id="b-btn" class="btn-edge" type="submit" value="百度一下"/>
 		<input id="g-btn" class="btn-edge" type="submit" value="Google"/>
 		<input id="m-btn" class="btn-edge" type="submit" value="Bing"/>
+		<input id="p-btn" class="btn-edge" type="submit" value="Petal"/>
 		<input id="f-btn" class="btn-edge" type="submit" value="辅助狗"/>
 		<input id="d-btn" class="btn-edge" type="submit" value="多吉搜索"/>
 		<input id="c-btn" class="btn-edge" type="submit" value="F搜"/>
@@ -34,19 +35,19 @@ description:
 
 # 常用
 [百度翻译](https://fanyi.baidu.com/) | [Google翻译](https://translate.google.cn/?hl=zh-CN&tab=TT) | [天气万年历](https://wannianli.tianqi.com/today/zhou/) | [实况摄像头](https://www.skylinewebcams.com/zh/webcam/maldives/lhaviyani-atoll/kurendhoo/kuredu-island.html)
-[今日热榜](https://tophub.today/) | [cnBeta](http://www.cnbeta.com/)  | [Hacker News](https://hackernews.cc/) | [不死鸟发布页](https://dalao.ru/) | [不死鸟](https://iao.su/) | [小部落](https://www.xbl100.com/) | [老D博客](https://laod.cn/) | [有意思吧](https://www.youyisi8.com/)
+[今日热榜](https://tophub.today/) | [cnBeta](http://www.cnbeta.com/)  | [Hacker News](https://hackernews.cc/) | [不死鸟发布页](https://dalao.ru/) | [不死鸟](https://iao.su/) | [小部落](https://www.xbl100.com/) | [分享者](https://www.sharerw.com/) | [老D博客](https://laod.cn/) | [有意思吧](https://www.youyisi8.com/)
 [科塔学术导航](https://site.sciping.com/) | [手机抢购网](http://www.qianggou5.com/price/) | [药房网](https://www.yaofangwang.com/) | [医学微视](https://www.mvyxws.com/) | [WikiHow](https://zh.wikihow.com/%E9%A6%96%E9%A1%B5)
 [希赛网](https://www.educity.cn/) | [中国国际人才交流基金会项目管理网站](http://exam.chinapmp.cn/) | [PMI](https://www.pmi.org/)
-[Guidebook数字生活指南](https://nav.guidebook.top/)
+[Guidebook数字生活指南](https://nav.guidebook.top/) | [星际黑客](https://xj.hk/)
 
 
 ## 音乐
-[AeKun](https://www.aekun.com/) | [音乐磁场](https://www.hifini.com/) | [麦田音乐网](https://www.mtyyw.com/) | [网易云音乐](http://music.163.com)
+[SongTaste](https://songtaste.cm/) | [AeKun](https://www.aekun.com/) | [音乐磁场](https://www.hifini.com/) | [麦田音乐网](https://www.mtyyw.com/) | [网易云音乐](http://music.163.com)
 [VIP付费音乐解析下载](https://music.zhuolin.wang/) | [音乐直链搜索](https://music.liuzhijin.cn/) | [天天静听](http://47.112.23.238/) | [YesPlayMusic](https://music.qier222.com/)
 
 
 ## 电影
-[映像讯](http://mkv.cn/) | [影视森林](http://www.549.tv/) | [免费的在线影视网站汇总](https://iao.su/531/)
+[映像讯](http://mkv.cn/) | [影视森林](http://www.549.tv/) | [免费的在线影视网站汇总](https://iao.su/531/) | [HDmoli](https://molicp.com/)
 [破晓电影](http://www.poxiao.com) | [泡饭影视](https://www.paofans.com/)
 [美剧粉](http://www.mjf2020.com/)
 
@@ -61,13 +62,13 @@ description:
 
 # 在线工具
 [drawio](https://app.diagrams.net/) | [百度脑图](https://naotu.baidu.com/home) | [GitMind](https://gitmind.cn/)
-[分享笔记](https://sharenote.app/) | [拷贝兔](https://cp.anyknew.com/) | [鸡毛信](https://cmd.im/) | [鸡霸图床](https://gejiba.com/) | [田字格笔顺 字帖生成器](https://lab.feifanju.com/zitie/) | [滚动横幅](https://www.iamverylovely.com/scroll/)
+[分享笔记](https://sharenote.app/) | [拷贝兔](https://cp.anyknew.com/) | [鸡毛信](https://cmd.im/) | [鸡霸图床](https://gejiba.com/) | [田字格笔顺 字帖生成器](https://lab.feifanju.com/zitie/) | [滚动横幅](https://www.iamverylovely.com/scroll/) | [休息片刻](http://sit.widget4.com/)
 [短链接](https://url.4qo.cn/#/) | [Ping](https://ping.eu/ping/) | [域名查询](https://lab.feifanju.com/domain-query/) | [在线HTTP POST/GET接口测试工具](https://lab.feifanju.com/http/index.html) | [临时邮箱](https://linshiyouxiang.net/) | [临时手机号](https://jiemahao.com/)
 [独特工具箱](https://www.dute.org/) | [在线工具](http://tool.lu/)  |  [在线工具](http://tool.oschina.net/) | [UU在线工具](https://uutool.cn/) | [JSON在线解析及格式化验证](http://www.json.cn/)  |  [转换json格式为C#类](http://json2csharp.chahuo.com/)
 [生成随机密码](https://suijimimashengcheng.51240.com/) | [密码强度检测](https://mimaqiangdu.51240.com/) | [PMD5](http://pmd5.com/#)  |  [输入让你无语的MD5](https://www.somd5.com/)   |  [在线MD5暴力破解](http://www.atool.org/md5-crack.php) | [核心价值编码器](https://sym233.github.io/core-values-encoder/)
 [在线文件转换器](https://cn.office-converter.com/) | [在线格式转换](https://www.alltoall.net/) | [PDF派](https://www.pdfpai.com/) |  [png在线转ico](http://www.easyicon.net/covert/) | [图片背景变成透明](https://transparent.zhaoxi.net/) | [做好图](http://www.zuohaotu.com/)  |  [MakePic.com 图片制造](http://www.makepic.com/)  |  [removebg图片背景消除](https://www.remove.bg/ ) | [waifu2x无损放大图片](http://waifu2x.udp.jp/index.zh-CN.html) | [图片无限变大](http://bigjpg.com/zh) | [草料二维码美化器](http://mh.cli.im/) | [头像生成器](https://www.moubao.vip/)
 [在线制作您的Logo](https://www.logaster.cn/) | [小米LOGO生成器](https://mi-logo.lvwzhen.com/) | [免费logo在线制作](http://www.uugai.com/)
-[在线短信轰炸](https://qinggongju.com/dx/)
+[在线短信轰炸](https://qinggongju.com/dx/) | [文字转语音](https://toolight.cn/media/reading) | [智影](https://zenvideo.qq.com/home)
 [体验网盘不限速下载，验证码：6845](http://o.jamfer.com/bdwp.php)
 
 
@@ -85,6 +86,7 @@ description:
 
 
 ## 阅读/电子书
+[Z-Library在线图书馆](https://zh.my1lib.org/)
 [秘密花园](http://www.yini.org) | [微信读书排行榜 ~ 热门标注](http://klib.me/weread/hot/all.html)
 [鸠摩搜索](https://www.jiumodiary.com/ "电子书搜索引擎，提供各类电子书搜索下载，有多种格式")  |  [Library Genesis](http://gen.lib.rus.ec/ "英文电子书搜索引擎，可搜索英文原版的电子书，格式包含 PDF、MOBI 和 EPUB")  |  [i-Book.in](https://book.tstrs.me/ " 基于索引IPFS链接的电子书搜索引擎")  |  [epubee](http://cn.epubee.com/ "在线电子书转换器，同时也推荐一些电子书下载")
 [书单网](https://www.shudan.vip/ "电子书搜索网站，抓取第三方网站的资源，也有很多资源是通过城通网赚网盘下载")  |  [书舟网](http://kindle.archiew.top/ "电子书搜索下载网站，资源通过城通网赚网盘下载")  |  [Mobilism](https://forum.mobilism.org/viewforum.php?f=19 "电子书论坛，提供英文原版电子书下载")  |  [七彩英语](http://www.qcenglish.com/ "提供PDF或TXT格式的英文原版电子书下载")
@@ -92,6 +94,7 @@ description:
 [云海电子图书馆](http://www.pdfbook.cn/ "基于城通网赚网盘下载的电子书网站")  |  [中医学电子书](https://github.com/scienceasdf/medical-books/releases "貌似都是PDF格式的，作者一直还在更新中")  |  [医学电子书在线阅读](https://yixueshu.gitee.io/ "不错的医学电子书在线阅读网站，体验不错")  |  [编程随想](https://github.com/programthink/books "基于编程随想博主收录的电子书，多学科")
 [A+医学百科](http://www.a-hospital.com/ "在线医学百科全书")  |  [全历史](https://www.allhistory.com/ " 全方位了解历史的网站，也是一个不错的网站")  |  [瑞文网教材](https://www.ruiwen.com/jiaocai/ "提供人教版、北师大、苏教版、沪教版、浙教版、鲁科版、仁爱版英语等电子课本在线阅读")   |  [人教版中小学教材](https://bp.pep.com.cn/jc/ "人民教育出版社提供的中小学教材电子版下载（转自：免费吧 &raquo; 电子书下载网站大汇总(https://www.mianfeib.me/ebook-download-website.html)）")
 [无限小说网](https://www.555x.org/read/6977/6058577.html)
+[孔夫子旧书网](https://www.kongfz.com/)
 
 
 ## 系统/软件下载
@@ -100,6 +103,7 @@ description:
 [小众软件](https://www.appinn.com/) | [zd423](http://www.zdfans.com/) | [423down](https://www.423down.com/) | [我爱分享网](http://www.zhanshaoyi.com/rjxz.html) | [夜雨聆风](http://www.yeyulingfeng.com/) | [金狐维护盘](http://www.jinhu.me/) | [行客工作室](http://www.runker.net/) | [软猫下载](https://www.softmall.net/)
 [浏览迷](https://liulanmi.com/)    |  [Chrome浏览器插件下载中心](https://www.chromefor.com/)
 [阅读](http://www.legado.top/MyBookshelf/index.html)
+[好软分享](https://gitee.com/realyoyodadada/haoruanfenxiang/blob/master/List.md#https://gitee.com/link?target=https%3A%2F%2Fyoyodadada.lanzouw.com%2Fb01cvj0dc%23ht3r)
 
 
 ## 文章/教程
@@ -148,7 +152,7 @@ description:
 [webd](https://webd.cf/) | [Nextcloud](https://nextcloud.com/) | [悦库](http://www.ydisk.cn/index.html)
 [Nextcloud通过不被信任的域名访问解决方法 Nextcloud 您正在访问来自不信任域名的服务器](https://blog.csdn.net/g313105910/article/details/106381380)
 [nextcloud修改域名、IP或端口](https://www.cnblogs.com/mrcoolfuyu/p/13355522.html)
-[搭建自己私人网盘-Nextcloud](https://blog.csdn.net/qq_43099160/article/details/107081157)
+[自建企业网盘：镜像部署与使用实战](https://www.kancloud.cn/websoft9/cloudbox-practice/647724) | [搭建自己私人网盘-Nextcloud](https://blog.csdn.net/qq_43099160/article/details/107081157)
 [CentOS 7下安装Nextcloud搭建个人网盘](https://www.linuxidc.com/Linux/2018-11/155310.htm)
 [openSUSE 安装LAMP记录](https://www.cnblogs.com/fsong/p/6736030.html)
 [【伐木厮】使用Nextcloud搭建私有云储存](https://www.bilibili.com/read/cv4853751/)
@@ -412,15 +416,14 @@ description:
 # P
 
 ## Python
-[Python小白教程](http://www.zglg.work/?page_id=535)
-[Python 经典小例子](https://github.com/jackzhenguo/python-small-examples)
-[Python 实现定时任务](https://lz5z.com/Python%E5%AE%9A%E6%97%B6%E4%BB%BB%E5%8A%A1%E7%9A%84%E5%AE%9E%E7%8E%B0%E6%96%B9%E5%BC%8F/)
-[Python实现自动化监控远程服务器](https://www.cnblogs.com/IT-LearnHall/p/9426235.html)
-[你都用 Python 来做什么？](https://www.zhihu.com/question/20799742)
-[老师，没装Python怎么运行Python工具啊？](https://www.bilibili.com/read/cv5401504/)
+[Python小白教程](http://www.zglg.work/?page_id=535) | [Python 经典小例子](https://github.com/jackzhenguo/python-small-examples)
+
 ### 爬虫
+
 ### 数据分析
+
 ### 机器学习
+
 ### APP开发
 #### Kivy
 官网安装：https://kivy.org/doc/stable/installation/installation-windows.html
@@ -435,37 +438,44 @@ description:
 
 ### 游戏开发
 #### Pygame
+
 ### 自动化脚本
 [Selenium使用ChromeOptions启动参数](https://www.cnblogs.com/superhin/p/12607074.html)
+[Python实现自动化监控远程服务器](https://www.cnblogs.com/IT-LearnHall/p/9426235.html)
 
 ### 网站开发
 #### Flask
+
 #### Django
 [Django中文网](https://www.django.cn/article/show-15.html)
-主题/框架：[Django-Vue-Admin](https://django-vue-admin.com/) | [django-vue-admin-pro](https://gitee.com/dvadmin/django-vue-admin-pro)
-
-[Django](https://www.cnblogs.com/suoning/p/5818869.html)  | [Django官方文档](https://docs.djangoproject.com/en/3.1/) | [Django 的认识，面试题](https://www.cnblogs.com/chongdongxiaoyu/p/9403399.html) | [Django 2.2 基础教程](https://code.ziqiangxuetang.com/django/django-tutorial.html) | [Django3.1教程](https://www.liujiangblog.com/course/django/2)
-表单：[django ModelForm操作及验证](https://www.jianshu.com/p/dee5806b27a1)
-
+[Django](https://www.cnblogs.com/suoning/p/5818869.html)  | [Django官方文档](https://docs.djangoproject.com/en/3.1/) | [Django 2.2 基础教程](https://code.ziqiangxuetang.com/django/django-tutorial.html) | [Django3.1教程](https://www.liujiangblog.com/course/django/2)
+[Django 的认识，面试题](https://www.cnblogs.com/chongdongxiaoyu/p/9403399.html) 
+**主题/框架**
+[Django-Vue-Admin](https://django-vue-admin.com/) | [django-vue-admin-pro](https://gitee.com/dvadmin/django-vue-admin-pro)
+**数据库**
 [Django3.1连接SQL Server2017配置指引](https://www.pythonheidong.com/blog/article/274751/16b135ed6cdd5ce8d437/) | [linux python连接oracle数据库](https://www.cnblogs.com/ruiy/p/12876358.html) | [centos下用python连接oracle](https://www.cnblogs.com/haoyiyang/p/11309760.html)
-[django 权限设置-菜单显示](https://www.cnblogs.com/zhangqing979797/p/9962680.html)
-[阿里云部署django实现公网访问](https://www.cnblogs.com/xiaobingqianrui/p/9825174.html)
 [Python/Django – 避免在源代码中保存密码](http://www.voidcn.com/article/p-eoxnnhgp-bst.html) | [如果不想在django 的settings中保存mysql数据库的密码](https://www.cnblogs.com/worldinmyeyes/p/12109371.html)
-[django界面上弹出bootstrap modal对话框，对话框中包含iframe并请求一个新的页面](https://blog.csdn.net/u012561176/article/details/106539639)
 [django-ORM外键删除操作详解](https://www.cnblogs.com/ifdashui/p/11869949.html)
-[Windows下利用Apache部署多个Django项目](https://www.cnblogs.com/luodaxia/p/12505153.html)
+**表单**
+[django ModelForm操作及验证](https://www.jianshu.com/p/dee5806b27a1)
+[序列化器 (Serializers)](https://www.cnblogs.com/catgatp/p/12898937.html)
 [DJANGO ADMIN 一些有用的设置](https://www.cnblogs.com/wumingxiaoyao/p/6928297.html) | [Django - 用户认证、用户组、用户权限](https://www.cnblogs.com/alice-bj/p/9579833.html) | [django 用户认证 user对象](https://blog.csdn.net/m0_38061194/article/details/73369164)
+[django 权限设置-菜单显示](https://www.cnblogs.com/zhangqing979797/p/9962680.html)
+[django界面上弹出bootstrap modal对话框，对话框中包含iframe并请求一个新的页面](https://blog.csdn.net/u012561176/article/details/106539639)
+**认证**
 [DRF 三大认证的配置及使用方法](https://www.cnblogs.com/bowendown/p/12150431.html)
 [CSRF token的原理](https://www.cnblogs.com/mengbin0546/p/9966431.html) | [Django rest-framework框架-CSRF验证](https://blog.csdn.net/dlm520947/article/details/102112965) | [Django之CSRF、token验证、csrf装饰器、auth模块方法大全](https://www.cnblogs.com/guyouyin123/p/12194181.html) | [对于rest_framework,django自带的csrf组件居然不生效](https://www.cnblogs.com/python001-vip/p/12676333.html)
 [Django REST framework 使用JWT认证方式](https://blog.csdn.net/qq_41475058/article/details/113405639) | [django-rest-framework框架 第四篇 认证Authentication](https://www.cnblogs.com/zhichao123/p/10597267.html)
 [Django REST framework中的APIView的使用](https://blog.csdn.net/li944254211/article/details/109485799)
-[Django_web](https://github.com/StrayCamel247/Django_web)
-[序列化器 (Serializers)](https://www.cnblogs.com/catgatp/p/12898937.html)
+**部署**
 [Gunicorn简介、安装、配置、启动](https://blog.csdn.net/sitebus/article/details/104849817/)
-定时任务：
+[Windows下利用Apache部署多个Django项目](https://www.cnblogs.com/luodaxia/p/12505153.html)
+[阿里云部署django实现公网访问](https://www.cnblogs.com/xiaobingqianrui/p/9825174.html)
+**定时任务**
+[Python 实现定时任务](https://lz5z.com/Python%E5%AE%9A%E6%97%B6%E4%BB%BB%E5%8A%A1%E7%9A%84%E5%AE%9E%E7%8E%B0%E6%96%B9%E5%BC%8F/)
 [django-apscheduler定时任务](https://www.cnblogs.com/weidaijie/p/12747685.html) | [django apscheduler 定时任务（下篇）](https://www.cnblogs.com/SunshineKimi/p/14879465.html)
 
-### BottleDjango
+#### Bottle
 
 
 # S
@@ -524,6 +534,7 @@ description:
 # W
 
 ## WeChat微信小程序
+[微信小程序管理后台](https://mp.weixin.qq.com/)
 [微信官方文档](https://developers.weixin.qq.com/miniprogram/dev/framework/)
 [微信小程序登录流程（自定义账号绑定功能）](https://www.freesion.com/article/62801422805/) | [java 微信根据code获取openid](https://blog.csdn.net/lihe_983798789/article/details/99540796)
 
