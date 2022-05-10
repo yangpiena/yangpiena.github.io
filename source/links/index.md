@@ -35,7 +35,7 @@ description:
 
 # 常用
 [百度翻译](https://fanyi.baidu.com/) | [Google翻译](https://translate.google.cn/?hl=zh-CN&tab=TT) | [天气万年历](https://wannianli.tianqi.com/today/zhou/) | [实况摄像头](https://www.skylinewebcams.com/zh/webcam/maldives/lhaviyani-atoll/kurendhoo/kuredu-island.html)
-[今日热榜](https://tophub.today/) | [cnBeta](http://www.cnbeta.com/)  | [Hacker News](https://hackernews.cc/) | [不死鸟发布页](https://dalao.ru/) | [不死鸟](https://iao.su/) | [小部落](https://www.xbl100.com/) | [分享者](https://www.sharerw.com/) | [老D博客](https://laod.cn/) | [有意思吧](https://www.youyisi8.com/)
+[今日热榜](https://tophub.today/) | [cnBeta](http://www.cnbeta.com/)  | [Hacker News](https://hackernews.cc/) | [不死鸟发布页](https://dalao.ru/) | [不死鸟](https://iao.su/) | [小部落](https://www.xbl100.com/) | [分享者](https://www.sharerw.com/) | [老D博客](https://laod.cn/) | [有意思吧](https://www.youyisi8.com/) | [JustLive](http://live.yj1211.work/index/home/platforms)
 [科塔学术导航](https://site.sciping.com/) | [手机抢购网](http://www.qianggou5.com/price/) | [药房网](https://www.yaofangwang.com/) | [医学微视](https://www.mvyxws.com/) | [WikiHow](https://zh.wikihow.com/%E9%A6%96%E9%A1%B5)
 [希赛网](https://www.educity.cn/) | [中国国际人才交流基金会项目管理网站](http://exam.chinapmp.cn/) | [PMI](https://www.pmi.org/)
 [Guidebook数字生活指南](https://nav.guidebook.top/) | [星际黑客](https://xj.hk/)
