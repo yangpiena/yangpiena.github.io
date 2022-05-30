@@ -20,7 +20,6 @@ description:
 		<input id="p-btn" class="btn-edge" type="submit" value="Petal"/>
 		<input id="f-btn" class="btn-edge" type="submit" value="辅助狗"/>
 		<input id="d-btn" class="btn-edge" type="submit" value="多吉搜索"/>
-		<input id="c-btn" class="btn-edge" type="submit" value="F搜"/>
 	</form>
 </div>
 
@@ -34,11 +33,10 @@ description:
 
 
 # 常用
-[百度翻译](https://fanyi.baidu.com/) | [Google翻译](https://translate.google.cn/?hl=zh-CN&tab=TT) | [天气万年历](https://wannianli.tianqi.com/today/zhou/) | [实况摄像头](https://www.skylinewebcams.com/zh/webcam/maldives/lhaviyani-atoll/kurendhoo/kuredu-island.html)
-[今日热榜](https://tophub.today/) | [cnBeta](http://www.cnbeta.com/)  | [Hacker News](https://hackernews.cc/) | [不死鸟发布页](https://dalao.ru/) | [不死鸟](https://iao.su/) | [小部落](https://www.xbl100.com/) | [分享者](https://www.sharerw.com/) | [老D博客](https://laod.cn/) | [有意思吧](https://www.youyisi8.com/) | [JustLive](http://live.yj1211.work/index/home/platforms)
+[百度翻译](https://fanyi.baidu.com/) | [Google翻译](https://translate.google.cn/?hl=zh-CN&tab=TT) | [天气万年历](https://wannianli.tianqi.com/today/zhou/)
+[今日热榜](https://tophub.today/) | [cnBeta](http://www.cnbeta.com/)  | [Hacker News](https://hackernews.cc/) | [不死鸟发布页](https://dalao.ru/)
 [科塔学术导航](https://site.sciping.com/) | [手机抢购网](http://www.qianggou5.com/price/) | [药房网](https://www.yaofangwang.com/) | [医学微视](https://www.mvyxws.com/) | [WikiHow](https://zh.wikihow.com/%E9%A6%96%E9%A1%B5)
-[希赛网](https://www.educity.cn/) | [中国国际人才交流基金会项目管理网站](http://exam.chinapmp.cn/) | [PMI](https://www.pmi.org/)
-[Guidebook数字生活指南](https://nav.guidebook.top/) | [星际黑客](https://xj.hk/)
+[Guidebook数字生活指南](https://nav.guidebook.top/) | [福利吧](https://fuliba.com/)
 
 
 ## 音乐
@@ -47,9 +45,9 @@ description:
 
 
 ## 电影
-[映像讯](http://mkv.cn/) | [影视森林](http://www.549.tv/) | [免费的在线影视网站汇总](https://iao.su/531/) | [HDmoli](https://molicp.com/)
-[破晓电影](http://www.poxiao.com) | [泡饭影视](https://www.paofans.com/) | [BTBBT](https://www.btbtt19.com/)
-[美剧粉](http://www.mjf2020.com/)
+[映像讯](http://mkv.cn/) | [影视森林](http://www.549.tv/) | [免费的在线影视网站汇总](https://iao.su/531/) | [小部落](https://www.xbl100.com/)
+[HDmoli](https://molicp.com/) | [美剧粉](http://www.mjf2020.com/) | [破晓电影](http://www.poxiao.com) | [泡饭影视](https://www.paofans.com/) | [BTBBT](https://www.btbtt19.com/)
+[JustLive](http://live.yj1211.work/index/home/platforms)
 
 
 ## 游戏
@@ -57,19 +55,18 @@ description:
 
 
 ## 美图
-[it.me](http://www.topit.pro/) | [CNU视觉联盟](http://www.cnu.cc/inspirationPage/recent-0) | [360°航拍全景](https://airpano.org.cn/) | [免费版权图片搜索](https://www.logosc.cn/so/)
+[it.me](http://www.topit.pro/) | [CNU视觉联盟](http://www.cnu.cc/inspirationPage/recent-0) | [360°航拍全景](https://airpano.org.cn/) | [免费版权图片搜索](https://www.logosc.cn/so/) | [极简壁纸](https://bz.zzzmh.cn/)
 
 
 # 在线工具
 [drawio](https://app.diagrams.net/) | [百度脑图](https://naotu.baidu.com/home) | [GitMind](https://gitmind.cn/)
-[分享笔记](https://sharenote.app/) | [拷贝兔](https://cp.anyknew.com/) | [鸡毛信](https://cmd.im/) | [鸡霸图床](https://gejiba.com/) | [田字格笔顺 字帖生成器](https://lab.feifanju.com/zitie/) | [滚动横幅](https://www.iamverylovely.com/scroll/) | [休息片刻](http://sit.widget4.com/)
+[分享笔记](https://sharenote.app/) | [拷贝兔](https://cp.anyknew.com/) | [鸡毛信](https://cmd.im/) | [鸡霸图床](https://gejiba.com/) | [田字格笔顺 字帖生成器](https://lab.feifanju.com/zitie/) | [休息片刻](http://sit.widget4.com/)
 [短链接](https://url.4qo.cn/#/) | [Ping](https://ping.eu/ping/) | [域名查询](https://lab.feifanju.com/domain-query/) | [在线HTTP POST/GET接口测试工具](https://lab.feifanju.com/http/index.html) | [临时邮箱](https://linshiyouxiang.net/) | [临时手机号](https://jiemahao.com/)
 [独特工具箱](https://www.dute.org/) | [在线工具](http://tool.lu/)  |  [在线工具](http://tool.oschina.net/) | [UU在线工具](https://uutool.cn/) | [JSON在线解析及格式化验证](http://www.json.cn/)  |  [转换json格式为C#类](http://json2csharp.chahuo.com/)
-[生成随机密码](https://suijimimashengcheng.51240.com/) | [密码强度检测](https://mimaqiangdu.51240.com/) | [PMD5](http://pmd5.com/#)  |  [输入让你无语的MD5](https://www.somd5.com/)   |  [在线MD5暴力破解](http://www.atool.org/md5-crack.php) | [核心价值编码器](https://sym233.github.io/core-values-encoder/)
+[生成随机密码](https://suijimimashengcheng.51240.com/) | [密码强度检测](https://mimaqiangdu.51240.com/) | [PMD5](http://pmd5.com/#)  |  [输入让你无语的MD5](https://www.somd5.com/) | [在线MD5暴力破解](http://www.atool.org/md5-crack.php) | [核心价值编码器](https://sym233.github.io/core-values-encoder/)
 [在线文件转换器](https://cn.office-converter.com/) | [在线格式转换](https://www.alltoall.net/) | [PDF派](https://www.pdfpai.com/) |  [png在线转ico](http://www.easyicon.net/covert/) | [图片背景变成透明](https://transparent.zhaoxi.net/) | [做好图](http://www.zuohaotu.com/)  |  [MakePic.com 图片制造](http://www.makepic.com/)  |  [removebg图片背景消除](https://www.remove.bg/ ) | [waifu2x无损放大图片](http://waifu2x.udp.jp/index.zh-CN.html) | [图片无限变大](http://bigjpg.com/zh) | [草料二维码美化器](http://mh.cli.im/) | [头像生成器](https://www.moubao.vip/)
 [在线制作您的Logo](https://www.logaster.cn/) | [小米LOGO生成器](https://mi-logo.lvwzhen.com/) | [免费logo在线制作](http://www.uugai.com/)
 [在线短信轰炸](https://qinggongju.com/dx/) | [文字转语音](https://toolight.cn/media/reading) | [智影](https://zenvideo.qq.com/home)
-[体验网盘不限速下载，验证码：6845](http://o.jamfer.com/bdwp.php)
 
 
 # 社区
@@ -83,10 +80,11 @@ description:
 [中国色](http://zhongguose.com/)
 [优品PPT](http://www.ypppt.com)
 [中华珍宝馆](https://ltfc.net/)
+[实况摄像头](https://www.skylinewebcams.com/zh/webcam/maldives/lhaviyani-atoll/kurendhoo/kuredu-island.html)
 
 
 ## 阅读/电子书
-[Z-Library在线图书馆](https://zh.my1lib.org/)
+[Z-Library在线图书馆](https://zhuanlan.zhihu.com/p/454890778)
 [秘密花园](http://www.yini.org) | [微信读书排行榜 ~ 热门标注](http://klib.me/weread/hot/all.html)
 [鸠摩搜索](https://www.jiumodiary.com/ "电子书搜索引擎，提供各类电子书搜索下载，有多种格式")  |  [Library Genesis](http://gen.lib.rus.ec/ "英文电子书搜索引擎，可搜索英文原版的电子书，格式包含 PDF、MOBI 和 EPUB")  |  [i-Book.in](https://book.tstrs.me/ " 基于索引IPFS链接的电子书搜索引擎")  |  [epubee](http://cn.epubee.com/ "在线电子书转换器，同时也推荐一些电子书下载")
 [书单网](https://www.shudan.vip/ "电子书搜索网站，抓取第三方网站的资源，也有很多资源是通过城通网赚网盘下载")  |  [书舟网](http://kindle.archiew.top/ "电子书搜索下载网站，资源通过城通网赚网盘下载")  |  [Mobilism](https://forum.mobilism.org/viewforum.php?f=19 "电子书论坛，提供英文原版电子书下载")  |  [七彩英语](http://www.qcenglish.com/ "提供PDF或TXT格式的英文原版电子书下载")
@@ -99,17 +97,16 @@ description:
 
 ## 系统/软件下载
 [IT之家](https://www.ithome.com/) | [系统之家](http://www.xitongzhijia.net/) | [系统天地](http://www.xitongtiandi.net/) | [系统圣地](http://www.285868.com/) | [Win10专业版官网](http://www.win10zyb.com/) | [吻妻出品专注 win10](https://iwin10.net/) | [吻妻出品专注 win7](http://www.newxitong.com/)
-[黑苹果乐园](https://imac.hk/)	  |  [黑果小兵](https://blog.daliansky.net/)
-[小众软件](https://www.appinn.com/) | [zd423](http://www.zdfans.com/) | [423down](https://www.423down.com/) | [我爱分享网](http://www.zhanshaoyi.com/rjxz.html) | [夜雨聆风](http://www.yeyulingfeng.com/) | [金狐维护盘](http://www.jinhu.me/) | [行客工作室](http://www.runker.net/) | [软猫下载](https://www.softmall.net/)
-[浏览迷](https://liulanmi.com/)    |  [Chrome浏览器插件下载中心](https://www.chromefor.com/)
-[阅读](http://www.legado.top/MyBookshelf/index.html)
-[好软分享](https://gitee.com/realyoyodadada/haoruanfenxiang/blob/master/List.md#https://gitee.com/link?target=https%3A%2F%2Fyoyodadada.lanzouw.com%2Fb01cvj0dc%23ht3r)
+[黑苹果乐园](https://imac.hk/) | [黑果小兵](https://blog.daliansky.net/)
+[小众软件](https://www.appinn.com/) | [zd423](http://www.zdfans.com/) | [423down](https://www.423down.com/) | [分享者](https://www.sharerw.com/) | [我爱分享网](http://www.zhanshaoyi.com/rjxz.html) | [夜雨聆风](http://www.yeyulingfeng.com/) | [金狐维护盘](http://www.jinhu.me/) | [行客工作室](http://www.runker.net/) | [软猫下载](https://www.softmall.net/)
+[浏览迷](https://liulanmi.com/) | [Chrome浏览器插件下载中心](https://www.chromefor.com/)
+[阅读](http://www.legado.top)
 
 
 ## 文章/教程
 [菜鸟教程](http://www.runoob.com/)
 [B/S，C/S，B/S和C/S混合模式的概念区别优缺点及前景分析](http://www.ufidawhy.com/mfufida/613.html) | [一种电子病历系统软件框架思想——B/S与C/S混合架构](http://www.hit180.com/21534.html)
-[LB 负载均衡的层次结构](http://www.cnblogs.com/mindwind/p/5339657.html) | [Nginx 0.5.31 + PHP 5.2.4（FastCGI）搭建可承受3万以上并发连接数，胜过Apache 10倍的Web服务器[原创]](http://zyan.cc/post/297/)
+[LB 负载均衡的层次结构](http://www.cnblogs.com/mindwind/p/5339657.html) | [Nginx 0.5.31 + PHP 5.2.4（FastCGI）搭建可承受3万以上并发连接数，胜过Apache 10倍的Web服务器原创](http://zyan.cc/post/297/)
 [GitHub上优秀的开源项目](http://blog.csdn.net/ren1027538427/article/details/52450294) | [2017 码云最火爆开源项目 TOP 50，你都用过哪些？](https://www.oschina.net/news/92438/2017-mayun-top-50)
 [项目目录结构规范](https://segmentfault.com/a/1190000002471120) | [好的用户界面-界面设计的一些技巧](https://www.cnblogs.com/Wayou/p/goodui.html#home) | [MIUI更新日志](http://www.miui.com/home.php?mod=space&uid=8&do=thread&view=me&from=space)
 [Linux删除乱码文件](http://www.cnblogs.com/quanweiru/p/3764003.html) | [SUSE Linux启用SSH](http://tophandxing.blog.163.com/blog/static/109714820124123438513/) | [黑苹果macOS High Sierra 10.13.6详细安装新手菜鸟教程](http://tzit.net/htmlitjs/2018-10-25/2234.html)
@@ -121,6 +118,7 @@ description:
 [网易邮箱配置](http://www.163mailbox.cn/client-outlook-foxmail-settings.html)
 [折纸俱乐部](http://cn.origami-club.com/index.html) | [手艺活](https://www.shouyihuo.com/)
 [独立观察员•博客](http://dlgcy.com)
+[星际黑客](https://xj.hk/)
 
 
 ## 前端/案例
@@ -544,6 +542,7 @@ description:
 
 
 # 民生
+[PMI](https://www.pmi.org/) | [中国国际人才交流基金会项目管理网站](http://exam.chinapmp.cn/) | [希赛网](https://www.educity.cn/)
 [宁夏人事考试中心](http://www.nxpta.gov.cn/)
 [宁夏专业技术人员继续教育培训网](http://nxzj.chinahrt.com/)
 [宁夏机械工程学会](http://www.nxjxgcxh.cn/)	|	[宁夏人事人才管理信息系统-职称评审](http://218.95.135.211:8005/zcps)
@@ -577,7 +576,7 @@ description:
 		<!-- true -->
 		<!-- false -->
 	<div class='content material'>
-		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer@1.7.0/dist/APlayer.min.css">
+		<link rel="stylesheet" href="/css/ypn.css/APlayer.min.css">
 		<div class="aplayer"
 			data-theme="#1BCDFC"
 			data-mode="random"
@@ -588,7 +587,7 @@ description:
 			data-id="745065239"
 			data-volume="0.7">
 		</div>
-		<script src="https://cdn.jsdelivr.net/npm/aplayer@1.7.0/dist/APlayer.min.js"></script>
-		<script src="https://cdn.jsdelivr.net/npm/meting@1.1.0/dist/Meting.min.js"></script>
+		<script src="/js/ypn.js/APlayer.min.js"></script>
+		<script src="/js/ypn.js/Meting.min.js"></script>
 	</div>
 </section>
