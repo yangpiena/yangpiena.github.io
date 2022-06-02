@@ -42,17 +42,16 @@ document.addEventListener("scroll",function(){
     closeFade();
 });
 document.querySelectorAll("img").forEach(v=>{
-
-	if (v.parentNode.localName!=a) {
+	if (v.parentNode.localName != a){
 		v.id=imgid;
 		imgid++;
-		    v.addEventListener("click",function(e){ // 注册事件
+		v.addEventListener("click",function(e){ // 注册事件
 	        // 记录小图的位置个大小
 	        x=e.target.offsetLeft;
 	        y=e.target.offsetTop;
 	        w=e.target.offsetWidth;
 	        h=e.target.offsetHeight;
-	         data-src=e.target.src;
+	        data_src=e.target.src;
 	        id=e.target.id;
 	        // 创建遮罩层
 	        div=document.createElement("div");
@@ -76,7 +75,7 @@ document.querySelectorAll("img").forEach(v=>{
 	        img=new Image();
 	        btnright=document.createElement("button");
 	        btnleft=document.createElement("button");
-	        img. data-src=src;
+	        img.data_src=src;
 	        btnleft.style.cssText=`
 			    position:fixed;
 			    border-radius: 50%;;
@@ -126,7 +125,7 @@ document.querySelectorAll("img").forEach(v=>{
 	        		return;
 	        	}
 	        	var left=document.getElementById(id-1);
-	        	img. data-src=left.src;
+	        	img.data_src=left.src;
 	        	x=left.offsetLeft;
 	        	y=left.offsetTop;
 	      		w=left.offsetWidth;
@@ -140,7 +139,7 @@ document.querySelectorAll("img").forEach(v=>{
 	        		return;
 	        	}
 	        	var right=document.getElementById(id);
-	        	img. data-src=right.src;
+	        	img.data_src=right.src;
 	        	x=right.offsetLeft;
 	        	y=right.offsetTop;
 	      		w=right.offsetWidth;

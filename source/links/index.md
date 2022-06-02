@@ -36,7 +36,7 @@ description:
 [百度翻译](https://fanyi.baidu.com/) | [Google翻译](https://translate.google.cn/?hl=zh-CN&tab=TT) | [天气万年历](https://wannianli.tianqi.com/today/zhou/)
 [今日热榜](https://tophub.today/) | [cnBeta](http://www.cnbeta.com/)  | [Hacker News](https://hackernews.cc/) | [不死鸟发布页](https://dalao.ru/)
 [科塔学术导航](https://site.sciping.com/) | [手机抢购网](http://www.qianggou5.com/price/) | [药房网](https://www.yaofangwang.com/) | [医学微视](https://www.mvyxws.com/) | [WikiHow](https://zh.wikihow.com/%E9%A6%96%E9%A1%B5)
-[Guidebook数字生活指南](https://nav.guidebook.top/) | [福利吧](https://fuliba.com/)
+[Guidebook数字生活指南](https://nav.guidebook.top/) | [福利吧](https://fuliba.com/) | [我的书签](https://it-cxy.top/)
 
 
 ## 音乐
@@ -96,7 +96,7 @@ description:
 
 
 ## 系统/软件下载
-[IT之家](https://www.ithome.com/) | [系统之家](http://www.xitongzhijia.net/) | [系统天地](http://www.xitongtiandi.net/) | [系统圣地](http://www.285868.com/) | [Win10专业版官网](http://www.win10zyb.com/) | [吻妻出品专注 win10](https://iwin10.net/) | [吻妻出品专注 win7](http://www.newxitong.com/)
+[IT之家](https://www.ithome.com/) | [系统之家](http://www.xitongzhijia.net/) | [系统天地](http://www.xitongtiandi.net/) | [Win10专业版官网](http://www.win10zyb.com/) | [吻妻出品专注 win10](https://iwin10.net/) | [吻妻出品专注 win7](http://www.newxitong.com/) | [HelloWindows](https://hellowindows.cn/)
 [黑苹果乐园](https://imac.hk/) | [黑果小兵](https://blog.daliansky.net/)
 [小众软件](https://www.appinn.com/) | [zd423](http://www.zdfans.com/) | [423down](https://www.423down.com/) | [分享者](https://www.sharerw.com/) | [我爱分享网](http://www.zhanshaoyi.com/rjxz.html) | [夜雨聆风](http://www.yeyulingfeng.com/) | [金狐维护盘](http://www.jinhu.me/) | [行客工作室](http://www.runker.net/) | [软猫下载](https://www.softmall.net/)
 [浏览迷](https://liulanmi.com/) | [Chrome浏览器插件下载中心](https://www.chromefor.com/)
@@ -163,6 +163,7 @@ description:
 ## API
 [QQPusher推送服务](http://qqpusher.yanxianjun.com/doc/#/)
 [WxPusher](https://wxpusher.zjiecode.com/admin/main) | [WxPusher微信推送服务API](https://wxpusher.dingliqc.com/docs/#/)
+[搏天api](https://api.btstu.cn/) | [3650000随机API](https://3650000.xyz/)
 
 
 ## Angular
