@@ -51,7 +51,7 @@ description:
 
 
 ## 游戏
-[Chatroulette](http://chatroulette.com/) | [三国杀](http://web.sanguosha.com/)  |  [好蜀门私服](http://www.haosm.com/) | [小霸王](https://www.yikm.net/) | [摸鱼游戏](https://poki.com/)
+[Chatroulette](http://chatroulette.com/) | [三国杀](http://web.sanguosha.com/)  |  [好蜀门私服](http://www.haosm.com/) |  [蜀门私服吧](https://www.931pk.cn/)| [小霸王](https://www.yikm.net/) | [摸鱼游戏](https://poki.com/)
 
 
 ## 美图
@@ -98,7 +98,7 @@ description:
 ## 系统/软件下载
 [IT之家](https://www.ithome.com/) | [系统之家](http://www.xitongzhijia.net/) | [系统天地](http://www.xitongtiandi.net/) | [Win10专业版官网](http://www.win10zyb.com/) | [吻妻出品专注 win10](https://iwin10.net/) | [吻妻出品专注 win7](http://www.newxitong.com/) | [HelloWindows](https://hellowindows.cn/)
 [黑苹果乐园](https://imac.hk/) | [黑果小兵](https://blog.daliansky.net/)
-[小众软件](https://www.appinn.com/) | [zd423](http://www.zdfans.com/) | [423down](https://www.423down.com/) | [分享者](https://www.sharerw.com/) | [我爱分享网](http://www.zhanshaoyi.com/rjxz.html) | [夜雨聆风](http://www.yeyulingfeng.com/) | [金狐维护盘](http://www.jinhu.me/) | [行客工作室](http://www.runker.net/) | [软猫下载](https://www.softmall.net/)
+[小众软件](https://www.appinn.com/) | [zd423](http://www.zdfans.com/) | [423down](https://www.423down.com/) | [分享者](https://www.sharerw.com/) | [我爱分享网](http://www.zhanshaoyi.com/rjxz.html) | [夜雨聆风](http://www.yeyulingfeng.com/) | [金狐维护盘](http://www.jinhu.me/) | [行客工作室](http://www.runker.net/) | [软猫下载](https://www.softmall.net/) | [Puresys](https://www.puresys.net/)
 [浏览迷](https://liulanmi.com/) | [Chrome浏览器插件下载中心](https://www.chromefor.com/)
 [阅读](http://www.legado.top)
 
@@ -384,7 +384,7 @@ description:
 # L
 
 ## Linux
-[一份 Linux 基础命令使用清单](https://blog.csdn.net/z694644032/article/details/97620078)
+[Linux学习教程](http://c.biancheng.net/linux_tutorial/) | [一份 Linux 基础命令使用清单](https://blog.csdn.net/z694644032/article/details/97620078)
 [对 Linux 新手非常有用的 20 个命令](http://www.oschina.net/translate/useful-linux-commands-for-newbies)
 [linux数据盘，系统盘](http://blog.csdn.net/Truong/article/details/70171661)
 [数据盘分区以及格式化](http://blog.csdn.net/Truong/article/details/70171699)
