@@ -79,6 +79,8 @@ tags: [Linux, 命令]
 |                                                        | 4) "-print"输出查找的文件目录名                                    |
 |                                                        | 5) "-exec"后边跟要执行的命令，表示将find出来的文件或目录执行该命令 |
 |                                                        | 最后是一对{}，一个空格和一个\，一个分号                            |
+| ll -lh                                        | 查看当前目录下文件的大小                                                  |
+| du -sh *                                      | 查看当前目录下文件或文件夹的大小                                          |
 
 ### 网络
 | 命令                                         | 说明                                                                       |
@@ -86,6 +88,13 @@ tags: [Linux, 命令]
 | netstat -apn                                 | 查看所有的进程和端口使用情况                                               |
 | netstat -nptl                                | 查看端口使用情况                                                           |
 | lsof                                         | 查看端口使用情况（openSUSE Leap 15.0），如lsof -i:80                       |
+
+### 在命令行中配置IP地址
+这里用Suse Linux举例：
+```
+ifconfig eth0 1.1.10.42 netmask 255.255.255.0 up
+route add default gw 1.1.10.11
+```
 
 ### systemctl命令的使用
 | 命令                                         | 说明                                                                       |

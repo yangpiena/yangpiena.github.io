@@ -40,7 +40,7 @@ description:
 
 
 ## 音乐
-[SongTaste](https://songtaste.cm/) | [AeKun](https://www.aekun.com/) | [音乐磁场](https://www.hifini.com/) | [麦田音乐网](https://www.mtyyw.com/) | [网易云音乐](http://music.163.com)
+[SongTaste](https://songtaste.cm/) | [AeKun](https://www.aekun.com/) | [音乐磁场](https://www.hifini.com/) | [麦田音乐网](https://www.mtyyw.com/) | [网易云音乐](http://music.163.com) | [千千音乐](https://music.91q.com/) | [9天音乐](http://www.9sky.com/) | [百乐米](https://bailemi.com/)
 [VIP付费音乐解析下载](https://music.zhuolin.wang/) | [音乐直链搜索](https://music.liuzhijin.cn/) | [天天静听](http://47.112.23.238/) | [YesPlayMusic](https://music.qier222.com/)
 
 
@@ -51,7 +51,7 @@ description:
 
 
 ## 游戏
-[Chatroulette](http://chatroulette.com/) | [三国杀](http://web.sanguosha.com/)  |  [好蜀门私服](http://www.haosm.com/) |  [蜀门私服吧](https://www.931pk.cn/)| [小霸王](https://www.yikm.net/) | [摸鱼游戏](https://poki.com/)
+[Chatroulette](http://chatroulette.com/) | [三国杀](http://web.sanguosha.com/)  |  [好蜀门私服](http://www.haosm.com/) |  [蜀门私服吧](https://www.931pk.cn/)  |  [蜀门发布网](https://www.77smsf.com)  | [小霸王](https://www.yikm.net/) | [摸鱼游戏](https://poki.com/)
 
 
 ## 美图
