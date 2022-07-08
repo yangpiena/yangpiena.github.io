@@ -147,6 +147,7 @@ description:
 
 
 ## 网盘
+[百度网盘](https://pan.baidu.com) | [坚果云](https://www.jianguoyun.com/) | [夸克网盘](https://pan.quark.cn/)
 [webd](https://webd.cf/) | [Nextcloud](https://nextcloud.com/) | [悦库](http://www.ydisk.cn/index.html)
 [Nextcloud通过不被信任的域名访问解决方法 Nextcloud 您正在访问来自不信任域名的服务器](https://blog.csdn.net/g313105910/article/details/106381380)
 [nextcloud修改域名、IP或端口](https://www.cnblogs.com/mrcoolfuyu/p/13355522.html)
@@ -543,9 +544,9 @@ description:
 
 
 # 民生
+[中国研究生招生信息网](https://yz.chsi.com.cn/)
 [PMI](https://www.pmi.org/) | [中国国际人才交流基金会项目管理网站](http://exam.chinapmp.cn/) | [希赛网](https://www.educity.cn/)
-[宁夏人事考试中心](http://www.nxpta.gov.cn/)
-[宁夏专业技术人员继续教育培训网](http://nxzj.chinahrt.com/)
+[宁夏人事考试中心](http://www.nxpta.gov.cn/) | [宁夏专业技术人员继续教育培训网](http://nxzj.chinahrt.com/)
 [宁夏机械工程学会](http://www.nxjxgcxh.cn/)	|	[宁夏人事人才管理信息系统-职称评审](http://218.95.135.211:8005/zcps)
 [宁夏朝觐报名网](https://www.nxmslcj.cn/index.shtml)
 [利通区县域中小学招生转学服务平台](http://www.wzrxbm.cn)
