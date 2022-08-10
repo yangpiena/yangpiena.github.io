@@ -37,6 +37,7 @@ description:
 [今日热榜](https://tophub.today/) | [cnBeta](http://www.cnbeta.com/)  | [Hacker News](https://hackernews.cc/) | [不死鸟发布页](https://dalao.ru/)
 [科塔学术导航](https://site.sciping.com/) | [手机抢购网](http://www.qianggou5.com/price/) | [药房网](https://www.yaofangwang.com/) | [医学微视](https://www.mvyxws.com/) | [WikiHow](https://zh.wikihow.com/%E9%A6%96%E9%A1%B5)
 [Guidebook数字生活指南](https://nav.guidebook.top/) | [福利吧](https://fuliba.com/) | [我的书签](https://it-cxy.top/)
+[中国研究生招生信息网](https://yz.chsi.com.cn/) | [希赛网](https://www.educity.cn/)
 
 
 ## 音乐
@@ -98,7 +99,7 @@ description:
 ## 系统/软件下载
 [IT之家](https://www.ithome.com/) | [系统之家](http://www.xitongzhijia.net/) | [系统天地](http://www.xitongtiandi.net/) | [Win10专业版官网](http://www.win10zyb.com/) | [吻妻出品专注 win10](https://iwin10.net/) | [吻妻出品专注 win7](http://www.newxitong.com/) | [HelloWindows](https://hellowindows.cn/)
 [黑苹果乐园](https://imac.hk/) | [黑果小兵](https://blog.daliansky.net/)
-[小众软件](https://www.appinn.com/) | [zd423](http://www.zdfans.com/) | [423down](https://www.423down.com/) | [分享者](https://www.sharerw.com/) | [我爱分享网](http://www.zhanshaoyi.com/rjxz.html) | [夜雨聆风](http://www.yeyulingfeng.com/) | [金狐维护盘](http://www.jinhu.me/) | [行客工作室](http://www.runker.net/) | [软猫下载](https://www.softmall.net/) | [Puresys](https://www.puresys.net/)
+[小众软件](https://www.appinn.com/) | [zd423](http://www.zdfans.com/) | [423down](https://www.423down.com/) | [分享者](https://www.sharerw.com/) | [我爱分享网](http://www.zhanshaoyi.com/rjxz.html) | [夜雨聆风](http://www.yeyulingfeng.com/) | [金狐维护盘](http://www.jinhu.me/) | [行客工作室](http://www.runker.net/) | [软猫下载](https://www.softmall.net/) | [Puresys](https://www.puresys.net/) | [DIY博客园](https://www.diybloghome.com/)
 [浏览迷](https://liulanmi.com/) | [Chrome浏览器插件下载中心](https://www.chromefor.com/)
 [阅读](http://www.legado.top)
 
@@ -413,6 +414,12 @@ description:
 [Editor.md](https://github.com/pandao/editor.md)
 
 
+# N
+
+## Nginx
+[nginx一小时精讲课程](https://www.yuque.com/wukong-zorrm/cql6cz)
+
+
 # P
 
 ## Python
@@ -481,6 +488,7 @@ description:
 # S
 
 ## Setup Factory
+[安装包制作工具 SetupFactory使用1 详解](https://www.cnblogs.com/SavionZhang/p/4106338.html)
 [安装包制作工具 SetupFactory使用2 API清单](https://www.cnblogs.com/SavionZhang/p/4107761.html)
 [Setup Factory操作注册表](https://blog.csdn.net/feter1992/article/details/12048771)
 [Setup Factory覆盖安装并且安装完成之后设置立即运行选项](https://blog.csdn.net/feter1992/article/details/12510225)

@@ -53,6 +53,7 @@ tags: [Linux, 命令]
 | pwd                                          | 查看当前路径                                                               |
 | mkdir                                        | 创建文件夹                                                                 |
 | touch                                        | 创建文件                                                                   |
+| echo -n  " " >                               | 清空文件内容，如：echo -n  " " >logs/error.log                             |
 | rm                                           | 删除文件                                                                   |
 | rm -r                                        | 删除文件夹                                                                 |
 | rm -fr                                       | 直接删除，无需确认                                                         |
@@ -63,6 +64,7 @@ tags: [Linux, 命令]
 | cat                                          | 查看文本内容                                                               |
 | head                                         | 查看文本前十行                                                             |
 | tail                                         | 查看文本后十行                                                             |
+| tail -f                                      | 实时查看文本最新内容                                                             |
 | more                                         | 让文件内容一屏一屏的显示                                                   |
 | cat XXX &#124; more                          | 管道：将cat显示出来的内容重新输出给more命令                                |
 | >                                            | 重定向：将文件内容输出到指定的文件或位置。如cat /etc/services > a.txt      |
