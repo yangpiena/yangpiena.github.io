@@ -117,13 +117,13 @@ live2d:
 
 deploy:  
 - type: git
-  repo: git@gitee.com:yangpiena/yangpiena.git
+  repo: https://gitee.com/yangpiena/yangpiena.git
   branch: master
   
 - type: git
-  repo: git@github.com:yangpiena/yangpiena.github.io.git
+  repo: https://github.com/yangpiena/yangpiena.github.io.git
   branch: master
   
 - type: git
-  repo: git@e.coding.net:yangpiena/yangpiena/yangpiena.git
+  repo: https://e.coding.net/yangpiena/yangpiena.git
   branch: master

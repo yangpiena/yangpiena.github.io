@@ -19,7 +19,7 @@ CREATE DATABASE database-name
 ```
 ## 2. 删除数据库
 ```sql
-drop database dbname
+DROP database dbname
 ```
 ## 3. 备份sql server
 创建 备份数据的 device
@@ -44,7 +44,9 @@ create table tab_new like tab_old (使用旧表创建新表)
 create table tab_new as select col1,col2… from tab_old definition only
 ```
 ## 5. 删除新表
-	drop table tabname
+```sql
+DROP TABLE tabname
+```
 
 ## 6. 增加一个列
 	Alter table tabname add column col type
@@ -874,7 +876,7 @@ ORDER BY name
 ---
 
 # 常识
-- 在SQL查询中，from后最多可以跟256张表或视图
-- 在SQL语句中使用Order by查询时，先排序，后取值
+- 在SQL查询中，`FROM`后最多可以跟256张表或视图
+- 在SQL语句中使用`ORDER BY`查询时，先排序，后取值
 - 在SQL中，一个字段的最大容量是8000
 

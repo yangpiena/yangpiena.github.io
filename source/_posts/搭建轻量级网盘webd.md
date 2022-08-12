@@ -11,19 +11,16 @@ description:
 ---
 ## 搭建环境
 
-#### 1. 网盘软件webd
-webd 轻量级(self-hosted)自建网盘软件
-程序仅 60 ~ 90 KB，含 server 端，无其它依赖，速度快资源占用低
-纯便携软件，解压即用
-支持 Windows、Linux、OpenWrt、Armbian
-界面简洁易用，无繁琐设置，支持移动设备
-[官网地址](https://webd.cf/)
+#### 1. 网盘软件 webd
+webd 轻量级(self-hosted)自建网盘软件程序仅 60 ~ 90 KB，含 server 端，无其它依赖，速度快资源占用低，纯便携软件，解压即用。支持 Windows、Linux、OpenWrt、Armbian界面简洁易用，无繁琐设置，支持移动设备。
+
+[官网](https://webd.cf/)
 [下载地址](https://webd.cf/latest/)
 
 <!-- more -->
 
-#### 2. 服务器
-本次使用服务器环境为SUSE Linux Enterprise Server 12。
+#### 2. 服务器环境
+本次使用服务器环境为 SUSE Linux Enterprise Server 12
 
 
 ## 搭建步骤
@@ -63,4 +60,4 @@ reboot
 
 
 ## 使用
-局域网内访问 http://IP:9212 即可使用。
+局域网内访问 http://IP:9212 即可。

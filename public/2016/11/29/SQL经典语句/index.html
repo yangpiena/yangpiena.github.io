@@ -100,18 +100,18 @@
 
 
 
-  <meta name="description" content="一. 基础篇1. 创建数据库1CREATE DATABASE database-name 2. 删除数据库1drop database dbname 3. 备份sql server创建 备份数据的 device12USE masterEXEC sp_addumpdevice &apos;disk&apos;, &apos;testBack&apos;, &apos;c:\mssql7backup\MyNwind_1.dat&apos; 开始 备份1BACK">
+  <meta name="description" content="一. 基础篇1. 创建数据库1CREATE DATABASE database-name 2. 删除数据库1DROP database dbname 3. 备份sql server创建 备份数据的 device12USE masterEXEC sp_addumpdevice &apos;disk&apos;, &apos;testBack&apos;, &apos;c:\mssql7backup\MyNwind_1.dat&apos; 开始 备份1BACK">
 <meta name="keywords" content="sql,经典语句">
 <meta property="og:type" content="article">
 <meta property="og:title" content="SQL经典语句">
 <meta property="og:url" content="https://yangpiena.github.io/2016/11/29/SQL经典语句/index.html">
 <meta property="og:site_name" content="昜丿捺">
-<meta property="og:description" content="一. 基础篇1. 创建数据库1CREATE DATABASE database-name 2. 删除数据库1drop database dbname 3. 备份sql server创建 备份数据的 device12USE masterEXEC sp_addumpdevice &apos;disk&apos;, &apos;testBack&apos;, &apos;c:\mssql7backup\MyNwind_1.dat&apos; 开始 备份1BACK">
+<meta property="og:description" content="一. 基础篇1. 创建数据库1CREATE DATABASE database-name 2. 删除数据库1DROP database dbname 3. 备份sql server创建 备份数据的 device12USE masterEXEC sp_addumpdevice &apos;disk&apos;, &apos;testBack&apos;, &apos;c:\mssql7backup\MyNwind_1.dat&apos; 开始 备份1BACK">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2021-11-04T01:49:25.508Z">
+<meta property="og:updated_time" content="2022-08-12T08:56:00.675Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="SQL经典语句">
-<meta name="twitter:description" content="一. 基础篇1. 创建数据库1CREATE DATABASE database-name 2. 删除数据库1drop database dbname 3. 备份sql server创建 备份数据的 device12USE masterEXEC sp_addumpdevice &apos;disk&apos;, &apos;testBack&apos;, &apos;c:\mssql7backup\MyNwind_1.dat&apos; 开始 备份1BACK">
+<meta name="twitter:description" content="一. 基础篇1. 创建数据库1CREATE DATABASE database-name 2. 删除数据库1DROP database dbname 3. 备份sql server创建 备份数据的 device12USE masterEXEC sp_addumpdevice &apos;disk&apos;, &apos;testBack&apos;, &apos;c:\mssql7backup\MyNwind_1.dat&apos; 开始 备份1BACK">
 
 
 
@@ -454,7 +454,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2021-11-04 09:49:25" itemprop="dateModified" datetime="2021-11-04T09:49:25+08:00">2021-11-04</time>
+                <time title="修改时间：2022-08-12 16:56:00" itemprop="dateModified" datetime="2022-08-12T16:56:00+08:00">2022-08-12</time>
               
             
           </span>
@@ -506,7 +506,7 @@
                 
                   <span class="post-meta-item-text">本文字数：</span>
                 
-                <span title="本文字数">93k</span>
+                <span title="本文字数">94k</span>
               
 
               
@@ -541,14 +541,14 @@
 
       
         <h1 id="一-基础篇"><a href="#一-基础篇" class="headerlink" title="一. 基础篇"></a>一. 基础篇</h1><h2 id="1-创建数据库"><a href="#1-创建数据库" class="headerlink" title="1. 创建数据库"></a>1. 创建数据库</h2><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">CREATE</span> <span class="keyword">DATABASE</span> <span class="keyword">database</span>-<span class="keyword">name</span></span><br></pre></td></tr></table></figure>
-<h2 id="2-删除数据库"><a href="#2-删除数据库" class="headerlink" title="2. 删除数据库"></a>2. 删除数据库</h2><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">drop</span> <span class="keyword">database</span> dbname</span><br></pre></td></tr></table></figure>
+<h2 id="2-删除数据库"><a href="#2-删除数据库" class="headerlink" title="2. 删除数据库"></a>2. 删除数据库</h2><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">DROP</span> <span class="keyword">database</span> dbname</span><br></pre></td></tr></table></figure>
 <h2 id="3-备份sql-server"><a href="#3-备份sql-server" class="headerlink" title="3. 备份sql server"></a>3. 备份sql server</h2><p>创建 备份数据的 device<br><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">USE</span> <span class="keyword">master</span></span><br><span class="line">EXEC sp_addumpdevice <span class="string">'disk'</span>, <span class="string">'testBack'</span>, <span class="string">'c:\mssql7backup\MyNwind_1.dat'</span></span><br></pre></td></tr></table></figure></p>
 <p>开始 备份<br><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">BACKUP</span> <span class="keyword">DATABASE</span> pubs <span class="keyword">TO</span> testBack</span><br></pre></td></tr></table></figure></p>
 <a id="more"></a>
 <h2 id="4-创建新表"><a href="#4-创建新表" class="headerlink" title="4. 创建新表"></a>4. 创建新表</h2><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">create</span> <span class="keyword">table</span> tabname(col1 type1 [<span class="keyword">not</span> <span class="literal">null</span>] [primary <span class="keyword">key</span>],col2 type2 [<span class="keyword">not</span> <span class="literal">null</span>],..)</span><br></pre></td></tr></table></figure>
 <p>根据已有的表创建新表：<br><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">create</span> <span class="keyword">table</span> tab_new <span class="keyword">like</span> tab_old (使用旧表创建新表)</span><br><span class="line"><span class="keyword">create</span> <span class="keyword">table</span> tab_new <span class="keyword">as</span> <span class="keyword">select</span> col1,col2… <span class="keyword">from</span> tab_old definition <span class="keyword">only</span></span><br></pre></td></tr></table></figure></p>
-<h2 id="5-删除新表"><a href="#5-删除新表" class="headerlink" title="5. 删除新表"></a>5. 删除新表</h2><pre><code>drop table tabname
-</code></pre><h2 id="6-增加一个列"><a href="#6-增加一个列" class="headerlink" title="6. 增加一个列"></a>6. 增加一个列</h2><pre><code>Alter table tabname add column col type
+<h2 id="5-删除新表"><a href="#5-删除新表" class="headerlink" title="5. 删除新表"></a>5. 删除新表</h2><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">DROP</span> <span class="keyword">TABLE</span> tabname</span><br></pre></td></tr></table></figure>
+<h2 id="6-增加一个列"><a href="#6-增加一个列" class="headerlink" title="6. 增加一个列"></a>6. 增加一个列</h2><pre><code>Alter table tabname add column col type
 </code></pre><blockquote>
 <p>注：列增加后将不能删除。DB2中列加上后数据类型也不能改变，唯一能改变的是增加varchar类型的长度。</p>
 </blockquote>
@@ -968,8 +968,8 @@ alter table tablename drop column column_b
 <h2 id="30-查询没有索引的表"><a href="#30-查询没有索引的表" class="headerlink" title="30. 查询没有索引的表"></a>30. 查询没有索引的表</h2><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">  <span class="keyword">SELECT</span> *</span><br><span class="line">    <span class="keyword">FROM</span> sysobjects</span><br><span class="line">   <span class="keyword">WHERE</span> xtype = <span class="string">'U'</span></span><br><span class="line">     <span class="keyword">AND</span> <span class="keyword">name</span> <span class="keyword">NOT</span> <span class="keyword">IN</span> (</span><br><span class="line">	       <span class="keyword">SELECT</span> c.name</span><br><span class="line">	         <span class="keyword">FROM</span> sysindexes   a</span><br><span class="line">	         <span class="keyword">JOIN</span> sysindexkeys b <span class="keyword">ON</span> a.id = b.id <span class="keyword">AND</span> a.indid = b.indid</span><br><span class="line">	         <span class="keyword">JOIN</span> sysobjects   c <span class="keyword">ON</span> b.id = c.id</span><br><span class="line">	         <span class="keyword">JOIN</span> syscolumns   d <span class="keyword">ON</span> b.id = d.id <span class="keyword">AND</span> b.colid = d.colid</span><br><span class="line">	        <span class="keyword">WHERE</span> a.indid <span class="keyword">NOT</span> <span class="keyword">IN</span> (<span class="number">0</span>, <span class="number">255</span>)</span><br><span class="line">	          <span class="keyword">AND</span> c.xtype = <span class="string">'U'</span></span><br><span class="line">            <span class="comment">--AND c.status &gt; 0 --查所有用户表</span></span><br><span class="line">	        <span class="comment">--AND c.name = 'order' --查指定表</span></span><br><span class="line">         )</span><br><span class="line"><span class="keyword">ORDER</span> <span class="keyword">BY</span> <span class="keyword">name</span></span><br></pre></td></tr></table></figure>
 <hr>
 <h1 id="常识"><a href="#常识" class="headerlink" title="常识"></a>常识</h1><ul>
-<li>在SQL查询中，from后最多可以跟256张表或视图</li>
-<li>在SQL语句中使用Order by查询时，先排序，后取值</li>
+<li>在SQL查询中，<code>FROM</code>后最多可以跟256张表或视图</li>
+<li>在SQL语句中使用<code>ORDER BY</code>查询时，先排序，后取值</li>
 <li>在SQL中，一个字段的最大容量是8000</li>
 </ul>
 
@@ -1048,7 +1048,7 @@ alter table tablename drop column column_b
   <p><span>本文标题:</span><a href="/2016/11/29/SQL经典语句/">SQL经典语句</a></p>
   <p><span>文章作者:</span><a href="/" title="访问 昜丿捺 的个人博客">昜丿捺</a></p>
   <p><span>发布时间:</span>2016年11月29日 - 15:38:32</p>
-  <p><span>最后更新:</span>2021年11月04日 - 09:49:25</p>
+  <p><span>最后更新:</span>2022年08月12日 - 16:56:00</p>
   <p><span>原始链接:</span><a href="/2016/11/29/SQL经典语句/" title="SQL经典语句">https://yangpiena.github.io/2016/11/29/SQL经典语句/</a>
     <span class="copy-path" title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="https://yangpiena.github.io/2016/11/29/SQL经典语句/" aria-label="复制成功！"></i></span>
   </p>
