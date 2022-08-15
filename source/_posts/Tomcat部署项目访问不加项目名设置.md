@@ -32,6 +32,6 @@ description:
 			       prefix="localhost_access_log." suffix=".txt"
 			       pattern="%h %l %u %t &quot;%r&quot; %s %b" />
 
-			<Context path="" docBase="/usr/tomcat/webapps/xxExpert" reloadable="false" />
+			<Context path="" docBase="/usr/tomcat/webapps/testProject" reloadable="false" />
 
 		</Host>

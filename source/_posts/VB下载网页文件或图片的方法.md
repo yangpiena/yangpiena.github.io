@@ -11,7 +11,7 @@ keywords: 下载
 description: 
 ---
 
-#### 一、使用API函数URLDownloadToFile，下载网页、图片等其它文件到本地
+# 一、使用API函数URLDownloadToFile，下载网页、图片等其它文件到本地
 引入API：
 
 	Private Declare Function URLDownloadToFile Lib "urlmon" Alias "URLDownloadToFileA" (ByVal pCaller As Long, ByVal szURL As String, ByVal szFileName As String, ByVal dwReserved As Long, ByVal lpfnCB As Long) As Long
@@ -30,7 +30,7 @@ End Sub
 
 <!-- more -->
 
-#### 二、使用API函数OleLoadPicturePath，下载图片文件到变量，注意要勾选引用：OLE Automation
+# 二、使用API函数OleLoadPicturePath，下载图片文件到变量，注意要勾选引用：OLE Automation
 引入API：
 
 	Private Declare Function OleLoadPicturePath Lib "oleaut32.dll" (ByVal szURLorPath As Long, ByVal punkCaller As Long, ByVal dwReserved As Long, ByVal clrReserved As OLE_COLOR, ByRef riid As TGUID, ByRef ppvRet As IPicture) As Long
@@ -68,7 +68,7 @@ Private Sub test()
 End Sub
 ```
 
-#### 三、使用Microsoft.XMLHTTP对象，下载网页、图片等其它文件到本地
+# 三、使用Microsoft.XMLHTTP对象，下载网页、图片等其它文件到本地
 定义公用下载过程：
 ```
 Public Sub DownNetFile(ByVal i_Url As String, ByVal i_File As String)
@@ -90,7 +90,7 @@ End Sub
 	DownNetFile "http://www.baidu.com/img/baidu_logo.gif", App.Path & "\My-1.bmp" '下载百度图片
 	DownNetFile "http://www.baidu.com", App.Path & "\Baidu.html"                  '下载百度首页的网页
 
-#### 四、使用WebBrowser的Document对象，保存网页的所有图片
+# 四、使用WebBrowser的Document对象，保存网页的所有图片
 先用 WebBrowser1 显示一个网页，如：
 	
 	WebBrowser1.Navigate "http://www.baidu.com"
@@ -111,7 +111,7 @@ For Each E In WebBrowser1.Document.All
 Next
 ```
 
-#### 五、用API调用系统的另存为下载对话框，进行文件下载
+# 五、用API调用系统的另存为下载对话框，进行文件下载
 引入API:
 
 	Private Declare Function DoFileDownload Lib "shdocvw.dll" (ByVal lpszFile As String) As Long
@@ -123,7 +123,7 @@ v_Url = StrConv("http://www.baidu.com", vbUnicode)
 Call DoFileDownload(v_Url)
 ```
 
-#### 六、用WebBrowser1的ExecWB方法调用网页另存为对话框下载
+# 六、用WebBrowser1的ExecWB方法调用网页另存为对话框下载
 	WebBrowser1.ExecWB OLECMDID_SAVEAS, OLECMDEXECOPT_DODEFAULT
 
 ---

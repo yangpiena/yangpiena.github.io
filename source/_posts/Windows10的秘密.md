@@ -9,7 +9,7 @@ authorDesc:
 tags: [Windows]
 description:
 ---
-### 如何获取锁屏动态壁纸？
+# 如何获取锁屏动态壁纸？
 Win10的锁屏动态壁纸每天都会更新，更新后是缓存在如下位置：
 ```
 C:\Users\YANGPIENA\AppData\Local\Packages\Microsoft.Windows.ContentDeliveryManager_cw5n1h2txyewy\LocalState\Assets

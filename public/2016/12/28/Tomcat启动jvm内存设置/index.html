@@ -100,18 +100,18 @@
 
 
 
-  <meta name="description" content="Linux在/usr/local/apache-tomcat-7.0.57/bin目录下的catalina.sh中添加： JAVA_OPTS=&amp;#39;-Xms512m -Xmx1024m&amp;#39;  -Xms：初始值-Xmx：最大值-Xmn：最小值">
+  <meta name="description" content="Linux在/usr/local/apache-tomcat-7.0.57/bin目录下的catalina.sh中添加： JAVA_OPTS=&amp;#39;-Xms512m -Xmx1024m&amp;#39;  -Xms：初始值  -Xmx：最大值  -Xmn：最小值">
 <meta name="keywords" content="tomcat">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Tomcat启动jvm内存设置">
 <meta property="og:url" content="https://yangpiena.github.io/2016/12/28/Tomcat启动jvm内存设置/index.html">
 <meta property="og:site_name" content="昜丿捺">
-<meta property="og:description" content="Linux在/usr/local/apache-tomcat-7.0.57/bin目录下的catalina.sh中添加： JAVA_OPTS=&amp;#39;-Xms512m -Xmx1024m&amp;#39;  -Xms：初始值-Xmx：最大值-Xmn：最小值">
+<meta property="og:description" content="Linux在/usr/local/apache-tomcat-7.0.57/bin目录下的catalina.sh中添加： JAVA_OPTS=&amp;#39;-Xms512m -Xmx1024m&amp;#39;  -Xms：初始值  -Xmx：最大值  -Xmn：最小值">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2020-06-19T04:25:58.578Z">
+<meta property="og:updated_time" content="2022-08-15T07:46:50.739Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Tomcat启动jvm内存设置">
-<meta name="twitter:description" content="Linux在/usr/local/apache-tomcat-7.0.57/bin目录下的catalina.sh中添加： JAVA_OPTS=&amp;#39;-Xms512m -Xmx1024m&amp;#39;  -Xms：初始值-Xmx：最大值-Xmn：最小值">
+<meta name="twitter:description" content="Linux在/usr/local/apache-tomcat-7.0.57/bin目录下的catalina.sh中添加： JAVA_OPTS=&amp;#39;-Xms512m -Xmx1024m&amp;#39;  -Xms：初始值  -Xmx：最大值  -Xmn：最小值">
 
 
 
@@ -454,7 +454,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2020-06-19 12:25:58" itemprop="dateModified" datetime="2020-06-19T12:25:58+08:00">2020-06-19</time>
+                <time title="修改时间：2022-08-15 15:46:50" itemprop="dateModified" datetime="2022-08-15T15:46:50+08:00">2022-08-15</time>
               
             
           </span>
@@ -540,22 +540,24 @@
       
 
       
-        <h4 id="Linux"><a href="#Linux" class="headerlink" title="Linux"></a>Linux</h4><p>在/usr/local/apache-tomcat-7.0.57/bin目录下的catalina.sh中添加：</p>
+        <h1 id="Linux"><a href="#Linux" class="headerlink" title="Linux"></a>Linux</h1><p>在/usr/local/apache-tomcat-7.0.57/bin目录下的catalina.sh中添加：</p>
 <pre><code>JAVA_OPTS=&#39;-Xms512m -Xmx1024m&#39;
 </code></pre><blockquote>
-<p>-Xms：初始值<br>-Xmx：最大值<br>-Xmn：最小值</p>
+<p>-Xms：初始值<br>  -Xmx：最大值<br>  -Xmn：最小值</p>
 </blockquote>
 <a id="more"></a>
-<h4 id="Windows"><a href="#Windows" class="headerlink" title="Windows"></a>Windows</h4><ul>
+<h1 id="Windows"><a href="#Windows" class="headerlink" title="Windows"></a>Windows</h1><ul>
 <li><p>若使用startup.bat启动tomcat，则在C:\apache-tomcat-7.0.57\bin\catalina.bat最前面加入：</p>
-<pre><code>  set JAVA_OPTS=-Xms512m -Xmx1024m
+<pre><code>set JAVA_OPTS=-Xms512m -Xmx1024m
 </code></pre></li>
-<li><p>而如果利用windows的系统服务启动tomcat服务，那上面的设置就不生效了，windows服务执行的是bin/tomcat.exe。他读取注册表中的值，而不是catalina.bat的设置。<br><strong>解决办法：</strong><br>修改注册表HKEY_LOCAL_MACHINE/SOFTWARE/Apache Software Foundation/Tomcat Service Manager/Tomcat5/Parameters/JavaOptions<br>原值为</p>
-<pre><code>  -Dcatalina.home=&quot;C:/ApacheGroup/Tomcat 5.0&quot;
-  -Djava.endorsed.dirs=&quot;C:/ApacheGroup/Tomcat 5.0/common/endorsed&quot;
-  -Xrs
+<li><p>而如果利用windows的系统服务启动tomcat服务，那上面的设置就不生效了，windows服务执行的是bin/tomcat.exe。他读取注册表中的值，而不是catalina.bat的设置。</p>
+<p><strong>解决办法：</strong><br>修改注册表HKEY_LOCAL_MACHINE/SOFTWARE/Apache Software Foundation/Tomcat Service Manager/Tomcat5/Parameters/JavaOptions</p>
+<p>原值为</p>
+<pre><code>    -Dcatalina.home=&quot;C:/ApacheGroup/Tomcat 5.0&quot;
+    -Djava.endorsed.dirs=&quot;C:/ApacheGroup/Tomcat 5.0/common/  endorsed&quot;
+    -Xrs
 </code></pre><p>在最后加入</p>
-<pre><code>  -Xms300m -Xmx350m  
+<pre><code>    -Xms300m -Xmx350m  
 </code></pre><p>退出注册表，重起tomcat服务，设置生效。</p>
 </li>
 </ul>
@@ -635,7 +637,7 @@
   <p><span>本文标题:</span><a href="/2016/12/28/Tomcat启动jvm内存设置/">Tomcat启动jvm内存设置</a></p>
   <p><span>文章作者:</span><a href="/" title="访问 昜丿捺 的个人博客">昜丿捺</a></p>
   <p><span>发布时间:</span>2016年12月28日 - 10:06:29</p>
-  <p><span>最后更新:</span>2020年06月19日 - 12:25:58</p>
+  <p><span>最后更新:</span>2022年08月15日 - 15:46:50</p>
   <p><span>原始链接:</span><a href="/2016/12/28/Tomcat启动jvm内存设置/" title="Tomcat启动jvm内存设置">https://yangpiena.github.io/2016/12/28/Tomcat启动jvm内存设置/</a>
     <span class="copy-path" title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="https://yangpiena.github.io/2016/12/28/Tomcat启动jvm内存设置/" aria-label="复制成功！"></i></span>
   </p>
@@ -1039,7 +1041,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#Linux"><span class="nav-number">1.</span> <span class="nav-text">Linux</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Windows"><span class="nav-number">2.</span> <span class="nav-text">Windows</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Linux"><span class="nav-number">1.</span> <span class="nav-text">Linux</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Windows"><span class="nav-number">2.</span> <span class="nav-text">Windows</span></a></li></ol></div>
             
 
           </div>

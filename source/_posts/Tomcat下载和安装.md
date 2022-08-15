@@ -10,16 +10,16 @@ tags: [tomcat]
 keywords:
 description:
 ---
-### Tomcat[官网下载](https://tomcat.apache.org/)
+# Tomcat [官网下载](https://tomcat.apache.org/)
 
 ---
 
-### Tomcat安装
+# Tomcat安装
 
-#### 1. Windows下
-##### 1.1 将下载的apache-tomcat-6.0.35-windows-x86.zip压缩包解压。
+## 1. Windows下
+### 1.1 将下载的apache-tomcat-6.0.35-windows-x86.zip压缩包解压。
 
-##### 1.2 修改\bin\startup.bat文件，在第一行前面加入以下内容：
+### 1.2 修改\bin\startup.bat文件，在第一行前面加入以下内容：
 
 	REM JDK安装所在的路径
 	SET JAVA_HOME=D:\Program Files\Java\jdk1.6.0_30
@@ -27,9 +27,9 @@ description:
 	SET CATALINA_HOME=D:\Program Files\tomcat6.0.35
 如果需要使用shutdown.bat关闭服务器的话，也按照上面加入。
 
-##### 1.3 这样，运行startup.bat就可以启动Tomcat，运行shutdown.bat就可以关闭服务器了。
+### 1.3 这样，运行startup.bat就可以启动Tomcat，运行shutdown.bat就可以关闭服务器了。
 
-##### 1.4 修改\conf\tomcat-users.xml文件，在`<tomcat-users>`标签内加入
+### 1.4 修改\conf\tomcat-users.xml文件，在`<tomcat-users>`标签内加入
 
 	<role rolename="manager"/>
 	<role rolename="admin"/>
@@ -40,8 +40,8 @@ description:
 
 ---
 
-#### 2. Linux下
-##### 2.1 下载或拷贝tomcat安装包到user目录下，然后解压
+## 2. Linux下
+### 2.1 下载或拷贝tomcat安装包到user目录下，然后解压
 ```
 [root@iZwe13xjwyedbm0tjgmez1Z usr]# ls
 apache-tomcat-7.0.65.tar.gz  bin  etc  games  include  java  lib  lib64  libexec  local  sbin  share  src  tmp
@@ -60,7 +60,7 @@ apache-tomcat-7.0.65  apache-tomcat-7.0.65.tar.gz  bin  etc  games  include  jav
 [root@iZwe13xjwyedbm0tjgmez1Z usr]# 
 ```
 
-##### 2.2 删除安装包，并重命名解压后的文件夹为tomcat
+### 2.2 删除安装包，并重命名解压后的文件夹为tomcat
 ```
 [root@iZwe13xjwyedbm0tjgmez1Z usr]# rm -fr apache-tomcat-7.0.65.tar.gz 
 [root@iZwe13xjwyedbm0tjgmez1Z usr]# mv apache-tomcat-7.0.65/ tomcat
@@ -69,7 +69,7 @@ bin  etc  games  include  java  lib  lib64  libexec  local  sbin  share  src  tm
 [root@iZwe13xjwyedbm0tjgmez1Z usr]# 
 ```
 
-##### 2.3 启动tomcat
+### 2.3 启动tomcat
 执行startup.sh启动tomcat，如下表示启动成功：
 ```
 [root@izwe12zdi799668qfxdm5oz tomcat]# bin/startup.sh 
@@ -82,7 +82,7 @@ Tomcat started.
 [root@izwe12zdi799668qfxdm5oz tomcat]# 
 ```
 
-##### 2.4 查看log信息
+### 2.4 查看log信息
 ```
 [root@izwe12zdi799668qfxdm5oz tomcat]# tail -f logs/catalina.out
 Aug 11, 2017 12:29:19 PM org.apache.catalina.startup.HostConfig deployDirectory
@@ -97,7 +97,7 @@ Aug 11, 2017 12:29:19 PM org.apache.catalina.startup.Catalina start
 INFO: Server startup in 77809 ms
 ```
 
-##### 2.5 防火墙开放8080端口
+### 2.5 防火墙开放8080端口
 打开防火墙配置文件：
 ```
 [root@izwe12zdi799668qfxdm5oz tomcat]# vi /etc/sysconfig/iptables
@@ -112,10 +112,10 @@ INFO: Server startup in 77809 ms
 [root@izwe12zdi799668qfxdm5oz tomcat]# service iptables restart
 ```
 
-##### 2.6 访问tomcat
+### 2.6 访问tomcat
 在浏览器访问地址：http://IP:8080
 
-##### 2.7 停止tomcat
+### 2.7 停止tomcat
 ```
 [root@izwe12zdi799668qfxdm5oz tomcat]# bin/shutdown.sh 
 Using CATALINA_BASE:   /usr/tomcat
@@ -128,10 +128,10 @@ Using CLASSPATH:       /usr/tomcat/bin/bootstrap.jar:/usr/tomcat/bin/tomcat-juli
 
 ---
 
-### Tomcat设置服务
+# Tomcat设置服务
 
-#### 1. Windows下
-##### 1.1 修改\bin目录中的service.bat
+## 1. Windows下
+### 1.1 修改\bin目录中的service.bat
 
 		rem 在第一个if语句的前面一行添加下面的行：
 		SET CATALINA_HOME=D:\Program Files\tomcat6.0.35
@@ -148,7 +148,7 @@ Using CLASSPATH:       /usr/tomcat/bin/bootstrap.jar:/usr/tomcat/bin/tomcat-juli
 		set PR_DESCRIPTION=Apache Tomcat Server - http://jakarta.apache.org/tomcat
 		rem 这一行改不改无所谓，是服务的描述，根据自己的喜好决定吧。
 
-##### 1.2 运行cmd打开控制台，进入解压后的Tomat的/bin目录下，运行`service.bat install`命令
+### 1.2 运行cmd打开控制台，进入解压后的Tomat的/bin目录下，运行`service.bat install`命令
 ```
 D:\Program Files\tomcat6.0.35\bin>service.bat install
 Installing the service  'tomcat6.0' ...
@@ -160,17 +160,17 @@ The service 'tomcat6.0' has been installed.
 ```
 程序提示：The service 'tomcat6.0（你修改以后的SERVICE_NAME）' has been installed说明服务Tomcat已经被安装成功。相应的，运行`service.bat remove`可以移除服务。
 
-##### 1.3 到这里，服务添加成功，运行services.msc，可以看到添加的服务，默认状态下该服务是手动运行的，在它的属性中，将启动类型更改为"自动"，以后机器启动以后Tomcat就在后台启动了。
+### 1.3 到这里，服务添加成功，运行services.msc，可以看到添加的服务，默认状态下该服务是手动运行的，在它的属性中，将启动类型更改为"自动"，以后机器启动以后Tomcat就在后台启动了。
 
 ---
 
-#### 2. Linux下
-##### 2.1 在~目录下，执行下面命令
+## 2. Linux下
+### 2.1 在~目录下，执行下面命令
 ```
 vim .bash_profile
 ```
 
-##### 2.2 在.bash_profile文件中定义TOMCAT_HOME变量，并将变量追加到PATH后面，效果如下：
+### 2.2 在.bash_profile文件中定义TOMCAT_HOME变量，并将变量追加到PATH后面，效果如下：
 		# .bash_profile
 
 		# Get the aliases and functions
@@ -187,12 +187,12 @@ vim .bash_profile
 		export PATH
 保存并退出。
 
-##### 2.3 执行下面命令，使立即生效
+### 2.3 执行下面命令，使立即生效
 ```
 source ./.bash_profile
 ```
 
-##### 2.4 执行下面命令，在tomcat的bin目录下创建脚本文件，
+### 2.4 执行下面命令，在tomcat的bin目录下创建脚本文件，
 ```
 vim /usr/tomcat/bin/tomcat
 ```
@@ -211,12 +211,12 @@ vim /usr/tomcat/bin/tomcat
 		  tail -f $TOMCAT_HOME/logs/catalina.out -n 1000
 		fi
 
-##### 2.5 给文件添加权限，使脚本文件可以执行，命令为
+### 2.5 给文件添加权限，使脚本文件可以执行，命令为
 ```
 chmod 755 /usr/tomcat/bin/tomcat
 ```
 
-##### 2.6 最后，执行下面命令可启动、关闭tomcat，或查看日志
+### 2.6 最后，执行下面命令可启动、关闭tomcat，或查看日志
 启动：
 ```
 tomcat start
@@ -232,7 +232,7 @@ tomcat log
 
 ---
 
-### Tomcat设置开机启动（Linux）
+# Tomcat设置开机启动（Linux）
 打开linux设置开启启动的文件，将下面的配置文件写入此文件的最后
 ```
 vim /etc/rc.d/rc.local
