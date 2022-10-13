@@ -37,7 +37,7 @@ description:
 [今日热榜](https://tophub.today/) | [cnBeta](http://www.cnbeta.com/)  | [Hacker News](https://hackernews.cc/) | [不死鸟发布页](https://dalao.ru/)
 [科塔学术导航](https://site.sciping.com/) | [手机抢购网](http://www.qianggou5.com/price/) | [药房网](https://www.yaofangwang.com/) | [医学微视](https://www.mvyxws.com/) | [WikiHow](https://zh.wikihow.com/%E9%A6%96%E9%A1%B5)
 [Guidebook数字生活指南](https://nav.guidebook.top/) | [福利吧](https://fuliba.com/) | [我的书签](https://it-cxy.top/)
-[中国研究生招生信息网](https://yz.chsi.com.cn/) | [希赛网](https://www.educity.cn/)
+[中国研究生招生信息网](https://yz.chsi.com.cn/) | [希赛网](https://www.educity.cn/) | [夸克网盘](https://pan.quark.cn/)
 
 
 ## 音乐
@@ -47,7 +47,7 @@ description:
 
 ## 电影
 [映像讯](http://mkv.cn/) | [影视森林](http://www.549.tv/) | [免费的在线影视网站汇总](https://iao.su/531/) | [小部落](https://www.xbl100.com/)
-[HDmoli](https://molicp.com/) | [美剧粉](http://www.mjf2020.com/) | [破晓电影](http://www.poxiao.com) | [泡饭影视](https://www.paofans.com/) | [BTBBT](https://www.btbtt19.com/)
+[HDmoli](https://molicp.com/) | [美剧粉](http://www.mjf2020.com/) | [破晓电影](http://www.poxiao.com) | [泡饭影视](https://www.paofans.com/) | [BTBBT](https://www.btbtt19.com/) | [注释影视](https://gaze.run/)
 [JustLive](http://live.yj1211.work/index/home/platforms)
 
 
@@ -127,7 +127,8 @@ description:
 [LayUI](https://www.layui.com/) | [HeyUI](https://www.heyui.top/) | [H-ui前端框架](http://www.h-ui.net/H-ui.admin.shtml)
 [后台界面模板](http://www.mycodes.net/154/3.htm) | [Bootstrap模板](http://www.bootstrapmb.com/) | [Android酷炫实用的开源框架（UI框架）](http://www.runoob.com/w3cnote/android-ui-framework.html)
 [公司某项目前端技术积累](http://blog.csdn.net/sunyingyuan/article/details/38237139)
-[C/S框架网](http://www.csframework.com/)
+[C/S框架网](http://www.csframework.com/) | [Windows桌面端(GUI)程序开发方案比较](https://www.psvmc.cn/article/2019-10-18-windows-program-develop.html)
+[若依管理系统](http://www.ruoyi.vip)
 
 
 ## 数据库
@@ -247,7 +248,13 @@ description:
 
 
 # D
+
+## Docker
+[服务器无法上网如何离线安装docker服务？](https://www.cnblogs.com/creamk87/p/13612510.html) | [无网络环境下安装docker容器](https://www.cnblogs.com/zhao907/p/14659020.html)
+
+## DuiLib
 [DuiLib入门简明教程](https://blog.csdn.net/mao834099514/article/details/74837766)
+
 
 # E
 
@@ -536,7 +543,11 @@ description:
 
 ## Vue.js
 [Vue.js官网](http://cn.vuejs.org/)
-[JSFiddle Hello World](https://jsfiddle.net/chrisvfritz/50wL7mdz/)
+[ElementUI](https://element.eleme.cn/#/zh-CN/component/installation)
+
+
+## VuePress
+[VuePress中文网](https://www.vuepress.cn/)
 
 
 # W

@@ -6,7 +6,7 @@ categories: 技术
 timestamp: 1653983445
 date: 2022-05-31 15:50:45
 authorDesc:
-tags:
+tags: [gitbook, 静态网站]
 description: 制作电子书、在线帮助文档等。
 ---
 
