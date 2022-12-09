@@ -106,21 +106,33 @@ ignore:
 ## Themes: https://hexo.io/themes/
 theme: next
 
-stylus:
-  compress: true # 自适应布局
-
-# 本地搜索
-search:
-  path: search.xml
-  field: post
-  content: true
-  format: html
-  limit: 10000
-
 # 看板娘
 # 作者博客：https://huaji8.top/post/live2d-plugin-2.0/
 #           https://eyhn.in/
 # 模型地址：https://github.com/xiazeyu/live2d-widget-models
+# 模型安装：npm install {packagename} --save
+#           live2d-widget-model-chitose
+#           live2d-widget-model-epsilon2_1
+#           live2d-widget-model-gf
+#           live2d-widget-model-haru/01 (use npm install --save live2d-widget-model-haru)
+#           live2d-widget-model-haru/02 (use npm install --save live2d-widget-model-haru)
+#           live2d-widget-model-haruto
+#           live2d-widget-model-hibiki
+#           live2d-widget-model-hijiki
+#           live2d-widget-model-izumi
+#           live2d-widget-model-koharu
+#           live2d-widget-model-miku
+#           live2d-widget-model-ni-j
+#           live2d-widget-model-nico
+#           live2d-widget-model-nietzsche
+#           live2d-widget-model-nipsilon
+#           live2d-widget-model-nito
+#           live2d-widget-model-shizuku
+#           live2d-widget-model-tororo
+#           live2d-widget-model-tsumiki
+#           live2d-widget-model-unitychan
+#           live2d-widget-model-wanko
+#           live2d-widget-model-z16
 live2d:
   enable: true
   scriptFrom: local         # 默认
@@ -130,26 +142,26 @@ live2d:
   tagMode: false            # 标签模式, 是否仅替换 live2d tag标签而非插入到所有页面中
   log: false                # 调试, 是否在控制台输出日志
   model:
-    # use: live2d-widget-model-hijiki # 模型选择，黑猫
+    use: live2d-widget-model-hijiki # 模型选择，黑猫
     # use: live2d-widget-model-tororo # 模型选择，白猫
   display:
     position: left  # 模型位置
     # width: 70       # 模型宽度
     # height: 90      # 模型高度
-    # hOffset: 0
-    # vOffset: -20
+    # hOffset: 0      # 水平偏移
+    vOffset: -80      # 垂直偏移
   mobile:
     show: false      #是否在手机端显示
 
 # Deployment
 ## Docs: https://hexo.io/docs/one-command-deployment
 deploy:
-  type: 'git'
+- type: 'git'
   repo: https://gitee.com/yangpiena/yangpiena.git
   branch: master
-  type: 'git'
+- type: 'git'
   repo: https://e.coding.net/yangpiena/yangpiena.git
   branch: master
-  type: 'git'
+- type: 'git'
   repo: https://github.com/yangpiena/yangpiena.github.io.git
   branch: master
