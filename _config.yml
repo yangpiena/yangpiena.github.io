@@ -147,3 +147,9 @@ deploy:
   type: 'git'
   repo: https://gitee.com/yangpiena/yangpiena.git
   branch: master
+  type: 'git'
+  repo: https://e.coding.net/yangpiena/yangpiena.git
+  branch: master
+  type: 'git'
+  repo: https://github.com/yangpiena/yangpiena.github.io.git
+  branch: master
