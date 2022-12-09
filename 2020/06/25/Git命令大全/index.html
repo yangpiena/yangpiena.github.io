@@ -305,10 +305,11 @@
     
     
     <div class="post-body" itemprop="articleBody">
-        <p><img src="/img/screenshots/Git资源库图解.jpg" alt="Git"><br><span id="more"></span><br><img src="/img/screenshots/Git常用命令速查表.jpg" alt="Git常用命令速查表"></p>
+        <p><img src="/img/screenshots/Git%E8%B5%84%E6%BA%90%E5%BA%93%E5%9B%BE%E8%A7%A3.jpg" alt="Git"></p>
+<span id="more"></span>
+<p><img src="/img/screenshots/Git%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4%E9%80%9F%E6%9F%A5%E8%A1%A8.jpg" alt="Git常用命令速查表"></p>
 <h2 id="git常识"><a href="#git常识" class="headerlink" title="git常识"></a>git常识</h2><ul>
-<li>Git专用名词<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">Workspace：    工作区</span><br><span class="line">Index / Stage：暂存区</span><br><span class="line">Repository：   仓库区（或本地仓库）</span><br><span class="line">Remote：       远程仓库</span><br><span class="line">branch:        分支</span><br></pre></td></tr></table></figure>
-</li>
+<li>Git专用名词<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">Workspace：    工作区</span><br><span class="line">Index / Stage：暂存区</span><br><span class="line">Repository：   仓库区（或本地仓库）</span><br><span class="line">Remote：       远程仓库</span><br><span class="line">branch:        分支</span><br></pre></td></tr></table></figure></li>
 </ul>
 <h2 id="git常用命令"><a href="#git常用命令" class="headerlink" title="git常用命令"></a>git常用命令</h2><h3 id="添加当前目录的所有文件到暂存区"><a href="#添加当前目录的所有文件到暂存区" class="headerlink" title="添加当前目录的所有文件到暂存区"></a>添加当前目录的所有文件到暂存区</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git add .</span><br></pre></td></tr></table></figure>
 <h3 id="提交暂存区到仓库区"><a href="#提交暂存区到仓库区" class="headerlink" title="提交暂存区到仓库区"></a>提交暂存区到仓库区</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git commit - m [message]</span><br></pre></td></tr></table></figure>
@@ -317,7 +318,8 @@
 <p>也可以将以上命令用连接符<code>&amp;&amp;</code>连接起来一起执行</p>
 </blockquote>
 <h2 id="git其它命令"><a href="#git其它命令" class="headerlink" title="git其它命令"></a>git其它命令</h2><h3 id="强行推送当前分支到远程仓库，即使有冲突"><a href="#强行推送当前分支到远程仓库，即使有冲突" class="headerlink" title="强行推送当前分支到远程仓库，即使有冲突"></a>强行推送当前分支到远程仓库，即使有冲突</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git push [remote] --force</span><br></pre></td></tr></table></figure>
-<p>例如，进入分支<code>source</code>目录下，执行如下命令，推送本地<code>source</code>覆盖远程<code>source</code>：<br><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git push origin source --force</span><br></pre></td></tr></table></figure></p>
+<p>例如，进入分支<code>source</code>目录下，执行如下命令，推送本地<code>source</code>覆盖远程<code>source</code>：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git push origin source --force</span><br></pre></td></tr></table></figure>
 <h3 id="取回远程仓库的变化，并与本地分支合并"><a href="#取回远程仓库的变化，并与本地分支合并" class="headerlink" title="取回远程仓库的变化，并与本地分支合并"></a>取回远程仓库的变化，并与本地分支合并</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git pull [remote] [branch]</span><br></pre></td></tr></table></figure>
 <h3 id="下载一个项目和它的整个代码历史"><a href="#下载一个项目和它的整个代码历史" class="headerlink" title="下载一个项目和它的整个代码历史"></a>下载一个项目和它的整个代码历史</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git clone [url]</span><br></pre></td></tr></table></figure>
 <h3 id="git中提交了想要忽略的文件，如何再删除"><a href="#git中提交了想要忽略的文件，如何再删除" class="headerlink" title="git中提交了想要忽略的文件，如何再删除"></a>git中提交了想要忽略的文件，如何再删除</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git rm --cached 文件</span><br></pre></td></tr></table></figure>

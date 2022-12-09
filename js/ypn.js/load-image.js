@@ -5,10 +5,10 @@ $(document).ready(function(){
     function render(data) {
         var html, li = "";
         for (var i = 0; i < data.length; i++) {
-            //li += '<li style="list-style-type:none"><p><span class="authorLabel">'+ data[i].title +'</span> 创建于 '+ data[i].desc +'</p><img src="' + data[i].url + '" alt="Thumb'+ i +'"/></li>';
             li += '<li><div><h2>'+ data[i].title +'</h2><p>'+ data[i].desc +'</p></div><img src="' + data[i].url + '" alt="'+ data[i].title +'"/></li>';            
         }
         $(".iw_thumbs").append(li);
+		console.log("ypn.load_image:", data);
     }
 	
     var xhr = new XMLHttpRequest();
@@ -60,55 +60,57 @@ $(document).ready(function(){
     }
     xhr2.open("GET", "https://api.btstu.cn/yan/api.php?charset=utf-8&encode=json",true);
     xhr2.send();
+
+	console.log("ypn.load_image Done!:");
 })
 
-	
-	
-	// 实现点击图片放大
-	let container = document.documentElement||document.body;
-	let img,div,src,btnleft,btnright;
-	var imgid=0;
-	let x,y,w,h,tx,ty,tw,th,ww,wh;
-	let closeMove=function(){
-		if(div==undefined){
-			return false;
-		}
-		div.style.opacity=0;
-		img.style.height=h+"px";
-		img.style.width=w+"px";
-		img.style.left=x+"px";
-		img.style.top=(y - container.scrollTop)+"px";
-		// 延迟移除dom
-		setTimeout(function(){
-			div.remove();
-			img.remove();
-			btnright.remove();
-			btnleft.remove();
-		},100);
 
-	};
+// 实现点击图片放大
+let container = document.documentElement||document.body;
+let img,div,src,btnleft,btnright;
+var imgid=0;
+let x,y,w,h,tx,ty,tw,th,ww,wh;
+let closeMove=function(){
+	if(div==undefined){
+		return false;
+	}
+	div.style.opacity=0;
+	img.style.height=h+"px";
+	img.style.width=w+"px";
+	img.style.left=x+"px";
+	img.style.top=(y - container.scrollTop)+"px";
+	// 延迟移除dom
+	setTimeout(function(){
+		div.remove();
+		img.remove();
+		btnright.remove();
+		btnleft.remove();
+	},100);
 
-	let closeFade=function(){
-		if(div==undefined){
-			return false;
-		}
-		div.style.opacity=0;
-		img.style.opacity=0;
-		// 延迟移除dom
-		setTimeout(function(){
-			div.remove();
-			img.remove();
-			btnright.remove();
-			btnleft.remove();
-		},100);
-	};
+};
+
+let closeFade=function(){
+	if(div==undefined){
+		return false;
+	}
+	div.style.opacity=0;
+	img.style.opacity=0;
+	// 延迟移除dom
+	setTimeout(function(){
+		div.remove();
+		img.remove();
+		btnright.remove();
+		btnleft.remove();
+	},100);
+};
 
 // 监听滚动关闭层
 document.addEventListener("scroll",function(){
 	closeFade();
 });
 document.querySelectorAll("img").forEach(v=>{
-	if (v.parentNode.localName != a){
+	console.log("ypn.img:", v);
+	// if (v.parentNode.localName != a){
 		v.id=imgid;
 		imgid++;
 		v.addEventListener("click",function(e){ // 注册事件
@@ -141,7 +143,7 @@ document.querySelectorAll("img").forEach(v=>{
 			img=new Image();
 			btnright=document.createElement("button");
 			btnleft=document.createElement("button");
-			img.data_src=src;
+			img.data_src=data_src;
 			btnleft.style.cssText=`
 				position:fixed;
 				border-radius: 50%;;
@@ -250,5 +252,5 @@ document.querySelectorAll("img").forEach(v=>{
 				},10);
 			};
 		});//end event
-	}
+	// }
 });//end forEach

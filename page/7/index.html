@@ -296,9 +296,10 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <h1 id="Linux"><a href="#Linux" class="headerlink" title="Linux"></a>Linux</h1><p>在/usr/local/apache-tomcat-7.0.57/bin目录下的catalina.sh中添加：</p>
+          <h1 id="Linux"><a href="#Linux" class="headerlink" title="Linux"></a>Linux</h1><p>在&#x2F;usr&#x2F;local&#x2F;apache-tomcat-7.0.57&#x2F;bin目录下的catalina.sh中添加：</p>
 <pre><code>JAVA_OPTS=&#39;-Xms512m -Xmx1024m&#39;
-</code></pre><blockquote>
+</code></pre>
+<blockquote>
 <p>-Xms：初始值<br>  -Xmx：最大值<br>  -Xmn：最小值</p>
 </blockquote>
           <!--noindex-->
@@ -397,11 +398,13 @@
 SET JAVA_HOME=D:\Program Files\Java\jdk1.6.0_30
 REM 免安装的Tomcat解压后的路径
 SET CATALINA_HOME=D:\Program Files\tomcat6.0.35
-</code></pre><p>如果需要使用shutdown.bat关闭服务器的话，也按照上面加入。</p>
+</code></pre>
+<p>如果需要使用shutdown.bat关闭服务器的话，也按照上面加入。</p>
 <h3 id="1-3-这样，运行startup-bat就可以启动Tomcat，运行shutdown-bat就可以关闭服务器了。"><a href="#1-3-这样，运行startup-bat就可以启动Tomcat，运行shutdown-bat就可以关闭服务器了。" class="headerlink" title="1.3 这样，运行startup.bat就可以启动Tomcat，运行shutdown.bat就可以关闭服务器了。"></a>1.3 这样，运行startup.bat就可以启动Tomcat，运行shutdown.bat就可以关闭服务器了。</h3><h3 id="1-4-修改-conf-tomcat-users-xml文件，在-lt-tomcat-users-gt-标签内加入"><a href="#1-4-修改-conf-tomcat-users-xml文件，在-lt-tomcat-users-gt-标签内加入" class="headerlink" title="1.4 修改\conf\tomcat-users.xml文件，在&lt;tomcat-users&gt;标签内加入"></a>1.4 修改\conf\tomcat-users.xml文件，在<code>&lt;tomcat-users&gt;</code>标签内加入</h3><pre><code>&lt;role rolename=&quot;manager&quot;/&gt;
 &lt;role rolename=&quot;admin&quot;/&gt;
 &lt;user username=&quot;admin&quot; password=&quot;admin&quot; roles=&quot;admin,manager&quot;/&gt;
-</code></pre><p>这样才可以使用Tomcat的管理界面。</p>
+</code></pre>
+<p>这样才可以使用Tomcat的管理界面。</p>
           <!--noindex-->
             <div class="post-button">
               <a class="btn" href="/2016/12/28/Tomcat%E4%B8%8B%E8%BD%BD%E5%92%8C%E5%AE%89%E8%A3%85/#more" rel="contents">
@@ -953,7 +956,7 @@ SET CATALINA_HOME=D:\Program Files\tomcat6.0.35
     
     
     <div class="post-body" itemprop="articleBody">
-          <p>以下记录一些常用的Flex控件属性，按字母排序：<br>
+          <p>以下记录一些常用的Flex控件属性，按字母排序：</p>
           <!--noindex-->
             <div class="post-button">
               <a class="btn" href="/2016/12/22/Flex%E5%B1%9E%E6%80%A7%E8%AF%B4%E6%98%8E/#more" rel="contents">
@@ -1045,7 +1048,7 @@ SET CATALINA_HOME=D:\Program Files\tomcat6.0.35
     
     
     <div class="post-body" itemprop="articleBody">
-          <p>Flex每个Scroller都有一个mouseWheelChanging方法,当滚动鼠标中轮的时候会调用，而后就可以在这个函数中进行判断，如下:<br>
+          <p>Flex每个Scroller都有一个mouseWheelChanging方法,当滚动鼠标中轮的时候会调用，而后就可以在这个函数中进行判断，如下:</p>
           <!--noindex-->
             <div class="post-button">
               <a class="btn" href="/2016/12/22/Flex%E8%AE%BE%E7%BD%AEscroller%E7%9A%84%E9%80%9F%E5%BA%A6/#more" rel="contents">
@@ -1137,7 +1140,8 @@ SET CATALINA_HOME=D:\Program Files\tomcat6.0.35
     
     
     <div class="post-body" itemprop="articleBody">
-          <p>通过LabelFunction属性实现自动生成序号。<br>定义方法：<br><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">/**</span><br><span class="line">* 生成datagrid第一列用的序号</span><br><span class="line">*/</span><br><span class="line">private function formatIndexNumber(item:Object, colum:Object):String</span><br><span class="line">&#123;</span><br><span class="line">    return indexNumLabelFun(item, colum.mx_internal::owner);</span><br><span class="line">&#125;</span><br><span class="line"> </span><br><span class="line">public static function indexNumLabelFun(value:Object, dataGrid:Object):String</span><br><span class="line">&#123;</span><br><span class="line">   var arr: Array = dataGrid.dataProvider.source;</span><br><span class="line">   var indexNum: int = (arr.indexOf(value) + 1);            </span><br><span class="line">   return indexNum.toString();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><br>
+          <p>通过LabelFunction属性实现自动生成序号。<br>定义方法：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">/**</span><br><span class="line">* 生成datagrid第一列用的序号</span><br><span class="line">*/</span><br><span class="line">private function formatIndexNumber(item:Object, colum:Object):String</span><br><span class="line">&#123;</span><br><span class="line">    return indexNumLabelFun(item, colum.mx_internal::owner);</span><br><span class="line">&#125;</span><br><span class="line"> </span><br><span class="line">public static function indexNumLabelFun(value:Object, dataGrid:Object):String</span><br><span class="line">&#123;</span><br><span class="line">   var arr: Array = dataGrid.dataProvider.source;</span><br><span class="line">   var indexNum: int = (arr.indexOf(value) + 1);            </span><br><span class="line">   return indexNum.toString();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
           <!--noindex-->
             <div class="post-button">
               <a class="btn" href="/2016/12/22/Flex%E4%B9%8BdataGrid%E8%87%AA%E5%8A%A8%E7%94%9F%E6%88%90%E5%BA%8F%E5%8F%B7/#more" rel="contents">
