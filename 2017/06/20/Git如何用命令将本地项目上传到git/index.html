@@ -186,6 +186,7 @@
         <a href="mailto:yangpiena@gmail.com" title="E-Mail → mailto:yangpiena@gmail.com" rel="noopener" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
       </span>
   </div>
+
         </div>
       </div>
         <div class="back-to-top animated" role="button" aria-label="返回顶部">
@@ -213,6 +214,16 @@
         </ul>
       </div>
     </div>
+    
+    
+    <!-- 增加网易云音乐 -->
+      <div class="pjax">
+        <div class="sidebar-inner">
+          <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=300 src="//music.163.com/outchain/player?type=0&id=5348219627&auto=1&height=300"></iframe>
+        </div>
+      </div>
+
+
   </aside>
 
 
@@ -295,12 +306,10 @@
     
     <div class="post-body" itemprop="articleBody">
         <h3 id="先在GitHub网站上New一个资源库，如：demo"><a href="#先在GitHub网站上New一个资源库，如：demo" class="headerlink" title="先在GitHub网站上New一个资源库，如：demo"></a>先在GitHub网站上New一个资源库，如：demo</h3><span id="more"></span>
-
 <h3 id="进入本地项目文件夹，通过命令-git-init-把这个目录变成Git可以管理的仓库，默认分支为master"><a href="#进入本地项目文件夹，通过命令-git-init-把这个目录变成Git可以管理的仓库，默认分支为master" class="headerlink" title="进入本地项目文件夹，通过命令 git init 把这个目录变成Git可以管理的仓库，默认分支为master"></a>进入本地项目文件夹，通过命令 <code>git init</code> 把这个目录变成Git可以管理的仓库，默认分支为<code>master</code></h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git init</span><br></pre></td></tr></table></figure>
 <h3 id="把文件添加到版本库中，使用命令-git-add-添加到暂存区里面去，不要忘记后面的小数点“-”，意为添加文件夹下的所有文件"><a href="#把文件添加到版本库中，使用命令-git-add-添加到暂存区里面去，不要忘记后面的小数点“-”，意为添加文件夹下的所有文件" class="headerlink" title="把文件添加到版本库中，使用命令 git add . 添加到暂存区里面去，不要忘记后面的小数点“.”，意为添加文件夹下的所有文件"></a>把文件添加到版本库中，使用命令 <code>git add .</code> 添加到暂存区里面去，不要忘记后面的小数点“.”，意为添加文件夹下的所有文件</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git add .</span><br></pre></td></tr></table></figure>
 <h3 id="用命令-git-commit-告诉Git，把文件提交到仓库。引号内为提交说明"><a href="#用命令-git-commit-告诉Git，把文件提交到仓库。引号内为提交说明" class="headerlink" title="用命令 git commit 告诉Git，把文件提交到仓库。引号内为提交说明"></a>用命令 <code>git commit</code> 告诉Git，把文件提交到仓库。引号内为提交说明</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git commit -m &#x27;first commit&#x27;</span><br></pre></td></tr></table></figure>
 <h3 id="关联到远程库"><a href="#关联到远程库" class="headerlink" title="关联到远程库"></a>关联到远程库</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git remote add origin 你的远程库地址</span><br></pre></td></tr></table></figure>
-
 <blockquote>
 <p>例如：<code>git remote add origin https://github.com/yangpiena/demo.git</code><br>  或者：<code>git remote add origin git@github.com:yangpiena/demo.git</code></p>
 </blockquote>
@@ -308,12 +317,12 @@
 <li>获取远程库分支<code>main</code>与本地同步合并（如果远程库不为空必须做这一步，否则后面的提交会失败）<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git pull --rebase origin main</span><br></pre></td></tr></table></figure></li>
 <li>把本地库的内容推送到远程，使用 <code>git push</code> 命令，实际上是把当前分支master推送到远程。执行此命令后会要求输入用户名、密码，验证通过后即开始上传。<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git push -u origin main</span><br></pre></td></tr></table></figure>
 <blockquote>
-<p>GitHub将master改为main后，如果本地分支为master，则会报错 <code>error: src refspec main does not match any.</code> ，可执行下面命令将本地创建分支的信息推送到github上，最后在GitHub上修改master为默认即可。<br>  <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git push origin HEAD -u</span><br></pre></td></tr></table></figure></p>
+<p>GitHub将master改为main后，如果本地分支为master，则会报错 <code>error: src refspec main does not match any.</code> ，可执行下面命令将本地创建分支的信息推送到github上，最后在GitHub上修改master为默认即可。</p>
+  <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git push origin HEAD -u</span><br></pre></td></tr></table></figure>
 </blockquote>
 </li>
 </ul>
 <h4 id="强制推送到远程（可能会覆盖远程上已有的分支或文件）"><a href="#强制推送到远程（可能会覆盖远程上已有的分支或文件）" class="headerlink" title="强制推送到远程（可能会覆盖远程上已有的分支或文件）"></a>强制推送到远程（可能会覆盖远程上已有的分支或文件）</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git push -u origin master -f</span><br></pre></td></tr></table></figure>
-
 <h5 id="状态查询命令"><a href="#状态查询命令" class="headerlink" title="状态查询命令"></a>状态查询命令</h5><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git status</span><br></pre></td></tr></table></figure>
     </div>
 
@@ -461,7 +470,8 @@
 
   
   <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
-<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/next-boot.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/next-theme-pjax/0.6.0/pjax.min.js" integrity="sha256-vxLn1tSKWD4dqbMRyv940UYw4sXgMtYcK6reefzZrao=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/next-boot.js"></script><script src="/js/pjax.js"></script>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-generator-searchdb/1.4.1/search.js" integrity="sha256-1kfA5uHPf65M5cphT2dvymhkuyHPQp5A53EGZOnOLmc=" crossorigin="anonymous"></script>
 <script src="/js/third-party/search/local-search.js"></script>
@@ -471,7 +481,7 @@
 
 
   
-  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+  <script data-pjax async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 
 
 
@@ -507,7 +517,5 @@
 <!-- 一言 -->
 <script type="text/javascript" src="/js/ypn.js/yiYanJingDianYuJu.js"></script>
 
-<!-- 图片点击放大效果 -->
-<script type="text/javascript" src="/js/ypn.js/image.js"></script>
 <script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"log":false,"model":{"jsonPath":"/live2dw/assets/hijiki.model.json"},"display":{"position":"left","vOffset":-80},"mobile":{"show":false}});</script></body>
 </html>

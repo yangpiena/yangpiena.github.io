@@ -186,6 +186,7 @@
         <a href="mailto:yangpiena@gmail.com" title="E-Mail → mailto:yangpiena@gmail.com" rel="noopener" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
       </span>
   </div>
+
         </div>
       </div>
         <div class="back-to-top animated" role="button" aria-label="返回顶部">
@@ -213,6 +214,16 @@
         </ul>
       </div>
     </div>
+    
+    
+    <!-- 增加网易云音乐 -->
+      <div class="pjax">
+        <div class="sidebar-inner">
+          <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=300 src="//music.163.com/outchain/player?type=0&id=5348219627&auto=1&height=300"></iframe>
+        </div>
+      </div>
+
+
   </aside>
 
 
@@ -290,22 +301,12 @@
     <div class="post-body" itemprop="articleBody">
         <p>VirtualBox的虚拟硬盘文件大小随着使用时间越来越大，可按如下步骤收缩：</p>
 <span id="more"></span>
-
-
-<h2 id="释放空闲空间"><a href="#释放空闲空间" class="headerlink" title="释放空闲空间"></a>释放空闲空间</h2><p>进入虚拟机，执行下面的命令释放。<br>Linux下：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo dd if=/dev/zero of=/EMPTY bs=1M</span><br></pre></td></tr></table></figure>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo rm -f /EMPTY</span><br></pre></td></tr></table></figure>
-<p>Windows下，需要先下载安装 <a target="_blank" rel="noopener" href="https://docs.microsoft.com/zh-cn/sysinternals/downloads/sysinternals-suite">Sysinternals Suite</a> 后执行下面命令：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sdelete –z d:</span><br></pre></td></tr></table></figure>
+<h2 id="释放空闲空间"><a href="#释放空闲空间" class="headerlink" title="释放空闲空间"></a>释放空闲空间</h2><p>进入虚拟机，执行下面的命令释放。<br>Linux下：<br><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo dd if=/dev/zero of=/EMPTY bs=1M</span><br></pre></td></tr></table></figure><br><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo rm -f /EMPTY</span><br></pre></td></tr></table></figure><br>Windows下，需要先下载安装 <a target="_blank" rel="noopener" href="https://docs.microsoft.com/zh-cn/sysinternals/downloads/sysinternals-suite">Sysinternals Suite</a> 后执行下面命令：<br><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sdelete –z d:</span><br></pre></td></tr></table></figure></p>
 <blockquote>
 <p>必需先进入sdelete所在目录下再执行命令，其中d为要释放的盘符。</p>
 </blockquote>
-<h2 id="收缩虚拟硬盘"><a href="#收缩虚拟硬盘" class="headerlink" title="收缩虚拟硬盘"></a>收缩虚拟硬盘</h2><p>先关闭虚拟机，再进入VBoxManage命令所在目录下，如：<code>cd C:\Program Files\Oracle\VirtualBox</code><br>如果要收缩的虚拟硬盘是VirtualBox自己的VDI格式，找到你的虚拟硬盘文件，如：<code>D:\YPN.VirtualOS\Win7EN\Win7EN.vdi</code>，执行命令：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">VBoxManage modifyhd D:\YPN.VirtualOS\Win7EN\Win7EN.vdi --compact</span><br></pre></td></tr></table></figure>
-<p>如果虚拟硬盘是Vmware的VMDK格式，因为VirtualBox不支持直接压缩VMDK格式，可以先转换成VDI后再收缩，最后转回VMDK。执行命令：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">VBoxManage clonehd &quot;old.vmdk&quot; &quot;new.vdi&quot; --format vdi</span><br></pre></td></tr></table></figure>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">VBoxManage modifyhd new.vdi --compact</span><br></pre></td></tr></table></figure>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">VBoxManage clonehd &quot;new.vdi&quot; &quot;old.vmdk&quot; --format vmdk</span><br></pre></td></tr></table></figure>
+<h2 id="收缩虚拟硬盘"><a href="#收缩虚拟硬盘" class="headerlink" title="收缩虚拟硬盘"></a>收缩虚拟硬盘</h2><p>先关闭虚拟机，再进入VBoxManage命令所在目录下，如：<code>cd C:\Program Files\Oracle\VirtualBox</code><br>如果要收缩的虚拟硬盘是VirtualBox自己的VDI格式，找到你的虚拟硬盘文件，如：<code>D:\YPN.VirtualOS\Win7EN\Win7EN.vdi</code>，执行命令：<br><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">VBoxManage modifyhd D:\YPN.VirtualOS\Win7EN\Win7EN.vdi --compact</span><br></pre></td></tr></table></figure><br>如果虚拟硬盘是Vmware的VMDK格式，因为VirtualBox不支持直接压缩VMDK格式，可以先转换成VDI后再收缩，最后转回VMDK。执行命令：<br><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">VBoxManage clonehd &quot;old.vmdk&quot; &quot;new.vdi&quot; --format vdi</span><br></pre></td></tr></table></figure><br><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">VBoxManage modifyhd new.vdi --compact</span><br></pre></td></tr></table></figure><br><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">VBoxManage clonehd &quot;new.vdi&quot; &quot;old.vmdk&quot; --format vmdk</span><br></pre></td></tr></table></figure></p>
+
     </div>
 
     
@@ -449,7 +450,8 @@
 
   
   <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
-<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/next-boot.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/next-theme-pjax/0.6.0/pjax.min.js" integrity="sha256-vxLn1tSKWD4dqbMRyv940UYw4sXgMtYcK6reefzZrao=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/next-boot.js"></script><script src="/js/pjax.js"></script>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-generator-searchdb/1.4.1/search.js" integrity="sha256-1kfA5uHPf65M5cphT2dvymhkuyHPQp5A53EGZOnOLmc=" crossorigin="anonymous"></script>
 <script src="/js/third-party/search/local-search.js"></script>
@@ -459,7 +461,7 @@
 
 
   
-  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+  <script data-pjax async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 
 
 
@@ -495,7 +497,5 @@
 <!-- 一言 -->
 <script type="text/javascript" src="/js/ypn.js/yiYanJingDianYuJu.js"></script>
 
-<!-- 图片点击放大效果 -->
-<script type="text/javascript" src="/js/ypn.js/image.js"></script>
 <script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"log":false,"model":{"jsonPath":"/live2dw/assets/hijiki.model.json"},"display":{"position":"left","vOffset":-80},"mobile":{"show":false}});</script></body>
 </html>

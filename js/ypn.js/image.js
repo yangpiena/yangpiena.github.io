@@ -42,7 +42,7 @@ document.addEventListener("scroll",function(){
     closeFade();
 });
 document.querySelectorAll("img").forEach(v=>{
-	// if (v.parentNode.localName != a){
+	if (v.parentNode.localName != a){
 		v.id=imgid;
 		imgid++;
 		v.addEventListener("click",function(e){ // 注册事件
@@ -184,5 +184,5 @@ document.querySelectorAll("img").forEach(v=>{
 	            },10);
 	        };
 	    });//end event
-	// }
+	}
 });//end forEach

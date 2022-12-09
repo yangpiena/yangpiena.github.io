@@ -186,6 +186,7 @@
         <a href="mailto:yangpiena@gmail.com" title="E-Mail → mailto:yangpiena@gmail.com" rel="noopener" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
       </span>
   </div>
+
         </div>
       </div>
         <div class="back-to-top animated" role="button" aria-label="返回顶部">
@@ -213,6 +214,16 @@
         </ul>
       </div>
     </div>
+    
+    
+    <!-- 增加网易云音乐 -->
+      <div class="pjax">
+        <div class="sidebar-inner">
+          <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=300 src="//music.163.com/outchain/player?type=0&id=5348219627&auto=1&height=300"></iframe>
+        </div>
+      </div>
+
+
   </aside>
 
 
@@ -297,10 +308,9 @@
         <p>考虑到文件编码问题，在CSS中推荐使用中文字体的英文表示法，以下附常见中文字体的英文名：</p>
 <h3 id="Mac-OS"><a href="#Mac-OS" class="headerlink" title="Mac OS"></a>Mac OS</h3><p>华文细黑：STHeiti Light [STXihei]<br>华文黑体：STHeiti<br>华文楷体：STKaiti<br>华文宋体：STSong<br>华文仿宋：STFangsong<br>儷黑 Pro：LiHei Pro Medium<br>儷宋 Pro：LiSong Pro Light<br>標楷體：BiauKai<br>蘋果儷中黑：Apple LiGothic Medium<br>蘋果儷細宋：Apple LiSung Light</p>
 <span id="more"></span>
-
 <h3 id="Windows"><a href="#Windows" class="headerlink" title="Windows"></a>Windows</h3><p>新細明體：PMingLiU<br>細明體：MingLiU<br>標楷體：DFKai-SB<br>黑体：SimHei<br>宋体：SimSun<br>新宋体：NSimSun<br>仿宋：FangSong<br>楷体：KaiTi<br>仿宋_GB2312：FangSong_GB2312<br>楷体_GB2312：KaiTi_GB2312<br>微軟正黑體：Microsoft JhengHei<br>微软雅黑体：Microsoft YaHei</p>
 <h3 id="Office"><a href="#Office" class="headerlink" title="Office"></a>Office</h3><p>隶书：LiSu<br>幼圆：YouYuan<br>华文细黑：STXihei<br>华文楷体：STKaiti<br>华文宋体：STSong<br>华文中宋：STZhongsong<br>华文仿宋：STFangsong<br>方正舒体：FZShuTi<br>方正姚体：FZYaoti<br>华文彩云：STCaiyun<br>华文琥珀：STHupo<br>华文隶书：STLiti<br>华文行楷：STXingkai<br>华文新魏：STXinwei</p>
-<h4 id="例：CSS中正确设置微软雅黑字体"><a href="#例：CSS中正确设置微软雅黑字体" class="headerlink" title="例：CSS中正确设置微软雅黑字体"></a>例：CSS中正确设置微软雅黑字体</h4><p>.selector{ font-family:”Microsoft YaHei”,微软雅黑,”MicrosoftJhengHei”,华文细黑,STHeiti,MingLiu }</p>
+<h4 id="例：CSS中正确设置微软雅黑字体"><a href="#例：CSS中正确设置微软雅黑字体" class="headerlink" title="例：CSS中正确设置微软雅黑字体"></a>例：CSS中正确设置微软雅黑字体</h4><p>.selector{ font-family:”Microsoft YaHei”,微软雅黑,”MicrosoftJhengHei”,华文细黑,STHeiti,MingLiu }</p>
 <blockquote>
 <p>说明：加上中文名“微软雅黑”是为了兼容opera。MicrosoftJhengHei为微软正黑体，STHeiti为华文黑体，MingLiu在11px下的中文效果不凡。<br>注意：如果字体的名称是一个单词的，不需要加引号，否则在ie6，7里面会失效，并且后面的样式也会不生效！</p>
 </blockquote>
@@ -452,7 +462,8 @@
 
   
   <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
-<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/next-boot.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/next-theme-pjax/0.6.0/pjax.min.js" integrity="sha256-vxLn1tSKWD4dqbMRyv940UYw4sXgMtYcK6reefzZrao=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/next-boot.js"></script><script src="/js/pjax.js"></script>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-generator-searchdb/1.4.1/search.js" integrity="sha256-1kfA5uHPf65M5cphT2dvymhkuyHPQp5A53EGZOnOLmc=" crossorigin="anonymous"></script>
 <script src="/js/third-party/search/local-search.js"></script>
@@ -462,7 +473,7 @@
 
 
   
-  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+  <script data-pjax async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 
 
 
@@ -498,7 +509,5 @@
 <!-- 一言 -->
 <script type="text/javascript" src="/js/ypn.js/yiYanJingDianYuJu.js"></script>
 
-<!-- 图片点击放大效果 -->
-<script type="text/javascript" src="/js/ypn.js/image.js"></script>
 <script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"log":false,"model":{"jsonPath":"/live2dw/assets/hijiki.model.json"},"display":{"position":"left","vOffset":-80},"mobile":{"show":false}});</script></body>
 </html>

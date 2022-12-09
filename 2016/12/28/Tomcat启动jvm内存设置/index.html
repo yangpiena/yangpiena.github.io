@@ -186,6 +186,7 @@
         <a href="mailto:yangpiena@gmail.com" title="E-Mail → mailto:yangpiena@gmail.com" rel="noopener" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
       </span>
   </div>
+
         </div>
       </div>
         <div class="back-to-top animated" role="button" aria-label="返回顶部">
@@ -213,6 +214,16 @@
         </ul>
       </div>
     </div>
+    
+    
+    <!-- 增加网易云音乐 -->
+      <div class="pjax">
+        <div class="sidebar-inner">
+          <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=300 src="//music.163.com/outchain/player?type=0&id=5348219627&auto=1&height=300"></iframe>
+        </div>
+      </div>
+
+
   </aside>
 
 
@@ -294,32 +305,27 @@
     
     
     <div class="post-body" itemprop="articleBody">
-        <h1 id="Linux"><a href="#Linux" class="headerlink" title="Linux"></a>Linux</h1><p>在&#x2F;usr&#x2F;local&#x2F;apache-tomcat-7.0.57&#x2F;bin目录下的catalina.sh中添加：</p>
+        <h1 id="Linux"><a href="#Linux" class="headerlink" title="Linux"></a>Linux</h1><p>在/usr/local/apache-tomcat-7.0.57/bin目录下的catalina.sh中添加：</p>
 <pre><code>JAVA_OPTS=&#39;-Xms512m -Xmx1024m&#39;
-</code></pre>
-<blockquote>
+</code></pre><blockquote>
 <p>-Xms：初始值<br>  -Xmx：最大值<br>  -Xmn：最小值</p>
 </blockquote>
 <span id="more"></span>
 <h1 id="Windows"><a href="#Windows" class="headerlink" title="Windows"></a>Windows</h1><ul>
 <li><p>若使用startup.bat启动tomcat，则在C:\apache-tomcat-7.0.57\bin\catalina.bat最前面加入：</p>
 <pre><code>set JAVA_OPTS=-Xms512m -Xmx1024m
-</code></pre>
-</li>
-<li><p>而如果利用windows的系统服务启动tomcat服务，那上面的设置就不生效了，windows服务执行的是bin&#x2F;tomcat.exe。他读取注册表中的值，而不是catalina.bat的设置。</p>
-<p><strong>解决办法：</strong></p>
+</code></pre></li>
+<li><p>而如果利用windows的系统服务启动tomcat服务，那上面的设置就不生效了，windows服务执行的是bin/tomcat.exe。他读取注册表中的值，而不是catalina.bat的设置。</p>
+<p><strong>解决办法：</strong><br>修改注册表HKEY_LOCAL_MACHINE/SOFTWARE/Apache Software Foundation/Tomcat Service Manager/Tomcat5/Parameters/JavaOptions</p>
+<p>原值为</p>
+<pre><code>    -Dcatalina.home=&quot;C:/ApacheGroup/Tomcat 5.0&quot;
+    -Djava.endorsed.dirs=&quot;C:/ApacheGroup/Tomcat 5.0/common/  endorsed&quot;
+    -Xrs
+</code></pre><p>在最后加入</p>
+<pre><code>    -Xms300m -Xmx350m  
+</code></pre><p>退出注册表，重起tomcat服务，设置生效。</p>
 </li>
 </ul>
-<p>修改注册表HKEY_LOCAL_MACHINE&#x2F;SOFTWARE&#x2F;Apache Software Foundation&#x2F;Tomcat Service Manager&#x2F;Tomcat5&#x2F;Parameters&#x2F;JavaOptions</p>
-<p>  原值为</p>
-<pre><code>      -Dcatalina.home=&quot;C:/ApacheGroup/Tomcat 5.0&quot;
-      -Djava.endorsed.dirs=&quot;C:/ApacheGroup/Tomcat 5.0/common/  endorsed&quot;
-      -Xrs
-</code></pre>
-<p>  在最后加入</p>
-<pre><code>      -Xms300m -Xmx350m  
-</code></pre>
-<p>  退出注册表，重起tomcat服务，设置生效。</p>
 
     </div>
 
@@ -467,7 +473,8 @@
 
   
   <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
-<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/next-boot.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/next-theme-pjax/0.6.0/pjax.min.js" integrity="sha256-vxLn1tSKWD4dqbMRyv940UYw4sXgMtYcK6reefzZrao=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/next-boot.js"></script><script src="/js/pjax.js"></script>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-generator-searchdb/1.4.1/search.js" integrity="sha256-1kfA5uHPf65M5cphT2dvymhkuyHPQp5A53EGZOnOLmc=" crossorigin="anonymous"></script>
 <script src="/js/third-party/search/local-search.js"></script>
@@ -477,7 +484,7 @@
 
 
   
-  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+  <script data-pjax async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 
 
 
@@ -513,7 +520,5 @@
 <!-- 一言 -->
 <script type="text/javascript" src="/js/ypn.js/yiYanJingDianYuJu.js"></script>
 
-<!-- 图片点击放大效果 -->
-<script type="text/javascript" src="/js/ypn.js/image.js"></script>
 <script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"log":false,"model":{"jsonPath":"/live2dw/assets/hijiki.model.json"},"display":{"position":"left","vOffset":-80},"mobile":{"show":false}});</script></body>
 </html>

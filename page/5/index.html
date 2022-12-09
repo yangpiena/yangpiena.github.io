@@ -185,6 +185,7 @@
         <a href="mailto:yangpiena@gmail.com" title="E-Mail → mailto:yangpiena@gmail.com" rel="noopener" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
       </span>
   </div>
+
         </div>
       </div>
         <div class="back-to-top animated" role="button" aria-label="返回顶部">
@@ -212,6 +213,16 @@
         </ul>
       </div>
     </div>
+    
+    
+    <!-- 增加网易云音乐 -->
+      <div class="pjax">
+        <div class="sidebar-inner">
+          <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=300 src="//music.163.com/outchain/player?type=0&id=5348219627&auto=1&height=300"></iframe>
+        </div>
+      </div>
+
+
   </aside>
 
 
@@ -285,7 +296,7 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <h4 id="创建DLL"><a href="#创建DLL" class="headerlink" title="创建DLL"></a>创建DLL</h4><p>1、打开Visual Studio 2017，创建如下图的工程：<br><img src="https://picturebed-1258146968.cos.ap-beijing.myqcloud.com/newProject.png"><br><img src="https://picturebed-1258146968.cos.ap-beijing.myqcloud.com/newProject2.png"></p>
+          <h4 id="创建DLL"><a href="#创建DLL" class="headerlink" title="创建DLL"></a>创建DLL</h4><p>1、打开Visual Studio 2017，创建如下图的工程：<br><img src="https://picturebed-1258146968.cos.ap-beijing.myqcloud.com/newProject.png" alt=""><br><img src="https://picturebed-1258146968.cos.ap-beijing.myqcloud.com/newProject2.png" alt=""></p>
           <!--noindex-->
             <div class="post-button">
               <a class="btn" href="/2018/07/03/%E5%9C%A8VS2017%E4%B8%AD%E4%BD%BF%E7%94%A8C++%E5%88%9B%E5%BB%BA%E5%92%8C%E4%BD%BF%E7%94%A8DLL/#more" rel="contents">
@@ -379,9 +390,7 @@
     <div class="post-body" itemprop="articleBody">
           <h1 id="一、使用API函数URLDownloadToFile，下载网页、图片等其它文件到本地"><a href="#一、使用API函数URLDownloadToFile，下载网页、图片等其它文件到本地" class="headerlink" title="一、使用API函数URLDownloadToFile，下载网页、图片等其它文件到本地"></a>一、使用API函数URLDownloadToFile，下载网页、图片等其它文件到本地</h1><p>引入API：</p>
 <pre><code>Private Declare Function URLDownloadToFile Lib &quot;urlmon&quot; Alias &quot;URLDownloadToFileA&quot; (ByVal pCaller As Long, ByVal szURL As String, ByVal szFileName As String, ByVal dwReserved As Long, ByVal lpfnCB As Long) As Long
-</code></pre>
-<p>用法：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">Private Sub test()</span><br><span class="line">    Dim v_URL As String, v_FileName As String, v_Result As Long</span><br><span class="line">    v_URL = &quot;http://www.baidu.com/img/baidu_logo.gif&quot;</span><br><span class="line">    v_FileName = App.Path &amp; &quot;\Baidu.bmp&quot;  &#x27;下载百度Logo图片</span><br><span class="line">    v_Result = URLDownloadToFile(0, v_URL, v_FileName, 0, 0)     &#x27;下载文件，返回 0 表示成功</span><br><span class="line">    v_URL = &quot;http://www.baidu.com&quot;</span><br><span class="line">    v_FileName = App.Path &amp; &quot;\Baidu.html&quot; &#x27;下载百度首页的网页</span><br><span class="line">    v_Result = URLDownloadToFile(0, v_URL, v_FileName, 0, 0)     &#x27;下载文件，返回 0 表示成功</span><br><span class="line">End Sub</span><br></pre></td></tr></table></figure>
+</code></pre><p>用法：<br><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">Private Sub test()</span><br><span class="line">    Dim v_URL As String, v_FileName As String, v_Result As Long</span><br><span class="line">    v_URL = &quot;http://www.baidu.com/img/baidu_logo.gif&quot;</span><br><span class="line">    v_FileName = App.Path &amp; &quot;\Baidu.bmp&quot;  &#x27;下载百度Logo图片</span><br><span class="line">    v_Result = URLDownloadToFile(0, v_URL, v_FileName, 0, 0)     &#x27;下载文件，返回 0 表示成功</span><br><span class="line">    v_URL = &quot;http://www.baidu.com&quot;</span><br><span class="line">    v_FileName = App.Path &amp; &quot;\Baidu.html&quot; &#x27;下载百度首页的网页</span><br><span class="line">    v_Result = URLDownloadToFile(0, v_URL, v_FileName, 0, 0)     &#x27;下载文件，返回 0 表示成功</span><br><span class="line">End Sub</span><br></pre></td></tr></table></figure></p>
           <!--noindex-->
             <div class="post-button">
               <a class="btn" href="/2018/04/26/VB%E4%B8%8B%E8%BD%BD%E7%BD%91%E9%A1%B5%E6%96%87%E4%BB%B6%E6%88%96%E5%9B%BE%E7%89%87%E7%9A%84%E6%96%B9%E6%B3%95/#more" rel="contents">
@@ -759,8 +768,7 @@
     
     <div class="post-body" itemprop="articleBody">
           <h1 id="一、图形化界面方式"><a href="#一、图形化界面方式" class="headerlink" title="一、图形化界面方式"></a>一、图形化界面方式</h1><h2 id="1-使用以下命令进入防火墙"><a href="#1-使用以下命令进入防火墙" class="headerlink" title="1. 使用以下命令进入防火墙"></a>1. 使用以下命令进入防火墙</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo yast2</span><br></pre></td></tr></table></figure>
-<p>然后选择Security and Users -&gt; Firewall，或用下面命令直接进入Firewall</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yast2 firewall</span><br></pre></td></tr></table></figure>
+<p>然后选择Security and Users -&gt; Firewall，或用下面命令直接进入Firewall<br><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yast2 firewall</span><br></pre></td></tr></table></figure></p>
           <!--noindex-->
             <div class="post-button">
               <a class="btn" href="/2018/02/01/SUSE-Linux-Enterprise-12-%E9%98%B2%E7%81%AB%E5%A2%99%E5%BC%80%E6%94%BE%E6%9C%8D%E5%8A%A1%E5%8F%8A%E7%AB%AF%E5%8F%A3/#more" rel="contents">
@@ -1246,7 +1254,8 @@
 
   
   <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
-<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/next-boot.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/next-theme-pjax/0.6.0/pjax.min.js" integrity="sha256-vxLn1tSKWD4dqbMRyv940UYw4sXgMtYcK6reefzZrao=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/next-boot.js"></script><script src="/js/pjax.js"></script>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-generator-searchdb/1.4.1/search.js" integrity="sha256-1kfA5uHPf65M5cphT2dvymhkuyHPQp5A53EGZOnOLmc=" crossorigin="anonymous"></script>
 <script src="/js/third-party/search/local-search.js"></script>
@@ -1256,7 +1265,7 @@
 
 
   
-  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+  <script data-pjax async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 
 
 
@@ -1292,7 +1301,5 @@
 <!-- 一言 -->
 <script type="text/javascript" src="/js/ypn.js/yiYanJingDianYuJu.js"></script>
 
-<!-- 图片点击放大效果 -->
-<script type="text/javascript" src="/js/ypn.js/image.js"></script>
 <script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"log":false,"model":{"jsonPath":"/live2dw/assets/hijiki.model.json"},"display":{"position":"left","vOffset":-80},"mobile":{"show":false}});</script></body>
 </html>

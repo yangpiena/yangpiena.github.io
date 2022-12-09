@@ -185,6 +185,7 @@
         <a href="mailto:yangpiena@gmail.com" title="E-Mail → mailto:yangpiena@gmail.com" rel="noopener" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
       </span>
   </div>
+
         </div>
       </div>
         <div class="back-to-top animated" role="button" aria-label="返回顶部">
@@ -212,6 +213,16 @@
         </ul>
       </div>
     </div>
+    
+    
+    <!-- 增加网易云音乐 -->
+      <div class="pjax">
+        <div class="sidebar-inner">
+          <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=300 src="//music.163.com/outchain/player?type=0&id=5348219627&auto=1&height=300"></iframe>
+        </div>
+      </div>
+
+
   </aside>
 
 
@@ -298,10 +309,9 @@
 cd d:\data-integration
 kitchen /rep xxKettle /dir taby /user admin /pass admin /job tabyToXX_Job /level basic /logfile D:\KettleLog\kettlelog.log
 pause
-</code></pre>
-<span id="more"></span>
+</code></pre><span id="more"></span>
 <blockquote>
-<p>其中，“d:\data-integration”表示kitchen命令所在路径；<br>        &#x2F;rep 后跟资源库名称<br>        &#x2F;dir 后跟job所在目录名称，如实际路径为：&#x2F;taby&#x2F;tabyToXX_Job<br>        &#x2F;user 后跟用户名<br>        &#x2F;pass 后跟密码<br>        &#x2F;job 后跟job名称<br>        &#x2F;level 后跟日志等级<br>        &#x2F;logfile 后跟日志文件</p>
+<p>其中，“d:\data-integration”表示kitchen命令所在路径；<br>        /rep 后跟资源库名称<br>        /dir 后跟job所在目录名称，如实际路径为：/taby/tabyToXX_Job<br>        /user 后跟用户名<br>        /pass 后跟密码<br>        /job 后跟job名称<br>        /level 后跟日志等级<br>        /logfile 后跟日志文件</p>
 </blockquote>
 
     </div>
@@ -450,7 +460,8 @@ pause
 
   
   <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
-<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/next-boot.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/next-theme-pjax/0.6.0/pjax.min.js" integrity="sha256-vxLn1tSKWD4dqbMRyv940UYw4sXgMtYcK6reefzZrao=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/next-boot.js"></script><script src="/js/pjax.js"></script>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-generator-searchdb/1.4.1/search.js" integrity="sha256-1kfA5uHPf65M5cphT2dvymhkuyHPQp5A53EGZOnOLmc=" crossorigin="anonymous"></script>
 <script src="/js/third-party/search/local-search.js"></script>
@@ -460,7 +471,7 @@ pause
 
 
   
-  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+  <script data-pjax async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 
 
 
@@ -496,7 +507,5 @@ pause
 <!-- 一言 -->
 <script type="text/javascript" src="/js/ypn.js/yiYanJingDianYuJu.js"></script>
 
-<!-- 图片点击放大效果 -->
-<script type="text/javascript" src="/js/ypn.js/image.js"></script>
 <script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"log":false,"model":{"jsonPath":"/live2dw/assets/hijiki.model.json"},"display":{"position":"left","vOffset":-80},"mobile":{"show":false}});</script></body>
 </html>

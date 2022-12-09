@@ -185,6 +185,7 @@
         <a href="mailto:yangpiena@gmail.com" title="E-Mail → mailto:yangpiena@gmail.com" rel="noopener" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
       </span>
   </div>
+
         </div>
       </div>
         <div class="back-to-top animated" role="button" aria-label="返回顶部">
@@ -212,6 +213,16 @@
         </ul>
       </div>
     </div>
+    
+    
+    <!-- 增加网易云音乐 -->
+      <div class="pjax">
+        <div class="sidebar-inner">
+          <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=300 src="//music.163.com/outchain/player?type=0&id=5348219627&auto=1&height=300"></iframe>
+        </div>
+      </div>
+
+
   </aside>
 
 
@@ -296,19 +307,31 @@
         <ol>
 <li><p>打开conf目录下server.xml；</p>
 </li>
-<li><p>在Host内添加如下Context，其中docBase改为自己的项目路径即可。<br> <Context path="" docBase="/usr/tomcat/webapps/xxExpert" reloadable="false" /></p>
-<span id="more"></span>
+<li><p>在Host内添加如下Context，其中docBase改为自己的项目路径即可。</p>
+<pre><code> &lt;Context path=&quot;&quot; docBase=&quot;/usr/tomcat/webapps/xxExpert&quot; reloadable=&quot;false&quot; /&gt;
+</code></pre><span id="more"></span>
 </li>
-<li><p>添加后效果如下：<br> <Host name="localhost"  appBase="webapps"
-     unpackWARs="true" autoDeploy="true"><br><br>     <!-- SingleSignOn valve, share authentication between web applications
-          Documentation at: /docs/config/valve.html --><br>     <!--
-     <Valve className="org.apache.catalina.authenticator.SingleSignOn" />
-     --><br><br>     <!-- Access log processes all example.
+<li><p>添加后效果如下：</p>
+<pre><code> &lt;Host name=&quot;localhost&quot;  appBase=&quot;webapps&quot;
+     unpackWARs=&quot;true&quot; autoDeploy=&quot;true&quot;&gt;
+
+     &lt;!-- SingleSignOn valve, share authentication between web applications
+          Documentation at: /docs/config/valve.html --&gt;
+     &lt;!--
+     &lt;Valve className=&quot;org.apache.catalina.authenticator.SingleSignOn&quot; /&gt;
+     --&gt;
+
+     &lt;!-- Access log processes all example.
           Documentation at: /docs/config/valve.html
-          Note: The pattern used is equivalent to using pattern="common" --><br>     <Valve className="org.apache.catalina.valves.AccessLogValve" directory="logs"
-            prefix="localhost_access_log." suffix=".txt"
-            pattern="%h %l %u %t &quot;%r&quot; %s %b" /><br><br>     <Context path="" docBase="/usr/tomcat/webapps/testProject" reloadable="false" /><br><br> </Host></p>
-</li>
+          Note: The pattern used is equivalent to using pattern=&quot;common&quot; --&gt;
+     &lt;Valve className=&quot;org.apache.catalina.valves.AccessLogValve&quot; directory=&quot;logs&quot;
+            prefix=&quot;localhost_access_log.&quot; suffix=&quot;.txt&quot;
+            pattern=&quot;%h %l %u %t &amp;quot;%r&amp;quot; %s %b&quot; /&gt;
+
+     &lt;Context path=&quot;&quot; docBase=&quot;/usr/tomcat/webapps/testProject&quot; reloadable=&quot;false&quot; /&gt;
+
+ &lt;/Host&gt;
+</code></pre></li>
 </ol>
 
     </div>
@@ -457,7 +480,8 @@
 
   
   <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
-<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/next-boot.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/next-theme-pjax/0.6.0/pjax.min.js" integrity="sha256-vxLn1tSKWD4dqbMRyv940UYw4sXgMtYcK6reefzZrao=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/next-boot.js"></script><script src="/js/pjax.js"></script>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-generator-searchdb/1.4.1/search.js" integrity="sha256-1kfA5uHPf65M5cphT2dvymhkuyHPQp5A53EGZOnOLmc=" crossorigin="anonymous"></script>
 <script src="/js/third-party/search/local-search.js"></script>
@@ -467,7 +491,7 @@
 
 
   
-  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+  <script data-pjax async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 
 
 
@@ -503,7 +527,5 @@
 <!-- 一言 -->
 <script type="text/javascript" src="/js/ypn.js/yiYanJingDianYuJu.js"></script>
 
-<!-- 图片点击放大效果 -->
-<script type="text/javascript" src="/js/ypn.js/image.js"></script>
 <script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"log":false,"model":{"jsonPath":"/live2dw/assets/hijiki.model.json"},"display":{"position":"left","vOffset":-80},"mobile":{"show":false}});</script></body>
 </html>

@@ -185,6 +185,7 @@
         <a href="mailto:yangpiena@gmail.com" title="E-Mail → mailto:yangpiena@gmail.com" rel="noopener" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
       </span>
   </div>
+
         </div>
       </div>
         <div class="back-to-top animated" role="button" aria-label="返回顶部">
@@ -212,6 +213,16 @@
         </ul>
       </div>
     </div>
+    
+    
+    <!-- 增加网易云音乐 -->
+      <div class="pjax">
+        <div class="sidebar-inner">
+          <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=300 src="//music.163.com/outchain/player?type=0&id=5348219627&auto=1&height=300"></iframe>
+        </div>
+      </div>
+
+
   </aside>
 
 
@@ -295,7 +306,6 @@
     <div class="post-body" itemprop="articleBody">
         <p>根据你的需求，在合适地方加入音乐。例如，打开主题layout下的文件common-article.ejs，加入：</p>
 <span id="more"></span>
-
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line">&lt;!-- YPN Add 2019-03-29 增加背景音乐Aplayer--&gt;</span><br><span class="line">&lt;!-- 参数如下：（粗体为必填项） --&gt;</span><br><span class="line">&lt;!-- data-id: 歌曲/专辑/歌单 ID --&gt;	</span><br><span class="line">	&lt;!-- data-server: 音乐平台，支持如下参数 --&gt;</span><br><span class="line">	&lt;!-- netease （网易云音乐） --&gt;</span><br><span class="line">	&lt;!-- tencent （qq音乐） --&gt;</span><br><span class="line">	&lt;!-- xiami （虾米音乐） --&gt;</span><br><span class="line">	&lt;!-- kugou （酷狗音乐） --&gt;</span><br><span class="line">	&lt;!-- baidu （百度音乐） --&gt;	</span><br><span class="line">&lt;!-- data-type: 请求类型，支持如下参数 --&gt;</span><br><span class="line">	&lt;!-- song （单曲） --&gt;</span><br><span class="line">	&lt;!-- album （专辑） --&gt;</span><br><span class="line">	&lt;!-- playlist （歌单） --&gt;</span><br><span class="line">	&lt;!-- search （搜索） --&gt;</span><br><span class="line">&lt;!-- data-mode: 播放模式 --&gt;</span><br><span class="line">	&lt;!-- random （随机） --&gt;</span><br><span class="line">	&lt;!-- single （单曲） --&gt;</span><br><span class="line">	&lt;!-- circulation （列表循环） --&gt;</span><br><span class="line">	&lt;!-- order （列表） --&gt;</span><br><span class="line">&lt;!-- data-autoplay: 自动播放  --&gt;</span><br><span class="line">	&lt;!-- true --&gt;</span><br><span class="line">	&lt;!-- false --&gt;</span><br><span class="line">&lt;section class=&#x27;music&#x27;&gt;</span><br><span class="line">	&lt;div class=&#x27;content material&#x27;&gt;</span><br><span class="line">		&lt;link rel=&quot;stylesheet&quot; href=&quot;https://cdn.jsdelivr.net/npm/aplayer@1.7.0/dist/APlayer.min.css&quot;&gt;</span><br><span class="line">		&lt;div class=&quot;aplayer&quot;</span><br><span class="line">			data-theme=&quot;#1BCDFC&quot;</span><br><span class="line">			data-mode=&quot;random&quot;</span><br><span class="line">			data-server=&quot;netease&quot;</span><br><span class="line">			data-type=&quot;playlist&quot;</span><br><span class="line">			data-list-folded=&quot;false&quot;</span><br><span class="line">			data-id=&quot;745065239&quot;</span><br><span class="line">			data-volume=&quot;0.7&quot;&gt;</span><br><span class="line">		&lt;/div&gt;</span><br><span class="line">		&lt;script src=&quot;https://cdn.jsdelivr.net/npm/aplayer@1.7.0/dist/APlayer.min.js&quot;&gt;&lt;/script&gt;</span><br><span class="line">		&lt;script src=&quot;https://cdn.jsdelivr.net/npm/meting@1.1.0/dist/Meting.min.js&quot;&gt;&lt;/script&gt;</span><br><span class="line">	&lt;/div&gt;</span><br><span class="line">&lt;/section&gt;</span><br></pre></td></tr></table></figure>
     </div>
 
@@ -443,7 +453,8 @@
 
   
   <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
-<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/next-boot.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/next-theme-pjax/0.6.0/pjax.min.js" integrity="sha256-vxLn1tSKWD4dqbMRyv940UYw4sXgMtYcK6reefzZrao=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/next-boot.js"></script><script src="/js/pjax.js"></script>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-generator-searchdb/1.4.1/search.js" integrity="sha256-1kfA5uHPf65M5cphT2dvymhkuyHPQp5A53EGZOnOLmc=" crossorigin="anonymous"></script>
 <script src="/js/third-party/search/local-search.js"></script>
@@ -453,7 +464,7 @@
 
 
   
-  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+  <script data-pjax async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 
 
 
@@ -489,7 +500,5 @@
 <!-- 一言 -->
 <script type="text/javascript" src="/js/ypn.js/yiYanJingDianYuJu.js"></script>
 
-<!-- 图片点击放大效果 -->
-<script type="text/javascript" src="/js/ypn.js/image.js"></script>
 <script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"log":false,"model":{"jsonPath":"/live2dw/assets/hijiki.model.json"},"display":{"position":"left","vOffset":-80},"mobile":{"show":false}});</script></body>
 </html>

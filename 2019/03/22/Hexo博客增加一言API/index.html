@@ -186,6 +186,7 @@
         <a href="mailto:yangpiena@gmail.com" title="E-Mail → mailto:yangpiena@gmail.com" rel="noopener" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
       </span>
   </div>
+
         </div>
       </div>
         <div class="back-to-top animated" role="button" aria-label="返回顶部">
@@ -213,6 +214,16 @@
         </ul>
       </div>
     </div>
+    
+    
+    <!-- 增加网易云音乐 -->
+      <div class="pjax">
+        <div class="sidebar-inner">
+          <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=300 src="//music.163.com/outchain/player?type=0&id=5348219627&auto=1&height=300"></iframe>
+        </div>
+      </div>
+
+
   </aside>
 
 
@@ -296,7 +307,6 @@
     <div class="post-body" itemprop="articleBody">
         <p>根据你的需求，在合适地方加入一言。例如，打开主题layout下的文件common-article.ejs，加入一言：</p>
 <span id="more"></span>
-
 <h2 id="增加普通一言"><a href="#增加普通一言" class="headerlink" title="增加普通一言"></a>增加普通一言</h2><pre><code>&lt;!-- YPN Add 2019-03-22 没有authorDesc时，显示一言经典语句--&gt;
 &lt;% if (post.authorDesc) &#123; %&gt;
     &lt;p&gt;&lt;%= post.authorDesc ? post.authorDesc : theme.webmaster.desc %&gt;&lt;/p&gt;
@@ -304,8 +314,7 @@
     &lt;script type=&quot;text/javascript&quot; src=&quot;https://api.lwl12.com/hitokoto/v1?encode=js&amp;charset=utf-8&quot;&gt;&lt;/script&gt;
     &lt;p&gt;&lt;span id=&quot;lwlhitokoto&quot;&gt;&lt;script&gt;lwlhitokoto()&lt;/script&gt;&lt;/span&gt;&lt;/p&gt;
 &lt;% &#125; %&gt;
-</code></pre>
-<h2 id="增加彩色滚动变换一言"><a href="#增加彩色滚动变换一言" class="headerlink" title="增加彩色滚动变换一言"></a>增加彩色滚动变换一言</h2><p>下面示例，由固定内容方式，切换为了一言</p>
+</code></pre><h2 id="增加彩色滚动变换一言"><a href="#增加彩色滚动变换一言" class="headerlink" title="增加彩色滚动变换一言"></a>增加彩色滚动变换一言</h2><p>下面示例，由固定内容方式，切换为了一言</p>
 <pre><code>&lt;p&gt;&lt;span id=&quot;lwlhitokoto&quot;&gt;&lt;script&gt;
     var binft = function (r) &#123;
         function t() &#123;
@@ -343,7 +352,7 @@
             direction: &quot;forward&quot;,
             delay: a,
             step: g
-        &#125;;	  
+        &#125;;      
         //YPN Add 2019-03-29 请求获得从7种分类中随机抽取一个句子，并以纯文本格式输出：https://v1.hitokoto.cn/?encode=text
         //https://v1.hitokoto.cn/（从7种分类中随机抽取）
         //https://v1.hitokoto.cn/?c=b （请求获得一个分类是漫画的句子）
@@ -362,7 +371,6 @@
     binft(document.getElementById(&#39;lwlhitokoto&#39;));
 &lt;/script&gt;&lt;/span&gt;&lt;/p&gt;
 </code></pre>
-
     </div>
 
     
@@ -509,7 +517,8 @@
 
   
   <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
-<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/next-boot.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/next-theme-pjax/0.6.0/pjax.min.js" integrity="sha256-vxLn1tSKWD4dqbMRyv940UYw4sXgMtYcK6reefzZrao=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/next-boot.js"></script><script src="/js/pjax.js"></script>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-generator-searchdb/1.4.1/search.js" integrity="sha256-1kfA5uHPf65M5cphT2dvymhkuyHPQp5A53EGZOnOLmc=" crossorigin="anonymous"></script>
 <script src="/js/third-party/search/local-search.js"></script>
@@ -519,7 +528,7 @@
 
 
   
-  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+  <script data-pjax async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 
 
 
@@ -555,7 +564,5 @@
 <!-- 一言 -->
 <script type="text/javascript" src="/js/ypn.js/yiYanJingDianYuJu.js"></script>
 
-<!-- 图片点击放大效果 -->
-<script type="text/javascript" src="/js/ypn.js/image.js"></script>
 <script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"log":false,"model":{"jsonPath":"/live2dw/assets/hijiki.model.json"},"display":{"position":"left","vOffset":-80},"mobile":{"show":false}});</script></body>
 </html>
