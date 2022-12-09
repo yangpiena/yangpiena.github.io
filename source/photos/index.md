@@ -34,12 +34,16 @@ fixed: false
                 <img src="https://api.btstu.cn/sjbz/api.php?lx=suiji" alt="随机图片">
             </li>
             <li>
-                <div><h2>随机二次元图片</h2><p id="txtsjtp4"></p></div>
-                <img src="https://www.dmoe.cc/random.php" alt="随机图片">
+                <div><h2>随机图片</h2><p id="txtsjtp4"></p></div>
+                <img src="https://api.btstu.cn/sjbz/api.php" alt="随机图片">
             </li>
             <li>
                 <div><h2>随机图片</h2><p id="txtsjtp5"></p></div>
-                <img src="http://3650000.xyz/api/?type=img&mode=1,2,5" alt="随机图片">
+                <img src="https://api.wuque.cc/random/images" alt="随机图片">
+            </li>
+            <li>
+                <div><h2>随机微博图片</h2><p id="txtsjtp5"></p></div>
+                <img src="http://3650000.xyz/api/?mode=1" alt="随机图片">
             </li>
         </ul>
     </div>
