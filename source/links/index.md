@@ -13,13 +13,10 @@ description:
 	<p align="center" style="margin-top: -65px;margin-left: 0">
 	<form id="search-form" action="" target="_blank">
 		<input id="q-word" type="hidden" name="q"/>
-		<input id="b-word" type="text"   name="word" size="40" style="margin-bottom: 1.3px;width:100%;height:30px;" placeholder="辅助狗：搜索开源软件" />
+		<input id="b-word" type="text"   name="word" size="40" style="margin-bottom: 1.3px;width:100%;height:30px;" placeholder="" />
 		<input id="b-btn" class="btn-edge" type="submit" value="百度一下"/>
 		<input id="g-btn" class="btn-edge" type="submit" value="Google"/>
 		<input id="m-btn" class="btn-edge" type="submit" value="Bing"/>
-		<input id="p-btn" class="btn-edge" type="submit" value="Petal"/>
-		<input id="f-btn" class="btn-edge" type="submit" value="辅助狗"/>
-		<input id="d-btn" class="btn-edge" type="submit" value="多吉搜索"/>
 	</form>
 </div>
 
@@ -61,16 +58,11 @@ description:
 
 # 在线工具
 [drawio](https://app.diagrams.net/) | [百度脑图](https://naotu.baidu.com/home) | [GitMind](https://gitmind.cn/)
-
 [分享笔记](https://sharenote.app/) | [拷贝兔](https://cp.anyknew.com/) | [鸡毛信](https://cmd.im/) | [鸡霸图床](https://gejiba.com/) | [田字格笔顺 字帖生成器](https://lab.feifanju.com/zitie/) | [休息片刻](http://sit.widget4.com/)
 [短链接](https://url.4qo.cn/#/) | [Ping](https://ping.eu/ping/) | [域名查询](https://lab.feifanju.com/domain-query/) | [极强检测](https://www.urlzt.com/) | [在线HTTP POST/GET接口测试工具](https://lab.feifanju.com/http/index.html) | [临时邮箱](https://linshiyouxiang.net/) | [临时手机号](https://jiemahao.com/)
-
 [独特工具箱](https://www.dute.org/) | [在线工具](http://tool.lu/)  |  [在线工具](http://tool.oschina.net/) | [UU在线工具](https://uutool.cn/) | [JSON在线解析及格式化验证](http://www.json.cn/)  |  [转换json格式为C#类](http://json2csharp.chahuo.com/)
-
 [生成随机密码](https://suijimimashengcheng.51240.com/) | [密码强度检测](https://mimaqiangdu.51240.com/) | [PMD5](http://pmd5.com/#)  |  [输入让你无语的MD5](https://www.somd5.com/) | [在线MD5暴力破解](http://www.atool.org/md5-crack.php) | [核心价值编码器](https://sym233.github.io/core-values-encoder/)
-
 [在线文件转换器](https://cn.office-converter.com/) | [在线格式转换](https://www.alltoall.net/) | [PDF派](https://www.pdfpai.com/) |  [png在线转ico](http://www.easyicon.net/covert/) | [图片背景变成透明](https://transparent.zhaoxi.net/) | [做好图](http://www.zuohaotu.com/)  |  [MakePic.com 图片制造](http://www.makepic.com/)  |  [removebg图片背景消除](https://www.remove.bg/ ) | [waifu2x无损放大图片](http://waifu2x.udp.jp/index.zh-CN.html) | [图片无限变大](http://bigjpg.com/zh) | [草料二维码美化器](http://mh.cli.im/) | [头像生成器](https://www.moubao.vip/)
-
 [在线制作您的Logo](https://www.logaster.cn/) | [小米LOGO生成器](https://mi-logo.lvwzhen.com/) | [免费logo在线制作](http://www.uugai.com/)
 [在线短信轰炸](https://qinggongju.com/dx/) | [文字转语音](https://toolight.cn/media/reading) | [智影](https://zenvideo.qq.com/home)
 
