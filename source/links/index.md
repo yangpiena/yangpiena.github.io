@@ -31,20 +31,21 @@ description:
 
 # 常用
 [百度翻译](https://fanyi.baidu.com/) | [Google翻译](https://translate.google.cn/?hl=zh-CN&tab=TT) | [天气万年历](https://wannianli.tianqi.com/today/zhou/)
-[今日热榜](https://tophub.today/) | [cnBeta](http://www.cnbeta.com/)  | [Hacker News](https://hackernews.cc/) | [不死鸟发布页](https://dalao.ru/)
-[科塔学术导航](https://site.sciping.com/) | [手机抢购网](http://www.qianggou5.com/price/) | [药房网](https://www.yaofangwang.com/) | [医学微视](https://www.mvyxws.com/) | [WikiHow](https://zh.wikihow.com/%E9%A6%96%E9%A1%B5)
-[Guidebook数字生活指南](https://nav.guidebook.top/) | [我的书签](https://it-cxy.top/)
+[今日热榜](https://tophub.today/) | [cnBeta](http://www.cnbeta.com/) | [Business Insider 中文站](https://bi.qq.com/) | [Hacker News](https://hackernews.cc/) | [不死鸟发布页](https://dalao.ru/)  
+[科塔学术导航](https://site.sciping.com/) | [手机抢购网](http://www.qianggou5.com/price/) | [药房网](https://www.yaofangwang.com/) | [医学微视](https://www.mvyxws.com/) | [WikiHow](https://zh.wikihow.com/%E9%A6%96%E9%A1%B5)  
+[Guidebook数字生活指南](https://nav.guidebook.top/) | [我的书签](https://it-cxy.top/)  
 [中国研究生招生信息网](https://yz.chsi.com.cn/) | [希赛网](https://www.educity.cn/) | [夸克网盘](https://pan.quark.cn/)
 
 
 ## 音乐
-[音乐磁场](https://www.hifini.com/) | [麦田音乐网](https://www.mtyyw.com/) | [网易云音乐](http://music.163.com) | [千千音乐](https://music.91q.com/) | [9天音乐](http://www.9sky.com/) | [百乐米](https://bailemi.com/)
-[VIP付费音乐解析下载](https://music.zhuolin.wang/) | [音乐直链搜索](https://music.liuzhijin.cn/) | [天天静听](http://47.112.23.238/) | [YesPlayMusic](https://music.qier222.com/)
+[网易云音乐](http://music.163.com) | [音乐磁场](https://www.hifini.com/) | [千千音乐](https://music.91q.com/) | [9天音乐](http://www.9sky.com/) | [百乐米](https://bailemi.com/) | [铜钟](https://tonzhon.com/)
+[VIP付费音乐解析下载](https://music.zhuolin.wang/) | [音乐直链搜索](https://music.liuzhijin.cn/)
 
 
 ## 电影
-[映像讯](http://mkv.cn/) | [影视森林](http://www.549.tv/) | [免费的在线影视网站汇总](https://iao.su/531/) | [小部落](https://www.xbl100.com/)
-[HDmoli](https://molicp.com/) | [美剧粉](http://www.mjf2020.com/) | [破晓电影](http://www.poxiao.com) | [泡饭影视](https://www.paofans.com/) | [注释影视](https://gaze.run/)
+TODO：哈特的战争、三体、阿凡达：水之道、流浪地球2、满江红、黑豹2  
+[映像讯](http://mkv.cn/) | [影视森林](http://www.549.tv/) | [免费的在线影视网站汇总](https://iao.su/531/) | [小部落](https://www.xbl100.com/)  
+[HDmoli](https://molicp.com/) | [美剧粉](http://www.mjf2020.com/) | [破晓电影](http://www.poxiao.com) | [泡饭影视](https://www.paofans.com/) | [注释影视](https://gaze.run/) | [4kHDR世界](https://www.4khdr.cn/)  
 [JustLive](http://live.yj1211.work/index/home/platforms)
 
 
@@ -53,17 +54,17 @@ description:
 
 
 ## 美图
-[it.me](http://www.topit.pro/) | [CNU视觉联盟](http://www.cnu.cc/inspirationPage/recent-0) | [360°航拍全景](https://airpano.org.cn/) | [免费版权图片搜索](https://www.logosc.cn/so/) | [极简壁纸](https://bz.zzzmh.cn/)
+[CNU视觉联盟](http://www.cnu.cc/inspirationPage/recent-0) | [360°航拍全景](https://airpano.org.cn/) | [免费版权图片搜索](https://www.logosc.cn/so/) | [极简壁纸](https://bz.zzzmh.cn/)
 
 
 # 在线工具
-[drawio](https://app.diagrams.net/) | [百度脑图](https://naotu.baidu.com/home) | [GitMind](https://gitmind.cn/)
+[drawio](https://app.diagrams.net/) | [百度脑图](https://naotu.baidu.com/home) | [GitMind](https://gitmind.cn/) | [打字打字](https://dazidazi.com/)
 [分享笔记](https://sharenote.app/) | [拷贝兔](https://cp.anyknew.com/) | [鸡毛信](https://cmd.im/) | [鸡霸图床](https://gejiba.com/) | [田字格笔顺 字帖生成器](https://lab.feifanju.com/zitie/) | [休息片刻](http://sit.widget4.com/)
 [短链接](https://url.4qo.cn/#/) | [Ping](https://ping.eu/ping/) | [域名查询](https://lab.feifanju.com/domain-query/) | [极强检测](https://www.urlzt.com/) | [在线HTTP POST/GET接口测试工具](https://lab.feifanju.com/http/index.html) | [临时邮箱](https://linshiyouxiang.net/) | [临时手机号](https://jiemahao.com/)
 [独特工具箱](https://www.dute.org/) | [在线工具](http://tool.lu/)  |  [在线工具](http://tool.oschina.net/) | [UU在线工具](https://uutool.cn/) | [JSON在线解析及格式化验证](http://www.json.cn/)  |  [转换json格式为C#类](http://json2csharp.chahuo.com/)
 [生成随机密码](https://suijimimashengcheng.51240.com/) | [密码强度检测](https://mimaqiangdu.51240.com/) | [PMD5](http://pmd5.com/#)  |  [输入让你无语的MD5](https://www.somd5.com/) | [在线MD5暴力破解](http://www.atool.org/md5-crack.php) | [核心价值编码器](https://sym233.github.io/core-values-encoder/)
-[在线文件转换器](https://cn.office-converter.com/) | [在线格式转换](https://www.alltoall.net/) | [PDF派](https://www.pdfpai.com/) |  [png在线转ico](http://www.easyicon.net/covert/) | [图片背景变成透明](https://transparent.zhaoxi.net/) | [做好图](http://www.zuohaotu.com/)  |  [MakePic.com 图片制造](http://www.makepic.com/)  |  [removebg图片背景消除](https://www.remove.bg/ ) | [waifu2x无损放大图片](http://waifu2x.udp.jp/index.zh-CN.html) | [图片无限变大](http://bigjpg.com/zh) | [草料二维码美化器](http://mh.cli.im/) | [头像生成器](https://www.moubao.vip/)
-[在线制作您的Logo](https://www.logaster.cn/) | [小米LOGO生成器](https://mi-logo.lvwzhen.com/) | [免费logo在线制作](http://www.uugai.com/)
+[在线文件转换器](https://cn.office-converter.com/) | [在线格式转换](https://www.alltoall.net/) | [PDF派](https://www.pdfpai.com/) | [图片背景变成透明](https://transparent.zhaoxi.net/) | [做好图](http://www.zuohaotu.com/)  |  [MakePic.com 图片制造](http://www.makepic.com/)  |  [removebg图片背景消除](https://www.remove.bg/ ) | [waifu2x无损放大图片](http://waifu2x.udp.jp/index.zh-CN.html) | [图片无限变大](http://bigjpg.com/zh) | [草料二维码美化器](http://mh.cli.im/) | [头像生成器](https://www.moubao.vip/)
+[小米LOGO生成器](https://mi-logo.lvwzhen.com/) | [免费logo在线制作](http://www.uugai.com/)
 [在线短信轰炸](https://qinggongju.com/dx/) | [文字转语音](https://toolight.cn/media/reading) | [智影](https://zenvideo.qq.com/home)
 
 
@@ -72,55 +73,56 @@ description:
 
 
 # 资源
-[MSDN](http://msdn.itellyou.cn/?gytyzs=0z1zl) | [GitHub镜像](https://github.com.cnpmjs.org/)
-[库问搜索](http://www.koovin.com/) | [telegram 中文搜索](http://www.sssoou.com/) | [小白盘](https://www.xiaobaipan.com)
-[站长素材](https://sc.chinaz.com/) | [矢量图标库](http://www.iconfont.cn/) | [免费开源图标下载](https://iconduck.com/) | [FontAwesome图标](http://www.fontawesome.com.cn/faicons/) | [最好的12个Icon图标资源网站整理分享出来](https://blog.csdn.net/xiawj8957/article/details/45130263)
-[中国色](http://zhongguose.com/)
-[优品PPT](http://www.ypppt.com)
-[中华珍宝馆](https://ltfc.net/)
+[MSDN](http://msdn.itellyou.cn/?gytyzs=0z1zl) | [GitHub镜像](https://github.com.cnpmjs.org/) | [KGitHub](https://help.kgithub.com/questions/)  
+[库问搜索](http://www.koovin.com/) | [telegram 中文搜索](http://www.sssoou.com/) | [小白盘](https://www.xiaobaipan.com)  
+[站长素材](https://sc.chinaz.com/) | [矢量图标库](http://www.iconfont.cn/) | [免费开源图标下载](https://iconduck.com/) | [FontAwesome图标](http://www.fontawesome.com.cn/faicons/) | [最好的12个Icon图标资源网站整理分享出来](https://blog.csdn.net/xiawj8957/article/details/45130263)  
+[中国色](http://zhongguose.com/)  
+[优品PPT](http://www.ypppt.com)  
+[中华珍宝馆](https://ltfc.net/)  
 [实况摄像头](https://www.skylinewebcams.com/zh/webcam/maldives/lhaviyani-atoll/kurendhoo/kuredu-island.html)
 
 
 ## 阅读/电子书
-[孔夫子旧书网](https://www.kongfz.com/)
-[秘密花园](http://www.yini.org)    |  [全历史](https://www.allhistory.com/ " 全方位了解历史的网站，也是一个不错的网站")
+[孔夫子旧书网](https://www.kongfz.com/)  
+[秘密花园](http://www.yini.org)    |  [全历史](https://www.allhistory.com/ " 全方位了解历史的网站，也是一个不错的网站")  
 [鸠摩搜索](https://www.jiumodiary.com/ "电子书搜索引擎，提供各类电子书搜索下载，有多种格式")  |  [i-Book.in](https://book.tstrs.me/ " 基于索引IPFS链接的电子书搜索引擎")  |  [书单网](https://www.shudan.vip/ "电子书搜索网站，抓取第三方网站的资源，也有很多资源是通过城通网赚网盘下载")  |  [Mobilism](https://forum.mobilism.org/viewforum.php?f=19 "电子书论坛，提供英文原版电子书下载")  |  [七彩英语](http://www.qcenglish.com/ "提供PDF或TXT格式的英文原版电子书下载")  |  [好读](http://www.haodoo.net/ "多格式电子书下载网站，很老的一个站")  
-[云海电子图书馆](http://www.pdfbook.cn/ "基于城通网赚网盘下载的电子书网站")  
-[A+医学百科](http://www.a-hospital.com/ "在线医学百科全书")
+[Z-Library 电子书下载](https://iui.su/380/) | [云海电子图书馆](http://www.pdfbook.cn/ "基于城通网赚网盘下载的电子书网站")  
+[A+医学百科](http://www.a-hospital.com/ "在线医学百科全书")  
 [瑞文网教材](https://www.ruiwen.com/jiaocai/ "提供人教版、北师大、苏教版、沪教版、浙教版、鲁科版、仁爱版英语等电子课本在线阅读")   |  [人教版中小学教材](https://bp.pep.com.cn/jc/ "人民教育出版社提供的中小学教材电子版下载（转自：免费吧 &raquo; 电子书下载网站大汇总(https://www.mianfeib.me/ebook-download-website.html)）")
 
 
 ## 系统/软件下载
-[IT之家](https://www.ithome.com/) | [系统之家](http://www.xitongzhijia.net/) | [系统天地](http://www.xitongtiandi.net/) | [Win10专业版官网](http://www.win10zyb.com/) | [吻妻出品专注 win10](https://iwin10.net/) | [吻妻出品专注 win7](http://www.newxitong.com/) | [HelloWindows](https://hellowindows.cn/)
-[黑苹果乐园](https://imac.hk/) | [黑果小兵](https://blog.daliansky.net/)
-[小众软件](https://www.appinn.com/) | [zd423](http://www.zdfans.com/) | [423down](https://www.423down.com/) | [分享者](https://www.sharerw.com/) | [我爱分享网](http://www.zhanshaoyi.com/rjxz.html) | [夜雨聆风](http://www.yeyulingfeng.com/) | [金狐维护盘](http://www.jinhu.me/) | [行客工作室](http://www.runker.net/) | [软猫下载](https://www.softmall.net/) | [Puresys](https://www.puresys.net/) | [DIY博客园](https://www.diybloghome.com/)
-[浏览迷](https://liulanmi.com/) | [Chrome浏览器插件下载中心](https://www.chromefor.com/)
-[阅读](http://www.legado.top)
+[IT之家](https://www.ithome.com/) | [系统之家](http://www.xitongzhijia.net/) | [系统天地](http://www.xitongtiandi.net/) | [Win10专业版官网](http://www.win10zyb.com/) | [吻妻出品专注 win10](https://iwin10.net/) | [吻妻出品专注 win7](http://www.newxitong.com/) | [HelloWindows](https://hellowindows.cn/)  
+[黑苹果乐园](https://imac.hk/) | [黑果小兵](https://blog.daliansky.net/)  
+[小众软件](https://www.appinn.com/) | [zd423](http://www.zdfans.com/) | [423down](https://www.423down.com/) | [分享者](https://www.sharerw.com/) | [我爱分享网](http://www.zhanshaoyi.com/rjxz.html) | [夜雨聆风](http://www.yeyulingfeng.com/) | [金狐维护盘](http://www.jinhu.me/) | [行客工作室](http://www.runker.net/) | [软猫下载](https://www.softmall.net/) | [Puresys](https://www.puresys.net/) | [DIY博客园](https://www.diybloghome.com/)  
+[浏览迷](https://liulanmi.com/) | [Chrome浏览器插件下载中心](https://www.chromefor.com/)  
+[阅读](http://www.legado.top)  
+[Greasy Fork 用户脚本](https://greasyfork.org/zh-CN) | [无限制下载器](https://greasyfork.org/zh-CN/scripts/445751-unlimited-downloader?utm_source=appinn.com)
 
 
 ## 文章/教程
-[菜鸟教程](http://www.runoob.com/)
-[B/S，C/S，B/S和C/S混合模式的概念区别优缺点及前景分析](http://www.ufidawhy.com/mfufida/613.html) | [一种电子病历系统软件框架思想——B/S与C/S混合架构](http://www.hit180.com/21534.html)
-[LB 负载均衡的层次结构](http://www.cnblogs.com/mindwind/p/5339657.html) | [Nginx 0.5.31 + PHP 5.2.4（FastCGI）搭建可承受3万以上并发连接数，胜过Apache 10倍的Web服务器原创](http://zyan.cc/post/297/)
-[GitHub上优秀的开源项目](http://blog.csdn.net/ren1027538427/article/details/52450294) | [2017 码云最火爆开源项目 TOP 50，你都用过哪些？](https://www.oschina.net/news/92438/2017-mayun-top-50)
-[项目目录结构规范](https://segmentfault.com/a/1190000002471120) | [好的用户界面-界面设计的一些技巧](https://www.cnblogs.com/Wayou/p/goodui.html#home) | [MIUI更新日志](http://www.miui.com/home.php?mod=space&uid=8&do=thread&view=me&from=space)
-[Linux删除乱码文件](http://www.cnblogs.com/quanweiru/p/3764003.html) | [SUSE Linux启用SSH](http://tophandxing.blog.163.com/blog/static/109714820124123438513/) | [黑苹果macOS High Sierra 10.13.6详细安装新手菜鸟教程](http://tzit.net/htmlitjs/2018-10-25/2234.html)
+[菜鸟教程](http://www.runoob.com/)  
+[B/S，C/S，B/S和C/S混合模式的概念区别优缺点及前景分析](http://www.ufidawhy.com/mfufida/613.html) | [一种电子病历系统软件框架思想——B/S与C/S混合架构](http://www.hit180.com/21534.html)  
+[LB 负载均衡的层次结构](http://www.cnblogs.com/mindwind/p/5339657.html) | [Nginx 0.5.31 + PHP 5.2.4（FastCGI）搭建可承受3万以上并发连接数，胜过Apache 10倍的Web服务器原创](http://zyan.cc/post/297/)  
+[GitHub上优秀的开源项目](http://blog.csdn.net/ren1027538427/article/details/52450294) | [2017 码云最火爆开源项目 TOP 50，你都用过哪些？](https://www.oschina.net/news/92438/2017-mayun-top-50)  
+[项目目录结构规范](https://segmentfault.com/a/1190000002471120) | [好的用户界面-界面设计的一些技巧](https://www.cnblogs.com/Wayou/p/goodui.html#home) | [MIUI更新日志](http://www.miui.com/home.php?mod=space&uid=8&do=thread&view=me&from=space)  
+[Linux删除乱码文件](http://www.cnblogs.com/quanweiru/p/3764003.html) | [SUSE Linux启用SSH](http://tophandxing.blog.163.com/blog/static/109714820124123438513/) | [黑苹果macOS High Sierra 10.13.6详细安装新手菜鸟教程](http://tzit.net/htmlitjs/2018-10-25/2234.html)  
 [Win10怎么把批处理文件固定到开始菜单](http://www.jb51.net/os/win10/483729.html) | [解决TCP/IP筛选的实用设置问题](https://jingyan.baidu.com/article/851fbc37dc1e513e1f15ab27.html) | 
-[Flex转型Html学习随笔1——关于Html页面的div布局（上）](http://www.cnblogs.com/momoko8443/p/4302879.html) | [Flex转型Html学习随笔1——关于Html页面的div布局（下）](http://www.cnblogs.com/momoko8443/p/4303829.html)
-[OneAPM 工作两年总结](http://www.ituring.com.cn/article/497377)
-[竞品分析－SWOT分析](https://zhuanlan.zhihu.com/p/181668340)
-[ffmpeg 常用命令汇总](https://blog.csdn.net/kingvon_liwei/article/details/79271361)
+[Flex转型Html学习随笔1——关于Html页面的div布局（上）](http://www.cnblogs.com/momoko8443/p/4302879.html) | [Flex转型Html学习随笔1——关于Html页面的div布局（下）](http://www.cnblogs.com/momoko8443/p/4303829.html)  
+[OneAPM 工作两年总结](http://www.ituring.com.cn/article/497377)  
+[竞品分析－SWOT分析](https://zhuanlan.zhihu.com/p/181668340)  
+[ffmpeg 常用命令汇总](https://blog.csdn.net/kingvon_liwei/article/details/79271361)  
 [网易邮箱配置](http://www.163mailbox.cn/client-outlook-foxmail-settings.html)
-[手艺活](https://www.shouyihuo.com/)
-[星际黑客](https://xj.hk/)
+[手艺活](https://www.shouyihuo.com/)  
+[星际黑客](https://xj.hk/)  
 
 
 ## 前端/案例
-[蓝蓝设计](http://www.lanlanwork.com/)
+[蓝蓝设计](http://www.lanlanwork.com/)  
 [LayUI](https://www.layui.com/) | [HeyUI](https://www.heyui.top/) | [H-ui前端框架](http://www.h-ui.net/H-ui.admin.shtml) | [若依管理系统](http://www.ruoyi.vip)
-[Bootstrap模板](http://www.bootstrapmb.com/) | [Android酷炫实用的开源框架（UI框架）](http://www.runoob.com/w3cnote/android-ui-framework.html)
-[公司某项目前端技术积累](http://blog.csdn.net/sunyingyuan/article/details/38237139)
-[Windows桌面端(GUI)程序开发方案比较](https://www.psvmc.cn/article/2019-10-18-windows-program-develop.html)
+[Bootstrap模板](http://www.bootstrapmb.com/) | [Android酷炫实用的开源框架（UI框架）](http://www.runoob.com/w3cnote/android-ui-framework.html)  
+[公司某项目前端技术积累](http://blog.csdn.net/sunyingyuan/article/details/38237139)  | [产品简化改版怎么做？](http://www.lanlanwork.com/blog/?post=6443)
+[Windows桌面端(GUI)程序开发方案比较](https://www.psvmc.cn/article/2019-10-18-windows-program-develop.html)  
 
 
 
@@ -505,7 +507,7 @@ description:
 ## VB
 [VB源码](http://www.codesky.net/vb/)
 [VB函数大全](http://www10.zzu.edu.cn/ie_wangjunfeng/daquan/function/index.aspx)
-[MZ-Tools的博客](https://www.mztools.com/blog/moving-from-mz-tools-3-0-to-8-0/)
+[MZ-Tools](https://www.mztools.com/)
 [vbRichClient](http://www.vbrichclient.com/) | [使用 VBRichClient 库](http://www.office-cn.net/home.php?mod=space&uid=230471&do=blog&id=15201) | [vbRichClient学习分享](http://www.360doc.com/content/18/0228/22/541242_733278096.shtml)
 [VB下的插件开发](https://blog.csdn.net/guyehanxinlei/article/details/1506461)
 [VB实现Base64 编解码](http://blog.csdn.net/iamlaosong/article/details/38229755)

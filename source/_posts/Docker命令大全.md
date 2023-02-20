@@ -57,7 +57,7 @@ docker tag SOURCE_IMAGE[:TAG] TARGET_IMAGE[:TAG]
 # 如果省略TAG 则会为镜像默认打上标签latest
 ```
 
-## docker 容器命令
+## docker容器命令
 ### 查看正在运行容器列表
 ```
 docker ps

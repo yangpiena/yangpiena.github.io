@@ -90,6 +90,7 @@ tags: [Linux, 命令]
 | netstat -apn                                 | 查看所有的进程和端口使用情况                                               |
 | netstat -nptl                                | 查看端口使用情况                                                           |
 | lsof                                         | 查看端口使用情况（openSUSE Leap 15.0），如lsof -i:80                       |
+| nc -vz IP地址或域名 端口                                         | 检测远程服务器端口                       |
 
 ### 在命令行中配置IP地址
 这里用Suse Linux举例：

@@ -38,12 +38,8 @@ fixed: false
                 <img src="https://api.btstu.cn/sjbz/api.php" alt="随机图片">
             </li>
             <li>
-                <div><h2>随机图片</h2><p id="txtsjtp5"></p></div>
-                <img src="https://api.wuque.cc/random/images" alt="随机图片">
-            </li>
-            <li>
                 <div><h2>随机微博图片</h2><p id="txtsjtp5"></p></div>
-                <img src="http://3650000.xyz/api/?mode=1" alt="随机图片">
+                <img src="https://3650000.xyz/api/?mode=1" alt="随机图片">
             </li>
         </ul>
     </div>
