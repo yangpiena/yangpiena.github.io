@@ -30,8 +30,9 @@ description:
 
 
 # 常用
-[百度翻译](https://fanyi.baidu.com/) | [Google翻译](https://translate.google.cn/?hl=zh-CN&tab=TT) | [天气万年历](https://wannianli.tianqi.com/today/zhou/)
-[今日热榜](https://tophub.today/) | [cnBeta](http://www.cnbeta.com/) | [Business Insider 中文站](https://bi.qq.com/) | [Hacker News](https://hackernews.cc/) | [不死鸟发布页](https://dalao.ru/)  
+[ChatGPT OpenAI 项目汇总](https://iui.su/2920/) | [ChatGPT免费体验在线列表](https://lzw.me/x/chatgpt-sites/)  | [AIchatOS](https://chat2.jinshutuan.com/#/chat)
+[百度翻译](https://fanyi.baidu.com/) | [Google翻译](https://translate.google.cn/?hl=zh-CN&tab=TT) | [天气万年历](https://wannianli.tianqi.com/today/zhou/)  
+[今日热榜](https://tophub.today/) | [cnBeta](http://www.cnbeta.com/) | [Business Insider 中文站](https://bi.qq.com/) | [Hacker News](https://hackernews.cc/) | [不死鸟发布页](https://dalao.ru/) | [系统极客](https://www.sysgeek.cn/)  
 [科塔学术导航](https://site.sciping.com/) | [手机抢购网](http://www.qianggou5.com/price/) | [药房网](https://www.yaofangwang.com/) | [医学微视](https://www.mvyxws.com/) | [WikiHow](https://zh.wikihow.com/%E9%A6%96%E9%A1%B5)  
 [Guidebook数字生活指南](https://nav.guidebook.top/) | [我的书签](https://it-cxy.top/)  
 [中国研究生招生信息网](https://yz.chsi.com.cn/) | [希赛网](https://www.educity.cn/) | [夸克网盘](https://pan.quark.cn/)
@@ -45,12 +46,12 @@ description:
 ## 电影
 TODO：哈特的战争、三体、阿凡达：水之道、流浪地球2、满江红、黑豹2  
 [映像讯](http://mkv.cn/) | [影视森林](http://www.549.tv/) | [免费的在线影视网站汇总](https://iao.su/531/) | [小部落](https://www.xbl100.com/)  
-[HDmoli](https://molicp.com/) | [美剧粉](http://www.mjf2020.com/) | [破晓电影](http://www.poxiao.com) | [泡饭影视](https://www.paofans.com/) | [注释影视](https://gaze.run/) | [4kHDR世界](https://www.4khdr.cn/)  
+[HDmoli](https://molicp.com/) | [美剧粉](http://www.mjf2020.com/) | [破晓电影](http://www.poxiao.com) | [注释影视](https://gaze.run/) | [4kHDR世界](https://www.4khdr.cn/)  
 [JustLive](http://live.yj1211.work/index/home/platforms)
 
 
 ## 游戏
-[三国杀](http://web.sanguosha.com/)  |  [蜀门私服吧](https://www.931pk.cn/)  | [小霸王](https://www.yikm.net/) | [摸鱼游戏](https://poki.com/)
+[米游社](https://www.miyoushe.com/ys/) | [三国杀](http://web.sanguosha.com/)  |  [蜀门私服吧](https://www.931pk.cn/)  | [小霸王](https://www.yikm.net/) | [摸鱼游戏](https://poki.com/)
 
 
 ## 美图
@@ -58,6 +59,7 @@ TODO：哈特的战争、三体、阿凡达：水之道、流浪地球2、满江
 
 
 # 在线工具
+[Quick Reference](https://quickref.cn/)  
 [drawio](https://app.diagrams.net/) | [百度脑图](https://naotu.baidu.com/home) | [GitMind](https://gitmind.cn/) | [打字打字](https://dazidazi.com/)
 [分享笔记](https://sharenote.app/) | [拷贝兔](https://cp.anyknew.com/) | [鸡毛信](https://cmd.im/) | [鸡霸图床](https://gejiba.com/) | [田字格笔顺 字帖生成器](https://lab.feifanju.com/zitie/) | [休息片刻](http://sit.widget4.com/)
 [短链接](https://url.4qo.cn/#/) | [Ping](https://ping.eu/ping/) | [域名查询](https://lab.feifanju.com/domain-query/) | [极强检测](https://www.urlzt.com/) | [在线HTTP POST/GET接口测试工具](https://lab.feifanju.com/http/index.html) | [临时邮箱](https://linshiyouxiang.net/) | [临时手机号](https://jiemahao.com/)
@@ -68,8 +70,8 @@ TODO：哈特的战争、三体、阿凡达：水之道、流浪地球2、满江
 [在线短信轰炸](https://qinggongju.com/dx/) | [文字转语音](https://toolight.cn/media/reading) | [智影](https://zenvideo.qq.com/home)
 
 
-# 社区
-[博客园](http://www.cnblogs.com/cmt/) | [开源中国社区](http://www.oschina.net/)| [HTM5中国产业联盟](http://www.html5plus.org/)
+# 博客/社区
+[博客园](http://www.cnblogs.com/cmt/) | [开源中国社区](http://www.oschina.net/)
 
 
 # 资源
@@ -93,7 +95,7 @@ TODO：哈特的战争、三体、阿凡达：水之道、流浪地球2、满江
 
 ## 系统/软件下载
 [IT之家](https://www.ithome.com/) | [系统之家](http://www.xitongzhijia.net/) | [系统天地](http://www.xitongtiandi.net/) | [Win10专业版官网](http://www.win10zyb.com/) | [吻妻出品专注 win10](https://iwin10.net/) | [吻妻出品专注 win7](http://www.newxitong.com/) | [HelloWindows](https://hellowindows.cn/)  
-[黑苹果乐园](https://imac.hk/) | [黑果小兵](https://blog.daliansky.net/)  
+[黑苹果乐园](https://imac.hk/) | [黑果小兵](https://blog.daliansky.net/) | [Ghost Spectre 系统](https://bbs.pcbeta.com/viewthread-1956025-1-1.html)  
 [小众软件](https://www.appinn.com/) | [zd423](http://www.zdfans.com/) | [423down](https://www.423down.com/) | [分享者](https://www.sharerw.com/) | [我爱分享网](http://www.zhanshaoyi.com/rjxz.html) | [夜雨聆风](http://www.yeyulingfeng.com/) | [金狐维护盘](http://www.jinhu.me/) | [行客工作室](http://www.runker.net/) | [软猫下载](https://www.softmall.net/) | [Puresys](https://www.puresys.net/) | [DIY博客园](https://www.diybloghome.com/)  
 [浏览迷](https://liulanmi.com/) | [Chrome浏览器插件下载中心](https://www.chromefor.com/)  
 [阅读](http://www.legado.top)  
@@ -172,59 +174,17 @@ TODO：哈特的战争、三体、阿凡达：水之道、流浪地球2、满江
 
 # C
 
-## C&#35;
-[C#教程](http://www.runoob.com/csharp/csharp-program-structure.html) | [ReoGrid](https://reogrid.net/document/)
-[辉耀应用程序框架学习网](http://www.huiyaosoft.com/winformlist.htm)
-[Winform开发框架的重要特性总结](https://www.cnblogs.com/wuhuacong/p/3199829.html)
-[Vs解决方案的目录结构设置和管理](https://blog.csdn.net/lp310018931/article/details/47991759)
-[C#（Net）软件开发常用工具汇总，提高你的开发效率](https://www.cnblogs.com/Jeremy2001/p/6066553.html)
-[Winform自动更新组件分享](http://www.cnblogs.com/KnightsWarrior/archive/2010/10/20/1856255.html#3754564)
-[Winform(C#.NET)自动更新组件的使用及部分功能实现](https://www.cnblogs.com/24la/p/autoupdater-component.html)
-[C#之使用AutoUpdater自动更新客户端](https://www.cnblogs.com/GardenofEden/p/10337744.html)
-[厚积薄发，丰富的公用类库积累，助你高效进行系统开发（8）----非对称加密、BASE64加密、MD5等常用加密处理](http://www.cnblogs.com/wuhuacong/archive/2011/11/28/2266694.html)
-[Winform开发框架主界面设计展示](http://www.cnblogs.com/wuhuacong/p/3360648.html)
-[仿Office的程序载入窗体](https://www.cnblogs.com/HopeGi/p/3510809.html)
-[C#MDI打开子窗体去掉自动生成的菜单栏](https://blog.csdn.net/shiyangkai/article/details/71479947)
-[C# Tabcontrol组件如何切换显示Form窗体的示例代码](http://www.php.cn/csharp-article-355886.html)
-[Fluent.Ribbon](https://github.com/fluentribbon/Fluent.Ribbon)
-[RibbonWinForms](https://github.com/RibbonWinForms/RibbonWinForms)
-[C# winform程序怎么打包成安装项目(图解)](https://blog.csdn.net/u011981242/article/details/51059441)
-[【.Net】vs2017 自带发布工具 ClickOnce发布包遇到的问题](https://www.cnblogs.com/yanglang/p/8041662.html)
-[C#动态创建Access数据库及密码的方法](https://www.jb51.net/article/71952.htm)
-[C#编程总结（七）数据加密——附源码](https://www.cnblogs.com/yank/p/3528548.html)
-[C#常用的命名规则汇总](https://www.jb51.net/article/57163.htm)
-[C#三种定时器的实现](https://www.cnblogs.com/zhoug2020/p/5837035.html)
-[C#对WinForm应用程序的App.config的使用及加密](https://www.cnblogs.com/wanzhongjun/p/6534608.html)
-[Winform窗体控件图片过多后卡顿问题](https://blog.csdn.net/facefriends/article/details/79216114)
-[winform中的DataGridView的列宽设置（自动调整列宽）](https://blog.csdn.net/swarb/article/details/8493328)
-[C#Winform频繁刷新导致界面闪烁解决方法](https://www.cnblogs.com/ghbjimmy/articles/3635825.html)
-[Winform MDI窗体切换不闪烁的解决办法（测试通过）](https://www.cnblogs.com/Charltsing/p/WinFormNoFlicker.html)
-[C# WinForm开发系列 - DataGridView](http://www.cnblogs.com/peterzb/archive/2009/05/29/1491891.html)
-[DataGridView实现添加合计行并始终显示在底部](https://blog.csdn.net/tyouvivi/article/details/1676850)
-[tablelayoutpanel 动态调整行列宽度](https://www.cnblogs.com/mandaren/p/3709932.html)
-[C#批量插入数据到Sqlserver中的四种方式](https://www.cnblogs.com/ingstyle/p/6196908.html)
-[C#命名规则和风格(收集)](https://www.cnblogs.com/jiekeng/articles/561562.html)
-[C# WinForm项目三层架构简述](https://www.jianshu.com/p/7f628015a243)
-[想和代码谈谈](http://www.cnblogs.com/WayneShao/)
-[使用C#创建Access2010或Access2007 accdb 数据库文件](http://blog.sina.com.cn/s/blog_7cc533310101lxn2.html)
-[【.net】未在本地计算机上注册“microsoft.ACE.oledb.12.0”提供程序解决办法](https://www.cnblogs.com/willingtolove/p/9630485.html)
-[各种主流.net混淆加密软件对比:](https://blog.csdn.net/mituan1234567/article/details/89671799)
-[.net反编译的九款神器](https://www.cnblogs.com/zsuxiong/p/5117465.html)
-[C#提升性能"数据库连接打开与关闭"经验分享(附：优化过的DBHelper类) 之配餐系统的开发](https://www.cnblogs.com/know/archive/2011/03/10/1979751.html)
-[winform 导出 Excel](https://blog.csdn.net/MrBaymax/article/details/88049852)
-[C#快速开发平台(C/S架构+Winform+DevExpress+FastReport)](https://www.cnblogs.com/jonnysun/p/9520716.html)
-[开源DataGridView扩展（1） 扩展支持全选的CheckBox列。](https://www.cnblogs.com/gxjiang/archive/2012/04/27/datagridviewex.html?spm=a2c4e.10696291.0.0.406e19a4BEBjm5)
-[开源DataGridView扩展（5） 简单实现统计行，有更好的方法吗？](https://www.cnblogs.com/gxjiang/archive/2012/05/15/2502345.html?spm=a2c4e.10696291.0.0.e1d819a4BmUXhz)
-[WinForm控件设计：DataGridView的行统计实现](https://www.cnblogs.com/yyj/archive/2010/10/21/1857518.html)
-[C# Sftp操作](https://www.cnblogs.com/xihao/p/7746068.html)
-[VS2010 中更改项目名称](https://blog.csdn.net/jjp837661103/article/details/23332999)
-[C#winform 在任务栏中右键软件后的名字如何更改](https://bbs.csdn.net/topics/391544131?page=3)
-[让 CefSharp.WinForms 应用程序同时支持32位（x86）和64位（x64）的解决方案](https://my.oschina.net/u/4314113/blog/4772387)
-[如何：确定已安装的 .NET Framework 版本](https://blog.csdn.net/weixin_30341735/article/details/102210317)
-[WinForm中重绘滚动条以及用重绘的滚动条控制ListBox的滚动](https://www.cnblogs.com/airfey/archive/2009/04/01/1427590.html)
+## C#
+**项目框架：**[C# WinForm项目三层架构简述](https://www.jianshu.com/p/7f628015a243) | [VS2010 中更改项目名称](https://blog.csdn.net/jjp837661103/article/details/23332999) | [SqlSugar ORM](https://www.donet5.com/Home/Doc)
+**三方控件：**[RibbonWinForms](https://github.com/RibbonWinForms/RibbonWinForms) | [ReoGrid](https://reogrid.net/document/) | [Winform开发框架的重要特性总结](https://www.cnblogs.com/wuhuacong/p/3199829.html) | [Fluent.Ribbon](https://github.com/fluentribbon/Fluent.Ribbon) | [GitHub上有什么有意思的 winform项目?](https://www.zhihu.com/question/371743209)
+**命名规则：**[C#命名规则和风格(收集)](https://www.cnblogs.com/jiekeng/articles/561562.html) | [C#常用的命名规则汇总](https://www.jb51.net/article/57163.htm)
+**自动更新：**[Winform自动更新组件分享](http://www.cnblogs.com/KnightsWarrior/archive/2010/10/20/1856255.html#3754564) | [Winform(C#.NET)自动更新组件的使用及部分功能实现](https://www.cnblogs.com/24la/p/autoupdater-component.html) | [C#之使用AutoUpdater自动更新客户端](https://www.cnblogs.com/GardenofEden/p/10337744.html)
+**加密解密：**[C#编程总结（七）数据加密——附源码](https://www.cnblogs.com/yank/p/3528548.html) | [各种主流.net混淆加密软件对比:](https://blog.csdn.net/mituan1234567/article/details/89671799)
+**打包安装：**[C# winform程序怎么打包成安装项目(图解)](https://blog.csdn.net/u011981242/article/details/51059441) | [如何：确定已安装的 .NET Framework 版本](https://blog.csdn.net/weixin_30341735/article/details/102210317)
+**问题相关：**[Winform窗体控件图片过多后卡顿问题](https://blog.csdn.net/facefriends/article/details/79216114) | [C#Winform频繁刷新导致界面闪烁解决方法](https://www.cnblogs.com/ghbjimmy/articles/3635825.html) | [Winform MDI窗体切换不闪烁的解决办法（测试通过）](https://www.cnblogs.com/Charltsing/p/WinFormNoFlicker.html)
+**学习资料：**[想和代码谈谈](http://www.cnblogs.com/WayneShao/) | [仿Office的程序载入窗体](https://www.cnblogs.com/HopeGi/p/3510809.html)
 
-
-##CentOS
+## CentOS
 [virtualbox安装centos并设置静态IP](https://blog.csdn.net/asdf_1234_/article/details/91470680)
 
 
@@ -416,7 +376,7 @@ TODO：哈特的战争、三体、阿凡达：水之道、流浪地球2、满江
 ### 机器学习
 
 ### APP开发
-#### Kivy
+**Kivy**
 官网安装：https://kivy.org/doc/stable/installation/installation-windows.html
 或者通过下面方法安装。
 下载地址：https://www.lfd.uci.edu/~gohlke/pythonlibs/
@@ -428,16 +388,14 @@ TODO：哈特的战争、三体、阿凡达：水之道、流浪地球2、满江
 [Kivy官方文档中文翻译g](https://www.kancloud.cn/gthank/kivydoc/127793)
 
 ### 游戏开发
-#### Pygame
+**Pygame**
 
 ### 自动化脚本
 [Selenium使用ChromeOptions启动参数](https://www.cnblogs.com/superhin/p/12607074.html)
 [Python实现自动化监控远程服务器](https://www.cnblogs.com/IT-LearnHall/p/9426235.html)
 
 ### Web开发
-#### Flask
-
-#### Django
+**Django**
 [Django中文网](https://www.django.cn/article/show-15.html)
 [Django](https://www.cnblogs.com/suoning/p/5818869.html)  | [Django官方文档](https://docs.djangoproject.com/en/3.1/) | [Django 2.2 基础教程](https://code.ziqiangxuetang.com/django/django-tutorial.html) | [Django3.1教程](https://www.liujiangblog.com/course/django/2)
 [Django 的认识，面试题](https://www.cnblogs.com/chongdongxiaoyu/p/9403399.html) 
@@ -467,8 +425,6 @@ TODO：哈特的战争、三体、阿凡达：水之道、流浪地球2、满江
 [django-apscheduler定时任务](https://www.cnblogs.com/weidaijie/p/12747685.html) | [django apscheduler 定时任务（下篇）](https://www.cnblogs.com/SunshineKimi/p/14879465.html)
 **序列化**
 [django rest framework 数据的查找、过滤、排序](https://blog.csdn.net/linux_player_c/article/details/80779059)
-
-#### Bottle
 
 
 # S
@@ -527,6 +483,7 @@ TODO：哈特的战争、三体、阿凡达：水之道、流浪地球2、满江
 
 ## VuePress
 [VuePress中文网](https://www.vuepress.cn/)
+[VuePress搭建文档网站遇到的一些坑点](https://blog.csdn.net/Mr_Sun88/article/details/128591783)
 
 
 # W

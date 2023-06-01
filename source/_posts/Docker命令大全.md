@@ -10,7 +10,7 @@ tags: [docker]
 description: 记录docker常用的命令
 ---
 # docker
-## docker镜像命令
+## docker 镜像命令
 ### 查看自己服务器中docker 镜像列表
 ```
 docker images
@@ -57,7 +57,7 @@ docker tag SOURCE_IMAGE[:TAG] TARGET_IMAGE[:TAG]
 # 如果省略TAG 则会为镜像默认打上标签latest
 ```
 
-## docker容器命令
+## docker 容器命令
 ### 查看正在运行容器列表
 ```
 docker ps
@@ -151,7 +151,7 @@ docker container update --restart=always 容器Id 或者 容器名
 docker rename 容器ID/容器名 新容器名
 ```
 
-## docker网卡命令
+## docker 网卡命令
 ### 查看docker网卡
 ```
 docker network ls
@@ -172,7 +172,7 @@ docker network inspect 网卡id
 docker commit -m="提交信息" -a="作者信息" 容器名/容器ID 提交后的镜像名:Tag
 ```
 
-## docker修改默认根目录
+## docker 修改默认根目录
 ```
 systemctl status docker
 systemctl stop docker
@@ -188,51 +188,51 @@ docker info
 
 
 # docker-compose
-- 查看版本
+## 查看版本
 ```
 ​docker-compose version
 ```
-- 使用docker-compose启动容器，根据yml创建service
+## 使用docker-compose启动容器，根据yml创建service
 ```
 docker-compose up
 ```
-- 使用docker-compose后台启动
+## 使用docker-compose后台启动
 ```
 docker-compose up -d
 ```
-- ​指定yaml启动
+## ​指定yaml启动
 ```
 docker-compose up -f xxx.yaml
 ```
-- 查看启动成功的service
+## 查看启动成功的service
 ```
 ​docker-compose ps
 ```
-- 查看images
+## 查看images
 ```
 docker-compose images
 ```
-- 停止/启动service
+## 停止/启动service
 ```
 docker-compose stop/start
 ```
-- 删除service[同时会删除掉network和volume]
+## 删除service[同时会删除掉network和volume]
 ```
 ​docker-compose down
 ```
-- 进入到某个service
+## 进入到某个service
 ```
 ​docker-compose exec ypn-web sh
 ```
-- 如果前端代码有更新,可以使用此命令重新打包镜像
+## 如果前端代码有更新,可以使用此命令重新打包镜像
 ```
 docker-compose build ypn-web
 ```
-- 服务都启动成功后,使用此命令行可清除none镜像
+## 服务都启动成功后,使用此命令行可清除none镜像
 ```
 docker system prune
 ```
-- 查询容器运行日志
+## 查询容器运行日志
 ```
 docker logs ypn-web -f --tail 100
 ```

@@ -9,8 +9,9 @@ authorDesc:
 tags: [docker]
 description: 记录docker下载安装的步骤
 ---
-# 环境准备
-本次系统使用 CentOS8 ，因官方已停用 CentOS8 的镜像，故需先更新源。
+# CentOS 8 安装
+## 环境准备
+本次系统使用 CentOS 8 ，因官方已停用 CentOS8 的镜像，故需先更新源。
 ```
 cd /etc/yum.repos.d
 ```
@@ -41,9 +42,7 @@ enabled=1
 gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-centosofficial
 ```
 
-
-# 在线安装
-## 安装 docker
+## 在线安装 docker
 ```
 yum install -y yum-utils
 ```
@@ -58,16 +57,17 @@ yum install https://mirrors.aliyun.com/docker-ce/linux/centos/8/x86_64/stable/Pa
 ``` 
 yum install docker-ce -y
 ```
+验证
 ```
 systemctl enable docker.service
 ```
 ```
 systemctl start docker.service
 ```
-查看 docker 版本
 ```
 docker version
 ``` 
+
 ## 安装 docker-compose
 方法一：使用 pip 安装
 ```
@@ -83,17 +83,57 @@ chmod +x /usr/local/bin/docker-compose
 ```
 ln -s /usr/local/bin/docker-compose /usr/bin/docker-compose
 ```
-查看 docker-compose 版本
+验证
 ```
 docker-compose version
 ```
 
-# 离线安装
-> 待续
+
+# openSUSE Leap 15.4安装
+## 环境准备
+1. 更新系统
+```
+sudo zypper refresh
+```
+```
+sudo zypper update -y
+```
+2. 更新完成后，最好重新启动系统
+```
+sudo reboot
+```
+
+## 在线安装 docker
+1. 使用 zypper 命令安装
+```
+sudo zypper install -y docker
+```
+2. 启动 Docker 服务
+```
+sudo systemctl start docker.service
+```
+3. 设置 Docker 开机自启
+```
+sudo systemctl enable docker.service
+```
+4. 验证
+```
+sudo systemctl status docker
+sudo docker --version
+```
+## 在线安装 docker-compose
+1. 使用 zypper 命令安装
+```
+sudo zypper install -y docker-compose
+```
+2. 验证
+```
+sudo docker-compose --version
+```
 
 
 # 国内镜像配置
-编辑 `/etc/docker/daemon.json` 加入下列配置：
+1. 编辑 `/etc/docker/daemon.json` 加入下列配置：
 > 如果有阿里云 docker hub mirror 账号的，可以将 https://registry.cn-hangzhou.aliyuncs.com/ 替换成自己的 https://<你的ID>.mirror.aliyuncs.com
 ```
 {
@@ -107,7 +147,7 @@ docker-compose version
   ]
 }
 ```
-重启 docker
+2. 重启 docker
 ```
-systemctl restart docker
+sudo systemctl restart docker
 ```
