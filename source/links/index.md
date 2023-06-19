@@ -164,8 +164,8 @@ TODO：哈特的战争、三体、阿凡达：水之道、流浪地球2、满江
 [WeChatAI](https://welm.weixin.qq.com/docs/)
 
 ## API
-[WxPusher](https://wxpusher.zjiecode.com/admin/main) | [XPusher](https://courier.toptopn.com/xpusher.html)
-[搏天api](https://api.btstu.cn/) | [3650000随机API](https://3650000.xyz/)
+[WxPusher](https://wxpusher.zjiecode.com/admin/main) | [XPusher](https://courier.toptopn.com/xpusher.html)  
+[樱道随机图片]https://img.r10086.com/) | [3650000随机API](https://3650000.xyz/) | [随机图片API](https://tuapi.eees.cc)
 
 
 # B

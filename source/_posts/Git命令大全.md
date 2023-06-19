@@ -47,6 +47,10 @@ git push [remote] --force
 ```git
 git push origin source --force
 ```
+或者
+```git
+git push origin source:source -f
+```
 ### 取回远程仓库的变化，并与本地分支合并
 ```
 git pull [remote] [branch]
