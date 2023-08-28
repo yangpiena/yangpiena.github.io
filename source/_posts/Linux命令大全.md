@@ -164,7 +164,7 @@ route add default gw 1.1.10.11
 | `firewall-cmd --query-service https`                              | |
 | `firewall-cmd --list-all`                                         | 显示当前区域的网卡配置参数、资源、端口以及服务等信息 |
 | service firewalld stop                                            | 关闭防火墙 |
-| service firewalld star                                            | 开户防火墙 |
+| service firewalld start                                           | 开户防火墙 |
 
 ### 防火墙（CentOS8）
 | 命令                                          | 说明 |

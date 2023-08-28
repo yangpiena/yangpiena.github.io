@@ -30,12 +30,12 @@ description:
 
 
 # 常用
-[ChatGPT OpenAI 项目汇总](https://iui.su/2920/) | [ChatGPT免费体验在线列表](https://lzw.me/x/chatgpt-sites/)  | [AIchatOS](https://chat2.jinshutuan.com/#/chat)
+[深言达意](https://www.shenyandayi.com "原反向词典正式升级为智能写作工具。支持筛选词语、成语、惯用语和古汉语等多类别。") | [ChatGPT OpenAI 项目汇总](https://iui.su/2920/) | [ChatGPT免费体验在线列表](https://lzw.me/x/chatgpt-sites/)  | [AIchatOS](https://c2.binjie.fun/#/chat) | [Claude](https://www.claudeai.ai/)  
 [百度翻译](https://fanyi.baidu.com/) | [Google翻译](https://translate.google.cn/?hl=zh-CN&tab=TT) | [天气万年历](https://wannianli.tianqi.com/today/zhou/)  
+[Guidebook数字生活指南](https://nav.guidebook.top/) | [我的书签](https://it-cxy.top/)  
 [今日热榜](https://tophub.today/) | [cnBeta](http://www.cnbeta.com/) | [Business Insider 中文站](https://bi.qq.com/) | [Hacker News](https://hackernews.cc/) | [不死鸟发布页](https://dalao.ru/) | [系统极客](https://www.sysgeek.cn/)  
 [科塔学术导航](https://site.sciping.com/) | [手机抢购网](http://www.qianggou5.com/price/) | [药房网](https://www.yaofangwang.com/) | [医学微视](https://www.mvyxws.com/) | [WikiHow](https://zh.wikihow.com/%E9%A6%96%E9%A1%B5)  
-[Guidebook数字生活指南](https://nav.guidebook.top/) | [我的书签](https://it-cxy.top/)  
-[中国研究生招生信息网](https://yz.chsi.com.cn/) | [希赛网](https://www.educity.cn/) | [夸克网盘](https://pan.quark.cn/)
+[中国研究生招生信息网](https://yz.chsi.com.cn/) | [希赛网](https://www.educity.cn/)
 
 
 ## 音乐
@@ -44,7 +44,7 @@ description:
 
 
 ## 电影
-TODO：哈特的战争、三体、阿凡达：水之道、流浪地球2、满江红、黑豹2  
+TODO：哈特的战争、阿凡达：水之道、黑豹2  
 [映像讯](http://mkv.cn/) | [影视森林](http://www.549.tv/) | [免费的在线影视网站汇总](https://iao.su/531/) | [小部落](https://www.xbl100.com/)  
 [HDmoli](https://molicp.com/) | [美剧粉](http://www.mjf2020.com/) | [破晓电影](http://www.poxiao.com) | [注释影视](https://gaze.run/) | [4kHDR世界](https://www.4khdr.cn/)  
 [JustLive](http://live.yj1211.work/index/home/platforms)
@@ -59,15 +59,15 @@ TODO：哈特的战争、三体、阿凡达：水之道、流浪地球2、满江
 
 
 # 在线工具
-[Quick Reference](https://quickref.cn/)  
-[drawio](https://app.diagrams.net/) | [百度脑图](https://naotu.baidu.com/home) | [GitMind](https://gitmind.cn/) | [打字打字](https://dazidazi.com/)
-[分享笔记](https://sharenote.app/) | [拷贝兔](https://cp.anyknew.com/) | [鸡毛信](https://cmd.im/) | [鸡霸图床](https://gejiba.com/) | [田字格笔顺 字帖生成器](https://lab.feifanju.com/zitie/) | [休息片刻](http://sit.widget4.com/)
-[短链接](https://url.4qo.cn/#/) | [Ping](https://ping.eu/ping/) | [域名查询](https://lab.feifanju.com/domain-query/) | [极强检测](https://www.urlzt.com/) | [在线HTTP POST/GET接口测试工具](https://lab.feifanju.com/http/index.html) | [临时邮箱](https://linshiyouxiang.net/) | [临时手机号](https://jiemahao.com/)
-[独特工具箱](https://www.dute.org/) | [在线工具](http://tool.lu/)  |  [在线工具](http://tool.oschina.net/) | [UU在线工具](https://uutool.cn/) | [JSON在线解析及格式化验证](http://www.json.cn/)  |  [转换json格式为C#类](http://json2csharp.chahuo.com/)
-[生成随机密码](https://suijimimashengcheng.51240.com/) | [密码强度检测](https://mimaqiangdu.51240.com/) | [PMD5](http://pmd5.com/#)  |  [输入让你无语的MD5](https://www.somd5.com/) | [在线MD5暴力破解](http://www.atool.org/md5-crack.php) | [核心价值编码器](https://sym233.github.io/core-values-encoder/)
-[在线文件转换器](https://cn.office-converter.com/) | [在线格式转换](https://www.alltoall.net/) | [PDF派](https://www.pdfpai.com/) | [图片背景变成透明](https://transparent.zhaoxi.net/) | [做好图](http://www.zuohaotu.com/)  |  [MakePic.com 图片制造](http://www.makepic.com/)  |  [removebg图片背景消除](https://www.remove.bg/ ) | [waifu2x无损放大图片](http://waifu2x.udp.jp/index.zh-CN.html) | [图片无限变大](http://bigjpg.com/zh) | [草料二维码美化器](http://mh.cli.im/) | [头像生成器](https://www.moubao.vip/)
-[小米LOGO生成器](https://mi-logo.lvwzhen.com/) | [免费logo在线制作](http://www.uugai.com/)
-[在线短信轰炸](https://qinggongju.com/dx/) | [文字转语音](https://toolight.cn/media/reading) | [智影](https://zenvideo.qq.com/home)
+[Quick Reference](https://quickref.cn/ "为开发人员分享快速参考备忘清单【速查表】")  
+[drawio](https://app.diagrams.net/) | [百度脑图](https://naotu.baidu.com/home) | [GitMind](https://gitmind.cn/) | [打字打字](https://dazidazi.com/)  
+[分享笔记](https://sharenote.app/) | [拷贝兔](https://cp.anyknew.com/) | [鸡毛信](https://cmd.im/) | [鸡霸图床](https://gejiba.com/) | [田字格笔顺 字帖生成器](https://lab.feifanju.com/zitie/) | [休息片刻](http://sit.widget4.com/)  
+[Ping](https://ping.eu/ping/) | [域名查询](https://lab.feifanju.com/domain-query/) | [极强检测](https://www.urlzt.com/) | [在线HTTP POST/GET接口测试工具](https://lab.feifanju.com/http/index.html) | [临时手机号](https://jiemahao.com/)  
+[独特工具箱](https://www.dute.org/) | [在线工具](http://tool.lu/)  |  [在线工具](http://tool.oschina.net/) | [UU在线工具](https://uutool.cn/) |  [在线工具](http://json2csharp.chahuo.com/) | [偷懒工具：文字转语音](https://toolight.cn/media/reading)  
+[便民查询网](https://www.bmcx.com/) | [生成随机密码](https://suijimimashengcheng.51240.com/) | [PMD5](http://pmd5.com/#)  |  [输入让你无语的MD5](https://www.somd5.com/) | [核心价值编码器](https://sym233.github.io/core-values-encoder/)  
+[在线文件转换器](https://cn.office-converter.com/) | [在线格式转换](https://www.alltoall.net/) | [PDF派](https://www.pdfpai.com/)  
+[做好图](http://www.zuohaotu.com/)  |  [MakePic.com 图片制造](http://www.makepic.com/)  |  [removebg图片背景消除](https://www.remove.bg/ ) | [waifu2x无损放大图片](http://waifu2x.udp.jp/index.zh-CN.html) | [图片无限变大](http://bigjpg.com/zh) | [草料二维码美化器](http://mh.cli.im/) | [头像生成器](https://www.moubao.vip/)  
+[小米LOGO生成器](https://mi-logo.lvwzhen.com/) | [免费logo在线制作](http://www.uugai.com/)  
 
 
 # 博客/社区
@@ -175,14 +175,14 @@ TODO：哈特的战争、三体、阿凡达：水之道、流浪地球2、满江
 # C
 
 ## C#
-**项目框架：**[C# WinForm项目三层架构简述](https://www.jianshu.com/p/7f628015a243) | [VS2010 中更改项目名称](https://blog.csdn.net/jjp837661103/article/details/23332999) | [SqlSugar ORM](https://www.donet5.com/Home/Doc)
-**三方控件：**[RibbonWinForms](https://github.com/RibbonWinForms/RibbonWinForms) | [ReoGrid](https://reogrid.net/document/) | [Winform开发框架的重要特性总结](https://www.cnblogs.com/wuhuacong/p/3199829.html) | [Fluent.Ribbon](https://github.com/fluentribbon/Fluent.Ribbon) | [GitHub上有什么有意思的 winform项目?](https://www.zhihu.com/question/371743209)
-**命名规则：**[C#命名规则和风格(收集)](https://www.cnblogs.com/jiekeng/articles/561562.html) | [C#常用的命名规则汇总](https://www.jb51.net/article/57163.htm)
-**自动更新：**[Winform自动更新组件分享](http://www.cnblogs.com/KnightsWarrior/archive/2010/10/20/1856255.html#3754564) | [Winform(C#.NET)自动更新组件的使用及部分功能实现](https://www.cnblogs.com/24la/p/autoupdater-component.html) | [C#之使用AutoUpdater自动更新客户端](https://www.cnblogs.com/GardenofEden/p/10337744.html)
-**加密解密：**[C#编程总结（七）数据加密——附源码](https://www.cnblogs.com/yank/p/3528548.html) | [各种主流.net混淆加密软件对比:](https://blog.csdn.net/mituan1234567/article/details/89671799)
-**打包安装：**[C# winform程序怎么打包成安装项目(图解)](https://blog.csdn.net/u011981242/article/details/51059441) | [如何：确定已安装的 .NET Framework 版本](https://blog.csdn.net/weixin_30341735/article/details/102210317)
-**问题相关：**[Winform窗体控件图片过多后卡顿问题](https://blog.csdn.net/facefriends/article/details/79216114) | [C#Winform频繁刷新导致界面闪烁解决方法](https://www.cnblogs.com/ghbjimmy/articles/3635825.html) | [Winform MDI窗体切换不闪烁的解决办法（测试通过）](https://www.cnblogs.com/Charltsing/p/WinFormNoFlicker.html)
-**学习资料：**[想和代码谈谈](http://www.cnblogs.com/WayneShao/) | [仿Office的程序载入窗体](https://www.cnblogs.com/HopeGi/p/3510809.html)
+**项目框架：**[C# WinForm项目三层架构简述](https://www.jianshu.com/p/7f628015a243) | [VS2010 中更改项目名称](https://blog.csdn.net/jjp837661103/article/details/23332999) | [SqlSugar ORM](https://www.donet5.com/Home/Doc) | [各版本操作系统对.NET支持情况](https://www.newlifex.com/tech/os_net) | [Microsoft.NETFramework.ReferenceAssemblies](https://www.nuget.org/packages/Microsoft.NETFramework.ReferenceAssemblies/#dependencies-body-tab)  
+**三方控件：**[RibbonWinForms](https://github.com/RibbonWinForms/RibbonWinForms) | [ReoGrid](https://reogrid.net/document/) | [Winform开发框架的重要特性总结](https://www.cnblogs.com/wuhuacong/p/3199829.html) | [Fluent.Ribbon](https://github.com/fluentribbon/Fluent.Ribbon) | [GitHub上有什么有意思的 winform项目?](https://www.zhihu.com/question/371743209)  
+**命名规则：**[C#命名规则和风格(收集)](https://www.cnblogs.com/jiekeng/articles/561562.html) | [C#常用的命名规则汇总](https://www.jb51.net/article/57163.htm)  
+**自动更新：**[Winform自动更新组件分享](http://www.cnblogs.com/KnightsWarrior/archive/2010/10/20/1856255.html#3754564) | [Winform(C#.NET)自动更新组件的使用及部分功能实现](https://www.cnblogs.com/24la/p/autoupdater-component.html) | [C#之使用AutoUpdater自动更新客户端](https://www.cnblogs.com/GardenofEden/p/10337744.html) | [OAUS自动升级系统](http://blog.oraycn.com/OAUS.aspx)  
+**加密解密：**[C#编程总结（七）数据加密——附源码](https://www.cnblogs.com/yank/p/3528548.html) | [各种主流.net混淆加密软件对比:](https://blog.csdn.net/mituan1234567/article/details/89671799)  
+**打包安装：**[C# winform程序怎么打包成安装项目(图解)](https://blog.csdn.net/u011981242/article/details/51059441) | [如何：确定已安装的 .NET Framework 版本](https://blog.csdn.net/weixin_30341735/article/details/102210317)  
+**问题相关：**[Winform窗体控件图片过多后卡顿问题](https://blog.csdn.net/facefriends/article/details/79216114) | [C#Winform频繁刷新导致界面闪烁解决方法](https://www.cnblogs.com/ghbjimmy/articles/3635825.html) | [Winform MDI窗体切换不闪烁的解决办法（测试通过）](https://www.cnblogs.com/Charltsing/p/WinFormNoFlicker.html) | [VS2022支持.NET Framework4.0的解决方法](https://www.cnblogs.com/liweis/p/17013637.html)  
+**学习资料：**[想和代码谈谈](http://www.cnblogs.com/WayneShao/) | [仿Office的程序载入窗体](https://www.cnblogs.com/HopeGi/p/3510809.html) | [.NET Core 、 .NET 5、.NET 6和.NET 7 简介及区别](https://zhuanlan.zhihu.com/p/592619756)
 
 ## CentOS
 [virtualbox安装centos并设置静态IP](https://blog.csdn.net/asdf_1234_/article/details/91470680)
@@ -260,6 +260,8 @@ TODO：哈特的战争、三体、阿凡达：水之道、流浪地球2、满江
 ## Gogs
 [Gogs官网](https://gogs.io/)
 [Gogs基本使用介绍](https://www.cnblogs.com/Sungeek/p/9203038.html)
+[授权认证](https://gogs.io/docs/features/authentication)
+[Gogs集成openldap登陆认证](https://blog.csdn.net/qq_22917163/article/details/91545616)
 
 
 # H
@@ -330,15 +332,15 @@ TODO：哈特的战争、三体、阿凡达：水之道、流浪地球2、满江
 # L
 
 ## Linux
-[Linux学习教程](http://c.biancheng.net/linux_tutorial/) | [一份 Linux 基础命令使用清单](https://blog.csdn.net/z694644032/article/details/97620078)
-[对 Linux 新手非常有用的 20 个命令](http://www.oschina.net/translate/useful-linux-commands-for-newbies)
-[linux数据盘，系统盘](http://blog.csdn.net/Truong/article/details/70171661)
-[数据盘分区以及格式化](http://blog.csdn.net/Truong/article/details/70171699)
-[Linux Used内存到底哪里去了？](http://blog.yufeng.info/archives/2456)
-[suse-zypper常用命令大全及软件仓库配置](http://www.bubuko.com/infodetail-2112148.html)
-[SUSE安装、配置APR和Tomcat-Native](https://blog.csdn.net/ClementAD/article/details/50749597)
+[Linux学习教程](http://c.biancheng.net/linux_tutorial/) | [一份 Linux 基础命令使用清单](https://blog.csdn.net/z694644032/article/details/97620078) | [详解Linux抓包](https://www.python100.com/html/93112.html)  
+[对 Linux 新手非常有用的 20 个命令](http://www.oschina.net/translate/useful-linux-commands-for-newbies)  
+[linux数据盘，系统盘](http://blog.csdn.net/Truong/article/details/70171661)  
+[数据盘分区以及格式化](http://blog.csdn.net/Truong/article/details/70171699)  
+[Linux Used内存到底哪里去了？](http://blog.yufeng.info/archives/2456)  
+[suse-zypper常用命令大全及软件仓库配置](http://www.bubuko.com/infodetail-2112148.html)  
+[SUSE安装、配置APR和Tomcat-Native](https://blog.csdn.net/ClementAD/article/details/50749597)  
 [SUSE Linux 系统加固](https://blog.csdn.net/vianoz/article/details/20864323)
-[zypper关于源的操作和常用的国内源](https://blog.csdn.net/hunjiancuo5340/article/details/81772733)
+[zypper关于源的操作和常用的国内源](https://blog.csdn.net/hunjiancuo5340/article/details/81772733)  
 [Linux软链接的创建，删除，修改](https://blog.csdn.net/qq_21386275/article/details/79881543)
 
 

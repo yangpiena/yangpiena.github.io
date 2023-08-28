@@ -12,9 +12,9 @@ description:
 # 如何获取锁屏动态壁纸？
 Win10的锁屏动态壁纸每天都会更新，更新后是缓存在如下位置：
 ```
-C:\Users\YANGPIENA\AppData\Local\Packages\Microsoft.Windows.ContentDeliveryManager_cw5n1h2txyewy\LocalState\Assets
+C:\Users\Administrator\AppData\Local\Packages\Microsoft.Windows.ContentDeliveryManager_cw5n1h2txyewy\LocalState\Assets
 ```
-其中，`YANGPIENA` 是你的用户名。打开后重命名里面的文件，增加后缀名`.jpg`，即可看见你刚刚钟意的壁纸。
+其中，`Administrator` 是你的用户名。打开后重命名里面的文件，增加后缀名`.jpg`，即可看见你刚刚钟意的壁纸。
 
 # 设置任务栏透明效果
 1. 设置 -> 颜色 -> 打开“透明效果”开关
