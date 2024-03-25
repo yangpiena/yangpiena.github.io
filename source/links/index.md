@@ -30,12 +30,12 @@ description:
 
 
 # 常用
-[深言达意](https://www.shenyandayi.com "原反向词典正式升级为智能写作工具。支持筛选词语、成语、惯用语和古汉语等多类别。") | [ChatGPT OpenAI 项目汇总](https://iui.su/2920/) | [ChatGPT免费体验在线列表](https://lzw.me/x/chatgpt-sites/)  | [AIchatOS](https://c2.binjie.fun/#/chat) | [Claude](https://www.claudeai.ai/)  
-[百度翻译](https://fanyi.baidu.com/) | [Google翻译](https://translate.google.cn/?hl=zh-CN&tab=TT) | [天气万年历](https://wannianli.tianqi.com/today/zhou/)  
+[深言达意](https://www.shenyandayi.com "原反向词典正式升级为智能写作工具。支持筛选词语、成语、惯用语和古汉语等多类别。") | [ChatGPT OpenAI 项目汇总](https://iui.su/2920/) | [ChatGPT免费体验在线列表](https://lzw.me/x/chatgpt-sites/)  | [AIchatOS](https://c2.binjie.fun/#/chat) | [AIchatOS](https://chat18.aichatos.xyz/) | [文心一言](https://yiyan.baidu.com/)  
+[百度翻译](https://fanyi.baidu.com/) | [OpenL翻译](https://openl.io/) | [天气万年历](https://wannianli.tianqi.com/today/zhou/)  
 [Guidebook数字生活指南](https://nav.guidebook.top/) | [我的书签](https://it-cxy.top/)  
-[今日热榜](https://tophub.today/) | [cnBeta](http://www.cnbeta.com/) | [Business Insider 中文站](https://bi.qq.com/) | [Hacker News](https://hackernews.cc/) | [不死鸟发布页](https://dalao.ru/) | [系统极客](https://www.sysgeek.cn/)  
+[今日热榜](https://tophub.today/) | [Hacker News](https://hackernews.cc/) | [不死鸟发布页](https://dalao.ru/) | [系统极客](https://www.sysgeek.cn/)  
 [科塔学术导航](https://site.sciping.com/) | [手机抢购网](http://www.qianggou5.com/price/) | [药房网](https://www.yaofangwang.com/) | [医学微视](https://www.mvyxws.com/) | [WikiHow](https://zh.wikihow.com/%E9%A6%96%E9%A1%B5)  
-[中国研究生招生信息网](https://yz.chsi.com.cn/) | [希赛网](https://www.educity.cn/)
+[中国研究生招生信息网](https://yz.chsi.com.cn/) | [希赛网](https://www.educity.cn/) | [夸克网盘](https://pan.quark.cn/)
 
 
 ## 音乐
@@ -51,7 +51,7 @@ TODO：哈特的战争、阿凡达：水之道、黑豹2
 
 
 ## 游戏
-[米游社](https://www.miyoushe.com/ys/) | [三国杀](http://web.sanguosha.com/)  |  [蜀门私服吧](https://www.931pk.cn/)  | [小霸王](https://www.yikm.net/) | [摸鱼游戏](https://poki.com/)
+[云·原神](https://ys.mihoyo.com/cloud/?utm_source=default#/) | [米游社](https://www.miyoushe.com/ys/) | [三国杀](http://web.sanguosha.com/)  |  [蜀门私服吧](https://www.931pk.cn/)  | [小霸王](https://www.yikm.net/) | [摸鱼游戏](https://poki.com/)
 
 
 ## 美图
@@ -66,7 +66,7 @@ TODO：哈特的战争、阿凡达：水之道、黑豹2
 [独特工具箱](https://www.dute.org/) | [在线工具](http://tool.lu/)  |  [在线工具](http://tool.oschina.net/) | [UU在线工具](https://uutool.cn/) |  [在线工具](http://json2csharp.chahuo.com/) | [偷懒工具：文字转语音](https://toolight.cn/media/reading)  
 [便民查询网](https://www.bmcx.com/) | [生成随机密码](https://suijimimashengcheng.51240.com/) | [PMD5](http://pmd5.com/#)  |  [输入让你无语的MD5](https://www.somd5.com/) | [核心价值编码器](https://sym233.github.io/core-values-encoder/)  
 [在线文件转换器](https://cn.office-converter.com/) | [在线格式转换](https://www.alltoall.net/) | [PDF派](https://www.pdfpai.com/)  
-[做好图](http://www.zuohaotu.com/)  |  [MakePic.com 图片制造](http://www.makepic.com/)  |  [removebg图片背景消除](https://www.remove.bg/ ) | [waifu2x无损放大图片](http://waifu2x.udp.jp/index.zh-CN.html) | [图片无限变大](http://bigjpg.com/zh) | [草料二维码美化器](http://mh.cli.im/) | [头像生成器](https://www.moubao.vip/)  
+[在线PS网页版](https://ps.gitapp.cn/) | [做好图](http://www.zuohaotu.com/)  |  [MakePic.com 图片制造](http://www.makepic.com/)  |  [removebg图片背景消除](https://www.remove.bg/ ) | [waifu2x无损放大图片](http://waifu2x.udp.jp/index.zh-CN.html) | [图片无限变大](http://bigjpg.com/zh) | [草料二维码美化器](http://mh.cli.im/) | [头像生成器](https://www.moubao.vip/)  
 [小米LOGO生成器](https://mi-logo.lvwzhen.com/) | [免费logo在线制作](http://www.uugai.com/)  
 
 
@@ -86,7 +86,7 @@ TODO：哈特的战争、阿凡达：水之道、黑豹2
 
 ## 阅读/电子书
 [孔夫子旧书网](https://www.kongfz.com/)  
-[秘密花园](http://www.yini.org)    |  [全历史](https://www.allhistory.com/ " 全方位了解历史的网站，也是一个不错的网站")  
+[秘密花园](http://www.yini.org)    |  [全历史](https://www.allhistory.com/ " 全方位了解历史的网站，也是一个不错的网站") | [JOJO看报](https://reader.jojokanbao.cn/)   
 [鸠摩搜索](https://www.jiumodiary.com/ "电子书搜索引擎，提供各类电子书搜索下载，有多种格式")  |  [i-Book.in](https://book.tstrs.me/ " 基于索引IPFS链接的电子书搜索引擎")  |  [书单网](https://www.shudan.vip/ "电子书搜索网站，抓取第三方网站的资源，也有很多资源是通过城通网赚网盘下载")  |  [Mobilism](https://forum.mobilism.org/viewforum.php?f=19 "电子书论坛，提供英文原版电子书下载")  |  [七彩英语](http://www.qcenglish.com/ "提供PDF或TXT格式的英文原版电子书下载")  |  [好读](http://www.haodoo.net/ "多格式电子书下载网站，很老的一个站")  
 [Z-Library 电子书下载](https://iui.su/380/) | [云海电子图书馆](http://www.pdfbook.cn/ "基于城通网赚网盘下载的电子书网站")  
 [A+医学百科](http://www.a-hospital.com/ "在线医学百科全书")  
@@ -97,10 +97,10 @@ TODO：哈特的战争、阿凡达：水之道、黑豹2
 [IT之家](https://www.ithome.com/) | [系统之家](http://www.xitongzhijia.net/) | [系统天地](http://www.xitongtiandi.net/) | [Win10专业版官网](http://www.win10zyb.com/) | [吻妻出品专注 win10](https://iwin10.net/) | [吻妻出品专注 win7](http://www.newxitong.com/) | [HelloWindows](https://hellowindows.cn/)  
 [黑苹果乐园](https://imac.hk/) | [黑果小兵](https://blog.daliansky.net/) | [Ghost Spectre 系统](https://bbs.pcbeta.com/viewthread-1956025-1-1.html)  
 [小众软件](https://www.appinn.com/) | [zd423](http://www.zdfans.com/) | [423down](https://www.423down.com/) | [分享者](https://www.sharerw.com/) | [我爱分享网](http://www.zhanshaoyi.com/rjxz.html) | [夜雨聆风](http://www.yeyulingfeng.com/) | [金狐维护盘](http://www.jinhu.me/) | [行客工作室](http://www.runker.net/) | [软猫下载](https://www.softmall.net/) | [Puresys](https://www.puresys.net/) | [DIY博客园](https://www.diybloghome.com/)  
-[浏览迷](https://liulanmi.com/) | [Chrome浏览器插件下载中心](https://www.chromefor.com/)  
+[浏览迷](https://liulanmi.com/) | [Chrome浏览器插件下载中心](https://www.chromefor.com/) | [万能命令](https://wannengrun.net/zh)  
 [阅读](http://www.legado.top)  
-[Greasy Fork 用户脚本](https://greasyfork.org/zh-CN) | [无限制下载器](https://greasyfork.org/zh-CN/scripts/445751-unlimited-downloader?utm_source=appinn.com)
-
+[Greasy Fork 用户脚本](https://greasyfork.org/zh-CN) | [无限制下载器](https://greasyfork.org/zh-CN/scripts/445751-unlimited-downloader?utm_source=appinn.com)  
+[极光VPN](https://github.com/getaurora/download)
 
 ## 文章/教程
 [菜鸟教程](http://www.runoob.com/)  
@@ -170,13 +170,14 @@ TODO：哈特的战争、阿凡达：水之道、黑豹2
 
 # B
 ## BootStrap
-[Bootstrap：弹出框和提示框效果以及代码展示](https://www.cnblogs.com/cpcpc/p/7233898.html)
+[Bootstrap5](https://v5.bootcss.com/) | [Bootstrap5 教程](http://test.runoob.com/bootstrap5/bootstrap5-tutorial.html)  
+[Bootstrap：弹出框和提示框效果以及代码展示](https://www.cnblogs.com/cpcpc/p/7233898.html) | [bootStrap实现垂直居中](https://www.cnblogs.com/wm218/p/10858865.html)
 
 # C
 
 ## C#
-**项目框架：**[C# WinForm项目三层架构简述](https://www.jianshu.com/p/7f628015a243) | [VS2010 中更改项目名称](https://blog.csdn.net/jjp837661103/article/details/23332999) | [SqlSugar ORM](https://www.donet5.com/Home/Doc) | [各版本操作系统对.NET支持情况](https://www.newlifex.com/tech/os_net) | [Microsoft.NETFramework.ReferenceAssemblies](https://www.nuget.org/packages/Microsoft.NETFramework.ReferenceAssemblies/#dependencies-body-tab)  
-**三方控件：**[RibbonWinForms](https://github.com/RibbonWinForms/RibbonWinForms) | [ReoGrid](https://reogrid.net/document/) | [Winform开发框架的重要特性总结](https://www.cnblogs.com/wuhuacong/p/3199829.html) | [Fluent.Ribbon](https://github.com/fluentribbon/Fluent.Ribbon) | [GitHub上有什么有意思的 winform项目?](https://www.zhihu.com/question/371743209)  
+**项目框架：**[C# WinForm项目三层架构简述](https://www.jianshu.com/p/7f628015a243) | [VS2010 中更改项目名称](https://blog.csdn.net/jjp837661103/article/details/23332999) |  [SqlSugar4.x ORM](https://www.donet5.com/Doc/8/1163) | [SqlSugar5.x ORM](https://www.donet5.com/Home/Doc) | [各版本操作系统对.NET支持情况](https://www.newlifex.com/tech/os_net) | [Microsoft.NETFramework.ReferenceAssemblies](https://www.nuget.org/packages/Microsoft.NETFramework.ReferenceAssemblies/#dependencies-body-tab)  
+**三方控件：**[RibbonWinForms](https://github.com/RibbonWinForms/RibbonWinForms) | [ReoGrid](https://reogrid.net/document/) | [Winform开发框架的重要特性总结](https://www.cnblogs.com/wuhuacong/p/3199829.html) | [Fluent.Ribbon](https://github.com/fluentribbon/Fluent.Ribbon) | [GitHub上有什么有意思的 winform项目?](https://www.zhihu.com/question/371743209) | [Winform下CefSharp的引用、配置、实例与报错排除(源码)](https://blog.csdn.net/weixin_30462049/article/details/98071024)  
 **命名规则：**[C#命名规则和风格(收集)](https://www.cnblogs.com/jiekeng/articles/561562.html) | [C#常用的命名规则汇总](https://www.jb51.net/article/57163.htm)  
 **自动更新：**[Winform自动更新组件分享](http://www.cnblogs.com/KnightsWarrior/archive/2010/10/20/1856255.html#3754564) | [Winform(C#.NET)自动更新组件的使用及部分功能实现](https://www.cnblogs.com/24la/p/autoupdater-component.html) | [C#之使用AutoUpdater自动更新客户端](https://www.cnblogs.com/GardenofEden/p/10337744.html) | [OAUS自动升级系统](http://blog.oraycn.com/OAUS.aspx)  
 **加密解密：**[C#编程总结（七）数据加密——附源码](https://www.cnblogs.com/yank/p/3528548.html) | [各种主流.net混淆加密软件对比:](https://blog.csdn.net/mituan1234567/article/details/89671799)  
@@ -187,6 +188,8 @@ TODO：哈特的战争、阿凡达：水之道、黑豹2
 ## CentOS
 [virtualbox安装centos并设置静态IP](https://blog.csdn.net/asdf_1234_/article/details/91470680)
 
+## Chrome
+[ChromeDriver - WebDriver for Chrome](https://chromedriver.chromium.org/downloads)
 
 # D
 
