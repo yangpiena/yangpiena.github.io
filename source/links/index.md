@@ -46,7 +46,7 @@ description:
 ## 电影
 TODO：哈特的战争、阿凡达：水之道、黑豹2  
 [映像讯](http://mkv.cn/) | [影视森林](http://www.549.tv/) | [免费的在线影视网站汇总](https://iao.su/531/) | [小部落](https://www.xbl100.com/)  
-[HDmoli](https://molicp.com/) | [美剧粉](http://www.mjf2020.com/) | [破晓电影](http://www.poxiao.com) | [注释影视](https://gaze.run/) | [4kHDR世界](https://www.4khdr.cn/)  
+[HDmoli](https://molicp.com/) | [美剧粉](http://www.mjf2020.com/) | [破晓电影](http://www.poxiao.com) | [注释影视](https://gaze.run/) | [4kHDR世界](https://www.4khdr.cn/)  | [子夜动漫](https://www.ziyedm.com/)  
 [JustLive](http://live.yj1211.work/index/home/platforms)
 
 
@@ -66,7 +66,7 @@ TODO：哈特的战争、阿凡达：水之道、黑豹2
 [独特工具箱](https://www.dute.org/) | [在线工具](http://tool.lu/)  |  [在线工具](http://tool.oschina.net/) | [UU在线工具](https://uutool.cn/) |  [在线工具](http://json2csharp.chahuo.com/) | [偷懒工具：文字转语音](https://toolight.cn/media/reading)  
 [便民查询网](https://www.bmcx.com/) | [生成随机密码](https://suijimimashengcheng.51240.com/) | [PMD5](http://pmd5.com/#)  |  [输入让你无语的MD5](https://www.somd5.com/) | [核心价值编码器](https://sym233.github.io/core-values-encoder/)  
 [在线文件转换器](https://cn.office-converter.com/) | [在线格式转换](https://www.alltoall.net/) | [PDF派](https://www.pdfpai.com/)  
-[在线PS网页版](https://ps.gitapp.cn/) | [做好图](http://www.zuohaotu.com/)  |  [MakePic.com 图片制造](http://www.makepic.com/)  |  [removebg图片背景消除](https://www.remove.bg/ ) | [waifu2x无损放大图片](http://waifu2x.udp.jp/index.zh-CN.html) | [图片无限变大](http://bigjpg.com/zh) | [草料二维码美化器](http://mh.cli.im/) | [头像生成器](https://www.moubao.vip/)  
+[在线PS网页版](https://ps.gitapp.cn/) | [做好图](http://www.zuohaotu.com/)  |  [MakePic.com 图片制造](http://www.makepic.com/)  |  [removebg图片背景消除](https://www.remove.bg/ ) | [waifu2x无损放大图片](http://waifu2x.udp.jp/index.zh-CN.html) | [图片无限变大](http://bigjpg.com/zh) | [草料二维码美化器](http://mh.cli.im/) | [头像生成器](https://www.moubao.vip/)  | [pretty-snap截图美化工具](https://pretty-snap.iwhy.dev/)  
 [小米LOGO生成器](https://mi-logo.lvwzhen.com/) | [免费logo在线制作](http://www.uugai.com/)  
 
 
@@ -86,7 +86,7 @@ TODO：哈特的战争、阿凡达：水之道、黑豹2
 
 ## 阅读/电子书
 [孔夫子旧书网](https://www.kongfz.com/)  
-[秘密花园](http://www.yini.org)    |  [全历史](https://www.allhistory.com/ " 全方位了解历史的网站，也是一个不错的网站") | [JOJO看报](https://reader.jojokanbao.cn/)   
+[秘密花园](http://www.yini.org)    |  [全历史](https://www.allhistory.com/ " 全方位了解历史的网站，也是一个不错的网站") | [JOJO看报](https://reader.jojokanbao.cn/)  | [互联网知识地图](https://yunyinghui.feishu.cn/wiki/QrvDwaNt4icE2qkZTPSccNKInhh)   
 [鸠摩搜索](https://www.jiumodiary.com/ "电子书搜索引擎，提供各类电子书搜索下载，有多种格式")  |  [i-Book.in](https://book.tstrs.me/ " 基于索引IPFS链接的电子书搜索引擎")  |  [书单网](https://www.shudan.vip/ "电子书搜索网站，抓取第三方网站的资源，也有很多资源是通过城通网赚网盘下载")  |  [Mobilism](https://forum.mobilism.org/viewforum.php?f=19 "电子书论坛，提供英文原版电子书下载")  |  [七彩英语](http://www.qcenglish.com/ "提供PDF或TXT格式的英文原版电子书下载")  |  [好读](http://www.haodoo.net/ "多格式电子书下载网站，很老的一个站")  
 [Z-Library 电子书下载](https://iui.su/380/) | [云海电子图书馆](http://www.pdfbook.cn/ "基于城通网赚网盘下载的电子书网站")  
 [A+医学百科](http://www.a-hospital.com/ "在线医学百科全书")  

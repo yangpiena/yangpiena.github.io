@@ -78,7 +78,7 @@ git rm --cached 文件夹 -r
 ### 从仓库中删除文件/文件夹，以及历史记录
 1. 从仓库中删除文件
 ```
-git filter-branch --force --index-filter 'git rm --cached -r --ignore-unmatch com/download' --prune-empty --tag-name-filter cat -- --all
+git filter-branch --force --index-filter 'git rm --cached -r --ignore-unmatch xxOffline/download' --prune-empty --tag-name-filter cat -- --all
 ```
 > com/download 表示要删除的文件或文件夹的相对路径(相对于git仓库的跟目录)  
 > -r 表示如果删除文件夹，则递归删除（子）文件夹和文件夹下的所有文件
