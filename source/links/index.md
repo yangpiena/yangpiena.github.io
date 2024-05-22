@@ -30,7 +30,7 @@ description:
 
 
 # 常用
-[深言达意](https://www.shenyandayi.com "原反向词典正式升级为智能写作工具。支持筛选词语、成语、惯用语和古汉语等多类别。") | [ChatGPT OpenAI 项目汇总](https://iui.su/2920/) | [ChatGPT免费体验在线列表](https://lzw.me/x/chatgpt-sites/)  | [AIchatOS](https://c2.binjie.fun/#/chat) | [AIchatOS](https://chat18.aichatos.xyz/) | [文心一言](https://yiyan.baidu.com/)  
+[深言达意](https://www.shenyandayi.com "原反向词典正式升级为智能写作工具。支持筛选词语、成语、惯用语和古汉语等多类别。") | [ChatGPT OpenAI 项目汇总](https://iui.su/2920/) | [ChatGPT免费体验在线列表](https://lzw.me/x/chatgpt-sites/)  | [Free2gpt导航](https://nav1.free2gpt.xyz/)  |[AIchatOS](https://c2.binjie.fun/#/chat) | [AIchatOS](https://chat18.aichatos.xyz/) | [文心一言](https://yiyan.baidu.com/)  | [ChatGPT4](https://chatm.ninvfeng.xyz/ "用户名：yangpiena@163.com")  
 [百度翻译](https://fanyi.baidu.com/) | [OpenL翻译](https://openl.io/) | [天气万年历](https://wannianli.tianqi.com/today/zhou/)  
 [Guidebook数字生活指南](https://nav.guidebook.top/) | [我的书签](https://it-cxy.top/)  
 [今日热榜](https://tophub.today/) | [Hacker News](https://hackernews.cc/) | [不死鸟发布页](https://dalao.ru/) | [系统极客](https://www.sysgeek.cn/)  
@@ -44,10 +44,9 @@ description:
 
 
 ## 电影
-TODO：哈特的战争、阿凡达：水之道、黑豹2  
 [映像讯](http://mkv.cn/) | [影视森林](http://www.549.tv/) | [免费的在线影视网站汇总](https://iao.su/531/) | [小部落](https://www.xbl100.com/)  
-[HDmoli](https://molicp.com/) | [美剧粉](http://www.mjf2020.com/) | [破晓电影](http://www.poxiao.com) | [注释影视](https://gaze.run/) | [4kHDR世界](https://www.4khdr.cn/)  | [子夜动漫](https://www.ziyedm.com/)  | [可可影视](https://www.keke9.com/)   
-[JustLive](http://live.yj1211.work/index/home/platforms)
+[HDmoli](https://molicp.com/) | [美剧粉](http://www.mjf2020.com/) | [注释影视](https://gaze.run/) | [4kHDR世界](https://www.4khdr.cn/)  | [子夜动漫](https://www.ziyedm.com/)  | [可可影视](https://www.keke9.com/)   
+[JustLive](http://live.yj1211.work/index/home/platforms) | [Lemon live](https://lemonlive.deno.dev)  
 
 
 ## 游戏
@@ -63,7 +62,7 @@ TODO：哈特的战争、阿凡达：水之道、黑豹2
 [drawio](https://app.diagrams.net/) | [draw.io](https://www.drawio.com/)  | [drawio-desktop](https://g.nite07.org/jgraph/drawio-desktop) | [百度脑图](https://naotu.baidu.com/home) | [GitMind](https://gitmind.cn/) | [ProcessOn](https://www.processon.com/) | [打字打字](https://dazidazi.com/)  
 [分享笔记](https://sharenote.app/) | [鸡毛信](https://cmd.im/) | [鸡霸图床](https://gejiba.com/) | [田字格笔顺 字帖生成器](https://lab.feifanju.com/zitie/) | [休息片刻](http://sit.widget4.com/)  
 [Ping](https://ping.eu/ping/) | [域名查询](https://lab.feifanju.com/domain-query/) | [极强检测](https://www.urlzt.com/) | [在线HTTP POST/GET接口测试工具](https://lab.feifanju.com/http/index.html) | [临时手机号](https://jiemahao.com/)  
-[独特工具箱](https://www.dute.org/) | [在线工具](http://tool.lu/)  |  [OSChina开发工具](http://tool.oschina.net/) | [UU在线工具](https://uutool.cn/) |  [偷懒工具](https://toolight.cn)  
+[千盒工具](https://1000tool.com/) | [独特工具箱](https://www.dute.org/) | [在线工具](http://tool.lu/)  |  [OSChina开发工具](http://tool.oschina.net/) | [UU在线工具](https://uutool.cn/) |  [偷懒工具](https://toolight.cn)  
 [便民查询网](https://www.bmcx.com/) | [生成随机密码](https://suijimimashengcheng.51240.com/) | [PMD5](http://pmd5.com/#)  |  [输入让你无语的MD5](https://www.somd5.com/) | [核心价值编码器](https://sym233.github.io/core-values-encoder/)  
 [在线文件转换器](https://cn.office-converter.com/) | [在线格式转换](https://www.alltoall.net/) | [PDF派](https://www.pdfpai.com/)  
 [在线PS网页版](https://ps.gitapp.cn/) | [做好图](http://www.zuohaotu.com/)  |  [MakePic.com 图片制造](http://www.makepic.com/)  |  [removebg图片背景消除](https://www.remove.bg/ ) | [waifu2x无损放大图片](http://waifu2x.udp.jp/index.zh-CN.html) | [图片无限变大](http://bigjpg.com/zh) | [草料二维码美化器](http://mh.cli.im/) | [头像生成器](https://www.moubao.vip/)  | [pretty-snap截图美化工具](https://pretty-snap.iwhy.dev/)  
