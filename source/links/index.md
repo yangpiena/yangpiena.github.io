@@ -393,6 +393,7 @@ description:
 ### 自动化脚本
 [Selenium使用ChromeOptions启动参数](https://www.cnblogs.com/superhin/p/12607074.html)
 [Python实现自动化监控远程服务器](https://www.cnblogs.com/IT-LearnHall/p/9426235.html)
+[Openpyxl工作表对象的属性和方法-3（条件格式）](https://www.jianshu.com/p/58816378ae52)
 
 ### Web开发
 **Django**

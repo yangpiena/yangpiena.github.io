@@ -262,7 +262,7 @@ Alias /static C:\xxgl\static
 WSGIApplicationGroup %{GLOBAL} 
 ```
 	其中xxgl为我的工程文件夹。编辑完成后保存文件，回到服务器管理器，找到apache2.4服务，重启服务。
-	如果项目配置了Apscheduler定时服务，服务启动后无法正常访问，一直转圈中，则必需增加`WSGIApplicationGroup %{GLOBAL} `
+	如果项目配置了Apscheduler定时服务，服务启动后无法正常访问，一直转圈中，则必需增加 WSGIApplicationGroup %{GLOBAL}
 	如果之前配置都没问题，浏览器输入http://127.0.0.1:80 ，就会见到Django页面了。
 
 # 升级Django项目
