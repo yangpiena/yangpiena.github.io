@@ -39,7 +39,7 @@ description:
 
 
 ## 音乐
-[网易云音乐](http://music.163.com) | [音乐磁场](https://www.hifini.com/) | [千千音乐](https://music.91q.com/) | [9天音乐](http://www.9sky.com/) | [百乐米](https://bailemi.com/) | [铜钟](https://tonzhon.com/)
+[网易云音乐](http://music.163.com) | [音乐磁场](https://www.hifini.com/) | [千千音乐](https://music.91q.com/) | [9天音乐](http://www.9sky.com/) | [百乐米](https://bailemi.com/) | [QQ音速网](https://www.qqyin.com/)
 [VIP付费音乐解析下载](https://music.zhuolin.wang/) | [音乐直链搜索](https://music.liuzhijin.cn/)
 
 
