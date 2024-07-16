@@ -87,7 +87,7 @@ description:
 [孔夫子旧书网](https://www.kongfz.com/)  
 [秘密花园](http://www.yini.org)    |  [全历史](https://www.allhistory.com/ " 全方位了解历史的网站，也是一个不错的网站") | [JOJO看报](https://reader.jojokanbao.cn/)  | [互联网知识地图](https://yunyinghui.feishu.cn/wiki/QrvDwaNt4icE2qkZTPSccNKInhh)   
 [鸠摩搜索](https://www.jiumodiary.com/ "电子书搜索引擎，提供各类电子书搜索下载，有多种格式")  |  [i-Book.in](https://book.tstrs.me/ " 基于索引IPFS链接的电子书搜索引擎")  |  [书单网](https://www.shudan.vip/ "电子书搜索网站，抓取第三方网站的资源，也有很多资源是通过城通网赚网盘下载")  |  [Mobilism](https://forum.mobilism.org/viewforum.php?f=19 "电子书论坛，提供英文原版电子书下载")  |  [七彩英语](http://www.qcenglish.com/ "提供PDF或TXT格式的英文原版电子书下载")  |  [好读](http://www.haodoo.net/ "多格式电子书下载网站，很老的一个站")  
-[Z-Library 电子书下载](https://iui.su/380/) | [云海电子图书馆](http://www.pdfbook.cn/ "基于城通网赚网盘下载的电子书网站")  
+[Z-Library 电子书下载](https://iui.su/380/) | [云海电子图书馆](http://www.pdfbook.cn/ "基于城通网赚网盘下载的电子书网站")  | [SaltyLeo 的书架](https://book.tstrs.me/search "在这里，收录了数以十万计的电子书，你可以轻松找到想要的任何书。")  
 [A+医学百科](http://www.a-hospital.com/ "在线医学百科全书")  
 [瑞文网教材](https://www.ruiwen.com/jiaocai/ "提供人教版、北师大、苏教版、沪教版、浙教版、鲁科版、仁爱版英语等电子课本在线阅读")   |  [人教版中小学教材](https://bp.pep.com.cn/jc/ "人民教育出版社提供的中小学教材电子版下载（转自：免费吧 &raquo; 电子书下载网站大汇总(https://www.mianfeib.me/ebook-download-website.html)）")
 
