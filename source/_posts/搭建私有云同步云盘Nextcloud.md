@@ -262,9 +262,36 @@ http://localhost/nextcloud
 - 在页面的最上面输入需要给Nextcolud创建的管理员账号和密码
 - 选择数据存放的位置位刚才新建的data文件夹
 - 选择数据库MySQL/MariaDB，输入数据库的账号，密码，数据库名称
-- 本地搭建的最后一项一般都填localhost
+- 本地搭建的最后一项一般都填localhost和端口
 
 最后，点击安装完成。
+> 如果安装时出现如下错误：
+	```
+	nextcloud install Error while trying to initialise the database: An exception 	occurred while executing a query: SQLSTATE[HY000]: General error: 4047 InnoDB 	refuses to write tables with ROW_FORMAT=COMPRESSED or KEY_BLOCK_SIZE.
+	```  
+	解决方法：  
+	1. 进入mariadb控制台，键入以下命令并回车；  
+	```
+	mysql -u root -p
+	```  
+	2. 输入mariadb的root密码，回车登录；  
+	3. 输入以下命令并回车；  
+	```
+	SET GLOBAL innodb_read_only_compressed=OFF;
+	```  
+	4. 这时候再次注册nextcloud，发现成功解决。
+
+
+> 如果出现如下错误：  
+	```
+	Your Data directory is invalid 请确保文件根目录下包含有一个名为“.ocdata”的文件。  
+	```  
+	解决方法：  
+	使用以下命令更改目录权限即可  
+	```
+	chown -R username:groupname /path/to/folder
+	```
+
 待安装完成后，访问 `http://localhost/nextcloud` ，输入刚刚设置的管理员账号密码登录即可使用。
 
 ### 关闭数据目录权限检查
@@ -290,6 +317,10 @@ crontab -u wwwrun -e
 */5 * * * * php -f /srv/www/htdocs/nextcloud/cron.php
 ```
 > 注意 cron.php 的权限：chown -R wwwrun:www cron.php
+测试执行任务：
+```
+sudo -u wwwrun php  -f /srv/www/htdocs/nextcloud/cron.php
+```
 
 可参考crontab命令用法：
 1)设置定时器的设置文件, 文件名称为mycronset.txt(名称可自行设定)
@@ -369,6 +400,7 @@ apc.shm_size = 64M
 apc.ttl = 7200
 apc.enable_cli = on
 ```
+
 #### 安装memcache
 Memcached会用到libevent这个库来进行Socket的处理，所以先安装libevent。
 ##### 1. 先装libevent

@@ -47,7 +47,7 @@ description:
 
 ## 电影
 [映像讯](http://mkv.cn/) | [影视森林](http://www.549.tv/) | [免费的在线影视网站汇总](https://iao.su/531/) | [小部落](https://www.xbl100.com/)  
-[HDmoli](https://molicp.com/) | [美剧粉](http://www.mjf2020.com/) | [注释影视](https://gaze.run/) | [4kHDR世界](https://www.4khdr.cn/)  | [子夜动漫](https://www.ziyedm.com/)  | [可可影视](https://www.keke9.com/) | [可可影视](https://www.keke12.com:51111) | [可可影视](https://www.keke13.com) | [可可影视](https://www.keke14.com)   
+[HDmoli](https://molicp.com/) | [美剧粉](http://www.mjf2020.com/) | [注释影视](https://gaze.run/) | [4kHDR世界](https://www.4khdr.cn/)  | [子夜动漫](https://www.ziyedm.com/)  | [可可影视](https://www.keke9.com/) | [可可影视](https://www.keke12.com:51111) | [可可影视](https://www.keke13.com) | [可可影视](https://www.keke14.com) | [金牌影院](https://fjvtw.com/)   
 [JustLive](http://live.yj1211.work/index/home/platforms) | [Lemon live](https://lemonlive.deno.dev)  
 
 
@@ -68,8 +68,8 @@ description:
 [千盒工具](https://1000tool.com/) | [独特工具箱](https://www.dute.org/) | [在线工具](http://tool.lu/)  |  [OSChina开发工具](http://tool.oschina.net/) | [UU在线工具](https://uutool.cn/) |  [偷懒工具](https://toolight.cn)  
 [便民查询网](https://www.bmcx.com/) | [生成随机密码](https://suijimimashengcheng.51240.com/) | [PMD5](http://pmd5.com/#)  |  [输入让你无语的MD5](https://www.somd5.com/) | [核心价值编码器](https://sym233.github.io/core-values-encoder/)  
 [在线文件转换器](https://cn.office-converter.com/) | [在线格式转换](https://www.alltoall.net/) | [PDF派](https://www.pdfpai.com/)  
-[在线PS网页版](https://ps.gitapp.cn/) | [做好图](http://www.zuohaotu.com/)  |  [MakePic.com 图片制造](http://www.makepic.com/)  |  [removebg图片背景消除](https://www.remove.bg/ ) | [waifu2x无损放大图片](http://waifu2x.udp.jp/index.zh-CN.html) | [图片无限变大](http://bigjpg.com/zh) | [草料二维码美化器](http://mh.cli.im/) | [头像生成器](https://www.moubao.vip/)  | [pretty-snap截图美化工具](https://pretty-snap.iwhy.dev/)  
-[小米LOGO生成器](https://mi-logo.lvwzhen.com/) | [免费logo在线制作](http://www.uugai.com/)  
+[在线PS网页版](https://ps.gitapp.cn/) | [做好图](http://www.zuohaotu.com/)  |  [MakePic.com 图片制造](http://www.makepic.com/)  |  [removebg图片背景消除](https://www.remove.bg/ ) | [waifu2x无损放大图片](http://waifu2x.udp.jp/index.zh-CN.html) | [图片无限变大](http://bigjpg.com/zh) | [草料二维码美化器](http://mh.cli.im/) | [头像生成器](https://www.moubao.vip/)  | [pretty-snap截图美化工具](https://pretty-snap.iwhy.dev/) | [色匹网](https://www.wenziyun.cn/yanse/tupianshise)  
+[小米LOGO生成器](https://mi-logo.lvwzhen.com/) | [免费logo在线制作](http://www.uugai.com/) | [Text to Logo & Favicon](https://www.logo.surf/#generate-favicon)  
 [TikTok Voice - 免费在线文字转语音](https://tiktokvoice.net/zh)
 
 
@@ -80,7 +80,8 @@ description:
 # 资源
 [MSDN](http://msdn.itellyou.cn/?gytyzs=0z1zl)   
 [小白盘](https://www.xiaobaipan.com)  
-[站长素材](https://sc.chinaz.com/) | [矢量图标库](http://www.iconfont.cn/) | [免费开源图标下载](https://iconduck.com/) | [FontAwesome图标](http://www.fontawesome.com.cn/faicons/) | [最好的12个Icon图标资源网站整理分享出来](https://blog.csdn.net/xiawj8957/article/details/45130263)  
+[商用免费字体](https://font.ittools.cc/)  
+[站长素材](https://sc.chinaz.com/) | [矢量图标库](http://www.iconfont.cn/) | [免费开源图标下载](https://iconduck.com/) | [FontAwesome图标](http://www.fontawesome.com.cn/faicons/) | [最好的12个Icon图标资源网站整理分享出来](https://blog.csdn.net/xiawj8957/article/details/45130263) | [Icones](https://icon.ittools.cc/)  
 [中国色](http://zhongguose.com/) | [中华珍宝馆](https://ltfc.net/)  
 [优品PPT](http://www.ypppt.com)  
 [实况摄像头](https://www.skylinewebcams.com/zh/webcam/maldives/lhaviyani-atoll/kurendhoo/kuredu-island.html)
@@ -167,7 +168,7 @@ description:
 [WeChatAI](https://welm.weixin.qq.com/docs/)
 
 ## API
-[WxPusher](https://wxpusher.zjiecode.com/admin/main) | [XPusher](https://courier.toptopn.com/xpusher.html)  
+[WxPusher](https://wxpusher.zjiecode.com/admin/main) | [XPusher](https://courier.toptopn.com/xpusher.html) | [PushHub](https://www.pushhub.cn/)  
 [樱道随机图片]https://img.r10086.com/) | [3650000随机API](https://3650000.xyz/) | [随机图片API](https://tuapi.eees.cc)
 [SaltyLeo 的图书元数据 API](https://book-db-v1.saltyleo.com/)  
 
