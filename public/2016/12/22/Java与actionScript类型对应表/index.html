@@ -308,140 +308,147 @@
     
     
     <div class="post-body" itemprop="articleBody">
-        <p>采用Java+Flex架构，通过BlazeDS中间件技术，使服务端Java数据和客户端Flex数据进行互通时，底层数据类型是不一致的，BlazeDS对其进行了映射，具体映射关系如下：</p>
-<span id="more"></span>
-<h2 id="Java-gt-ActionScript"><a href="#Java-gt-ActionScript" class="headerlink" title="Java -&gt; ActionScript"></a>Java -&gt; ActionScript</h2><table>
+        <p>采用Java+Flex架构，通过BlazeDS中间件技术，使服务端Java数据和客户端Flex数据进行互通时，底层数据类型是不一致的，BlazeDS对其进行了映射，具体映射关系如下：<br><span id="more"></span></p>
+<h2 id="Java-gt-ActionScript"><a href="#Java-gt-ActionScript" class="headerlink" title="Java -&gt; ActionScript"></a>Java -&gt; ActionScript</h2><div class="table-container">
+<table>
 <thead>
 <tr>
 <th>Java</th>
-<th align="left">ActionScript</th>
+<th style="text-align:left">ActionScript</th>
 </tr>
 </thead>
-<tbody><tr>
+<tbody>
+<tr>
 <td>java.lang.String</td>
-<td align="left">string</td>
+<td style="text-align:left">string</td>
 </tr>
 <tr>
 <td>java.lang.Boolean, boolean</td>
-<td align="left">Boolean</td>
+<td style="text-align:left">Boolean</td>
 </tr>
 <tr>
 <td>java.lang.Integar</td>
-<td align="left">int</td>
+<td style="text-align:left">int</td>
 </tr>
 <tr>
 <td>java.lang.Short</td>
-<td align="left">int</td>
+<td style="text-align:left">int</td>
 </tr>
 <tr>
 <td>java.lang.Byte</td>
-<td align="left">int</td>
+<td style="text-align:left">int</td>
 </tr>
 <tr>
 <td>java.lang.Byte[]</td>
-<td align="left">Flash.utils.ByteArray</td>
+<td style="text-align:left">Flash.utils.ByteArray</td>
 </tr>
 <tr>
 <td>java.lang.Double</td>
-<td align="left">Number</td>
+<td style="text-align:left">Number</td>
 </tr>
 <tr>
 <td>java.lang.Float</td>
-<td align="left">Number</td>
+<td style="text-align:left">Number</td>
 </tr>
 <tr>
 <td>java.lang.Long</td>
-<td align="left">Number</td>
+<td style="text-align:left">Number</td>
 </tr>
 <tr>
 <td>java.lang.Character</td>
-<td align="left">String</td>
+<td style="text-align:left">String</td>
 </tr>
 <tr>
 <td>java.lang.Character[]</td>
-<td align="left">String</td>
+<td style="text-align:left">String</td>
 </tr>
 <tr>
 <td>java.util.Calendar</td>
-<td align="left">Date</td>
+<td style="text-align:left">Date</td>
 </tr>
 <tr>
 <td>java.util.Date</td>
-<td align="left">Date</td>
+<td style="text-align:left">Date</td>
 </tr>
 <tr>
 <td>java.util.Collection</td>
-<td align="left">mx.collection.ArrayCollection</td>
+<td style="text-align:left">mx.collection.ArrayCollection</td>
 </tr>
 <tr>
 <td>java.lang.Object[]</td>
-<td align="left">Array</td>
+<td style="text-align:left">Array</td>
 </tr>
 <tr>
 <td>java.util.Map</td>
-<td align="left">Array (sparse)</td>
+<td style="text-align:left">Array (sparse)</td>
 </tr>
 <tr>
 <td>java.util.Dictionary</td>
-<td align="left">Object (untyped)</td>
+<td style="text-align:left">Object (untyped)</td>
 </tr>
 <tr>
 <td>org.w3c.dom.Document</td>
-<td align="left">XML object</td>
+<td style="text-align:left">XML object</td>
 </tr>
-</tbody></table>
-<h2 id="ActionScript-gt-Java"><a href="#ActionScript-gt-Java" class="headerlink" title="ActionScript -&gt; Java"></a>ActionScript -&gt; Java</h2><table>
+</tbody>
+</table>
+</div>
+<h2 id="ActionScript-gt-Java"><a href="#ActionScript-gt-Java" class="headerlink" title="ActionScript -&gt; Java"></a>ActionScript -&gt; Java</h2><div class="table-container">
+<table>
 <thead>
 <tr>
 <th>ActionScript</th>
-<th align="left">Java</th>
+<th style="text-align:left">Java</th>
 </tr>
 </thead>
-<tbody><tr>
+<tbody>
+<tr>
 <td>Array (dense)</td>
-<td align="left">java.util.List</td>
+<td style="text-align:left">java.util.List</td>
 </tr>
 <tr>
 <td>Array (sparse)</td>
-<td align="left">java.util.Map</td>
+<td style="text-align:left">java.util.Map</td>
 </tr>
 <tr>
 <td>flash.utils.ByteArray</td>
-<td align="left">byte[]</td>
+<td style="text-align:left">byte[]</td>
 </tr>
 <tr>
 <td>flash.utils.IExternalizable</td>
-<td align="left">java.io.Externalizable</td>
+<td style="text-align:left">java.io.Externalizable</td>
 </tr>
 <tr>
 <td>Date</td>
-<td align="left">java.util.Date</td>
+<td style="text-align:left">java.util.Date</td>
 </tr>
 <tr>
-<td>int&#x2F;uint</td>
-<td align="left">java.lang.Integer</td>
+<td>int/uint</td>
+<td style="text-align:left">java.lang.Integer</td>
 </tr>
 <tr>
 <td>null</td>
-<td align="left">null</td>
+<td style="text-align:left">null</td>
 </tr>
 <tr>
 <td>Number</td>
-<td align="left">java.lang.Double</td>
+<td style="text-align:left">java.lang.Double</td>
 </tr>
 <tr>
 <td>String</td>
-<td align="left">java.lang.String</td>
+<td style="text-align:left">java.lang.String</td>
 </tr>
 <tr>
 <td>XML</td>
-<td align="left">org.w3c.dom.Document</td>
+<td style="text-align:left">org.w3c.dom.Document</td>
 </tr>
 <tr>
 <td>XMLDocument</td>
-<td align="left">org.w3c.dom.Document</td>
+<td style="text-align:left">org.w3c.dom.Document</td>
 </tr>
-</tbody></table>
+</tbody>
+</table>
+</div>
 <blockquote>
 <p>Java里的List、Arraylist对应到Flex里可以用常用ArrayCollection来接收。<br>例如：通过调用java端某方法返回一个arraylist，该arraylist里放的一般是用户自定义类型。Flex端接收到的肯定是个Object，这个时候可以强制转换成ArrayCollection:event.result as ArrayCollection。然后通过遍历该ArrayCollection，来取得存每条数据的Object。 当as这边定义了与自定义类型定义的类型对应的类时，也可以强制转换成该类型。</p>
 </blockquote>

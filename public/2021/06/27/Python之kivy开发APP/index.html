@@ -312,10 +312,9 @@
         <h1 id="安装kivy"><a href="#安装kivy" class="headerlink" title="安装kivy"></a>安装kivy</h1><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">python -m pip install docutils pygments pypiwin32 kivy.deps.sdl2 kivy.deps.glew</span><br></pre></td></tr></table></figure>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">python -m pip install kivy.deps.gstreamer</span><br></pre></td></tr></table></figure>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">python -m pip install kivy</span><br></pre></td></tr></table></figure>
-<p>安装kivy官方示例</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">python -m pip install kivy_examples</span><br></pre></td></tr></table></figure>
+<p>安装kivy官方示例<br><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">python -m pip install kivy_examples</span><br></pre></td></tr></table></figure></p>
 <blockquote>
-<p>如果下载速度慢，请加入代理，使用清华镜像：<code> -i https://pypi.tuna.tsinghua.edu.cn/simple</code></p>
+<p>如果下载速度慢，请加入代理，使用清华镜像：<code>-i https://pypi.tuna.tsinghua.edu.cn/simple</code></p>
 </blockquote>
 <h1 id="验证kivy"><a href="#验证kivy" class="headerlink" title="验证kivy"></a>验证kivy</h1><ol>
 <li><p>创建文件<code>main.py</code></p>
@@ -327,10 +326,7 @@
 <li><p>最后，运行<code>main.py</code>，出现界面表示kivy安装成功。</p>
 </li>
 </ol>
-<h1 id="打包APP"><a href="#打包APP" class="headerlink" title="打包APP"></a>打包APP</h1><p>下载官网提供的已配置好环境的虚拟机镜像，在本地安装打开后，进行打包。</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">buildozer init</span><br></pre></td></tr></table></figure>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">buildozer android debug</span><br></pre></td></tr></table></figure>
-
+<h1 id="打包APP"><a href="#打包APP" class="headerlink" title="打包APP"></a>打包APP</h1><p>下载官网提供的已配置好环境的虚拟机镜像，在本地安装打开后，进行打包。<br><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">buildozer init</span><br></pre></td></tr></table></figure><br><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">buildozer android debug</span><br></pre></td></tr></table></figure></p>
 <h2 id="支持中文"><a href="#支持中文" class="headerlink" title="支持中文"></a>支持中文</h2><ol>
 <li>Ubuntu必须部署kivy环境，并且运行python3 main.py 能正常显示中文字符窗口<br>在Ubuntu安装中文字体<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">sudo mkdir /usr/share/fonts/ttf</span><br><span class="line">sudo cp ~/ttf/* /usr/share/fonts/ttf</span><br><span class="line">cd /usr/share/fonts/ttf</span><br><span class="line">sudo chmod 744 *</span><br><span class="line">sudo mkfontscale</span><br><span class="line">sudo mkfontdir</span><br><span class="line">sudo fc-cache -f -v</span><br></pre></td></tr></table></figure></li>
 <li>配置<code>buildozer.spec</code>文件</li>

@@ -310,22 +310,20 @@
     
     <div class="post-body" itemprop="articleBody">
         <h1 id="zypper配置本地源"><a href="#zypper配置本地源" class="headerlink" title="zypper配置本地源"></a>zypper配置本地源</h1><ol>
-<li><p>将ISO文件上传至云服务器内部。</p>
-</li>
+<li>将ISO文件上传至云服务器内部。</li>
 <li><p>ISO入源:</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo zypper addrepo iso:/?iso=/opt/iso/SLE-12-Server-DVD-x86_64-GM-DVD1.iso DVDISO</span><br></pre></td></tr></table></figure>
 <blockquote>
 <p>其中: </p>
 <ul>
-<li>&#x2F;opt&#x2F;iso&#x2F;SLE-12-Server-DVD-x86_64-GM-DVD1.iso 为ISO文件所在置。</li>
+<li>/opt/iso/SLE-12-Server-DVD-x86_64-GM-DVD1.iso 为ISO文件所在置。</li>
 <li>DVDISO 是这个源的别名。</li>
 </ul>
 </blockquote>
 </li>
 <li><p>查看源是否添加成功。</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">zypper repos</span><br></pre></td></tr></table></figure></li>
-<li><p>刷新源。</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">zypper refresh</span><br></pre></td></tr></table></figure></li>
+<li>刷新源。<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">zypper refresh</span><br></pre></td></tr></table></figure></li>
 </ol>
 
     </div>

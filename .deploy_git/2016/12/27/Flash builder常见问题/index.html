@@ -130,7 +130,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-%E9%87%8D%E6%96%B0%E8%BF%9E%E6%8E%A5%E2%80%9C%E6%95%B0%E6%8D%AE-x2F-%E6%9C%8D%E5%8A%A1%E2%80%9D%E6%97%B6%EF%BC%8C%E5%87%BA%E7%8E%B0%E9%94%99%E8%AF%AF%EF%BC%8C%E5%A6%82%E2%80%9C%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E9%87%8D%E5%A4%8D%E2%80%9D%E7%AD%89%E9%97%AE%E9%A2%98"><span class="nav-number">1.</span> <span class="nav-text">1. 重新连接“数据&#x2F;服务”时，出现错误，如“数据类型重复”等问题</span></a></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-%E9%87%8D%E6%96%B0%E8%BF%9E%E6%8E%A5%E2%80%9C%E6%95%B0%E6%8D%AE-%E6%9C%8D%E5%8A%A1%E2%80%9D%E6%97%B6%EF%BC%8C%E5%87%BA%E7%8E%B0%E9%94%99%E8%AF%AF%EF%BC%8C%E5%A6%82%E2%80%9C%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E9%87%8D%E5%A4%8D%E2%80%9D%E7%AD%89%E9%97%AE%E9%A2%98"><span class="nav-number">1.</span> <span class="nav-text">1. 重新连接“数据&#x2F;服务”时，出现错误，如“数据类型重复”等问题</span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -309,12 +309,17 @@
     
     
     <div class="post-body" itemprop="articleBody">
-        <p>以下记录Flash Builder在使用过程中出现的问题和解决方法：</p>
-<span id="more"></span>
-<h4 id="1-重新连接“数据-x2F-服务”时，出现错误，如“数据类型重复”等问题"><a href="#1-重新连接“数据-x2F-服务”时，出现错误，如“数据类型重复”等问题" class="headerlink" title="1. 重新连接“数据&#x2F;服务”时，出现错误，如“数据类型重复”等问题"></a>1. 重新连接“数据&#x2F;服务”时，出现错误，如“数据类型重复”等问题</h4><p>此时，只需将数据服务彻底删除干净后再重新连接即可。删除方法：</p>
+        <p>以下记录Flash Builder在使用过程中出现的问题和解决方法：<br><span id="more"></span></p>
+<h4 id="1-重新连接“数据-服务”时，出现错误，如“数据类型重复”等问题"><a href="#1-重新连接“数据-服务”时，出现错误，如“数据类型重复”等问题" class="headerlink" title="1. 重新连接“数据/服务”时，出现错误，如“数据类型重复”等问题"></a>1. 重新连接“数据/服务”时，出现错误，如“数据类型重复”等问题</h4><p>此时，只需将数据服务彻底删除干净后再重新连接即可。删除方法：</p>
 <ul>
 <li>删除文件夹services和valueObjects；</li>
-<li>删除xx.fml文件中的数据&#x2F;服务内容。保留model标签和annotation标签内容，其它全删除。<br>  <model xmlns="http://ns.adobe.com/Fiber/1.0"><br>          <annotation name="ActionScriptGeneration"><br>          <item name="FullyQualifyReferences">true</item><br>          </annotation><br>      …<br>  </model></li>
+<li>删除xx.fml文件中的数据/服务内容。保留model标签和annotation标签内容，其它全删除。<pre><code>  &lt;model xmlns=&quot;http://ns.adobe.com/Fiber/1.0&quot;&gt;
+          &lt;annotation name=&quot;ActionScriptGeneration&quot;&gt;
+          &lt;item name=&quot;FullyQualifyReferences&quot;&gt;true&lt;/item&gt;
+          &lt;/annotation&gt;
+      ...
+  &lt;/model&gt;
+</code></pre></li>
 </ul>
 
     </div>
