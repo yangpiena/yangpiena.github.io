@@ -1,0 +1,92 @@
+<footer class="footer">
+    <div class="footer-inner" style="text-align: <%- is_post() ? 'center' : 'left' %>">
+        <p>
+            <a href="/about"  title="<%= __('about') %>"><%= __('about') %></a>&nbsp;&nbsp<em>·</em>&nbsp;&nbsp
+            <!-- 自定义链接 -->
+            <a href="/help" title="<%= __('help') %>" ><%= __('help') %></a>&nbsp;&nbsp<em>·</em>&nbsp;&nbsp
+            <a href="/links" title="<%= __('links') %>"><%= __('links') %></a>&nbsp;&nbsp<em>·</em>&nbsp;&nbsp
+            <a href="/sitemap.xml" title="<%= __('map') %>"><%= __('map') %></a>
+        </p>
+        <p>
+            <%= __('buildTip') %>&nbsp<a href="/timeline" id="siteBuildingTime"></a>&nbsp<%= __('day') %>，<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" rel="licence"><%= __('licenses') %></a><br/>
+            ©2016-<span id="cpYear"></span> <%= __('based_on') %>&nbsp<a href="http://hexo.io" target="_blank" rel="nofollow">Hexo</a>
+            ，<%= __('theme_by') %>&nbsp&nbsp<a href="https://github.com/tangkunyin/hexo-theme-jsimple" target="_blank" rel="bookmark">JSimple</a>
+            ，<%= __('author') %>&nbsp<a href="<%= theme.webmaster.home %>" target="_blank" rel="friend"><%= theme.webmaster.name %></a>
+            ，Hosted by <a href="https://coding.net/" target="_blank" rel="nofollow">Coding Pages</a>
+        </p>
+    </div>
+</footer>
+<%- js(['js/SimpleCore']) %>
+
+
+<!--2017-10-06 YPN Add 添加鼠标点击特效 -->
+<script type="text/javascript">
+  /* 鼠标点击特效 */
+  var a_idx = 0;
+  jQuery(document).ready(function($) {
+      $("body").click(function(e) {
+  var a = new Array("富强", "民主", "文明", "和谐", "自由", "平等", "公正" ,"法治", "爱国", "敬业", "诚信", "友善");
+  var $i = $("<span/>").text(a[a_idx]);
+          a_idx = (a_idx + 1) % a.length;
+  var x = e.pageX,
+          y = e.pageY;
+          $i.css({
+  "z-index": 999999999999999999999999999999999999999999999999999999999999999999999,
+  "top": y - 20,
+  "left": x,
+  "cursor":"default",
+  "position": "absolute",
+  "font-weight": "bold",
+  "color": "#ff6651"
+          });
+          $("body").append($i);
+          $i.animate({
+  "top": y - 180,
+  "opacity": 0
+          },
+          1500,
+  function() {
+              $i.remove();
+          });
+      });
+  });
+</script>
+
+<!--2017-10-06 YPN Add 添加输入框特效。 -->
+<script src="/js/activate-power-mode.js"></script>
+<script>
+  POWERMODE.colorful = true;  // 控制开启/开启礼花特效  
+  POWERMODE.shake    = true; // 控制开启/关闭屏幕震动特效  
+  document.body.addEventListener('input', POWERMODE);
+</script>
+
+<!--动态线条背景
+<script type="text/javascript" color="231,129,112" opacity='0.7' zIndex="-2" count="200" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js"></script>-->
+
+<!-- YPN 2019-10-22 Create 搜索框 -->
+<script>
+	var favObj = {
+		init: function() {
+			var s = this;
+			s.band();
+		},
+		band: function() {
+			$('#b-btn, #q-btn, #m-btn, #d-btn, #p-btn, #w-btn').focus(function() {
+					var id = this.id;
+					var urlArr = {
+						'b-btn': '//www.baidu.com/baidu',
+						'q-btn': '//www.google.com/search',
+						'm-btn': 'https://mijisou.com/',
+						'd-btn': 'https://www.dogedoge.com/',
+						'w-btn': 'https://cn.bing.com/'
+					}
+					$('#search-form').attr('action', urlArr[id]);
+			});
+			$('#search-form').on('submit', function() {
+				$('#q-word').val($('#b-word').val());
+			});
+			//alert("");
+		}
+	};
+	favObj.init();
+</script>
