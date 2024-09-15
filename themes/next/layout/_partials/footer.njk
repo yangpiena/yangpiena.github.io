@@ -1,0 +1,114 @@
+{%- if theme.footer.beian.enable %}
+  <div class="beian">
+    {{- next_url('https://beian.miit.gov.cn', theme.footer.beian.icp + ' ') }}
+    {%- if theme.footer.beian.gongan_icon_url %}
+      <img src="{{ url_for(theme.footer.beian.gongan_icon_url) }}" alt="">
+    {%- endif %}
+    {%- if theme.footer.beian.gongan_id and theme.footer.beian.gongan_num %}
+      {{- next_url('http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=' + theme.footer.beian.gongan_id, theme.footer.beian.gongan_num + ' ') }}
+    {%- endif %}
+  </div>
+{%- endif %}
+
+<div class="copyright">
+  {%- set copyright_year = date(null, 'YYYY') %}
+  &copy; {% if theme.footer.since and theme.footer.since != copyright_year %}{{ theme.footer.since }} – {% endif %}
+  <span itemprop="copyrightYear">{{ copyright_year }}</span>
+  <span class="with-love">
+    <i class="{{ theme.footer.icon.name }}"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">{{ theme.footer.copyright or author }}</span>
+</div>
+
+{%- if config.symbols_count_time.total_symbols or config.symbols_count_time.total_time %}
+<div class="wordcount">
+  {%- if config.symbols_count_time.total_symbols %}
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-line"></i>
+    </span>
+    {%- if theme.symbols_count_time.item_text_total %}
+      <span>{{ __('symbols_count_time.count_total') + __('symbol.colon') }}</span>
+    {%- endif %}
+    <span title="{{ __('symbols_count_time.count_total') }}">{{ symbolsCountTotal(site) }}</span>
+  </span>
+  {%- endif %}
+
+  {%- if config.symbols_count_time.total_time %}
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+    {%- if theme.symbols_count_time.item_text_total %}
+      <span>{{ __('symbols_count_time.time_total') }} &asymp;</span>
+    {%- endif %}
+    <span title="{{ __('symbols_count_time.time_total') }}">{{ symbolsTimeTotal(site, config.symbols_count_time.awl, config.symbols_count_time.wpm, __('symbols_count_time.time_minutes')) }}</span>
+  </span>
+  {%- endif %}
+</div>
+{%- endif %}
+
+{%- if theme.busuanzi_count.enable %}
+<div class="busuanzi-count">
+  {%- if theme.busuanzi_count.total_visitors %}
+    <span class="post-meta-item" id="busuanzi_container_site_uv">
+      <span class="post-meta-item-icon">
+        <i class="{{ theme.busuanzi_count.total_visitors_icon }}"></i>
+      </span>
+      <span class="site-uv" title="{{ __('footer.total_visitors') }}">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+  {%- endif %}
+
+  {%- if theme.busuanzi_count.total_views %}
+    <span class="post-meta-item" id="busuanzi_container_site_pv">
+      <span class="post-meta-item-icon">
+        <i class="{{ theme.busuanzi_count.total_views_icon }}"></i>
+      </span>
+      <span class="site-pv" title="{{ __('footer.total_views') }}">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+  {%- endif %}
+</div>
+{%- endif %}
+
+{%- if theme.footer.powered %}
+  <div class="powered-by">
+    {%- set next_site = 'https://theme-next.js.org' if theme.scheme === 'Gemini' else 'https://theme-next.js.org/' + theme.scheme | lower + '/' %}
+    {{- __('footer.powered', next_url('https://hexo.io', 'Hexo') + ' & ' + next_url(next_site, 'NexT.' + theme.scheme)) }}
+  </div>
+{%- endif %}
+
+<!-- 增加网站运行时间-->
+<div id="days"></div>
+<script>
+    function show_date_time(){
+        window.setTimeout("show_date_time()", 1000);
+        BirthDay=new Date("11/09/2016 00:00:00");
+        today=new Date();
+        timeold=(today.getTime()-BirthDay.getTime());
+        sectimeold=timeold/1000
+        secondsold=Math.floor(sectimeold);
+        msPerDay=24*60*60*1000
+        e_daysold=timeold/msPerDay
+        daysold=Math.floor(e_daysold);
+        e_hrsold=(e_daysold-daysold)*24;
+        hrsold=setzero(Math.floor(e_hrsold));
+        e_minsold=(e_hrsold-hrsold)*60;
+        minsold=setzero(Math.floor((e_hrsold-hrsold)*60));
+        seconds=setzero(Math.floor((e_minsold-minsold)*60));
+        document.getElementById('days').innerHTML="网站已运行 "+daysold+" 天 "+hrsold+" 小时 "+minsold+" 分 "+seconds+" 秒";
+    }
+    function setzero(i) {
+        if (i<10) {
+            i="0" + i
+        };
+        return i;
+    }
+    show_date_time();
+</script>
+
+{{- next_inject('footer') }}
+
