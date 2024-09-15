@@ -323,18 +323,23 @@
 <h3 id="配置环境变量"><a href="#配置环境变量" class="headerlink" title="配置环境变量"></a>配置环境变量</h3><ol>
 <li>在系统变量中新建变量<code>MYSQL_HOME</code>，输入 MySQL 解压缩后文件夹的目录，如：<br>变量名：<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">MYSQL_HOME</span><br></pre></td></tr></table></figure>
  变量值：<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">C:\YPN\mysql-5.7.32-winx64</span><br></pre></td></tr></table></figure></li>
-<li>在系统变量中找到<code>Path</code>变量，点击编辑，在最后加上：<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">;%MYSQL_HOME%\bin</span><br></pre></td></tr></table></figure>
-<h3 id="配置my-ini文件"><a href="#配置my-ini文件" class="headerlink" title="配置my.ini文件"></a>配置my.ini文件</h3></li>
+<li>在系统变量中找到<code>Path</code>变量，点击编辑，在最后加上：<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">;%MYSQL_HOME%\bin</span><br></pre></td></tr></table></figure></li>
+</ol>
+<h3 id="配置my-ini文件"><a href="#配置my-ini文件" class="headerlink" title="配置my.ini文件"></a>配置my.ini文件</h3><ol>
 <li>进入安装目录 <code>C:\YPN\mysql-5.7.32-winx64</code>，新建 <code>my.ini</code> 文件。</li>
 <li>打开 <code>my.ini</code> 文件，输入以下配置内容：<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">[mysql]  </span><br><span class="line"># 设置 mysql 客户端默认字符集  </span><br><span class="line">default-character-set=utf8 </span><br><span class="line"> </span><br><span class="line">[mysqld]  </span><br><span class="line">#设置 3306 端口  </span><br><span class="line">port = 3306  </span><br><span class="line"></span><br><span class="line"># 设置 mysql 的安装目录  </span><br><span class="line">basedir=C:\YPN\mysql-5.7.32-winx64</span><br><span class="line"></span><br><span class="line"># 设置 mysql 数据库的数据的存放目录  </span><br><span class="line">datadir=C:\YPN\mysql-5.7.32-winx64\data </span><br><span class="line"></span><br><span class="line"># 允许最大连接数  </span><br><span class="line">max_connections=200  </span><br><span class="line"></span><br><span class="line"># 服务端使用的字符集默认为 8 比特编码的 latin1 字符集  </span><br><span class="line">character-set-server=utf8  </span><br><span class="line"></span><br><span class="line"># 创建新表时将使用的默认存储引擎  </span><br><span class="line">default-storage-engine=INNODB</span><br></pre></td></tr></table></figure>
- 其中内容中的 <code>basedir</code> 和 <code>datadir</code> 是解压缩后的指定安装目录，注意 <code>datadir</code> 后面要增加 <strong><code>data</code></strong>。</li>
+ 其中内容中的 <code>basedir</code> 和 <code>datadir</code> 是解压缩后的指定安装目录，注意 <code>datadir</code> 后面要增加 **<code>data</code>**。</li>
 </ol>
 <h3 id="建立默认数据库"><a href="#建立默认数据库" class="headerlink" title="建立默认数据库"></a>建立默认数据库</h3><ol>
 <li>以管理员方式打开cmd，进入安装目录：<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cd C:\YPN\mysql-5.7.32-winx64\bin</span><br></pre></td></tr></table></figure></li>
 <li>执行下面命令新建 <code>data</code> 文件夹：<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mysqld --initialize-insecure --user=mysql</span><br></pre></td></tr></table></figure>
  执行完成之后会在指定目录下生成一个 data 文件夹，此时 MySQL 建立了默认的数据库，用户名为 <code>root</code>，密码为空。</li>
 </ol>
-<h3 id="安装服务"><a href="#安装服务" class="headerlink" title="安装服务"></a>安装服务</h3><p>在安装目录下，执行下面语句安装：<br><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mysqld -install</span><br></pre></td></tr></table></figure><br>第一次安装的话会显示 “Service successfully installed.”<br>如果已经安装过了，会显示”The service already exists!”<br>如果需要移除服务，执行下面命令：<br><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mysqld -remove</span><br></pre></td></tr></table></figure></p>
+<h3 id="安装服务"><a href="#安装服务" class="headerlink" title="安装服务"></a>安装服务</h3><p>在安装目录下，执行下面语句安装：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mysqld -install</span><br></pre></td></tr></table></figure>
+<p>第一次安装的话会显示 “Service successfully installed.”<br>如果已经安装过了，会显示”The service already exists!”<br>如果需要移除服务，执行下面命令：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mysqld -remove</span><br></pre></td></tr></table></figure>
+
 <h3 id="配置MySQL"><a href="#配置MySQL" class="headerlink" title="配置MySQL"></a>配置MySQL</h3><ol>
 <li>启动服务<br>通过系统服务启动，或执行下面命令执行：<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">net start mysql</span><br></pre></td></tr></table></figure></li>
 <li>登录MySQL<br>执行下面命令登录：<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mysql -u root -p</span><br></pre></td></tr></table></figure>
@@ -342,14 +347,24 @@
 <li>设置密码<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ALTER USER &#x27;root&#x27;@&#x27;localhost&#x27; IDENTIFIED BY &#x27;new_password&#x27;;</span><br></pre></td></tr></table></figure>
  其中 <code>new_password</code> 为新密码，注意结尾必须有分号：<code>;</code> 。设置完成后即可使用了。</li>
 <li>退出MySQL<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">quit</span><br></pre></td></tr></table></figure></li>
-<li>停止服务<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">net stop mysql</span><br></pre></td></tr></table></figure>
-</li>
+<li>停止服务<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">net stop mysql</span><br></pre></td></tr></table></figure></li>
 </ol>
-<h1 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h1><p>查看所有数据库：<br><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">show databases;</span><br></pre></td></tr></table></figure><br>新建数据库：<br><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">CREATE DATABASE new_database;</span><br></pre></td></tr></table></figure><br>使用数据库：<br><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">use new_database;</span><br></pre></td></tr></table></figure><br>查看当前数据库下所有表：<br><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">show tables;</span><br></pre></td></tr></table></figure><br>新建表：<br><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">CREATE TABLE new_table()</span><br></pre></td></tr></table></figure></p>
+<h1 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h1><p>查看所有数据库：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">show databases;</span><br></pre></td></tr></table></figure>
+<p>新建数据库：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">CREATE DATABASE new_database;</span><br></pre></td></tr></table></figure>
+<p>使用数据库：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">use new_database;</span><br></pre></td></tr></table></figure>
+<p>查看当前数据库下所有表：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">show tables;</span><br></pre></td></tr></table></figure>
+<p>新建表：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">CREATE TABLE new_table()</span><br></pre></td></tr></table></figure>
 <blockquote>
 <p>如：<code>CREATE TABLE book(name char(20),author char(20));</code></p>
 </blockquote>
-<p>查看表：直接写 select 语句即可。<br>删除表：<br><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">DROP TABLE new_table</span><br></pre></td></tr></table></figure></p>
+<p>查看表：直接写 select 语句即可。<br>删除表：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">DROP TABLE new_table</span><br></pre></td></tr></table></figure>
+
 <h1 id="备份"><a href="#备份" class="headerlink" title="备份"></a>备份</h1><h2 id="Windows下"><a href="#Windows下" class="headerlink" title="Windows下"></a>Windows下</h2><ol>
 <li><p>编写bat脚本</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">@echo off</span><br><span class="line">set &quot;Ymd=%date:~,4%%date:~5,2%%date:~8,2%&quot;</span><br><span class="line">cd C:\Program Files\MySQL\MySQL Server 5.7\bin\</span><br><span class="line">mysqldump --opt -u root --password=root --host=127.0.0.1 --port=3306 --default-character-set=utf8 new_database &gt; C:\YPN\MYSQLDATAAUTOBACKUP\new_database_backup_%Ymd%.sql</span><br><span class="line">@echo on</span><br></pre></td></tr></table></figure>
@@ -363,7 +378,8 @@
  --databases new_database 备份指定数据库            
  new_database new_table   备份指定数据库的指定表    
  new_database new_table1 new_table2  备份指定数据库的多个指定表
-</code></pre></li>
+</code></pre>
+</li>
 <li><p>设置Windows定时任务</p>
 </li>
 </ol>
@@ -376,15 +392,8 @@
 <li>将备份操作加入到定时任务(每天凌晨2点定时执行)<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">crontab -e</span><br></pre></td></tr></table></figure>
  <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">00 2 * * * /data/mysqlbak/scripts/backup.sh &gt; /data/mysqlbak/logs/backup.log 2&gt;&amp;1</span><br></pre></td></tr></table></figure>
 <blockquote>
-<p>如果执行脚本出现异常：<code>/data/mysqlbak/scripts/backup.sh: line 14: mysql: command not found</code><br> 解决办法：</p>
-<pre><code> 1、查找mysql安装路径
- find / -name mysql
- 通常mysql安装路径在:/usr/local/mysql/bin/mysql
- 2、mysql:command not found 建立软连接
- ln -s  /usr/local/mysql/bin/mysql  /usr/bin
- 3、mysqldump:command not found 建立软连接
- ln -s  /usr/local/mysql/bin/mysqldump  /usr/bin
-</code></pre></blockquote>
+<p>如果执行脚本出现异常：<code>/data/mysqlbak/scripts/backup.sh: line 14: mysql: command not found</code><br> 解决办法：<br>     1、查找mysql安装路径<br>     find &#x2F; -name mysql<br>     通常mysql安装路径在:&#x2F;usr&#x2F;local&#x2F;mysql&#x2F;bin&#x2F;mysql<br>     2、mysql:command not found 建立软连接<br>     ln -s  &#x2F;usr&#x2F;local&#x2F;mysql&#x2F;bin&#x2F;mysql  &#x2F;usr&#x2F;bin<br>     3、mysqldump:command not found 建立软连接<br>     ln -s  &#x2F;usr&#x2F;local&#x2F;mysql&#x2F;bin&#x2F;mysqldump  &#x2F;usr&#x2F;bin</p>
+</blockquote>
 </li>
 <li>创建删除脚本(定时删除7天前的备份数据)<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vim backup_clean.sh</span><br></pre></td></tr></table></figure>
  <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">#!/bin/bash</span><br><span class="line">echo ----------CLEAN BEGIN----------</span><br><span class="line">find /data/mysqlbak/data -mtime +7 -name &quot;*.gz&quot; -exec rm -rf &#123;&#125; \;</span><br><span class="line">echo ----------CLEAN COMPLETE----------</span><br></pre></td></tr></table></figure></li>

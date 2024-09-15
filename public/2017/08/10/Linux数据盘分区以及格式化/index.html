@@ -309,7 +309,9 @@
     
     <div class="post-body" itemprop="articleBody">
         <h1 id="首先切换到root账户下"><a href="#首先切换到root账户下" class="headerlink" title="首先切换到root账户下"></a>首先切换到root账户下</h1><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo -i</span><br></pre></td></tr></table></figure>
+
 <span id="more"></span>
+
 <h1 id="查看数据盘信息"><a href="#查看数据盘信息" class="headerlink" title="查看数据盘信息"></a>查看数据盘信息</h1><p>登录Linux云主机后，使用命令<code>fdisk -l</code>查看数据盘相关信息。</p>
 <blockquote>
 <p>使用命令<code>df -h</code>是无法查看到未分区和格式化的数据盘的。</p>
@@ -340,8 +342,11 @@ Sector size (logical/physical): 512 bytes / 512 bytes
 I/O size (minimum/optimal): 512 bytes / 512 bytes
 
 [root@iZwe12zdi799668qfxdm5oZ ~]# 
-</code></pre><hr>
-<h1 id="fdisk分区（最大支持2T）"><a href="#fdisk分区（最大支持2T）" class="headerlink" title="fdisk分区（最大支持2T）"></a>fdisk分区（最大支持2T）</h1><h2 id="数据盘分区"><a href="#数据盘分区" class="headerlink" title="数据盘分区"></a>数据盘分区</h2><p>接第2章节，看到需要分区的数据盘后。执行以下命令，对数据盘进行分区。<br><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">fdisk /dev/vdb</span><br></pre></td></tr></table></figure><br>按照界面的提示，依次输入“n”(新建分区)、“p”(新建扩展分区)、“1”(使用第1个主分区)，两次回车(使用默认配置)，输入“w”(保存分区表)，开始分区。</p>
+</code></pre>
+<hr>
+<h1 id="fdisk分区（最大支持2T）"><a href="#fdisk分区（最大支持2T）" class="headerlink" title="fdisk分区（最大支持2T）"></a>fdisk分区（最大支持2T）</h1><h2 id="数据盘分区"><a href="#数据盘分区" class="headerlink" title="数据盘分区"></a>数据盘分区</h2><p>接第2章节，看到需要分区的数据盘后。执行以下命令，对数据盘进行分区。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">fdisk /dev/vdb</span><br></pre></td></tr></table></figure>
+<p>按照界面的提示，依次输入“n”(新建分区)、“p”(新建扩展分区)、“1”(使用第1个主分区)，两次回车(使用默认配置)，输入“w”(保存分区表)，开始分区。</p>
 <pre><code>[root@iZwe12zdi799668qfxdm5oZ ~]# fdisk /dev/vdb
 Welcome to fdisk (util-linux 2.23.2).
 
@@ -369,7 +374,8 @@ The partition table has been altered!
 Calling ioctl() to re-read partition table.
 Syncing disks.
 [root@iZwe12zdi799668qfxdm5oZ ~]# 
-</code></pre><h2 id="查看新分区"><a href="#查看新分区" class="headerlink" title="查看新分区"></a>查看新分区</h2><p>使用命令<code>fdisk -l</code>，即可查看到，新的分区vdb1已经创建完成。</p>
+</code></pre>
+<h2 id="查看新分区"><a href="#查看新分区" class="headerlink" title="查看新分区"></a>查看新分区</h2><p>使用命令<code>fdisk -l</code>，即可查看到，新的分区vdb1已经创建完成。</p>
 <pre><code>[root@iZwe12zdi799668qfxdm5oZ ~]# fdisk -l
 
 Disk /dev/vda: 42.9 GB, 42949672960 bytes, 83886080 sectors
@@ -392,7 +398,9 @@ Disk identifier: 0x6ea9e5ce
    Device Boot      Start         End      Blocks   Id  System
 /dev/vdb1            2048   209715199   104856576   83  Linux
 [root@iZwe12zdi799668qfxdm5oZ ~]# 
-</code></pre><h2 id="格式化新分区"><a href="#格式化新分区" class="headerlink" title="格式化新分区"></a>格式化新分区</h2><p>使用下面的命令对新分区进行格式化：<br><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mkfs.ext3 /dev/vdb1</span><br></pre></td></tr></table></figure></p>
+</code></pre>
+<h2 id="格式化新分区"><a href="#格式化新分区" class="headerlink" title="格式化新分区"></a>格式化新分区</h2><p>使用下面的命令对新分区进行格式化：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mkfs.ext3 /dev/vdb1</span><br></pre></td></tr></table></figure>
 <blockquote>
 <p>在进行分区格式化时，开发者可自行决定文件系统的格式，如ext2、ext3等，这里我们选择ext3。</p>
 </blockquote>
@@ -421,7 +429,10 @@ Creating journal (32768 blocks): done
 Writing superblocks and filesystem accounting information: done   
 
 [root@iZwe12zdi799668qfxdm5oZ ~]# 
-</code></pre><h2 id="挂载新分区"><a href="#挂载新分区" class="headerlink" title="挂载新分区"></a>挂载新分区</h2><p>使用下面的命令，先创建fimeson目录（目录名可自定义），再手动挂载新分区，最后查看挂载结果。<br><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">mkdir /fimeson</span><br><span class="line">mount /dev/vdb1 /fimeson</span><br><span class="line">df -h</span><br></pre></td></tr></table></figure><br>出现以下信息说明挂载成功，即可以查看到数据盘了。</p>
+</code></pre>
+<h2 id="挂载新分区"><a href="#挂载新分区" class="headerlink" title="挂载新分区"></a>挂载新分区</h2><p>使用下面的命令，先创建fimeson目录（目录名可自定义），再手动挂载新分区，最后查看挂载结果。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">mkdir /fimeson</span><br><span class="line">mount /dev/vdb1 /fimeson</span><br><span class="line">df -h</span><br></pre></td></tr></table></figure>
+<p>出现以下信息说明挂载成功，即可以查看到数据盘了。</p>
 <pre><code>[root@iZwe12zdi799668qfxdm5oZ ~]# mkdir /fimeson
 [root@iZwe12zdi799668qfxdm5oZ ~]# mount /dev/vdb1 /fimeson
 [root@iZwe12zdi799668qfxdm5oZ ~]# df -h
@@ -434,11 +445,15 @@ tmpfs           3.9G     0  3.9G   0% /sys/fs/cgroup
 tmpfs           783M     0  783M   0% /run/user/0
 /dev/vdb1        99G   60M   94G   1% /fimeson
 [root@iZwe12zdi799668qfxdm5oZ ~]# 
-</code></pre><h2 id="添加分区信息"><a href="#添加分区信息" class="headerlink" title="添加分区信息"></a>添加分区信息</h2><p>如果希望云主机在重启或开机时能自动挂载数据盘，必须将分区信息添加到/etc/fstab中。如果没有添加，则云主机重启或开机后，都不能自动挂载数据盘。</p>
+</code></pre>
+<h2 id="添加分区信息"><a href="#添加分区信息" class="headerlink" title="添加分区信息"></a>添加分区信息</h2><p>如果希望云主机在重启或开机时能自动挂载数据盘，必须将分区信息添加到&#x2F;etc&#x2F;fstab中。如果没有添加，则云主机重启或开机后，都不能自动挂载数据盘。</p>
 <blockquote>
-<p>注意：请确认分区路径是否为 “/dev/vdb1”，若路径错误，将会造成云主机重启失败</p>
+<p>注意：请确认分区路径是否为 “&#x2F;dev&#x2F;vdb1”，若路径错误，将会造成云主机重启失败</p>
 </blockquote>
-<p>使用下面的命令添加分区信息，最后查看添加结果：<br><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">echo &#x27;/dev/vdb1 /fimeson ext3 defaults 0 0&#x27; &gt;&gt; /etc/fstab</span><br></pre></td></tr></table></figure><br><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cat /etc/fstab</span><br></pre></td></tr></table></figure><br>出现以下信息表示添加分区信息成功。</p>
+<p>使用下面的命令添加分区信息，最后查看添加结果：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">echo &#x27;/dev/vdb1 /fimeson ext3 defaults 0 0&#x27; &gt;&gt; /etc/fstab</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cat /etc/fstab</span><br></pre></td></tr></table></figure>
+<p>出现以下信息表示添加分区信息成功。</p>
 <pre><code>[root@iZwe12zdi799668qfxdm5oZ ~]# echo &#39;/dev/vdb1 /fimeson ext3 defaults 0 0&#39; &gt;&gt; /etc/fstab
 [root@iZwe12zdi799668qfxdm5oZ ~]# cat /etc/fstab
 
@@ -452,8 +467,18 @@ tmpfs           783M     0  783M   0% /run/user/0
 UUID=83e59f2d-45ce-4124-939a-3302e6cc6afa /                       ext4    defaults        1 1
 /dev/vdb1 /fimeson ext3 defaults 0 0
 [root@iZwe12zdi799668qfxdm5oZ ~]# 
-</code></pre><hr>
-<h1 id="parted分区（支持2T以上）"><a href="#parted分区（支持2T以上）" class="headerlink" title="parted分区（支持2T以上）"></a>parted分区（支持2T以上）</h1><h2 id="数据盘分区-1"><a href="#数据盘分区-1" class="headerlink" title="数据盘分区"></a>数据盘分区</h2><p>接第2章节，看到需要分区的数据盘后。依次执行下面命令：<br><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">parted /dev/sdc</span><br></pre></td></tr></table></figure><br><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mklabel gpt</span><br></pre></td></tr></table></figure><br><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">print</span><br></pre></td></tr></table></figure><br><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mkpart primary 0KB 3299GB</span><br></pre></td></tr></table></figure><br><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Yes</span><br></pre></td></tr></table></figure><br><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">i</span><br></pre></td></tr></table></figure><br><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">print</span><br></pre></td></tr></table></figure><br><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">quit</span><br></pre></td></tr></table></figure><br>整体执行结果如下：</p>
+</code></pre>
+<hr>
+<h1 id="parted分区（支持2T以上）"><a href="#parted分区（支持2T以上）" class="headerlink" title="parted分区（支持2T以上）"></a>parted分区（支持2T以上）</h1><h2 id="数据盘分区-1"><a href="#数据盘分区-1" class="headerlink" title="数据盘分区"></a>数据盘分区</h2><p>接第2章节，看到需要分区的数据盘后。依次执行下面命令：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">parted /dev/sdc</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mklabel gpt</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">print</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mkpart primary 0KB 3299GB</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Yes</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">i</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">print</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">quit</span><br></pre></td></tr></table></figure>
+<p>整体执行结果如下：</p>
 <pre><code>ftp:~ # parted /dev/sdc
 GNU Parted 3.2
 Using /dev/sdc
@@ -489,7 +514,8 @@ Number  Start   End     Size    File system  Name     Flags
 
 (parted) quit                                                             
 Information: You may need to update /etc/fstab.
-</code></pre><h2 id="查看新分区-1"><a href="#查看新分区-1" class="headerlink" title="查看新分区"></a>查看新分区</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">fdisk -l</span><br></pre></td></tr></table></figure>
+</code></pre>
+<h2 id="查看新分区-1"><a href="#查看新分区-1" class="headerlink" title="查看新分区"></a>查看新分区</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">fdisk -l</span><br></pre></td></tr></table></figure>
 <p>结果如下：</p>
 <pre><code>Disk /dev/sdc: 3 TiB, 3298534883328 bytes, 6442450944 sectors
 Units: sectors of 1 * 512 = 512 bytes
@@ -500,7 +526,8 @@ Disk identifier: 09E8A9B1-0BF5-4801-98C1-0211C39B8EF9
 
 Device     Start        End    Sectors Size Type
 /dev/sdc1     34 6442450910 6442450877   3T Linux filesystem
-</code></pre><h2 id="格式化新分区-1"><a href="#格式化新分区-1" class="headerlink" title="格式化新分区"></a>格式化新分区</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mkfs.ext4 /dev/sdc1</span><br></pre></td></tr></table></figure>
+</code></pre>
+<h2 id="格式化新分区-1"><a href="#格式化新分区-1" class="headerlink" title="格式化新分区"></a>格式化新分区</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mkfs.ext4 /dev/sdc1</span><br></pre></td></tr></table></figure>
 <p>结果如下：</p>
 <pre><code>mke2fs 1.43.8 (1-Jan-2018)
 Creating filesystem with 805306359 4k blocks and 201326592 inodes
@@ -516,16 +543,19 @@ Creating journal (262144 blocks): done
 Writing superblocks and filesystem accounting information: done       
 
 You have new mail in /var/mail/root
-</code></pre><h2 id="挂载新分区-1"><a href="#挂载新分区-1" class="headerlink" title="挂载新分区"></a>挂载新分区</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mkdir /wzyb</span><br></pre></td></tr></table></figure>
+</code></pre>
+<h2 id="挂载新分区-1"><a href="#挂载新分区-1" class="headerlink" title="挂载新分区"></a>挂载新分区</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mkdir /wzyb</span><br></pre></td></tr></table></figure>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mount /dev/sdc1 /wzyb</span><br></pre></td></tr></table></figure>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">df -h</span><br></pre></td></tr></table></figure>
 <p>结果如下：</p>
 <pre><code>/dev/sdc1       3.0T   89M  2.9T   1% /wzyb
-</code></pre><h2 id="添加分区信息-1"><a href="#添加分区信息-1" class="headerlink" title="添加分区信息"></a>添加分区信息</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">echo &#x27;/dev/sdc1 /wzyb ext4 defaults 0 0&#x27; &gt;&gt; /etc/fstab</span><br></pre></td></tr></table></figure>
+</code></pre>
+<h2 id="添加分区信息-1"><a href="#添加分区信息-1" class="headerlink" title="添加分区信息"></a>添加分区信息</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">echo &#x27;/dev/sdc1 /wzyb ext4 defaults 0 0&#x27; &gt;&gt; /etc/fstab</span><br></pre></td></tr></table></figure>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cat /etc/fstab</span><br></pre></td></tr></table></figure>
 <p>结果如下：</p>
 <pre><code>/dev/sdc1 /wzyb ext4 defaults 0 0
-</code></pre><h1 id="检查"><a href="#检查" class="headerlink" title="检查"></a>检查</h1><p>保证添加分区信息无误后，重启操作系统，使用 <code>df -h</code> 命令查看结果。</p>
+</code></pre>
+<h1 id="检查"><a href="#检查" class="headerlink" title="检查"></a>检查</h1><p>保证添加分区信息无误后，重启操作系统，使用 <code>df -h</code> 命令查看结果。</p>
 
     </div>
 

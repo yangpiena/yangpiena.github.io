@@ -309,7 +309,7 @@
     
     
     <div class="post-body" itemprop="articleBody">
-        <h1 id="安装Mysql"><a href="#安装Mysql" class="headerlink" title="安装Mysql"></a>安装Mysql</h1><p>具体如何安装请参考：<a href="/2020/11/08/MySQL安装配置/">MySQL安装配置</a></p>
+        <h1 id="安装Mysql"><a href="#安装Mysql" class="headerlink" title="安装Mysql"></a>安装Mysql</h1><p>具体如何安装请参考：<a href="/2020/11/08/MySQL%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE/">MySQL安装配置</a></p>
 <h1 id="安装Python"><a href="#安装Python" class="headerlink" title="安装Python"></a>安装Python</h1><p>官网下载：<a target="_blank" rel="noopener" href="https://www.python.org/getit/">https://www.python.org/getit/</a><br>默认安装即可，本教程安装版本为：python-3.7.3-amd64.exe</p>
 <h1 id="安装Django"><a href="#安装Django" class="headerlink" title="安装Django"></a>安装Django</h1><h2 id="在线安装"><a href="#在线安装" class="headerlink" title="在线安装"></a>在线安装</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip install Django==<span class="number">2.1</span><span class="number">.15</span></span><br></pre></td></tr></table></figure>
 <h2 id="离线安装"><a href="#离线安装" class="headerlink" title="离线安装"></a>离线安装</h2><ol>
@@ -321,50 +321,78 @@
 </ol>
 <h1 id="配置Django项目（基于admin管理工具）"><a href="#配置Django项目（基于admin管理工具）" class="headerlink" title="配置Django项目（基于admin管理工具）"></a>配置Django项目（基于admin管理工具）</h1><h2 id="配置MySQL数据库"><a href="#配置MySQL数据库" class="headerlink" title="配置MySQL数据库"></a>配置MySQL数据库</h2><ol>
 <li>创建数据库<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">create database xxgl; </span><br></pre></td></tr></table></figure>
- 其它的数据库操作命令请参照 <a href="/2020/11/08/MySQL安装配置/">MySQL安装配置</a> 里的<strong>使用</strong>章节。</li>
-<li>修改项目下settings.py中DATABASES配置<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&#x27;default&#x27;: &#123;</span><br><span class="line">	&#x27;ENGINE&#x27;: &#x27;django.db.backends.mysql&#x27;,</span><br><span class="line">	&#x27;NAME&#x27;: &#x27;xxgl&#x27;,</span><br><span class="line">	&#x27;USER&#x27;: &#x27;root&#x27;,</span><br><span class="line">	&#x27;PASSWORD&#x27;: &#x27;root&#x27;,</span><br><span class="line">	&#x27;HOST&#x27;: &#x27;127.0.0.1&#x27;,</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h2 id="配置Oracle数据库"><a href="#配置Oracle数据库" class="headerlink" title="配置Oracle数据库"></a>配置Oracle数据库</h2></li>
+ 其它的数据库操作命令请参照 <a href="/2020/11/08/MySQL%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE/">MySQL安装配置</a> 里的<strong>使用</strong>章节。</li>
+<li>修改项目下settings.py中DATABASES配置<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&#x27;default&#x27;: &#123;</span><br><span class="line">	&#x27;ENGINE&#x27;: &#x27;django.db.backends.mysql&#x27;,</span><br><span class="line">	&#x27;NAME&#x27;: &#x27;xxgl&#x27;,</span><br><span class="line">	&#x27;USER&#x27;: &#x27;root&#x27;,</span><br><span class="line">	&#x27;PASSWORD&#x27;: &#x27;root&#x27;,</span><br><span class="line">	&#x27;HOST&#x27;: &#x27;127.0.0.1&#x27;,</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+</ol>
+<h2 id="配置Oracle数据库"><a href="#配置Oracle数据库" class="headerlink" title="配置Oracle数据库"></a>配置Oracle数据库</h2><ol>
 <li>修改项目下settings.py中DATABASES配置<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&#x27;default&#x27;: &#123;</span><br><span class="line">	&#x27;ENGINE&#x27;: &#x27;django.db.backends.oracle&#x27;,</span><br><span class="line">	&#x27;NAME&#x27;: &#x27;orcl&#x27;,</span><br><span class="line">	&#x27;USER&#x27;: &#x27;yonghu&#x27;,</span><br><span class="line">	&#x27;PASSWORD&#x27;: &#x27;mima&#x27;,</span><br><span class="line">	&#x27;HOST&#x27;: &quot;xx.xx.xx.xx&quot;,</span><br><span class="line">	&#x27;PORT&#x27;: &#x27;1521&#x27;,</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
 <li>安装驱动模块 <code>cx_Oracle</code><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip install cx_Oracle</span><br></pre></td></tr></table></figure>
- 安装完成后出现如下所示，表示安装成功：<pre><code> Collecting cx_Oracle
-   Downloading cx_Oracle-8.0.1-cp37-cp37m-win_amd64.whl (201 kB)
-      |████████████████████████████████| 201 kB 33 kB/s
- Installing collected packages: cx-Oracle
- Successfully installed cx-Oracle-8.0.1
-</code></pre></li>
-<li>最后将Oracle客户端安装路径下的 <code>oci.dll</code>  <code>oraocci11.dll</code>  <code>oraociei11.dll</code> 这三个文件拷贝到python安装路径的 lib/site-packages 下面，就OK了。</li>
+ 安装完成后出现如下所示，表示安装成功：<br> Collecting cx_Oracle<br>   Downloading cx_Oracle-8.0.1-cp37-cp37m-win_amd64.whl (201 kB)<br>      |████████████████████████████████| 201 kB 33 kB&#x2F;s<br> Installing collected packages: cx-Oracle<br> Successfully installed cx-Oracle-8.0.1</li>
+<li>最后将Oracle客户端安装路径下的 <code>oci.dll</code>  <code>oraocci11.dll</code>  <code>oraociei11.dll</code> 这三个文件拷贝到python安装路径的 lib&#x2F;site-packages 下面，就OK了。</li>
 </ol>
-<h2 id="安装Django依赖包"><a href="#安装Django依赖包" class="headerlink" title="安装Django依赖包"></a>安装Django依赖包</h2><h3 id="在线安装-1"><a href="#在线安装-1" class="headerlink" title="在线安装"></a>在线安装</h3><p>执行下面命令安装依赖包：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip install -r requirements.txt</span><br></pre></td></tr></table></figure></p>
+<h2 id="安装Django依赖包"><a href="#安装Django依赖包" class="headerlink" title="安装Django依赖包"></a>安装Django依赖包</h2><h3 id="在线安装-1"><a href="#在线安装-1" class="headerlink" title="在线安装"></a>在线安装</h3><p>执行下面命令安装依赖包：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip install -r requirements.txt</span><br></pre></td></tr></table></figure>
 <blockquote>
 <ul>
-<li>如果没有<code>requirements.txt</code>文件，则执行下面命令生成：<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip freeze &gt; requirements.txt</span><br></pre></td></tr></table></figure></li>
-<li>上面命令生成的是开发环境所有的依赖包，不相关的依赖包也会包含进来，如果只想生成与本项目有关的依赖包，则需先安装 <code>pip install pipreqs</code> ，再到项目根目录下执行命令：<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pipreqs ./ --encoding=utf-<span class="number">8</span> --force</span><br></pre></td></tr></table></figure></li>
-<li>如果执行安装命令有报错或安装失败，可尝试下面命令：<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip --default-timeout=<span class="number">100</span> install -r requirements.txt</span><br></pre></td></tr></table></figure></li>
-<li>也可指定资源镜像安装：<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip --default-timeout=<span class="number">100</span> install requirements.txt -i http://pypi.douban.com/simple/ --trusted-host pypi.douban.com</span><br></pre></td></tr></table></figure></li>
-<li><p>如果上面那个豆瓣资源依然不快，可以换成下面的国内镜像网站。<br>清华：<a target="_blank" rel="noopener" href="https://pypi.tuna.tsinghua.edu.cn/simple">https://pypi.tuna.tsinghua.edu.cn/simple</a> 阿里云：<a target="_blank" rel="noopener" href="http://mirrors.aliyun.com/pypi/simple/">http://mirrors.aliyun.com/pypi/simple/</a><br>中国科技大学 <a target="_blank" rel="noopener" href="https://pypi.mirrors.ustc.edu.cn/simple/">https://pypi.mirrors.ustc.edu.cn/simple/</a> 华中科技大学：<a target="_blank" rel="noopener" href="http://pypi.hustunique.com/">http://pypi.hustunique.com/</a><br>山东理工大学：<a target="_blank" rel="noopener" href="http://pypi.sdutlinux.org/">http://pypi.sdutlinux.org/</a> 豆瓣：<a target="_blank" rel="noopener" href="http://pypi.douban.com/simple/">http://pypi.douban.com/simple/</a></p>
-</li>
-<li><p>如果启动项目时提示缺少<code>pytz</code>，可执行下面命令安装：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip install pytz</span><br></pre></td></tr></table></figure></li>
-<li>如果使用了数据库驱动：SQL Server Native Client 11.0，则要安装（仅限Django2）：<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip install django-pyodbc-azure pyodbc</span><br></pre></td></tr></table></figure></li>
-<li>如果使用了数据库驱动：SQL Server Native Client 10.0，首先安装驱动程序 SQL Server Native Client 10.0 ，可直接安装navicat11会自带，或在navicat的安装目录中找到 sqlncli_x64.msi 安装，最后再安装（适用于Django3以上，且该安装包必须最后一步安装才能生效）：<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip install django-mssql-backend</span><br></pre></td></tr></table></figure>
-<h3 id="离线安装-1"><a href="#离线安装-1" class="headerlink" title="离线安装"></a>离线安装</h3></li>
+<li>如果没有<code>requirements.txt</code>文件，则执行下面命令生成：</li>
 </ul>
-<ol>
+</blockquote>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip freeze &gt; requirements.txt</span><br></pre></td></tr></table></figure>
+<blockquote>
+<ul>
+<li>上面命令生成的是开发环境所有的依赖包，不相关的依赖包也会包含进来，如果只想生成与本项目有关的依赖包，则需先安装 <code>pip install pipreqs</code> ，再到项目根目录下执行命令：</li>
+</ul>
+</blockquote>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pipreqs ./ --encoding=utf-<span class="number">8</span> --force</span><br></pre></td></tr></table></figure>
+<blockquote>
+<ul>
+<li>如果执行安装命令有报错或安装失败，可尝试下面命令：</li>
+</ul>
+</blockquote>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip --default-timeout=<span class="number">100</span> install -r requirements.txt</span><br></pre></td></tr></table></figure>
+<blockquote>
+<ul>
+<li>也可指定资源镜像安装：</li>
+</ul>
+</blockquote>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip --default-timeout=<span class="number">100</span> install requirements.txt -i http://pypi.douban.com/simple/ --trusted-host pypi.douban.com</span><br></pre></td></tr></table></figure>
+<blockquote>
+<ul>
+<li>如果上面那个豆瓣资源依然不快，可以换成下面的国内镜像网站。<br>清华：<a target="_blank" rel="noopener" href="https://pypi.tuna.tsinghua.edu.cn/simple">https://pypi.tuna.tsinghua.edu.cn/simple</a> 阿里云：<a target="_blank" rel="noopener" href="http://mirrors.aliyun.com/pypi/simple/">http://mirrors.aliyun.com/pypi/simple/</a><br>中国科技大学 <a target="_blank" rel="noopener" href="https://pypi.mirrors.ustc.edu.cn/simple/">https://pypi.mirrors.ustc.edu.cn/simple/</a> 华中科技大学：<a target="_blank" rel="noopener" href="http://pypi.hustunique.com/">http://pypi.hustunique.com/</a><br>山东理工大学：<a target="_blank" rel="noopener" href="http://pypi.sdutlinux.org/">http://pypi.sdutlinux.org/</a> 豆瓣：<a target="_blank" rel="noopener" href="http://pypi.douban.com/simple/">http://pypi.douban.com/simple/</a></li>
+</ul>
+</blockquote>
+<blockquote>
+<ul>
+<li>如果启动项目时提示缺少<code>pytz</code>，可执行下面命令安装：</li>
+</ul>
+</blockquote>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip install pytz</span><br></pre></td></tr></table></figure>
+<blockquote>
+<ul>
+<li>如果使用了数据库驱动：SQL Server Native Client 11.0，则要安装（仅限Django2）：</li>
+</ul>
+</blockquote>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip install django-pyodbc-azure pyodbc</span><br></pre></td></tr></table></figure>
+<blockquote>
+<ul>
+<li>如果使用了数据库驱动：SQL Server Native Client 10.0，首先安装驱动程序 SQL Server Native Client 10.0 ，可直接安装navicat11会自带，或在navicat的安装目录中找到 sqlncli_x64.msi 安装，最后再安装（适用于Django3以上，且该安装包必须最后一步安装才能生效）：</li>
+</ul>
+</blockquote>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip install django-mssql-backend</span><br></pre></td></tr></table></figure>
+<h3 id="离线安装-1"><a href="#离线安装-1" class="headerlink" title="离线安装"></a>离线安装</h3><ol>
 <li>有网络下，先下载离线包<ul>
 <li>在项目根目录下新建文件夹<code>package</code>，为的是将下载好的离线包放到这个文件夹里面</li>
-<li>查看项目已经安装的依赖包：<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip <span class="built_in">list</span></span><br></pre></td></tr></table></figure></li>
-<li>生成requirements.txt<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip freeze &gt;requirements.txt</span><br></pre></td></tr></table></figure></li>
-<li>下载离线包<br>下载单个离线包：<code>pip download -d your_offline_packages &lt;package_name&gt;</code><br>批量下载离线包：<code>pip download -d your_offline_packages -r requirements.txt</code><br>如本项目批量下载命令：<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip download -d C:\YPN\ypn_xxgl\package -r requirements.txt</span><br></pre></td></tr></table></figure></li>
+<li>查看项目已经安装的依赖包： <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip <span class="built_in">list</span></span><br></pre></td></tr></table></figure></li>
+<li>生成requirements.txt <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip freeze &gt;requirements.txt</span><br></pre></td></tr></table></figure></li>
+<li>下载离线包<br> 下载单个离线包：<code>pip download -d your_offline_packages &lt;package_name&gt;</code><br> 批量下载离线包：<code>pip download -d your_offline_packages -r requirements.txt</code><br> 如本项目批量下载命令： <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip download -d C:\YPN\ypn_xxgl\package -r requirements.txt</span><br></pre></td></tr></table></figure></li>
 </ul>
 </li>
 <li>无网络下，再安装离线包<ul>
 <li>拷贝项目到目标机器上，确保有package和requirements.txt</li>
-<li>安装<br>安装单个离线包：<code>pip install --no-index --find-links=/your_offline_packages/ package_name</code><br>批量安装离线包：<code>pip install --no-index --find-links=/your_offline_packages/ -r requirements.txt</code><br>如本项目批量安装命令：<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip install --no-index --find-links=C:\YPN\ypn_xxgl\package -r requirements.txt</span><br></pre></td></tr></table></figure>
-</li>
+<li>安装<br> 安装单个离线包：<code>pip install --no-index --find-links=/your_offline_packages/ package_name</code><br> 批量安装离线包：<code>pip install --no-index --find-links=/your_offline_packages/ -r requirements.txt</code><br> 如本项目批量安装命令： <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip install --no-index --find-links=C:\YPN\ypn_xxgl\package -r requirements.txt</span><br></pre></td></tr></table></figure></li>
 </ul>
 </li>
 </ol>
-</blockquote>
 <h2 id="创建表"><a href="#创建表" class="headerlink" title="创建表"></a>创建表</h2><ol>
 <li><p>重新编译，记录改动到迁移文件</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">python manage.py makemigrations </span><br></pre></td></tr></table></figure>
@@ -373,33 +401,40 @@
 </blockquote>
 </li>
 <li><p>通过迁移文件同步表</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">python manage.py migrate  </span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">python manage.py migrate  </span><br></pre></td></tr></table></figure></li>
+</ol>
 <h2 id="创建超级用户（基于admin管理平台）"><a href="#创建超级用户（基于admin管理平台）" class="headerlink" title="创建超级用户（基于admin管理平台）"></a>创建超级用户（基于admin管理平台）</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">python manage.py createsuperuser  </span><br></pre></td></tr></table></figure>
 <blockquote>
-<p>更改admin密码：<br>from user.models import UserProfile<br>user=UserProfile.objects.filter(username=’admin’)[0]<br>user.set_password(‘admin123’)<br>user.save()</p>
+<p>更改admin密码：<br>from user.models import UserProfile<br>user&#x3D;UserProfile.objects.filter(username&#x3D;’admin’)[0]<br>user.set_password(‘admin123’)<br>user.save()</p>
 </blockquote>
-</li>
-</ol>
 <h2 id="启动项目（在开发环境下）"><a href="#启动项目（在开发环境下）" class="headerlink" title="启动项目（在开发环境下）"></a>启动项目（在开发环境下）</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">python manage.py runserver <span class="number">0.0</span><span class="number">.0</span><span class="number">.0</span>:<span class="number">8000</span>  </span><br></pre></td></tr></table></figure>
 <blockquote>
-<p>如果提示错误：不存在表 django_admin_log 和 django_session ，可依次执行下面命令生成：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">migrate admin</span><br><span class="line">migrate sessions</span><br></pre></td></tr></table></figure></p>
+<p>如果提示错误：不存在表 django_admin_log 和 django_session ，可依次执行下面命令生成：</p>
 </blockquote>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">migrate admin</span><br><span class="line">migrate sessions</span><br></pre></td></tr></table></figure>
+
+
 <h1 id="部署Django项目到Windows（Apache-mod-wsgi）"><a href="#部署Django项目到Windows（Apache-mod-wsgi）" class="headerlink" title="部署Django项目到Windows（Apache+mod_wsgi）"></a>部署Django项目到Windows（Apache+mod_wsgi）</h1><h2 id="准备Apache"><a href="#准备Apache" class="headerlink" title="准备Apache"></a>准备Apache</h2><ol>
 <li>下载Apache<br>官网下载：<a target="_blank" rel="noopener" href="http://httpd.apache.org/">http://httpd.apache.org/</a><br>本教程下载版本为：httpd-2.4.46-o111h-x64-vc15.zip</li>
 <li>安装Apache<br>下载后是一个压缩文件，直接解压缩，获取文件夹里的Apache24文件夹，这个文件夹就是apache服务器文件了，不需要安装，直接将Apache24文件夹移动到你想放的位置。如：<code>C:\Apache24</code></li>
 <li>配置Apache<br>进入<code>C:\Apache24\conf</code>目录，找到httpd.conf文件，这个就是apache服务器的配置文件。用Notepad打开，找到如下代码行进行修改:<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">...</span><br><span class="line">Define SRVROOT &quot;C:\Apache24&quot;  #Apache24文件的路径，其余不用改。</span><br><span class="line">...</span><br><span class="line">Listen 127.0.0.1:80 #此处为你要发布的网站ip地址</span><br><span class="line">...</span><br><span class="line">ServerName 127.0.0.1:80</span><br><span class="line">...</span><br></pre></td></tr></table></figure></li>
 <li>创建Apache服务<br>打开命令行（管理员），cd进入<code>C:\Apache24\bin</code>文件夹，输入如下代码创建服务：<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">httpd.exe -k install -n &quot;Apache24&quot;</span><br></pre></td></tr></table></figure>
  其中 Apache24 是所创建服务器名称，可更改。如果出现successfully installed说明服务创建成功。同时后面可能会跟一些其他信息，说明你的配置是否正确。<br> 如果需要卸载服务，则执行 <code>httpd.exe -k uninstall -n &quot;Apache24&quot;</code> 命令即可</li>
-<li>测试Apache<br>在浏览器地址栏输入在配置文件中配置的地址，如：<a target="_blank" rel="noopener" href="http://127.0.0.1:80">http://127.0.0.1:80</a></li>
+<li>测试Apache<br>在浏览器地址栏输入在配置文件中配置的地址，如：<a target="_blank" rel="noopener" href="http://127.0.0.1/">http://127.0.0.1:80</a></li>
 </ol>
 <h2 id="准备mod-wsgi"><a href="#准备mod-wsgi" class="headerlink" title="准备mod_wsgi"></a>准备mod_wsgi</h2><ol>
 <li>下载mod_wsgi<br>进入下载地址：<a target="_blank" rel="noopener" href="http://www.lfd.uci.edu/~gohlke/pythonlibs/#mod_wsgi">http://www.lfd.uci.edu/~gohlke/pythonlibs/#mod_wsgi</a> ，下载相应版本的mod_wsgi，其中ap24代表Apache的版本2.4，cp367代表Python的版本为3.7。这个插件的作用其实是一个python与apache的接口。本教程下载的版本为：mod_wsgi-4.7.1+ap24vc15-cp37-cp37m-win_amd64.whl</li>
 <li>安装mod_wsgi<br>将下载的<code>mod_wsgi-4.7.1+ap24vc15-cp37-cp37m-win_amd64.whl</code>，后缀名改为.zip进行解压，解压后找mod_wsgi.so文件,如果存在该文件，则根据教程<a target="_blank" rel="noopener" href="http://www.cnblogs.com/fnng/p/4119712.html">http://www.cnblogs.com/fnng/p/4119712.html</a> 找到安装mod_wsgi步骤那里操作即可。<br>如果不存在该文件，直接将该whl文件复制到python路径下的script文件夹下，cd进入该路径，命令行输入：<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip3 install &quot;mod_wsgi-4.7.1+ap24vc15-cp37-cp37m-win_amd64.whl&quot;</span><br></pre></td></tr></table></figure>
  安装成功后再输入:<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mod_wsgi-express module-config</span><br></pre></td></tr></table></figure>
  出现以下三行提示，这三行一定要记下来，后面配置最重要的就是它了：<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">LoadFile &quot;c:/program files/python37/python37.dll&quot;</span><br><span class="line">LoadModule wsgi_module &quot;c:/program files/python37/lib/site-packages/mod_wsgi/server/mod_wsgi.cp37-win_amd64.pyd&quot;</span><br><span class="line">WSGIPythonHome &quot;c:/program files/python37&quot;</span><br></pre></td></tr></table></figure>
- 至此，mod_wsgi安装成功。<h2 id="部署Django项目到Apache"><a href="#部署Django项目到Apache" class="headerlink" title="部署Django项目到Apache"></a>部署Django项目到Apache</h2>再次打开httpd.conf文件，在最末尾添加如下代码：<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">#安装wsgi模块后，出来的三行字符，直接复制过来</span><br><span class="line">LoadFile &quot;c:/program files/python37/python37.dll&quot;</span><br><span class="line">LoadModule wsgi_module &quot;c:/program files/python37/lib/site-packages/mod_wsgi/server/mod_wsgi.cp37-win_amd64.pyd&quot;</span><br><span class="line">WSGIPythonHome &quot;c:/program files/python37&quot;</span><br><span class="line">#设置工程中的wsgi路径</span><br><span class="line">WSGIScriptAlias / C:\xxgl\xxgl\wsgi.py</span><br><span class="line">#设置工程路径</span><br><span class="line">WSGIPythonPath C:\xxgl</span><br><span class="line">#设置wsgi路径</span><br><span class="line">&lt;Directory C:\xxgl\xxgl&gt;</span><br><span class="line">    &lt;Files wsgi.py&gt;</span><br><span class="line">        Require all granted</span><br><span class="line">    &lt;/Files&gt;</span><br><span class="line">&lt;/Directory&gt;</span><br><span class="line">#设置静态文件路径</span><br><span class="line">Alias /static C:\xxgl\static</span><br><span class="line">&lt;Directory C:\xxgl\static&gt;  </span><br><span class="line">    AllowOverride None  </span><br><span class="line">    Options None  </span><br><span class="line">    Require all granted  </span><br><span class="line">&lt;/Directory&gt;</span><br><span class="line">WSGIApplicationGroup %&#123;GLOBAL&#125; </span><br></pre></td></tr></table></figure>
- 其中xxgl为我的工程文件夹。编辑完成后保存文件，回到服务器管理器，找到apache2.4服务，重启服务。<br> 如果项目配置了Apscheduler定时服务，服务启动后无法正常访问，一直转圈中，则必需增加 WSGIApplicationGroup %{GLOBAL}<br> 如果之前配置都没问题，浏览器输入<a target="_blank" rel="noopener" href="http://127.0.0.1:80">http://127.0.0.1:80</a> ，就会见到Django页面了。</li>
+ 至此，mod_wsgi安装成功。</li>
 </ol>
+<h2 id="部署Django项目到Apache"><a href="#部署Django项目到Apache" class="headerlink" title="部署Django项目到Apache"></a>部署Django项目到Apache</h2><p>再次打开httpd.conf文件，在最末尾添加如下代码：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">#安装wsgi模块后，出来的三行字符，直接复制过来</span><br><span class="line">LoadFile &quot;c:/program files/python37/python37.dll&quot;</span><br><span class="line">LoadModule wsgi_module &quot;c:/program files/python37/lib/site-packages/mod_wsgi/server/mod_wsgi.cp37-win_amd64.pyd&quot;</span><br><span class="line">WSGIPythonHome &quot;c:/program files/python37&quot;</span><br><span class="line">#设置工程中的wsgi路径</span><br><span class="line">WSGIScriptAlias / C:\xxgl\xxgl\wsgi.py</span><br><span class="line">#设置工程路径</span><br><span class="line">WSGIPythonPath C:\xxgl</span><br><span class="line">#设置wsgi路径</span><br><span class="line">&lt;Directory C:\xxgl\xxgl&gt;</span><br><span class="line">    &lt;Files wsgi.py&gt;</span><br><span class="line">        Require all granted</span><br><span class="line">    &lt;/Files&gt;</span><br><span class="line">&lt;/Directory&gt;</span><br><span class="line">#设置静态文件路径</span><br><span class="line">Alias /static C:\xxgl\static</span><br><span class="line">&lt;Directory C:\xxgl\static&gt;  </span><br><span class="line">    AllowOverride None  </span><br><span class="line">    Options None  </span><br><span class="line">    Require all granted  </span><br><span class="line">&lt;/Directory&gt;</span><br><span class="line">WSGIApplicationGroup %&#123;GLOBAL&#125; </span><br></pre></td></tr></table></figure>
+<pre><code>其中xxgl为我的工程文件夹。编辑完成后保存文件，回到服务器管理器，找到apache2.4服务，重启服务。
+如果项目配置了Apscheduler定时服务，服务启动后无法正常访问，一直转圈中，则必需增加 WSGIApplicationGroup %&#123;GLOBAL&#125;
+如果之前配置都没问题，浏览器输入http://127.0.0.1:80 ，就会见到Django页面了。
+</code></pre>
 <h1 id="升级Django项目"><a href="#升级Django项目" class="headerlink" title="升级Django项目"></a>升级Django项目</h1><ol>
 <li>更新需要升级的文件<br>利用文件对比工具（如Beyond Compare），以二进制比较，查找和更新文件。切记不要更新文件夹 <code>migrations</code> 下的任何文件。</li>
 <li>重新编译，记录改动到迁移文件<br>以管理员方式打开cmd，进入项目根目录，执行下面命令：<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">python manage.py makemigrations </span><br></pre></td></tr></table></figure></li>

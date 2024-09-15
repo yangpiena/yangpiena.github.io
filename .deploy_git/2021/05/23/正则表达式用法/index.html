@@ -309,19 +309,19 @@
     
     
     <div class="post-body" itemprop="articleBody">
-        <p>一个正则表达式就是由普通字符（例如字符 a 到 z）以及特殊字符（称为元字符）组成的文字模式。<br>   该模式描述在查找文字主体时待匹配的一个或多个字符串。正则表达式作为一个模板，将某个字符模式与所搜索的字符串进行匹配。<br>正则表达式的形式一般如：<code>/love/</code>，其中位于”/“定界符之间的部分就是将要在目标对象中进行匹配的模式。用户只要把希望查找匹配对象的模式内容放入”/“定界符之间即可。</p>
+        <p>一个正则表达式就是由普通字符（例如字符 a 到 z）以及特殊字符（称为元字符）组成的文字模式。<br>   该模式描述在查找文字主体时待匹配的一个或多个字符串。正则表达式作为一个模板，将某个字符模式与所搜索的字符串进行匹配。<br>正则表达式的形式一般如：<code>/love/</code>，其中位于”&#x2F;“定界符之间的部分就是将要在目标对象中进行匹配的模式。用户只要把希望查找匹配对象的模式内容放入”&#x2F;“定界符之间即可。</p>
 <h1 id="常用例子"><a href="#常用例子" class="headerlink" title="常用例子"></a>常用例子</h1><ol>
 <li><p>匹配中文字符的正则表达式： [\u4e00-\u9fa5]</p>
 </li>
-<li><p>匹配双字节字符(包括汉字在内)：<sup><a href="#fn_\x00-\xff" id="reffn_\x00-\xff">\x00-\xff</a></sup></p>
+<li><p>匹配双字节字符(包括汉字在内)：[^\x00-\xff]</p>
 </li>
-<li><p>应用：计算字符串的长度（一个双字节字符长度计2，ASCII字符计1）<br>String.prototype.len=function(){return this.replace(<sup><a href="#fn_\x00-\xff" id="reffn_\x00-\xff">\x00-\xff</a></sup>/g,”aa”).length;}</p>
+<li><p>应用：计算字符串的长度（一个双字节字符长度计2，ASCII字符计1）<br>String.prototype.len&#x3D;function(){return this.replace([^\x00-\xff]&#x2F;g,”aa”).length;}</p>
 </li>
 <li><p>匹配空行的正则表达式：\n[\s| ]*\r</p>
 </li>
-<li><p>匹配HTML标记的正则表达式：/&lt;(.<em>)&gt;.</em>&lt;\/\1&gt;|&lt;(.*) \/&gt;/</p>
+<li><p>匹配HTML标记的正则表达式：&#x2F;&lt;(.<em>)&gt;.</em>&lt;/\1&gt;|&lt;(.*) /&gt;&#x2F;</p>
 </li>
-<li><p>匹配首尾空格的正则表达式：(^\s<em>)|(\s</em>$)</p>
+<li><p>匹配首尾空格的正则表达式：(^\s*)|(\s*$)</p>
 </li>
 <li><p>应用：javascript中没有像vbscript那样的trim函数，我们就可以利用这个表达式来实现，如下：</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">String.prototype.trim = function()</span><br><span class="line">&#123;</span><br><span class="line">   return this.replace(/(^\s*)|(\s*$)/, &quot;&quot;);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
@@ -330,20 +330,20 @@
 <p> 不过上面的程序如果不用正则表达式，而直接用split函数来分解可能更简单，程序如下：</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">var ip=&quot;10.100.20.168&quot;</span><br><span class="line">ip=ip.split(&quot;.&quot;)</span><br><span class="line">alert(&quot;IP值是：&quot;+(ip[0]*255*255*255+ip[1]*255*255+ip[2]*255+ip[3]*1))</span><br></pre></td></tr></table></figure>
 </li>
-<li><p>匹配Email地址的正则表达式：\w+([-+.]\w+)<em>@\w+([-.]\w+)</em>.\w+([-.]\w+)*</p>
+<li><p>匹配Email地址的正则表达式：\w+([-+.]\w+)*@\w+([-.]\w+)<em>.\w+([-.]\w+)</em></p>
 </li>
-<li><p>匹配网址URL的正则表达式：<a href="http://([\w-]+\.)+[\w-]+(/[\w-">http://([\w-]+\.)+[\w-]+(/[\w-</a> ./?%&amp;=]*)?</p>
+<li><p>匹配网址URL的正则表达式：http:&#x2F;&#x2F;([\w-]+.)+[\w-]+(&#x2F;[\w- .&#x2F;?%&amp;&#x3D;]*)?</p>
 </li>
 <li><p>利用正则表达式去除字串中重复的字符的算法程序：[注：此程序不正确，原因见本贴回复]</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">var s=&quot;abacabefgeeii&quot;</span><br><span class="line">var s1=s.replace(/(.).*\1/g,&quot;$1&quot;)</span><br><span class="line">var re=new RegExp(&quot;[&quot;+s1+&quot;]&quot;,&quot;g&quot;)</span><br><span class="line">var s2=s.replace(re,&quot;&quot;)</span><br><span class="line">alert(s1+s2) //结果为：abcefgi</span><br></pre></td></tr></table></figure>
 <p>思路是使用后向引用取出包括重复的字符，再以重复的字符建立第二个表达式，取到不重复的字符，两者串连。这个方法对于字符顺序有要求的字符串可能不适用。</p>
 </li>
 <li><p>利用正则表达式从URL地址中提取文件名的javascript程序，如下结果为page1</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">s=&quot;http://www.9499.net/page1.htm&quot;</span><br><span class="line">s=s.replace(/(.*\/)&#123;0,&#125;([^\.]+).*/ig,&quot;$2&quot;)</span><br><span class="line">alert(s)</span><br></pre></td></tr></table></figure>
-</li>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">s=&quot;http://www.9499.net/page1.htm&quot;</span><br><span class="line">s=s.replace(/(.*\/)&#123;0,&#125;([^\.]+).*/ig,&quot;$2&quot;)</span><br><span class="line">alert(s)</span><br></pre></td></tr></table></figure></li>
 </ol>
 <h1 id="利用正则表达式限制网页表单里的文本框输入内容"><a href="#利用正则表达式限制网页表单里的文本框输入内容" class="headerlink" title="利用正则表达式限制网页表单里的文本框输入内容"></a>利用正则表达式限制网页表单里的文本框输入内容</h1><ul>
-<li>只能输入中文<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">onkeyup=&quot;value=value.replace(/[^\u4E00-\u9FA5]/g,&#x27;&#x27;)&quot; onbeforepaste=&quot;clipboardData.setData(&#x27;text&#x27;,clipboardData.getData(&#x27;text&#x27;).replace(/[^\u4E00-\u9FA5]/g,&#x27;&#x27;))&quot;</span><br></pre></td></tr></table></figure></li>
+<li><p>只能输入中文</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">onkeyup=&quot;value=value.replace(/[^\u4E00-\u9FA5]/g,&#x27;&#x27;)&quot; onbeforepaste=&quot;clipboardData.setData(&#x27;text&#x27;,clipboardData.getData(&#x27;text&#x27;).replace(/[^\u4E00-\u9FA5]/g,&#x27;&#x27;))&quot;</span><br></pre></td></tr></table></figure></li>
 <li><p>只能输入全角字符</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">onkeyup=&quot;value=value.replace(/[^\uFF00-\uFFFF]/g,&#x27;&#x27;)&quot; onbeforepaste=&quot;clipboardData.setData(&#x27;text&#x27;,clipboardData.getData(&#x27;text&#x27;).replace(/[^\uFF00-\uFFFF]/g,&#x27;&#x27;))&quot;</span><br></pre></td></tr></table></figure>
 </li>
@@ -355,8 +355,10 @@
 </li>
 <li><p>允许输入小数(两位小数)</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;input type=&quot;text&quot; onkeyup=&quot;value=value.replace(/^\D*(\d*(?:\.\d&#123;0,2&#125;)?).*$/g, &#x27;$1&#x27;)&quot; &gt; </span><br></pre></td></tr></table></figure></li>
-<li>允许输入小数(一位小数)<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;input type=&quot;text&quot; onkeyup=&quot;value=value.replace(/^\D*(\d*(?:\.\d&#123;0,1&#125;)?).*$/g, &#x27;$1&#x27;)&quot; &gt;</span><br></pre></td></tr></table></figure></li>
-<li>开头不能为0，且不能输入小数<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;input type=&quot;text&quot; onkeyup=&quot;value=value.replace(/[^\d]/g,&#x27;&#x27;).replace(/^0&#123;1,&#125;/g,&#x27;&#x27;)&quot; &gt;</span><br></pre></td></tr></table></figure>
+<li><p>允许输入小数(一位小数)</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;input type=&quot;text&quot; onkeyup=&quot;value=value.replace(/^\D*(\d*(?:\.\d&#123;0,1&#125;)?).*$/g, &#x27;$1&#x27;)&quot; &gt;</span><br></pre></td></tr></table></figure></li>
+<li><p>开头不能为0，且不能输入小数</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;input type=&quot;text&quot; onkeyup=&quot;value=value.replace(/[^\d]/g,&#x27;&#x27;).replace(/^0&#123;1,&#125;/g,&#x27;&#x27;)&quot; &gt;</span><br></pre></td></tr></table></figure>
 <blockquote>
 <p>部分内容转自ZhengWei(HY)</p>
 </blockquote>

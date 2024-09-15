@@ -309,10 +309,12 @@
     
     <div class="post-body" itemprop="articleBody">
         <h3 id="先在GitHub网站上New一个资源库，如：demo"><a href="#先在GitHub网站上New一个资源库，如：demo" class="headerlink" title="先在GitHub网站上New一个资源库，如：demo"></a>先在GitHub网站上New一个资源库，如：demo</h3><span id="more"></span>
+
 <h3 id="进入本地项目文件夹，通过命令-git-init-把这个目录变成Git可以管理的仓库，默认分支为master"><a href="#进入本地项目文件夹，通过命令-git-init-把这个目录变成Git可以管理的仓库，默认分支为master" class="headerlink" title="进入本地项目文件夹，通过命令 git init 把这个目录变成Git可以管理的仓库，默认分支为master"></a>进入本地项目文件夹，通过命令 <code>git init</code> 把这个目录变成Git可以管理的仓库，默认分支为<code>master</code></h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git init</span><br></pre></td></tr></table></figure>
 <h3 id="把文件添加到版本库中，使用命令-git-add-添加到暂存区里面去，不要忘记后面的小数点“-”，意为添加文件夹下的所有文件"><a href="#把文件添加到版本库中，使用命令-git-add-添加到暂存区里面去，不要忘记后面的小数点“-”，意为添加文件夹下的所有文件" class="headerlink" title="把文件添加到版本库中，使用命令 git add . 添加到暂存区里面去，不要忘记后面的小数点“.”，意为添加文件夹下的所有文件"></a>把文件添加到版本库中，使用命令 <code>git add .</code> 添加到暂存区里面去，不要忘记后面的小数点“.”，意为添加文件夹下的所有文件</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git add .</span><br></pre></td></tr></table></figure>
 <h3 id="用命令-git-commit-告诉Git，把文件提交到仓库。引号内为提交说明"><a href="#用命令-git-commit-告诉Git，把文件提交到仓库。引号内为提交说明" class="headerlink" title="用命令 git commit 告诉Git，把文件提交到仓库。引号内为提交说明"></a>用命令 <code>git commit</code> 告诉Git，把文件提交到仓库。引号内为提交说明</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git commit -m &#x27;first commit&#x27;</span><br></pre></td></tr></table></figure>
 <h3 id="关联到远程库"><a href="#关联到远程库" class="headerlink" title="关联到远程库"></a>关联到远程库</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git remote add origin 你的远程库地址</span><br></pre></td></tr></table></figure>
+
 <blockquote>
 <p>例如：<code>git remote add origin https://github.com/yangpiena/demo.git</code><br>  或者：<code>git remote add origin git@github.com:yangpiena/demo.git</code></p>
 </blockquote>
@@ -320,12 +322,12 @@
 <li>获取远程库分支<code>main</code>与本地同步合并（如果远程库不为空必须做这一步，否则后面的提交会失败）<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git pull --rebase origin main</span><br></pre></td></tr></table></figure></li>
 <li>把本地库的内容推送到远程，使用 <code>git push</code> 命令，实际上是把当前分支master推送到远程。执行此命令后会要求输入用户名、密码，验证通过后即开始上传。<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git push -u origin main</span><br></pre></td></tr></table></figure>
 <blockquote>
-<p>GitHub将master改为main后，如果本地分支为master，则会报错 <code>error: src refspec main does not match any.</code> ，可执行下面命令将本地创建分支的信息推送到github上，最后在GitHub上修改master为默认即可。</p>
-  <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git push origin HEAD -u</span><br></pre></td></tr></table></figure>
+<p>GitHub将master改为main后，如果本地分支为master，则会报错 <code>error: src refspec main does not match any.</code> ，可执行下面命令将本地创建分支的信息推送到github上，最后在GitHub上修改master为默认即可。<br>  <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git push origin HEAD -u</span><br></pre></td></tr></table></figure></p>
 </blockquote>
 </li>
 </ul>
 <h4 id="强制推送到远程（可能会覆盖远程上已有的分支或文件）"><a href="#强制推送到远程（可能会覆盖远程上已有的分支或文件）" class="headerlink" title="强制推送到远程（可能会覆盖远程上已有的分支或文件）"></a>强制推送到远程（可能会覆盖远程上已有的分支或文件）</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git push -u origin master -f</span><br></pre></td></tr></table></figure>
+
 <h5 id="状态查询命令"><a href="#状态查询命令" class="headerlink" title="状态查询命令"></a>状态查询命令</h5><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git status</span><br></pre></td></tr></table></figure>
     </div>
 

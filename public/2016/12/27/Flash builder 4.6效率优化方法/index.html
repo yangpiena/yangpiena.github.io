@@ -310,19 +310,17 @@
     <div class="post-body" itemprop="articleBody">
         <p>Flash Builder 4.6编译慢、报java heap space堆空间异常错误的优化方法：</p>
 <ol>
-<li>在安装路径下找到<code>FlexBuilder.ini</code>文件，进行编辑，加入以下参数：<pre><code> -vmargs
- -Xms128m
- -Xmx512m
- -XX:MaxPermSize=256m
- -XX:PermSize=64m                    #不要设置太高，否则会更加慢
- -Djava.net.preferIPv4Stack=true
-</code></pre>加入后可以明显加快编译速度数倍，第3条可以明显减低FB挂掉的几率。<span id="more"></span></li>
-<li>由于Flex Builder compiler shell有memory leak的问题，而SDK默认的的 JVM heap size 只有312M，当compile比较大的project时内存容易不够，所以只要修改SDK的JVM参数就可以。即编辑<code>&#123;Flex SDK&#125;</code>安装路径<code>/bin/jvm.config</code>文件如下：<pre><code> java.args=-Xmx512m -Dsun.io.useCanonCaches=false
-</code></pre>如果还是有Error，可以增加到1024或者更多试试。<blockquote>
+<li>在安装路径下找到<code>FlexBuilder.ini</code>文件，进行编辑，加入以下参数：<br> -vmargs<br> -Xms128m<br> -Xmx512m<br> -XX:MaxPermSize&#x3D;256m<br> -XX:PermSize&#x3D;64m    				#不要设置太高，否则会更加慢<br> -Djava.net.preferIPv4Stack&#x3D;true</li>
+</ol>
+<p>加入后可以明显加快编译速度数倍，第3条可以明显减低FB挂掉的几率。</p>
+<span id="more"></span>
+<ol start="2">
+<li>由于Flex Builder compiler shell有memory leak的问题，而SDK默认的的 JVM heap size 只有312M，当compile比较大的project时内存容易不够，所以只要修改SDK的JVM参数就可以。即编辑<code>&#123;Flex SDK&#125;</code>安装路径<code>/bin/jvm.config</code>文件如下：<br> java.args&#x3D;-Xmx512m -Dsun.io.useCanonCaches&#x3D;false</li>
+</ol>
+<p>如果还是有Error，可以增加到1024或者更多试试。</p>
+<blockquote>
 <p>我的flex4.6安装路径中的sdk位置：D:\Adobe\Adobe Flash Builder 4\sdks\4.0.0\bin\jvm.config，只需在这里调整即可！</p>
 </blockquote>
-</li>
-</ol>
 
     </div>
 
