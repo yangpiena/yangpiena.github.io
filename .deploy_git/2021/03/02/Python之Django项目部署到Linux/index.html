@@ -1,0 +1,780 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222"><meta name="generator" content="Hexo 6.3.0">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/img/avatar/ironman.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/img/avatar/favicon.ico">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdnjs.loli.net/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha256-Z1K5uhUaJXA7Ll0XrZ/0JhX4lAtZFpT6jkKrEDT0drU=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.loli.net/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"yangpiena.gitee.io","root":"/","images":"/images","scheme":"Gemini","darkmode":false,"version":"8.14.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":true,"style":"default"},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
+
+
+
+<link rel="canonical" href="https://yangpiena.gitee.io/2021/03/02/Python%E4%B9%8BDjango%E9%A1%B9%E7%9B%AE%E9%83%A8%E7%BD%B2%E5%88%B0Linux/">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://yangpiena.gitee.io/2021/03/02/Python%E4%B9%8BDjango%E9%A1%B9%E7%9B%AE%E9%83%A8%E7%BD%B2%E5%88%B0Linux/","path":"2021/03/02/Python之Django项目部署到Linux/","title":"Python之Django项目部署到Linux"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>Python之Django项目部署到Linux | 昜丿捺</title>
+  
+
+
+
+
+
+
+  <script async defer data-website-id="" src=""></script>
+
+  <script defer data-domain="" src=""></script>
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">昜丿捺</p>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">没有阳光，沉默而居</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="搜索" role="button">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a></li><li class="menu-item menu-item-links"><a href="/links" rel="section"><i class="fa fa-star fa-fw"></i>收藏</a></li><li class="menu-item menu-item-photos"><a href="/photos" rel="section"><i class="fa fa-camera fa-fw"></i>相册</a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup"><div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off" maxlength="80"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close" role="button">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div class="search-result-container no-result">
+  <div class="search-result-icon">
+    <i class="fa fa-spinner fa-pulse fa-5x"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E9%83%A8%E7%BD%B2%E7%8E%AF%E5%A2%83"><span class="nav-number">1.</span> <span class="nav-text">部署环境</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%87%86%E5%A4%87CentOS8"><span class="nav-number">2.</span> <span class="nav-text">准备CentOS8</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%AE%89%E8%A3%85Python3"><span class="nav-number">3.</span> <span class="nav-text">安装Python3</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%88%9B%E5%BB%BA%E8%BD%AF%E9%93%BE%E6%8E%A5"><span class="nav-number">3.1.</span> <span class="nav-text">创建软链接</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%B5%8B%E8%AF%95"><span class="nav-number">3.2.</span> <span class="nav-text">测试</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%B5%8B%E8%AF%95%E5%92%8C%E5%AE%89%E8%A3%85pip3"><span class="nav-number">3.3.</span> <span class="nav-text">测试和安装pip3</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%96%B9%E6%B3%95%E4%B8%80%EF%BC%9A%E5%AE%89%E8%A3%85setuptools"><span class="nav-number">3.3.1.</span> <span class="nav-text">方法一：安装setuptools</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%96%B9%E6%B3%95%E4%BA%8C%EF%BC%9Aget-pip-py"><span class="nav-number">3.3.2.</span> <span class="nav-text">方法二：get-pip.py</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%AE%89%E8%A3%85Django"><span class="nav-number">4.</span> <span class="nav-text">安装Django</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%85%8D%E7%BD%AEMySQL"><span class="nav-number">4.1.</span> <span class="nav-text">配置MySQL</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%85%8D%E7%BD%AEOracle"><span class="nav-number">4.2.</span> <span class="nav-text">配置Oracle</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#cx-Oracle-%E4%BD%BF%E7%94%A8-pip-install-cx-Oracle-8-0-1-%E5%AE%89%E8%A3%85%E5%8D%B3%E5%8F%AF%E3%80%82"><span class="nav-number">4.2.1.</span> <span class="nav-text">cx_Oracle 使用 pip install cx-Oracle&#x3D;&#x3D;8.0.1 安装即可。</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Oracle-Instant-Client%EF%BC%88Oracle%E6%8F%90%E4%BE%9B%E7%9A%84%E4%B8%80%E4%B8%AA%E7%AE%80%E5%8D%95%E8%AE%BF%E9%97%AEOracle%E7%9A%84%E7%BB%84%E4%BB%B6%EF%BC%89"><span class="nav-number">4.2.2.</span> <span class="nav-text">Oracle Instant Client（Oracle提供的一个简单访问Oracle的组件）</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%85%8D%E7%BD%AESQL-Server"><span class="nav-number">4.3.</span> <span class="nav-text">配置SQL Server</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#ODBC%E9%A9%B1%E5%8A%A8%E5%AE%89%E8%A3%85"><span class="nav-number">4.3.1.</span> <span class="nav-text">ODBC驱动安装</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%BE%AE%E8%BD%AFODBC-for-linux%E9%A9%B1%E5%8A%A8%E5%AE%89%E8%A3%85"><span class="nav-number">4.3.2.</span> <span class="nav-text">微软ODBC for linux驱动安装</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#django-%E9%85%8D%E7%BD%AE"><span class="nav-number">4.3.3.</span> <span class="nav-text">django 配置</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%AE%89%E8%A3%85MySQL5-7"><span class="nav-number">5.</span> <span class="nav-text">安装MySQL5.7</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%90%AF%E5%8A%A8"><span class="nav-number">5.1.</span> <span class="nav-text">启动</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%99%BB%E5%BD%95mysql%EF%BC%8C%E4%BF%AE%E6%94%B9root%E7%94%A8%E6%88%B7%E7%9A%84%E5%AF%86%E7%A0%81"><span class="nav-number">5.2.</span> <span class="nav-text">登录mysql，修改root用户的密码</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%BF%9C%E7%A8%8B%E8%BF%9E%E6%8E%A5"><span class="nav-number">5.3.</span> <span class="nav-text">远程连接</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%87%AA%E5%8A%A8%E5%A4%87%E4%BB%BD"><span class="nav-number">5.4.</span> <span class="nav-text">自动备份</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%88%9B%E5%BB%BA%E6%95%B0%E6%8D%AE%E5%BA%93"><span class="nav-number">5.5.</span> <span class="nav-text">创建数据库</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%AE%89%E8%A3%85Gunicorn"><span class="nav-number">6.</span> <span class="nav-text">安装Gunicorn</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%90%AF%E5%8A%A8-1"><span class="nav-number">6.1.</span> <span class="nav-text">启动</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%90%AF%E5%8A%A8"><span class="nav-number">6.1.1.</span> <span class="nav-text">命令行启动</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6%E5%90%AF%E5%8A%A8"><span class="nav-number">6.1.2.</span> <span class="nav-text">配置文件启动</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%BC%80%E6%9C%BA%E5%90%AF%E5%8A%A8"><span class="nav-number">6.1.2.1.</span> <span class="nav-text">开机启动</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%9C%8D%E5%8A%A1%E5%90%AF%E5%8A%A8"><span class="nav-number">6.1.3.</span> <span class="nav-text">服务启动</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%AE%BF%E9%97%AE"><span class="nav-number">6.2.</span> <span class="nav-text">访问</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%AE%89%E8%A3%85Nginx"><span class="nav-number">7.</span> <span class="nav-text">安装Nginx</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%BC%80%E5%90%AF%E9%98%B2%E7%81%AB%E5%A2%99"><span class="nav-number">8.</span> <span class="nav-text">开启防火墙</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%8F%82%E8%80%83"><span class="nav-number">9.</span> <span class="nav-text">参考</span></a></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="昜丿捺"
+      src="/img/avatar/ironman.png">
+  <p class="site-author-name" itemprop="name">昜丿捺</p>
+  <div class="site-description" itemprop="description">
+    <!--  -->
+
+
+    <!-- 显示一言经典语句 -->
+    <span id="lwlhitokoto"></span>
+
+
+  </div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">95</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">2</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">54</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/yangpiena" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;yangpiena" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://yangpiena.coding.net/" title="CODING → https:&#x2F;&#x2F;yangpiena.coding.net" rel="noopener" target="_blank"><i class="fab fa-github-alt fa-fw"></i>CODING</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://gitee.com/yangpiena" title="Gitee → https:&#x2F;&#x2F;gitee.com&#x2F;yangpiena" rel="noopener" target="_blank"><i class="fab fa-glide fa-fw"></i>Gitee</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://weibo.com/yangpiena" title="Weibo → https:&#x2F;&#x2F;weibo.com&#x2F;yangpiena" rel="noopener" target="_blank"><i class="fab fa-weibo fa-fw"></i>Weibo</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:yangpiena@gmail.com" title="E-Mail → mailto:yangpiena@gmail.com" rel="noopener" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+  </div>
+
+        </div>
+      </div>
+        <div class="back-to-top animated" role="button" aria-label="返回顶部">
+          <i class="fa fa-arrow-up"></i>
+          <span>0%</span>
+        </div>
+    </div>
+
+    
+    <div class="sidebar-inner sidebar-blogroll">
+      <div class="links-of-blogroll animated">
+        <div class="links-of-blogroll-title"><i class="fa fa-globe fa-fw"></i>
+          链接
+        </div>
+        <ul class="links-of-blogroll-list">
+            <li class="links-of-blogroll-item">
+              <a href="https://yangpiena.gitee.io/" title="https:&#x2F;&#x2F;yangpiena.gitee.io&#x2F;">昜丿捺（Gitee）</a>
+            </li>
+            <li class="links-of-blogroll-item">
+              <a href="https://yangpiena.github.io/" title="https:&#x2F;&#x2F;yangpiena.github.io&#x2F;" rel="noopener" target="_blank">昜丿捺（GitHub）</a>
+            </li>
+            <li class="links-of-blogroll-item">
+              <a href="http://coding-pages-bucket-407450-1059047-17379-602648-1258146968.cos-website.ap-hongkong.myqcloud.com/" title="http:&#x2F;&#x2F;coding-pages-bucket-407450-1059047-17379-602648-1258146968.cos-website.ap-hongkong.myqcloud.com&#x2F;" rel="noopener" target="_blank">昜丿捺（Coding）</a>
+            </li>
+        </ul>
+      </div>
+    </div>
+    
+    
+    <!-- 增加网易云音乐 -->
+        <div class="pjax">
+          <div class="sidebar-inner">
+            <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=300 src="//music.163.com/outchain/player?type=0&id=6605147757&auto=1&height=300"></iframe>
+          </div>
+        </div>
+
+
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://yangpiena.gitee.io/2021/03/02/Python%E4%B9%8BDjango%E9%A1%B9%E7%9B%AE%E9%83%A8%E7%BD%B2%E5%88%B0Linux/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/img/avatar/ironman.png">
+      <meta itemprop="name" content="昜丿捺">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="昜丿捺">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="Python之Django项目部署到Linux | 昜丿捺">
+      <meta itemprop="description" content="本教程主要记录在Linux上如何部署Django项目">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          Python之Django项目部署到Linux
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2021-03-02 14:57:39" itemprop="dateCreated datePublished" datetime="2021-03-02T14:57:39+08:00">2021-03-02</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2022-08-02 15:32:54" itemprop="dateModified" datetime="2022-08-02T15:32:54+08:00">2022-08-02</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/tech-notes/" itemprop="url" rel="index"><span itemprop="name">技术</span></a>
+        </span>
+    </span>
+
+  
+    <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv">
+      <span class="post-meta-item-icon">
+        <i class="far fa-eye"></i>
+      </span>
+      <span class="post-meta-item-text">阅读次数：</span>
+      <span id="busuanzi_value_page_pv"></span>
+    </span>
+</div>
+
+            <div class="post-description">本教程主要记录在Linux上如何部署Django项目</div>
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <h1 id="部署环境"><a href="#部署环境" class="headerlink" title="部署环境"></a>部署环境</h1><ul>
+<li>** Python 3.7.9 + Django 3.1.7 + Gunicorn + Nginx + CentOS8 **</li>
+</ul>
+<hr>
+<h1 id="准备CentOS8"><a href="#准备CentOS8" class="headerlink" title="准备CentOS8"></a>准备CentOS8</h1><p>root用户下安装相应的编译工具</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum -y groupinstall &quot;Development tools&quot;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum -y install zlib-devel bzip2-devel openssl-devel ncurses-devel sqlite-devel readline-devel tk-devel gdbm-devel db4-devel libpcap-devel xz-devel</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum install -y libffi-devel zlib1g-dev</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum install zlib* -y</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum install gcc</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum install -y pcre-devel</span><br></pre></td></tr></table></figure>
+<p><a href="/2017/08/10/Linux%E6%95%B0%E6%8D%AE%E7%9B%98%E5%88%86%E5%8C%BA%E4%BB%A5%E5%8F%8A%E6%A0%BC%E5%BC%8F%E5%8C%96/">如果需要磁盘分区和格式化参考</a></p>
+<hr>
+<h1 id="安装Python3"><a href="#安装Python3" class="headerlink" title="安装Python3"></a>安装Python3</h1><ol>
+<li><p>下载和解压<br>下载安装包到路径：<code>/user/local/download</code></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tar -zxvf Python-3.7.9.tgz</span><br></pre></td></tr></table></figure>
+ <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cd Python-3.7.9</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>配置<br>指定安装路径：<code>/usr/local/python3</code></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">./configure --prefix=/usr/local/python3 --enable-optimizations --with-ssl</span><br></pre></td></tr></table></figure>
+<p> 参数解释：</p>
+<ul>
+<li>第一个指定安装的路径,不指定的话,安装过程中可能软件所需要的文件复制到其他不同目录,删除软件很不方便,复制软件也不方便.</li>
+<li>第二个可以提高python10%-20%代码运行速度.</li>
+<li>第三个是为了安装pip需要用到ssl,后面报错会有提到.</li>
+</ul>
+</li>
+</ol>
+<blockquote>
+<p>Suse Linux无网络情况下如果缺少c或gcc，则按此<a target="_blank" rel="noopener" href="https://blog.csdn.net/weixin_40861358/article/details/83960692">链接</a>安装。</p>
+</blockquote>
+<ol>
+<li>编译<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">make</span><br></pre></td></tr></table></figure></li>
+<li>安装<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">make install</span><br></pre></td></tr></table></figure></li>
+</ol>
+<h2 id="创建软链接"><a href="#创建软链接" class="headerlink" title="创建软链接"></a>创建软链接</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ln -s /usr/local/python3/bin/python3 /usr/bin/python</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ln -s /usr/local/python3/bin/pip3 /usr/bin/pip</span><br></pre></td></tr></table></figure>
+<p>如果链接已存在，可删除已有链接</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">rm -rf /usr/bin/python3</span><br><span class="line">rm -rf /usr/bin/pip3</span><br></pre></td></tr></table></figure>
+
+<h2 id="测试"><a href="#测试" class="headerlink" title="测试"></a>测试</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">python --version</span><br></pre></td></tr></table></figure>
+<p>或</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">python -V</span><br></pre></td></tr></table></figure>
+<p>如果出现下面错误：</p>
+<pre><code>localhost:/usr/local/download/Python-3.7.9 # python --version
+Could not find platform dependent libraries &lt;exec_prefix&gt;
+Consider setting $PYTHONHOME to &lt;prefix&gt;[:&lt;exec_prefix&gt;]
+Python 3.7.9
+</code></pre>
+<p>则在文件系统的etc目录下的profile文件中加入下面的语句：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vi /etc/profile </span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">export PYTHONHOME=/usr/local/python3/lib/python3.7</span><br><span class="line">export PYTHONPATH=.:$PYTHONHOME:$PYTHONHOME/site-packages</span><br><span class="line">export PATH=$PATH:$PYTHONHOME:$PYTHONPATH</span><br></pre></td></tr></table></figure>
+<p>如果出现下面错误：</p>
+<pre><code>Python 3.7.9 (default, Mar  8 2021, 14:58:53) 
+[GCC 7.5.0] on linux
+Type &quot;help&quot;, &quot;copyright&quot;, &quot;credits&quot; or &quot;license&quot; for more information.
+Traceback (most recent call last):
+  File &quot;/etc/pythonstart&quot;, line 7, in &lt;module&gt;
+    import readline
+ModuleNotFoundError: No module named &#39;readline&#39;
+</code></pre>
+<p>则执行下面命令安装：</p>
+<pre><code>zypper in zlib-devel bzip2-devel openssl-devel ncurses-devel sqlite-devel readline-devel tk-devel gdbm-devel db4-devel libpcap-devel xz-devel libffi-devel
+</code></pre>
+<h2 id="测试和安装pip3"><a href="#测试和安装pip3" class="headerlink" title="测试和安装pip3"></a>测试和安装pip3</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip --version</span><br></pre></td></tr></table></figure>
+<p>或</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip -V</span><br></pre></td></tr></table></figure>
+<p>有时安装完python后，缺少pip，可用以下方法尝试安装。</p>
+<h3 id="方法一：安装setuptools"><a href="#方法一：安装setuptools" class="headerlink" title="方法一：安装setuptools"></a>方法一：安装setuptools</h3><ol>
+<li>下载<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wget --no-check-certificate  https://pypi.python.org/packages/source/s/setuptools/setuptools-19.6.tar.gz#md5=c607dd118eae682c44ed146367a17e26</span><br></pre></td></tr></table></figure></li>
+<li>解压<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tar -zxvf setuptools-19.6.tar.gz</span><br></pre></td></tr></table></figure></li>
+<li>进入<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cd setuptools-19.6/</span><br></pre></td></tr></table></figure></li>
+<li>编译<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">python3 setup.py build</span><br></pre></td></tr></table></figure></li>
+<li>安装<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">python3 setup.py install</span><br></pre></td></tr></table></figure></li>
+<li>创建软连接<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ln -s /usr/local/python3/bin/pip3 /usr/bin/pip3</span><br></pre></td></tr></table></figure></li>
+<li>查看pip3版本<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip3 -V</span><br></pre></td></tr></table></figure></li>
+</ol>
+<h3 id="方法二：get-pip-py"><a href="#方法二：get-pip-py" class="headerlink" title="方法二：get-pip.py"></a>方法二：get-pip.py</h3><ol>
+<li>下载get-pip.py 文件<br><a target="_blank" rel="noopener" href="https://pip.pypa.io/en/stable/installing/">https://pip.pypa.io/en/stable/installing/</a></li>
+<li>python get-pip.py</li>
+<li>重新安装python3<blockquote>
+<p>如果缺少zlib，安装方法：<br>curl -O <a target="_blank" rel="noopener" href="http://www.zlib.net/zlib-1.2.11.tar.gz">http://www.zlib.net/zlib-1.2.11.tar.gz</a><br>tar xvfz zlib-1.2.11.tar.gz<br>.&#x2F;configure<br>sudo make &amp;&amp; sudo make install</p>
+</blockquote>
+</li>
+</ol>
+<hr>
+<h1 id="安装Django"><a href="#安装Django" class="headerlink" title="安装Django"></a>安装Django</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip install django==<span class="number">3.1</span><span class="number">.7</span></span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>其它Django配置参考<a href="/2020/10/30/Python%E4%B9%8BDjango%E9%A1%B9%E7%9B%AE%E9%83%A8%E7%BD%B2%E5%88%B0Windows/">Python之Django项目部署到Windows</a></p>
+</blockquote>
+<h2 id="配置MySQL"><a href="#配置MySQL" class="headerlink" title="配置MySQL"></a>配置MySQL</h2><p>安装mysqlclient依赖</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip install mysqlclient</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p> 报错解决：<br><a target="_blank" rel="noopener" href="https://blog.csdn.net/weixin_30416871/article/details/98711474">OSError: mysql_config not found</a><br><a target="_blank" rel="noopener" href="https://blog.csdn.net/zw3413/article/details/105152826">从No match for argument: gcc-devel 到centos8 的dnf</a><br>安装时报错ModuleNotFoundError: No module named ‘_ctypes’的解决办法：</p>
+</blockquote>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum install libffi-devel</span><br></pre></td></tr></table></figure>
+<p>然后重新编译安装python</p>
+<h2 id="配置Oracle"><a href="#配置Oracle" class="headerlink" title="配置Oracle"></a>配置Oracle</h2><p>必需组件：cx_Oracle、Oracle Instant Client</p>
+<h3 id="cx-Oracle-使用-pip-install-cx-Oracle-8-0-1-安装即可。"><a href="#cx-Oracle-使用-pip-install-cx-Oracle-8-0-1-安装即可。" class="headerlink" title="cx_Oracle 使用 pip install cx-Oracle==8.0.1 安装即可。"></a>cx_Oracle 使用 <code>pip install cx-Oracle==8.0.1</code> 安装即可。</h3><h3 id="Oracle-Instant-Client（Oracle提供的一个简单访问Oracle的组件）"><a href="#Oracle-Instant-Client（Oracle提供的一个简单访问Oracle的组件）" class="headerlink" title="Oracle Instant Client（Oracle提供的一个简单访问Oracle的组件）"></a>Oracle Instant Client（Oracle提供的一个简单访问Oracle的组件）</h3><ol>
+<li>从<a target="_blank" rel="noopener" href="http://www.oracle.com/technetwork/database/database-technologies/instant-client/">官网下载</a><br>下载时检查Oracle数据库的版本以及系统类型，下载相应的文件，如Oracle11.2，centos7.9下载 <code>instantclient-basic-linux.x64-11.2.0.4.0.zip</code> 和 <code>instantclient-sdk-linux.x64-11.2.0.4.0.zip</code>。</li>
+<li>解压两个压缩包到同一目录 <code>instantclient_11_2</code> 下</li>
+<li>拷贝 <code>instantclient_11_2</code> 到CentOS7目录 <code>/usr/local/oracle</code> 下</li>
+<li>配置环境变量 <code>./bash_profile</code> 文件<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vi /root/.bash_profile</span><br></pre></td></tr></table></figure>
+ 添加内容：<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">export ORACLE_HOME=/usr/local/oracle/instantclient_11_2</span><br><span class="line">export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$ORACLE_HOME</span><br></pre></td></tr></table></figure>
+ 使配置生效:<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">source /root/.bash_profile</span><br></pre></td></tr></table></figure></li>
+<li>创建快捷键<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">cd $ORACLE_HOME</span><br><span class="line">ln -s  libclntsh.so.11.2  libclntsh.so</span><br><span class="line">ln -s /usr/local/oracle/instantclient_11_2 /usr/local/oracle/instantclient_11_2/lib</span><br></pre></td></tr></table></figure></li>
+<li>添加共享目录<br>打开配置文件：<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vi /etc/ld.so.conf</span><br></pre></td></tr></table></figure>
+ 添加下面内容：<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/usr/local/oracle/instantclient_11_2</span><br></pre></td></tr></table></figure>
+ 执行命令使生效：<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ldconfig</span><br></pre></td></tr></table></figure>
+最后，测试是否正常，或重启服务器后再测试。</li>
+</ol>
+<h2 id="配置SQL-Server"><a href="#配置SQL-Server" class="headerlink" title="配置SQL Server"></a>配置SQL Server</h2><p>必需组件：unixODBC、Microsoft ODBC Driver 11 for linux</p>
+<h3 id="ODBC驱动安装"><a href="#ODBC驱动安装" class="headerlink" title="ODBC驱动安装"></a>ODBC驱动安装</h3><p>用于数据库连接的驱动：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum -y install unixODBC* </span><br></pre></td></tr></table></figure>
+<h3 id="微软ODBC-for-linux驱动安装"><a href="#微软ODBC-for-linux驱动安装" class="headerlink" title="微软ODBC for linux驱动安装"></a>微软ODBC for linux驱动安装</h3><ol>
+<li><a target="_blank" rel="noopener" href="http://download.microsoft.com/download/6/A/B/6AB27E13-46AE-4CE9-AFFD-406367CADC1D/Linux6/sqlncli-11.0.1790.0.tar.gz">官网下载地址</a><br>如果你需要更高版本的驱动程序请转到官网下载，附<a target="_blank" rel="noopener" href="https://docs.microsoft.com/en-us/sql/connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server?view=sql-server-2017">官网地址</a>(建议旧版安装成功后再选择性升级)</li>
+<li>解压并验证安装条件<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">cd /usr/local/download</span><br><span class="line">tar -zxvf sqlncli-11.0.1790.0.tar.gz</span><br><span class="line">cd sqlncli-11.0.1790.0</span><br><span class="line">./install.sh verify</span><br></pre></td></tr></table></figure>
+ 以下为验证信息<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">Microsoft SQL Server ODBC Driver V1.0 for Linux Installation Script</span><br><span class="line">Copyright Microsoft Corp.</span><br><span class="line">Starting install for Microsoft SQL Server ODBC Driver V1.0 for Linux</span><br><span class="line">Checking for 64 bit Linux compatible OS ..................................... OK</span><br><span class="line">Checking required libs are installed ........................................ OK</span><br><span class="line">unixODBC utilities (odbc_config and odbcinst) installed ..................... OK</span><br><span class="line">unixODBC Driver Manager version 2.3.0 installed ......................... FAILED</span><br><span class="line">unixODBC Driver Manager configuration correct ...................... NOT CHECKED</span><br><span class="line">Microsoft SQL Server ODBC Driver V1.0 for Linux already installed .. NOT CHECKED</span><br><span class="line">See /tmp/sqlncli.10874.17476.965/install.log for more information about installation failures.</span><br></pre></td></tr></table></figure>
+ 查看依赖包<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ldd lib64/libsqlncli*</span><br></pre></td></tr></table></figure>
+ <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">linux-vdso.so.1 =&gt;  (0x00007fff973fe000)</span><br><span class="line">libcrypto.so.10 =&gt; /lib64/libcrypto.so.10 (0x00007f2deb899000)</span><br><span class="line">libdl.so.2 =&gt; /lib64/libdl.so.2 (0x00007f2deb695000)</span><br><span class="line">librt.so.1 =&gt; /lib64/librt.so.1 (0x00007f2deb48c000)</span><br><span class="line">libssl.so.10 =&gt; /lib64/libssl.so.10 (0x00007f2deb21a000)</span><br><span class="line">libuuid.so.1 =&gt; /lib64/libuuid.so.1 (0x00007f2deb015000)</span><br><span class="line">libodbcinst.so.1 =&gt; /lib64/libodbcinst.so.1 (0x00007f2deae02000)</span><br><span class="line">libkrb5.so.3 =&gt; /lib64/libkrb5.so.3 (0x00007f2deab1a000)</span><br><span class="line">libgssapi_krb5.so.2 =&gt; /lib64/libgssapi_krb5.so.2 (0x00007f2dea8cd000)</span><br><span class="line">libstdc++.so.6 =&gt; /lib64/libstdc++.so.6 (0x00007f2dea5c4000)</span><br><span class="line">libm.so.6 =&gt; /lib64/libm.so.6 (0x00007f2dea2c2000)</span><br><span class="line">libgcc_s.so.1 =&gt; /lib64/libgcc_s.so.1 (0x00007f2dea0ac000)</span><br><span class="line">libpthread.so.0 =&gt; /lib64/libpthread.so.0 (0x00007f2de9e8f000)</span><br><span class="line">libc.so.6 =&gt; /lib64/libc.so.6 (0x00007f2de9acc000)</span><br><span class="line">libz.so.1 =&gt; /lib64/libz.so.1 (0x00007f2de98b6000)</span><br><span class="line">/lib64/ld-linux-x86-64.so.2 (0x00007f2dec053000)</span><br><span class="line">libcom_err.so.2 =&gt; /lib64/libcom_err.so.2 (0x00007f2de96b1000)</span><br><span class="line">libk5crypto.so.3 =&gt; /lib64/libk5crypto.so.3 (0x00007f2de947e000)</span><br><span class="line">libltdl.so.7 =&gt; /lib64/libltdl.so.7 (0x00007f2de9274000)</span><br><span class="line">libkrb5support.so.0 =&gt; /lib64/libkrb5support.so.0 (0x00007f2de9065000)</span><br><span class="line">libkeyutils.so.1 =&gt; /lib64/libkeyutils.so.1 (0x00007f2de8e61000)</span><br><span class="line">libresolv.so.2 =&gt; /lib64/libresolv.so.2 (0x00007f2de8c47000)</span><br><span class="line">libselinux.so.1 =&gt; /lib64/libselinux.so.1 (0x00007f2de8a1f000)</span><br><span class="line">libpcre.so.1 =&gt; /usr/local/lib/libpcre.so.1 (0x00007f2de8802000)</span><br></pre></td></tr></table></figure>
+ 如果遇到没有找到的依赖环境组件，如 <code>libodbcinst.so.1 =&gt; not found</code> ，可以建立个此缺少环境组件名称的软连接并指向此环境组件的高版本，如：<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cd /usr/lib64</span><br><span class="line">ln -s libodbcinst.so.2.0.0 libodbcinst.so.1</span><br></pre></td></tr></table></figure>
+ 完成后可以使用ldd再次验证，确认全部可行后再进行下一步:<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ldd lib64/libsqlncli*</span><br></pre></td></tr></table></figure></li>
+<li>正式安装<br>使用install安装命令进行安装:<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">./install.sh install --force</span><br></pre></td></tr></table></figure>
+ 声明文件敲空格阅读，最后输入 <code>YES</code> 同意安装（注意YES必须使大写）：<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">Enter YES to accept the license or anything else to terminate the installation: YES</span><br><span class="line"> </span><br><span class="line">Checking for 64 bit Linux compatible OS ..................................... OK</span><br><span class="line">Checking required libs are installed ........................................ OK</span><br><span class="line">unixODBC utilities (odbc_config and odbcinst) installed ..................... OK</span><br><span class="line">unixODBC Driver Manager version 2.3.0 installed ......................... FAILED</span><br><span class="line">unixODBC Driver Manager configuration correct ...................... NOT CHECKED</span><br><span class="line">Microsoft SQL Server ODBC Driver V1.0 for Linux already installed .. NOT CHECKED</span><br><span class="line">Microsoft SQL Server ODBC Driver V1.0 for Linux files copied ................ OK</span><br><span class="line">Symbolic links for bcp and sqlcmd created ................................... OK</span><br><span class="line">Microsoft SQL Server ODBC Driver V1.0 for Linux registered ........... INSTALLED</span><br><span class="line"> </span><br><span class="line">Install log created at /tmp/sqlncli.2486.13833.4245/install.log.</span><br><span class="line"> </span><br><span class="line">One or more steps may have an *. See README for more information regarding</span><br><span class="line">these steps.</span><br><span class="line"> </span><br></pre></td></tr></table></figure>
+ 如果出现目录 <code>/opt/microsoft/sqlncli/lib64/libsqlncli-11.0.so.1790.0</code>，表示驱动安装完成。</li>
+<li>配置unixOBDC<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vi /etc/odbcinst.ini</span><br></pre></td></tr></table></figure>
+ <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">[SQL Server Native Client 11.0]</span><br><span class="line">Description=Microsoft SQL Server ODBC Driver V1.0 for Linux</span><br><span class="line">Driver=/opt/microsoft/sqlncli/lib64/libsqlncli-11.0.so.1790.0</span><br><span class="line">Threading=1</span><br><span class="line">UsageCount=1</span><br></pre></td></tr></table></figure></li>
+</ol>
+<h3 id="django-配置"><a href="#django-配置" class="headerlink" title="django 配置"></a>django 配置</h3><p>进入Django项目目录，修改配置文件 <code>vi setting.py</code>，在数据库配置项中配置以下信息（基本和Windows配置一样）</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">DATABASES = &#123;</span><br><span class="line">  &#x27;default&#x27;: &#123;</span><br><span class="line">    &#x27;ENGINE&#x27;: &#x27;sql_server.pyodbc&#x27;,      # odbc连接固定写法</span><br><span class="line">    &#x27;NAME&#x27;: &#x27;Mydata&#x27;,                   # 需要连接的数据库名称</span><br><span class="line">    &#x27;USER&#x27;: &#x27;sa&#x27;,                       # 数据库连接账户</span><br><span class="line">    &#x27;PASSWORD&#x27;: &#x27;123456&#x27;,               # 数据库连接密码</span><br><span class="line">    &#x27;HOST&#x27;: &#x27;192.168.88.81&#x27;,            # 数据库服务地址</span><br><span class="line">    &#x27;PORT&#x27;: &#x27;1433&#x27;,                     # 数据库连接端口</span><br><span class="line">    &#x27;OPTIONS&#x27;:&#123;</span><br><span class="line">        &#x27;driver&#x27;:&#x27;SQL Server Native Client 11.0&#x27;,</span><br><span class="line">        &#x27;MARS_Connection&#x27;: True,</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>配置完成后需要重启uwsgi服务才生效。</p>
+<hr>
+<h1 id="安装MySQL5-7"><a href="#安装MySQL5-7" class="headerlink" title="安装MySQL5.7"></a>安装MySQL5.7</h1><blockquote>
+<p>可参考<a target="_blank" rel="noopener" href="https://www.suibibk.com/topic/721421244804628480">Linux安装MySQL5.7完整版流程</a></p>
+</blockquote>
+<ol>
+<li><p>解压安装包</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tar -zxvf mysql-5.7.32-linux-glibc2.12-x86_64.tar.gz</span><br></pre></td></tr></table></figure>
+ <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mv mysql-5.7.32-linux-glibc2.12-x86_64 /usr/local/mysql</span><br></pre></td></tr></table></figure></li>
+<li><p>创建mysql用户组和用户</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">groupadd mysql</span><br></pre></td></tr></table></figure>
+ <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">useradd -r -g mysql mysql</span><br></pre></td></tr></table></figure></li>
+<li><p>创建数据目录并赋予权限<br>创建目录</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mkdir -p  /data/mysql</span><br></pre></td></tr></table></figure>
+<p> 赋予权限</p>
+ <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">chown mysql:mysql -R /data/mysql</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>通常都会将数据存放目录外置到别的目录，这样子升级mysql不会影响历历史数据。</p>
+</blockquote>
+</li>
+<li><p>修改配置文件</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vim /etc/my.cnf</span><br></pre></td></tr></table></figure>
+<p> 把默认的内容删掉，改为下面的内容即可。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">[mysqld]</span><br><span class="line">bind-address=0.0.0.0</span><br><span class="line">port=3306</span><br><span class="line">user=mysql</span><br><span class="line">basedir=/usr/local/mysql</span><br><span class="line">datadir=/data/mysql</span><br><span class="line">socket=/tmp/mysql.sock</span><br><span class="line">log-error=/data/mysql/mysql.err</span><br><span class="line">pid-file=/data/mysql/mysql.pid</span><br><span class="line">#character config</span><br><span class="line">character_set_server=utf8mb4</span><br><span class="line">symbolic-links=0</span><br><span class="line">explicit_defaults_for_timestamp=true</span><br><span class="line">[client]</span><br><span class="line">default-character-set=utf8</span><br><span class="line">[mysql]</span><br><span class="line">default-character-set=utf8</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>初始化数据库</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cd /usr/local/mysql/bin/</span><br></pre></td></tr></table></figure>
+ <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">./mysqld --defaults-file=/etc/my.cnf --basedir=/usr/local/mysql/ --datadir=/data/mysql/ --user=mysql --initialize</span><br></pre></td></tr></table></figure></li>
+<li><p>查看root用户密码</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cat /data/mysql/mysql.err</span><br></pre></td></tr></table></figure>
+<p> 初始化完成后，默认会生成一个root用户的密码，在最后位置。这里要记住，后面登录的时候需要使用。</p>
+</li>
+</ol>
+<h2 id="启动"><a href="#启动" class="headerlink" title="启动"></a>启动</h2><p>使用systemd管理mysql，先创建服务文件<code>mysql.service</code></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vi /usr/lib/systemd/system/mysql.service</span><br></pre></td></tr></table></figure>
+<p>输入以下内容：</p>
+<pre><code>[Unit]
+Description=MySQL Server
+Documentation=man:mysqld(8)
+After=network.target
+After=syslog.target
+[Install]
+WantedBy=multi-user.target
+[Service]
+User=mysql
+Group=mysql
+ExecStart=/usr/local/mysql/bin/mysqld --defaults-file=/etc/my.cnf
+LimitNOFILE = 5000
+</code></pre>
+<p>使文件生效</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">systemctl daemon-reload</span><br></pre></td></tr></table></figure>
+<p>最后，启动mysql服务</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">service mysql start</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p><a href="/2016/11/22/Linux%E5%91%BD%E4%BB%A4%E5%A4%A7%E5%85%A8/">其它服务命令参考</a></p>
+</blockquote>
+<h2 id="登录mysql，修改root用户的密码"><a href="#登录mysql，修改root用户的密码" class="headerlink" title="登录mysql，修改root用户的密码"></a>登录mysql，修改root用户的密码</h2><p>bin目录下</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">./mysql -u root -p</span><br></pre></td></tr></table></figure>
+<p>密码为初始化的时候生成的随机密码串。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">SET PASSWORD = PASSWORD(&#x27;123456&#x27;);</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ALTER USER &#x27;root&#x27;@&#x27;localhost&#x27; PASSWORD EXPIRE NEVER;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">FLUSH PRIVILEGES;</span><br></pre></td></tr></table></figure>
+<p>依次执行上面三条命令，这里密码设置为123456。</p>
+<h2 id="远程连接"><a href="#远程连接" class="headerlink" title="远程连接"></a>远程连接</h2><p>如果报没权限，因为我们的root用户默认只能够本机访问，这里要开放下，登录mysql，执行如下三条命令即可.</p>
+<ul>
+<li>访问mysql库<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">use mysql</span><br></pre></td></tr></table></figure></li>
+<li>使root能再任何host访问<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">update user set host = &#x27;%&#x27; where user = &#x27;root&#x27;;</span><br></pre></td></tr></table></figure>
+  <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">FLUSH PRIVILEGES;</span><br></pre></td></tr></table></figure></li>
+</ul>
+<h2 id="自动备份"><a href="#自动备份" class="headerlink" title="自动备份"></a>自动备份</h2><p><a href="/2020/11/08/MySQL%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE/">MySQL自动备份参考</a></p>
+<h2 id="创建数据库"><a href="#创建数据库" class="headerlink" title="创建数据库"></a>创建数据库</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">CREATE DATABASE `database_name` DEFAULT CHARACTER SET utf8 COLLATE utf8_unicode_ci;</span><br></pre></td></tr></table></figure>
+
+
+<hr>
+<h1 id="安装Gunicorn"><a href="#安装Gunicorn" class="headerlink" title="安装Gunicorn"></a>安装Gunicorn</h1><p>Gunicorn 绿色独角兽’是一个Python WSGI UNIX的HTTP服务器。这是一个pre-fork worker的模型，从Ruby的独角兽（Unicorn ）项目移植。该Gunicorn服务器大致与各种Web框架兼容，只需非常简单的执行，轻量级的资源消耗，以及相当迅速。<br>Gunicorn 服务器作为wsgi app的容器，能够与各种Web框架兼容（flask，django等）,得益于gevent等技术，使用Gunicorn能够在基本不改变wsgi app代码的前提下，大幅度提高wsgi app的性能。</p>
+<p>执行安装命令</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip install gunicorn</span><br></pre></td></tr></table></figure>
+<p>创建软连接</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ln -s /usr/local/python3/bin/gunicorn /usr/bin/gunicorn</span><br></pre></td></tr></table></figure>
+<h2 id="启动-1"><a href="#启动-1" class="headerlink" title="启动"></a>启动</h2><p>Gunicorn可以以三种方式读取配置信息。<br>第一种方式:从framework定义的配置信息中读取,目前只对 Paster 框架有效。本方式较少用到。<br>第二种方式:在命令行中定义,命令行中定义的配置信息将会覆盖掉框架中定义的相同的参数名的值。<br>第三种方式:将所有的参数信息,放到一个python文件中,只要是在命令行中可以定义的参数中,在配置文件中都可以定义。</p>
+<h3 id="命令行启动"><a href="#命令行启动" class="headerlink" title="命令行启动"></a>命令行启动</h3><p>命令行有哪些参数可以通过gunicorn -h 查到。<br>常用的有:</p>
+<p>参数	短参数	说明	默认值<br>–bind	-b	绑定服务的IP和端口号。	<br>–workers INT	-w	工作线程数量	1<br>–backlog		服务器中在pending状态的最大连接数，即client处于waiting的数目。超过这个数目， client连接会得到一个error。建议值64-2048。	<br>–worker_connections		客户端最大同时连接数。只适用于eventlet， gevent工作方式。	<br>–pidfile		pid存储文件路径。	<br>–access-logfile FILE		访问日志文件	<br>–error-logfile FILE	–log-file	错误日志文件	<br><strong>–daemon	-D	后台运行	False</strong><br>–worker-class	-k	有 sync, eventlet(并发), gevent, tornado, gthread选项	sync(同步)<br>–reload		当代码有修改时，自动重启workers。适用于开发环境。	<br>–reload_extra_files		扩展reload配置，增加templates，configurations等文件修改监控。	<br>–check_config		检查配置</p>
+<p><strong>进入项目根目录下执行</strong>：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">gunicorn cam.wsgi:application -w <span class="number">2</span> -b <span class="number">127.0</span><span class="number">.0</span><span class="number">.1</span>:<span class="number">8000</span></span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>cam.wsgi:application cam是你django工程的名称，后面不用改<br>-w –workers 意思是要启动的进程数量<br>-b –bind 绑定的IP地址和端口<br>-k –worker-class 启动的worker类型（gthread,sync,eventlet,gevent,tornado）,默认是同步阻塞方式启动</p>
+</blockquote>
+<h3 id="配置文件启动"><a href="#配置文件启动" class="headerlink" title="配置文件启动"></a>配置文件启动</h3><p>在项目根目录下创建配置文件 <code>gunicorn-config.py</code>（与setting.py同级目录）</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br></pre></td><td class="code"><pre><span class="line"># 配置详解地址：https://blog.csdn.net/wenboyu/article/details/103083395?utm_medium=distribute.pc_aggpage_search_result.none-task-blog-2~aggregatepage~first_rank_v2~rank_aggregation-1-103083395.pc_agg_rank_aggregation&amp;utm_term=gunicorn+%E5%8F%82%E6%95%B0%E9%85%8D%E7%BD%AE&amp;spm=1000.2123.3001.4430</span><br><span class="line"># 服务访问地址：http://192.168.56.101/</span><br><span class="line"></span><br><span class="line">import multiprocessing</span><br><span class="line">import os</span><br><span class="line"></span><br><span class="line"># 监听地址和端口</span><br><span class="line">bind = &quot;127.0.0.1:8000&quot;  # 与nginx配置的端口一致</span><br><span class="line"></span><br><span class="line"># 进程</span><br><span class="line">workers = multiprocessing.cpu_count() * 2 + 1  # 进程数量</span><br><span class="line"># 工作模式：</span><br><span class="line"># worker_class = &#x27;gevent&#x27;  # 使用gevent模式，还可以使用sync模式（默认模式）</span><br><span class="line"># 同步Worker：sync 默认模式，也就是一次只处理一个请求</span><br><span class="line"># 异步Worker：通过 Eventlet、Gevent 实现的异步模式</span><br><span class="line"># 异步IO Worker：目前支持 gthread 和 gaiohttp 两种类型</span><br><span class="line">worker_connections = 100  # 客户端最大同时连接数，使用于 gevent 和 eventlet 工作模式时</span><br><span class="line"># 线程数：</span><br><span class="line"># threads = 2 # 指定每个进程开启的线程数</span><br><span class="line"># 工作进程中线程的数，建议值2-4 x CPU核心数</span><br><span class="line"># 此配置只适用于 gthread 进程工作方式， 因为gevent这种使用的是协程工作方式。</span><br><span class="line">timeout = 30  # worker超时时间，超时重启</span><br><span class="line">graceful_timeout = 10  # 接收到restart信号后，worker可以在graceful_timeout时间内，继续处理完当前requests</span><br><span class="line">keepalive = 5  # 连接上等待请求的秒数，默认情况下值为2。一般设定在1~5秒之间。</span><br><span class="line"></span><br><span class="line"># 调试</span><br><span class="line">reload = True  # 当代码有修改时，自动重启workers。适用于开发环境。</span><br><span class="line"># reload_extra_files = []  # 扩展reload配置，增加templates，configurations等文件修改监控。</span><br><span class="line"></span><br><span class="line"># server 机制</span><br><span class="line">path_of_current_file = os.path.abspath(__file__)</span><br><span class="line">path_of_current_dir = os.path.split(path_of_current_file)[0]</span><br><span class="line">chdir = path_of_current_dir  # 在app加载之前，进入到此目录</span><br><span class="line"># pidfile = &#x27;&#x27;               # 存储pid的文件路径</span><br><span class="line"></span><br><span class="line"># 日志</span><br><span class="line">loglevel = &#x27;info&#x27;  # 日志等级：debug, info, warning, error, critical. 指的是错误日志的级别，而访问日志的级别无法设置</span><br><span class="line"># capture_output   # 重定向stdout/stderr到error log file</span><br><span class="line">accesslog = &#x27;/usr/local/tps/logs/access.log&#x27;  # 接收访问日志文件路径</span><br><span class="line">access_log_format = &#x27;%(t)s %(p)s %(h)s &quot;%(r)s&quot; %(s)s %(L)s %(b)s %(f)s&quot; &quot;%(a)s&quot;&#x27;  # 设置gunicorn生成的访问日志格式，错误日志无法设置</span><br><span class="line">&quot;&quot;&quot;</span><br><span class="line">其每个选项的含义如下：</span><br><span class="line">h          remote address</span><br><span class="line">l          &#x27;-&#x27;</span><br><span class="line">u          currently &#x27;-&#x27;, may be user name in future releases</span><br><span class="line">t          date of the request</span><br><span class="line">r          status line (e.g. ``GET / HTTP/1.1``)</span><br><span class="line">s          status</span><br><span class="line">b          response length or &#x27;-&#x27;</span><br><span class="line">f          referer</span><br><span class="line">a          user agent</span><br><span class="line">T          request time in seconds</span><br><span class="line">D          request time in microseconds</span><br><span class="line">L          request time in decimal seconds</span><br><span class="line">p          process ID</span><br><span class="line">&quot;&quot;&quot;</span><br><span class="line">errorlog = &#x27;/usr/local/tps/logs/error.log&#x27;  # 错误日志文件路径</span><br><span class="line"></span><br><span class="line"># 进程名</span><br><span class="line"># proc_name</span><br><span class="line"># 设置进程名(setproctitle)，在ps，top等命令中会看到. 缺省值为default_proc_name配置。</span><br></pre></td></tr></table></figure>
+<p>启动可在任意路径下执行：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">gunicorn cam.wsgi:application -k gthread -c /usr/local/cam/gunicorn-config.py</span><br></pre></td></tr></table></figure>
+
+<h4 id="开机启动"><a href="#开机启动" class="headerlink" title="开机启动"></a>开机启动</h4><p>编辑启动文件</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vi /etc/rc.d/rc.local</span><br></pre></td></tr></table></figure>
+<p>加入以下内容</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">gunicorn cam.wsgi:application -k gthread -c /usr/local/cam/gunicorn-config.py</span><br></pre></td></tr></table></figure>
+
+<h3 id="服务启动"><a href="#服务启动" class="headerlink" title="服务启动"></a>服务启动</h3><p>建立服务文件</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vi /usr/lib/systemd/system/gunicorn.service</span><br></pre></td></tr></table></figure>
+<p>粘入下面内容：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">[Unit]</span><br><span class="line">After=syslog.target network.target remote-fs.target nss-lookup.target</span><br><span class="line">[Service]</span><br><span class="line">User=root</span><br><span class="line">WorkingDirectory=/usr/local/cam</span><br><span class="line">ExecStart=/bin/bash -c &#x27;gunicorn cam.wsgi:application -k gthread -c /usr/local/cam/gunicorn-config.py&#x27;</span><br><span class="line">Restart=on-failure</span><br><span class="line">[Install]</span><br><span class="line">WantedBy=multi-user.target</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>注意：systemd 不接受非绝对路径执行命令，需要依赖bush-ism，如：<code>/bin/bash -c &#39;gunicorn cam.wsgi:application -k gthread -c /usr/local/cam/gunicorn-config.py&#39;</code>，否则会出现 Executable path is not absolute 的问题 (systemctl status gunicorn.service 中)</p>
+</blockquote>
+<p>使服务文件生效</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">systemctl daemon-reload</span><br></pre></td></tr></table></figure>
+
+<p>启动服务</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">systemctl start gunicorn.service</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p><a href="/2016/11/22/Linux%E5%91%BD%E4%BB%A4%E5%A4%A7%E5%85%A8/">其它服务命令参考</a></p>
+</blockquote>
+<h2 id="访问"><a href="#访问" class="headerlink" title="访问"></a>访问</h2><p><a target="_blank" rel="noopener" href="http://127.0.0.1:8000/">http://127.0.0.1:8000</a></p>
+<hr>
+<h1 id="安装Nginx"><a href="#安装Nginx" class="headerlink" title="安装Nginx"></a>安装Nginx</h1><p>安装教程：<a href="/2022/08/01/Nginx%E4%B8%8B%E8%BD%BD%E5%92%8C%E5%AE%89%E8%A3%85/">Nginx下载和安装</a><br>其中，在 <code>server</code> 里增加下面配置：</p>
+<pre><code>    listen       80;
+    server_name  localhost;
+
+    #charset koi8-r;
+
+    #access_log  logs/host.access.log  main;
+
+    location / &#123;
+       #root   html;
+       #index  index.html index.htm;
+       proxy_pass http://127.0.0.1:8000; #gunicorn
+       proxy_set_header Host $host;
+       proxy_set_header X-Real-IP $remote_addr;
+       proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+    &#125;
+
+    location /static &#123;
+       alias /usr/local/cam/statics; # your Django project&#39;s static files - amend as required
+    &#125;
+</code></pre>
+<hr>
+<h1 id="开启防火墙"><a href="#开启防火墙" class="headerlink" title="开启防火墙"></a>开启防火墙</h1><p>为了安全，建议开启防火墙，只允许指定端口。</p>
+<blockquote>
+<p><a href="/2016/11/22/Linux%E5%91%BD%E4%BB%A4%E5%A4%A7%E5%85%A8/">防火墙服务命令参考</a></p>
+</blockquote>
+<hr>
+<h1 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h1><ul>
+<li><a target="_blank" rel="noopener" href="https://www.dusaiphoto.com/article/71/">Django 搭建个人博客教程</a></li>
+<li><a target="_blank" rel="noopener" href="https://blog.csdn.net/weixin_34004750/article/details/92541378">Django2.1连接使用SQL Server(linux版)</a></li>
+</ul>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="reward-container">
+  <div><div style="color: #FC6423">-------------------本文结束 <i class="fa fa-paw"></i> 感谢您的阅读-------------------</div></div>
+  <button>
+    赞赏
+  </button>
+  <div class="post-reward">
+      <div>
+        <img src="/img/YPN_wechatpay-32x32.png" alt="昜丿捺 微信">
+        <span>微信</span>
+      </div>
+      <div>
+        <img src="/img/YPN_alipay-32x32.jpg" alt="昜丿捺 支付宝">
+        <span>支付宝</span>
+      </div>
+
+  </div>
+</div>
+
+          
+
+<div class="post-copyright">
+<ul>
+  <li class="post-copyright-author">
+      <strong>原作者： </strong>昜丿捺
+  </li>
+  <li class="post-copyright-link">
+      <strong>本文链接：</strong>
+      <a href="https://yangpiena.gitee.io/2021/03/02/Python%E4%B9%8BDjango%E9%A1%B9%E7%9B%AE%E9%83%A8%E7%BD%B2%E5%88%B0Linux/" title="Python之Django项目部署到Linux">https://yangpiena.gitee.io/2021/03/02/Python之Django项目部署到Linux/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+          <div class="post-tags">
+              <a href="/tags/Python/" rel="tag"># Python</a>
+              <a href="/tags/Django/" rel="tag"># Django</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2020/11/08/MySQL%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE/" rel="prev" title="MySQL安装配置">
+                  <i class="fa fa-chevron-left"></i> MySQL安装配置
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/2021/03/09/%E6%90%AD%E5%BB%BA%E7%A6%85%E9%81%93%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86%E8%BD%AF%E4%BB%B6/" rel="next" title="搭建禅道项目管理软件">
+                  搭建禅道项目管理软件 <i class="fa fa-chevron-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 
+  <span itemprop="copyrightYear">2024</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">昜丿捺</span>
+</div>
+<div class="busuanzi-count">
+    <span class="post-meta-item" id="busuanzi_container_site_uv">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="总访客量">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="总访问量">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+
+<!-- 增加网站运行时间-->
+<div id="days"></div>
+<script>
+    function show_date_time(){
+        window.setTimeout("show_date_time()", 1000);
+        BirthDay=new Date("11/09/2016 00:00:00");
+        today=new Date();
+        timeold=(today.getTime()-BirthDay.getTime());
+        sectimeold=timeold/1000
+        secondsold=Math.floor(sectimeold);
+        msPerDay=24*60*60*1000
+        e_daysold=timeold/msPerDay
+        daysold=Math.floor(e_daysold);
+        e_hrsold=(e_daysold-daysold)*24;
+        hrsold=setzero(Math.floor(e_hrsold));
+        e_minsold=(e_hrsold-hrsold)*60;
+        minsold=setzero(Math.floor((e_hrsold-hrsold)*60));
+        seconds=setzero(Math.floor((e_minsold-minsold)*60));
+        document.getElementById('days').innerHTML="网站已运行 "+daysold+" 天 "+hrsold+" 小时 "+minsold+" 分 "+seconds+" 秒";
+    }
+    function setzero(i) {
+        if (i<10) {
+            i="0" + i
+        };
+        return i;
+    }
+    show_date_time();
+</script>
+
+
+    </div>
+  </footer>
+
+  
+  <div class="reading-progress-bar"></div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+  
+  <script src="https://cdnjs.loli.net/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.loli.net/ajax/libs/next-theme-pjax/0.6.0/pjax.min.js" integrity="sha256-vxLn1tSKWD4dqbMRyv940UYw4sXgMtYcK6reefzZrao=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/next-boot.js"></script><script src="/js/pjax.js"></script>
+
+  <script src="https://cdnjs.loli.net/ajax/libs/hexo-generator-searchdb/1.4.1/search.js" integrity="sha256-1kfA5uHPf65M5cphT2dvymhkuyHPQp5A53EGZOnOLmc=" crossorigin="anonymous"></script>
+<script src="/js/third-party/search/local-search.js"></script>
+
+
+
+
+
+  
+  <script data-pjax async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+
+  
+
+  <script class="next-config" data-name="enableMath" type="application/json">true</script><script class="next-config" data-name="mathjax" type="application/json">{"enable":true,"tags":"none","js":{"url":"https://cdnjs.loli.net/ajax/libs/mathjax/3.2.2/es5/tex-mml-chtml.js","integrity":"sha256-MASABpB4tYktI2Oitl4t+78w/lyA+D7b/s9GEP0JOGI="}}</script>
+<script src="/js/third-party/math/mathjax.js"></script>
+
+
+<script type="text/javascript" src="/js/ypn.js/jquery-1.11.3.min.js"></script>
+
+<!-- 页面鼠标单击效果 -->
+    <script type="text/javascript" src="/js/ypn.js/text.js"></script>
+
+<!-- 动态线条背景 -->
+<script type="text/javascript" color="235,178,178" opacity='0.7' zIndex="-2" count="100" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js"></script>
+
+<!-- 收藏页输入框特效 -->
+<script src="/js/ypn.js/activate-power-mode.js"></script>
+<script>
+  POWERMODE.colorful = true;  // 控制开启/开启礼花特效  
+  POWERMODE.shake    = false; // 控制开启/关闭屏幕震动特效  
+  document.body.addEventListener('input', POWERMODE);
+</script>
+
+<!-- 收藏页搜索按钮动作 -->
+<script type="text/javascript" src="/js/ypn.js/searchButton.js"></script>
+
+<!-- 页签标题崩溃欺骗 -->
+<script type="text/javascript" src="/js/ypn.js/crash-cheat.js"></script>
+
+<!-- 一言 -->
+<script type="text/javascript" src="/js/ypn.js/yiYanJingDianYuJu.js"></script>
+
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"log":false,"model":{"jsonPath":"/live2dw/assets/hijiki.model.json"},"display":{"position":"left","vOffset":-80},"mobile":{"show":false}});</script></body>
+</html>

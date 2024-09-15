@@ -1,0 +1,865 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222"><meta name="generator" content="Hexo 6.3.0">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/img/avatar/ironman.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/img/avatar/favicon.ico">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdnjs.loli.net/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha256-Z1K5uhUaJXA7Ll0XrZ/0JhX4lAtZFpT6jkKrEDT0drU=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.loli.net/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"yangpiena.gitee.io","root":"/","images":"/images","scheme":"Gemini","darkmode":false,"version":"8.14.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":true,"style":"default"},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
+
+
+
+<link rel="canonical" href="https://yangpiena.gitee.io/2019/03/27/Hexo%E5%8D%9A%E5%AE%A2%E5%A2%9E%E5%8A%A0%E7%9B%B8%E5%86%8C/">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://yangpiena.gitee.io/2019/03/27/Hexo%E5%8D%9A%E5%AE%A2%E5%A2%9E%E5%8A%A0%E7%9B%B8%E5%86%8C/","path":"2019/03/27/Hexo博客增加相册/","title":"Hexo博客增加相册"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>Hexo博客增加相册 | 昜丿捺</title>
+  
+
+
+
+
+
+
+  <script async defer data-website-id="" src=""></script>
+
+  <script defer data-domain="" src=""></script>
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">昜丿捺</p>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">没有阳光，沉默而居</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="搜索" role="button">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a></li><li class="menu-item menu-item-links"><a href="/links" rel="section"><i class="fa fa-star fa-fw"></i>收藏</a></li><li class="menu-item menu-item-photos"><a href="/photos" rel="section"><i class="fa fa-camera fa-fw"></i>相册</a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup"><div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off" maxlength="80"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close" role="button">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div class="search-result-container no-result">
+  <div class="search-result-icon">
+    <i class="fa fa-spinner fa-pulse fa-5x"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-%E5%A2%9E%E5%8A%A0%E8%8F%9C%E5%8D%95%EF%BC%8C%E5%91%BD%E4%BB%A4%E5%A6%82%E4%B8%8B%EF%BC%9A"><span class="nav-number">1.</span> <span class="nav-text">1. 增加菜单，命令如下：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-%E7%BC%96%E8%BE%91%E8%8F%9C%E5%8D%95photos%E4%B8%8B%E7%9A%84%E6%96%87%E4%BB%B6index-md%EF%BC%8C%E6%B7%BB%E5%8A%A0%E5%A6%82%E4%B8%8B%E5%86%85%E5%AE%B9%EF%BC%9A"><span class="nav-number">2.</span> <span class="nav-text">2. 编辑菜单photos下的文件index.md，添加如下内容：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-%E6%8B%B7%E8%B4%9D%E9%9C%80%E8%A6%81%E7%9A%844%E4%B8%AAjs%E6%96%87%E4%BB%B6%EF%BC%8C%E5%88%B0%E4%B8%BB%E9%A2%98%E7%9A%84js%E7%9B%AE%E5%BD%95%E4%B8%8B"><span class="nav-number">3.</span> <span class="nav-text">3. 拷贝需要的4个js文件，到主题的js目录下</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-%E7%BC%96%E8%BE%91layout%E4%B8%8B%E7%9A%84%E6%96%87%E4%BB%B6head-ejs%EF%BC%8C%E5%BC%95%E5%85%A5js"><span class="nav-number">4.</span> <span class="nav-text">4. 编辑layout下的文件head.ejs，引入js</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#5-%E6%96%B0%E5%BB%BA%E5%9B%BE%E7%89%87%E6%95%B0%E6%8D%AE%E6%BA%90%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6data-json%EF%BC%8C%E4%BF%9D%E5%AD%98%E5%88%B0%E8%8F%9C%E5%8D%95%E7%9B%AE%E5%BD%95photos%E4%B8%8B%E9%9D%A2%EF%BC%8C%E5%86%85%E5%AE%B9%E5%A6%82%E4%B8%8B"><span class="nav-number">5.</span> <span class="nav-text">5. 新建图片数据源配置文件data.json，保存到菜单目录photos下面，内容如下</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%9C%80%E5%90%8E%EF%BC%8C%E9%87%8D%E5%90%AFhexo%E6%9C%8D%E5%8A%A1%E7%94%9F%E6%95%88%E3%80%82"><span class="nav-number">6.</span> <span class="nav-text">最后，重启hexo服务生效。</span></a></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="昜丿捺"
+      src="/img/avatar/ironman.png">
+  <p class="site-author-name" itemprop="name">昜丿捺</p>
+  <div class="site-description" itemprop="description">
+    <!--  -->
+
+
+    <!-- 显示一言经典语句 -->
+    <span id="lwlhitokoto"></span>
+
+
+  </div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">95</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">2</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">54</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/yangpiena" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;yangpiena" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://yangpiena.coding.net/" title="CODING → https:&#x2F;&#x2F;yangpiena.coding.net" rel="noopener" target="_blank"><i class="fab fa-github-alt fa-fw"></i>CODING</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://gitee.com/yangpiena" title="Gitee → https:&#x2F;&#x2F;gitee.com&#x2F;yangpiena" rel="noopener" target="_blank"><i class="fab fa-glide fa-fw"></i>Gitee</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://weibo.com/yangpiena" title="Weibo → https:&#x2F;&#x2F;weibo.com&#x2F;yangpiena" rel="noopener" target="_blank"><i class="fab fa-weibo fa-fw"></i>Weibo</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:yangpiena@gmail.com" title="E-Mail → mailto:yangpiena@gmail.com" rel="noopener" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+  </div>
+
+        </div>
+      </div>
+        <div class="back-to-top animated" role="button" aria-label="返回顶部">
+          <i class="fa fa-arrow-up"></i>
+          <span>0%</span>
+        </div>
+    </div>
+
+    
+    <div class="sidebar-inner sidebar-blogroll">
+      <div class="links-of-blogroll animated">
+        <div class="links-of-blogroll-title"><i class="fa fa-globe fa-fw"></i>
+          链接
+        </div>
+        <ul class="links-of-blogroll-list">
+            <li class="links-of-blogroll-item">
+              <a href="https://yangpiena.gitee.io/" title="https:&#x2F;&#x2F;yangpiena.gitee.io&#x2F;">昜丿捺（Gitee）</a>
+            </li>
+            <li class="links-of-blogroll-item">
+              <a href="https://yangpiena.github.io/" title="https:&#x2F;&#x2F;yangpiena.github.io&#x2F;" rel="noopener" target="_blank">昜丿捺（GitHub）</a>
+            </li>
+            <li class="links-of-blogroll-item">
+              <a href="http://coding-pages-bucket-407450-1059047-17379-602648-1258146968.cos-website.ap-hongkong.myqcloud.com/" title="http:&#x2F;&#x2F;coding-pages-bucket-407450-1059047-17379-602648-1258146968.cos-website.ap-hongkong.myqcloud.com&#x2F;" rel="noopener" target="_blank">昜丿捺（Coding）</a>
+            </li>
+        </ul>
+      </div>
+    </div>
+    
+    
+    <!-- 增加网易云音乐 -->
+        <div class="pjax">
+          <div class="sidebar-inner">
+            <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=300 src="//music.163.com/outchain/player?type=0&id=6605147757&auto=1&height=300"></iframe>
+          </div>
+        </div>
+
+
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://yangpiena.gitee.io/2019/03/27/Hexo%E5%8D%9A%E5%AE%A2%E5%A2%9E%E5%8A%A0%E7%9B%B8%E5%86%8C/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/img/avatar/ironman.png">
+      <meta itemprop="name" content="昜丿捺">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="昜丿捺">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="Hexo博客增加相册 | 昜丿捺">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          Hexo博客增加相册
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2019-03-27 14:40:21" itemprop="dateCreated datePublished" datetime="2019-03-27T14:40:21+08:00">2019-03-27</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2020-06-19 12:25:58" itemprop="dateModified" datetime="2020-06-19T12:25:58+08:00">2020-06-19</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/tech-notes/" itemprop="url" rel="index"><span itemprop="name">技术</span></a>
+        </span>
+    </span>
+
+  
+    <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv">
+      <span class="post-meta-item-icon">
+        <i class="far fa-eye"></i>
+      </span>
+      <span class="post-meta-item-text">阅读次数：</span>
+      <span id="busuanzi_value_page_pv"></span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <h4 id="1-增加菜单，命令如下："><a href="#1-增加菜单，命令如下：" class="headerlink" title="1. 增加菜单，命令如下："></a>1. 增加菜单，命令如下：</h4><pre><code>hexo new page photos
+</code></pre>
+<span id="more"></span>
+
+<h4 id="2-编辑菜单photos下的文件index-md，添加如下内容："><a href="#2-编辑菜单photos下的文件index-md，添加如下内容：" class="headerlink" title="2. 编辑菜单photos下的文件index.md，添加如下内容："></a>2. 编辑菜单photos下的文件index.md，添加如下内容：</h4><pre><code>&lt;div class=&quot;content&quot;&gt;
+    &lt;div class=&quot;iw_wrapper&quot;&gt;
+        &lt;ul class=&quot;iw_thumbs&quot; id=&quot;iw_thumbs&quot;&gt;
+            &lt;!-- &lt;li&gt;&lt;img src=&quot;/img/thumbs/1.jpg&quot; data-img=&quot;/img/full/1.jpg&quot; alt=&quot;Thumb1&quot;/&gt;&lt;div&gt;&lt;h2&gt;Serenity&lt;/h2&gt;&lt;p&gt;Far far away, behind the word mountains there live the blind texts.&lt;/p&gt;&lt;/div&gt;&lt;/li&gt; --&gt;
+        &lt;/ul&gt;
+    &lt;/div&gt;
+    &lt;div id=&quot;iw_ribbon&quot; class=&quot;iw_ribbon&quot;&gt;
+        &lt;span class=&quot;iw_close&quot;&gt;&lt;/span&gt;
+        &lt;span class=&quot;iw_zoom&quot;&gt;Click thumb to zoom&lt;/span&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;script type=&quot;text/javascript&quot; src=&quot;/js/addphoto.js&quot;&gt;&lt;/script&gt;
+&lt;script type=&quot;text/javascript&quot; src=&quot;/js/jquery.min.js&quot;&gt;&lt;/script&gt;
+&lt;script type=&quot;text/javascript&quot; src=&quot;/js/jquery.masonry.min.js&quot;&gt;&lt;/script&gt;
+&lt;script type=&quot;text/javascript&quot; src=&quot;/js/jquery.easing.1.3.js&quot;&gt;&lt;/script&gt;
+&lt;script type=&quot;text/javascript&quot;&gt;
+    $(window).load(function()&#123;
+        var $iw_thumbs			= $(&#39;#iw_thumbs&#39;),
+            $iw_ribbon			= $(&#39;#iw_ribbon&#39;),
+            $iw_ribbon_close	= $iw_ribbon.children(&#39;span.iw_close&#39;),
+            $iw_ribbon_zoom		= $iw_ribbon.children(&#39;span.iw_zoom&#39;);
+            
+            ImageWall	= (function() &#123;
+                    // window width and height
+                var w_dim,
+                    // index of current image
+                    current				= -1,
+                    isRibbonShown		= false,
+                    isFullMode			= false,
+                    // ribbon / images animation settings
+                    ribbonAnim			= &#123;speed : 500, easing : &#39;easeOutExpo&#39;&#125;,
+                    imgAnim				= &#123;speed : 400, easing : &#39;jswing&#39;&#125;,
+                    // init function : call masonry, calculate window dimentions, initialize some events
+                    init				= function() &#123;
+                        $iw_thumbs.imagesLoaded(function()&#123;
+                            $iw_thumbs.masonry(&#123;
+                                isAnimated	: true
+                            &#125;);
+                        &#125;);
+                        getWindowsDim();
+                        initEventsHandler();
+                    &#125;,
+                    // calculate window dimentions
+                    getWindowsDim		= function() &#123;
+                        w_dim = &#123;
+                            width	: $(window).width(),
+                            height	: $(window).height()
+                        &#125;;
+                    &#125;,
+                    // initialize some events
+                    initEventsHandler	= function() &#123;
+                        
+                        // click on a image
+                        $iw_thumbs.delegate(&#39;li&#39;, &#39;click&#39;, function() &#123;
+                            if($iw_ribbon.is(&#39;:animated&#39;)) return false;
+                            
+                            var $el = $(this);
+                            
+                            if($el.data(&#39;ribbon&#39;)) &#123;
+                                showFullImage($el);
+                            &#125;
+                            else if(!isRibbonShown) &#123;
+                                isRibbonShown = true;
+                                
+                                $el.data(&#39;ribbon&#39;,true);
+                                
+                                // set the current
+                                current = $el.index();
+                            
+                                showRibbon($el);
+                            &#125;
+                        &#125;);
+                        
+                        // click ribbon close
+                        $iw_ribbon_close.bind(&#39;click&#39;, closeRibbon);
+                        
+                        // on window resize we need to recalculate the window dimentions
+                        $(window).bind(&#39;resize&#39;, function() &#123;
+                                    getWindowsDim();
+                                    if($iw_ribbon.is(&#39;:animated&#39;))
+                                        return false;
+                                    closeRibbon();
+                                 &#125;)
+                                 .bind(&#39;scroll&#39;, function() &#123;
+                                    if($iw_ribbon.is(&#39;:animated&#39;))
+                                        return false;
+                                    closeRibbon();
+                                 &#125;);
+                        
+                    &#125;,
+                    showRibbon			= function($el) &#123;
+                        var	$img	= $el.children(&#39;img&#39;),
+                            $descrp	= $img.next();
+                        
+                        // fadeOut all the other images
+                        $iw_thumbs.children(&#39;li&#39;).not($el).animate(&#123;opacity : 0.2&#125;, imgAnim.speed);
+                        
+                        // increase the image z-index, and set the height to 100px (default height)
+                        $img.css(&#39;z-index&#39;, 100)
+                            .data(&#39;originalHeight&#39;,$img.height())
+                            .stop()
+                            .animate(&#123;
+                                height 		: &#39;100px&#39;
+                            &#125;, imgAnim.speed, imgAnim.easing);
+                        
+                        // the ribbon will animate from the left or right
+                        // depending on the position of the image
+                        var ribbonCssParam 		= &#123;
+                                top	: $el.offset().top - $(window).scrollTop() - 6 + &#39;px&#39;
+                            &#125;,
+                            descriptionCssParam,
+                            dir;
+                        
+                        if( $el.offset().left &lt; (w_dim.width / 2) ) &#123;
+                            dir = &#39;left&#39;;
+                            ribbonCssParam.left 	= 0;
+                            ribbonCssParam.right 	= &#39;auto&#39;;
+                        &#125;
+                        else &#123;
+                            dir = &#39;right&#39;;
+                            ribbonCssParam.right 	= 0;
+                            ribbonCssParam.left 	= &#39;auto&#39;;
+                        &#125;
+                        
+                        $iw_ribbon.css(ribbonCssParam)
+                                  .show()
+                                  .stop()
+                                  .animate(&#123;width : &#39;100%&#39;&#125;, ribbonAnim.speed, ribbonAnim.easing, function() &#123;
+                                        switch(dir) &#123;
+                                            case &#39;left&#39; :
+                                                descriptionCssParam		= &#123;
+                                                    &#39;left&#39; 			: $img.outerWidth(true) + &#39;px&#39;,
+                                                    &#39;text-align&#39; 	: &#39;left&#39;
+                                                &#125;;
+                                                break;
+                                            case &#39;right&#39; :	
+                                                descriptionCssParam		= &#123;
+                                                    &#39;left&#39; 			: &#39;-200px&#39;,
+                                                    &#39;text-align&#39; 	: &#39;right&#39;
+                                                &#125;;
+                                                break;
+                                        &#125;;
+                                        $descrp.css(descriptionCssParam).fadeIn();
+                                        // show close button and zoom
+                                        $iw_ribbon_close.show();
+                                        $iw_ribbon_zoom.show();
+                                  &#125;);
+                        
+                    &#125;,
+                    // close the ribbon
+                    // when in full mode slides in the middle of the page
+                    // when not slides left
+                    closeRibbon			= function() &#123;
+                        isRibbonShown 	= false
+                        
+                        $iw_ribbon_close.hide();
+                        $iw_ribbon_zoom.hide();
+                        
+                        if(!isFullMode) &#123;
+                        
+                            // current wall image
+                            var $el	 		= $iw_thumbs.children(&#39;li&#39;).eq(current);
+                            
+                            resetWall($el);
+                            
+                            // slide out ribbon
+                            $iw_ribbon.stop()
+                                      .animate(&#123;width : &#39;0%&#39;&#125;, ribbonAnim.speed, ribbonAnim.easing); 
+                                  
+                        &#125;
+                        else &#123;
+                            $iw_ribbon.stop().animate(&#123;
+                                opacity		: 0.8,
+                                height 		: &#39;0px&#39;,
+                                marginTop	: w_dim.height/2 + &#39;px&#39; // half of window height
+                            &#125;, ribbonAnim.speed, function() &#123;
+                                $iw_ribbon.css(&#123;
+                                    &#39;width&#39;		: &#39;0%&#39;,
+                                    &#39;height&#39;	: &#39;126px&#39;,
+                                    &#39;margin-top&#39;: &#39;0px&#39;
+                                &#125;).children(&#39;img&#39;).remove();
+                            &#125;);
+                            
+                            isFullMode	= false;
+                        &#125;
+                    &#125;,
+                    resetWall			= function($el) &#123;
+                        var $img		= $el.children(&#39;img&#39;),
+                            $descrp		= $img.next();
+                            
+                        $el.data(&#39;ribbon&#39;,false);
+                        
+                        // reset the image z-index and height
+                        $img.css(&#39;z-index&#39;,1).stop().animate(&#123;
+                            height 		: $img.data(&#39;originalHeight&#39;)
+                        &#125;, imgAnim.speed,imgAnim.easing);
+                        
+                        // fadeOut the description
+                        $descrp.fadeOut();
+
+                        // fadeIn all the other images
+                        $iw_thumbs.children(&#39;li&#39;).not($el).animate(&#123;opacity : 1&#125;, imgAnim.speed);								
+                    &#125;,
+                    showFullImage		= function($el) &#123;
+                        isFullMode	= true;
+                        
+                        $iw_ribbon_close.hide();
+                        
+                        var	$img	= $el.children(&#39;img&#39;),
+                            large	= $img.data(&#39;img&#39;),
+                        
+                            // add a loading image on top of the image
+                            $loading = $(&#39;&lt;span class=&quot;iw_loading&quot;&gt;&lt;/span&gt;&#39;);
+                        
+                        $el.append($loading);
+                        
+                        // preload large image
+                        $(&#39;&lt;img/&gt;&#39;).load(function() &#123;
+                            var $largeImage	= $(this);
+                            
+                            $loading.remove();
+                            
+                            $iw_ribbon_zoom.hide();
+                            
+                            resizeImage($largeImage);
+                            
+                            // reset the current image in the wall
+                            resetWall($el);
+                            
+                            // animate ribbon in and out
+                            $iw_ribbon.stop().animate(&#123;
+                                opacity		: 1,
+                                height 		: &#39;0px&#39;,
+                                marginTop	: &#39;63px&#39; // half of ribbons height
+                            &#125;, ribbonAnim.speed, function() &#123;
+                                // add the large image to the DOM
+                                $iw_ribbon.prepend($largeImage);
+                                
+                                $iw_ribbon_close.show();
+                                
+                                $iw_ribbon.animate(&#123;
+                                    height 		: &#39;100%&#39;,
+                                    marginTop	: &#39;0px&#39;,
+                                    top			: &#39;0px&#39;
+                                &#125;, ribbonAnim.speed);
+                            &#125;);
+                        &#125;).attr(&#39;src&#39;,large);
+                            
+                    &#125;,
+                    resizeImage			= function($image) &#123;
+                        var widthMargin		= 100,
+                            heightMargin 	= 100,
+                        
+                            windowH      	= w_dim.height - heightMargin,
+                            windowW      	= w_dim.width - widthMargin,
+                            theImage     	= new Image();
+                            
+                        theImage.src     	= $image.attr(&quot;src&quot;);
+                        
+                        var imgwidth     	= theImage.width,
+                            imgheight    	= theImage.height;
+
+                        if((imgwidth &gt; windowW) || (imgheight &gt; windowH)) &#123;
+                            if(imgwidth &gt; imgheight) &#123;
+                                var newwidth 	= windowW,
+                                    ratio 		= imgwidth / windowW,
+                                    newheight 	= imgheight / ratio;
+                                    
+                                theImage.height = newheight;
+                                theImage.width	= newwidth;
+                                
+                                if(newheight &gt; windowH) &#123;
+                                    var newnewheight 	= windowH,
+                                        newratio 		= newheight/windowH,
+                                        newnewwidth 	= newwidth/newratio;
+                                
+                                    theImage.width 		= newnewwidth;
+                                    theImage.height		= newnewheight;
+                                &#125;
+                            &#125;
+                            else &#123;
+                                var newheight 	= windowH,
+                                    ratio 		= imgheight / windowH,
+                                    newwidth 	= imgwidth / ratio;
+                                
+                                theImage.height = newheight;
+                                theImage.width	= newwidth;
+                                
+                                if(newwidth &gt; windowW) &#123;
+                                    var newnewwidth 	= windowW,
+                                        newratio 		= newwidth/windowW,
+                                        newnewheight 	= newheight/newratio;
+                            
+                                    theImage.height 	= newnewheight;
+                                    theImage.width		= newnewwidth;
+                                &#125;
+                            &#125;
+                        &#125;
+                            
+                        $image.css(&#123;
+                            &#39;width&#39;			: theImage.width + &#39;px&#39;,
+                            &#39;height&#39;		: theImage.height + &#39;px&#39;,
+                            &#39;margin-left&#39;	: -theImage.width / 2 + &#39;px&#39;,
+                            &#39;margin-top&#39;	: -theImage.height / 2 + &#39;px&#39;
+                        &#125;);							
+                    &#125;;
+                    
+                return &#123;init : init&#125;;	
+            &#125;)();
+        
+        ImageWall.init();
+    &#125;);
+&lt;/script&gt;
+</code></pre>
+<h4 id="3-拷贝需要的4个js文件，到主题的js目录下"><a href="#3-拷贝需要的4个js文件，到主题的js目录下" class="headerlink" title="3. 拷贝需要的4个js文件，到主题的js目录下"></a>3. 拷贝需要的4个js文件，到主题的js目录下</h4><p>addphoto.js<br>jquery.min.js<br>jquery.masonry.min.js<br>jquery.easing.1.3.js<br>jquery-1.11.3.min.js</p>
+<h4 id="4-编辑layout下的文件head-ejs，引入js"><a href="#4-编辑layout下的文件head-ejs，引入js" class="headerlink" title="4. 编辑layout下的文件head.ejs，引入js"></a>4. 编辑layout下的文件head.ejs，引入js</h4><pre><code>&lt;!-- YPN Add 2019-03-25 增加相册所需js --&gt;
+&lt;script type=&quot;text/javascript&quot; src=&quot;&lt;%- config.root %&gt;js/jquery-1.11.3.min.js&quot;&gt;&lt;/script&gt;
+</code></pre>
+<h4 id="5-新建图片数据源配置文件data-json，保存到菜单目录photos下面，内容如下"><a href="#5-新建图片数据源配置文件data-json，保存到菜单目录photos下面，内容如下" class="headerlink" title="5. 新建图片数据源配置文件data.json，保存到菜单目录photos下面，内容如下"></a>5. 新建图片数据源配置文件data.json，保存到菜单目录photos下面，内容如下</h4><pre><code>[
+    &#123;&quot;url&quot;:&quot;https://picturebed-1258146968.cos.ap-beijing.myqcloud.com/%E6%83%B3%E5%BF%B5.jpg&quot;,&quot;title&quot;:&quot;昜丿捺&quot;,&quot;desc&quot;:&quot;2019-03-25 22:06:26&quot;&#125;,
+    &#123;&quot;url&quot;:&quot;https://picturebed-1258146968.cos.ap-beijing.myqcloud.com/%E7%BE%81%E7%BB%8A.jpg&quot;,&quot;title&quot;:&quot;昜丿捺&quot;,&quot;desc&quot;:&quot;2019-03-25 22:06:26&quot;&#125;,
+    &#123;&quot;url&quot;:&quot;https://picturebed-1258146968.cos.ap-beijing.myqcloud.com/%E6%95%85%E4%BA%8B.jpg&quot;,&quot;title&quot;:&quot;昜丿捺&quot;,&quot;desc&quot;:&quot;2019-03-25 22:06:26&quot;&#125;,
+    &#123;&quot;url&quot;:&quot;https://picturebed-1258146968.cos.ap-beijing.myqcloud.com/%E5%AE%98%E5%9C%BA.jpg&quot;,&quot;title&quot;:&quot;昜丿捺&quot;,&quot;desc&quot;:&quot;2019-03-25 22:06:26&quot;&#125;,
+    &#123;&quot;url&quot;:&quot;https://picturebed-1258146968.cos.ap-beijing.myqcloud.com/%E5%8F%8D%E6%8A%97%E5%86%9B.jpg&quot;,&quot;title&quot;:&quot;昜丿捺&quot;,&quot;desc&quot;:&quot;2019-03-25 22:06:26&quot;&#125;,
+    &#123;&quot;url&quot;:&quot;https://picturebed-1258146968.cos.ap-beijing.myqcloud.com/%E7%89%A1%E4%B8%B9%E7%AC%91%E4%BA%86.jpg&quot;,&quot;title&quot;:&quot;昜丿捺&quot;,&quot;desc&quot;:&quot;2019-03-25 22:06:26&quot;&#125;,
+    &#123;&quot;url&quot;:&quot;https://picturebed-1258146968.cos.ap-beijing.myqcloud.com/%E7%88%B1%E4%BA%BA.jpg&quot;,&quot;title&quot;:&quot;昜丿捺&quot;,&quot;desc&quot;:&quot;2019-03-25 22:06:26&quot;&#125;,
+    &#123;&quot;url&quot;:&quot;https://picturebed-1258146968.cos.ap-beijing.myqcloud.com/%E7%89%A1%E4%B8%B9.jpg&quot;,&quot;title&quot;:&quot;昜丿捺&quot;,&quot;desc&quot;:&quot;2019-03-25 22:06:26&quot;&#125;,
+    &#123;&quot;url&quot;:&quot;https://picturebed-1258146968.cos.ap-beijing.myqcloud.com/%E7%BE%8E.jpg&quot;,&quot;title&quot;:&quot;昜丿捺&quot;,&quot;desc&quot;:&quot;2019-03-25 22:06:26&quot;&#125;,
+    &#123;&quot;url&quot;:&quot;https://picturebed-1258146968.cos.ap-beijing.myqcloud.com/%E6%88%90%E9%95%BF.jpg&quot;,&quot;title&quot;:&quot;昜丿捺&quot;,&quot;desc&quot;:&quot;2019-03-25 22:06:26&quot;&#125;,
+    &#123;&quot;url&quot;:&quot;https://picturebed-1258146968.cos.ap-beijing.myqcloud.com/%E6%9E%97%E4%B8%AD%E5%B0%8F%E5%B1%8B.jpg&quot;,&quot;title&quot;:&quot;昜丿捺&quot;,&quot;desc&quot;:&quot;2019-03-25 22:06:26&quot;&#125;,
+    &#123;&quot;url&quot;:&quot;https://picturebed-1258146968.cos.ap-beijing.myqcloud.com/%E6%98%A5%E5%B7%B2%E6%9A%AE.jpg&quot;,&quot;title&quot;:&quot;昜丿捺&quot;,&quot;desc&quot;:&quot;2019-03-25 22:06:26&quot;&#125;,
+    &#123;&quot;url&quot;:&quot;https://picturebed-1258146968.cos.ap-beijing.myqcloud.com/%E4%BA%BA%E9%9D%A2%E4%B8%8D%E7%9F%A5%E4%BD%95%E5%8E%BB.jpg&quot;,&quot;title&quot;:&quot;昜丿捺&quot;,&quot;desc&quot;:&quot;2019-03-25 22:06:26&quot;&#125;,
+    &#123;&quot;url&quot;:&quot;https://picturebed-1258146968.cos.ap-beijing.myqcloud.com/%E7%83%AD%E6%83%85.jpg&quot;,&quot;title&quot;:&quot;昜丿捺&quot;,&quot;desc&quot;:&quot;2019-03-25 22:06:26&quot;&#125;,
+    &#123;&quot;url&quot;:&quot;https://picturebed-1258146968.cos.ap-beijing.myqcloud.com/%E8%8B%A5%E9%9D%9E%E9%9D%92%E6%98%A5%E8%8B%A6%E7%9F%AD.jpg&quot;,&quot;title&quot;:&quot;昜丿捺&quot;,&quot;desc&quot;:&quot;2019-03-25 22:06:26&quot;&#125;,
+    &#123;&quot;url&quot;:&quot;https://picturebed-1258146968.cos.ap-beijing.myqcloud.com/%E5%BE%97%E6%88%90%E6%AD%A4%E7%9B%AE%E4%BD%95%E8%BE%9E%E6%AD%BB.jpg&quot;,&quot;title&quot;:&quot;昜丿捺&quot;,&quot;desc&quot;:&quot;2019-03-25 22:06:26&quot;&#125;,
+    &#123;&quot;url&quot;:&quot;https://picturebed-1258146968.cos.ap-beijing.myqcloud.com/%E7%94%9F%E5%91%BD%E5%8F%B3%E5%A4%AA%E5%A4%9A%E9%81%97%E6%86%BE.jpg&quot;,&quot;title&quot;:&quot;昜丿捺&quot;,&quot;desc&quot;:&quot;2019-03-25 22:06:26&quot;&#125;,
+    &#123;&quot;url&quot;:&quot;https://picturebed-1258146968.cos.ap-beijing.myqcloud.com/%E5%B0%91%E5%B9%B4.jpg&quot;,&quot;title&quot;:&quot;昜丿捺&quot;,&quot;desc&quot;:&quot;2019-03-25 22:06:26&quot;&#125;,
+    &#123;&quot;url&quot;:&quot;https://picturebed-1258146968.cos.ap-beijing.myqcloud.com/%E4%B8%96%E4%BA%8B%E9%83%BD%E6%95%8C%E4%B8%8D%E8%BF%87%E6%97%B6%E9%97%B4.jpg&quot;,&quot;title&quot;:&quot;昜丿捺&quot;,&quot;desc&quot;:&quot;2019-03-25 22:06:26&quot;&#125;,
+    &#123;&quot;url&quot;:&quot;https://picturebed-1258146968.cos.ap-beijing.myqcloud.com/%E6%97%85%E7%A8%8B.jpg&quot;,&quot;title&quot;:&quot;昜丿捺&quot;,&quot;desc&quot;:&quot;2019-03-25 22:06:26&quot;&#125;,
+    &#123;&quot;url&quot;:&quot;https://picturebed-1258146968.cos.ap-beijing.myqcloud.com/%E5%90%91%E6%9D%A5%E7%BC%98%E6%B5%85.jpg&quot;,&quot;title&quot;:&quot;昜丿捺&quot;,&quot;desc&quot;:&quot;2019-03-25 22:06:26&quot;&#125;,
+    &#123;&quot;url&quot;:&quot;https://picturebed-1258146968.cos.ap-beijing.myqcloud.com/%E5%A4%A9%E6%B6%AF%E6%B5%B7%E8%A7%92.jpg&quot;,&quot;title&quot;:&quot;昜丿捺&quot;,&quot;desc&quot;:&quot;2019-03-25 22:06:26&quot;&#125;,
+    &#123;&quot;url&quot;:&quot;https://picturebed-1258146968.cos.ap-beijing.myqcloud.com/%E4%B8%8E%E5%90%9B%E5%88%9D%E7%9B%B8%E8%AF%86.jpg&quot;,&quot;title&quot;:&quot;昜丿捺&quot;,&quot;desc&quot;:&quot;2019-03-25 22:06:26&quot;&#125;,
+    &#123;&quot;url&quot;:&quot;https://picturebed-1258146968.cos.ap-beijing.myqcloud.com/%E8%AF%AD%E8%A8%80.jpg&quot;,&quot;title&quot;:&quot;昜丿捺&quot;,&quot;desc&quot;:&quot;2019-03-25 22:06:26&quot;&#125;,
+    &#123;&quot;url&quot;:&quot;https://picturebed-1258146968.cos.ap-beijing.myqcloud.com/%E6%AC%B2%E6%A7%95%E8%BD%BB%E8%88%9F.jpg&quot;,&quot;title&quot;:&quot;昜丿捺&quot;,&quot;desc&quot;:&quot;2019-03-25 22:06:26&quot;&#125;,
+    &#123;&quot;url&quot;:&quot;https://picturebed-1258146968.cos.ap-beijing.myqcloud.com/%E4%B8%80%E9%A9%AC%E5%BD%93%E5%85%88.jpg&quot;,&quot;title&quot;:&quot;昜丿捺&quot;,&quot;desc&quot;:&quot;2019-03-25 22:06:26&quot;&#125;,
+    &#123;&quot;url&quot;:&quot;https://picturebed-1258146968.cos.ap-beijing.myqcloud.com/%E6%AD%BB%E5%85%9A.jpg&quot;,&quot;title&quot;:&quot;昜丿捺&quot;,&quot;desc&quot;:&quot;2019-03-25 22:06:26&quot;&#125;,
+    &#123;&quot;url&quot;:&quot;https://picturebed-1258146968.cos.ap-beijing.myqcloud.com/%E8%87%B4%E9%9D%92%E6%98%A5.jpg&quot;,&quot;title&quot;:&quot;昜丿捺&quot;,&quot;desc&quot;:&quot;2019-03-25 22:06:26&quot;&#125;,
+    &#123;&quot;url&quot;:&quot;https://picturebed-1258146968.cos.ap-beijing.myqcloud.com/%E6%80%BB%E6%9C%89%E8%BF%99%E6%A0%B7%E9%82%A3%E6%A0%B7.jpg&quot;,&quot;title&quot;:&quot;昜丿捺&quot;,&quot;desc&quot;:&quot;2019-03-25 22:06:26&quot;&#125;,
+    &#123;&quot;url&quot;:&quot;https://picturebed-1258146968.cos.ap-beijing.myqcloud.com/%E8%BF%BD%E5%AF%BB.jpg&quot;,&quot;title&quot;:&quot;昜丿捺&quot;,&quot;desc&quot;:&quot;2019-03-25 22:06:26&quot;&#125;,
+    &#123;&quot;url&quot;:&quot;https://picturebed-1258146968.cos.ap-beijing.myqcloud.com/%E6%9C%89%E4%BD%A0%E5%9C%A8.jpg&quot;,&quot;title&quot;:&quot;昜丿捺&quot;,&quot;desc&quot;:&quot;2019-03-25 22:06:26&quot;&#125;,
+    &#123;&quot;url&quot;:&quot;https://picturebed-1258146968.cos.ap-beijing.myqcloud.com/%E6%8B%A5%E6%9C%89.jpg&quot;,&quot;title&quot;:&quot;昜丿捺&quot;,&quot;desc&quot;:&quot;2019-03-25 22:06:26&quot;&#125;,
+    &#123;&quot;url&quot;:&quot;https://picturebed-1258146968.cos.ap-beijing.myqcloud.com/%E5%8D%B4%E7%88%B1%E8%93%9D%E7%BD%97%E8%A3%99%E5%AD%90.jpg&quot;,&quot;title&quot;:&quot;昜丿捺&quot;,&quot;desc&quot;:&quot;2019-03-25 22:06:26&quot;&#125;
+]
+</code></pre>
+<p>其中，图片地址为网络地址，示例中图床由腾讯云提供。</p>
+<h4 id="最后，重启hexo服务生效。"><a href="#最后，重启hexo服务生效。" class="headerlink" title="最后，重启hexo服务生效。"></a>最后，重启hexo服务生效。</h4><pre><code>hexo clean &amp;&amp; hexo g &amp;&amp; hexo s
+</code></pre>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="reward-container">
+  <div><div style="color: #FC6423">-------------------本文结束 <i class="fa fa-paw"></i> 感谢您的阅读-------------------</div></div>
+  <button>
+    赞赏
+  </button>
+  <div class="post-reward">
+      <div>
+        <img src="/img/YPN_wechatpay-32x32.png" alt="昜丿捺 微信">
+        <span>微信</span>
+      </div>
+      <div>
+        <img src="/img/YPN_alipay-32x32.jpg" alt="昜丿捺 支付宝">
+        <span>支付宝</span>
+      </div>
+
+  </div>
+</div>
+
+          
+
+<div class="post-copyright">
+<ul>
+  <li class="post-copyright-author">
+      <strong>原作者： </strong>昜丿捺
+  </li>
+  <li class="post-copyright-link">
+      <strong>本文链接：</strong>
+      <a href="https://yangpiena.gitee.io/2019/03/27/Hexo%E5%8D%9A%E5%AE%A2%E5%A2%9E%E5%8A%A0%E7%9B%B8%E5%86%8C/" title="Hexo博客增加相册">https://yangpiena.gitee.io/2019/03/27/Hexo博客增加相册/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+          <div class="post-tags">
+              <a href="/tags/hexo/" rel="tag"># hexo</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2019/03/27/Hexo%E5%8D%9A%E5%AE%A2%E5%A2%9E%E5%8A%A0%E6%96%87%E6%9C%AC%E8%BE%93%E5%85%A5%E6%A1%86%E7%89%B9%E6%95%88/" rel="prev" title="Hexo博客增加文本输入框特效">
+                  <i class="fa fa-chevron-left"></i> Hexo博客增加文本输入框特效
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/2019/03/29/Hexo%E5%8D%9A%E5%AE%A2%E5%A2%9E%E5%8A%A0%E9%9F%B3%E4%B9%90/" rel="next" title="Hexo博客增加音乐">
+                  Hexo博客增加音乐 <i class="fa fa-chevron-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 
+  <span itemprop="copyrightYear">2024</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">昜丿捺</span>
+</div>
+<div class="busuanzi-count">
+    <span class="post-meta-item" id="busuanzi_container_site_uv">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="总访客量">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="总访问量">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+
+<!-- 增加网站运行时间-->
+<div id="days"></div>
+<script>
+    function show_date_time(){
+        window.setTimeout("show_date_time()", 1000);
+        BirthDay=new Date("11/09/2016 00:00:00");
+        today=new Date();
+        timeold=(today.getTime()-BirthDay.getTime());
+        sectimeold=timeold/1000
+        secondsold=Math.floor(sectimeold);
+        msPerDay=24*60*60*1000
+        e_daysold=timeold/msPerDay
+        daysold=Math.floor(e_daysold);
+        e_hrsold=(e_daysold-daysold)*24;
+        hrsold=setzero(Math.floor(e_hrsold));
+        e_minsold=(e_hrsold-hrsold)*60;
+        minsold=setzero(Math.floor((e_hrsold-hrsold)*60));
+        seconds=setzero(Math.floor((e_minsold-minsold)*60));
+        document.getElementById('days').innerHTML="网站已运行 "+daysold+" 天 "+hrsold+" 小时 "+minsold+" 分 "+seconds+" 秒";
+    }
+    function setzero(i) {
+        if (i<10) {
+            i="0" + i
+        };
+        return i;
+    }
+    show_date_time();
+</script>
+
+
+    </div>
+  </footer>
+
+  
+  <div class="reading-progress-bar"></div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+  
+  <script src="https://cdnjs.loli.net/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.loli.net/ajax/libs/next-theme-pjax/0.6.0/pjax.min.js" integrity="sha256-vxLn1tSKWD4dqbMRyv940UYw4sXgMtYcK6reefzZrao=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/next-boot.js"></script><script src="/js/pjax.js"></script>
+
+  <script src="https://cdnjs.loli.net/ajax/libs/hexo-generator-searchdb/1.4.1/search.js" integrity="sha256-1kfA5uHPf65M5cphT2dvymhkuyHPQp5A53EGZOnOLmc=" crossorigin="anonymous"></script>
+<script src="/js/third-party/search/local-search.js"></script>
+
+
+
+
+
+  
+  <script data-pjax async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+
+  
+
+  <script class="next-config" data-name="enableMath" type="application/json">true</script><script class="next-config" data-name="mathjax" type="application/json">{"enable":true,"tags":"none","js":{"url":"https://cdnjs.loli.net/ajax/libs/mathjax/3.2.2/es5/tex-mml-chtml.js","integrity":"sha256-MASABpB4tYktI2Oitl4t+78w/lyA+D7b/s9GEP0JOGI="}}</script>
+<script src="/js/third-party/math/mathjax.js"></script>
+
+
+<script type="text/javascript" src="/js/ypn.js/jquery-1.11.3.min.js"></script>
+
+<!-- 页面鼠标单击效果 -->
+    <script type="text/javascript" src="/js/ypn.js/text.js"></script>
+
+<!-- 动态线条背景 -->
+<script type="text/javascript" color="235,178,178" opacity='0.7' zIndex="-2" count="100" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js"></script>
+
+<!-- 收藏页输入框特效 -->
+<script src="/js/ypn.js/activate-power-mode.js"></script>
+<script>
+  POWERMODE.colorful = true;  // 控制开启/开启礼花特效  
+  POWERMODE.shake    = false; // 控制开启/关闭屏幕震动特效  
+  document.body.addEventListener('input', POWERMODE);
+</script>
+
+<!-- 收藏页搜索按钮动作 -->
+<script type="text/javascript" src="/js/ypn.js/searchButton.js"></script>
+
+<!-- 页签标题崩溃欺骗 -->
+<script type="text/javascript" src="/js/ypn.js/crash-cheat.js"></script>
+
+<!-- 一言 -->
+<script type="text/javascript" src="/js/ypn.js/yiYanJingDianYuJu.js"></script>
+
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"log":false,"model":{"jsonPath":"/live2dw/assets/hijiki.model.json"},"display":{"position":"left","vOffset":-80},"mobile":{"show":false}});</script></body>
+</html>

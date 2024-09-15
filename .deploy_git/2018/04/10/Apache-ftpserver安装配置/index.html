@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222"><meta name="generator" content="Hexo 6.3.0">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/img/avatar/ironman.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/img/avatar/favicon.ico">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdnjs.loli.net/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha256-Z1K5uhUaJXA7Ll0XrZ/0JhX4lAtZFpT6jkKrEDT0drU=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.loli.net/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"yangpiena.gitee.io","root":"/","images":"/images","scheme":"Gemini","darkmode":false,"version":"8.14.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":true,"style":"default"},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
+
+
+
+<link rel="canonical" href="https://yangpiena.gitee.io/2018/04/10/Apache-ftpserver%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE/">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://yangpiena.gitee.io/2018/04/10/Apache-ftpserver%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE/","path":"2018/04/10/Apache-ftpserver安装配置/","title":"Apache ftpserver安装配置"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>Apache ftpserver安装配置 | 昜丿捺</title>
+  
+
+
+
+
+
+
+  <script async defer data-website-id="" src=""></script>
+
+  <script defer data-domain="" src=""></script>
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">昜丿捺</p>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">没有阳光，沉默而居</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="搜索" role="button">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a></li><li class="menu-item menu-item-links"><a href="/links" rel="section"><i class="fa fa-star fa-fw"></i>收藏</a></li><li class="menu-item menu-item-photos"><a href="/photos" rel="section"><i class="fa fa-camera fa-fw"></i>相册</a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup"><div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off" maxlength="80"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close" role="button">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div class="search-result-container no-result">
+  <div class="search-result-icon">
+    <i class="fa fa-spinner fa-pulse fa-5x"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#apache-ftpserver%E4%B8%8B%E8%BD%BD"><span class="nav-number">1.</span> <span class="nav-text">apache ftpserver下载</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#apache-ftpserver%E5%AE%89%E8%A3%85"><span class="nav-number">2.</span> <span class="nav-text">apache ftpserver安装</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-Linux%E4%B8%8B"><span class="nav-number">2.1.</span> <span class="nav-text">1. Linux下</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#1-1-%E4%B8%8B%E8%BD%BD"><span class="nav-number">2.1.1.</span> <span class="nav-text">1.1 下载</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#1-2-%E8%A7%A3%E5%8E%8B"><span class="nav-number">2.1.2.</span> <span class="nav-text">1.2 解压</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#1-3-%E5%AE%89%E8%A3%85"><span class="nav-number">2.1.3.</span> <span class="nav-text">1.3 安装</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#1-4-%E4%BF%AE%E6%94%B9%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6"><span class="nav-number">2.1.4.</span> <span class="nav-text">1.4 修改配置文件</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#1-5-%E5%90%AF%E5%8A%A8"><span class="nav-number">2.1.5.</span> <span class="nav-text">1.5 启动</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#1-5-%E6%B5%8B%E8%AF%95"><span class="nav-number">2.1.6.</span> <span class="nav-text">1.5 测试</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Suse-Linux-Enterprise-12%E4%B8%8B%E5%AE%9E%E7%8E%B0%E8%84%9A%E6%9C%AC%E5%90%AF%E5%8A%A8%E5%92%8C%E5%85%B3%E9%97%AD"><span class="nav-number">3.</span> <span class="nav-text">Suse Linux Enterprise 12下实现脚本启动和关闭</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-%E5%9C%A8-%E7%9B%AE%E5%BD%95%E4%B8%8B%EF%BC%8C%E6%89%A7%E8%A1%8C%E4%B8%8B%E9%9D%A2%E5%91%BD%E4%BB%A4"><span class="nav-number">3.1.</span> <span class="nav-text">1. 在~目录下，执行下面命令</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-%E5%9C%A8-profile%E6%96%87%E4%BB%B6%E4%B8%AD%E5%AE%9A%E4%B9%89FTPSERVER-HOME%E5%8F%98%E9%87%8F%EF%BC%8C%E5%B9%B6%E5%B0%86%E5%8F%98%E9%87%8F%E8%BF%BD%E5%8A%A0%E5%88%B0PATH%E5%90%8E%E9%9D%A2%EF%BC%8C%E6%95%88%E6%9E%9C%E5%A6%82%E4%B8%8B%EF%BC%9A"><span class="nav-number">3.2.</span> <span class="nav-text">2. 在.profile文件中定义FTPSERVER_HOME变量，并将变量追加到PATH后面，效果如下：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-%E6%89%A7%E8%A1%8C%E4%B8%8B%E9%9D%A2%E5%91%BD%E4%BB%A4%EF%BC%8C%E4%BD%BF%E7%AB%8B%E5%8D%B3%E7%94%9F%E6%95%88"><span class="nav-number">3.3.</span> <span class="nav-text">3. 执行下面命令，使立即生效</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-%E6%89%A7%E8%A1%8C%E4%B8%8B%E9%9D%A2%E5%91%BD%E4%BB%A4%EF%BC%8C%E5%9C%A8FTPSERVER-HOME%E7%9B%AE%E5%BD%95%E4%B8%8B%E5%88%9B%E5%BB%BA%E8%84%9A%E6%9C%AC%E6%96%87%E4%BB%B6%EF%BC%8C"><span class="nav-number">3.4.</span> <span class="nav-text">4. 执行下面命令，在FTPSERVER_HOME目录下创建脚本文件，</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#5-%E7%BB%99%E6%96%87%E4%BB%B6%E6%B7%BB%E5%8A%A0%E6%9D%83%E9%99%90%EF%BC%8C%E4%BD%BF%E8%84%9A%E6%9C%AC%E6%96%87%E4%BB%B6%E5%8F%AF%E4%BB%A5%E6%89%A7%E8%A1%8C%EF%BC%8C%E5%91%BD%E4%BB%A4%E4%B8%BA"><span class="nav-number">3.5.</span> <span class="nav-text">5. 给文件添加权限，使脚本文件可以执行，命令为</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#6-%E6%9C%80%E5%90%8E%EF%BC%8C%E6%89%A7%E8%A1%8C%E4%B8%8B%E9%9D%A2%E5%91%BD%E4%BB%A4%E5%8F%AF%E5%90%AF%E5%8A%A8%E3%80%81%E5%85%B3%E9%97%ADftpserver%E6%88%96%E6%9F%A5%E7%9C%8B%E6%97%A5%E5%BF%97"><span class="nav-number">3.6.</span> <span class="nav-text">6. 最后，执行下面命令可启动、关闭ftpserver或查看日志</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#7-%E9%9A%8F%E7%B3%BB%E7%BB%9F%E8%87%AA%E5%90%AF%E5%8A%A8"><span class="nav-number">3.7.</span> <span class="nav-text">7. 随系统自启动</span></a></li></ol></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="昜丿捺"
+      src="/img/avatar/ironman.png">
+  <p class="site-author-name" itemprop="name">昜丿捺</p>
+  <div class="site-description" itemprop="description">
+    <!--  -->
+
+
+    <!-- 显示一言经典语句 -->
+    <span id="lwlhitokoto"></span>
+
+
+  </div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">95</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">2</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">54</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/yangpiena" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;yangpiena" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://yangpiena.coding.net/" title="CODING → https:&#x2F;&#x2F;yangpiena.coding.net" rel="noopener" target="_blank"><i class="fab fa-github-alt fa-fw"></i>CODING</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://gitee.com/yangpiena" title="Gitee → https:&#x2F;&#x2F;gitee.com&#x2F;yangpiena" rel="noopener" target="_blank"><i class="fab fa-glide fa-fw"></i>Gitee</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://weibo.com/yangpiena" title="Weibo → https:&#x2F;&#x2F;weibo.com&#x2F;yangpiena" rel="noopener" target="_blank"><i class="fab fa-weibo fa-fw"></i>Weibo</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:yangpiena@gmail.com" title="E-Mail → mailto:yangpiena@gmail.com" rel="noopener" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+  </div>
+
+        </div>
+      </div>
+        <div class="back-to-top animated" role="button" aria-label="返回顶部">
+          <i class="fa fa-arrow-up"></i>
+          <span>0%</span>
+        </div>
+    </div>
+
+    
+    <div class="sidebar-inner sidebar-blogroll">
+      <div class="links-of-blogroll animated">
+        <div class="links-of-blogroll-title"><i class="fa fa-globe fa-fw"></i>
+          链接
+        </div>
+        <ul class="links-of-blogroll-list">
+            <li class="links-of-blogroll-item">
+              <a href="https://yangpiena.gitee.io/" title="https:&#x2F;&#x2F;yangpiena.gitee.io&#x2F;">昜丿捺（Gitee）</a>
+            </li>
+            <li class="links-of-blogroll-item">
+              <a href="https://yangpiena.github.io/" title="https:&#x2F;&#x2F;yangpiena.github.io&#x2F;" rel="noopener" target="_blank">昜丿捺（GitHub）</a>
+            </li>
+            <li class="links-of-blogroll-item">
+              <a href="http://coding-pages-bucket-407450-1059047-17379-602648-1258146968.cos-website.ap-hongkong.myqcloud.com/" title="http:&#x2F;&#x2F;coding-pages-bucket-407450-1059047-17379-602648-1258146968.cos-website.ap-hongkong.myqcloud.com&#x2F;" rel="noopener" target="_blank">昜丿捺（Coding）</a>
+            </li>
+        </ul>
+      </div>
+    </div>
+    
+    
+    <!-- 增加网易云音乐 -->
+        <div class="pjax">
+          <div class="sidebar-inner">
+            <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=300 src="//music.163.com/outchain/player?type=0&id=6605147757&auto=1&height=300"></iframe>
+          </div>
+        </div>
+
+
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://yangpiena.gitee.io/2018/04/10/Apache-ftpserver%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/img/avatar/ironman.png">
+      <meta itemprop="name" content="昜丿捺">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="昜丿捺">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="Apache ftpserver安装配置 | 昜丿捺">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          Apache ftpserver安装配置
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2018-04-10 12:11:26" itemprop="dateCreated datePublished" datetime="2018-04-10T12:11:26+08:00">2018-04-10</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2020-11-13 16:00:22" itemprop="dateModified" datetime="2020-11-13T16:00:22+08:00">2020-11-13</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/tech-notes/" itemprop="url" rel="index"><span itemprop="name">技术</span></a>
+        </span>
+    </span>
+
+  
+    <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv">
+      <span class="post-meta-item-icon">
+        <i class="far fa-eye"></i>
+      </span>
+      <span class="post-meta-item-text">阅读次数：</span>
+      <span id="busuanzi_value_page_pv"></span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <h3 id="apache-ftpserver下载"><a href="#apache-ftpserver下载" class="headerlink" title="apache ftpserver下载"></a>apache ftpserver下载</h3><p><a target="_blank" rel="noopener" href="http://mina.apache.org/ftpserver-project/downloads.html">官网下载</a></p>
+<span id="more"></span>
+
+<hr>
+<h3 id="apache-ftpserver安装"><a href="#apache-ftpserver安装" class="headerlink" title="apache ftpserver安装"></a>apache ftpserver安装</h3><h4 id="1-Linux下"><a href="#1-Linux下" class="headerlink" title="1. Linux下"></a>1. Linux下</h4><h5 id="1-1-下载"><a href="#1-1-下载" class="headerlink" title="1.1 下载"></a>1.1 下载</h5><p>进入下载目录，使用wget下载，如果已离线下载成功，则跳过该步，直接上传安装包到下载目录即可</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cd /usr/download/</span><br><span class="line">wget http://mirrors.shu.edu.cn/apache/mina/ftpserver/1.1.1/dist/apache-ftpserver-1.1.1.tar.gz</span><br></pre></td></tr></table></figure>
+
+<h5 id="1-2-解压"><a href="#1-2-解压" class="headerlink" title="1.2 解压"></a>1.2 解压</h5><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tar -zxvf apache-ftpserver-1.1.1.tar.gz</span><br></pre></td></tr></table></figure>
+
+<h5 id="1-3-安装"><a href="#1-3-安装" class="headerlink" title="1.3 安装"></a>1.3 安装</h5><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mv apache-ftpserver-1.1.1 /usr/local/ftpserver</span><br></pre></td></tr></table></figure>
+
+<h5 id="1-4-修改配置文件"><a href="#1-4-修改配置文件" class="headerlink" title="1.4 修改配置文件"></a>1.4 修改配置文件</h5><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cd /usr/local/ftpserver/res/conf/</span><br><span class="line">vim users.properties</span><br></pre></td></tr></table></figure>
+<p>users.properties文件存放的是用户名及密码权限等配置信息，通过修改该文件来添加和管理用户及权限等信息。参考下面内容配置：</p>
+<pre><code>#用户名为anonymous，密码为空
+tpserver.user.anonymous.userpassword=
+#主目录
+ftpserver.user.anonymous.homedirectory=./res/home
+#当前用户可用
+ftpserver.user.anonymous.enableflag=true
+#具有上传权限
+ftpserver.user.anonymous.writepermission=true
+#最大登陆用户数为20，0为不限
+ftpserver.user.anonymous.maxloginnumber=20
+#同IP登陆用户数为2，0为不限
+ftpserver.user.anonymous.maxloginperip=2 
+#空闲时间为300秒，0为不限
+ftpserver.user.anonymous.idletime=300
+#上传速率限制为48字节每秒，0为不限
+ftpserver.user.anonymous.uploadrate=4800
+#下载速率限制为48字节每秒，0为不限
+ftpserver.user.anonymous.downloadrate=4800
+</code></pre>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vim ftpd-typical.xml</span><br></pre></td></tr></table></figure>
+<p>修改配置文件ftpd-file.xml，增加encrypt-passwords&#x3D;”clear”，将密码加密方式修改为clear，默认为MD5加密方式。</p>
+<pre><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;server xmlns=&quot;http://mina.apache.org/ftpserver/spring/v1&quot;
+    xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;
+    xsi:schemaLocation=&quot;http://mina.apache.org/ftpserver/spring/v1 http://mina.apache.org/ftpserver/ftpserver-1.0.xsd&quot;
+    id=&quot;myServer&quot; max-logins=&quot;999999&quot; max-threads=&quot;9999&quot; anon-enabled=&quot;true&quot; max-anon-logins=&quot;10&quot;&gt;
+    &lt;!-- anon-enabled 表示是否开通匿名访问；max-anon-logins 表示匿名访问的数量限制--&gt;
+    &lt;listeners&gt;
+            &lt;nio-listener name=&quot;default&quot; port=&quot;21&quot;&gt;
+                &lt;ssl&gt;
+                    &lt;keystore file=&quot;./res/ftpserver.jks&quot; password=&quot;password&quot; /&gt;
+                &lt;/ssl&gt;
+                &lt;!--设置多少时间后关闭一个闲置的链接，单位是秒--&gt;
+                &lt;data-connection idle-timeout=&quot;1&quot;&gt;
+                    &lt;!--设置主动链接配置，端口号“2120”--&gt;
+                    &lt;!--&lt;active local-port=&quot;2120&quot;/&gt;--&gt;
+                    
+                    &lt;!--设置被动链接配置，端口设置为“2120”，或者开通更多端口“2120-3120”，扩展地址为“0.0.0.0”。当客户端连接时，服务器使用 0.0.0.0:2120-3120 为客户端提供数据传输服务。--&gt;
+                    &lt;passive ports=&quot;2120-3120&quot; address=&quot;0.0.0.0&quot; external-address=&quot;&quot;/&gt;
+                &lt;/data-connection&gt;
+            &lt;/nio-listener&gt;
+    &lt;/listeners&gt;
+    &lt;file-user-manager file=&quot;./res/conf/users.properties&quot; encrypt-passwords=&quot;clear&quot; /&gt;
+&lt;/server&gt;
+</code></pre>
+<h5 id="1-5-启动"><a href="#1-5-启动" class="headerlink" title="1.5 启动"></a>1.5 启动</h5><p>在ftpserver目录下，执行命令：</p>
+<ul>
+<li>方式一：<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sh  bin/ftpd.sh  /res/conf/ftpd-typical.xml</span><br></pre></td></tr></table></figure>
+此方式有局限，当命令窗口退出时，FTP服务停止。</li>
+<li>方式二：<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nohup ./bin/ftpd.sh res/conf/ftpd-typical.xml &amp;</span><br></pre></td></tr></table></figure>
+此方式为后台启动FTP服务，服务一直启动，不管窗口是否退出。</li>
+<li>方式三：<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nohup sh   apache-ftpserver-1.0.6/bin/ftpd.sh   /res/conf/ftpd-typical.xml &gt; ftplog/`date &#x27;+%Y%m%d&#x27;`ftp.log  &gt; /dev/null   2&gt;&amp;1  &amp;</span><br></pre></td></tr></table></figure>
+方式一、二无法启动时，可用此种方式。</li>
+</ul>
+<h5 id="1-5-测试"><a href="#1-5-测试" class="headerlink" title="1.5 测试"></a>1.5 测试</h5><p>在浏览器输入<a href="ftp://IP:21后，输入用户名，密码，可以登录ftp目录。">ftp://IP:21后，输入用户名，密码，可以登录ftp目录。</a></p>
+<hr>
+<h3 id="Suse-Linux-Enterprise-12下实现脚本启动和关闭"><a href="#Suse-Linux-Enterprise-12下实现脚本启动和关闭" class="headerlink" title="Suse Linux Enterprise 12下实现脚本启动和关闭"></a>Suse Linux Enterprise 12下实现脚本启动和关闭</h3><h4 id="1-在-目录下，执行下面命令"><a href="#1-在-目录下，执行下面命令" class="headerlink" title="1. 在~目录下，执行下面命令"></a>1. 在~目录下，执行下面命令</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vim .profile</span><br></pre></td></tr></table></figure>
+
+<h4 id="2-在-profile文件中定义FTPSERVER-HOME变量，并将变量追加到PATH后面，效果如下："><a href="#2-在-profile文件中定义FTPSERVER-HOME变量，并将变量追加到PATH后面，效果如下：" class="headerlink" title="2. 在.profile文件中定义FTPSERVER_HOME变量，并将变量追加到PATH后面，效果如下："></a>2. 在.profile文件中定义FTPSERVER_HOME变量，并将变量追加到PATH后面，效果如下：</h4><pre><code>export RC_LANG=zh_CN.UTF-8
+export FTPSERVER_HOME=/usr/local/ftpserver
+export PATH=$PATH:$FTPSERVER_HOME
+</code></pre>
+<p>保存并退出。</p>
+<h4 id="3-执行下面命令，使立即生效"><a href="#3-执行下面命令，使立即生效" class="headerlink" title="3. 执行下面命令，使立即生效"></a>3. 执行下面命令，使立即生效</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">source ~/.profile</span><br></pre></td></tr></table></figure>
+
+<h4 id="4-执行下面命令，在FTPSERVER-HOME目录下创建脚本文件，"><a href="#4-执行下面命令，在FTPSERVER-HOME目录下创建脚本文件，" class="headerlink" title="4. 执行下面命令，在FTPSERVER_HOME目录下创建脚本文件，"></a>4. 执行下面命令，在FTPSERVER_HOME目录下创建脚本文件，</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vim /usr/local/ftpserver/ftpserver</span><br></pre></td></tr></table></figure>
+<p>在文件中写入如下代码，保存并退出。</p>
+<pre><code>#!/bin/bash
+# /usr/local/ftpserver
+# YPN 2018-04-11 Create
+
+if [ &quot;$1&quot;x = &quot;start&quot;x ]; then
+  nohup /usr/local/ftpserver/bin/ftpd.sh res/conf/ftpd-typical.xml 1&gt;/usr/local/ftpserver/res/log/ftpd.log 2&gt;&amp;1 &amp;
+fi
+if [ &quot;$1&quot;x = &quot;stop&quot;x ]; then
+  kill $(ps aux|grep &quot;ftpserver&quot; | grep -v grep |awk &#39;&#123;print $2&#125;&#39;)
+fi
+if [ &quot;$1&quot;x = &quot;check&quot;x ]; then
+  ps -aux|grep &quot;ftpserver&quot; | grep -v grep
+fi
+if [ &quot;$1&quot;x = &quot;log&quot;x ]; then
+  tail -f /usr/local/ftpserver/res/log/ftpd.log -n 1000
+fi
+</code></pre>
+<h4 id="5-给文件添加权限，使脚本文件可以执行，命令为"><a href="#5-给文件添加权限，使脚本文件可以执行，命令为" class="headerlink" title="5. 给文件添加权限，使脚本文件可以执行，命令为"></a>5. 给文件添加权限，使脚本文件可以执行，命令为</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">chmod 755 /usr/local/ftpserver/ftpserver</span><br></pre></td></tr></table></figure>
+
+<h4 id="6-最后，执行下面命令可启动、关闭ftpserver或查看日志"><a href="#6-最后，执行下面命令可启动、关闭ftpserver或查看日志" class="headerlink" title="6. 最后，执行下面命令可启动、关闭ftpserver或查看日志"></a>6. 最后，执行下面命令可启动、关闭ftpserver或查看日志</h4><p>启动：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ftpserver start</span><br></pre></td></tr></table></figure>
+<p>关闭：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ftpserver stop</span><br></pre></td></tr></table></figure>
+<p>查看日志：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ftpserver log</span><br></pre></td></tr></table></figure>
+<p>检查ftpserver进程：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ftpserver check</span><br></pre></td></tr></table></figure>
+
+<h4 id="7-随系统自启动"><a href="#7-随系统自启动" class="headerlink" title="7. 随系统自启动"></a>7. 随系统自启动</h4><p>打开linux设置开启启动的文件，将下面的配置写入此文件的最后：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vim /etc/rc.d/after.local</span><br></pre></td></tr></table></figure>
+<p>配置：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"># 启动ftpserver服务</span><br><span class="line">nohup /usr/local/ftpserver/bin/ftpd.sh res/conf/ftpd-typical.xml 1&gt;/usr/local/ftpserver/res/log/ftpd.log 2&gt;&amp;1 &amp;</span><br></pre></td></tr></table></figure>
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="reward-container">
+  <div><div style="color: #FC6423">-------------------本文结束 <i class="fa fa-paw"></i> 感谢您的阅读-------------------</div></div>
+  <button>
+    赞赏
+  </button>
+  <div class="post-reward">
+      <div>
+        <img src="/img/YPN_wechatpay-32x32.png" alt="昜丿捺 微信">
+        <span>微信</span>
+      </div>
+      <div>
+        <img src="/img/YPN_alipay-32x32.jpg" alt="昜丿捺 支付宝">
+        <span>支付宝</span>
+      </div>
+
+  </div>
+</div>
+
+          
+
+<div class="post-copyright">
+<ul>
+  <li class="post-copyright-author">
+      <strong>原作者： </strong>昜丿捺
+  </li>
+  <li class="post-copyright-link">
+      <strong>本文链接：</strong>
+      <a href="https://yangpiena.gitee.io/2018/04/10/Apache-ftpserver%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE/" title="Apache ftpserver安装配置">https://yangpiena.gitee.io/2018/04/10/Apache-ftpserver安装配置/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+          <div class="post-tags">
+              <a href="/tags/FTP/" rel="tag"># FTP</a>
+              <a href="/tags/%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE/" rel="tag"># 安装配置</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2018/02/13/CentOS%E7%BD%91%E7%BB%9C%E8%BF%9E%E6%8E%A5system-eth0%E4%B8%8D%E5%8F%AF%E7%94%A8%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95/" rel="prev" title="CentOS网络连接system eth0不可用解决办法">
+                  <i class="fa fa-chevron-left"></i> CentOS网络连接system eth0不可用解决办法
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/2018/04/11/Linux%E5%85%B1%E4%BA%AB%E7%9B%AE%E5%BD%95%E5%92%8C%E8%BF%9C%E7%A8%8B%E6%8C%82%E8%BD%BD/" rel="next" title="Linux共享目录和远程挂载">
+                  Linux共享目录和远程挂载 <i class="fa fa-chevron-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 
+  <span itemprop="copyrightYear">2024</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">昜丿捺</span>
+</div>
+<div class="busuanzi-count">
+    <span class="post-meta-item" id="busuanzi_container_site_uv">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="总访客量">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="总访问量">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+
+<!-- 增加网站运行时间-->
+<div id="days"></div>
+<script>
+    function show_date_time(){
+        window.setTimeout("show_date_time()", 1000);
+        BirthDay=new Date("11/09/2016 00:00:00");
+        today=new Date();
+        timeold=(today.getTime()-BirthDay.getTime());
+        sectimeold=timeold/1000
+        secondsold=Math.floor(sectimeold);
+        msPerDay=24*60*60*1000
+        e_daysold=timeold/msPerDay
+        daysold=Math.floor(e_daysold);
+        e_hrsold=(e_daysold-daysold)*24;
+        hrsold=setzero(Math.floor(e_hrsold));
+        e_minsold=(e_hrsold-hrsold)*60;
+        minsold=setzero(Math.floor((e_hrsold-hrsold)*60));
+        seconds=setzero(Math.floor((e_minsold-minsold)*60));
+        document.getElementById('days').innerHTML="网站已运行 "+daysold+" 天 "+hrsold+" 小时 "+minsold+" 分 "+seconds+" 秒";
+    }
+    function setzero(i) {
+        if (i<10) {
+            i="0" + i
+        };
+        return i;
+    }
+    show_date_time();
+</script>
+
+
+    </div>
+  </footer>
+
+  
+  <div class="reading-progress-bar"></div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+  
+  <script src="https://cdnjs.loli.net/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.loli.net/ajax/libs/next-theme-pjax/0.6.0/pjax.min.js" integrity="sha256-vxLn1tSKWD4dqbMRyv940UYw4sXgMtYcK6reefzZrao=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/next-boot.js"></script><script src="/js/pjax.js"></script>
+
+  <script src="https://cdnjs.loli.net/ajax/libs/hexo-generator-searchdb/1.4.1/search.js" integrity="sha256-1kfA5uHPf65M5cphT2dvymhkuyHPQp5A53EGZOnOLmc=" crossorigin="anonymous"></script>
+<script src="/js/third-party/search/local-search.js"></script>
+
+
+
+
+
+  
+  <script data-pjax async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+
+  
+
+  <script class="next-config" data-name="enableMath" type="application/json">true</script><script class="next-config" data-name="mathjax" type="application/json">{"enable":true,"tags":"none","js":{"url":"https://cdnjs.loli.net/ajax/libs/mathjax/3.2.2/es5/tex-mml-chtml.js","integrity":"sha256-MASABpB4tYktI2Oitl4t+78w/lyA+D7b/s9GEP0JOGI="}}</script>
+<script src="/js/third-party/math/mathjax.js"></script>
+
+
+<script type="text/javascript" src="/js/ypn.js/jquery-1.11.3.min.js"></script>
+
+<!-- 页面鼠标单击效果 -->
+    <script type="text/javascript" src="/js/ypn.js/text.js"></script>
+
+<!-- 动态线条背景 -->
+<script type="text/javascript" color="235,178,178" opacity='0.7' zIndex="-2" count="100" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js"></script>
+
+<!-- 收藏页输入框特效 -->
+<script src="/js/ypn.js/activate-power-mode.js"></script>
+<script>
+  POWERMODE.colorful = true;  // 控制开启/开启礼花特效  
+  POWERMODE.shake    = false; // 控制开启/关闭屏幕震动特效  
+  document.body.addEventListener('input', POWERMODE);
+</script>
+
+<!-- 收藏页搜索按钮动作 -->
+<script type="text/javascript" src="/js/ypn.js/searchButton.js"></script>
+
+<!-- 页签标题崩溃欺骗 -->
+<script type="text/javascript" src="/js/ypn.js/crash-cheat.js"></script>
+
+<!-- 一言 -->
+<script type="text/javascript" src="/js/ypn.js/yiYanJingDianYuJu.js"></script>
+
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"log":false,"model":{"jsonPath":"/live2dw/assets/hijiki.model.json"},"display":{"position":"left","vOffset":-80},"mobile":{"show":false}});</script></body>
+</html>

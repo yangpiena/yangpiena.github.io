@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222"><meta name="generator" content="Hexo 6.3.0">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/img/avatar/ironman.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/img/avatar/favicon.ico">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdnjs.loli.net/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha256-Z1K5uhUaJXA7Ll0XrZ/0JhX4lAtZFpT6jkKrEDT0drU=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.loli.net/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"yangpiena.gitee.io","root":"/","images":"/images","scheme":"Gemini","darkmode":false,"version":"8.14.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":true,"style":"default"},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
+
+
+
+<link rel="canonical" href="https://yangpiena.gitee.io/2018/04/26/VB%E4%B8%8B%E8%BD%BD%E7%BD%91%E9%A1%B5%E6%96%87%E4%BB%B6%E6%88%96%E5%9B%BE%E7%89%87%E7%9A%84%E6%96%B9%E6%B3%95/">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://yangpiena.gitee.io/2018/04/26/VB%E4%B8%8B%E8%BD%BD%E7%BD%91%E9%A1%B5%E6%96%87%E4%BB%B6%E6%88%96%E5%9B%BE%E7%89%87%E7%9A%84%E6%96%B9%E6%B3%95/","path":"2018/04/26/VB下载网页文件或图片的方法/","title":"VB下载网页文件或图片的方法"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>VB下载网页文件或图片的方法 | 昜丿捺</title>
+  
+
+
+
+
+
+
+  <script async defer data-website-id="" src=""></script>
+
+  <script defer data-domain="" src=""></script>
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">昜丿捺</p>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">没有阳光，沉默而居</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="搜索" role="button">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a></li><li class="menu-item menu-item-links"><a href="/links" rel="section"><i class="fa fa-star fa-fw"></i>收藏</a></li><li class="menu-item menu-item-photos"><a href="/photos" rel="section"><i class="fa fa-camera fa-fw"></i>相册</a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup"><div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off" maxlength="80"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close" role="button">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div class="search-result-container no-result">
+  <div class="search-result-icon">
+    <i class="fa fa-spinner fa-pulse fa-5x"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%B8%80%E3%80%81%E4%BD%BF%E7%94%A8API%E5%87%BD%E6%95%B0URLDownloadToFile%EF%BC%8C%E4%B8%8B%E8%BD%BD%E7%BD%91%E9%A1%B5%E3%80%81%E5%9B%BE%E7%89%87%E7%AD%89%E5%85%B6%E5%AE%83%E6%96%87%E4%BB%B6%E5%88%B0%E6%9C%AC%E5%9C%B0"><span class="nav-number">1.</span> <span class="nav-text">一、使用API函数URLDownloadToFile，下载网页、图片等其它文件到本地</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%BA%8C%E3%80%81%E4%BD%BF%E7%94%A8API%E5%87%BD%E6%95%B0OleLoadPicturePath%EF%BC%8C%E4%B8%8B%E8%BD%BD%E5%9B%BE%E7%89%87%E6%96%87%E4%BB%B6%E5%88%B0%E5%8F%98%E9%87%8F%EF%BC%8C%E6%B3%A8%E6%84%8F%E8%A6%81%E5%8B%BE%E9%80%89%E5%BC%95%E7%94%A8%EF%BC%9AOLE-Automation"><span class="nav-number">2.</span> <span class="nav-text">二、使用API函数OleLoadPicturePath，下载图片文件到变量，注意要勾选引用：OLE Automation</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%B8%89%E3%80%81%E4%BD%BF%E7%94%A8Microsoft-XMLHTTP%E5%AF%B9%E8%B1%A1%EF%BC%8C%E4%B8%8B%E8%BD%BD%E7%BD%91%E9%A1%B5%E3%80%81%E5%9B%BE%E7%89%87%E7%AD%89%E5%85%B6%E5%AE%83%E6%96%87%E4%BB%B6%E5%88%B0%E6%9C%AC%E5%9C%B0"><span class="nav-number">3.</span> <span class="nav-text">三、使用Microsoft.XMLHTTP对象，下载网页、图片等其它文件到本地</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%9B%9B%E3%80%81%E4%BD%BF%E7%94%A8WebBrowser%E7%9A%84Document%E5%AF%B9%E8%B1%A1%EF%BC%8C%E4%BF%9D%E5%AD%98%E7%BD%91%E9%A1%B5%E7%9A%84%E6%89%80%E6%9C%89%E5%9B%BE%E7%89%87"><span class="nav-number">4.</span> <span class="nav-text">四、使用WebBrowser的Document对象，保存网页的所有图片</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%BA%94%E3%80%81%E7%94%A8API%E8%B0%83%E7%94%A8%E7%B3%BB%E7%BB%9F%E7%9A%84%E5%8F%A6%E5%AD%98%E4%B8%BA%E4%B8%8B%E8%BD%BD%E5%AF%B9%E8%AF%9D%E6%A1%86%EF%BC%8C%E8%BF%9B%E8%A1%8C%E6%96%87%E4%BB%B6%E4%B8%8B%E8%BD%BD"><span class="nav-number">5.</span> <span class="nav-text">五、用API调用系统的另存为下载对话框，进行文件下载</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%85%AD%E3%80%81%E7%94%A8WebBrowser1%E7%9A%84ExecWB%E6%96%B9%E6%B3%95%E8%B0%83%E7%94%A8%E7%BD%91%E9%A1%B5%E5%8F%A6%E5%AD%98%E4%B8%BA%E5%AF%B9%E8%AF%9D%E6%A1%86%E4%B8%8B%E8%BD%BD"><span class="nav-number">6.</span> <span class="nav-text">六、用WebBrowser1的ExecWB方法调用网页另存为对话框下载</span></a></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="昜丿捺"
+      src="/img/avatar/ironman.png">
+  <p class="site-author-name" itemprop="name">昜丿捺</p>
+  <div class="site-description" itemprop="description">
+    <!--  -->
+
+
+    <!-- 显示一言经典语句 -->
+    <span id="lwlhitokoto"></span>
+
+
+  </div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">95</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">2</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">54</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/yangpiena" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;yangpiena" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://yangpiena.coding.net/" title="CODING → https:&#x2F;&#x2F;yangpiena.coding.net" rel="noopener" target="_blank"><i class="fab fa-github-alt fa-fw"></i>CODING</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://gitee.com/yangpiena" title="Gitee → https:&#x2F;&#x2F;gitee.com&#x2F;yangpiena" rel="noopener" target="_blank"><i class="fab fa-glide fa-fw"></i>Gitee</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://weibo.com/yangpiena" title="Weibo → https:&#x2F;&#x2F;weibo.com&#x2F;yangpiena" rel="noopener" target="_blank"><i class="fab fa-weibo fa-fw"></i>Weibo</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:yangpiena@gmail.com" title="E-Mail → mailto:yangpiena@gmail.com" rel="noopener" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+  </div>
+
+        </div>
+      </div>
+        <div class="back-to-top animated" role="button" aria-label="返回顶部">
+          <i class="fa fa-arrow-up"></i>
+          <span>0%</span>
+        </div>
+    </div>
+
+    
+    <div class="sidebar-inner sidebar-blogroll">
+      <div class="links-of-blogroll animated">
+        <div class="links-of-blogroll-title"><i class="fa fa-globe fa-fw"></i>
+          链接
+        </div>
+        <ul class="links-of-blogroll-list">
+            <li class="links-of-blogroll-item">
+              <a href="https://yangpiena.gitee.io/" title="https:&#x2F;&#x2F;yangpiena.gitee.io&#x2F;">昜丿捺（Gitee）</a>
+            </li>
+            <li class="links-of-blogroll-item">
+              <a href="https://yangpiena.github.io/" title="https:&#x2F;&#x2F;yangpiena.github.io&#x2F;" rel="noopener" target="_blank">昜丿捺（GitHub）</a>
+            </li>
+            <li class="links-of-blogroll-item">
+              <a href="http://coding-pages-bucket-407450-1059047-17379-602648-1258146968.cos-website.ap-hongkong.myqcloud.com/" title="http:&#x2F;&#x2F;coding-pages-bucket-407450-1059047-17379-602648-1258146968.cos-website.ap-hongkong.myqcloud.com&#x2F;" rel="noopener" target="_blank">昜丿捺（Coding）</a>
+            </li>
+        </ul>
+      </div>
+    </div>
+    
+    
+    <!-- 增加网易云音乐 -->
+        <div class="pjax">
+          <div class="sidebar-inner">
+            <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=300 src="//music.163.com/outchain/player?type=0&id=6605147757&auto=1&height=300"></iframe>
+          </div>
+        </div>
+
+
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://yangpiena.gitee.io/2018/04/26/VB%E4%B8%8B%E8%BD%BD%E7%BD%91%E9%A1%B5%E6%96%87%E4%BB%B6%E6%88%96%E5%9B%BE%E7%89%87%E7%9A%84%E6%96%B9%E6%B3%95/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/img/avatar/ironman.png">
+      <meta itemprop="name" content="昜丿捺">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="昜丿捺">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="VB下载网页文件或图片的方法 | 昜丿捺">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          VB下载网页文件或图片的方法
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2018-04-26 17:21:46" itemprop="dateCreated datePublished" datetime="2018-04-26T17:21:46+08:00">2018-04-26</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2022-08-15 14:30:35" itemprop="dateModified" datetime="2022-08-15T14:30:35+08:00">2022-08-15</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/tech-notes/" itemprop="url" rel="index"><span itemprop="name">技术</span></a>
+        </span>
+    </span>
+
+  
+    <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv">
+      <span class="post-meta-item-icon">
+        <i class="far fa-eye"></i>
+      </span>
+      <span class="post-meta-item-text">阅读次数：</span>
+      <span id="busuanzi_value_page_pv"></span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <h1 id="一、使用API函数URLDownloadToFile，下载网页、图片等其它文件到本地"><a href="#一、使用API函数URLDownloadToFile，下载网页、图片等其它文件到本地" class="headerlink" title="一、使用API函数URLDownloadToFile，下载网页、图片等其它文件到本地"></a>一、使用API函数URLDownloadToFile，下载网页、图片等其它文件到本地</h1><p>引入API：</p>
+<pre><code>Private Declare Function URLDownloadToFile Lib &quot;urlmon&quot; Alias &quot;URLDownloadToFileA&quot; (ByVal pCaller As Long, ByVal szURL As String, ByVal szFileName As String, ByVal dwReserved As Long, ByVal lpfnCB As Long) As Long
+</code></pre>
+<p>用法：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">Private Sub test()</span><br><span class="line">    Dim v_URL As String, v_FileName As String, v_Result As Long</span><br><span class="line">    v_URL = &quot;http://www.baidu.com/img/baidu_logo.gif&quot;</span><br><span class="line">    v_FileName = App.Path &amp; &quot;\Baidu.bmp&quot;  &#x27;下载百度Logo图片</span><br><span class="line">    v_Result = URLDownloadToFile(0, v_URL, v_FileName, 0, 0)     &#x27;下载文件，返回 0 表示成功</span><br><span class="line">    v_URL = &quot;http://www.baidu.com&quot;</span><br><span class="line">    v_FileName = App.Path &amp; &quot;\Baidu.html&quot; &#x27;下载百度首页的网页</span><br><span class="line">    v_Result = URLDownloadToFile(0, v_URL, v_FileName, 0, 0)     &#x27;下载文件，返回 0 表示成功</span><br><span class="line">End Sub</span><br></pre></td></tr></table></figure>
+
+<span id="more"></span>
+
+<h1 id="二、使用API函数OleLoadPicturePath，下载图片文件到变量，注意要勾选引用：OLE-Automation"><a href="#二、使用API函数OleLoadPicturePath，下载图片文件到变量，注意要勾选引用：OLE-Automation" class="headerlink" title="二、使用API函数OleLoadPicturePath，下载图片文件到变量，注意要勾选引用：OLE Automation"></a>二、使用API函数OleLoadPicturePath，下载图片文件到变量，注意要勾选引用：OLE Automation</h1><p>引入API：</p>
+<pre><code>Private Declare Function OleLoadPicturePath Lib &quot;oleaut32.dll&quot; (ByVal szURLorPath As Long, ByVal punkCaller As Long, ByVal dwReserved As Long, ByVal clrReserved As OLE_COLOR, ByRef riid As TGUID, ByRef ppvRet As IPicture) As Long
+Private Type TGUID
+    Data1 As Long
+    Data2 As Integer
+    Data3 As Integer
+    Data4(0 To 7) As Byte
+End Type
+</code></pre>
+<p>用法：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">Public Function LoadNetPicture(ByVal i_ImgUrl As String) As Picture</span><br><span class="line">    Dim riid As TGUID</span><br><span class="line">    riid.Data1    = &amp;H7BF80980</span><br><span class="line">    riid.Data2    = &amp;HBF32</span><br><span class="line">    riid.Data3    = &amp;H101A</span><br><span class="line">    riid.Data4(0) = &amp;H8B</span><br><span class="line">    riid.Data4(1) = &amp;HBB</span><br><span class="line">    riid.Data4(2) = &amp;H0</span><br><span class="line">    riid.Data4(3) = &amp;HAA</span><br><span class="line">    riid.Data4(4) = &amp;H0</span><br><span class="line">    riid.Data4(5) = &amp;H30</span><br><span class="line">    riid.Data4(6) = &amp;HC</span><br><span class="line">    riid.Data4(7) = &amp;HAB</span><br><span class="line">    OleLoadPicturePath StrPtr(i_ImgUrl), 0&amp;, 0&amp;, 0&amp;, riid, LoadNetPicture</span><br><span class="line">End Function</span><br><span class="line">Private Sub test()</span><br><span class="line">    Dim v_ImgUrl As String, v_Picture As Picture</span><br><span class="line">    v_ImgUrl = &quot;http://www.baidu.com/img/baidu_logo.gif&quot;</span><br><span class="line">    Set v_Picture = LoadNetPicture(v_ImgUrl)          &#x27;将图片下载到变量</span><br><span class="line">    SavePicture v_Picture, App.Path &amp; &quot;\MyImg.bmp&quot;    &#x27;保存到硬盘</span><br><span class="line">    Picture1.Picture = v_Picture</span><br><span class="line">    &#x27;如果要将图片装载到控件</span><br><span class="line">    Picture1.Picture = LoadNetPicture(v_ImgUrl)</span><br><span class="line">End Sub</span><br></pre></td></tr></table></figure>
+
+<h1 id="三、使用Microsoft-XMLHTTP对象，下载网页、图片等其它文件到本地"><a href="#三、使用Microsoft-XMLHTTP对象，下载网页、图片等其它文件到本地" class="headerlink" title="三、使用Microsoft.XMLHTTP对象，下载网页、图片等其它文件到本地"></a>三、使用Microsoft.XMLHTTP对象，下载网页、图片等其它文件到本地</h1><p>定义公用下载过程：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">Public Sub DownNetFile(ByVal i_Url As String, ByVal i_File As String)</span><br><span class="line">    Dim XmlHttp, B() As Byte</span><br><span class="line">    Set XmlHttp = CreateObject(&quot;Microsoft.XMLHTTP&quot;)</span><br><span class="line">    XmlHttp.Open &quot;GET&quot;, i_Url, False</span><br><span class="line">    XmlHttp.Send</span><br><span class="line">    If XmlHttp.ReadyState = 4 Then</span><br><span class="line">        B() = XmlHttp.ResponseBody</span><br><span class="line">        Open i_File For Binary As #1</span><br><span class="line">        Put #1, , B()</span><br><span class="line">        Close #1</span><br><span class="line">    End If</span><br><span class="line">    Set XmlHttp = Nothing</span><br><span class="line">End Sub</span><br></pre></td></tr></table></figure>
+<p>用法:</p>
+<pre><code>DownNetFile &quot;http://www.baidu.com/img/baidu_logo.gif&quot;, App.Path &amp; &quot;\My-1.bmp&quot; &#39;下载百度图片
+DownNetFile &quot;http://www.baidu.com&quot;, App.Path &amp; &quot;\Baidu.html&quot;                  &#39;下载百度首页的网页
+</code></pre>
+<h1 id="四、使用WebBrowser的Document对象，保存网页的所有图片"><a href="#四、使用WebBrowser的Document对象，保存网页的所有图片" class="headerlink" title="四、使用WebBrowser的Document对象，保存网页的所有图片"></a>四、使用WebBrowser的Document对象，保存网页的所有图片</h1><p>先用 WebBrowser1 显示一个网页，如：</p>
+<pre><code>WebBrowser1.Navigate &quot;http://www.baidu.com&quot;
+</code></pre>
+<p>待网页加载完毕后，再执行以下语句：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">Dim v_Path As String, I As Long, E, v_Range</span><br><span class="line">v_Path = App.Path &amp; &quot;\Tu\&quot;</span><br><span class="line">WebBrowser1.Silent = True &#x27;关闭交互，禁止脚本错误</span><br><span class="line">For Each E In WebBrowser1.Document.All</span><br><span class="line">    If E.tagName = &quot;IMG&quot; Then</span><br><span class="line">        Set v_Range = WebBrowser1.Document.body.createControlRange()</span><br><span class="line">        v_Range.Add E</span><br><span class="line">        v_Range.execCommand &quot;Copy&quot; &#x27;复制到剪贴板</span><br><span class="line">        I = I + 1</span><br><span class="line">        SavePicture Clipboard.GetData, v_Path &amp; I &amp; &quot;.bmp&quot; &#x27;保存到硬盘</span><br><span class="line">    End If</span><br><span class="line">Next</span><br></pre></td></tr></table></figure>
+
+<h1 id="五、用API调用系统的另存为下载对话框，进行文件下载"><a href="#五、用API调用系统的另存为下载对话框，进行文件下载" class="headerlink" title="五、用API调用系统的另存为下载对话框，进行文件下载"></a>五、用API调用系统的另存为下载对话框，进行文件下载</h1><p>引入API:</p>
+<pre><code>Private Declare Function DoFileDownload Lib &quot;shdocvw.dll&quot; (ByVal lpszFile As String) As Long
+</code></pre>
+<p>用法：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Dim v_Url As String</span><br><span class="line">v_Url = StrConv(&quot;http://www.baidu.com&quot;, vbUnicode)</span><br><span class="line">Call DoFileDownload(v_Url)</span><br></pre></td></tr></table></figure>
+
+<h1 id="六、用WebBrowser1的ExecWB方法调用网页另存为对话框下载"><a href="#六、用WebBrowser1的ExecWB方法调用网页另存为对话框下载" class="headerlink" title="六、用WebBrowser1的ExecWB方法调用网页另存为对话框下载"></a>六、用WebBrowser1的ExecWB方法调用网页另存为对话框下载</h1><pre><code>WebBrowser1.ExecWB OLECMDID_SAVEAS, OLECMDEXECOPT_DODEFAULT
+</code></pre>
+<hr>
+<p>以上方法各有优缺点。<br>Microsoft.XMLHTTP 对于大文件有利，支持断点续传，但需调用 getResponseHeader 进行数据检查。<br>对于谷歌地图图片，图片链接形如：<a target="_blank" rel="noopener" href="http://mt1.google.cn/vt/lyrs=s@63&gl=cn&x=51694&s=&y=26884&z=16&s=Galile">http://mt1.google.cn/vt/lyrs=s@63&amp;gl=cn&amp;x=51694&amp;s=&amp;y=26884&amp;z=16&amp;s=Galile</a> ，仅第四种方法有效。</p>
+<blockquote>
+<p>本文根据<a target="_blank" rel="noopener" href="https://blog.csdn.net/rztyfx/article/details/7605624">rztyfx的专栏</a>整理发表。</p>
+</blockquote>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="reward-container">
+  <div><div style="color: #FC6423">-------------------本文结束 <i class="fa fa-paw"></i> 感谢您的阅读-------------------</div></div>
+  <button>
+    赞赏
+  </button>
+  <div class="post-reward">
+      <div>
+        <img src="/img/YPN_wechatpay-32x32.png" alt="昜丿捺 微信">
+        <span>微信</span>
+      </div>
+      <div>
+        <img src="/img/YPN_alipay-32x32.jpg" alt="昜丿捺 支付宝">
+        <span>支付宝</span>
+      </div>
+
+  </div>
+</div>
+
+          
+
+<div class="post-copyright">
+<ul>
+  <li class="post-copyright-author">
+      <strong>原作者： </strong>昜丿捺
+  </li>
+  <li class="post-copyright-link">
+      <strong>本文链接：</strong>
+      <a href="https://yangpiena.gitee.io/2018/04/26/VB%E4%B8%8B%E8%BD%BD%E7%BD%91%E9%A1%B5%E6%96%87%E4%BB%B6%E6%88%96%E5%9B%BE%E7%89%87%E7%9A%84%E6%96%B9%E6%B3%95/" title="VB下载网页文件或图片的方法">https://yangpiena.gitee.io/2018/04/26/VB下载网页文件或图片的方法/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+          <div class="post-tags">
+              <a href="/tags/VB/" rel="tag"># VB</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2018/04/11/Linux%E5%85%B1%E4%BA%AB%E7%9B%AE%E5%BD%95%E5%92%8C%E8%BF%9C%E7%A8%8B%E6%8C%82%E8%BD%BD/" rel="prev" title="Linux共享目录和远程挂载">
+                  <i class="fa fa-chevron-left"></i> Linux共享目录和远程挂载
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/2018/07/03/%E5%9C%A8VS2017%E4%B8%AD%E4%BD%BF%E7%94%A8C++%E5%88%9B%E5%BB%BA%E5%92%8C%E4%BD%BF%E7%94%A8DLL/" rel="next" title="在VS2017中使用C++创建和使用DLL">
+                  在VS2017中使用C++创建和使用DLL <i class="fa fa-chevron-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 
+  <span itemprop="copyrightYear">2024</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">昜丿捺</span>
+</div>
+<div class="busuanzi-count">
+    <span class="post-meta-item" id="busuanzi_container_site_uv">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="总访客量">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="总访问量">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+
+<!-- 增加网站运行时间-->
+<div id="days"></div>
+<script>
+    function show_date_time(){
+        window.setTimeout("show_date_time()", 1000);
+        BirthDay=new Date("11/09/2016 00:00:00");
+        today=new Date();
+        timeold=(today.getTime()-BirthDay.getTime());
+        sectimeold=timeold/1000
+        secondsold=Math.floor(sectimeold);
+        msPerDay=24*60*60*1000
+        e_daysold=timeold/msPerDay
+        daysold=Math.floor(e_daysold);
+        e_hrsold=(e_daysold-daysold)*24;
+        hrsold=setzero(Math.floor(e_hrsold));
+        e_minsold=(e_hrsold-hrsold)*60;
+        minsold=setzero(Math.floor((e_hrsold-hrsold)*60));
+        seconds=setzero(Math.floor((e_minsold-minsold)*60));
+        document.getElementById('days').innerHTML="网站已运行 "+daysold+" 天 "+hrsold+" 小时 "+minsold+" 分 "+seconds+" 秒";
+    }
+    function setzero(i) {
+        if (i<10) {
+            i="0" + i
+        };
+        return i;
+    }
+    show_date_time();
+</script>
+
+
+    </div>
+  </footer>
+
+  
+  <div class="reading-progress-bar"></div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+  
+  <script src="https://cdnjs.loli.net/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.loli.net/ajax/libs/next-theme-pjax/0.6.0/pjax.min.js" integrity="sha256-vxLn1tSKWD4dqbMRyv940UYw4sXgMtYcK6reefzZrao=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/next-boot.js"></script><script src="/js/pjax.js"></script>
+
+  <script src="https://cdnjs.loli.net/ajax/libs/hexo-generator-searchdb/1.4.1/search.js" integrity="sha256-1kfA5uHPf65M5cphT2dvymhkuyHPQp5A53EGZOnOLmc=" crossorigin="anonymous"></script>
+<script src="/js/third-party/search/local-search.js"></script>
+
+
+
+
+
+  
+  <script data-pjax async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+
+  
+
+  <script class="next-config" data-name="enableMath" type="application/json">true</script><script class="next-config" data-name="mathjax" type="application/json">{"enable":true,"tags":"none","js":{"url":"https://cdnjs.loli.net/ajax/libs/mathjax/3.2.2/es5/tex-mml-chtml.js","integrity":"sha256-MASABpB4tYktI2Oitl4t+78w/lyA+D7b/s9GEP0JOGI="}}</script>
+<script src="/js/third-party/math/mathjax.js"></script>
+
+
+<script type="text/javascript" src="/js/ypn.js/jquery-1.11.3.min.js"></script>
+
+<!-- 页面鼠标单击效果 -->
+    <script type="text/javascript" src="/js/ypn.js/text.js"></script>
+
+<!-- 动态线条背景 -->
+<script type="text/javascript" color="235,178,178" opacity='0.7' zIndex="-2" count="100" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js"></script>
+
+<!-- 收藏页输入框特效 -->
+<script src="/js/ypn.js/activate-power-mode.js"></script>
+<script>
+  POWERMODE.colorful = true;  // 控制开启/开启礼花特效  
+  POWERMODE.shake    = false; // 控制开启/关闭屏幕震动特效  
+  document.body.addEventListener('input', POWERMODE);
+</script>
+
+<!-- 收藏页搜索按钮动作 -->
+<script type="text/javascript" src="/js/ypn.js/searchButton.js"></script>
+
+<!-- 页签标题崩溃欺骗 -->
+<script type="text/javascript" src="/js/ypn.js/crash-cheat.js"></script>
+
+<!-- 一言 -->
+<script type="text/javascript" src="/js/ypn.js/yiYanJingDianYuJu.js"></script>
+
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"log":false,"model":{"jsonPath":"/live2dw/assets/hijiki.model.json"},"display":{"position":"left","vOffset":-80},"mobile":{"show":false}});</script></body>
+</html>
