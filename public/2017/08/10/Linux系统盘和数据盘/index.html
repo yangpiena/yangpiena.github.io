@@ -308,9 +308,8 @@
     
     
     <div class="post-body" itemprop="articleBody">
-        <h3 id="系统盘"><a href="#系统盘" class="headerlink" title="系统盘"></a>系统盘</h3><p>类似于Windows的C盘，Linux的系统盘可用命令<code>df -l</code>查看，可以看到根路径 &#x2F; 都是位于系统盘。而&#x2F;root、&#x2F;home、&#x2F;usr就如同Windows的C盘下的C:\Windows、C:\usr这些目录。</p>
+        <h3 id="系统盘"><a href="#系统盘" class="headerlink" title="系统盘"></a>系统盘</h3><p>类似于Windows的C盘，Linux的系统盘可用命令<code>df -l</code>查看，可以看到根路径 / 都是位于系统盘。而/root、/home、/usr就如同Windows的C盘下的C:\Windows、C:\usr这些目录。</p>
 <span id="more"></span>
-
 <h3 id="数据盘"><a href="#数据盘" class="headerlink" title="数据盘"></a>数据盘</h3><p>如果单独有数据盘，且数据盘没有分区和挂载，使用<code>df -l</code>命令是看不到的，可以使用 <code>fdisk -l</code>命令，看到有哪些硬盘，如下：</p>
 <pre><code>[root@iZwe12zdi799668qfxdm5oZ /]# fdisk -l
 
@@ -328,8 +327,7 @@ Disk /dev/vdb: 107.4 GB, 107374182400 bytes, 209715200 sectors
 Units = sectors of 1 * 512 = 512 bytes
 Sector size (logical/physical): 512 bytes / 512 bytes
 I/O size (minimum/optimal): 512 bytes / 512 bytes
-</code></pre>
-<p>可以看到，Disk &#x2F;dev&#x2F;vda和Disk &#x2F;dev&#x2F;vdb表示有两块盘，但是显然vdb没有vdb1，故表示没有分区。</p>
+</code></pre><p>可以看到，Disk /dev/vda和Disk /dev/vdb表示有两块盘，但是显然vdb没有vdb1，故表示没有分区。</p>
 
     </div>
 

@@ -309,9 +309,7 @@
     
     <div class="post-body" itemprop="articleBody">
         <h4 id="1-增加菜单，命令如下："><a href="#1-增加菜单，命令如下：" class="headerlink" title="1. 增加菜单，命令如下："></a>1. 增加菜单，命令如下：</h4><pre><code>hexo new page photos
-</code></pre>
-<span id="more"></span>
-
+</code></pre><span id="more"></span>
 <h4 id="2-编辑菜单photos下的文件index-md，添加如下内容："><a href="#2-编辑菜单photos下的文件index-md，添加如下内容：" class="headerlink" title="2. 编辑菜单photos下的文件index.md，添加如下内容："></a>2. 编辑菜单photos下的文件index.md，添加如下内容：</h4><pre><code>&lt;div class=&quot;content&quot;&gt;
     &lt;div class=&quot;iw_wrapper&quot;&gt;
         &lt;ul class=&quot;iw_thumbs&quot; id=&quot;iw_thumbs&quot;&gt;
@@ -330,65 +328,65 @@
 &lt;script type=&quot;text/javascript&quot; src=&quot;/js/jquery.easing.1.3.js&quot;&gt;&lt;/script&gt;
 &lt;script type=&quot;text/javascript&quot;&gt;
     $(window).load(function()&#123;
-        var $iw_thumbs			= $(&#39;#iw_thumbs&#39;),
-            $iw_ribbon			= $(&#39;#iw_ribbon&#39;),
-            $iw_ribbon_close	= $iw_ribbon.children(&#39;span.iw_close&#39;),
-            $iw_ribbon_zoom		= $iw_ribbon.children(&#39;span.iw_zoom&#39;);
-            
-            ImageWall	= (function() &#123;
+        var $iw_thumbs            = $(&#39;#iw_thumbs&#39;),
+            $iw_ribbon            = $(&#39;#iw_ribbon&#39;),
+            $iw_ribbon_close    = $iw_ribbon.children(&#39;span.iw_close&#39;),
+            $iw_ribbon_zoom        = $iw_ribbon.children(&#39;span.iw_zoom&#39;);
+
+            ImageWall    = (function() &#123;
                     // window width and height
                 var w_dim,
                     // index of current image
-                    current				= -1,
-                    isRibbonShown		= false,
-                    isFullMode			= false,
+                    current                = -1,
+                    isRibbonShown        = false,
+                    isFullMode            = false,
                     // ribbon / images animation settings
-                    ribbonAnim			= &#123;speed : 500, easing : &#39;easeOutExpo&#39;&#125;,
-                    imgAnim				= &#123;speed : 400, easing : &#39;jswing&#39;&#125;,
+                    ribbonAnim            = &#123;speed : 500, easing : &#39;easeOutExpo&#39;&#125;,
+                    imgAnim                = &#123;speed : 400, easing : &#39;jswing&#39;&#125;,
                     // init function : call masonry, calculate window dimentions, initialize some events
-                    init				= function() &#123;
+                    init                = function() &#123;
                         $iw_thumbs.imagesLoaded(function()&#123;
                             $iw_thumbs.masonry(&#123;
-                                isAnimated	: true
+                                isAnimated    : true
                             &#125;);
                         &#125;);
                         getWindowsDim();
                         initEventsHandler();
                     &#125;,
                     // calculate window dimentions
-                    getWindowsDim		= function() &#123;
+                    getWindowsDim        = function() &#123;
                         w_dim = &#123;
-                            width	: $(window).width(),
-                            height	: $(window).height()
+                            width    : $(window).width(),
+                            height    : $(window).height()
                         &#125;;
                     &#125;,
                     // initialize some events
-                    initEventsHandler	= function() &#123;
-                        
+                    initEventsHandler    = function() &#123;
+
                         // click on a image
                         $iw_thumbs.delegate(&#39;li&#39;, &#39;click&#39;, function() &#123;
                             if($iw_ribbon.is(&#39;:animated&#39;)) return false;
-                            
+
                             var $el = $(this);
-                            
+
                             if($el.data(&#39;ribbon&#39;)) &#123;
                                 showFullImage($el);
                             &#125;
                             else if(!isRibbonShown) &#123;
                                 isRibbonShown = true;
-                                
+
                                 $el.data(&#39;ribbon&#39;,true);
-                                
+
                                 // set the current
                                 current = $el.index();
-                            
+
                                 showRibbon($el);
                             &#125;
                         &#125;);
-                        
+
                         // click ribbon close
                         $iw_ribbon_close.bind(&#39;click&#39;, closeRibbon);
-                        
+
                         // on window resize we need to recalculate the window dimentions
                         $(window).bind(&#39;resize&#39;, function() &#123;
                                     getWindowsDim();
@@ -401,57 +399,57 @@
                                         return false;
                                     closeRibbon();
                                  &#125;);
-                        
+
                     &#125;,
-                    showRibbon			= function($el) &#123;
-                        var	$img	= $el.children(&#39;img&#39;),
-                            $descrp	= $img.next();
-                        
+                    showRibbon            = function($el) &#123;
+                        var    $img    = $el.children(&#39;img&#39;),
+                            $descrp    = $img.next();
+
                         // fadeOut all the other images
                         $iw_thumbs.children(&#39;li&#39;).not($el).animate(&#123;opacity : 0.2&#125;, imgAnim.speed);
-                        
+
                         // increase the image z-index, and set the height to 100px (default height)
                         $img.css(&#39;z-index&#39;, 100)
                             .data(&#39;originalHeight&#39;,$img.height())
                             .stop()
                             .animate(&#123;
-                                height 		: &#39;100px&#39;
+                                height         : &#39;100px&#39;
                             &#125;, imgAnim.speed, imgAnim.easing);
-                        
+
                         // the ribbon will animate from the left or right
                         // depending on the position of the image
-                        var ribbonCssParam 		= &#123;
-                                top	: $el.offset().top - $(window).scrollTop() - 6 + &#39;px&#39;
+                        var ribbonCssParam         = &#123;
+                                top    : $el.offset().top - $(window).scrollTop() - 6 + &#39;px&#39;
                             &#125;,
                             descriptionCssParam,
                             dir;
-                        
+
                         if( $el.offset().left &lt; (w_dim.width / 2) ) &#123;
                             dir = &#39;left&#39;;
-                            ribbonCssParam.left 	= 0;
-                            ribbonCssParam.right 	= &#39;auto&#39;;
+                            ribbonCssParam.left     = 0;
+                            ribbonCssParam.right     = &#39;auto&#39;;
                         &#125;
                         else &#123;
                             dir = &#39;right&#39;;
-                            ribbonCssParam.right 	= 0;
-                            ribbonCssParam.left 	= &#39;auto&#39;;
+                            ribbonCssParam.right     = 0;
+                            ribbonCssParam.left     = &#39;auto&#39;;
                         &#125;
-                        
+
                         $iw_ribbon.css(ribbonCssParam)
                                   .show()
                                   .stop()
                                   .animate(&#123;width : &#39;100%&#39;&#125;, ribbonAnim.speed, ribbonAnim.easing, function() &#123;
                                         switch(dir) &#123;
                                             case &#39;left&#39; :
-                                                descriptionCssParam		= &#123;
-                                                    &#39;left&#39; 			: $img.outerWidth(true) + &#39;px&#39;,
-                                                    &#39;text-align&#39; 	: &#39;left&#39;
+                                                descriptionCssParam        = &#123;
+                                                    &#39;left&#39;             : $img.outerWidth(true) + &#39;px&#39;,
+                                                    &#39;text-align&#39;     : &#39;left&#39;
                                                 &#125;;
                                                 break;
-                                            case &#39;right&#39; :	
-                                                descriptionCssParam		= &#123;
-                                                    &#39;left&#39; 			: &#39;-200px&#39;,
-                                                    &#39;text-align&#39; 	: &#39;right&#39;
+                                            case &#39;right&#39; :    
+                                                descriptionCssParam        = &#123;
+                                                    &#39;left&#39;             : &#39;-200px&#39;,
+                                                    &#39;text-align&#39;     : &#39;right&#39;
                                                 &#125;;
                                                 break;
                                         &#125;;
@@ -460,178 +458,176 @@
                                         $iw_ribbon_close.show();
                                         $iw_ribbon_zoom.show();
                                   &#125;);
-                        
+
                     &#125;,
                     // close the ribbon
                     // when in full mode slides in the middle of the page
                     // when not slides left
-                    closeRibbon			= function() &#123;
-                        isRibbonShown 	= false
-                        
+                    closeRibbon            = function() &#123;
+                        isRibbonShown     = false
+
                         $iw_ribbon_close.hide();
                         $iw_ribbon_zoom.hide();
-                        
+
                         if(!isFullMode) &#123;
-                        
+
                             // current wall image
-                            var $el	 		= $iw_thumbs.children(&#39;li&#39;).eq(current);
-                            
+                            var $el             = $iw_thumbs.children(&#39;li&#39;).eq(current);
+
                             resetWall($el);
-                            
+
                             // slide out ribbon
                             $iw_ribbon.stop()
                                       .animate(&#123;width : &#39;0%&#39;&#125;, ribbonAnim.speed, ribbonAnim.easing); 
-                                  
+
                         &#125;
                         else &#123;
                             $iw_ribbon.stop().animate(&#123;
-                                opacity		: 0.8,
-                                height 		: &#39;0px&#39;,
-                                marginTop	: w_dim.height/2 + &#39;px&#39; // half of window height
+                                opacity        : 0.8,
+                                height         : &#39;0px&#39;,
+                                marginTop    : w_dim.height/2 + &#39;px&#39; // half of window height
                             &#125;, ribbonAnim.speed, function() &#123;
                                 $iw_ribbon.css(&#123;
-                                    &#39;width&#39;		: &#39;0%&#39;,
-                                    &#39;height&#39;	: &#39;126px&#39;,
+                                    &#39;width&#39;        : &#39;0%&#39;,
+                                    &#39;height&#39;    : &#39;126px&#39;,
                                     &#39;margin-top&#39;: &#39;0px&#39;
                                 &#125;).children(&#39;img&#39;).remove();
                             &#125;);
-                            
-                            isFullMode	= false;
+
+                            isFullMode    = false;
                         &#125;
                     &#125;,
-                    resetWall			= function($el) &#123;
-                        var $img		= $el.children(&#39;img&#39;),
-                            $descrp		= $img.next();
-                            
+                    resetWall            = function($el) &#123;
+                        var $img        = $el.children(&#39;img&#39;),
+                            $descrp        = $img.next();
+
                         $el.data(&#39;ribbon&#39;,false);
-                        
+
                         // reset the image z-index and height
                         $img.css(&#39;z-index&#39;,1).stop().animate(&#123;
-                            height 		: $img.data(&#39;originalHeight&#39;)
+                            height         : $img.data(&#39;originalHeight&#39;)
                         &#125;, imgAnim.speed,imgAnim.easing);
-                        
+
                         // fadeOut the description
                         $descrp.fadeOut();
 
                         // fadeIn all the other images
-                        $iw_thumbs.children(&#39;li&#39;).not($el).animate(&#123;opacity : 1&#125;, imgAnim.speed);								
+                        $iw_thumbs.children(&#39;li&#39;).not($el).animate(&#123;opacity : 1&#125;, imgAnim.speed);                                
                     &#125;,
-                    showFullImage		= function($el) &#123;
-                        isFullMode	= true;
-                        
+                    showFullImage        = function($el) &#123;
+                        isFullMode    = true;
+
                         $iw_ribbon_close.hide();
-                        
-                        var	$img	= $el.children(&#39;img&#39;),
-                            large	= $img.data(&#39;img&#39;),
-                        
+
+                        var    $img    = $el.children(&#39;img&#39;),
+                            large    = $img.data(&#39;img&#39;),
+
                             // add a loading image on top of the image
                             $loading = $(&#39;&lt;span class=&quot;iw_loading&quot;&gt;&lt;/span&gt;&#39;);
-                        
+
                         $el.append($loading);
-                        
+
                         // preload large image
                         $(&#39;&lt;img/&gt;&#39;).load(function() &#123;
-                            var $largeImage	= $(this);
-                            
+                            var $largeImage    = $(this);
+
                             $loading.remove();
-                            
+
                             $iw_ribbon_zoom.hide();
-                            
+
                             resizeImage($largeImage);
-                            
+
                             // reset the current image in the wall
                             resetWall($el);
-                            
+
                             // animate ribbon in and out
                             $iw_ribbon.stop().animate(&#123;
-                                opacity		: 1,
-                                height 		: &#39;0px&#39;,
-                                marginTop	: &#39;63px&#39; // half of ribbons height
+                                opacity        : 1,
+                                height         : &#39;0px&#39;,
+                                marginTop    : &#39;63px&#39; // half of ribbons height
                             &#125;, ribbonAnim.speed, function() &#123;
                                 // add the large image to the DOM
                                 $iw_ribbon.prepend($largeImage);
-                                
+
                                 $iw_ribbon_close.show();
-                                
+
                                 $iw_ribbon.animate(&#123;
-                                    height 		: &#39;100%&#39;,
-                                    marginTop	: &#39;0px&#39;,
-                                    top			: &#39;0px&#39;
+                                    height         : &#39;100%&#39;,
+                                    marginTop    : &#39;0px&#39;,
+                                    top            : &#39;0px&#39;
                                 &#125;, ribbonAnim.speed);
                             &#125;);
                         &#125;).attr(&#39;src&#39;,large);
-                            
+
                     &#125;,
-                    resizeImage			= function($image) &#123;
-                        var widthMargin		= 100,
-                            heightMargin 	= 100,
-                        
-                            windowH      	= w_dim.height - heightMargin,
-                            windowW      	= w_dim.width - widthMargin,
-                            theImage     	= new Image();
-                            
-                        theImage.src     	= $image.attr(&quot;src&quot;);
-                        
-                        var imgwidth     	= theImage.width,
-                            imgheight    	= theImage.height;
+                    resizeImage            = function($image) &#123;
+                        var widthMargin        = 100,
+                            heightMargin     = 100,
+
+                            windowH          = w_dim.height - heightMargin,
+                            windowW          = w_dim.width - widthMargin,
+                            theImage         = new Image();
+
+                        theImage.src         = $image.attr(&quot;src&quot;);
+
+                        var imgwidth         = theImage.width,
+                            imgheight        = theImage.height;
 
                         if((imgwidth &gt; windowW) || (imgheight &gt; windowH)) &#123;
                             if(imgwidth &gt; imgheight) &#123;
-                                var newwidth 	= windowW,
-                                    ratio 		= imgwidth / windowW,
-                                    newheight 	= imgheight / ratio;
-                                    
+                                var newwidth     = windowW,
+                                    ratio         = imgwidth / windowW,
+                                    newheight     = imgheight / ratio;
+
                                 theImage.height = newheight;
-                                theImage.width	= newwidth;
-                                
+                                theImage.width    = newwidth;
+
                                 if(newheight &gt; windowH) &#123;
-                                    var newnewheight 	= windowH,
-                                        newratio 		= newheight/windowH,
-                                        newnewwidth 	= newwidth/newratio;
-                                
-                                    theImage.width 		= newnewwidth;
-                                    theImage.height		= newnewheight;
+                                    var newnewheight     = windowH,
+                                        newratio         = newheight/windowH,
+                                        newnewwidth     = newwidth/newratio;
+
+                                    theImage.width         = newnewwidth;
+                                    theImage.height        = newnewheight;
                                 &#125;
                             &#125;
                             else &#123;
-                                var newheight 	= windowH,
-                                    ratio 		= imgheight / windowH,
-                                    newwidth 	= imgwidth / ratio;
-                                
+                                var newheight     = windowH,
+                                    ratio         = imgheight / windowH,
+                                    newwidth     = imgwidth / ratio;
+
                                 theImage.height = newheight;
-                                theImage.width	= newwidth;
-                                
+                                theImage.width    = newwidth;
+
                                 if(newwidth &gt; windowW) &#123;
-                                    var newnewwidth 	= windowW,
-                                        newratio 		= newwidth/windowW,
-                                        newnewheight 	= newheight/newratio;
-                            
-                                    theImage.height 	= newnewheight;
-                                    theImage.width		= newnewwidth;
+                                    var newnewwidth     = windowW,
+                                        newratio         = newwidth/windowW,
+                                        newnewheight     = newheight/newratio;
+
+                                    theImage.height     = newnewheight;
+                                    theImage.width        = newnewwidth;
                                 &#125;
                             &#125;
                         &#125;
-                            
+
                         $image.css(&#123;
-                            &#39;width&#39;			: theImage.width + &#39;px&#39;,
-                            &#39;height&#39;		: theImage.height + &#39;px&#39;,
-                            &#39;margin-left&#39;	: -theImage.width / 2 + &#39;px&#39;,
-                            &#39;margin-top&#39;	: -theImage.height / 2 + &#39;px&#39;
-                        &#125;);							
+                            &#39;width&#39;            : theImage.width + &#39;px&#39;,
+                            &#39;height&#39;        : theImage.height + &#39;px&#39;,
+                            &#39;margin-left&#39;    : -theImage.width / 2 + &#39;px&#39;,
+                            &#39;margin-top&#39;    : -theImage.height / 2 + &#39;px&#39;
+                        &#125;);                            
                     &#125;;
-                    
-                return &#123;init : init&#125;;	
+
+                return &#123;init : init&#125;;    
             &#125;)();
-        
+
         ImageWall.init();
     &#125;);
 &lt;/script&gt;
-</code></pre>
-<h4 id="3-拷贝需要的4个js文件，到主题的js目录下"><a href="#3-拷贝需要的4个js文件，到主题的js目录下" class="headerlink" title="3. 拷贝需要的4个js文件，到主题的js目录下"></a>3. 拷贝需要的4个js文件，到主题的js目录下</h4><p>addphoto.js<br>jquery.min.js<br>jquery.masonry.min.js<br>jquery.easing.1.3.js<br>jquery-1.11.3.min.js</p>
+</code></pre><h4 id="3-拷贝需要的4个js文件，到主题的js目录下"><a href="#3-拷贝需要的4个js文件，到主题的js目录下" class="headerlink" title="3. 拷贝需要的4个js文件，到主题的js目录下"></a>3. 拷贝需要的4个js文件，到主题的js目录下</h4><p>addphoto.js<br>jquery.min.js<br>jquery.masonry.min.js<br>jquery.easing.1.3.js<br>jquery-1.11.3.min.js</p>
 <h4 id="4-编辑layout下的文件head-ejs，引入js"><a href="#4-编辑layout下的文件head-ejs，引入js" class="headerlink" title="4. 编辑layout下的文件head.ejs，引入js"></a>4. 编辑layout下的文件head.ejs，引入js</h4><pre><code>&lt;!-- YPN Add 2019-03-25 增加相册所需js --&gt;
 &lt;script type=&quot;text/javascript&quot; src=&quot;&lt;%- config.root %&gt;js/jquery-1.11.3.min.js&quot;&gt;&lt;/script&gt;
-</code></pre>
-<h4 id="5-新建图片数据源配置文件data-json，保存到菜单目录photos下面，内容如下"><a href="#5-新建图片数据源配置文件data-json，保存到菜单目录photos下面，内容如下" class="headerlink" title="5. 新建图片数据源配置文件data.json，保存到菜单目录photos下面，内容如下"></a>5. 新建图片数据源配置文件data.json，保存到菜单目录photos下面，内容如下</h4><pre><code>[
+</code></pre><h4 id="5-新建图片数据源配置文件data-json，保存到菜单目录photos下面，内容如下"><a href="#5-新建图片数据源配置文件data-json，保存到菜单目录photos下面，内容如下" class="headerlink" title="5. 新建图片数据源配置文件data.json，保存到菜单目录photos下面，内容如下"></a>5. 新建图片数据源配置文件data.json，保存到菜单目录photos下面，内容如下</h4><pre><code>[
     &#123;&quot;url&quot;:&quot;https://picturebed-1258146968.cos.ap-beijing.myqcloud.com/%E6%83%B3%E5%BF%B5.jpg&quot;,&quot;title&quot;:&quot;昜丿捺&quot;,&quot;desc&quot;:&quot;2019-03-25 22:06:26&quot;&#125;,
     &#123;&quot;url&quot;:&quot;https://picturebed-1258146968.cos.ap-beijing.myqcloud.com/%E7%BE%81%E7%BB%8A.jpg&quot;,&quot;title&quot;:&quot;昜丿捺&quot;,&quot;desc&quot;:&quot;2019-03-25 22:06:26&quot;&#125;,
     &#123;&quot;url&quot;:&quot;https://picturebed-1258146968.cos.ap-beijing.myqcloud.com/%E6%95%85%E4%BA%8B.jpg&quot;,&quot;title&quot;:&quot;昜丿捺&quot;,&quot;desc&quot;:&quot;2019-03-25 22:06:26&quot;&#125;,
@@ -666,11 +662,9 @@
     &#123;&quot;url&quot;:&quot;https://picturebed-1258146968.cos.ap-beijing.myqcloud.com/%E6%8B%A5%E6%9C%89.jpg&quot;,&quot;title&quot;:&quot;昜丿捺&quot;,&quot;desc&quot;:&quot;2019-03-25 22:06:26&quot;&#125;,
     &#123;&quot;url&quot;:&quot;https://picturebed-1258146968.cos.ap-beijing.myqcloud.com/%E5%8D%B4%E7%88%B1%E8%93%9D%E7%BD%97%E8%A3%99%E5%AD%90.jpg&quot;,&quot;title&quot;:&quot;昜丿捺&quot;,&quot;desc&quot;:&quot;2019-03-25 22:06:26&quot;&#125;
 ]
-</code></pre>
-<p>其中，图片地址为网络地址，示例中图床由腾讯云提供。</p>
+</code></pre><p>其中，图片地址为网络地址，示例中图床由腾讯云提供。</p>
 <h4 id="最后，重启hexo服务生效。"><a href="#最后，重启hexo服务生效。" class="headerlink" title="最后，重启hexo服务生效。"></a>最后，重启hexo服务生效。</h4><pre><code>hexo clean &amp;&amp; hexo g &amp;&amp; hexo s
 </code></pre>
-
     </div>
 
     

@@ -317,20 +317,13 @@
         read only = No
         create mask = 0777
         directory mask = 0777
-</code></pre>
-<span id="more"></span>
-
+</code></pre><span id="more"></span>
 <h3 id="2-给共享目录设置相应的权限"><a href="#2-给共享目录设置相应的权限" class="headerlink" title="2. 给共享目录设置相应的权限"></a>2. 给共享目录设置相应的权限</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">chmod -R 777 /filedisk/xxFileServer</span><br></pre></td></tr></table></figure>
-
 <h3 id="3-重启共享服务"><a href="#3-重启共享服务" class="headerlink" title="3. 重启共享服务"></a>3. 重启共享服务</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">service smb restart</span><br></pre></td></tr></table></figure>
-
 <h3 id="4-设置开机启动共享服务"><a href="#4-设置开机启动共享服务" class="headerlink" title="4. 设置开机启动共享服务"></a>4. 设置开机启动共享服务</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">chkconfig --level 5 smb on</span><br></pre></td></tr></table></figure>
-
 <!-- more -->
-
 <hr>
 <h2 id="远程挂载"><a href="#远程挂载" class="headerlink" title="远程挂载"></a>远程挂载</h2><h3 id="1-创建本地目录"><a href="#1-创建本地目录" class="headerlink" title="1. 创建本地目录"></a>1. 创建本地目录</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mkdir /var/xxFileServer</span><br></pre></td></tr></table></figure>
-
 <h3 id="2-挂载远程目录"><a href="#2-挂载远程目录" class="headerlink" title="2. 挂载远程目录"></a>2. 挂载远程目录</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mount //IP/xxFileServer /var/xxFileServer -o username=用户名,password=密码</span><br></pre></td></tr></table></figure>
 
     </div>

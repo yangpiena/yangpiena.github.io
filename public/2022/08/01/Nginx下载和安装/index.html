@@ -319,18 +319,13 @@
 <li>先安装gcc-c++编译器<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum/zypper install gcc-c++</span><br></pre></td></tr></table></figure>
   <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum/zypper install -y openssl openssl-devel</span><br></pre></td></tr></table></figure></li>
 <li>再安装pcre包<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum/zypper install -y pcre pcre-devel</span><br></pre></td></tr></table></figure></li>
-<li>再安装zlib包<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum/zypper install -y zlib zlib-devel</span><br></pre></td></tr></table></figure></li>
+<li>再安装zlib包<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum/zypper install -y zlib zlib-devel</span><br></pre></td></tr></table></figure>
+</li>
 </ul>
 <h2 id="安装nginx"><a href="#安装nginx" class="headerlink" title="安装nginx"></a>安装nginx</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tar -zxvf nginx-1.18.0.tar.gz</span><br></pre></td></tr></table></figure>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cd nginx-1.18.0</span><br></pre></td></tr></table></figure>
-<p>默认安装路径为 <code>/usr/local/nginx</code> ，也可使用参数prefix重新指定安装路径 <code> --prefix=/usr/local/nginx</code></p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">./configure</span><br></pre></td></tr></table></figure>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">make</span><br></pre></td></tr></table></figure>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">make install</span><br></pre></td></tr></table></figure>
-
-<h2 id="配置nginx"><a href="#配置nginx" class="headerlink" title="配置nginx"></a>配置nginx</h2><p>修改配置文件：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vim /usr/local/nginx/conf/nginx.conf</span><br></pre></td></tr></table></figure>
-<p>例如下面的配置，将本地端口8000向外转发为端口80，在 <code>server</code> 里增加下面配置：</p>
+<p>默认安装路径为 <code>/usr/local/nginx</code> ，也可使用参数prefix重新指定安装路径 <code>--prefix=/usr/local/nginx</code><br><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">./configure</span><br></pre></td></tr></table></figure><br><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">make</span><br></pre></td></tr></table></figure><br><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">make install</span><br></pre></td></tr></table></figure></p>
+<h2 id="配置nginx"><a href="#配置nginx" class="headerlink" title="配置nginx"></a>配置nginx</h2><p>修改配置文件：<br><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vim /usr/local/nginx/conf/nginx.conf</span><br></pre></td></tr></table></figure><br>例如下面的配置，将本地端口8000向外转发为端口80，在 <code>server</code> 里增加下面配置：</p>
 <pre><code>    listen       80;
     server_name  localhost;
 
@@ -350,37 +345,27 @@
     location /static &#123;
        alias /usr/local/cam/statics; # your Django project&#39;s static files - amend as required
     &#125;
-</code></pre>
-<h3 id="检查nginx配置"><a href="#检查nginx配置" class="headerlink" title="检查nginx配置"></a>检查nginx配置</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cd /usr/local/nginx/</span><br></pre></td></tr></table></figure>
+</code></pre><h3 id="检查nginx配置"><a href="#检查nginx配置" class="headerlink" title="检查nginx配置"></a>检查nginx配置</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cd /usr/local/nginx/</span><br></pre></td></tr></table></figure>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">./sbin/nginx -t</span><br></pre></td></tr></table></figure>
 <p>正常情况下输出nginx的配置文件路径，及配置校验成功提示：</p>
 <pre><code>nginx: the configuration file /usr/local/nginx/conf/nginx.conf syntax is ok
 nginx: configuration file /usr/local/nginx/conf/nginx.conf test is successful
-</code></pre>
-<h2 id="启动nginx"><a href="#启动nginx" class="headerlink" title="启动nginx"></a>启动nginx</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cd /usr/local/nginx/sbin</span><br></pre></td></tr></table></figure>
+</code></pre><h2 id="启动nginx"><a href="#启动nginx" class="headerlink" title="启动nginx"></a>启动nginx</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cd /usr/local/nginx/sbin</span><br></pre></td></tr></table></figure>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">./nginx</span><br></pre></td></tr></table></figure>
 <blockquote>
-<p>启动：&#x2F;usr&#x2F;local&#x2F;nginx&#x2F;sbin&#x2F;nginx<br>停止&#x2F;重新加载：&#x2F;usr&#x2F;local&#x2F;nginx&#x2F;sbin&#x2F;nginx -s stop(quit、reload)<br>验证配置文件是否合法：&#x2F;usr&#x2F;local&#x2F;nginx&#x2F;sbin&#x2F;nginx -t<br>命令帮助：&#x2F;usr&#x2F;local&#x2F;nginx&#x2F;sbin&#x2F;nginx -h</p>
+<p>启动：/usr/local/nginx/sbin/nginx<br>停止/重新加载：/usr/local/nginx/sbin/nginx -s stop(quit、reload)<br>验证配置文件是否合法：/usr/local/nginx/sbin/nginx -t<br>命令帮助：/usr/local/nginx/sbin/nginx -h</p>
 </blockquote>
-<h2 id="创建nginx服务"><a href="#创建nginx服务" class="headerlink" title="创建nginx服务"></a>创建nginx服务</h2><p>建立服务文件</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vim /usr/lib/systemd/system/nginx.service</span><br></pre></td></tr></table></figure>
-<p>加入下面内容：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">[Unit]</span><br><span class="line">Description=nginx - high performance web server</span><br><span class="line">After=network.target remote-fs.target nss-lookup.target</span><br><span class="line">[Service]</span><br><span class="line">Type=forking</span><br><span class="line">ExecStart=/usr/local/nginx/sbin/nginx</span><br><span class="line">ExecReload=/usr/local/nginx/sbin/nginx -s reload</span><br><span class="line">ExecStop=/usr/local/nginx/sbin/nginx -s stop</span><br><span class="line">[Install]</span><br><span class="line">WantedBy=multi-user.target</span><br></pre></td></tr></table></figure>
-
+<h2 id="创建nginx服务"><a href="#创建nginx服务" class="headerlink" title="创建nginx服务"></a>创建nginx服务</h2><p>建立服务文件<br><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vim /usr/lib/systemd/system/nginx.service</span><br></pre></td></tr></table></figure><br>加入下面内容：<br><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">[Unit]</span><br><span class="line">Description=nginx - high performance web server</span><br><span class="line">After=network.target remote-fs.target nss-lookup.target</span><br><span class="line">[Service]</span><br><span class="line">Type=forking</span><br><span class="line">ExecStart=/usr/local/nginx/sbin/nginx</span><br><span class="line">ExecReload=/usr/local/nginx/sbin/nginx -s reload</span><br><span class="line">ExecStop=/usr/local/nginx/sbin/nginx -s stop</span><br><span class="line">[Install]</span><br><span class="line">WantedBy=multi-user.target</span><br></pre></td></tr></table></figure></p>
 <blockquote>
-<p>文件内容解释: [Unit]: 服务的说明<br>Description:描述服务<br>After:描述服务类别<br>[Service]服务运行参数的设置<br>Type&#x3D;forking是后台运行的形式<br>ExecStart为服务的具体运行命令<br>ExecReload为重启命令<br>ExecStop为停止命令<br>PrivateTmp&#x3D;True表示给服务分配独立的临时空间<br>注意：启动、重启、停止命令全部要求使用绝对路径<br>[Install]服务安装的相关设置，可设置为多用户</p>
+<p>文件内容解释: [Unit]: 服务的说明<br>Description:描述服务<br>After:描述服务类别<br>[Service]服务运行参数的设置<br>Type=forking是后台运行的形式<br>ExecStart为服务的具体运行命令<br>ExecReload为重启命令<br>ExecStop为停止命令<br>PrivateTmp=True表示给服务分配独立的临时空间<br>注意：启动、重启、停止命令全部要求使用绝对路径<br>[Install]服务安装的相关设置，可设置为多用户</p>
 </blockquote>
-<p>使服务文件生效</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">systemctl daemon-reload</span><br></pre></td></tr></table></figure>
+<p>使服务文件生效<br><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">systemctl daemon-reload</span><br></pre></td></tr></table></figure></p>
 <blockquote>
-<p>如果启动服务失败，则以754的权限保存在目录：<br>Chmod +754 &#x2F;usr&#x2F;lib&#x2F;systemd&#x2F;system&#x2F;nginx.service</p>
+<p>如果启动服务失败，则以754的权限保存在目录：<br>Chmod +754 /usr/lib/systemd/system/nginx.service</p>
 </blockquote>
-<p>启动nginx服务</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">systemctl start nginx.service</span><br></pre></td></tr></table></figure>
-<p>停止nginx服务</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">systemctl stop nginx.service</span><br></pre></td></tr></table></figure>
+<p>启动nginx服务<br><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">systemctl start nginx.service</span><br></pre></td></tr></table></figure><br>停止nginx服务<br><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">systemctl stop nginx.service</span><br></pre></td></tr></table></figure></p>
 <blockquote>
-<p><a href="/2016/11/22/Linux%E5%91%BD%E4%BB%A4%E5%A4%A7%E5%85%A8/">其它服务命令参考</a></p>
+<p><a href="/2016/11/22/Linux命令大全/">其它服务命令参考</a></p>
 </blockquote>
 <hr>
 <h1 id="Open-SUSE-下安装"><a href="#Open-SUSE-下安装" class="headerlink" title="Open SUSE 下安装"></a>Open SUSE 下安装</h1><p>有两种安装方法：</p>
@@ -391,26 +376,18 @@ nginx: configuration file /usr/local/nginx/conf/nginx.conf test is successful
 <h2 id="检查nginx"><a href="#检查nginx" class="headerlink" title="检查nginx"></a>检查nginx</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nginx -v</span><br></pre></td></tr></table></figure>
 <p>如果输出了Nginx的版本号说明安装成功了。</p>
 <h2 id="启动nginx-1"><a href="#启动nginx-1" class="headerlink" title="启动nginx"></a>启动nginx</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nginx</span><br></pre></td></tr></table></figure>
-<p>或</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">systemctl start nginx</span><br></pre></td></tr></table></figure>
+<p>或<br><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">systemctl start nginx</span><br></pre></td></tr></table></figure></p>
 <h3 id="查找默认的配置文件位置"><a href="#查找默认的配置文件位置" class="headerlink" title="查找默认的配置文件位置"></a>查找默认的配置文件位置</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nginx -t</span><br></pre></td></tr></table></figure>
-<h3 id="加载指定的配置文件"><a href="#加载指定的配置文件" class="headerlink" title="加载指定的配置文件"></a>加载指定的配置文件</h3><p>nginx 启动时会默认加载 <code>/etc/nginx/nginx.cnf</code> 下的配置文件进行启动，如果你想加载其他的配置文件，可以使用 -c 指令：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nginx -c /etc/nginx/nginx.conf</span><br></pre></td></tr></table></figure>
-
-<h2 id="停止nginx"><a href="#停止nginx" class="headerlink" title="停止nginx"></a>停止nginx</h2><p>nginx 停止有两种方式：快速停止和平滑停止<br>快速停止：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nginx -s stop</span><br></pre></td></tr></table></figure>
-<p>平滑停止：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nginx -s quit</span><br></pre></td></tr></table></figure>
+<h3 id="加载指定的配置文件"><a href="#加载指定的配置文件" class="headerlink" title="加载指定的配置文件"></a>加载指定的配置文件</h3><p>nginx 启动时会默认加载 <code>/etc/nginx/nginx.cnf</code> 下的配置文件进行启动，如果你想加载其他的配置文件，可以使用 -c 指令：<br><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nginx -c /etc/nginx/nginx.conf</span><br></pre></td></tr></table></figure></p>
+<h2 id="停止nginx"><a href="#停止nginx" class="headerlink" title="停止nginx"></a>停止nginx</h2><p>nginx 停止有两种方式：快速停止和平滑停止<br>快速停止：<br><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nginx -s stop</span><br></pre></td></tr></table></figure><br>平滑停止：<br><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nginx -s quit</span><br></pre></td></tr></table></figure></p>
 <blockquote>
 <p>平滑停止会等待所有的工作进程处理完所有的请求后，再进行停止，不是强制停止。</p>
 </blockquote>
-<h2 id="重载配置文件"><a href="#重载配置文件" class="headerlink" title="重载配置文件"></a>重载配置文件</h2><p>nginx 支持配置文件的热修改，无需重启服务也可重新加载配置文件，使用命令：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nginx -s reload</span><br></pre></td></tr></table></figure>
+<h2 id="重载配置文件"><a href="#重载配置文件" class="headerlink" title="重载配置文件"></a>重载配置文件</h2><p>nginx 支持配置文件的热修改，无需重启服务也可重新加载配置文件，使用命令：<br><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nginx -s reload</span><br></pre></td></tr></table></figure></p>
 <blockquote>
 <p>主进程接收到上述指令后，首先会检查配置文件的语法是否正确，确认无误后，会开启新的工作进程，然后向旧的工作进程发送关闭的指令，旧的工作进程收到指令后，并非立即停止，而是处理完当前的请求后再自行停止。通过这个步骤，来完成对配置文件的重新载入。</p>
 </blockquote>
 <h2 id="添加到开机自启动"><a href="#添加到开机自启动" class="headerlink" title="添加到开机自启动"></a>添加到开机自启动</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">systemctl enable nginx</span><br></pre></td></tr></table></figure>
-
 <hr>
 <h1 id="查看-Nginx-的运行状态"><a href="#查看-Nginx-的运行状态" class="headerlink" title="查看 Nginx 的运行状态"></a>查看 Nginx 的运行状态</h1><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ps -ef|grep nginx</span><br></pre></td></tr></table></figure>
 <p>如果打出多个进程信息，表示nginx 已经成功启动，包含一个主进程（master process）和几个工作进程（work process）。<br>如果没有进程信息，表示 nginx 未成功启动。</p>

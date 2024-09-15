@@ -317,12 +317,9 @@
 <li>listen：同时拥有前端和后端,适用于一对一环境。fronted和backend的组合体，比如haproxy实例状态监控部分配置</li>
 </ul>
 <span id="more"></span>
-
 <blockquote>
 <p>所有代理的名称只能使用大写字母、小写字母、数字、-(中线)、_(下划线)、.(点号)和:(冒号)。此外，ACL名称会区分字母大小写。</p>
-</blockquote>
-<blockquote>
-<p>时间格式配置说明：默认以毫秒为单位，但也可以使用其它的时间单位后缀。<br> us: 微秒(microseconds)，即1&#x2F;1000000秒；<br> ms: 毫秒(milliseconds)，即1&#x2F;1000秒；<br> s: 秒(seconds)；<br> m: 分钟(minutes)；<br> h：小时(hours)；<br> d: 天(days)；</p>
+<p>时间格式配置说明：默认以毫秒为单位，但也可以使用其它的时间单位后缀。<br> us: 微秒(microseconds)，即1/1000000秒；<br> ms: 毫秒(milliseconds)，即1/1000秒；<br> s: 秒(seconds)；<br> m: 分钟(minutes)；<br> h：小时(hours)；<br> d: 天(days)；</p>
 </blockquote>
 <hr>
 <h3 id="配置参数"><a href="#配置参数" class="headerlink" title="配置参数"></a>配置参数</h3><h5 id="全局配置"><a href="#全局配置" class="headerlink" title="全局配置"></a>全局配置</h5><p>通常主要用于定义全局参数，属于进程级的配置，通常和操作系统配置有关。</p>
@@ -339,8 +336,7 @@ global
       pidfile /usr/local/haproxy/logs/haproxy.pid # 将所有进程的pid写入文件
     # debug                                       # haproxy 调试级别，建议只在开启单进程的时候调试
     # quiet
-</code></pre>
-<ul>
+</code></pre><ul>
 <li>log<br>全局的日志配置，local0是日志输出设置，info表示日志级别（err，waning，info，debug）；</li>
 <li>maxconn<br>设定每个HAProxy进程可接受的最大并发连接数，此选项等同于linux命令选项”ulimit -n”</li>
 <li>chroot<br>修改haproxy的工作目录至指定的目录并在放弃权限之前执行chroot()操作,可以提升haproxy的安全级别，不过需要注意的是要确保指定的目录为空目录且任何用户均不能有写权限；</li>
@@ -374,19 +370,18 @@ defaults
     # timeout http-keep-alive 10s  # 默认持久连接超时时间
     # timeout http-request    10s  # 默认http请求超时时间
     # timeout queue   1m           # 默认队列超时时间
-</code></pre>
-<ul>
+</code></pre><ul>
 <li>mode { tcp|http|health }<br>设定实例的运行模式或协议。当实现内容交换时，前端和后端必须工作于同一种模式(一般 说来都是HTTP模式)，否则将无法启动实例。<ul>
-<li>tcp<br>  实例运行于纯TCP模式，在客户端和服务器端之间将建立一个全双工的连接，且不会对7层报文做任何类型的检查；此为默认模式，通常用于SSL、SSH、SMTP等应用；</li>
-<li>http<br>  实例运行于HTTP模式，客户端请求在转发至后端服务器之前将被深度分析，所有不与RFC格式兼容的请求都会被拒绝；</li>
-<li>health<br>  实例工作于health模式，其对入站请求仅响应“OK”信息并关闭连接，且不会记录任何日志信息；此模式将用于响应外部组件的健康状态检查请求；目前来讲，此模式已经废弃，因为tcp或http模式中的monitor关键字可完成类似功能</li>
+<li>tcp<br>实例运行于纯TCP模式，在客户端和服务器端之间将建立一个全双工的连接，且不会对7层报文做任何类型的检查；此为默认模式，通常用于SSL、SSH、SMTP等应用；</li>
+<li>http<br>实例运行于HTTP模式，客户端请求在转发至后端服务器之前将被深度分析，所有不与RFC格式兼容的请求都会被拒绝；</li>
+<li>health<br>实例工作于health模式，其对入站请求仅响应“OK”信息并关闭连接，且不会记录任何日志信息；此模式将用于响应外部组件的健康状态检查请求；目前来讲，此模式已经废弃，因为tcp或http模式中的monitor关键字可完成类似功能</li>
 </ul>
 </li>
 <li>log   global<br>设置日志继承全局配置段的设置。</li>
 <li>option httplog<br>表示开始打开记录http请求的日志功能。</li>
 <li>option dontlognull<br>如果产生了一个空连接，那这个空连接的日志将不会记录。</li>
 <li>option http-server-close<br>打开http协议中服务器端关闭功能，使得支持长连接，使得会话可以被重用，使得每一个日志记录都会被记录。</li>
-<li>option forwardfor except 127.0.0.0&#x2F;8<br>如果上游服务器上的应用程序想记录客户端的真实IP地址，haproxy会把客户端的IP信息发送给上游服务器，在HTTP请求中添加”X-Forwarded-For”字段,但当是haproxy自身的健康检测机制去访问上游服务器时是不应该把这样的访问日志记录到日志中的，所以用except来排除127.0.0.0，即haproxy身。</li>
+<li>option forwardfor except 127.0.0.0/8<br>如果上游服务器上的应用程序想记录客户端的真实IP地址，haproxy会把客户端的IP信息发送给上游服务器，在HTTP请求中添加”X-Forwarded-For”字段,但当是haproxy自身的健康检测机制去访问上游服务器时是不应该把这样的访问日志记录到日志中的，所以用except来排除127.0.0.0，即haproxy身。</li>
 <li>option redispatch<br>当与上游服务器的会话失败(服务器故障或其他原因)时，把会话重新分发到其他健康的服务器上,当原来故障的服务器恢复时，会话又被定向到已恢复的服务器上。还可以用”retries”关键字来设定在判定会话失败时的尝试连接的次数。</li>
 <li>retries 3<br>向上游服务器尝试连接的最大次数，超过此值就认为后端服务器不可用。</li>
 <li>option abortonclose<br>当haproxy负载很高时，自动结束掉当前队列处理比较久的链接。</li>
@@ -412,8 +407,7 @@ frontend main
    use_backend webserver if web     # 如果上面定义的web规则被触发，就将请求分发到webserver这个作用域。
    use_backend imgserver if img     # 如果上面定义的img规则被触发，就将请求分发到imgserver这个作用域。
    default_backend dynamic          # 不满足则响应backend的默认页面
-</code></pre>
-<ul>
+</code></pre><ul>
 <li>frontend http_80_in<br>定义一个名为http_80_in的frontend。</li>
 <li>bind 0.0.0.0:80<br>定义haproxy前端部分监听的端口。</li>
 <li>mode http<br>定义为http模式。</li>
@@ -443,20 +437,19 @@ backend dynamic
         balance roundrobin 
         server  test1 192.168.1.23:80 check maxconn 2000 
         server  test2 192.168.1.24:80 check maxconn 2000
-</code></pre>
-<ul>
+</code></pre><ul>
 <li>cookie<br>表示充许向cookie插入SERVERID,每台服务器的SERVERID可以下面的server关键字中使用cookie关键字定义。</li>
 <li>option httpchk<br>此选项表示启用HTTP的服务状态检测功能。 HAProxy作为一个专业的负载均衡器，并且它支持对backend部分指定的后端服务节点的 健康检查，以保证在后端的backend中某个节点不能服务时，把从frontend端进来的客户端请求分配至backend中其他健康节点上，从而保证 整体服务的可用性。<br>option httpchk用法：<ul>
-<li>method<br>  表示HTTP请求的方式，常用的有OPTIONS、GET、HEAD几种方式。<br>  一般健康检查可以采用HEAD方式进行，而不是采用GET方式，这是因为HEAD方式没有数据返回，仅检查Response的HEAD是不是状态码200。因此，相对于GET，HEAD方式更快，更简单。</li>
-<li>uri<br>  表示要检测的URL地址，通过执行此URL，可以获取后端服务器的运行状态，在正常情况下返回状态码200，返回其他状态码均为异常状态。</li>
-<li>version<br>  指定心跳检测时的HTTP的版本号。</li>
+<li>method<br>表示HTTP请求的方式，常用的有OPTIONS、GET、HEAD几种方式。<br>一般健康检查可以采用HEAD方式进行，而不是采用GET方式，这是因为HEAD方式没有数据返回，仅检查Response的HEAD是不是状态码200。因此，相对于GET，HEAD方式更快，更简单。</li>
+<li>uri<br>表示要检测的URL地址，通过执行此URL，可以获取后端服务器的运行状态，在正常情况下返回状态码200，返回其他状态码均为异常状态。</li>
+<li>version<br>指定心跳检测时的HTTP的版本号。</li>
 </ul>
 </li>
 <li>server<br>用来定义多台后端真实服务器,不能用于defaults和frontend部分,格式为:server name address:port param*<ul>
-<li>name<br>  为后端真实服务器指定一个内部名称，随便这下义一个即可。</li>
-<li>address<br>  后端真实服务器的iP地址或主机名。</li>
-<li>port<br>  指定连接请求发往真实服务器时的目标端口，在未设定时，将使用客户端请求时的同一端口。</li>
-<li>param<br>  为后端服务器设定的一系列参数，可用参数非常多，</li>
+<li>name<br>为后端真实服务器指定一个内部名称，随便这下义一个即可。</li>
+<li>address<br>后端真实服务器的iP地址或主机名。</li>
+<li>port<br>指定连接请求发往真实服务器时的目标端口，在未设定时，将使用客户端请求时的同一端口。</li>
+<li>param<br>为后端服务器设定的一系列参数，可用参数非常多，</li>
 </ul>
 </li>
 <li>check<br>表示启用对此后端服务器执行健康检查。</li>
@@ -484,16 +477,14 @@ listen stats
        stats auth    admin1:admin1        # 设置监控页面的用户和密码：admin1
        stats hide-version                 # 隐藏统计页面上HAProxy的版本信息
        stats admin if TRUE                # 设置手工启动/禁用，后端服务器(haproxy-1.4.9以后版本)
-</code></pre>
-<h5 id="errorfile配置"><a href="#errorfile配置" class="headerlink" title="errorfile配置"></a>errorfile配置</h5><p>格式为: errorfile  错误代码code  错误代码文件路径<br>errorfile错误页面配置，在用户请求不存在的页面时，返回一个页面文件给客户端，而非由haproxy生成的错误代码；可用于所有段中。例如：</p>
+</code></pre><h5 id="errorfile配置"><a href="#errorfile配置" class="headerlink" title="errorfile配置"></a>errorfile配置</h5><p>格式为: errorfile  错误代码code  错误代码文件路径<br>errorfile错误页面配置，在用户请求不存在的页面时，返回一个页面文件给客户端，而非由haproxy生成的错误代码；可用于所有段中。例如：</p>
 <pre><code>###################### 错误页面配置 ######################
 errorfile 403 /usr/local/haproxy/errorfiles/403.http
 errorfile 500 /usr/local/haproxy/errorfiles/500.http
 errorfile 502 /usr/local/haproxy/errorfiles/502.http
 errorfile 503 /usr/local/haproxy/errorfiles/503.http
 errorfile 504 /usr/local/haproxy/errorfiles/504.http
-</code></pre>
-<hr>
+</code></pre><hr>
 <h3 id="一份完整的haproxy配置文件实例："><a href="#一份完整的haproxy配置文件实例：" class="headerlink" title="一份完整的haproxy配置文件实例："></a>一份完整的haproxy配置文件实例：</h3><pre><code>###################### 全局配置 ######################
 global
        log     127.0.0.1 local0                    # 日志输出配置，所有日志记录在本机，通过local0输出
@@ -548,7 +539,6 @@ errorfile 502 /usr/local/haproxy/errorfiles/502.http
 errorfile 503 /usr/local/haproxy/errorfiles/503.http
 errorfile 504 /usr/local/haproxy/errorfiles/504.http
 </code></pre>
-
     </div>
 
     

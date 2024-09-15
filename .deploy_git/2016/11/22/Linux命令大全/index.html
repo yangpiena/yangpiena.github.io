@@ -308,600 +308,625 @@
     
     
     <div class="post-body" itemprop="articleBody">
-        <h2 id="基础命令"><a href="#基础命令" class="headerlink" title="基础命令"></a>基础命令</h2><h3 id="系统"><a href="#系统" class="headerlink" title="系统"></a>系统</h3><table>
+        <h2 id="基础命令"><a href="#基础命令" class="headerlink" title="基础命令"></a>基础命令</h2><h3 id="系统"><a href="#系统" class="headerlink" title="系统"></a>系统</h3><div class="table-container">
+<table>
 <thead>
 <tr>
 <th>命令</th>
-<th align="left">说明</th>
+<th style="text-align:left">说明</th>
 </tr>
 </thead>
-<tbody><tr>
+<tbody>
+<tr>
 <td>reboot</td>
-<td align="left">重启系统</td>
+<td style="text-align:left">重启系统</td>
 </tr>
 <tr>
 <td>shutdown -r now</td>
-<td align="left">重启系统</td>
+<td style="text-align:left">重启系统</td>
 </tr>
 <tr>
 <td>shutdown -c</td>
-<td align="left">取消重启</td>
+<td style="text-align:left">取消重启</td>
 </tr>
 <tr>
 <td>halt</td>
-<td align="left">立刻关机</td>
+<td style="text-align:left">立刻关机</td>
 </tr>
 <tr>
 <td>poweroff</td>
-<td align="left">立刻关机</td>
+<td style="text-align:left">立刻关机</td>
 </tr>
 <tr>
 <td>shutdown -h now</td>
-<td align="left">立刻关机（root用户使用）</td>
+<td style="text-align:left">立刻关机（root用户使用）</td>
 </tr>
 <tr>
 <td>shutdown -h 10</td>
-<td align="left">10分钟后自动关机</td>
+<td style="text-align:left">10分钟后自动关机</td>
 </tr>
 <tr>
 <td>yum update</td>
-<td align="left">升级Linux，升级所有包同时也升级软件和系统内核</td>
+<td style="text-align:left">升级Linux，升级所有包同时也升级软件和系统内核</td>
 </tr>
 <tr>
 <td>yum upgrade</td>
-<td align="left">升级Linux，只升级所有包，不升级软件和系统内核</td>
+<td style="text-align:left">升级Linux，只升级所有包，不升级软件和系统内核</td>
 </tr>
 <tr>
-<td>cat &#x2F;proc&#x2F;version</td>
-<td align="left">查看内核版本</td>
+<td>cat /proc/version</td>
+<td style="text-align:left">查看内核版本</td>
 </tr>
 <tr>
 <td>uname -a</td>
-<td align="left">查看内核版本</td>
+<td style="text-align:left">查看内核版本</td>
 </tr>
 <tr>
 <td>lsb_release -a</td>
-<td align="left">查看系统版本</td>
+<td style="text-align:left">查看系统版本</td>
 </tr>
 <tr>
-<td>cat &#x2F;etc&#x2F;issue</td>
-<td align="left">查看系统版本</td>
+<td>cat /etc/issue</td>
+<td style="text-align:left">查看系统版本</td>
 </tr>
 <tr>
-<td>cat &#x2F;etc&#x2F;redhat-release</td>
-<td align="left">查看系统版本（适合Redhat系）</td>
+<td>cat /etc/redhat-release</td>
+<td style="text-align:left">查看系统版本（适合Redhat系）</td>
 </tr>
 <tr>
-<td>cat &#x2F;etc&#x2F;*-release</td>
-<td align="left">查看系统版本（适合SUSE系）</td>
+<td>cat /etc/*-release</td>
+<td style="text-align:left">查看系统版本（适合SUSE系）</td>
 </tr>
 <tr>
 <td>getconf LONG_BIT</td>
-<td align="left">查看系统位数</td>
+<td style="text-align:left">查看系统位数</td>
 </tr>
 <tr>
-<td>cat &#x2F;proc&#x2F;cpuinfo</td>
-<td align="left">查看CPU型号</td>
+<td>cat /proc/cpuinfo</td>
+<td style="text-align:left">查看CPU型号</td>
 </tr>
 <tr>
 <td>top</td>
-<td align="left">查看实时CPU使用率</td>
+<td style="text-align:left">查看实时CPU使用率</td>
 </tr>
 <tr>
-<td>ps aux&amp;#124;head -1;ps aux&amp;#124;grep -v PID&amp;#124;sort -rn -k +3&amp;#124;head</td>
-<td align="left">查看占用CPU最多的10个进程。head默认取前10行，自定义K行时，在后面跟-K即可</td>
+<td>ps aux&#124;head -1;ps aux&#124;grep -v PID&#124;sort -rn -k +3&#124;head</td>
+<td style="text-align:left">查看占用CPU最多的10个进程。head默认取前10行，自定义K行时，在后面跟-K即可</td>
 </tr>
 <tr>
 <td>free -m</td>
-<td align="left">查看内存</td>
+<td style="text-align:left">查看内存</td>
 </tr>
 <tr>
-<td>ps aux&amp;#124;head -1;ps aux&amp;#124;grep -v PID&amp;#124;sort -rn -k +4&amp;#124;head</td>
-<td align="left">查看占用内存最多的10个进程。head默认取前10行，自定义K行时，在后面跟-K即可</td>
+<td>ps aux&#124;head -1;ps aux&#124;grep -v PID&#124;sort -rn -k +4&#124;head</td>
+<td style="text-align:left">查看占用内存最多的10个进程。head默认取前10行，自定义K行时，在后面跟-K即可</td>
 </tr>
 <tr>
 <td>fdisk -l</td>
-<td align="left">查看硬盘，可查看未分区和格式化的数据盘</td>
+<td style="text-align:left">查看硬盘，可查看未分区和格式化的数据盘</td>
 </tr>
 <tr>
 <td>df -h</td>
-<td align="left">查看硬盘空间情况</td>
+<td style="text-align:left">查看硬盘空间情况</td>
 </tr>
 <tr>
-<td>du -sh .&#x2F;*</td>
-<td align="left">查看当前目录下各文件&#x2F;文件夹的大小</td>
+<td>du -sh ./*</td>
+<td style="text-align:left">查看当前目录下各文件/文件夹的大小</td>
 </tr>
 <tr>
 <td>jps</td>
-<td align="left">查看当前所有Java进程pid的命令</td>
+<td style="text-align:left">查看当前所有Java进程pid的命令</td>
 </tr>
 <tr>
 <td>kill</td>
-<td align="left">删除执行中的程序或工作</td>
+<td style="text-align:left">删除执行中的程序或工作</td>
 </tr>
 <tr>
 <td>kill -9</td>
-<td align="left">强制终止执行中的程序或工作</td>
+<td style="text-align:left">强制终止执行中的程序或工作</td>
 </tr>
 <tr>
 <td>passwd</td>
-<td align="left">修改用户密码，命令后跟用户名即可</td>
+<td style="text-align:left">修改用户密码，命令后跟用户名即可</td>
 </tr>
 <tr>
-<td>vim &#x2F;etc&#x2F;HOSTNAME</td>
-<td align="left">修改主机名字</td>
+<td>vim /etc/HOSTNAME</td>
+<td style="text-align:left">修改主机名字</td>
 </tr>
 <tr>
-<td>hostname -F &#x2F;etc&#x2F;HOSTNAME</td>
-<td align="left">使修改立刻生效</td>
+<td>hostname -F /etc/HOSTNAME</td>
+<td style="text-align:left">使修改立刻生效</td>
 </tr>
 <tr>
-<td>cat &#x2F;var&#x2F;log&#x2F;secure</td>
-<td align="left">安全和身份日志，记录用户和工作组变化情况、用户登陆认证情况 ，可以查看ssh登录的情况</td>
+<td>cat /var/log/secure</td>
+<td style="text-align:left">安全和身份日志，记录用户和工作组变化情况、用户登陆认证情况 ，可以查看ssh登录的情况</td>
 </tr>
 <tr>
 <td>lastlog</td>
-<td align="left">记录用户最后一次成功登陆的时间、登陆IP等信息。使用lastlog命令查看，root为管理员用户，admin为普通用户，其他为系统用户，系统用户没有权限登录，所以显示为never logged in</td>
+<td style="text-align:left">记录用户最后一次成功登陆的时间、登陆IP等信息。使用lastlog命令查看，root为管理员用户，admin为普通用户，其他为系统用户，系统用户没有权限登录，所以显示为never logged in</td>
 </tr>
 <tr>
 <td>lastb</td>
-<td align="left">记录失败的登录尝试信息</td>
+<td style="text-align:left">记录失败的登录尝试信息</td>
 </tr>
 <tr>
 <td>last</td>
-<td align="left">记录登陆过系统的所有用户信息</td>
+<td style="text-align:left">记录登陆过系统的所有用户信息</td>
 </tr>
-</tbody></table>
+</tbody>
+</table>
+</div>
 <span id="more"></span>
-
 <hr>
-<h3 id="文件"><a href="#文件" class="headerlink" title="文件"></a>文件</h3><table>
+<h3 id="文件"><a href="#文件" class="headerlink" title="文件"></a>文件</h3><div class="table-container">
+<table>
 <thead>
 <tr>
 <th>命令</th>
-<th align="left">说明</th>
+<th style="text-align:left">说明</th>
 </tr>
 </thead>
-<tbody><tr>
+<tbody>
+<tr>
 <td>cd</td>
-<td align="left">改变目录到</td>
+<td style="text-align:left">改变目录到</td>
 </tr>
 <tr>
 <td>cd ~</td>
-<td align="left">回到家目录</td>
+<td style="text-align:left">回到家目录</td>
 </tr>
 <tr>
 <td>pwd</td>
-<td align="left">查看当前路径</td>
+<td style="text-align:left">查看当前路径</td>
 </tr>
 <tr>
 <td>mkdir</td>
-<td align="left">创建文件夹</td>
+<td style="text-align:left">创建文件夹</td>
 </tr>
 <tr>
 <td>touch</td>
-<td align="left">创建文件</td>
+<td style="text-align:left">创建文件</td>
 </tr>
 <tr>
 <td>echo -n  “ “ &gt;</td>
-<td align="left">清空文件内容，如：echo -n  “ “ &gt;logs&#x2F;error.log</td>
+<td style="text-align:left">清空文件内容，如：echo -n  “ “ &gt;logs/error.log</td>
 </tr>
 <tr>
 <td>rm</td>
-<td align="left">删除文件</td>
+<td style="text-align:left">删除文件</td>
 </tr>
 <tr>
 <td>rm -r</td>
-<td align="left">删除文件夹</td>
+<td style="text-align:left">删除文件夹</td>
 </tr>
 <tr>
 <td>rm -fr</td>
-<td align="left">直接删除，无需确认</td>
+<td style="text-align:left">直接删除，无需确认</td>
 </tr>
 <tr>
 <td>cp</td>
-<td align="left">复制</td>
+<td style="text-align:left">复制</td>
 </tr>
 <tr>
 <td>mv</td>
-<td align="left">移动、重命名文件或文件夹</td>
+<td style="text-align:left">移动、重命名文件或文件夹</td>
 </tr>
 <tr>
 <td>find</td>
-<td align="left">查找</td>
+<td style="text-align:left">查找</td>
 </tr>
 <tr>
 <td>which</td>
-<td align="left">查找</td>
+<td style="text-align:left">查找</td>
 </tr>
 <tr>
 <td>cat</td>
-<td align="left">查看文本内容</td>
+<td style="text-align:left">查看文本内容</td>
 </tr>
 <tr>
 <td>head</td>
-<td align="left">查看文本前十行</td>
+<td style="text-align:left">查看文本前十行</td>
 </tr>
 <tr>
 <td>tail</td>
-<td align="left">查看文本后十行</td>
+<td style="text-align:left">查看文本后十行</td>
 </tr>
 <tr>
 <td>tail -f</td>
-<td align="left">实时查看文本最新内容</td>
+<td style="text-align:left">实时查看文本最新内容</td>
 </tr>
 <tr>
 <td>more</td>
-<td align="left">让文件内容一屏一屏的显示</td>
+<td style="text-align:left">让文件内容一屏一屏的显示</td>
 </tr>
 <tr>
-<td>cat XXX &amp;#124; more</td>
-<td align="left">管道：将cat显示出来的内容重新输出给more命令</td>
+<td>cat XXX &#124; more</td>
+<td style="text-align:left">管道：将cat显示出来的内容重新输出给more命令</td>
 </tr>
 <tr>
 <td>&gt;</td>
-<td align="left">重定向：将文件内容输出到指定的文件或位置。如cat &#x2F;etc&#x2F;services &gt; a.txt</td>
+<td style="text-align:left">重定向：将文件内容输出到指定的文件或位置。如cat /etc/services &gt; a.txt</td>
 </tr>
 <tr>
 <td>ls -i</td>
-<td align="left">使用ls -i命令找到文件或文件夹的节点编号</td>
+<td style="text-align:left">使用ls -i命令找到文件或文件夹的节点编号</td>
 </tr>
 <tr>
 <td>find -inum 2243223 -delete</td>
-<td align="left">使用find命令查询并且删除乱码文件或文件夹</td>
+<td style="text-align:left">使用find命令查询并且删除乱码文件或文件夹</td>
 </tr>
 <tr>
 <td>rm -rf fileA</td>
-<td align="left">删除文件或文件夹fileA的软链接</td>
+<td style="text-align:left">删除文件或文件夹fileA的软链接</td>
 </tr>
 <tr>
 <td>ln -s fileB fileA</td>
-<td align="left">设置软链接用快捷方式fileB代替fileA</td>
+<td style="text-align:left">设置软链接用快捷方式fileB代替fileA</td>
 </tr>
 <tr>
 <td>ln fileB fileA</td>
-<td align="left">建立硬链接，相当于一个文件存储在两个位置，可以有效防止误删</td>
+<td style="text-align:left">建立硬链接，相当于一个文件存储在两个位置，可以有效防止误删</td>
 </tr>
 <tr>
 <td><strong>删除指定文件夹下后缀名相同的文件：</strong></td>
-<td align="left"></td>
+<td style="text-align:left"></td>
 </tr>
 <tr>
-<td>find 目录 -name ‘*.abc’ &amp;#124; xargs rm</td>
-<td align="left">命令危险，可先执行前半段进行查看, 确认后再整条执行</td>
+<td>find 目录 -name ‘*.abc’ &#124; xargs rm</td>
+<td style="text-align:left">命令危险，可先执行前半段进行查看, 确认后再整条执行</td>
 </tr>
 <tr>
-<td>find . -name ‘*.exe’ -type f -print -exec rm -rf {} ;</td>
-<td align="left">1) “.”表示从当前目录开始递归查找</td>
-</tr>
-<tr>
-<td></td>
-<td align="left">2) “-name ‘*.exe’”根据名称来查找所有以.exe结尾的文件夹或者文件</td>
+<td>find . -name ‘*.exe’ -type f -print -exec rm -rf {} \;</td>
+<td style="text-align:left">1) “.”表示从当前目录开始递归查找</td>
 </tr>
 <tr>
 <td></td>
-<td align="left">3) “-type f”查找的类型为文件</td>
+<td style="text-align:left">2) “-name ‘*.exe’”根据名称来查找所有以.exe结尾的文件夹或者文件</td>
 </tr>
 <tr>
 <td></td>
-<td align="left">4) “-print”输出查找的文件目录名</td>
+<td style="text-align:left">3) “-type f”查找的类型为文件</td>
 </tr>
 <tr>
 <td></td>
-<td align="left">5) “-exec”后边跟要执行的命令，表示将find出来的文件或目录执行该命令</td>
+<td style="text-align:left">4) “-print”输出查找的文件目录名</td>
 </tr>
 <tr>
 <td></td>
-<td align="left">最后是一对{}，一个空格和一个\，一个分号</td>
+<td style="text-align:left">5) “-exec”后边跟要执行的命令，表示将find出来的文件或目录执行该命令</td>
+</tr>
+<tr>
+<td></td>
+<td style="text-align:left">最后是一对{}，一个空格和一个\，一个分号</td>
 </tr>
 <tr>
 <td>ll -lh</td>
-<td align="left">查看当前目录下文件的大小</td>
+<td style="text-align:left">查看当前目录下文件的大小</td>
 </tr>
 <tr>
 <td>du -sh *</td>
-<td align="left">查看当前目录下文件或文件夹的大小</td>
+<td style="text-align:left">查看当前目录下文件或文件夹的大小</td>
 </tr>
-</tbody></table>
-<h3 id="网络"><a href="#网络" class="headerlink" title="网络"></a>网络</h3><table>
+</tbody>
+</table>
+</div>
+<h3 id="网络"><a href="#网络" class="headerlink" title="网络"></a>网络</h3><div class="table-container">
+<table>
 <thead>
 <tr>
 <th>命令</th>
-<th align="left">说明</th>
+<th style="text-align:left">说明</th>
 </tr>
 </thead>
-<tbody><tr>
+<tbody>
+<tr>
 <td>netstat -apn</td>
-<td align="left">查看所有的进程和端口使用情况</td>
+<td style="text-align:left">查看所有的进程和端口使用情况</td>
 </tr>
 <tr>
 <td>netstat -nptl</td>
-<td align="left">查看端口使用情况</td>
+<td style="text-align:left">查看端口使用情况</td>
 </tr>
 <tr>
 <td>lsof</td>
-<td align="left">查看端口使用情况（openSUSE Leap 15.0），如 <code>lsof -i:80</code></td>
+<td style="text-align:left">查看端口使用情况（openSUSE Leap 15.0），如 <code>lsof -i:80</code></td>
 </tr>
 <tr>
 <td>nc -vz IP地址或域名 端口</td>
-<td align="left">检测远程服务器端口</td>
+<td style="text-align:left">检测远程服务器端口</td>
 </tr>
-</tbody></table>
-<h3 id="在命令行中配置IP地址"><a href="#在命令行中配置IP地址" class="headerlink" title="在命令行中配置IP地址"></a>在命令行中配置IP地址</h3><p>这里用Suse Linux举例：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">ifconfig eth0 1.1.10.42 netmask 255.255.255.0 up</span><br><span class="line">route add default gw 1.1.10.11</span><br></pre></td></tr></table></figure>
-
-<h3 id="systemctl命令的使用"><a href="#systemctl命令的使用" class="headerlink" title="systemctl命令的使用"></a>systemctl命令的使用</h3><table>
+</tbody>
+</table>
+</div>
+<h3 id="在命令行中配置IP地址"><a href="#在命令行中配置IP地址" class="headerlink" title="在命令行中配置IP地址"></a>在命令行中配置IP地址</h3><p>这里用Suse Linux举例：<br><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">ifconfig eth0 1.1.10.42 netmask 255.255.255.0 up</span><br><span class="line">route add default gw 1.1.10.11</span><br></pre></td></tr></table></figure></p>
+<h3 id="systemctl命令的使用"><a href="#systemctl命令的使用" class="headerlink" title="systemctl命令的使用"></a>systemctl命令的使用</h3><div class="table-container">
+<table>
 <thead>
 <tr>
 <th>命令</th>
-<th align="left">说明</th>
+<th style="text-align:left">说明</th>
 </tr>
 </thead>
-<tbody><tr>
+<tbody>
+<tr>
 <td>systemctl list-units</td>
-<td align="left">列出当前系统服务的状态</td>
+<td style="text-align:left">列出当前系统服务的状态</td>
 </tr>
 <tr>
-<td>systemctl list-units –type&#x3D;service</td>
-<td align="left">查看所有已启动的服务</td>
+<td>systemctl list-units —type=service</td>
+<td style="text-align:left">查看所有已启动的服务</td>
 </tr>
 <tr>
 <td>systemctl list-unit-files</td>
-<td align="left">列出服务的开机状态</td>
+<td style="text-align:left">列出服务的开机状态</td>
 </tr>
 <tr>
 <td>systemctl status sshd</td>
-<td align="left">查看指定服务的状态</td>
+<td style="text-align:left">查看指定服务的状态</td>
 </tr>
 <tr>
 <td>systemctl stop sshd</td>
-<td align="left">关闭指定服务</td>
+<td style="text-align:left">关闭指定服务</td>
 </tr>
 <tr>
 <td>systemctl start sshd</td>
-<td align="left">开启指定服务</td>
+<td style="text-align:left">开启指定服务</td>
 </tr>
 <tr>
 <td>systemctl restart sshd</td>
-<td align="left">从新启动服务</td>
+<td style="text-align:left">从新启动服务</td>
 </tr>
 <tr>
 <td>systemctl is-enabled servicename.service</td>
-<td align="left">查询服务是否开机启动</td>
+<td style="text-align:left">查询服务是否开机启动</td>
 </tr>
 <tr>
 <td>systemctl enable sshd</td>
-<td align="left">设定指定服务开机开启</td>
+<td style="text-align:left">设定指定服务开机开启</td>
 </tr>
 <tr>
 <td>systemctl disable sshd</td>
-<td align="left">设定指定服务开机关闭</td>
+<td style="text-align:left">设定指定服务开机关闭</td>
 </tr>
 <tr>
 <td>systemctl reload sshd</td>
-<td align="left">使指定服务从新加载配置</td>
+<td style="text-align:left">使指定服务从新加载配置</td>
 </tr>
 <tr>
 <td>systemctl list-dependencies sshd</td>
-<td align="left">查看指定服务的倚赖关系</td>
+<td style="text-align:left">查看指定服务的倚赖关系</td>
 </tr>
 <tr>
 <td>systemctl mask  sshd</td>
-<td align="left">冻结指定服务</td>
+<td style="text-align:left">冻结指定服务</td>
 </tr>
 <tr>
 <td>systemctl unmask sshd</td>
-<td align="left">启用服务</td>
+<td style="text-align:left">启用服务</td>
 </tr>
 <tr>
 <td>systemctl set-default multi-user.target</td>
-<td align="left">开机不开启图形</td>
+<td style="text-align:left">开机不开启图形</td>
 </tr>
 <tr>
 <td>systemctl set-default graphical.target</td>
-<td align="left">开机启动图形</td>
+<td style="text-align:left">开机启动图形</td>
 </tr>
 <tr>
 <td>systemctl —failed</td>
-<td align="left">显示启动失败的服务</td>
+<td style="text-align:left">显示启动失败的服务</td>
 </tr>
 <tr>
 <td>setterm</td>
-<td align="left">文本界面设定color</td>
+<td style="text-align:left">文本界面设定color</td>
 </tr>
 <tr>
 <td>服务状态</td>
-<td align="left">状态说明</td>
+<td style="text-align:left">状态说明</td>
 </tr>
 <tr>
-<td>—————</td>
-<td align="left">:—————</td>
+<td>———————-</td>
+<td style="text-align:left">:———————-</td>
 </tr>
 <tr>
 <td>loaded</td>
-<td align="left">系统服务已经初始化完成，加载过配置</td>
+<td style="text-align:left">系统服务已经初始化完成，加载过配置</td>
 </tr>
 <tr>
 <td>active（running）</td>
-<td align="left">正有一个或多个程序正在系统中执行， vsftpd就是这种模式</td>
+<td style="text-align:left">正有一个或多个程序正在系统中执行， vsftpd就是这种模式</td>
 </tr>
 <tr>
 <td>atcive（exited）</td>
-<td align="left">仅执行一次就正常結束的服務， 目前並沒有任何程序在系統中執行</td>
+<td style="text-align:left">仅执行一次就正常結束的服務， 目前並沒有任何程序在系統中執行</td>
 </tr>
 <tr>
 <td>atcive（waiting）</td>
-<td align="left">正在執行當中，不過還再等待其他的事件才能继续处理</td>
+<td style="text-align:left">正在執行當中，不過還再等待其他的事件才能继续处理</td>
 </tr>
 <tr>
 <td>inactive</td>
-<td align="left">服务关闭</td>
+<td style="text-align:left">服务关闭</td>
 </tr>
 <tr>
 <td>enbaled</td>
-<td align="left">服务开机启动</td>
+<td style="text-align:left">服务开机启动</td>
 </tr>
 <tr>
 <td>disabled</td>
-<td align="left">服务开机不自启</td>
+<td style="text-align:left">服务开机不自启</td>
 </tr>
 <tr>
 <td>static</td>
-<td align="left">服务开机启动项不可被管理</td>
+<td style="text-align:left">服务开机启动项不可被管理</td>
 </tr>
 <tr>
 <td>failed</td>
-<td align="left">系统配置错误</td>
+<td style="text-align:left">系统配置错误</td>
 </tr>
-</tbody></table>
-<h3 id="防火墙（SUSE-Linux-Enterprise-Server-12）"><a href="#防火墙（SUSE-Linux-Enterprise-Server-12）" class="headerlink" title="防火墙（SUSE Linux Enterprise Server 12）"></a>防火墙（SUSE Linux Enterprise Server 12）</h3><table>
+</tbody>
+</table>
+</div>
+<h3 id="防火墙（SUSE-Linux-Enterprise-Server-12）"><a href="#防火墙（SUSE-Linux-Enterprise-Server-12）" class="headerlink" title="防火墙（SUSE Linux Enterprise Server 12）"></a>防火墙（SUSE Linux Enterprise Server 12）</h3><div class="table-container">
+<table>
 <thead>
 <tr>
 <th>命令</th>
-<th align="left">说明</th>
+<th style="text-align:left">说明</th>
 </tr>
 </thead>
-<tbody><tr>
-<td>vim &#x2F;etc&#x2F;sysconfig&#x2F;SuSEfirewall2</td>
-<td align="left">编辑防火墙设置，FW_SERVICES_EXT_TCP&#x3D;”22”</td>
+<tbody>
+<tr>
+<td>vim /etc/sysconfig/SuSEfirewall2</td>
+<td style="text-align:left">编辑防火墙设置，FW_SERVICES_EXT_TCP=”22”</td>
 </tr>
 <tr>
 <td>rcSuSEfirewall2 restart</td>
-<td align="left">重启防火墙使生效</td>
+<td style="text-align:left">重启防火墙使生效</td>
 </tr>
 <tr>
 <td>rcSuSEfirewall2 status</td>
-<td align="left">查看防火墙状态</td>
+<td style="text-align:left">查看防火墙状态</td>
 </tr>
 <tr>
 <td>systemctl stop SuSEfirewall2.service</td>
-<td align="left">关闭防火墙</td>
+<td style="text-align:left">关闭防火墙</td>
 </tr>
 <tr>
 <td>systemctl start SuSEfirewall2.service</td>
-<td align="left">开启防火墙</td>
+<td style="text-align:left">开启防火墙</td>
 </tr>
 <tr>
 <td>systemctl enable SuSEfirewall2.service</td>
-<td align="left">开机启动防火墙</td>
+<td style="text-align:left">开机启动防火墙</td>
 </tr>
 <tr>
 <td>systemctl disable SuSEfirewall2.service</td>
-<td align="left">取消开机启动防火墙</td>
+<td style="text-align:left">取消开机启动防火墙</td>
 </tr>
-</tbody></table>
-<h3 id="防火墙（openSUSE-Leap-15-0）"><a href="#防火墙（openSUSE-Leap-15-0）" class="headerlink" title="防火墙（openSUSE Leap 15.0）"></a>防火墙（openSUSE Leap 15.0）</h3><table>
+</tbody>
+</table>
+</div>
+<h3 id="防火墙（openSUSE-Leap-15-0）"><a href="#防火墙（openSUSE-Leap-15-0）" class="headerlink" title="防火墙（openSUSE Leap 15.0）"></a>防火墙（openSUSE Leap 15.0）</h3><div class="table-container">
+<table>
 <thead>
 <tr>
 <th>命令</th>
-<th align="left">说明</th>
+<th style="text-align:left">说明</th>
 </tr>
 </thead>
-<tbody><tr>
+<tbody>
+<tr>
 <td><code>firewall-cmd --permanent --zone=public --add-service=ssh</code></td>
-<td align="left">添加永久的服务</td>
+<td style="text-align:left">添加永久的服务</td>
 </tr>
 <tr>
 <td><code>firewall-cmd --permanent --zone=public --add-port=8080-8081/tcp</code></td>
-<td align="left">添加永久的端口</td>
+<td style="text-align:left">添加永久的端口</td>
 </tr>
 <tr>
 <td><code>firewall-cmd --permanent --zone=public --remove-port=80/tcp</code></td>
-<td align="left">删除端口</td>
+<td style="text-align:left">删除端口</td>
 </tr>
 <tr>
 <td><code>firewall-cmd --zone=public --add-port=8080-8081/tcp</code></td>
-<td align="left">添加临时的端口</td>
+<td style="text-align:left">添加临时的端口</td>
 </tr>
 <tr>
 <td><code>firewall-cmd --permanent --zone=public --list-ports</code></td>
-<td align="left">查看开启的端口</td>
+<td style="text-align:left">查看开启的端口</td>
 </tr>
 <tr>
 <td><code>firewall-cmd --permanent --zone=public --list-services</code></td>
-<td align="left">查看开启的服务</td>
+<td style="text-align:left">查看开启的服务</td>
 </tr>
 <tr>
 <td><code>firewall-cmd --reload</code></td>
-<td align="left">重新加载配置（重启加载后才能生效）</td>
+<td style="text-align:left">重新加载配置（重启加载后才能生效）</td>
 </tr>
 <tr>
 <td><code>firewall-cmd --state</code></td>
-<td align="left">查看防火墙运行状态</td>
+<td style="text-align:left">查看防火墙运行状态</td>
 </tr>
 <tr>
 <td><code>firewall-cmd --query-service ssh</code></td>
-<td align="left"></td>
+<td style="text-align:left"></td>
 </tr>
 <tr>
 <td><code>firewall-cmd --query-service ftp</code></td>
-<td align="left"></td>
+<td style="text-align:left"></td>
 </tr>
 <tr>
 <td><code>firewall-cmd --query-service http</code></td>
-<td align="left"></td>
+<td style="text-align:left"></td>
 </tr>
 <tr>
 <td><code>firewall-cmd --query-service https</code></td>
-<td align="left"></td>
+<td style="text-align:left"></td>
 </tr>
 <tr>
 <td><code>firewall-cmd --list-all</code></td>
-<td align="left">显示当前区域的网卡配置参数、资源、端口以及服务等信息</td>
+<td style="text-align:left">显示当前区域的网卡配置参数、资源、端口以及服务等信息</td>
 </tr>
 <tr>
 <td>service firewalld stop</td>
-<td align="left">关闭防火墙</td>
+<td style="text-align:left">关闭防火墙</td>
 </tr>
 <tr>
 <td>service firewalld start</td>
-<td align="left">开户防火墙</td>
+<td style="text-align:left">开户防火墙</td>
 </tr>
-</tbody></table>
-<h3 id="防火墙（CentOS8）"><a href="#防火墙（CentOS8）" class="headerlink" title="防火墙（CentOS8）"></a>防火墙（CentOS8）</h3><table>
+</tbody>
+</table>
+</div>
+<h3 id="防火墙（CentOS8）"><a href="#防火墙（CentOS8）" class="headerlink" title="防火墙（CentOS8）"></a>防火墙（CentOS8）</h3><div class="table-container">
+<table>
 <thead>
 <tr>
 <th>命令</th>
-<th align="left">说明</th>
+<th style="text-align:left">说明</th>
 </tr>
 </thead>
-<tbody><tr>
+<tbody>
+<tr>
 <td>systemctl status firewalld.service</td>
-<td align="left">查看服务状态</td>
+<td style="text-align:left">查看服务状态</td>
 </tr>
 <tr>
 <td>systemctl start firewalld.service</td>
-<td align="left">打开防火墙</td>
+<td style="text-align:left">打开防火墙</td>
 </tr>
 <tr>
 <td>systemctl stop  firewalld.service</td>
-<td align="left">关闭防火墙</td>
+<td style="text-align:left">关闭防火墙</td>
 </tr>
 <tr>
 <td>systemctl enable  firewalld.service</td>
-<td align="left">开启防火墙</td>
+<td style="text-align:left">开启防火墙</td>
 </tr>
 <tr>
 <td>systemctl disable firewalld.service</td>
-<td align="left">禁用防火墙</td>
+<td style="text-align:left">禁用防火墙</td>
 </tr>
 <tr>
-<td>—————</td>
-<td align="left">:—————</td>
+<td>———————-</td>
+<td style="text-align:left">:———————-</td>
 </tr>
 <tr>
-<td>firewall-cmd –list-all</td>
-<td align="left">查看已经开放的端口</td>
+<td>firewall-cmd —list-all</td>
+<td style="text-align:left">查看已经开放的端口</td>
 </tr>
 <tr>
-<td>firewall-cmd –add-port&#x3D;8848&#x2F;tcp –permanent</td>
-<td align="left">增加目标端口</td>
+<td>firewall-cmd —add-port=8848/tcp —permanent</td>
+<td style="text-align:left">增加目标端口</td>
 </tr>
 <tr>
-<td>firewall-cmd –reload</td>
-<td align="left">重启防火墙</td>
+<td>firewall-cmd —reload</td>
+<td style="text-align:left">重启防火墙</td>
 </tr>
-</tbody></table>
+</tbody>
+</table>
+</div>
 
     </div>
 

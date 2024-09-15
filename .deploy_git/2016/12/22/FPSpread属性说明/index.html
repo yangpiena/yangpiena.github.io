@@ -307,12 +307,236 @@
     
     
     <div class="post-body" itemprop="articleBody">
-        <p>以下记录一些常用的fpSpread控件属性，按字母排序：</p>
-<span id="more"></span>
-
-<p>|<strong>属性</strong>										|<strong>说明</strong>|<br>| ———————————————	|:——-|<br>|<code>ActiveRow</code> 									|获取当前活动行号<br>|<code>AddCellSpan</code> 3, 4, 2, 1						|从第3列第4行起合并单元格，跨度为2列1行<br>|<code>Backcolor</code>									|设置指定范围（行和列）的背景颜色<br>|<code>CellType</code> &#x3D; CellTypeNumber					|设置为数字类型<br>|<code>Col</code> &#x3D; 2										|定位到第2列<br>|<code>ColHeaderRows</code> &#x3D; 2							|表头（列标题）行数为2<br>|<code>ColHeadersShow</code> &#x3D; False						|隐藏列标题<br>|<code>ColWidth(</code>1<code>)</code> &#x3D; 16							|设置第1列的列宽为16<br>|<code>ColsFrozen</code> &#x3D; 3 								|冻结前三列<br>|<code>DataSource</code> &#x3D; Rs								|设置Spread的数据源为Rs记录集<br>|<code>DeleteCols</code> 2, 1								|在第2列前删除1列<br>|<code>DeleteRows</code> 2, 1	|在第2行前删除1行（如果Spread是通过设置数据源取得数据的话，则必须设置.DataSource &#x3D; Nothing才能删除<br>|<code>FontSize</code> &#x3D; 10								|设置当前栏位的字体大小为10（如果.Row &#x3D; -1，则设置整列，下同<br>|<code>Formula = &quot;SUM(A1:A&quot; &amp; MaxRows &amp; &quot;)&quot;</code>			|合计：对第1列从第1行到最大行求和<br>|<code>GetText</code> 2, 3, MyText							|将第2列第3行的值赋给变量MyText<br>|<code>InsertCols</code> 2, 1								|在第2列前插入1列<br>|<code>InsertRows</code> 2, 1								|在第2行前插入1行<br>|<code>MaxCols</code> &#x3D; 5									|设置总列数为5列<br>|<code>MaxRows</code> &#x3D; 10									|设置总行数为10行<br>|<code>OperationMode</code> &#x3D; OperationModeRow				|设置Spread的操作模式为行定位（共有6种模式）<br>|<code>PrintMarginLeft</code> &#x3D; 1000						|打印时左边距&#x3D;1000（包括预览）<br>|<code>PrintMarginTop</code> &#x3D; 1000						|打印时上边距&#x3D;1000（包括预览）<br>|<code>Row</code> &#x3D; SpreadHeader							|定位到表头（列标题）<br>|<code>Row</code> &#x3D; -1										|定位到行头（在设置列格式时使用）<br>|<code>Row</code> &#x3D; 3										|定位到第3行<br>|<code>RowHeadersShow</code> &#x3D; False						|隐藏行标题<br>|<code>RowHeight(</code>1<code>)</code> &#x3D; 12							|设置第1行的行高为12<br>|<code>RowsFrozen</code> &#x3D; 2								|冻结前两行<br>|<code>SetActiveCell</code> 1,2							|设置第1列第2行单元格为焦点<br>|<code>SetEnhancedColumnHeaderColors</code> vbRed, vbYellow, vbBlue, vbGreen, vbBlack, vbWhite, vbMagenta, &amp;H80FF&amp;, vbBlue, vbRed													|设置列头颜色<br>|<code>SetOddEvenRowColor</code> vbWhite, &amp;H80000008, &amp;HF7ECE4, &amp;H80000008							|设置奇偶行背景色<br>|<code>SetText</code> 2, 3, “test”							|设置第2列第3行的文本为”test”<br>|<code>Text</code> &#x3D; “test”								|设置当前栏位的文本为”test”<br>|<code>TypeHAlign</code> &#x3D; TypeHAlignRight					|设置文字水平对齐方式为右对齐<br>|<code>TypeVAlign</code> &#x3D; TypeVAlignCenter				|设置文字垂直对齐方式为居中<br>|<code>TypeNumberDecPlaces</code> &#x3D; 2						|设置小数位数<br>|<code>TypeNumberShowSep</code> &#x3D; True						|设置千位分隔<br>|<code>/n</code>											|打印属性：换行<br>|<code>/fn</code>											|打印属性：font name字体<br>|<code>/fz</code>											|打印属性：font size大小<br>|<code>/fb1</code>											|打印属性：font bold粗体<br>|<code>/fb0</code>											|打印属性：非粗体<br>|<code>/fi1</code>											|打印属性：font italic斜体<br>|<code>/fi0</code>											|打印属性：非斜体<br>|<code>/fu1</code>											|打印属性：font underline有下划线<br>|<code>/fu0</code>											|打印属性：无下划线<br>|<code>/fk1</code>											|打印属性：font strikethru有删除线<br>|<code>/fk0</code>											|打印属性：无删除线<br>|<code>/l</code>											|打印属性：居左<br>|<code>/c</code>											|打印属性：居中<br>|<code>/r</code>											|打印属性：居右<br>|<code>/p</code>											|打印属性：页码<br>|<code>/date</code>										|打印属性：日期<br>|<code>/time</code>										|打印属性：时间</p>
-<p>打印实例（VB6.0）：</p>
-<figure class="highlight vb"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&#x27;给表格fpSpread加载数据</span></span><br><span class="line"><span class="keyword">Private</span> <span class="keyword">Sub</span> LoadfpSpread()</span><br><span class="line">    <span class="keyword">Call</span> CloseMRec</span><br><span class="line">    MRec.Open <span class="string">&quot;SELECT * FROM Table&quot;</span>, MConn, <span class="number">1</span>, <span class="number">3</span></span><br><span class="line">	<span class="keyword">With</span> fpS1</span><br><span class="line">		.MaxRows = Mrec.RecordCount</span><br><span class="line">		<span class="keyword">If</span> MRec.RecordCount &gt; <span class="number">0</span> <span class="keyword">Then</span></span><br><span class="line">			<span class="keyword">Set</span> .DataSource = Mrec</span><br><span class="line">			.ColWidth(<span class="number">1</span>) = <span class="number">9</span></span><br><span class="line">			.ColWidth(<span class="number">2</span>) = <span class="number">8</span></span><br><span class="line">			.ColWidth(<span class="number">3</span>) = <span class="number">8</span></span><br><span class="line">			.ColWidth(<span class="number">4</span>) = <span class="number">33</span></span><br><span class="line">			.ColWidth(<span class="number">5</span>) = <span class="number">33</span></span><br><span class="line">		<span class="keyword">End</span> <span class="keyword">If</span></span><br><span class="line">	<span class="keyword">End</span> <span class="keyword">With</span></span><br><span class="line"><span class="keyword">End</span> <span class="keyword">Sub</span></span><br><span class="line"></span><br><span class="line"><span class="comment">&#x27;打印fpSpread</span></span><br><span class="line"><span class="keyword">Private</span> <span class="keyword">Sub</span> PrintfpSpread()</span><br><span class="line">    <span class="keyword">Dim</span> tableHead     <span class="keyword">As</span> <span class="type">String</span></span><br><span class="line">    <span class="keyword">Dim</span> tableBodyRow1 <span class="keyword">As</span> <span class="type">String</span></span><br><span class="line">    <span class="keyword">Dim</span> tableBodyRow2 <span class="keyword">As</span> <span class="type">String</span></span><br><span class="line">    <span class="keyword">Dim</span> tableFoot     <span class="keyword">As</span> <span class="type">String</span></span><br><span class="line">    </span><br><span class="line">    <span class="keyword">With</span> fpS1</span><br><span class="line">        <span class="keyword">Dim</span> customerName, forderNo, code, <span class="keyword">operator</span>, operatDate, repealReason		</span><br><span class="line">        fpS2.GetText <span class="number">1</span>, fpS2.activeRow, code</span><br><span class="line">        fpS2.GetText <span class="number">2</span>, fpS2.activeRow, forderNo</span><br><span class="line">        fpS2.GetText <span class="number">3</span>, fpS2.activeRow, customerName</span><br><span class="line">        fpS2.GetText <span class="number">4</span>, fpS2.activeRow, <span class="keyword">operator</span></span><br><span class="line">        fpS2.GetText <span class="number">5</span>, fpS2.activeRow, operatDate</span><br><span class="line">        fpS2.GetText <span class="number">6</span>, fpS2.activeRow, repealReason</span><br><span class="line">        </span><br><span class="line">        .MaxRows = .MaxRows + <span class="number">1</span></span><br><span class="line">        .SetText <span class="number">2</span>, .MaxRows, <span class="string">&quot;撤销依据&quot;</span></span><br><span class="line">        .TypeHAlign = TypeHAlignCenter</span><br><span class="line">        .AddCellSpan <span class="number">3</span>, .MaxRows, <span class="number">4</span>, <span class="number">1</span></span><br><span class="line">        .RowHeight(.MaxRows) = <span class="number">30</span></span><br><span class="line">        .SetText <span class="number">3</span>, .MaxRows, repealReason</span><br><span class="line">        </span><br><span class="line">        .Col = <span class="number">2</span></span><br><span class="line">        .Col2 = <span class="number">5</span></span><br><span class="line">        .Row = <span class="number">1</span></span><br><span class="line">        .PrintType = PrintTypeCellRange</span><br><span class="line">        </span><br><span class="line">        .PrintMarginTop = <span class="number">540</span></span><br><span class="line">        .PrintMarginBottom = <span class="number">300</span></span><br><span class="line">        .PrintMarginLeft = <span class="number">480</span></span><br><span class="line">        .PrintMarginRight = <span class="number">480</span></span><br><span class="line">        </span><br><span class="line">        tableHead = <span class="string">&quot;合同撤销通知单/n/n&quot;</span></span><br><span class="line">        tableBodyRow1 = <span class="string">&quot;单据编号：&quot;</span> &amp; code &amp; <span class="string">&quot;      &quot;</span> &amp; <span class="string">&quot;份合同号：&quot;</span> &amp; forderNo &amp; <span class="string">&quot;      &quot;</span> &amp; <span class="string">&quot;订货单位名称：&quot;</span> &amp; customerName &amp; <span class="string">&quot;&quot;</span> &amp; <span class="string">&quot;/n/n&quot;</span></span><br><span class="line">        tableBodyRow2 = <span class="string">&quot;部门领导：&quot;</span> &amp; <span class="string">&quot;                &quot;</span> &amp; <span class="string">&quot;经办人：&quot;</span> &amp; <span class="keyword">operator</span> &amp; <span class="string">&quot;            &quot;</span> &amp; <span class="string">&quot;撤销日期：&quot;</span> &amp; operatDate &amp; <span class="string">&quot;/n&quot;</span></span><br><span class="line">        </span><br><span class="line">        .PrintHeader = <span class="string">&quot;/c/fb1/fz&quot;&quot;20&quot;&quot;&quot;</span> &amp; tableHead &amp; <span class="string">&quot;/l/fb0/fz&quot;&quot;10&quot;&quot;&quot;</span> &amp; tableBodyRow1 &amp; tableBodyRow2</span><br><span class="line">        .PrintFooter = <span class="string">&quot;/n/c/p//&quot;</span> &amp; .PrintPageCount</span><br><span class="line">		</span><br><span class="line">        <span class="comment">&#x27;调用打印预览界面</span></span><br><span class="line">        FormPrint.PrintState = <span class="literal">False</span></span><br><span class="line">        FormPrint.PrintCount = <span class="number">0</span></span><br><span class="line">        FormPrint.SSP.hWndSpread = .hwnd</span><br><span class="line">        FormPrint.PrintCount = .PrintPageCount</span><br><span class="line">        FormPrint.Show <span class="number">1</span></span><br><span class="line">        </span><br><span class="line">        <span class="keyword">If</span> FormPrint.PrintState = <span class="literal">True</span> <span class="keyword">Then</span></span><br><span class="line">            .PrintSheet</span><br><span class="line">            FormPrint.PrintState = <span class="literal">False</span></span><br><span class="line">        <span class="keyword">End</span> <span class="keyword">If</span></span><br><span class="line">    <span class="keyword">End</span> <span class="keyword">With</span></span><br><span class="line"><span class="keyword">End</span> <span class="keyword">Sub</span></span><br></pre></td></tr></table></figure>
+        <p>以下记录一些常用的fpSpread控件属性，按字母排序：<br><span id="more"></span></p>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th><strong>属性</strong></th>
+<th style="text-align:left"><strong>说明</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>ActiveRow</code></td>
+<td style="text-align:left">获取当前活动行号</td>
+</tr>
+<tr>
+<td><code>AddCellSpan</code> 3, 4, 2, 1</td>
+<td style="text-align:left">从第3列第4行起合并单元格，跨度为2列1行</td>
+</tr>
+<tr>
+<td><code>Backcolor</code></td>
+<td style="text-align:left">设置指定范围（行和列）的背景颜色</td>
+</tr>
+<tr>
+<td><code>CellType</code> = CellTypeNumber</td>
+<td style="text-align:left">设置为数字类型</td>
+</tr>
+<tr>
+<td><code>Col</code> = 2</td>
+<td style="text-align:left">定位到第2列</td>
+</tr>
+<tr>
+<td><code>ColHeaderRows</code> = 2</td>
+<td style="text-align:left">表头（列标题）行数为2</td>
+</tr>
+<tr>
+<td><code>ColHeadersShow</code> = False</td>
+<td style="text-align:left">隐藏列标题</td>
+</tr>
+<tr>
+<td><code>ColWidth(</code>1<code>)</code> = 16</td>
+<td style="text-align:left">设置第1列的列宽为16</td>
+</tr>
+<tr>
+<td><code>ColsFrozen</code> = 3</td>
+<td style="text-align:left">冻结前三列</td>
+</tr>
+<tr>
+<td><code>DataSource</code> = Rs</td>
+<td style="text-align:left">设置Spread的数据源为Rs记录集</td>
+</tr>
+<tr>
+<td><code>DeleteCols</code> 2, 1</td>
+<td style="text-align:left">在第2列前删除1列</td>
+</tr>
+<tr>
+<td><code>DeleteRows</code> 2, 1</td>
+<td style="text-align:left">在第2行前删除1行（如果Spread是通过设置数据源取得数据的话，则必须设置.DataSource = Nothing才能删除</td>
+</tr>
+<tr>
+<td><code>FontSize</code> = 10</td>
+<td style="text-align:left">设置当前栏位的字体大小为10（如果.Row = -1，则设置整列，下同</td>
+</tr>
+<tr>
+<td><code>Formula = &quot;SUM(A1:A&quot; &amp; MaxRows &amp; &quot;)&quot;</code></td>
+<td style="text-align:left">合计：对第1列从第1行到最大行求和</td>
+</tr>
+<tr>
+<td><code>GetText</code> 2, 3, MyText</td>
+<td style="text-align:left">将第2列第3行的值赋给变量MyText</td>
+</tr>
+<tr>
+<td><code>InsertCols</code> 2, 1</td>
+<td style="text-align:left">在第2列前插入1列</td>
+</tr>
+<tr>
+<td><code>InsertRows</code> 2, 1</td>
+<td style="text-align:left">在第2行前插入1行</td>
+</tr>
+<tr>
+<td><code>MaxCols</code> = 5</td>
+<td style="text-align:left">设置总列数为5列</td>
+</tr>
+<tr>
+<td><code>MaxRows</code> = 10</td>
+<td style="text-align:left">设置总行数为10行</td>
+</tr>
+<tr>
+<td><code>OperationMode</code> = OperationModeRow</td>
+<td style="text-align:left">设置Spread的操作模式为行定位（共有6种模式）</td>
+</tr>
+<tr>
+<td><code>PrintMarginLeft</code> = 1000</td>
+<td style="text-align:left">打印时左边距=1000（包括预览）</td>
+</tr>
+<tr>
+<td><code>PrintMarginTop</code> = 1000</td>
+<td style="text-align:left">打印时上边距=1000（包括预览）</td>
+</tr>
+<tr>
+<td><code>Row</code> = SpreadHeader</td>
+<td style="text-align:left">定位到表头（列标题）</td>
+</tr>
+<tr>
+<td><code>Row</code> = -1</td>
+<td style="text-align:left">定位到行头（在设置列格式时使用）</td>
+</tr>
+<tr>
+<td><code>Row</code> = 3</td>
+<td style="text-align:left">定位到第3行</td>
+</tr>
+<tr>
+<td><code>RowHeadersShow</code> = False</td>
+<td style="text-align:left">隐藏行标题</td>
+</tr>
+<tr>
+<td><code>RowHeight(</code>1<code>)</code> = 12</td>
+<td style="text-align:left">设置第1行的行高为12</td>
+</tr>
+<tr>
+<td><code>RowsFrozen</code> = 2</td>
+<td style="text-align:left">冻结前两行</td>
+</tr>
+<tr>
+<td><code>SetActiveCell</code> 1,2</td>
+<td style="text-align:left">设置第1列第2行单元格为焦点</td>
+</tr>
+<tr>
+<td><code>SetEnhancedColumnHeaderColors</code> vbRed, vbYellow, vbBlue, vbGreen, vbBlack, vbWhite, vbMagenta, &amp;H80FF&amp;, vbBlue, vbRed</td>
+<td style="text-align:left">设置列头颜色</td>
+</tr>
+<tr>
+<td><code>SetOddEvenRowColor</code> vbWhite, &amp;H80000008, &amp;HF7ECE4, &amp;H80000008</td>
+<td style="text-align:left">设置奇偶行背景色</td>
+</tr>
+<tr>
+<td><code>SetText</code> 2, 3, “test”</td>
+<td style="text-align:left">设置第2列第3行的文本为”test”</td>
+</tr>
+<tr>
+<td><code>Text</code> = “test”</td>
+<td style="text-align:left">设置当前栏位的文本为”test”</td>
+</tr>
+<tr>
+<td><code>TypeHAlign</code> = TypeHAlignRight</td>
+<td style="text-align:left">设置文字水平对齐方式为右对齐</td>
+</tr>
+<tr>
+<td><code>TypeVAlign</code> = TypeVAlignCenter</td>
+<td style="text-align:left">设置文字垂直对齐方式为居中</td>
+</tr>
+<tr>
+<td><code>TypeNumberDecPlaces</code> = 2</td>
+<td style="text-align:left">设置小数位数</td>
+</tr>
+<tr>
+<td><code>TypeNumberShowSep</code> = True</td>
+<td style="text-align:left">设置千位分隔</td>
+</tr>
+<tr>
+<td><code>/n</code></td>
+<td style="text-align:left">打印属性：换行</td>
+</tr>
+<tr>
+<td><code>/fn</code></td>
+<td style="text-align:left">打印属性：font name字体</td>
+</tr>
+<tr>
+<td><code>/fz</code></td>
+<td style="text-align:left">打印属性：font size大小</td>
+</tr>
+<tr>
+<td><code>/fb1</code></td>
+<td style="text-align:left">打印属性：font bold粗体</td>
+</tr>
+<tr>
+<td><code>/fb0</code></td>
+<td style="text-align:left">打印属性：非粗体</td>
+</tr>
+<tr>
+<td><code>/fi1</code></td>
+<td style="text-align:left">打印属性：font italic斜体</td>
+</tr>
+<tr>
+<td><code>/fi0</code></td>
+<td style="text-align:left">打印属性：非斜体</td>
+</tr>
+<tr>
+<td><code>/fu1</code></td>
+<td style="text-align:left">打印属性：font underline有下划线</td>
+</tr>
+<tr>
+<td><code>/fu0</code></td>
+<td style="text-align:left">打印属性：无下划线</td>
+</tr>
+<tr>
+<td><code>/fk1</code></td>
+<td style="text-align:left">打印属性：font strikethru有删除线</td>
+</tr>
+<tr>
+<td><code>/fk0</code></td>
+<td style="text-align:left">打印属性：无删除线</td>
+</tr>
+<tr>
+<td><code>/l</code></td>
+<td style="text-align:left">打印属性：居左</td>
+</tr>
+<tr>
+<td><code>/c</code></td>
+<td style="text-align:left">打印属性：居中</td>
+</tr>
+<tr>
+<td><code>/r</code></td>
+<td style="text-align:left">打印属性：居右</td>
+</tr>
+<tr>
+<td><code>/p</code></td>
+<td style="text-align:left">打印属性：页码</td>
+</tr>
+<tr>
+<td><code>/date</code></td>
+<td style="text-align:left">打印属性：日期</td>
+</tr>
+<tr>
+<td><code>/time</code></td>
+<td style="text-align:left">打印属性：时间</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>打印实例（VB6.0）：<br><figure class="highlight vb"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&#x27;给表格fpSpread加载数据</span></span><br><span class="line"><span class="keyword">Private</span> <span class="keyword">Sub</span> LoadfpSpread()</span><br><span class="line">    <span class="keyword">Call</span> CloseMRec</span><br><span class="line">    MRec.Open <span class="string">&quot;SELECT * FROM Table&quot;</span>, MConn, <span class="number">1</span>, <span class="number">3</span></span><br><span class="line">	<span class="keyword">With</span> fpS1</span><br><span class="line">		.MaxRows = Mrec.RecordCount</span><br><span class="line">		<span class="keyword">If</span> MRec.RecordCount &gt; <span class="number">0</span> <span class="keyword">Then</span></span><br><span class="line">			<span class="keyword">Set</span> .DataSource = Mrec</span><br><span class="line">			.ColWidth(<span class="number">1</span>) = <span class="number">9</span></span><br><span class="line">			.ColWidth(<span class="number">2</span>) = <span class="number">8</span></span><br><span class="line">			.ColWidth(<span class="number">3</span>) = <span class="number">8</span></span><br><span class="line">			.ColWidth(<span class="number">4</span>) = <span class="number">33</span></span><br><span class="line">			.ColWidth(<span class="number">5</span>) = <span class="number">33</span></span><br><span class="line">		<span class="keyword">End</span> <span class="keyword">If</span></span><br><span class="line">	<span class="keyword">End</span> <span class="keyword">With</span></span><br><span class="line"><span class="keyword">End</span> <span class="keyword">Sub</span></span><br><span class="line"></span><br><span class="line"><span class="comment">&#x27;打印fpSpread</span></span><br><span class="line"><span class="keyword">Private</span> <span class="keyword">Sub</span> PrintfpSpread()</span><br><span class="line">    <span class="keyword">Dim</span> tableHead     <span class="keyword">As</span> <span class="type">String</span></span><br><span class="line">    <span class="keyword">Dim</span> tableBodyRow1 <span class="keyword">As</span> <span class="type">String</span></span><br><span class="line">    <span class="keyword">Dim</span> tableBodyRow2 <span class="keyword">As</span> <span class="type">String</span></span><br><span class="line">    <span class="keyword">Dim</span> tableFoot     <span class="keyword">As</span> <span class="type">String</span></span><br><span class="line">    </span><br><span class="line">    <span class="keyword">With</span> fpS1</span><br><span class="line">        <span class="keyword">Dim</span> customerName, forderNo, code, <span class="keyword">operator</span>, operatDate, repealReason		</span><br><span class="line">        fpS2.GetText <span class="number">1</span>, fpS2.activeRow, code</span><br><span class="line">        fpS2.GetText <span class="number">2</span>, fpS2.activeRow, forderNo</span><br><span class="line">        fpS2.GetText <span class="number">3</span>, fpS2.activeRow, customerName</span><br><span class="line">        fpS2.GetText <span class="number">4</span>, fpS2.activeRow, <span class="keyword">operator</span></span><br><span class="line">        fpS2.GetText <span class="number">5</span>, fpS2.activeRow, operatDate</span><br><span class="line">        fpS2.GetText <span class="number">6</span>, fpS2.activeRow, repealReason</span><br><span class="line">        </span><br><span class="line">        .MaxRows = .MaxRows + <span class="number">1</span></span><br><span class="line">        .SetText <span class="number">2</span>, .MaxRows, <span class="string">&quot;撤销依据&quot;</span></span><br><span class="line">        .TypeHAlign = TypeHAlignCenter</span><br><span class="line">        .AddCellSpan <span class="number">3</span>, .MaxRows, <span class="number">4</span>, <span class="number">1</span></span><br><span class="line">        .RowHeight(.MaxRows) = <span class="number">30</span></span><br><span class="line">        .SetText <span class="number">3</span>, .MaxRows, repealReason</span><br><span class="line">        </span><br><span class="line">        .Col = <span class="number">2</span></span><br><span class="line">        .Col2 = <span class="number">5</span></span><br><span class="line">        .Row = <span class="number">1</span></span><br><span class="line">        .PrintType = PrintTypeCellRange</span><br><span class="line">        </span><br><span class="line">        .PrintMarginTop = <span class="number">540</span></span><br><span class="line">        .PrintMarginBottom = <span class="number">300</span></span><br><span class="line">        .PrintMarginLeft = <span class="number">480</span></span><br><span class="line">        .PrintMarginRight = <span class="number">480</span></span><br><span class="line">        </span><br><span class="line">        tableHead = <span class="string">&quot;合同撤销通知单/n/n&quot;</span></span><br><span class="line">        tableBodyRow1 = <span class="string">&quot;单据编号：&quot;</span> &amp; code &amp; <span class="string">&quot;      &quot;</span> &amp; <span class="string">&quot;份合同号：&quot;</span> &amp; forderNo &amp; <span class="string">&quot;      &quot;</span> &amp; <span class="string">&quot;订货单位名称：&quot;</span> &amp; customerName &amp; <span class="string">&quot;&quot;</span> &amp; <span class="string">&quot;/n/n&quot;</span></span><br><span class="line">        tableBodyRow2 = <span class="string">&quot;部门领导：&quot;</span> &amp; <span class="string">&quot;                &quot;</span> &amp; <span class="string">&quot;经办人：&quot;</span> &amp; <span class="keyword">operator</span> &amp; <span class="string">&quot;            &quot;</span> &amp; <span class="string">&quot;撤销日期：&quot;</span> &amp; operatDate &amp; <span class="string">&quot;/n&quot;</span></span><br><span class="line">        </span><br><span class="line">        .PrintHeader = <span class="string">&quot;/c/fb1/fz&quot;&quot;20&quot;&quot;&quot;</span> &amp; tableHead &amp; <span class="string">&quot;/l/fb0/fz&quot;&quot;10&quot;&quot;&quot;</span> &amp; tableBodyRow1 &amp; tableBodyRow2</span><br><span class="line">        .PrintFooter = <span class="string">&quot;/n/c/p//&quot;</span> &amp; .PrintPageCount</span><br><span class="line">		</span><br><span class="line">        <span class="comment">&#x27;调用打印预览界面</span></span><br><span class="line">        FormPrint.PrintState = <span class="literal">False</span></span><br><span class="line">        FormPrint.PrintCount = <span class="number">0</span></span><br><span class="line">        FormPrint.SSP.hWndSpread = .hwnd</span><br><span class="line">        FormPrint.PrintCount = .PrintPageCount</span><br><span class="line">        FormPrint.Show <span class="number">1</span></span><br><span class="line">        </span><br><span class="line">        <span class="keyword">If</span> FormPrint.PrintState = <span class="literal">True</span> <span class="keyword">Then</span></span><br><span class="line">            .PrintSheet</span><br><span class="line">            FormPrint.PrintState = <span class="literal">False</span></span><br><span class="line">        <span class="keyword">End</span> <span class="keyword">If</span></span><br><span class="line">    <span class="keyword">End</span> <span class="keyword">With</span></span><br><span class="line"><span class="keyword">End</span> <span class="keyword">Sub</span></span><br></pre></td></tr></table></figure></p>
 
     </div>
 
