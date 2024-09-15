@@ -1,0 +1,742 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222"><meta name="generator" content="Hexo 6.3.0">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/img/avatar/ironman.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/img/avatar/favicon.ico">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdnjs.loli.net/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha256-Z1K5uhUaJXA7Ll0XrZ/0JhX4lAtZFpT6jkKrEDT0drU=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.loli.net/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"yangpiena.gitee.io","root":"/","images":"/images","scheme":"Gemini","darkmode":false,"version":"8.14.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":true,"style":"default"},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
+
+
+
+<link rel="canonical" href="https://yangpiena.gitee.io/2020/07/30/%E6%90%AD%E5%BB%BA%E7%A7%81%E6%9C%89%E4%BA%91%E5%90%8C%E6%AD%A5%E4%BA%91%E7%9B%98Nextcloud/">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://yangpiena.gitee.io/2020/07/30/%E6%90%AD%E5%BB%BA%E7%A7%81%E6%9C%89%E4%BA%91%E5%90%8C%E6%AD%A5%E4%BA%91%E7%9B%98Nextcloud/","path":"2020/07/30/搭建私有云同步云盘Nextcloud/","title":"搭建私有云同步云盘Nextcloud"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>搭建私有云同步云盘Nextcloud | 昜丿捺</title>
+  
+
+
+
+
+
+
+  <script async defer data-website-id="" src=""></script>
+
+  <script defer data-domain="" src=""></script>
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">昜丿捺</p>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">没有阳光，沉默而居</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="搜索" role="button">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a></li><li class="menu-item menu-item-links"><a href="/links" rel="section"><i class="fa fa-star fa-fw"></i>收藏</a></li><li class="menu-item menu-item-photos"><a href="/photos" rel="section"><i class="fa fa-camera fa-fw"></i>相册</a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup"><div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off" maxlength="80"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close" role="button">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div class="search-result-container no-result">
+  <div class="search-result-icon">
+    <i class="fa fa-spinner fa-pulse fa-5x"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%8E%AF%E5%A2%83%E5%87%86%E5%A4%87"><span class="nav-number">1.</span> <span class="nav-text">环境准备</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%B3%BB%E7%BB%9F%E5%AE%89%E8%A3%85%E5%91%BD%E4%BB%A4%E5%87%86%E5%A4%87"><span class="nav-number">2.</span> <span class="nav-text">系统安装命令准备</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%89%E8%A3%85apache2"><span class="nav-number">3.</span> <span class="nav-text">安装apache2</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%B5%8B%E8%AF%95%E5%AE%89%E8%A3%85"><span class="nav-number">3.1.</span> <span class="nav-text">测试安装</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%90%AF%E7%94%A8web%E6%9C%8D%E5%8A%A1%E5%8F%AF%E4%BB%A5%E5%A4%96%E9%83%A8%E8%AE%BF%E9%97%AE"><span class="nav-number">3.2.</span> <span class="nav-text">启用web服务可以外部访问</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%89%E8%A3%85PHP7"><span class="nav-number">4.</span> <span class="nav-text">安装PHP7</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AE%89%E8%A3%85php7%E7%9A%84%E6%89%A9%E5%B1%95"><span class="nav-number">4.1.</span> <span class="nav-text">安装php7的扩展</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%87%8D%E5%90%AFweb%E6%9C%8D%E5%8A%A1%E5%99%A8"><span class="nav-number">4.2.</span> <span class="nav-text">重启web服务器</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%B5%8B%E8%AF%95%E5%AE%89%E8%A3%85-1"><span class="nav-number">4.3.</span> <span class="nav-text">测试安装</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%89%E8%A3%85MariaDB"><span class="nav-number">5.</span> <span class="nav-text">安装MariaDB</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%85%8D%E7%BD%AE-MariaDB-x2F-MySql-%E6%9C%8D%E5%8A%A1%E5%92%8C-Leap-42-1"><span class="nav-number">5.1.</span> <span class="nav-text">配置 MariaDB&#x2F;MySql 服务和 Leap 42.1</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AE%89%E8%A3%85-phpMyAdmin"><span class="nav-number">5.2.</span> <span class="nav-text">安装 phpMyAdmin</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%BB%99Nextcloud%E5%88%9B%E5%BB%BA%E6%95%B0%E6%8D%AE%E5%BA%93"><span class="nav-number">5.3.</span> <span class="nav-text">给Nextcloud创建数据库</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%89%E8%A3%85Nextcloud"><span class="nav-number">6.</span> <span class="nav-text">安装Nextcloud</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%AE%BF%E9%97%AENextcloud"><span class="nav-number">6.1.</span> <span class="nav-text">访问Nextcloud</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%AE%89%E8%A3%85memcache"><span class="nav-number">6.1.1.</span> <span class="nav-text">安装memcache</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#1-%E5%85%88%E8%A3%85libevent"><span class="nav-number">6.1.1.1.</span> <span class="nav-text">1. 先装libevent</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#2-%E5%86%8D%E8%A3%85memcache"><span class="nav-number">6.1.1.2.</span> <span class="nav-text">2. 再装memcache</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#3-%E5%90%AF%E5%8A%A8Memcached%E6%9C%8D%E5%8A%A1"><span class="nav-number">6.1.1.3.</span> <span class="nav-text">3. 启动Memcached服务</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#OCC%E5%91%BD%E4%BB%A4%E7%9A%84%E7%94%A8%E6%B3%95"><span class="nav-number">7.</span> <span class="nav-text">OCC命令的用法</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%87%8D%E7%BD%AE%E5%AF%86%E7%A0%81"><span class="nav-number">7.1.</span> <span class="nav-text">重置密码</span></a></li></ol></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="昜丿捺"
+      src="/img/avatar/ironman.png">
+  <p class="site-author-name" itemprop="name">昜丿捺</p>
+  <div class="site-description" itemprop="description">
+    <!--  -->
+
+
+    <!-- 显示一言经典语句 -->
+    <span id="lwlhitokoto"></span>
+
+
+  </div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">95</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">2</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">54</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/yangpiena" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;yangpiena" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://yangpiena.coding.net/" title="CODING → https:&#x2F;&#x2F;yangpiena.coding.net" rel="noopener" target="_blank"><i class="fab fa-github-alt fa-fw"></i>CODING</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://gitee.com/yangpiena" title="Gitee → https:&#x2F;&#x2F;gitee.com&#x2F;yangpiena" rel="noopener" target="_blank"><i class="fab fa-glide fa-fw"></i>Gitee</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://weibo.com/yangpiena" title="Weibo → https:&#x2F;&#x2F;weibo.com&#x2F;yangpiena" rel="noopener" target="_blank"><i class="fab fa-weibo fa-fw"></i>Weibo</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:yangpiena@gmail.com" title="E-Mail → mailto:yangpiena@gmail.com" rel="noopener" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+  </div>
+
+        </div>
+      </div>
+        <div class="back-to-top animated" role="button" aria-label="返回顶部">
+          <i class="fa fa-arrow-up"></i>
+          <span>0%</span>
+        </div>
+    </div>
+
+    
+    <div class="sidebar-inner sidebar-blogroll">
+      <div class="links-of-blogroll animated">
+        <div class="links-of-blogroll-title"><i class="fa fa-globe fa-fw"></i>
+          链接
+        </div>
+        <ul class="links-of-blogroll-list">
+            <li class="links-of-blogroll-item">
+              <a href="https://yangpiena.gitee.io/" title="https:&#x2F;&#x2F;yangpiena.gitee.io&#x2F;">昜丿捺（Gitee）</a>
+            </li>
+            <li class="links-of-blogroll-item">
+              <a href="https://yangpiena.github.io/" title="https:&#x2F;&#x2F;yangpiena.github.io&#x2F;" rel="noopener" target="_blank">昜丿捺（GitHub）</a>
+            </li>
+            <li class="links-of-blogroll-item">
+              <a href="http://coding-pages-bucket-407450-1059047-17379-602648-1258146968.cos-website.ap-hongkong.myqcloud.com/" title="http:&#x2F;&#x2F;coding-pages-bucket-407450-1059047-17379-602648-1258146968.cos-website.ap-hongkong.myqcloud.com&#x2F;" rel="noopener" target="_blank">昜丿捺（Coding）</a>
+            </li>
+        </ul>
+      </div>
+    </div>
+    
+    
+    <!-- 增加网易云音乐 -->
+        <div class="pjax">
+          <div class="sidebar-inner">
+            <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=300 src="//music.163.com/outchain/player?type=0&id=6605147757&auto=1&height=300"></iframe>
+          </div>
+        </div>
+
+
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://yangpiena.gitee.io/2020/07/30/%E6%90%AD%E5%BB%BA%E7%A7%81%E6%9C%89%E4%BA%91%E5%90%8C%E6%AD%A5%E4%BA%91%E7%9B%98Nextcloud/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/img/avatar/ironman.png">
+      <meta itemprop="name" content="昜丿捺">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="昜丿捺">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="搭建私有云同步云盘Nextcloud | 昜丿捺">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          搭建私有云同步云盘Nextcloud
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2020-07-30 11:09:45" itemprop="dateCreated datePublished" datetime="2020-07-30T11:09:45+08:00">2020-07-30</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2024-08-29 16:17:51" itemprop="dateModified" datetime="2024-08-29T16:17:51+08:00">2024-08-29</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/tech-notes/" itemprop="url" rel="index"><span itemprop="name">技术</span></a>
+        </span>
+    </span>
+
+  
+    <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv">
+      <span class="post-meta-item-icon">
+        <i class="far fa-eye"></i>
+      </span>
+      <span class="post-meta-item-text">阅读次数：</span>
+      <span id="busuanzi_value_page_pv"></span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <h2 id="环境准备"><a href="#环境准备" class="headerlink" title="环境准备"></a>环境准备</h2><p>本次搭建使用<code>LAMP</code>运行环境：</p>
+<ul>
+<li>L: Open SUSE Linux 15</li>
+<li>A: apache2</li>
+<li>M: MariaDB</li>
+<li>P: PHP7</li>
+</ul>
+<span id="more"></span>
+
+
+
+<h2 id="系统安装命令准备"><a href="#系统安装命令准备" class="headerlink" title="系统安装命令准备"></a>系统安装命令准备</h2><p>更新命令<code>zypper</code>的源：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">zypper ref</span><br></pre></td></tr></table></figure>
+<p>添加源，使用命令 zypper addrepo -f [URL] [Alias] （Alias是自己给这个源随便定义的英文名）添加软件源并开启自动刷新，如：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">zypper addrepo -f http://mirrors.163.com/openSUSE/update/11.1/ main</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">zypper addrepo -f http://mirrors.163.com/openSUSE/distribution/11.1/repo/non-oss/ nonoss</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">zypper addrepo -f http://mirrors.163.com/openSUSE/distribution/11.1/repo/oss/ oss</span><br></pre></td></tr></table></figure>
+<p>删除源，使用命令 zypper rs [name]</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">zypper rs name</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="安装apache2"><a href="#安装apache2" class="headerlink" title="安装apache2"></a>安装apache2</h2><p>切换为root用户：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo</span><br></pre></td></tr></table></figure>
+<p>安装 apache2：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">zypper in apache2</span><br></pre></td></tr></table></figure>
+<p>启动 apache2：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">systemctl start apache2</span><br></pre></td></tr></table></figure>
+<p>停止 apache2：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">systemctl stop apache2</span><br></pre></td></tr></table></figure>
+<p>重启 apache2：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">systemctl restart apache2</span><br></pre></td></tr></table></figure>
+<p>系统重启后自动启动 apache 服务：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">systemctl enable apache2</span><br></pre></td></tr></table></figure>
+<h3 id="测试安装"><a href="#测试安装" class="headerlink" title="测试安装"></a>测试安装</h3><p>为了检查你的apache2服务是否正常工作，使用<code>touch</code>命令在<code>/srv/www/htdocs/</code>文件夹下创建一个文件名为<code>index.html</code>的文件，写入以下内容:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;html&gt;&lt;body&gt;&lt;h1&gt;Welcome to my web site!&lt;/h1&gt;&lt;/body&gt;&lt;/html&gt;</span><br></pre></td></tr></table></figure>
+<p>之后在浏览器访问 <code>http://localhost</code> ，如果正常可以看到大字标题 Welcome to my web site!</p>
+<h3 id="启用web服务可以外部访问"><a href="#启用web服务可以外部访问" class="headerlink" title="启用web服务可以外部访问"></a>启用web服务可以外部访问</h3><p>需要在防火墙中开启http(80)端口，apache默认使用80端口。</p>
+<h2 id="安装PHP7"><a href="#安装PHP7" class="headerlink" title="安装PHP7"></a>安装PHP7</h2><p>root权限下，执行下面命令安装php7：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">zypper in php7 php7-mysql apache2-mod_php7</span><br></pre></td></tr></table></figure>
+<p>启用mod-php通过运行：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">a2enmod php7</span><br></pre></td></tr></table></figure>
+<h3 id="安装php7的扩展"><a href="#安装php7的扩展" class="headerlink" title="安装php7的扩展"></a>安装php7的扩展</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo zypper in php7-bcmath php7-opcache php7-bz2 php7-calendar php7-ctype php7-curl php7-dom php7-ftp php7-gd php7-gettext php7-gmp php7-iconv php7-imap php7-ldap php7-mbstring php7-mcrypt php7-odbc php7-openssl php7-pcntl php7-pgsql php7-posix php7-shmop php7-snmp php7-soap php7-sockets php7-sqlite php7-sysvsem php7-tokenizer php7-wddx php7-xmlrpc php7-xsl php7-zlib php7-exif php7-fastcgi php7-pear php7-sysvmsg php7-sysvshm php7-zip php7-intl</span><br></pre></td></tr></table></figure>
+
+<h3 id="重启web服务器"><a href="#重启web服务器" class="headerlink" title="重启web服务器"></a>重启web服务器</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">systemctl restart apache2</span><br></pre></td></tr></table></figure>
+<h3 id="测试安装-1"><a href="#测试安装-1" class="headerlink" title="测试安装"></a>测试安装</h3><p>为了验证php是否已经在运行,在<code>/srv/www/htdocs/</code>文件夹下创建一个<code>index.php</code>的文件，并写入以下内容:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;?php</span><br><span class="line">phpinfo();</span><br><span class="line">?&gt;</span><br></pre></td></tr></table></figure>
+<p>使用浏览器访问 <code>http://localhost</code> ,你应该可以看到一个页面包含一个表格显示所有的PHP设置。</p>
+<h2 id="安装MariaDB"><a href="#安装MariaDB" class="headerlink" title="安装MariaDB"></a>安装MariaDB</h2><p>MariaDB 是一个MySQL的代替品，而且也是使用的mysql名称。<br>root权限下，执行下面命令安装<code>mariadb</code>和<code>mariadb-tools</code>：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">zypper in mariadb mariadb-tools</span><br></pre></td></tr></table></figure>
+<p>mariadb-tools 是MariaDB的管理工具集。<br>启动MariaDB服务，运行:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">systemctl start mysql</span><br></pre></td></tr></table></figure>
+<p>停止 mysql：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">systemctl stop mysql</span><br></pre></td></tr></table></figure>
+<p>重启 mysql：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">systemctl restart mysql</span><br></pre></td></tr></table></figure>
+<p>系统重启后自动启动 mysql 服务：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">systemctl enable mysql</span><br></pre></td></tr></table></figure>
+<h3 id="配置-MariaDB-x2F-MySql-服务和-Leap-42-1"><a href="#配置-MariaDB-x2F-MySql-服务和-Leap-42-1" class="headerlink" title="配置 MariaDB&#x2F;MySql 服务和 Leap 42.1"></a>配置 MariaDB&#x2F;MySql 服务和 Leap 42.1</h3><p>通过配置 MariaDB 服务提高安全性，请使用openSUSE提供的脚本<code>mysql_secure_installation</code> ：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mysql_secure_installation</span><br></pre></td></tr></table></figure>
+<p>执行后显示：</p>
+<pre><code>root # mysql_secure_installation
+NOTE: RUNNING ALL PARTS OF THIS SCRIPT IS RECOMMENDED FOR ALL MariaDB
+
+SERVERS IN PRODUCTION USE! PLEASE READ EACH STEP CAREFULLY!
+
+In order to log into MariaDB to secure it, we&#39;ll need the current password for the root user. If you&#39;ve just installed MariaDB, and you haven&#39;t set the root password yet, the password will be blank, so you should just press enter here.
+Enter current password for root (enter for none):
+</code></pre>
+<p>按回车(Enter)键：</p>
+<blockquote>
+<p>如果无法正常执行到下一步，则在 <code>/etc/my.cnf</code> 文件中加入 <code>skip-grant-tables</code> ，保存并重启mysql服务。</p>
+</blockquote>
+<pre><code>root #
+... (output sequel of previous command)
+OK, successfully used password, moving on...
+
+Setting the root password ensures that nobody can log into the MariaDB root user without the proper authorisation.
+Set root password? [Y/n] y
+</code></pre>
+<p>输入y：</p>
+<pre><code>root #
+... (output sequel of previous command)
+New password:
+</code></pre>
+<p>输入给root用户的密码：</p>
+<pre><code>root #
+... (output sequel of previous command)
+Re-enter new password:
+</code></pre>
+<p>输入确认密码：</p>
+<pre><code>root #
+... (output sequel of previous command)
+Password updated successfully!
+
+Reloading privilege tables.. ... Success! By default, a MariaDB installation has an anonymous user, allowing anyone to log into MariaDB without having to have a user account created for them. This is intended only for testing, and to make the installation go a bit smoother. You should remove them before moving into a production environment.
+Remove anonymous users? [Y/n]
+</code></pre>
+<p>输入y来移除匿名用户：</p>
+<pre><code>root #
+... (output sequel of previous command)
+... Success!
+
+Normally, root should only be allowed to connect from &#39;localhost&#39;. This ensures that someone cannot guess at the root password from the network.
+Disallow root login remotely? [Y/n]
+</code></pre>
+<p>输入y：</p>
+<pre><code>root #
+... (output sequel of previous command)
+... Success!
+
+By default, MariaDB comes with a database named &#39;test&#39; that anyone can access. This is also intended only for testing, and should be removed before moving into a production environment.
+Remove test database and access to it? [Y/n]
+</code></pre>
+<p>输入y：</p>
+<pre><code>root #
+... (output sequel of previous command)
+- Dropping test database...
+
+... Success! - Removing privileges on test database... ... Success! Reloading the privilege tables will ensure that all changes made so far will take effect immediately.
+Reload privilege tables now? [Y/n]
+</code></pre>
+<p>输入y，最后输出下面内容，表示成功：</p>
+<pre><code>... Success!
+
+Cleaning up...
+
+All done!  If you&#39;ve completed all of the above steps, your MariaDB
+installation should now be secure.
+
+Thanks for using MariaDB!
+</code></pre>
+<h3 id="安装-phpMyAdmin"><a href="#安装-phpMyAdmin" class="headerlink" title="安装 phpMyAdmin"></a>安装 phpMyAdmin</h3><p>执行下面命令安装：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">zypper in phpMyAdmin</span><br></pre></td></tr></table></figure>
+<p>安装完成后重启apache2服务。<br>登录到phpMyAdmin：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">http://localhost/phpMyAdmin</span><br></pre></td></tr></table></figure>
+<p>输入mysql服务的用户名root和root的密码，点击登录。</p>
+<h3 id="给Nextcloud创建数据库"><a href="#给Nextcloud创建数据库" class="headerlink" title="给Nextcloud创建数据库"></a>给Nextcloud创建数据库</h3><p>在这里，以用户root登录phpMyAdmin后，创建一个新的数据库 ‘nextcloud’ 即可。</p>
+<h2 id="安装Nextcloud"><a href="#安装Nextcloud" class="headerlink" title="安装Nextcloud"></a>安装Nextcloud</h2><p>从<a target="_blank" rel="noopener" href="https://nextcloud.com/">官网</a>下载Nextcloud，这里下载的是：<a target="_blank" rel="noopener" href="https://download.nextcloud.com/server/releases/nextcloud-19.0.1.zip">https://download.nextcloud.com/server/releases/nextcloud-19.0.1.zip</a><br>上传下载好的压缩包<code>nextcloud-19.0.1.zip</code>到目录<code>/srv/www/htdocs/</code>下，并解压：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cd /srv/www/htdocs/</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">upzip nextcloud-19.0.1.zip</span><br></pre></td></tr></table></figure>
+<p>删除压缩包：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">rm nextcloud-19.0.1.zip</span><br></pre></td></tr></table></figure>
+<p>新建一个data文件夹，用于存放文件：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mkdir /srv/www/htdocs/nextcloud/data</span><br></pre></td></tr></table></figure>
+<p>给nextcloud目录赋权限：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo chmod 777 nextcloud -Rf</span><br></pre></td></tr></table></figure>
+<h3 id="访问Nextcloud"><a href="#访问Nextcloud" class="headerlink" title="访问Nextcloud"></a>访问Nextcloud</h3><p>访问地址：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">http://localhost/nextcloud</span><br></pre></td></tr></table></figure>
+<p>访问成功后：</p>
+<ul>
+<li>在页面的最上面输入需要给Nextcolud创建的管理员账号和密码</li>
+<li>选择数据存放的位置位刚才新建的data文件夹</li>
+<li>选择数据库MySQL&#x2F;MariaDB，输入数据库的账号，密码，数据库名称</li>
+<li>本地搭建的最后一项一般都填localhost和端口</li>
+</ul>
+<p>最后，点击安装完成。</p>
+<blockquote>
+<p>如果安装时出现如下错误：<br>    <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">nextcloud install Error while trying to initialise the database: An exception 	occurred while executing a query: SQLSTATE[HY000]: General error: 4047 InnoDB 	refuses to write tables with ROW_FORMAT=COMPRESSED or KEY_BLOCK_SIZE.</span><br><span class="line">```  </span><br><span class="line">解决方法：  </span><br><span class="line">1. 进入mariadb控制台，键入以下命令并回车；  </span><br></pre></td></tr></table></figure><br>    mysql -u root -p<br>    <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">2. 输入mariadb的root密码，回车登录；  </span><br><span class="line">3. 输入以下命令并回车；  </span><br></pre></td></tr></table></figure><br>    SET GLOBAL innodb_read_only_compressed&#x3D;OFF;<br>    <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">	4. 这时候再次注册nextcloud，发现成功解决。</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">&gt; 如果出现如下错误：  </span><br></pre></td></tr></table></figure><br>    Your Data directory is invalid 请确保文件根目录下包含有一个名为“.ocdata”的文件。<br>    <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">解决方法：  </span><br><span class="line">使用以下命令更改目录权限即可  </span><br></pre></td></tr></table></figure><br>    chown -R username:groupname &#x2F;path&#x2F;to&#x2F;folder<br>    <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">待安装完成后，访问 `http://localhost/nextcloud` ，输入刚刚设置的管理员账号密码登录即可使用。</span><br><span class="line"></span><br><span class="line">### 关闭数据目录权限检查</span><br><span class="line">打开配置文件：</span><br></pre></td></tr></table></figure><br>vim &#x2F;srv&#x2F;www&#x2F;htdocs&#x2F;nextcloud&#x2F;config&#x2F;config.php</p>
+</blockquote>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">在最后加入：</span><br></pre></td></tr></table></figure>
+<p>‘check_data_directory_permissions’ &#x3D;&gt; false,</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br><span class="line">## Nextcloud优化</span><br><span class="line">### 设置后台任务，cron执行</span><br><span class="line">启用wwwrun用户（如已经启用可以忽略，根据自己web服务的用户组和用户而定）</span><br><span class="line">在root用户下执行</span><br></pre></td></tr></table></figure>
+<p>crontab -u wwwrun -e</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">追加以下内容：</span><br></pre></td></tr></table></figure>
+<p>*&#x2F;5 * * * * php -f &#x2F;srv&#x2F;www&#x2F;htdocs&#x2F;nextcloud&#x2F;cron.php</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&gt; 注意 cron.php 的权限：chown -R wwwrun:www cron.php</span><br><span class="line">测试执行任务：</span><br></pre></td></tr></table></figure>
+<p>sudo -u wwwrun php  -f &#x2F;srv&#x2F;www&#x2F;htdocs&#x2F;nextcloud&#x2F;cron.php</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">可参考crontab命令用法：</span><br><span class="line">1)设置定时器的设置文件, 文件名称为mycronset.txt(名称可自行设定)</span><br></pre></td></tr></table></figure>
+<p>cat mycronset.txt</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">      0   4   *   *   *     root    updatedb           #每天早上4:00以root用户身份执行updatedb命令</span><br><span class="line">      0   4   *   *   *     root    sendmail -q        #每天早上4:00以root用户身份执行updatedb命令</span><br><span class="line">     </span><br><span class="line">使用自定义的crontab设置,指定使用者为tom用户</span><br></pre></td></tr></table></figure>
+<p>crontab -u tom mycronset.txt</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">2)列出当前定时器的设置</span><br></pre></td></tr></table></figure>
+<p>crontab -l</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">3)编辑用户定时器的设置文件</span><br></pre></td></tr></table></figure>
+<p>crontab -e</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">4)删除定时器设置</span><br></pre></td></tr></table></figure>
+<p>crontab -r </p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">### 配置缓存</span><br><span class="line">此处利用APCu+memcache实现缓存，具体做法是在配置文件`/srv/www/htdocs/nextcloud/config/config.php`中，加入下面设置：</span><br></pre></td></tr></table></figure>
+<p>‘memcache.local’ &#x3D;&gt; ‘\OC\Memcache\APCu’,<br>‘memcache.distributed’ &#x3D;&gt; ‘\OC\Memcache\Memcached’,<br>‘memcached_servers’ &#x3D;&gt;<br>array(<br>      array(‘localhost’, 11211),<br>),</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">如果尚未安装APCu或memcache，请参考下面内容安装：</span><br><span class="line">#### 安装APCu</span><br><span class="line">依次执行下面命令安装：</span><br></pre></td></tr></table></figure>
+<p>cd &#x2F;tmp&#x2F;</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">```</span><br><span class="line">tar -zxvf apcu-5.1.18.tgz</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cd apcu-5.1.18/ </span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">phpize</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">./configure --with-php-config=/usr/bin/php-config</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">make</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">make install</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>在执行<code>phpize</code>命令后，如果提示没有phpize命令，则执行下面命令安装所需的phpize：</p>
+</blockquote>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo zypper in php7-devel</span><br></pre></td></tr></table></figure>
+<p>最后配置php.ini：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vim /etc/php7/apache2/php.ini</span><br></pre></td></tr></table></figure>
+<p>在php.ini的最后加入以下配置：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">extension = apcu.so</span><br><span class="line">apc.enabled = on</span><br><span class="line">apc.shm_size = 64M</span><br><span class="line">apc.ttl = 7200</span><br><span class="line">apc.enable_cli = on</span><br></pre></td></tr></table></figure>
+
+<h4 id="安装memcache"><a href="#安装memcache" class="headerlink" title="安装memcache"></a>安装memcache</h4><p>Memcached会用到libevent这个库来进行Socket的处理，所以先安装libevent。</p>
+<h5 id="1-先装libevent"><a href="#1-先装libevent" class="headerlink" title="1. 先装libevent"></a>1. 先装libevent</h5><p>安装包的官网下载地址：<a target="_blank" rel="noopener" href="https://libevent.org/">https://libevent.org/</a><br>依次执行下面命令安装：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cd /tmp/</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tar -zxvf libevent-2.1.12-stable.tar.gz</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cd libevent-2.1.12-stable/ </span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">./configure -prefix=/usr</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">make</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">make install</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>在执行<code>./configure -prefix=/usr</code>命令后，如果报错：<code>configure: error: openssl is a must but can not be found</code>，则执行下面命令安装所需的openssl：</p>
+</blockquote>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">zypper in openssl-devel</span><br></pre></td></tr></table></figure>
+
+<p>测试libevent是否安装成功：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ls -al /usr/lib | grep libevent</span><br></pre></td></tr></table></figure>
+<h5 id="2-再装memcache"><a href="#2-再装memcache" class="headerlink" title="2. 再装memcache"></a>2. 再装memcache</h5><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cd /tmp/</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tar -zxvf memcached-1.6.6.tar.gz</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cd memcached-1.6.6/</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">./configure -prefix=/usr  -with-libevent=/usr</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">make</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">make install</span><br></pre></td></tr></table></figure>
+<p>测试memcache是否安装成功：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ls -al /usr/local/bin/mem*</span><br></pre></td></tr></table></figure>
+<h5 id="3-启动Memcached服务"><a href="#3-启动Memcached服务" class="headerlink" title="3. 启动Memcached服务"></a>3. 启动Memcached服务</h5><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">memcached -d -m 10 -u root -l 10.1.90.40 -p 12000 -c 256 -P /home/javadev/memcached_pid/</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>-d选项是启动一个守护进程，<br>-m是分配给Memcache使用的内存数量，单位是MB，我这里是10MB，<br>-u是运行Memcache的用户，我这里是root，<br>-l是监听的服务器IP地址，如果有多个地址的话，我这里指定了服务器的IP地址192.168.1.132，<br>-p是设置Memcache监听的端口，我这里设置了12000，最好是1024以上的端口，<br>-c选项是最大运行的并发连接数，默认是1024，我这里设置了256，按照你服务器的负载量来设定，<br>-P是设置保存Memcache的pid文件，我这里是保存在 &#x2F;home&#x2F;javadev&#x2F;m emcached_pid&#x2F;</p>
+</blockquote>
+<p>使用命令查看启动的memcached服务进程</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ps -ef | grep memcached</span><br></pre></td></tr></table></figure>
+<p>启动成功后如下：</p>
+<pre><code>root     26084     1  0 14:41 ?        00:00:00 memcached -d -m 10 -u root -l 10.1.90.40 -p 12000 -c 256 -P /home/javadev/memcached_pid/
+root     26095  9798  0 14:41 pts/0    00:00:00 grep --color=auto memcached
+</code></pre>
+<h2 id="OCC命令的用法"><a href="#OCC命令的用法" class="headerlink" title="OCC命令的用法"></a>OCC命令的用法</h2><p>occ命令是ownCloud&#x2F;Nextcloud的命令行界面。您可以使用occ执行许多常见的服务器操作，例如安装和升级ownCloud&#x2F;Nextcloud，管理用户，加密，密码，LDAP设置等。<br>一般格式是这样的：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo -u www-data php occ [options] [arguments]</span><br></pre></td></tr></table></figure>
+<p>更多命令可参考：<a target="_blank" rel="noopener" href="https://www.orgleaf.com/1719.html">ownCloud&#x2F;Nextcloud OCC命令行工具详解</a></p>
+<h3 id="重置密码"><a href="#重置密码" class="headerlink" title="重置密码"></a>重置密码</h3><p>user相关命令：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">user:add                            添加一个用户</span><br><span class="line">user:delete                         删除特定用户</span><br><span class="line">user:disable                        禁用特定用户</span><br><span class="line">user:enable                         激活特定用户</span><br><span class="line">user:info                           显示用户信息</span><br><span class="line">user:lastseen                       显示用户最后登陆了时间</span><br><span class="line">user:list                           列出所有用户</span><br><span class="line">user:report                         显示有多少用户访问</span><br><span class="line">user:resetpassword                  为一个用户重置密码</span><br><span class="line">user:setting                        读取和修改用户设置</span><br></pre></td></tr></table></figure>
+<p>假如管理员密码忘了，可利用OCC命令按以下步骤重置：</p>
+<ol>
+<li>进入nextcloud目录下</li>
+<li>查看已有用户名列表<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo -u wwwrun php occ user:list</span><br></pre></td></tr></table></figure></li>
+<li>重置管理员账号admin的密码<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo -u wwwrun php occ user:resetpassword admin</span><br></pre></td></tr></table></figure></li>
+<li>按提示输入新密码即可。</li>
+</ol>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="reward-container">
+  <div><div style="color: #FC6423">-------------------本文结束 <i class="fa fa-paw"></i> 感谢您的阅读-------------------</div></div>
+  <button>
+    赞赏
+  </button>
+  <div class="post-reward">
+      <div>
+        <img src="/img/YPN_wechatpay-32x32.png" alt="昜丿捺 微信">
+        <span>微信</span>
+      </div>
+      <div>
+        <img src="/img/YPN_alipay-32x32.jpg" alt="昜丿捺 支付宝">
+        <span>支付宝</span>
+      </div>
+
+  </div>
+</div>
+
+          
+
+<div class="post-copyright">
+<ul>
+  <li class="post-copyright-author">
+      <strong>原作者： </strong>昜丿捺
+  </li>
+  <li class="post-copyright-link">
+      <strong>本文链接：</strong>
+      <a href="https://yangpiena.gitee.io/2020/07/30/%E6%90%AD%E5%BB%BA%E7%A7%81%E6%9C%89%E4%BA%91%E5%90%8C%E6%AD%A5%E4%BA%91%E7%9B%98Nextcloud/" title="搭建私有云同步云盘Nextcloud">https://yangpiena.gitee.io/2020/07/30/搭建私有云同步云盘Nextcloud/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2020/07/22/Windows10%E7%9A%84%E7%A7%98%E5%AF%86/" rel="prev" title="Windows10的秘密">
+                  <i class="fa fa-chevron-left"></i> Windows10的秘密
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/2020/08/06/%E6%94%B6%E7%BC%A9VirtualBox%E8%99%9A%E6%8B%9F%E7%A1%AC%E7%9B%98%E6%96%87%E4%BB%B6%E7%9A%84%E5%A4%A7%E5%B0%8F/" rel="next" title="收缩VirtualBox虚拟硬盘文件的大小">
+                  收缩VirtualBox虚拟硬盘文件的大小 <i class="fa fa-chevron-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 
+  <span itemprop="copyrightYear">2024</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">昜丿捺</span>
+</div>
+<div class="busuanzi-count">
+    <span class="post-meta-item" id="busuanzi_container_site_uv">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="总访客量">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="总访问量">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+
+<!-- 增加网站运行时间-->
+<div id="days"></div>
+<script>
+    function show_date_time(){
+        window.setTimeout("show_date_time()", 1000);
+        BirthDay=new Date("11/09/2016 00:00:00");
+        today=new Date();
+        timeold=(today.getTime()-BirthDay.getTime());
+        sectimeold=timeold/1000
+        secondsold=Math.floor(sectimeold);
+        msPerDay=24*60*60*1000
+        e_daysold=timeold/msPerDay
+        daysold=Math.floor(e_daysold);
+        e_hrsold=(e_daysold-daysold)*24;
+        hrsold=setzero(Math.floor(e_hrsold));
+        e_minsold=(e_hrsold-hrsold)*60;
+        minsold=setzero(Math.floor((e_hrsold-hrsold)*60));
+        seconds=setzero(Math.floor((e_minsold-minsold)*60));
+        document.getElementById('days').innerHTML="网站已运行 "+daysold+" 天 "+hrsold+" 小时 "+minsold+" 分 "+seconds+" 秒";
+    }
+    function setzero(i) {
+        if (i<10) {
+            i="0" + i
+        };
+        return i;
+    }
+    show_date_time();
+</script>
+
+
+    </div>
+  </footer>
+
+  
+  <div class="reading-progress-bar"></div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+  
+  <script src="https://cdnjs.loli.net/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.loli.net/ajax/libs/next-theme-pjax/0.6.0/pjax.min.js" integrity="sha256-vxLn1tSKWD4dqbMRyv940UYw4sXgMtYcK6reefzZrao=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/next-boot.js"></script><script src="/js/pjax.js"></script>
+
+  <script src="https://cdnjs.loli.net/ajax/libs/hexo-generator-searchdb/1.4.1/search.js" integrity="sha256-1kfA5uHPf65M5cphT2dvymhkuyHPQp5A53EGZOnOLmc=" crossorigin="anonymous"></script>
+<script src="/js/third-party/search/local-search.js"></script>
+
+
+
+
+
+  
+  <script data-pjax async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+
+  
+
+  <script class="next-config" data-name="enableMath" type="application/json">true</script><script class="next-config" data-name="mathjax" type="application/json">{"enable":true,"tags":"none","js":{"url":"https://cdnjs.loli.net/ajax/libs/mathjax/3.2.2/es5/tex-mml-chtml.js","integrity":"sha256-MASABpB4tYktI2Oitl4t+78w/lyA+D7b/s9GEP0JOGI="}}</script>
+<script src="/js/third-party/math/mathjax.js"></script>
+
+
+<script type="text/javascript" src="/js/ypn.js/jquery-1.11.3.min.js"></script>
+
+<!-- 页面鼠标单击效果 -->
+    <script type="text/javascript" src="/js/ypn.js/text.js"></script>
+
+<!-- 动态线条背景 -->
+<script type="text/javascript" color="235,178,178" opacity='0.7' zIndex="-2" count="100" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js"></script>
+
+<!-- 收藏页输入框特效 -->
+<script src="/js/ypn.js/activate-power-mode.js"></script>
+<script>
+  POWERMODE.colorful = true;  // 控制开启/开启礼花特效  
+  POWERMODE.shake    = false; // 控制开启/关闭屏幕震动特效  
+  document.body.addEventListener('input', POWERMODE);
+</script>
+
+<!-- 收藏页搜索按钮动作 -->
+<script type="text/javascript" src="/js/ypn.js/searchButton.js"></script>
+
+<!-- 页签标题崩溃欺骗 -->
+<script type="text/javascript" src="/js/ypn.js/crash-cheat.js"></script>
+
+<!-- 一言 -->
+<script type="text/javascript" src="/js/ypn.js/yiYanJingDianYuJu.js"></script>
+
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"log":false,"model":{"jsonPath":"/live2dw/assets/hijiki.model.json"},"display":{"position":"left","vOffset":-80},"mobile":{"show":false}});</script></body>
+</html>

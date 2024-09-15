@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222"><meta name="generator" content="Hexo 6.3.0">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/img/avatar/ironman.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/img/avatar/favicon.ico">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdnjs.loli.net/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha256-Z1K5uhUaJXA7Ll0XrZ/0JhX4lAtZFpT6jkKrEDT0drU=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.loli.net/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"yangpiena.gitee.io","root":"/","images":"/images","scheme":"Gemini","darkmode":false,"version":"8.14.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":true,"style":"default"},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
+
+
+
+<link rel="canonical" href="https://yangpiena.gitee.io/2018/10/24/%E6%95%B0%E6%8D%AE%E5%BA%93SQL-Server%E4%B8%8EAccess%E5%9C%A8%E5%86%99%E6%B3%95%E4%B8%8A%E7%9A%84%E5%8C%BA%E5%88%AB/">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://yangpiena.gitee.io/2018/10/24/%E6%95%B0%E6%8D%AE%E5%BA%93SQL-Server%E4%B8%8EAccess%E5%9C%A8%E5%86%99%E6%B3%95%E4%B8%8A%E7%9A%84%E5%8C%BA%E5%88%AB/","path":"2018/10/24/数据库SQL-Server与Access在写法上的区别/","title":"数据库SQL Server与Access在写法上的区别"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>数据库SQL Server与Access在写法上的区别 | 昜丿捺</title>
+  
+
+
+
+
+
+
+  <script async defer data-website-id="" src=""></script>
+
+  <script defer data-domain="" src=""></script>
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">昜丿捺</p>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">没有阳光，沉默而居</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="搜索" role="button">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a></li><li class="menu-item menu-item-links"><a href="/links" rel="section"><i class="fa fa-star fa-fw"></i>收藏</a></li><li class="menu-item menu-item-photos"><a href="/photos" rel="section"><i class="fa fa-camera fa-fw"></i>相册</a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup"><div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off" maxlength="80"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close" role="button">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div class="search-result-container no-result">
+  <div class="search-result-icon">
+    <i class="fa fa-spinner fa-pulse fa-5x"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-%E6%9F%A5%E8%AF%A2%E8%AF%AD%E5%8F%A5WHERE%E6%9D%A1%E4%BB%B6%E5%B8%A6%E5%B8%83%E5%B0%94%E7%B1%BB%E5%9E%8B%E5%80%BC%E6%97%B6"><span class="nav-number">1.</span> <span class="nav-text">1. 查询语句WHERE条件带布尔类型值时</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-%E6%9F%A5%E8%AF%A2%E8%AF%AD%E5%8F%A5WHERE%E6%9D%A1%E4%BB%B6%E5%B8%A6%E6%97%A5%E6%9C%9F%E6%97%B6"><span class="nav-number">2.</span> <span class="nav-text">2. 查询语句WHERE条件带日期时</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-%E5%A4%9A%E5%88%86%E6%94%AF%E7%9A%84%E5%88%A4%E6%96%AD%E6%83%85%E5%86%B5"><span class="nav-number">3.</span> <span class="nav-text">3. 多分支的判断情况</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-%E5%B0%86%E5%AD%97%E7%AC%A6%E7%B1%BB%E5%9E%8B%E8%BD%AC%E6%8D%A2%E6%88%90%E6%95%B0%E5%80%BC%E7%B1%BB%E5%9E%8B"><span class="nav-number">4.</span> <span class="nav-text">4. 将字符类型转换成数值类型</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-%E5%B0%86%E6%95%B0%E5%80%BC%E7%B1%BB%E5%9E%8B%E8%BD%AC%E6%8D%A2%E6%88%90%E5%AD%97%E7%AC%A6%E7%B1%BB%E5%9E%8B"><span class="nav-number">5.</span> <span class="nav-text">5. 将数值类型转换成字符类型</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-%E6%A0%BC%E5%BC%8F%E5%8C%96%E6%97%A5%E6%9C%9F"><span class="nav-number">6.</span> <span class="nav-text">6. 格式化日期</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#7-%E5%8F%82%E6%95%B0%E5%8C%96%E6%9B%B4%E6%96%B0%E6%88%96%E6%96%B0%E5%A2%9E%E6%95%B0%E6%8D%AE%E6%97%B6%EF%BC%8CSQl-%E8%AF%AD%E5%8F%A5%E4%B8%AD%E7%9A%84%E5%AD%97%E6%AE%B5%E9%A1%BA%E5%BA%8F%E9%9C%80%E4%B8%8E%E5%8F%82%E6%95%B0%E5%88%97%E8%A1%A8%E7%9A%84%E9%A1%BA%E5%BA%8F%E4%BF%9D%E6%8C%81%E4%B8%80%E8%87%B4"><span class="nav-number">7.</span> <span class="nav-text">7. 参数化更新或新增数据时，SQl 语句中的字段顺序需与参数列表的顺序保持一致</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#8-Access%E7%B1%BB%E4%BC%BC%E4%BA%8ESQL-Server%E7%9A%84%E5%87%BD%E6%95%B0ISNULL"><span class="nav-number">8.</span> <span class="nav-text">8. Access类似于SQL Server的函数ISNULL()</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#9-Access%E5%88%9B%E5%BB%BA%E8%A1%A8%E6%88%96%E6%B7%BB%E5%8A%A0%E5%88%97%E6%97%B6%EF%BC%8C%E5%BF%85%E9%A1%BB%E9%99%84%E5%B8%A6%E9%BB%98%E8%AE%A4%E7%BA%A6%E6%9D%9F%EF%BC%88Defualt%EF%BC%89"><span class="nav-number">9.</span> <span class="nav-text">9. Access创建表或添加列时，必须附带默认约束（Defualt）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#10-Access%E5%88%9B%E5%BB%BA%E6%96%B0%E5%88%97%E6%97%B6%EF%BC%8C%E5%A6%82%E6%9E%9C%E6%9C%AA%E6%B7%BB%E5%8A%A0%E9%BB%98%E8%AE%A4%E7%BA%A6%E6%9D%9F%EF%BC%8C%E5%9C%A8%E9%87%87%E7%94%A8%E5%86%85%E7%BD%AE%E5%87%BD%E6%95%B0STR-A-%E6%9F%A5%E8%AF%A2%E6%97%B6%E4%BC%9A%E6%98%BE%E7%A4%BAnull%E5%80%BC"><span class="nav-number">10.</span> <span class="nav-text">10. Access创建新列时，如果未添加默认约束，在采用内置函数STR(A)查询时会显示null值</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#11-%E5%BD%93%E8%A1%A8%E4%BB%8EAccess%E6%95%B0%E6%8D%AE%E5%BA%93%E5%AF%BC%E5%85%A5%E5%88%B0SQL-Server%E4%B8%AD%E6%97%B6%EF%BC%8C%E5%8E%9F%E8%A1%A8%E4%B8%AD%E7%9A%84%E8%87%AA%E5%A2%9E%E9%95%BF%E5%88%97%E4%BC%9A%E4%B8%A2%E5%A4%B1%EF%BC%8C%E9%9C%80%E8%A6%81%E9%87%8D%E6%96%B0%E5%BB%BA%E7%AB%8B%E8%87%AA%E5%A2%9E%E9%95%BF%E6%A0%87%E8%AF%86%E3%80%82"><span class="nav-number">11.</span> <span class="nav-text">11. 当表从Access数据库导入到SQL Server中时，原表中的自增长列会丢失，需要重新建立自增长标识。</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#12-%E5%BD%93%E8%A1%A8%E4%BB%8EAccess%E6%95%B0%E6%8D%AE%E5%BA%93%E5%AF%BC%E5%85%A5%E5%88%B0SQL-Server%E4%B8%AD%E6%97%B6%EF%BC%8CAccess%E7%9A%84%E6%95%B0%E6%8D%AE%E5%A6%82%E6%9E%9C%E5%AD%98%E5%9C%A8%E5%AF%86%E7%A0%81%EF%BC%8C%E5%88%99%E4%BB%A5%E7%8B%AC%E7%AB%8B%E7%9A%84%E6%96%B9%E5%BC%8F%E6%B8%85%E7%A9%BAAccess%E5%8E%9F%E8%AE%BE%E7%BD%AE%E7%9A%84%E5%AF%86%E7%A0%81%E5%8D%B3%E5%8F%AF%E3%80%82"><span class="nav-number">12.</span> <span class="nav-text">12. 当表从Access数据库导入到SQL Server中时，Access的数据如果存在密码，则以独立的方式清空Access原设置的密码即可。</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#13-%E5%A4%9A%E8%A1%A8%E5%85%B3%E8%81%94%E6%9F%A5%E8%AF%A2"><span class="nav-number">13.</span> <span class="nav-text">13. 多表关联查询</span></a></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="昜丿捺"
+      src="/img/avatar/ironman.png">
+  <p class="site-author-name" itemprop="name">昜丿捺</p>
+  <div class="site-description" itemprop="description">
+    <!--  -->
+
+
+    <!-- 显示一言经典语句 -->
+    <span id="lwlhitokoto"></span>
+
+
+  </div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">95</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">2</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">54</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/yangpiena" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;yangpiena" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://yangpiena.coding.net/" title="CODING → https:&#x2F;&#x2F;yangpiena.coding.net" rel="noopener" target="_blank"><i class="fab fa-github-alt fa-fw"></i>CODING</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://gitee.com/yangpiena" title="Gitee → https:&#x2F;&#x2F;gitee.com&#x2F;yangpiena" rel="noopener" target="_blank"><i class="fab fa-glide fa-fw"></i>Gitee</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://weibo.com/yangpiena" title="Weibo → https:&#x2F;&#x2F;weibo.com&#x2F;yangpiena" rel="noopener" target="_blank"><i class="fab fa-weibo fa-fw"></i>Weibo</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:yangpiena@gmail.com" title="E-Mail → mailto:yangpiena@gmail.com" rel="noopener" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+  </div>
+
+        </div>
+      </div>
+        <div class="back-to-top animated" role="button" aria-label="返回顶部">
+          <i class="fa fa-arrow-up"></i>
+          <span>0%</span>
+        </div>
+    </div>
+
+    
+    <div class="sidebar-inner sidebar-blogroll">
+      <div class="links-of-blogroll animated">
+        <div class="links-of-blogroll-title"><i class="fa fa-globe fa-fw"></i>
+          链接
+        </div>
+        <ul class="links-of-blogroll-list">
+            <li class="links-of-blogroll-item">
+              <a href="https://yangpiena.gitee.io/" title="https:&#x2F;&#x2F;yangpiena.gitee.io&#x2F;">昜丿捺（Gitee）</a>
+            </li>
+            <li class="links-of-blogroll-item">
+              <a href="https://yangpiena.github.io/" title="https:&#x2F;&#x2F;yangpiena.github.io&#x2F;" rel="noopener" target="_blank">昜丿捺（GitHub）</a>
+            </li>
+            <li class="links-of-blogroll-item">
+              <a href="http://coding-pages-bucket-407450-1059047-17379-602648-1258146968.cos-website.ap-hongkong.myqcloud.com/" title="http:&#x2F;&#x2F;coding-pages-bucket-407450-1059047-17379-602648-1258146968.cos-website.ap-hongkong.myqcloud.com&#x2F;" rel="noopener" target="_blank">昜丿捺（Coding）</a>
+            </li>
+        </ul>
+      </div>
+    </div>
+    
+    
+    <!-- 增加网易云音乐 -->
+        <div class="pjax">
+          <div class="sidebar-inner">
+            <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=300 src="//music.163.com/outchain/player?type=0&id=6605147757&auto=1&height=300"></iframe>
+          </div>
+        </div>
+
+
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://yangpiena.gitee.io/2018/10/24/%E6%95%B0%E6%8D%AE%E5%BA%93SQL-Server%E4%B8%8EAccess%E5%9C%A8%E5%86%99%E6%B3%95%E4%B8%8A%E7%9A%84%E5%8C%BA%E5%88%AB/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/img/avatar/ironman.png">
+      <meta itemprop="name" content="昜丿捺">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="昜丿捺">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="数据库SQL Server与Access在写法上的区别 | 昜丿捺">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          数据库SQL Server与Access在写法上的区别
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2018-10-24 22:19:18" itemprop="dateCreated datePublished" datetime="2018-10-24T22:19:18+08:00">2018-10-24</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2020-06-19 12:25:57" itemprop="dateModified" datetime="2020-06-19T12:25:57+08:00">2020-06-19</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/tech-notes/" itemprop="url" rel="index"><span itemprop="name">技术</span></a>
+        </span>
+    </span>
+
+  
+    <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv">
+      <span class="post-meta-item-icon">
+        <i class="far fa-eye"></i>
+      </span>
+      <span class="post-meta-item-text">阅读次数：</span>
+      <span id="busuanzi_value_page_pv"></span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <h3 id="1-查询语句WHERE条件带布尔类型值时"><a href="#1-查询语句WHERE条件带布尔类型值时" class="headerlink" title="1. 查询语句WHERE条件带布尔类型值时"></a>1. 查询语句WHERE条件带布尔类型值时</h3><p>Access</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">AND</span> IsA <span class="operator">=</span> <span class="literal">true</span>;</span><br></pre></td></tr></table></figure>
+<p>SQL Server</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">AND</span> IsA <span class="operator">=</span> <span class="number">1</span>;</span><br><span class="line"><span class="keyword">AND</span> IsA <span class="operator">=</span> <span class="string">&#x27;true&#x27;</span>;</span><br></pre></td></tr></table></figure>
+
+<span id="more"></span>
+
+<h3 id="2-查询语句WHERE条件带日期时"><a href="#2-查询语句WHERE条件带日期时" class="headerlink" title="2. 查询语句WHERE条件带日期时"></a>2. 查询语句WHERE条件带日期时</h3><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> <span class="operator">*</span> <span class="keyword">FROM</span> 表 <span class="keyword">WHERE</span> TimeTag <span class="operator">=</span> FORMAT(<span class="string">&#x27;2016-1-6&#x27;</span>,<span class="string">&#x27;yyyy-MM-dd hh:mm:ss&#x27;</span>);</span><br><span class="line"><span class="keyword">SELECT</span> <span class="operator">*</span> <span class="keyword">FROM</span> 表 <span class="keyword">WHERE</span> TimeTag <span class="operator">=</span> FORMAT(&quot;2016-1-6&quot;,&quot;yyyy-MM-dd hh:mm:ss&quot;);</span><br></pre></td></tr></table></figure>
+
+<h3 id="3-多分支的判断情况"><a href="#3-多分支的判断情况" class="headerlink" title="3. 多分支的判断情况"></a>3. 多分支的判断情况</h3><p>Access</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> SWITCH(IsA <span class="operator">=</span> <span class="literal">false</span>, <span class="number">0</span>, IsA <span class="operator">=</span> <span class="literal">true</span>, <span class="number">1</span>) <span class="keyword">AS</span> ColName <span class="keyword">FROM</span> 表;</span><br><span class="line"><span class="keyword">SELECT</span> IIF(IsA <span class="keyword">IS</span> <span class="keyword">NULL</span>, <span class="number">0</span>, IsA)              <span class="keyword">AS</span> ColName <span class="keyword">FROM</span> 表;</span><br></pre></td></tr></table></figure>
+<p>SQL Server</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> <span class="keyword">CASE</span> IsA <span class="keyword">WHEN</span> <span class="keyword">NULL</span> <span class="keyword">THEN</span> <span class="number">0</span> <span class="keyword">ELSE</span> <span class="number">1</span> <span class="keyword">END</span> <span class="keyword">AS</span> ColName <span class="keyword">AS</span> A <span class="keyword">FROM</span> 表;</span><br><span class="line"><span class="keyword">SELECT</span> <span class="keyword">CASE</span> <span class="keyword">WHEN</span> IsA <span class="keyword">IS</span> <span class="keyword">NULL</span> <span class="keyword">THEN</span> <span class="number">0</span> <span class="keyword">ELSE</span> <span class="number">1</span> <span class="keyword">END</span> <span class="keyword">AS</span> ColName <span class="keyword">AS</span> A <span class="keyword">FROM</span> 表;</span><br></pre></td></tr></table></figure>
+
+<h3 id="4-将字符类型转换成数值类型"><a href="#4-将字符类型转换成数值类型" class="headerlink" title="4. 将字符类型转换成数值类型"></a>4. 将字符类型转换成数值类型</h3><p>Access</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Val(str)</span><br></pre></td></tr></table></figure>
+<p>SQL Server</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">CONVERT</span>(<span class="type">INT</span>, str)</span><br><span class="line"><span class="built_in">CAST</span>(str <span class="keyword">AS</span> <span class="type">INT</span>)</span><br></pre></td></tr></table></figure>
+
+<h3 id="5-将数值类型转换成字符类型"><a href="#5-将数值类型转换成字符类型" class="headerlink" title="5. 将数值类型转换成字符类型"></a>5. 将数值类型转换成字符类型</h3><p>Access</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Str(num)</span><br></pre></td></tr></table></figure>
+<p>SQL Server</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">CONVERT</span>(<span class="type">VARCHAR</span>(<span class="number">20</span>), num)</span><br><span class="line"><span class="built_in">CAST</span>(num <span class="keyword">AS</span> <span class="type">VARCHAR</span>)</span><br></pre></td></tr></table></figure>
+
+<h3 id="6-格式化日期"><a href="#6-格式化日期" class="headerlink" title="6. 格式化日期"></a>6. 格式化日期</h3><p>Access</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">FORMAT(NOW(),<span class="string">&#x27;yyyy-MM-dd&#x27;</span>)</span><br><span class="line">FORMAT(NOW(),<span class="string">&#x27;yyyy-MM-dd hh:mm:ss&#x27;</span>)</span><br></pre></td></tr></table></figure>
+<p>SQL Server</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">CONVERT</span>(<span class="type">VARCHAR</span>(<span class="number">20</span>),GETDATE(),<span class="number">23</span>)</span><br><span class="line"><span class="keyword">CONVERT</span>(<span class="type">VARCHAR</span>(<span class="number">20</span>),GETDATE(),<span class="number">120</span>)</span><br></pre></td></tr></table></figure>
+
+<h3 id="7-参数化更新或新增数据时，SQl-语句中的字段顺序需与参数列表的顺序保持一致"><a href="#7-参数化更新或新增数据时，SQl-语句中的字段顺序需与参数列表的顺序保持一致" class="headerlink" title="7. 参数化更新或新增数据时，SQl 语句中的字段顺序需与参数列表的顺序保持一致"></a>7. 参数化更新或新增数据时，SQl 语句中的字段顺序需与参数列表的顺序保持一致</h3><p>如更新SQL：  </p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">UPDATE</span> 表 <span class="keyword">SET</span> Name <span class="operator">=</span> <span class="variable">@Name</span>, Age <span class="operator">=</span> <span class="variable">@Age</span> <span class="keyword">WHERE</span> ID <span class="operator">=</span> <span class="variable">@ID</span></span><br></pre></td></tr></table></figure>
+<p>则参数必须定义为：</p>
+<p>      OleDbParameter[] param &#x3D; new OleDbParameter<br>      {<br>          new OleDbParameter(“@Name”, model.Name),<br>          new OleDbParameter(“@Age”, model.Age),<br>          new OleDbParameter(“@ID”, model.ID), <br>       }</p>
+<h3 id="8-Access类似于SQL-Server的函数ISNULL"><a href="#8-Access类似于SQL-Server的函数ISNULL" class="headerlink" title="8. Access类似于SQL Server的函数ISNULL()"></a>8. Access类似于SQL Server的函数ISNULL()</h3><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">IIF(IsA <span class="operator">=</span> <span class="string">&#x27;&#x27;</span> <span class="keyword">OR</span> IsA <span class="keyword">IS</span> <span class="keyword">NULL</span>, <span class="string">&#x27;&#x27;</span>, IsA)</span><br></pre></td></tr></table></figure>
+
+<h3 id="9-Access创建表或添加列时，必须附带默认约束（Defualt）"><a href="#9-Access创建表或添加列时，必须附带默认约束（Defualt）" class="headerlink" title="9. Access创建表或添加列时，必须附带默认约束（Defualt）"></a>9. Access创建表或添加列时，必须附带默认约束（Defualt）</h3><h3 id="10-Access创建新列时，如果未添加默认约束，在采用内置函数STR-A-查询时会显示null值"><a href="#10-Access创建新列时，如果未添加默认约束，在采用内置函数STR-A-查询时会显示null值" class="headerlink" title="10. Access创建新列时，如果未添加默认约束，在采用内置函数STR(A)查询时会显示null值"></a>10. Access创建新列时，如果未添加默认约束，在采用内置函数STR(A)查询时会显示null值</h3><p>如下：</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">ALTER</span> <span class="keyword">TABLE</span> 表 <span class="keyword">ADD</span> A <span class="type">VARCHAR</span>(<span class="number">23</span>)</span><br><span class="line"><span class="keyword">SELECT</span> IIF(STR(A) <span class="keyword">IS</span> <span class="keyword">NULL</span>, <span class="string">&#x27;空&#x27;</span>, <span class="string">&#x27;非空&#x27;</span>) <span class="keyword">FROM</span> 表</span><br></pre></td></tr></table></figure>
+
+<h3 id="11-当表从Access数据库导入到SQL-Server中时，原表中的自增长列会丢失，需要重新建立自增长标识。"><a href="#11-当表从Access数据库导入到SQL-Server中时，原表中的自增长列会丢失，需要重新建立自增长标识。" class="headerlink" title="11. 当表从Access数据库导入到SQL Server中时，原表中的自增长列会丢失，需要重新建立自增长标识。"></a>11. 当表从Access数据库导入到SQL Server中时，原表中的自增长列会丢失，需要重新建立自增长标识。</h3><h3 id="12-当表从Access数据库导入到SQL-Server中时，Access的数据如果存在密码，则以独立的方式清空Access原设置的密码即可。"><a href="#12-当表从Access数据库导入到SQL-Server中时，Access的数据如果存在密码，则以独立的方式清空Access原设置的密码即可。" class="headerlink" title="12. 当表从Access数据库导入到SQL Server中时，Access的数据如果存在密码，则以独立的方式清空Access原设置的密码即可。"></a>12. 当表从Access数据库导入到SQL Server中时，Access的数据如果存在密码，则以独立的方式清空Access原设置的密码即可。</h3><h3 id="13-多表关联查询"><a href="#13-多表关联查询" class="headerlink" title="13. 多表关联查询"></a>13. 多表关联查询</h3><p>Access（可理解为始终是两表间的操作）</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> <span class="operator">*</span> <span class="keyword">FROM</span>  (A <span class="keyword">INNER</span> <span class="keyword">JOIN</span> B <span class="keyword">ON</span> A.ID <span class="operator">=</span> B.ID ) <span class="keyword">INNER</span> <span class="keyword">JOIN</span> C <span class="keyword">ON</span> B.ID <span class="operator">=</span> C.ID;</span><br><span class="line"><span class="keyword">SELECT</span> <span class="operator">*</span> <span class="keyword">FROM</span> ((A <span class="keyword">INNER</span> <span class="keyword">JOIN</span> B <span class="keyword">ON</span> A.ID <span class="operator">=</span> B.ID ) <span class="keyword">INNER</span> <span class="keyword">JOIN</span> C <span class="keyword">ON</span> B.ID <span class="operator">=</span> C.ID) <span class="keyword">INNER</span> <span class="keyword">JOIN</span> D <span class="keyword">ON</span> C.ID <span class="operator">=</span> D.ID;</span><br></pre></td></tr></table></figure>
+<p>SQL Server</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> <span class="operator">*</span> <span class="keyword">FROM</span> A <span class="keyword">INNER</span> <span class="keyword">JOIN</span> B <span class="keyword">ON</span> A.ID <span class="operator">=</span> B.ID <span class="keyword">INNER</span> <span class="keyword">JOIN</span> C <span class="keyword">ON</span> B.ID <span class="operator">=</span> C.ID;</span><br></pre></td></tr></table></figure>
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="reward-container">
+  <div><div style="color: #FC6423">-------------------本文结束 <i class="fa fa-paw"></i> 感谢您的阅读-------------------</div></div>
+  <button>
+    赞赏
+  </button>
+  <div class="post-reward">
+      <div>
+        <img src="/img/YPN_wechatpay-32x32.png" alt="昜丿捺 微信">
+        <span>微信</span>
+      </div>
+      <div>
+        <img src="/img/YPN_alipay-32x32.jpg" alt="昜丿捺 支付宝">
+        <span>支付宝</span>
+      </div>
+
+  </div>
+</div>
+
+          
+
+<div class="post-copyright">
+<ul>
+  <li class="post-copyright-author">
+      <strong>原作者： </strong>昜丿捺
+  </li>
+  <li class="post-copyright-link">
+      <strong>本文链接：</strong>
+      <a href="https://yangpiena.gitee.io/2018/10/24/%E6%95%B0%E6%8D%AE%E5%BA%93SQL-Server%E4%B8%8EAccess%E5%9C%A8%E5%86%99%E6%B3%95%E4%B8%8A%E7%9A%84%E5%8C%BA%E5%88%AB/" title="数据库SQL Server与Access在写法上的区别">https://yangpiena.gitee.io/2018/10/24/数据库SQL-Server与Access在写法上的区别/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+          <div class="post-tags">
+              <a href="/tags/sql/" rel="tag"># sql</a>
+              <a href="/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/" rel="tag"># 数据库</a>
+              <a href="/tags/Access/" rel="tag"># Access</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2018/07/03/%E5%9C%A8VS2017%E4%B8%AD%E4%BD%BF%E7%94%A8CSharp%E5%88%9B%E5%BB%BA%E5%92%8C%E4%BD%BF%E7%94%A8DLL/" rel="prev" title="在VS2017中使用C#创建和使用DLL">
+                  <i class="fa fa-chevron-left"></i> 在VS2017中使用C#创建和使用DLL
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/2018/10/29/SQL%E6%94%B6%E7%BC%A9%E6%95%B0%E6%8D%AE%E5%BA%93/" rel="next" title="SQL收缩数据库">
+                  SQL收缩数据库 <i class="fa fa-chevron-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 
+  <span itemprop="copyrightYear">2024</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">昜丿捺</span>
+</div>
+<div class="busuanzi-count">
+    <span class="post-meta-item" id="busuanzi_container_site_uv">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="总访客量">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="总访问量">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+
+<!-- 增加网站运行时间-->
+<div id="days"></div>
+<script>
+    function show_date_time(){
+        window.setTimeout("show_date_time()", 1000);
+        BirthDay=new Date("11/09/2016 00:00:00");
+        today=new Date();
+        timeold=(today.getTime()-BirthDay.getTime());
+        sectimeold=timeold/1000
+        secondsold=Math.floor(sectimeold);
+        msPerDay=24*60*60*1000
+        e_daysold=timeold/msPerDay
+        daysold=Math.floor(e_daysold);
+        e_hrsold=(e_daysold-daysold)*24;
+        hrsold=setzero(Math.floor(e_hrsold));
+        e_minsold=(e_hrsold-hrsold)*60;
+        minsold=setzero(Math.floor((e_hrsold-hrsold)*60));
+        seconds=setzero(Math.floor((e_minsold-minsold)*60));
+        document.getElementById('days').innerHTML="网站已运行 "+daysold+" 天 "+hrsold+" 小时 "+minsold+" 分 "+seconds+" 秒";
+    }
+    function setzero(i) {
+        if (i<10) {
+            i="0" + i
+        };
+        return i;
+    }
+    show_date_time();
+</script>
+
+
+    </div>
+  </footer>
+
+  
+  <div class="reading-progress-bar"></div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+  
+  <script src="https://cdnjs.loli.net/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.loli.net/ajax/libs/next-theme-pjax/0.6.0/pjax.min.js" integrity="sha256-vxLn1tSKWD4dqbMRyv940UYw4sXgMtYcK6reefzZrao=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/next-boot.js"></script><script src="/js/pjax.js"></script>
+
+  <script src="https://cdnjs.loli.net/ajax/libs/hexo-generator-searchdb/1.4.1/search.js" integrity="sha256-1kfA5uHPf65M5cphT2dvymhkuyHPQp5A53EGZOnOLmc=" crossorigin="anonymous"></script>
+<script src="/js/third-party/search/local-search.js"></script>
+
+
+
+
+
+  
+  <script data-pjax async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+
+  
+
+  <script class="next-config" data-name="enableMath" type="application/json">true</script><script class="next-config" data-name="mathjax" type="application/json">{"enable":true,"tags":"none","js":{"url":"https://cdnjs.loli.net/ajax/libs/mathjax/3.2.2/es5/tex-mml-chtml.js","integrity":"sha256-MASABpB4tYktI2Oitl4t+78w/lyA+D7b/s9GEP0JOGI="}}</script>
+<script src="/js/third-party/math/mathjax.js"></script>
+
+
+<script type="text/javascript" src="/js/ypn.js/jquery-1.11.3.min.js"></script>
+
+<!-- 页面鼠标单击效果 -->
+    <script type="text/javascript" src="/js/ypn.js/text.js"></script>
+
+<!-- 动态线条背景 -->
+<script type="text/javascript" color="235,178,178" opacity='0.7' zIndex="-2" count="100" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js"></script>
+
+<!-- 收藏页输入框特效 -->
+<script src="/js/ypn.js/activate-power-mode.js"></script>
+<script>
+  POWERMODE.colorful = true;  // 控制开启/开启礼花特效  
+  POWERMODE.shake    = false; // 控制开启/关闭屏幕震动特效  
+  document.body.addEventListener('input', POWERMODE);
+</script>
+
+<!-- 收藏页搜索按钮动作 -->
+<script type="text/javascript" src="/js/ypn.js/searchButton.js"></script>
+
+<!-- 页签标题崩溃欺骗 -->
+<script type="text/javascript" src="/js/ypn.js/crash-cheat.js"></script>
+
+<!-- 一言 -->
+<script type="text/javascript" src="/js/ypn.js/yiYanJingDianYuJu.js"></script>
+
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"log":false,"model":{"jsonPath":"/live2dw/assets/hijiki.model.json"},"display":{"position":"left","vOffset":-80},"mobile":{"show":false}});</script></body>
+</html>
