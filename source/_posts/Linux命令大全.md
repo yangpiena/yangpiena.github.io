@@ -61,7 +61,9 @@ tags: [Linux, 命令]
 | rm                         | 删除文件 |
 | rm -r                      | 删除文件夹 |
 | rm -fr                     | 直接删除，无需确认 |
-| cp                         | 复制 |
+| cp -r source_directory destination_directory  | 将source_directory以及其所有子目录和文件复制到destination_directory |
+| cp -i source_file destination_file            | 如果destination_file已经存在，cp会询问是否覆盖它 |
+| cp file1.txt file2.txt destination_directory/ | 一次性复制多个文件到一个目录中 |
 | mv                         | 移动、重命名文件或文件夹 |
 | find                       | 查找 |
 | which                      | 查找 |
