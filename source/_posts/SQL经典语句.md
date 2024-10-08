@@ -13,14 +13,17 @@ toc: true
 ---
 
 # 一. 基础篇
+
 ## 1. 创建数据库
 ```sql
 CREATE DATABASE database-name
 ```
+
 ## 2. 删除数据库
 ```sql
 DROP database dbname
 ```
+
 ## 3. 备份sql server
 创建 备份数据的 device
 ```sql
@@ -43,6 +46,7 @@ create table tabname(col1 type1 [not null] [primary key],col2 type2 [not null],.
 create table tab_new like tab_old (使用旧表创建新表)
 create table tab_new as select col1,col2… from tab_old definition only
 ```
+
 ## 5. 删除新表
 ```sql
 DROP TABLE tabname
@@ -339,15 +343,19 @@ select type,sum(case vender when 'A' then pcs else 0 end),sum(case vender when '
 |光盘| A| 2|
 |手机| B| 3|
 |手机| C| 3|
+
 ## 23. 初始化表
 ```sql
 TRUNCATE TABLE table1
 ```
+
 ## 24. 选择从10到15的记录
 ```sql
 select top 5 * from (select top 15 * from table order by id asc) table_别名 order by id desc
 ```
+
 ## 25. 临时表
+
 #### 创建临时表
 - 方法一：
 ```sql
@@ -384,6 +392,7 @@ select * from ##临时表名;
 drop table #临时表名;
 drop table ##临时表名;
 ```
+
 ## 26. 关联表更新
 SQL SERVER
 ```sql
@@ -393,11 +402,13 @@ MYSQL
 ```sql
 UPDATE tableA A INNER JOIN tableB B ON A.a = B.a SET A.b=B.d;
 ```
+
 ## 27. 查看表的所有外键关系
 ```sql
 select t1.*,t2.name,t3.name from dbo.sysforeignkeys t1 left join sysobjects t2 on t1.fkeyid=t2.id 
            left join sysobjects t3 on t1.rkeyid=t3.id where t3.name='表名 '
 ```
+
 ## 28. 删除所有约束
 ```sql
 DECLARE c1 cursor for
@@ -415,6 +426,7 @@ while(@@fetch_status=0)
 close c1
 deallocate c1
 ```
+
 ## 29. 删除数据库所有表
 ```sql
 declare @tname varchar(8000)
@@ -423,6 +435,7 @@ select @tname=@tname + Name + ',' from sysobjects where xtype='U'
 select @tname='drop table ' + left(@tname,len(@tname)-1)
 exec(@tname)
 ```
+
 ## 30. 删除外键约束
 得到某个表被哪些外键引用，并且显示出外键表的表名
 ```sql
@@ -475,11 +488,13 @@ INNER JOIN (SELECT name, system_type_id
 INSERT 表2 
 SELECT * FROM 表1 AS a WHERE NOT EXISTS(SELECT 1 FROM 表2 WHERE ID = a.ID);
 ```
+
 ## 33. 判断某列中是否包含中文字符或者英文字符
 ```sql
 SELECT * FROM 表名 WHERE 某列 LIKE '%[吖-座]%'
 SELECT * FROM 表名 WHERE 某列 LIKE '%[a-z]%'
 ```
+
 ## 34. 行转列，将多行数据合并成一行（SQL SERVER 2005以上支持）
 例如，表Table1中有两列数据：
 
@@ -511,6 +526,7 @@ GROUP BY code
 ```sql
 UPDATE xx_sjb SET sl = LTRIM(RTRIM(REPLACE(REPLACE(sl, CHAR(10), ''), CHAR (13), '')))
 ```
+
 ---
 
 # 三. 技巧篇
@@ -518,6 +534,7 @@ UPDATE xx_sjb SET sl = LTRIM(RTRIM(REPLACE(REPLACE(sl, CHAR(10), ''), CHAR (13),
 ## 1. 1=1，1=2的使用，在SQL语句组合时用的较多
     “where 1=1” 表示选择全部
     “where 1=2” 表示全部不选
+	
 ## 2. 收缩数据库
 - 重建索引
 ```sql
@@ -529,19 +546,23 @@ DBCC INDEXDEFRAG
 DBCC SHRINKDB
 DBCC SHRINKFILE
 ```
+
 ## 3. 压缩数据库
 ```sql
 dbcc shrinkdatabase(dbname)
 ```
+
 ## 4. 转移数据库给新用户以已存在用户权限
 ```sql
 exec sp_change_users_login 'update_one','newname','oldname'
 go
 ```
+
 ## 5. 检查备份集
 ```sql
 RESTORE VERIFYONLY from disk='E:\dvbbs.bak'
 ```
+
 ## 6. 修复数据库
 ```sql
 ALTER DATABASE [dvbbs] SET SINGLE_USER
@@ -551,6 +572,7 @@ GO
 ALTER DATABASE [dvbbs] SET MULTI_USER
 GO
 ```
+
 ## 7. 日志清除
 ```sql
 	SET NOCOUNT ON
@@ -603,10 +625,12 @@ GO
 	DROP TABLE DummyTrans
 	SET NOCOUNT OFF
 ```
+
 ## 8. 更改某个表
 ```sql
 exec sp_changeobjectowner 'tablename','dbo'
 ```
+
 ## 9. 存储更改全部表
 ```sql
 CREATE PROCEDURE dbo.User_ChangeObjectOwnerBatch
@@ -638,6 +662,7 @@ close curObject
 deallocate curObject
 GO
 ```
+
 ## 10. SQL SERVER中直接循环写入数据
 ```sql
 declare @i int
@@ -667,14 +692,17 @@ else
 continue
 end
 ```
+
 ## 11. 查看数据库属性
 ```sql
 sp_helpdb 数据库名
 ```
+
 ## 12. 按姓氏笔画排序:
 ```sql
 Select * From TableName Order By CustomerName Collate Chinese_PRC_Stroke_ci_as //从少到多
 ```
+
 ## 13. 数据库加密:
 ```sql
 select encrypt('原始密码')
@@ -683,6 +711,7 @@ select pwdcompare('原始密码','加密后密码') = 1--相同；否则不相�
 select pwdencrypt('原始密码')
 select pwdcompare('原始密码','加密后密码') = 1--相同；否则不相同
 ```
+
 ## 14. 取回表中字段:
 ```sql
 declare @list varchar(1000),
@@ -691,10 +720,12 @@ select @list=@list+','+b.name from sysobjects a,syscolumns b where a.id=b.id and
 set @sql='select '+right(@list,len(@list)-1)+' from 表A' 
 exec (@sql)
 ```
+
 ## 15. 查看硬盘分区:
 ```sql
 EXEC master..xp_fixeddrives
 ```
+
 ## 16. 比较A,B表是否相等:
 ```sql
 if (select checksum_agg(binary_checksum(*)) from A)
@@ -704,12 +735,14 @@ print '相等'
 else
 print '不相等'
 ```
+
 ## 17. 杀掉所有的事件探察器进程:
 ```sql
 DECLARE hcforeach CURSOR GLOBAL FOR SELECT 'kill '+RTRIM(spid) FROM master.dbo.sysprocesses
 WHERE program_name IN('SQL profiler',N'SQL 事件探查器')
 EXEC sp_msforeach_worker '?'
 ```
+
 ## 18. 记录搜索:
 - 开头到N条记录
 ```sql
@@ -723,34 +756,42 @@ Select Top M-N * From 表 Where ID in (Select Top M ID From 表) Order by ID   D
 ```sql
 Select Top N * From 表 Order by ID Desc
 ```
+
 ## 19. 获取当前数据库中的所有用户表
 ```sql
 select Name from sysobjects where xtype='u' and status>=0
 ```
+
 ## 20. 获取某一个表的所有字段
 ```sql
 select name from syscolumns where id=object_id('表名')
 select name from syscolumns where id in (select id from sysobjects where type = 'u' and name = '表名')
 ```
+
 ## 21. 查看与某一个表相关的视图、存储过程、函数
 ```sql
 select a.* from sysobjects a, syscomments b where a.id = b.id and b.text like '%表名%'
 ```
+
 ## 22. 查看当前数据库中所有存储过程
 ```sql
 select name as 存储过程名称 from sysobjects where xtype='P'
 ```
+
 ## 23. 查询用户创建的所有数据库
 ```sql
 select * from master..sysdatabases D where sid not in(select sid from master..syslogins where name='sa')
 select dbid, name AS DB_NAME from master..sysdatabases where sid <> 0x01
 ```
+
 ## 24. 查询某一个表的字段和数据类型
 ```sql
 select column_name,data_type from information_schema.columns
 where table_name = '表名'
 ```
+
 ## 25. 不同服务器数据库之间的数据操作
+
 #### 25.1 创建链接服务器
 - 创建一个链接名
 ```sql
@@ -868,7 +909,6 @@ reconfigure
 exec sp_configure 'show advanced options',0
 reconfigure
 ```
-
 
 ## 26. 删除数据库下面的所有表
 ```sql
