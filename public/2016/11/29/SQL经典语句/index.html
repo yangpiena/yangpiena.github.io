@@ -282,7 +282,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-08-12 16:56:00" itemprop="dateModified" datetime="2022-08-12T16:56:00+08:00">2022-08-12</time>
+      <time title="修改时间：2024-10-08 10:43:29" itemprop="dateModified" datetime="2024-10-08T10:43:29+08:00">2024-10-08</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -325,62 +325,47 @@
 <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">create</span> <span class="keyword">table</span> tab_new <span class="keyword">like</span> tab_old (使用旧表创建新表)</span><br><span class="line"><span class="keyword">create</span> <span class="keyword">table</span> tab_new <span class="keyword">as</span> <span class="keyword">select</span> col1,col2… <span class="keyword">from</span> tab_old definition <span class="keyword">only</span></span><br></pre></td></tr></table></figure>
 <h2 id="5-删除新表"><a href="#5-删除新表" class="headerlink" title="5. 删除新表"></a>5. 删除新表</h2><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">DROP</span> <span class="keyword">TABLE</span> tabname</span><br></pre></td></tr></table></figure>
 
-<h2 id="6-增加一个列"><a href="#6-增加一个列" class="headerlink" title="6. 增加一个列"></a>6. 增加一个列</h2><pre><code>Alter table tabname add column col type
-</code></pre>
+<h2 id="6-增加一个列"><a href="#6-增加一个列" class="headerlink" title="6. 增加一个列"></a>6. 增加一个列</h2><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">Alter</span> <span class="keyword">table</span> tabname <span class="keyword">add</span> <span class="keyword">column</span> col type</span><br></pre></td></tr></table></figure>
 <blockquote>
 <p>注：列增加后将不能删除。DB2中列加上后数据类型也不能改变，唯一能改变的是增加varchar类型的长度。</p>
 </blockquote>
-<h2 id="7-添加主键"><a href="#7-添加主键" class="headerlink" title="7. 添加主键"></a>7. 添加主键</h2><pre><code>ALTER TABLE tabname ADD PRIMARY KEY (col)
-</code></pre>
+<h2 id="7-添加主键"><a href="#7-添加主键" class="headerlink" title="7. 添加主键"></a>7. 添加主键</h2><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">ALTER</span> <span class="keyword">TABLE</span> tabname <span class="keyword">ADD</span> <span class="keyword">PRIMARY</span> KEY (col)</span><br></pre></td></tr></table></figure>
 <p>删除主键</p>
-<pre><code>ALTER TABLE tabname DROP PRIMARY KEY (col)
-</code></pre>
-<h2 id="8-创建索引"><a href="#8-创建索引" class="headerlink" title="8. 创建索引"></a>8. 创建索引</h2><pre><code>create [unique] index idxname on tabname(col….) 
-</code></pre>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">ALTER</span> <span class="keyword">TABLE</span> tabname <span class="keyword">DROP</span> <span class="keyword">PRIMARY</span> KEY (col)</span><br></pre></td></tr></table></figure>
+
+<h2 id="8-创建索引"><a href="#8-创建索引" class="headerlink" title="8. 创建索引"></a>8. 创建索引</h2><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">create</span> [<span class="keyword">unique</span>] index idxname <span class="keyword">on</span> tabname(col….) </span><br></pre></td></tr></table></figure>
 <p>删除索引</p>
-<pre><code>drop index idxname
-</code></pre>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">drop</span> index idxname</span><br></pre></td></tr></table></figure>
 <blockquote>
 <p>注：索引是不可更改的，想更改必须删除重新建。</p>
 </blockquote>
-<h2 id="9-创建视图"><a href="#9-创建视图" class="headerlink" title="9. 创建视图"></a>9. 创建视图</h2><pre><code>create view viewname as select statement 
-</code></pre>
+<h2 id="9-创建视图"><a href="#9-创建视图" class="headerlink" title="9. 创建视图"></a>9. 创建视图</h2><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">create</span> <span class="keyword">view</span> viewname <span class="keyword">as</span> <span class="keyword">select</span> statement </span><br></pre></td></tr></table></figure>
 <p>删除视图</p>
-<pre><code>drop view viewname
-</code></pre>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">drop</span> <span class="keyword">view</span> viewname</span><br></pre></td></tr></table></figure>
+
 <h2 id="10-几个简单的基本sql语句"><a href="#10-几个简单的基本sql语句" class="headerlink" title="10. 几个简单的基本sql语句"></a>10. 几个简单的基本sql语句</h2><p>选择</p>
-<pre><code>select * from table1 where 范围
-</code></pre>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> <span class="operator">*</span> <span class="keyword">from</span> table1 <span class="keyword">where</span> 范围</span><br></pre></td></tr></table></figure>
 <p>插入</p>
-<pre><code>insert into table1(field1,field2) values(value1,value2)
-</code></pre>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">insert</span> <span class="keyword">into</span> table1(field1,field2) <span class="keyword">values</span>(value1,value2)</span><br></pre></td></tr></table></figure>
 <p>删除</p>
-<pre><code>delete from table1 where 范围
-</code></pre>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">delete</span> <span class="keyword">from</span> table1 <span class="keyword">where</span> 范围</span><br></pre></td></tr></table></figure>
 <p>更新</p>
-<pre><code>update table1 set field1=value1 where 范围
-</code></pre>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">update</span> table1 <span class="keyword">set</span> field1<span class="operator">=</span>value1 <span class="keyword">where</span> 范围</span><br></pre></td></tr></table></figure>
 <p>查找</p>
-<pre><code>select * from table1 where field1 like ’%value1%’
-</code></pre>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> <span class="operator">*</span> <span class="keyword">from</span> table1 <span class="keyword">where</span> field1 <span class="keyword">like</span> ’<span class="operator">%</span>value1<span class="operator">%</span>’</span><br></pre></td></tr></table></figure>
 <p>排序</p>
-<pre><code>select * from table1 order by field1,field2 [desc]
-</code></pre>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> <span class="operator">*</span> <span class="keyword">from</span> table1 <span class="keyword">order</span> <span class="keyword">by</span> field1,field2 [<span class="keyword">desc</span>]</span><br></pre></td></tr></table></figure>
 <p>总数</p>
-<pre><code>select count as totalcount from table1
-</code></pre>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> count <span class="keyword">as</span> totalcount <span class="keyword">from</span> table1</span><br></pre></td></tr></table></figure>
 <p>求和</p>
-<pre><code>select sum(field1) as sumvalue from table1
-</code></pre>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> <span class="built_in">sum</span>(field1) <span class="keyword">as</span> sumvalue <span class="keyword">from</span> table1</span><br></pre></td></tr></table></figure>
 <p>平均</p>
-<pre><code>select avg(field1) as avgvalue from table1
-</code></pre>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> <span class="built_in">avg</span>(field1) <span class="keyword">as</span> avgvalue <span class="keyword">from</span> table1</span><br></pre></td></tr></table></figure>
 <p>最大</p>
-<pre><code>select max(field1) as maxvalue from table1
-</code></pre>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> <span class="built_in">max</span>(field1) <span class="keyword">as</span> maxvalue <span class="keyword">from</span> table1</span><br></pre></td></tr></table></figure>
 <p>最小</p>
-<pre><code>select min(field1) as minvalue from table1
-</code></pre>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> <span class="built_in">min</span>(field1) <span class="keyword">as</span> minvalue <span class="keyword">from</span> table1</span><br></pre></td></tr></table></figure>
+
 <h2 id="11-几个高级查询运算词"><a href="#11-几个高级查询运算词" class="headerlink" title="11. 几个高级查询运算词"></a>11. 几个高级查询运算词</h2><ul>
 <li>A： UNION 运算符<br>UNION 运算符通过组合其他两个结果表（例如 TABLE1 和 TABLE2）并消去表中任何重复行而派生出一个结果表。当 ALL 随 UNION一起使用时（即 UNION ALL），不消除重复行。两种情况下，派生表的每一行不是来自 TABLE1 就是来自 TABLE2。 </li>
 <li>B： EXCEPT 运算符<br>EXCEPT 运算符通过包括所有在 TABLE1 中但不在 TABLE2 中的行并消除所有重复行而派生出一个结果表。当 ALL 随 EXCEPT 一起使用时 (EXCEPT ALL)，不消除重复行。 </li>
@@ -390,99 +375,84 @@
 </li>
 </ul>
 <h2 id="12-使用外连接"><a href="#12-使用外连接" class="headerlink" title="12. 使用外连接"></a>12. 使用外连接</h2><ul>
-<li><p>A. left （outer） join：<br>左外连接（左连接）：结果集几包括连接表的匹配行，也包括左连接表的所有行。 </p>
-<p>  select a.a, a.b, a.c, b.c, b.d, b.f from a LEFT OUT JOIN b ON a.a &#x3D; b.c</p>
-</li>
-<li><p>B：right （outer） join:<br>右外连接(右连接)：结果集既包括连接表的匹配连接行，也包括右连接表的所有行。 </p>
-</li>
-<li><p>C：full&#x2F;cross （outer） join：<br>全外连接：不仅包括符号连接表的匹配行，还包括两个连接表中的所有记录。</p>
-</li>
+<li>A. left （outer） join：<br>左外连接（左连接）：结果集几包括连接表的匹配行，也包括左连接表的所有行。 <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> a.a, a.b, a.c, b.c, b.d, b.f <span class="keyword">from</span> a <span class="keyword">LEFT</span> <span class="keyword">OUT</span> <span class="keyword">JOIN</span> b <span class="keyword">ON</span> a.a <span class="operator">=</span> b.c</span><br></pre></td></tr></table></figure></li>
+<li>B：right （outer） join:<br>右外连接(右连接)：结果集既包括连接表的匹配连接行，也包括右连接表的所有行。 </li>
+<li>C：full&#x2F;cross （outer） join：<br>全外连接：不仅包括符号连接表的匹配行，还包括两个连接表中的所有记录。</li>
 </ul>
 <h2 id="13-分组-Group-by"><a href="#13-分组-Group-by" class="headerlink" title="13. 分组:Group by"></a>13. 分组:Group by</h2><p>一张表，一旦分组 完成后，查询后只能得到组相关的信息。<br>组相关的信息：（统计信息） count,sum,max,min,avg 分组的标准)<br>在SQLServer中分组时：不能以text,ntext,image类型的字段作为分组依据<br>在selecte统计函数中的字段，不能和普通的字段放在一起；</p>
 <h2 id="14-对数据库进行操作"><a href="#14-对数据库进行操作" class="headerlink" title="14. 对数据库进行操作"></a>14. 对数据库进行操作</h2><p>分离数据库： sp_detach_db; 附加数据库：sp_attach_db 后接表明，附加需要完整的路径名</p>
-<h2 id="15-如何修改数据库的名称"><a href="#15-如何修改数据库的名称" class="headerlink" title="15. 如何修改数据库的名称"></a>15. 如何修改数据库的名称</h2><p>sp_renamedb ‘old_name’, ‘new_name’</p>
+<h2 id="15-如何修改数据库的名称"><a href="#15-如何修改数据库的名称" class="headerlink" title="15. 如何修改数据库的名称"></a>15. 如何修改数据库的名称</h2><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sp_renamedb <span class="string">&#x27;old_name&#x27;</span>, <span class="string">&#x27;new_name&#x27;</span></span><br></pre></td></tr></table></figure>
+
 <h2 id="16-查询字段ID最大值的记录"><a href="#16-查询字段ID最大值的记录" class="headerlink" title="16. 查询字段ID最大值的记录"></a>16. 查询字段ID最大值的记录</h2><p>无索引</p>
-<pre><code>select time from table t1 where not exists (select 1 from table where id &gt; t1.id) 
-</code></pre>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> <span class="type">time</span> <span class="keyword">from</span> <span class="keyword">table</span> t1 <span class="keyword">where</span> <span class="keyword">not</span> <span class="keyword">exists</span> (<span class="keyword">select</span> <span class="number">1</span> <span class="keyword">from</span> <span class="keyword">table</span> <span class="keyword">where</span> id <span class="operator">&gt;</span> t1.id) </span><br></pre></td></tr></table></figure>
 <p>有索引</p>
-<pre><code>select time from table where id in (select max(id) from table)
-</code></pre>
-<h2 id="17-查询某一列的重复项内容"><a href="#17-查询某一列的重复项内容" class="headerlink" title="17. 查询某一列的重复项内容"></a>17. 查询某一列的重复项内容</h2><pre><code>SELECT * FROM documentation AS A WHERE (SELECT COUNT(*) FROM documentation WHERE fileName=A.fileName)&gt;1 
-</code></pre>
-<h2 id="18-判断表中是否存在记录"><a href="#18-判断表中是否存在记录" class="headerlink" title="18. 判断表中是否存在记录"></a>18. 判断表中是否存在记录</h2><pre><code>SELECT COUNT (*) FROM tableName WHERE conditions
-</code></pre>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> <span class="type">time</span> <span class="keyword">from</span> <span class="keyword">table</span> <span class="keyword">where</span> id <span class="keyword">in</span> (<span class="keyword">select</span> <span class="built_in">max</span>(id) <span class="keyword">from</span> <span class="keyword">table</span>)</span><br></pre></td></tr></table></figure>
+
+<h2 id="17-查询某一列的重复项内容"><a href="#17-查询某一列的重复项内容" class="headerlink" title="17. 查询某一列的重复项内容"></a>17. 查询某一列的重复项内容</h2><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> <span class="operator">*</span> <span class="keyword">FROM</span> documentation <span class="keyword">AS</span> A <span class="keyword">WHERE</span> (<span class="keyword">SELECT</span> <span class="built_in">COUNT</span>(<span class="operator">*</span>) <span class="keyword">FROM</span> documentation <span class="keyword">WHERE</span> fileName<span class="operator">=</span>A.fileName)<span class="operator">&gt;</span><span class="number">1</span> </span><br></pre></td></tr></table></figure>
+
+<h2 id="18-判断表中是否存在记录"><a href="#18-判断表中是否存在记录" class="headerlink" title="18. 判断表中是否存在记录"></a>18. 判断表中是否存在记录</h2><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> <span class="built_in">COUNT</span> (<span class="operator">*</span>) <span class="keyword">FROM</span> tableName <span class="keyword">WHERE</span> conditions</span><br></pre></td></tr></table></figure>
+
 <hr>
-<h1 id="二-提升篇"><a href="#二-提升篇" class="headerlink" title="二. 提升篇"></a>二. 提升篇</h1><h2 id="1-复制表-只复制结构-源表名：a-新表名：b-Access可用"><a href="#1-复制表-只复制结构-源表名：a-新表名：b-Access可用" class="headerlink" title="1. 复制表(只复制结构,源表名：a 新表名：b) (Access可用)"></a>1. 复制表(只复制结构,源表名：a 新表名：b) (Access可用)</h2><p>法一</p>
-<pre><code>select * into b from a where 1&lt;&gt;1（仅用于SQlServer）
-</code></pre>
-<p>法二</p>
-<pre><code>select top 0 * into b from a
-</code></pre>
-<h2 id="2-拷贝表-拷贝数据-源表名：a-目标表名：b-Access可用"><a href="#2-拷贝表-拷贝数据-源表名：a-目标表名：b-Access可用" class="headerlink" title="2. 拷贝表(拷贝数据,源表名：a 目标表名：b) (Access可用)"></a>2. 拷贝表(拷贝数据,源表名：a 目标表名：b) (Access可用)</h2><pre><code>insert into b(a, b, c) select d,e,f from b;
-</code></pre>
-<h2 id="3-跨数据库之间表的拷贝-具体数据使用绝对路径-Access可用"><a href="#3-跨数据库之间表的拷贝-具体数据使用绝对路径-Access可用" class="headerlink" title="3. 跨数据库之间表的拷贝(具体数据使用绝对路径) (Access可用)"></a>3. 跨数据库之间表的拷贝(具体数据使用绝对路径) (Access可用)</h2><pre><code>insert into b(a, b, c) select d,e,f from b in ‘具体数据库’ where 条件
-</code></pre>
+<h1 id="二-提升篇"><a href="#二-提升篇" class="headerlink" title="二. 提升篇"></a>二. 提升篇</h1><h2 id="1-复制表-只复制结构-源表名：a-新表名：b-Access可用"><a href="#1-复制表-只复制结构-源表名：a-新表名：b-Access可用" class="headerlink" title="1. 复制表(只复制结构,源表名：a 新表名：b) (Access可用)"></a>1. 复制表(只复制结构,源表名：a 新表名：b) (Access可用)</h2><p>法一：</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> <span class="operator">*</span> <span class="keyword">into</span> b <span class="keyword">from</span> a <span class="keyword">where</span> <span class="number">1</span><span class="operator">&lt;&gt;</span><span class="number">1</span>（仅用于SQlServer）</span><br></pre></td></tr></table></figure>
+<p>法二：</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> top <span class="number">0</span> <span class="operator">*</span> <span class="keyword">into</span> b <span class="keyword">from</span> a</span><br></pre></td></tr></table></figure>
+
+<h2 id="2-拷贝表-拷贝数据-源表名：a-目标表名：b-Access可用"><a href="#2-拷贝表-拷贝数据-源表名：a-目标表名：b-Access可用" class="headerlink" title="2. 拷贝表(拷贝数据,源表名：a 目标表名：b) (Access可用)"></a>2. 拷贝表(拷贝数据,源表名：a 目标表名：b) (Access可用)</h2><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">insert</span> <span class="keyword">into</span> b(a, b, c) <span class="keyword">select</span> d,e,f <span class="keyword">from</span> b;</span><br></pre></td></tr></table></figure>
+
+<h2 id="3-跨数据库之间表的拷贝-具体数据使用绝对路径-Access可用"><a href="#3-跨数据库之间表的拷贝-具体数据使用绝对路径-Access可用" class="headerlink" title="3. 跨数据库之间表的拷贝(具体数据使用绝对路径) (Access可用)"></a>3. 跨数据库之间表的拷贝(具体数据使用绝对路径) (Access可用)</h2><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">insert</span> <span class="keyword">into</span> b(a, b, c) <span class="keyword">select</span> d,e,f <span class="keyword">from</span> b <span class="keyword">in</span> ‘具体数据库’ <span class="keyword">where</span> 条件</span><br></pre></td></tr></table></figure>
 <p>例子：..from b in ‘“&amp;Server.MapPath(“.”)&amp;”\data.mdb” &amp;”‘ where..</p>
-<h2 id="4-子查询-表名1：a-表名2：b"><a href="#4-子查询-表名1：a-表名2：b" class="headerlink" title="4. 子查询(表名1：a 表名2：b)"></a>4. 子查询(表名1：a 表名2：b)</h2><pre><code>select a,b,c from a where a IN (select d from b ) 或者: select a,b,c from a where a IN (1,2,3)
-</code></pre>
-<h2 id="5-显示文章、提交人和最后回复时间"><a href="#5-显示文章、提交人和最后回复时间" class="headerlink" title="5. 显示文章、提交人和最后回复时间"></a>5. 显示文章、提交人和最后回复时间</h2><pre><code>select a.title,a.username,b.adddate from table a,(select max(adddate) adddate from table where table.title=a.title) b
-</code></pre>
-<h2 id="6-外连接查询-表名1：a-表名2：b"><a href="#6-外连接查询-表名1：a-表名2：b" class="headerlink" title="6. 外连接查询(表名1：a 表名2：b)"></a>6. 外连接查询(表名1：a 表名2：b)</h2><pre><code>select a.a, a.b, a.c, b.c, b.d, b.f from a LEFT OUT JOIN b ON a.a = b.c
-</code></pre>
-<h2 id="7-在线视图查询-表名1：a"><a href="#7-在线视图查询-表名1：a" class="headerlink" title="7. 在线视图查询(表名1：a )"></a>7. 在线视图查询(表名1：a )</h2><pre><code>select * from (SELECT a,b,c FROM a) T where t.a &gt; 1;
-</code></pre>
-<h2 id="8-between的用法-between限制查询数据范围时包括了边界值-not-between不包括"><a href="#8-between的用法-between限制查询数据范围时包括了边界值-not-between不包括" class="headerlink" title="8. between的用法,between限制查询数据范围时包括了边界值,not between不包括"></a>8. between的用法,between限制查询数据范围时包括了边界值,not between不包括</h2><pre><code>select * from table1 where time between time1 and time2
-select a,b,c, from table1 where a not between 数值1 and 数值2
-</code></pre>
-<h2 id="9-in-的使用方法"><a href="#9-in-的使用方法" class="headerlink" title="9. in 的使用方法"></a>9. in 的使用方法</h2><pre><code>select * from table1 where a [not] in (‘值1’,’值2’,’值4’,’值6’)
-</code></pre>
-<h2 id="10-两张关联表，删除主表中已经在副表中没有的信息"><a href="#10-两张关联表，删除主表中已经在副表中没有的信息" class="headerlink" title="10. 两张关联表，删除主表中已经在副表中没有的信息"></a>10. 两张关联表，删除主表中已经在副表中没有的信息</h2><pre><code>delete from table1 where not exists ( select * from table2 where table1.field1=table2.field1 )
-</code></pre>
-<h2 id="11-四表联查问题"><a href="#11-四表联查问题" class="headerlink" title="11. 四表联查问题"></a>11. 四表联查问题</h2><pre><code>select * from a left inner join b on a.a=b.b right inner join c on a.a=c.c inner join d on a.a=d.d where .....
-</code></pre>
-<h2 id="12-日程安排提前五分钟提醒"><a href="#12-日程安排提前五分钟提醒" class="headerlink" title="12. 日程安排提前五分钟提醒"></a>12. 日程安排提前五分钟提醒</h2><pre><code>select * from 日程安排 where datediff(&#39;minute&#39;,f开始时间,getdate())&gt;5
-</code></pre>
-<h2 id="13-一条sql语句搞定数据库分页"><a href="#13-一条sql语句搞定数据库分页" class="headerlink" title="13. 一条sql语句搞定数据库分页"></a>13. 一条sql语句搞定数据库分页</h2><pre><code>select top 10 b.* from (select top 20 主键字段,排序字段 from 表名 order by 排序字段 desc) a,表名 b where b.主键字段 = a.主键字段 order by a.排序字段
-</code></pre>
+<h2 id="4-子查询-表名1：a-表名2：b"><a href="#4-子查询-表名1：a-表名2：b" class="headerlink" title="4. 子查询(表名1：a 表名2：b)"></a>4. 子查询(表名1：a 表名2：b)</h2><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> a,b,c <span class="keyword">from</span> a <span class="keyword">where</span> a <span class="keyword">IN</span> (<span class="keyword">select</span> d <span class="keyword">from</span> b ) 或者: <span class="keyword">select</span> a,b,c <span class="keyword">from</span> a <span class="keyword">where</span> a <span class="keyword">IN</span> (<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>)</span><br></pre></td></tr></table></figure>
+
+<h2 id="5-显示文章、提交人和最后回复时间"><a href="#5-显示文章、提交人和最后回复时间" class="headerlink" title="5. 显示文章、提交人和最后回复时间"></a>5. 显示文章、提交人和最后回复时间</h2><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> a.title,a.username,b.adddate <span class="keyword">from</span> <span class="keyword">table</span> a,(<span class="keyword">select</span> <span class="built_in">max</span>(adddate) adddate <span class="keyword">from</span> <span class="keyword">table</span> <span class="keyword">where</span> table.title<span class="operator">=</span>a.title) b</span><br></pre></td></tr></table></figure>
+
+<h2 id="6-外连接查询-表名1：a-表名2：b"><a href="#6-外连接查询-表名1：a-表名2：b" class="headerlink" title="6. 外连接查询(表名1：a 表名2：b)"></a>6. 外连接查询(表名1：a 表名2：b)</h2><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> a.a, a.b, a.c, b.c, b.d, b.f <span class="keyword">from</span> a <span class="keyword">LEFT</span> <span class="keyword">OUT</span> <span class="keyword">JOIN</span> b <span class="keyword">ON</span> a.a <span class="operator">=</span> b.c</span><br></pre></td></tr></table></figure>
+
+<h2 id="7-在线视图查询-表名1：a"><a href="#7-在线视图查询-表名1：a" class="headerlink" title="7. 在线视图查询(表名1：a )"></a>7. 在线视图查询(表名1：a )</h2><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> <span class="operator">*</span> <span class="keyword">from</span> (<span class="keyword">SELECT</span> a,b,c <span class="keyword">FROM</span> a) T <span class="keyword">where</span> t.a <span class="operator">&gt;</span> <span class="number">1</span>;</span><br></pre></td></tr></table></figure>
+
+<h2 id="8-between的用法-between限制查询数据范围时包括了边界值-not-between不包括"><a href="#8-between的用法-between限制查询数据范围时包括了边界值-not-between不包括" class="headerlink" title="8. between的用法,between限制查询数据范围时包括了边界值,not between不包括"></a>8. between的用法,between限制查询数据范围时包括了边界值,not between不包括</h2><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> <span class="operator">*</span> <span class="keyword">from</span> table1 <span class="keyword">where</span> <span class="type">time</span> <span class="keyword">between</span> time1 <span class="keyword">and</span> time2</span><br></pre></td></tr></table></figure>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> a,b,c, <span class="keyword">from</span> table1 <span class="keyword">where</span> a <span class="keyword">not</span> <span class="keyword">between</span> 数值<span class="number">1</span> <span class="keyword">and</span> 数值<span class="number">2</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="9-in-的使用方法"><a href="#9-in-的使用方法" class="headerlink" title="9. in 的使用方法"></a>9. in 的使用方法</h2><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> <span class="operator">*</span> <span class="keyword">from</span> table1 <span class="keyword">where</span> a [<span class="keyword">not</span>] <span class="keyword">in</span> (‘值<span class="number">1</span>’,’值<span class="number">2</span>’,’值<span class="number">4</span>’,’值<span class="number">6</span>’)</span><br></pre></td></tr></table></figure>
+
+<h2 id="10-两张关联表，删除主表中已经在副表中没有的信息"><a href="#10-两张关联表，删除主表中已经在副表中没有的信息" class="headerlink" title="10. 两张关联表，删除主表中已经在副表中没有的信息"></a>10. 两张关联表，删除主表中已经在副表中没有的信息</h2><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">delete</span> <span class="keyword">from</span> table1 <span class="keyword">where</span> <span class="keyword">not</span> <span class="keyword">exists</span> ( <span class="keyword">select</span> <span class="operator">*</span> <span class="keyword">from</span> table2 <span class="keyword">where</span> table1.field1<span class="operator">=</span>table2.field1 )</span><br></pre></td></tr></table></figure>
+
+<h2 id="11-四表联查问题"><a href="#11-四表联查问题" class="headerlink" title="11. 四表联查问题"></a>11. 四表联查问题</h2><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> <span class="operator">*</span> <span class="keyword">from</span> a <span class="keyword">left</span> <span class="keyword">inner</span> <span class="keyword">join</span> b <span class="keyword">on</span> a.a<span class="operator">=</span>b.b <span class="keyword">right</span> <span class="keyword">inner</span> <span class="keyword">join</span> c <span class="keyword">on</span> a.a<span class="operator">=</span>c.c <span class="keyword">inner</span> <span class="keyword">join</span> d <span class="keyword">on</span> a.a<span class="operator">=</span>d.d <span class="keyword">where</span> .....</span><br></pre></td></tr></table></figure>
+
+<h2 id="12-日程安排提前五分钟提醒"><a href="#12-日程安排提前五分钟提醒" class="headerlink" title="12. 日程安排提前五分钟提醒"></a>12. 日程安排提前五分钟提醒</h2><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> <span class="operator">*</span> <span class="keyword">from</span> 日程安排 <span class="keyword">where</span> datediff(<span class="string">&#x27;minute&#x27;</span>,f开始时间,getdate())<span class="operator">&gt;</span><span class="number">5</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="13-一条sql语句搞定数据库分页"><a href="#13-一条sql语句搞定数据库分页" class="headerlink" title="13. 一条sql语句搞定数据库分页"></a>13. 一条sql语句搞定数据库分页</h2><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> top <span class="number">10</span> b.<span class="operator">*</span> <span class="keyword">from</span> (<span class="keyword">select</span> top <span class="number">20</span> 主键字段,排序字段 <span class="keyword">from</span> 表名 <span class="keyword">order</span> <span class="keyword">by</span> 排序字段 <span class="keyword">desc</span>) a,表名 b <span class="keyword">where</span> b.主键字段 <span class="operator">=</span> a.主键字段 <span class="keyword">order</span> <span class="keyword">by</span> a.排序字段</span><br></pre></td></tr></table></figure>
 <p>关于数据库分页：</p>
-<pre><code>declare @start int,@end int
-@sql nvarchar(600)
-set @sql=’select top’+str(@end-@start+1)+’+from T where rid not in(select top’+str(@str-1)+’Rid from T where Rid&gt;-1)’
-exec sp_executesql @sql
-</code></pre>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">declare</span> <span class="variable">@start</span> <span class="type">int</span>,<span class="variable">@end</span> <span class="type">int</span></span><br><span class="line"><span class="variable">@sql</span> nvarchar(<span class="number">600</span>)</span><br><span class="line"><span class="keyword">set</span> <span class="variable">@sql</span><span class="operator">=</span>’<span class="keyword">select</span> top’<span class="operator">+</span>str(<span class="variable">@end</span><span class="operator">-</span><span class="variable">@start</span><span class="operator">+</span><span class="number">1</span>)<span class="operator">+</span>’<span class="operator">+</span><span class="keyword">from</span> T <span class="keyword">where</span> rid <span class="keyword">not</span> <span class="keyword">in</span>(<span class="keyword">select</span> top’<span class="operator">+</span>str(<span class="variable">@str</span><span class="number">-1</span>)<span class="operator">+</span>’Rid <span class="keyword">from</span> T <span class="keyword">where</span> Rid<span class="operator">&gt;</span><span class="number">-1</span>)’</span><br><span class="line"><span class="keyword">exec</span> sp_executesql <span class="variable">@sql</span></span><br></pre></td></tr></table></figure>
 <blockquote>
 <p>注意：在top后不能直接跟一个变量，所以在实际应用中只有这样的进行特殊的处理。Rid为一个标识列，如果top后还有具体的字段，这样做是非常有好处的。因为这样可以避免 top的字段如果是逻辑索引的，查询的结果后实际表中的不一致（逻辑索引中的数据有可能和数据表中的不一致，而查询时如果处在索引则首先查询索引）</p>
 </blockquote>
-<h2 id="14-前10条记录"><a href="#14-前10条记录" class="headerlink" title="14. 前10条记录"></a>14. 前10条记录</h2><pre><code>select top 10 * form table1 where 范围
-</code></pre>
-<h2 id="15-选择在每一组b值相同的数据中对应的a最大的记录的所有信息-类似这样的用法可以用于论坛每月排行榜-每月热销产品分析-按科目成绩排名-等等"><a href="#15-选择在每一组b值相同的数据中对应的a最大的记录的所有信息-类似这样的用法可以用于论坛每月排行榜-每月热销产品分析-按科目成绩排名-等等" class="headerlink" title="15. 选择在每一组b值相同的数据中对应的a最大的记录的所有信息(类似这样的用法可以用于论坛每月排行榜,每月热销产品分析,按科目成绩排名,等等.)"></a>15. 选择在每一组b值相同的数据中对应的a最大的记录的所有信息(类似这样的用法可以用于论坛每月排行榜,每月热销产品分析,按科目成绩排名,等等.)</h2><pre><code>select a,b,c from tablename ta where a=(select max(a) from tablename tb where tb.b=ta.b)
-</code></pre>
-<h2 id="16-包括所有在-TableA-中但不在-TableB和TableC-中的行并消除所有重复行而派生出一个结果表"><a href="#16-包括所有在-TableA-中但不在-TableB和TableC-中的行并消除所有重复行而派生出一个结果表" class="headerlink" title="16. 包括所有在 TableA 中但不在 TableB和TableC 中的行并消除所有重复行而派生出一个结果表"></a>16. 包括所有在 TableA 中但不在 TableB和TableC 中的行并消除所有重复行而派生出一个结果表</h2><pre><code>(select a from tableA ) except (select a from tableB) except (select a from tableC)
-</code></pre>
-<h2 id="17-随机取出10条数据"><a href="#17-随机取出10条数据" class="headerlink" title="17. 随机取出10条数据"></a>17. 随机取出10条数据</h2><pre><code>select top 10 * from tablename order by newid()
-</code></pre>
-<h2 id="18-随机选择记录"><a href="#18-随机选择记录" class="headerlink" title="18. 随机选择记录"></a>18. 随机选择记录</h2><pre><code>select newid()
-</code></pre>
+<h2 id="14-前10条记录"><a href="#14-前10条记录" class="headerlink" title="14. 前10条记录"></a>14. 前10条记录</h2><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> top <span class="number">10</span> <span class="operator">*</span> form table1 <span class="keyword">where</span> 范围</span><br></pre></td></tr></table></figure>
+
+<h2 id="15-选择在每一组b值相同的数据中对应的a最大的记录的所有信息-类似这样的用法可以用于论坛每月排行榜-每月热销产品分析-按科目成绩排名-等等"><a href="#15-选择在每一组b值相同的数据中对应的a最大的记录的所有信息-类似这样的用法可以用于论坛每月排行榜-每月热销产品分析-按科目成绩排名-等等" class="headerlink" title="15. 选择在每一组b值相同的数据中对应的a最大的记录的所有信息(类似这样的用法可以用于论坛每月排行榜,每月热销产品分析,按科目成绩排名,等等.)"></a>15. 选择在每一组b值相同的数据中对应的a最大的记录的所有信息(类似这样的用法可以用于论坛每月排行榜,每月热销产品分析,按科目成绩排名,等等.)</h2><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> a,b,c <span class="keyword">from</span> tablename ta <span class="keyword">where</span> a<span class="operator">=</span>(<span class="keyword">select</span> <span class="built_in">max</span>(a) <span class="keyword">from</span> tablename tb <span class="keyword">where</span> tb.b<span class="operator">=</span>ta.b)</span><br></pre></td></tr></table></figure>
+
+<h2 id="16-包括所有在-TableA-中但不在-TableB和TableC-中的行并消除所有重复行而派生出一个结果表"><a href="#16-包括所有在-TableA-中但不在-TableB和TableC-中的行并消除所有重复行而派生出一个结果表" class="headerlink" title="16. 包括所有在 TableA 中但不在 TableB和TableC 中的行并消除所有重复行而派生出一个结果表"></a>16. 包括所有在 TableA 中但不在 TableB和TableC 中的行并消除所有重复行而派生出一个结果表</h2><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">(<span class="keyword">select</span> a <span class="keyword">from</span> tableA ) <span class="keyword">except</span> (<span class="keyword">select</span> a <span class="keyword">from</span> tableB) <span class="keyword">except</span> (<span class="keyword">select</span> a <span class="keyword">from</span> tableC)</span><br></pre></td></tr></table></figure>
+
+<h2 id="17-随机取出10条数据"><a href="#17-随机取出10条数据" class="headerlink" title="17. 随机取出10条数据"></a>17. 随机取出10条数据</h2><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> top <span class="number">10</span> <span class="operator">*</span> <span class="keyword">from</span> tablename <span class="keyword">order</span> <span class="keyword">by</span> newid()</span><br></pre></td></tr></table></figure>
+
+<h2 id="18-随机选择记录"><a href="#18-随机选择记录" class="headerlink" title="18. 随机选择记录"></a>18. 随机选择记录</h2><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> newid()</span><br></pre></td></tr></table></figure>
+
 <h2 id="19-删除重复记录"><a href="#19-删除重复记录" class="headerlink" title="19. 删除重复记录"></a>19. 删除重复记录</h2><ul>
 <li><p>方法一：</p>
-<p>  delete from tablename where id not in (select max(id) from tablename group by col1,col2,…)</p>
-</li>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">delete</span> <span class="keyword">from</span> tablename <span class="keyword">where</span> id <span class="keyword">not</span> <span class="keyword">in</span> (<span class="keyword">select</span> <span class="built_in">max</span>(id) <span class="keyword">from</span> tablename <span class="keyword">group</span> <span class="keyword">by</span> col1,col2,...)</span><br></pre></td></tr></table></figure></li>
 <li><p>方法二：</p>
-<p>  select distinct * into temp from tablename<br>  delete from tablename<br>  insert into tablename select * from temp</p>
-</li>
-</ul>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> <span class="keyword">distinct</span> <span class="operator">*</span> <span class="keyword">into</span> temp <span class="keyword">from</span> tablename</span><br><span class="line"><span class="keyword">delete</span> <span class="keyword">from</span> tablename</span><br><span class="line"><span class="keyword">insert</span> <span class="keyword">into</span> tablename <span class="keyword">select</span> <span class="operator">*</span> <span class="keyword">from</span> temp</span><br></pre></td></tr></table></figure>
 <blockquote>
 <p>评价： 这种操作牵连大量的数据的移动，这种做法不适合大容量的数据操作</p>
 </blockquote>
-<ul>
-<li><p>方法三： 例如：在一个外部表中导入数据，由于某些原因第一次只导入了一部分，但很难判断具体位置，这样只有在下一次全部导入，这样也就产生好多重复的字段，怎样删除重复字段</p>
-<p>  alter table tablename<br>  add column_b int identity(1,1)	–添加一个自增列<br>  delete from tablename where column_b not in(<br>  select max(column_b) from tablename group by column1,column2,…)<br>  alter table tablename drop column column_b</p>
 </li>
+<li><p>方法三： 例如：在一个外部表中导入数据，由于某些原因第一次只导入了一部分，但很难判断具体位置，这样只有在下一次全部导入，这样也就产生好多重复的字段，怎样删除重复字段</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">alter</span> <span class="keyword">table</span> tablename</span><br><span class="line"><span class="keyword">add</span> column_b <span class="type">int</span> <span class="keyword">identity</span>(<span class="number">1</span>,<span class="number">1</span>)	<span class="comment">--添加一个自增列</span></span><br><span class="line"><span class="keyword">delete</span> <span class="keyword">from</span> tablename <span class="keyword">where</span> column_b <span class="keyword">not</span> <span class="keyword">in</span>(</span><br><span class="line"><span class="keyword">select</span> <span class="built_in">max</span>(column_b) <span class="keyword">from</span> tablename <span class="keyword">group</span> <span class="keyword">by</span> column1,column2,...)</span><br><span class="line"><span class="keyword">alter</span> <span class="keyword">table</span> tablename <span class="keyword">drop</span> <span class="keyword">column</span> column_b</span><br></pre></td></tr></table></figure></li>
 </ul>
-<h2 id="20-列出数据库里所有的表名"><a href="#20-列出数据库里所有的表名" class="headerlink" title="20. 列出数据库里所有的表名"></a>20. 列出数据库里所有的表名</h2><pre><code>select name from sysobjects where type=&#39;U&#39; // U代表用户
-</code></pre>
-<h2 id="21-列出表里的所有的列名"><a href="#21-列出表里的所有的列名" class="headerlink" title="21. 列出表里的所有的列名"></a>21. 列出表里的所有的列名</h2><pre><code>select name from syscolumns where id=object_id(&#39;TableName&#39;)
-</code></pre>
+<h2 id="20-列出数据库里所有的表名"><a href="#20-列出数据库里所有的表名" class="headerlink" title="20. 列出数据库里所有的表名"></a>20. 列出数据库里所有的表名</h2><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> name <span class="keyword">from</span> sysobjects <span class="keyword">where</span> type<span class="operator">=</span><span class="string">&#x27;U&#x27;</span> <span class="operator">/</span><span class="operator">/</span> U代表用户</span><br></pre></td></tr></table></figure>
+
+<h2 id="21-列出表里的所有的列名"><a href="#21-列出表里的所有的列名" class="headerlink" title="21. 列出表里的所有的列名"></a>21. 列出表里的所有的列名</h2><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> name <span class="keyword">from</span> syscolumns <span class="keyword">where</span> id<span class="operator">=</span>object_id(<span class="string">&#x27;TableName&#x27;</span>)</span><br></pre></td></tr></table></figure>
+
 <h2 id="22-列示type、vender、pcs字段，以type字段排列，case可以方便地实现多重选择，类似select-中的case。"><a href="#22-列示type、vender、pcs字段，以type字段排列，case可以方便地实现多重选择，类似select-中的case。" class="headerlink" title="22. 列示type、vender、pcs字段，以type字段排列，case可以方便地实现多重选择，类似select 中的case。"></a>22. 列示type、vender、pcs字段，以type字段排列，case可以方便地实现多重选择，类似select 中的case。</h2><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> type,<span class="built_in">sum</span>(<span class="keyword">case</span> vender <span class="keyword">when</span> <span class="string">&#x27;A&#x27;</span> <span class="keyword">then</span> pcs <span class="keyword">else</span> <span class="number">0</span> <span class="keyword">end</span>),<span class="built_in">sum</span>(<span class="keyword">case</span> vender <span class="keyword">when</span> <span class="string">&#x27;C&#x27;</span> <span class="keyword">then</span> pcs <span class="keyword">else</span> <span class="number">0</span> <span class="keyword">end</span>),<span class="built_in">sum</span>(<span class="keyword">case</span> vender <span class="keyword">when</span> <span class="string">&#x27;B&#x27;</span> <span class="keyword">then</span> pcs <span class="keyword">else</span> <span class="number">0</span> <span class="keyword">end</span>) <span class="keyword">FROM</span> tablename <span class="keyword">group</span> <span class="keyword">by</span> type</span><br></pre></td></tr></table></figure>
 <p>显示结果：</p>
 <table>
