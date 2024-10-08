@@ -39,12 +39,12 @@ BACKUP DATABASE pubs TO testBack
 
 ## 4. 创建新表
 ```sql
-create table tabname(col1 type1 [not null] [primary key],col2 type2 [not null],..)
+CREATE table tabname(col1 type1 [NOT null] [primary key],col2 type2 [NOT null],..)
 ```
 根据已有的表创建新表：
 ```sql
-create table tab_new like tab_old (使用旧表创建新表)
-create table tab_new as select col1,col2… from tab_old definition only
+CREATE table tab_new like tab_old (使用旧表创建新表)
+CREATE table tab_new AS SELECT col1,col2… FROM tab_old definition only
 ```
 
 ## 5. 删除新表
@@ -54,7 +54,7 @@ DROP TABLE tabname
 
 ## 6. 增加一个列
 ```sql
-Alter table tabname add column col type
+Alter table tabname ADD column col type
 ```
 > 注：列增加后将不能删除。DB2中列加上后数据类型也不能改变，唯一能改变的是增加varchar类型的长度。
 
@@ -69,67 +69,67 @@ ALTER TABLE tabname DROP PRIMARY KEY (col)
 
 ## 8. 创建索引
 ```sql
-create [unique] index idxname on tabname(col….) 
+CREATE [unique] index idxname ON tabname(col….) 
 ```
 删除索引
 ```sql
-drop index idxname
+DROP index idxname
 ```
 > 注：索引是不可更改的，想更改必须删除重新建。
 
 ## 9. 创建视图
 ```sql
-create view viewname as select statement 
+CREATE view viewname AS SELECT statement 
 ```
 删除视图
 ```sql
-drop view viewname
+DROP view viewname
 ```
 
 ## 10. 几个简单的基本sql语句
 选择
 ```sql
-select * from table1 where 范围
+SELECT * FROM table1 WHERE 范围
 ```
 插入
 ```sql
-insert into table1(field1,field2) values(value1,value2)
+INSERT INTO table1(field1,field2) VALUES(value1,value2)
 ```
 删除
 ```sql
-delete from table1 where 范围
+DELETE FROM table1 WHERE 范围
 ```
 更新
 ```sql
-update table1 set field1=value1 where 范围
+update table1 SET field1=value1 WHERE 范围
 ```
 查找
 ```sql
-select * from table1 where field1 like ’%value1%’
+SELECT * FROM table1 WHERE field1 like ’%value1%’
 ```
 排序
 ```sql
-select * from table1 order by field1,field2 [desc]
+SELECT * FROM table1 ORDER BY field1,field2 [DESC]
 ```
 总数
 ```sql
-select count as totalcount from table1
+SELECT COUNT AS totalcount FROM table1
 ```
 求和
 ```sql
-select sum(field1) as sumvalue from table1
+SELECT SUM(field1) AS sumvalue FROM table1
 ```
 平均
 ```sql
-select avg(field1) as avgvalue from table1
+SELECT avg(field1) AS avgvalue FROM table1
 ```
 最大
 ```sql
-select max(field1) as maxvalue from table1
+SELECT MAX(field1) AS maxvalue FROM table1
 ```
 最小
 ```sql
-select min(field1) as minvalue from table1
+SELECT min(field1) AS minvalue FROM table1
 ```
 
 ## 11. 几个高级查询运算词
@@ -142,10 +142,10 @@ INTERSECT 运算符通过只包括 TABLE1 和 TABLE2 中都有的行并消除所
 > 注：使用运算词的几个查询结果行必须是一致的。
 
 ## 12. 使用外连接
-- A. left （outer） join： 
+- A. LEFT （outer） join： 
 左外连接（左连接）：结果集几包括连接表的匹配行，也包括左连接表的所有行。 
 ```sql
-select a.a, a.b, a.c, b.c, b.d, b.f from a LEFT OUT JOIN b ON a.a = b.c
+SELECT a.a, a.b, a.c, b.c, b.d, b.f FROM a LEFT OUT JOIN b ON a.a = b.c
 ```
 - B：right （outer） join: 
 右外连接(右连接)：结果集既包括连接表的匹配连接行，也包括右连接表的所有行。 
@@ -154,9 +154,9 @@ select a.a, a.b, a.c, b.c, b.d, b.f from a LEFT OUT JOIN b ON a.a = b.c
 
 ## 13. 分组:Group by
 一张表，一旦分组 完成后，查询后只能得到组相关的信息。
-组相关的信息：（统计信息） count,sum,max,min,avg 分组的标准)
+组相关的信息：（统计信息） COUNT,SUM,MAX,min,avg 分组的标准)
 在SQLServer中分组时：不能以text,ntext,image类型的字段作为分组依据
-在selecte统计函数中的字段，不能和普通的字段放在一起；
+在SELECTe统计函数中的字段，不能和普通的字段放在一起；
 
 ## 14. 对数据库进行操作
 分离数据库： sp_detach_db; 附加数据库：sp_attach_db 后接表明，附加需要完整的路径名
@@ -169,11 +169,11 @@ sp_renamedb 'old_name', 'new_name'
 ## 16. 查询字段ID最大值的记录
 无索引
 ```sql
-select time from table t1 where not exists (select 1 from table where id > t1.id) 
+SELECT time FROM table t1 WHERE NOT exists (SELECT 1 FROM table WHERE id > t1.id) 
 ```
 有索引
 ```sql
-select time from table where id in (select max(id) from table)
+SELECT time FROM table WHERE id IN (SELECT MAX(id) FROM table)
 ```
 
 ## 17. 查询某一列的重复项内容
@@ -193,145 +193,145 @@ SELECT COUNT (*) FROM tableName WHERE conditions
 ## 1. 复制表(只复制结构,源表名：a 新表名：b) (Access可用)
 法一：
 ```sql
-select * into b from a where 1<>1（仅用于SQlServer）
+SELECT * INTO b FROM a WHERE 1<>1（仅用于SQlServer）
 ```
 法二：
 ```sql
-select top 0 * into b from a
+SELECT TOP 0 * INTO b FROM a
 ```
 
 ## 2. 拷贝表(拷贝数据,源表名：a 目标表名：b) (Access可用)
 ```sql
-insert into b(a, b, c) select d,e,f from b;
+INSERT INTO b(a, b, c) SELECT d,e,f FROM b;
 ```
 
 ## 3. 跨数据库之间表的拷贝(具体数据使用绝对路径) (Access可用)
 ```sql
-insert into b(a, b, c) select d,e,f from b in ‘具体数据库’ where 条件
+INSERT INTO b(a, b, c) SELECT d,e,f FROM b IN ‘具体数据库’ WHERE 条件
 ```
-例子：..from b in '"&Server.MapPath(".")&"\data.mdb" &"' where..
+例子：..FROM b IN '"&Server.MapPath(".")&"\data.mdb" &"' WHERE..
 
 ## 4. 子查询(表名1：a 表名2：b)
 ```sql
-select a,b,c from a where a IN (select d from b ) 或者: select a,b,c from a where a IN (1,2,3)
+SELECT a,b,c FROM a WHERE a IN (SELECT d FROM b ) 或者: SELECT a,b,c FROM a WHERE a IN (1,2,3)
 ```
 
 ## 5. 显示文章、提交人和最后回复时间
 ```sql
-select a.title,a.username,b.adddate from table a,(select max(adddate) adddate from table where table.title=a.title) b
+SELECT a.title,a.username,b.adddate FROM table a,(SELECT MAX(adddate) adddate FROM table WHERE table.title=a.title) b
 ```
 
 ## 6. 外连接查询(表名1：a 表名2：b)
 ```sql
-select a.a, a.b, a.c, b.c, b.d, b.f from a LEFT OUT JOIN b ON a.a = b.c
+SELECT a.a, a.b, a.c, b.c, b.d, b.f FROM a LEFT OUT JOIN b ON a.a = b.c
 ```
 
 ## 7. 在线视图查询(表名1：a )
 ```sql
-select * from (SELECT a,b,c FROM a) T where t.a > 1;
+SELECT * FROM (SELECT a,b,c FROM a) T WHERE t.a > 1;
 ```
 
-## 8. between的用法,between限制查询数据范围时包括了边界值,not between不包括
+## 8. between的用法,between限制查询数据范围时包括了边界值,NOT between不包括
 ```sql
-select * from table1 where time between time1 and time2
+SELECT * FROM table1 WHERE time BETWEEN time1 AND time2
 ```
 ```sql
-select a,b,c, from table1 where a not between 数值1 and 数值2
+SELECT a,b,c, FROM table1 WHERE a NOT BETWEEN 数值1 AND 数值2
 ```
 
-## 9. in 的使用方法
+## 9. IN 的使用方法
 ```sql
-select * from table1 where a [not] in (‘值1’,’值2’,’值4’,’值6’)
+SELECT * FROM table1 WHERE a [NOT] IN (‘值1’,’值2’,’值4’,’值6’)
 ```
 
 ## 10. 两张关联表，删除主表中已经在副表中没有的信息 
 ```sql
-delete from table1 where not exists ( select * from table2 where table1.field1=table2.field1 )
+DELETE FROM table1 WHERE NOT exists ( SELECT * FROM table2 WHERE table1.field1=table2.field1 )
 ```
 
 ## 11. 四表联查问题
 ```sql
-select * from a left inner join b on a.a=b.b right inner join c on a.a=c.c inner join d on a.a=d.d where .....
+SELECT * FROM a LEFT INNER JOIN b ON a.a=b.b RIGHT INNER JOIN c ON a.a=c.c inner join d ON a.a=d.d WHERE .....
 ```
 
 ## 12. 日程安排提前五分钟提醒 
 ```sql
-select * from 日程安排 where datediff('minute',f开始时间,getdate())>5
+SELECT * FROM 日程安排 WHERE DATEDIFF('minute',f开始时间,GETDATE())>5
 ```
 
 ## 13. 一条sql语句搞定数据库分页
 ```sql
-select top 10 b.* from (select top 20 主键字段,排序字段 from 表名 order by 排序字段 desc) a,表名 b where b.主键字段 = a.主键字段 order by a.排序字段
+SELECT TOP 10 b.* FROM (SELECT TOP 20 主键字段,排序字段 FROM 表名 ORDER BY 排序字段 DESC) a,表名 b WHERE b.主键字段 = a.主键字段 ORDER BY a.排序字段
 ```
 关于数据库分页：
 ```sql
-declare @start int,@end int
-@sql nvarchar(600)
-set @sql=’select top’+str(@end-@start+1)+’+from T where rid not in(select top’+str(@str-1)+’Rid from T where Rid>-1)’
-exec sp_executesql @sql
+DECLARE @start int,@END int
+@sql NVARCHAR(600)
+SET @sql=’SELECT TOP’+str(@END-@start+1)+’+FROM T WHERE rid NOT IN(SELECT TOP’+str(@str-1)+’Rid FROM T WHERE Rid>-1)’
+EXEC sp_executesql @sql
 ```
 >注意：在top后不能直接跟一个变量，所以在实际应用中只有这样的进行特殊的处理。Rid为一个标识列，如果top后还有具体的字段，这样做是非常有好处的。因为这样可以避免 top的字段如果是逻辑索引的，查询的结果后实际表中的不一致（逻辑索引中的数据有可能和数据表中的不一致，而查询时如果处在索引则首先查询索引）
 
 ## 14. 前10条记录
 ```sql
-select top 10 * form table1 where 范围
+SELECT TOP 10 * FROM table1 WHERE 范围
 ```
 
 ## 15. 选择在每一组b值相同的数据中对应的a最大的记录的所有信息(类似这样的用法可以用于论坛每月排行榜,每月热销产品分析,按科目成绩排名,等等.)
 ```sql
-select a,b,c from tablename ta where a=(select max(a) from tablename tb where tb.b=ta.b)
+SELECT a,b,c FROM tablename ta WHERE a=(SELECT MAX(a) FROM tablename tb WHERE tb.b=ta.b)
 ```
 
 ## 16. 包括所有在 TableA 中但不在 TableB和TableC 中的行并消除所有重复行而派生出一个结果表
 ```sql
-(select a from tableA ) except (select a from tableB) except (select a from tableC)
+(SELECT a FROM tableA ) except (SELECT a FROM tableB) except (SELECT a FROM tableC)
 ```
 
 ## 17. 随机取出10条数据
 ```sql
-select top 10 * from tablename order by newid()
+SELECT TOP 10 * FROM tablename ORDER BY newid()
 ```
 
 ## 18. 随机选择记录
 ```sql
-select newid()
+SELECT newid()
 ```
 
 ## 19. 删除重复记录
 - 方法一：
 ```sql
-delete from tablename where id not in (select max(id) from tablename group by col1,col2,...)
+DELETE FROM tablename WHERE id NOT IN (SELECT MAX(id) FROM tablename GROUP BY col1,col2,...)
 ```
 - 方法二：
 ```sql
-select distinct * into temp from tablename
-delete from tablename
-insert into tablename select * from temp
+SELECT distinct * INTO temp FROM tablename
+DELETE FROM tablename
+INSERT INTO tablename SELECT * FROM temp
 ```
 >评价： 这种操作牵连大量的数据的移动，这种做法不适合大容量的数据操作
 
 - 方法三： 例如：在一个外部表中导入数据，由于某些原因第一次只导入了一部分，但很难判断具体位置，这样只有在下一次全部导入，这样也就产生好多重复的字段，怎样删除重复字段
 ```sql
-alter table tablename
-add column_b int identity(1,1)	--添加一个自增列
-delete from tablename where column_b not in(
-select max(column_b) from tablename group by column1,column2,...)
-alter table tablename drop column column_b
+ALTER TABLE tablename
+ADD column_b int identity(1,1)	--添加一个自增列
+DELETE FROM tablename WHERE column_b NOT IN(
+SELECT MAX(column_b) FROM tablename GROUP BY column1,column2,...)
+ALTER TABLE tablename DROP column column_b
 ```
 
 ## 20. 列出数据库里所有的表名
 ```sql
-select name from sysobjects where type='U' // U代表用户
+SELECT name FROM sysobjects WHERE type='U' // U代表用户
 ```
 
 ## 21. 列出表里的所有的列名
 ```sql
-select name from syscolumns where id=object_id('TableName')
+SELECT name FROM syscolumns WHERE id=object_id('TableName')
 ```
 
-## 22. 列示type、vender、pcs字段，以type字段排列，case可以方便地实现多重选择，类似select 中的case。
+## 22. 列示type、vender、pcs字段，以type字段排列，case可以方便地实现多重选择，类似SELECT 中的case。
 ```sql
-select type,sum(case vender when 'A' then pcs else 0 end),sum(case vender when 'C' then pcs else 0 end),sum(case vender when 'B' then pcs else 0 end) FROM tablename group by type
+SELECT type,SUM(case vender when 'A' then pcs ELSE 0 END),SUM(case vender when 'C' then pcs ELSE 0 END),SUM(case vender when 'B' then pcs ELSE 0 END) FROM tablename GROUP BY type
 ```
 显示结果：
 
@@ -351,7 +351,7 @@ TRUNCATE TABLE table1
 
 ## 24. 选择从10到15的记录
 ```sql
-select top 5 * from (select top 15 * from table order by id asc) table_别名 order by id desc
+SELECT TOP 5 * FROM (SELECT TOP 15 * FROM table ORDER BY id ASC) table_别名 ORDER BY id DESC
 ```
 
 ## 25. 临时表
@@ -359,38 +359,38 @@ select top 5 * from (select top 15 * from table order by id asc) table_别名 or
 #### 创建临时表
 - 方法一：
 ```sql
-create table #临时表名(字段1 约束条件,
+CREATE table #临时表名(字段1 约束条件,
                        字段2 约束条件,
                       .....)
-create table ##临时表名(字段1 约束条件,
+CREATE table ##临时表名(字段1 约束条件,
                         字段2 约束条件,
                         .....)
 ```
     例：
     ```sql
-    create table #Tmp --创建临时表#Tmp
+    CREATE table #Tmp --创建临时表#Tmp
     (
-        ID   int IDENTITY (1,1)     not null, --创建列ID,并且每次新增一条记录就会加1
-        WokNo                varchar(50),   
+        ID   int IDENTITY (1,1)     NOT null, --创建列ID,并且每次新增一条记录就会加1
+        WokNo                VARCHAR(50),   
         primary key (ID)      --定义ID为临时表#Tmp的主键      
     );
     ```
 - 方法二：
 ```sql
-select * into #临时表名 from 你的表;
-select * into ##临时表名 from 你的表;
+SELECT * INTO #临时表名 FROM 你的表;
+SELECT * INTO ##临时表名 FROM 你的表;
 ```
 >注：以上的#代表局部临时表，##代表全局临时表
 
 #### 查询临时表
 ```sql
-select * from #临时表名;
-select * from ##临时表名;
+SELECT * FROM #临时表名;
+SELECT * FROM ##临时表名;
 ```
 #### 删除临时表
 ```sql
-drop table #临时表名;
-drop table ##临时表名;
+DROP table #临时表名;
+DROP table ##临时表名;
 ```
 
 ## 26. 关联表更新
@@ -405,35 +405,35 @@ UPDATE tableA A INNER JOIN tableB B ON A.a = B.a SET A.b=B.d;
 
 ## 27. 查看表的所有外键关系
 ```sql
-select t1.*,t2.name,t3.name from dbo.sysforeignkeys t1 left join sysobjects t2 on t1.fkeyid=t2.id 
-           left join sysobjects t3 on t1.rkeyid=t3.id where t3.name='表名 '
+SELECT t1.*,t2.name,t3.name FROM dbo.sysforeignkeys t1 LEFT join sysobjects t2 ON t1.fkeyid=t2.id 
+           LEFT join sysobjects t3 ON t1.rkeyid=t3.id WHERE t3.name='表名 '
 ```
 
 ## 28. 删除所有约束
 ```sql
 DECLARE c1 cursor for
-    select 'alter table ['+ object_name(parent_obj) + '] drop constraint ['+name+']; '
-    from sysobjects
-    where xtype = 'F'
-open c1
-declare @c1 varchar(8000)
-fetch next from c1 into @c1
-while(@@fetch_status=0)
-    begin
-        exec(@c1)
-        fetch next from c1 into @c1
-    end
-close c1
+    SELECT 'ALTER TABLE ['+ object_name(parent_obj) + '] DROP constraint ['+name+']; '
+    FROM sysobjects
+    WHERE xtype = 'F'
+OPEN c1
+DECLARE @c1 VARCHAR(8000)
+FETCH NEXT FROM c1 INTO @c1
+WHILE(@@fetch_status=0)
+    BEGIN
+        EXEC(@c1)
+        FETCH NEXT FROM c1 INTO @c1
+    END
+CLOSE c1
 deallocate c1
 ```
 
 ## 29. 删除数据库所有表
 ```sql
-declare @tname varchar(8000)
-set @tname=''
-select @tname=@tname + Name + ',' from sysobjects where xtype='U'
-select @tname='drop table ' + left(@tname,len(@tname)-1)
-exec(@tname)
+DECLARE @tname VARCHAR(8000)
+SET @tname=''
+SELECT @tname=@tname + Name + ',' FROM sysobjects WHERE xtype='U'
+SELECT @tname='DROP table ' + LEFT(@tname,LEN(@tname)-1)
+EXEC(@tname)
 ```
 
 ## 30. 删除外键约束
@@ -532,8 +532,8 @@ UPDATE xx_sjb SET sl = LTRIM(RTRIM(REPLACE(REPLACE(sl, CHAR(10), ''), CHAR (13),
 # 三. 技巧篇
 
 ## 1. 1=1，1=2的使用，在SQL语句组合时用的较多
-    “where 1=1” 表示选择全部
-    “where 1=2” 表示全部不选
+    “WHERE 1=1” 表示选择全部
+    “WHERE 1=2” 表示全部不选
 	
 ## 2. 收缩数据库
 - 重建索引
@@ -554,13 +554,13 @@ dbcc shrinkdatabase(dbname)
 
 ## 4. 转移数据库给新用户以已存在用户权限
 ```sql
-exec sp_change_users_login 'update_one','newname','oldname'
+EXEC sp_change_users_login 'update_one','newname','oldname'
 go
 ```
 
 ## 5. 检查备份集
 ```sql
-RESTORE VERIFYONLY from disk='E:\dvbbs.bak'
+RESTORE VERIFYONLY FROM disk='E:\dvbbs.bak'
 ```
 
 ## 6. 修复数据库
@@ -582,7 +582,7 @@ GO
 
 	USE tablename -- 要操作的数据库名
 	SELECT  @LogicalFileName = 'tablename_log', -- 日志文件名
-	@MaxMinutes = 10, -- Limit on time allowed to wrap log.
+	@MaxMinutes = 10, -- Limit ON time allowed to wrap log.
 	@NewSize = 1  -- 你想设定的日志文件的大小(M)
 	Setup / initialize
 	DECLARE @OriginalSize int
@@ -595,7 +595,7 @@ GO
 	FROM sysfiles
 	WHERE name = @LogicalFileName
 	CREATE TABLE DummyTrans
-	(DummyColumn char (8000) not null)
+	(DummyColumn char (8000) NOT null)
 
 	DECLARE @Counter    INT,
 	@StartTime DATETIME,
@@ -604,8 +604,8 @@ GO
 	@TruncLog = 'BACKUP LOG ' + db_name() + ' WITH TRUNCATE_ONLY'
 	DBCC SHRINKFILE (@LogicalFileName, @NewSize)
 	EXEC (@TruncLog)
-	-- Wrap the log if necessary.
-	WHILE @MaxMinutes > DATEDIFF (mi, @StartTime, GETDATE()) -- time has not expired
+	-- Wrap the log IF necessary.
+	WHILE @MaxMinutes > DATEDIFF (mi, @StartTime, GETDATE()) -- time has NOT expired
 	AND @OriginalSize = (SELECT size FROM sysfiles WHERE name = @LogicalFileName)  
 	AND (@OriginalSize * 8 /1024) > @NewSize  
 	BEGIN -- Outer loop.
@@ -628,50 +628,50 @@ GO
 
 ## 8. 更改某个表
 ```sql
-exec sp_changeobjectowner 'tablename','dbo'
+EXEC sp_changeobjectowner 'tablename','dbo'
 ```
 
 ## 9. 存储更改全部表
 ```sql
 CREATE PROCEDURE dbo.User_ChangeObjectOwnerBatch
-@OldOwner as NVARCHAR(128),
-@NewOwner as NVARCHAR(128)
+@OldOwner AS NVARCHAR(128),
+@NewOwner AS NVARCHAR(128)
 AS
-DECLARE @Name    as NVARCHAR(128)
-DECLARE @Owner   as NVARCHAR(128)
-DECLARE @OwnerName   as NVARCHAR(128)
+DECLARE @Name    AS NVARCHAR(128)
+DECLARE @Owner   AS NVARCHAR(128)
+DECLARE @OwnerName   AS NVARCHAR(128)
 DECLARE curObject CURSOR FOR 
-select 'Name'    = name,
+SELECT 'Name'    = name,
    'Owner'    = user_name(uid)
-from sysobjects
-where user_name(uid)=@OldOwner
-order by name
+FROM sysobjects
+WHERE user_name(uid)=@OldOwner
+ORDER BY name
 OPEN   curObject
 FETCH NEXT FROM curObject INTO @Name, @Owner
 WHILE(@@FETCH_STATUS=0)
 BEGIN     
-if @Owner=@OldOwner 
-begin
-   set @OwnerName = @OldOwner + '.' + rtrim(@Name)
-   exec sp_changeobjectowner @OwnerName, @NewOwner
-end
--- select @name,@NewOwner,@OldOwner
+IF @Owner=@OldOwner 
+BEGIN
+   SET @OwnerName = @OldOwner + '.' + rtrim(@Name)
+   EXEC sp_changeobjectowner @OwnerName, @NewOwner
+END
+-- SELECT @name,@NewOwner,@OldOwner
 FETCH NEXT FROM curObject INTO @Name, @Owner
 END
-close curObject
+CLOSE curObject
 deallocate curObject
 GO
 ```
 
 ## 10. SQL SERVER中直接循环写入数据
 ```sql
-declare @i int
-set @i=1
-while @i<30
-begin
-insert into test (userid) values(@i)
-set @i=@i+1
-end
+DECLARE @i int
+SET @i=1
+WHILE @i<30
+BEGIN
+INSERT INTO test (userid) VALUES(@i)
+SET @i=@i+1
+END
 ```
 案例：有如下表，要求就表中所有沒有及格的成绩，在每次增长0.1的基础上，使他们刚好及格:
 
@@ -682,15 +682,15 @@ end
 |Wangwu  		|50|
 |Songquan 		|69|
 ```sql
-while((select min(score) from tb_table)<60)
-begin
-update tb_table set score =score*1.01
-where score<60
-if (select min(score) from tb_table)>60
-break
-else
-continue
-end
+WHILE((SELECT min(score) FROM tb_table)<60)
+BEGIN
+update tb_table SET score =score*1.01
+WHERE score<60
+IF (SELECT min(score) FROM tb_table)>60
+BREAK
+ELSE
+CONTINUE
+END
 ```
 
 ## 11. 查看数据库属性
@@ -700,25 +700,25 @@ sp_helpdb 数据库名
 
 ## 12. 按姓氏笔画排序:
 ```sql
-Select * From TableName Order By CustomerName Collate Chinese_PRC_Stroke_ci_as //从少到多
+SELECT * FROM TableName ORDER BY CustomerName Collate Chinese_PRC_Stroke_ci_as //从少到多
 ```
 
 ## 13. 数据库加密:
 ```sql
-select encrypt('原始密码')
-select pwdencrypt('原始密码')
-select pwdcompare('原始密码','加密后密码') = 1--相同；否则不相同 encrypt('原始密码')
-select pwdencrypt('原始密码')
-select pwdcompare('原始密码','加密后密码') = 1--相同；否则不相同
+SELECT encrypt('原始密码')
+SELECT pwdencrypt('原始密码')
+SELECT pwdcompare('原始密码','加密后密码') = 1--相同；否则不相同 encrypt('原始密码')
+SELECT pwdencrypt('原始密码')
+SELECT pwdcompare('原始密码','加密后密码') = 1--相同；否则不相同
 ```
 
 ## 14. 取回表中字段:
 ```sql
-declare @list varchar(1000),
-@sql nvarchar(1000) 
-select @list=@list+','+b.name from sysobjects a,syscolumns b where a.id=b.id and a.name='表A'
-set @sql='select '+right(@list,len(@list)-1)+' from 表A' 
-exec (@sql)
+DECLARE @list VARCHAR(1000),
+@sql NVARCHAR(1000) 
+SELECT @list=@list+','+b.name FROM sysobjects a,syscolumns b WHERE a.id=b.id AND a.name='表A'
+SET @sql='SELECT '+right(@list,LEN(@list)-1)+' FROM 表A' 
+EXEC (@sql)
 ```
 
 ## 15. 查看硬盘分区:
@@ -728,12 +728,12 @@ EXEC master..xp_fixeddrives
 
 ## 16. 比较A,B表是否相等:
 ```sql
-if (select checksum_agg(binary_checksum(*)) from A)
+IF (SELECT checksum_agg(binary_checksum(*)) FROM A)
      =
-    (select checksum_agg(binary_checksum(*)) from B)
-print '相等'
-else
-print '不相等'
+    (SELECT checksum_agg(binary_checksum(*)) FROM B)
+PRINT '相等'
+ELSE
+PRINT '不相等'
 ```
 
 ## 17. 杀掉所有的事件探察器进程:
@@ -746,48 +746,48 @@ EXEC sp_msforeach_worker '?'
 ## 18. 记录搜索:
 - 开头到N条记录
 ```sql
-Select Top N * From 表
+SELECT TOP N * FROM 表
 ```
 - N到M条记录(要有主索引ID)
 ```sql
-Select Top M-N * From 表 Where ID in (Select Top M ID From 表) Order by ID   Desc
+SELECT TOP M-N * FROM 表 WHERE ID IN (SELECT TOP M ID FROM 表) ORDER BY ID DESC
 ```
 - N到结尾记录
 ```sql
-Select Top N * From 表 Order by ID Desc
+SELECT TOP N * FROM 表 ORDER BY ID DESC
 ```
 
 ## 19. 获取当前数据库中的所有用户表
 ```sql
-select Name from sysobjects where xtype='u' and status>=0
+SELECT name FROM sysobjects WHERE xtype='u' AND status>=0
 ```
 
 ## 20. 获取某一个表的所有字段
 ```sql
-select name from syscolumns where id=object_id('表名')
-select name from syscolumns where id in (select id from sysobjects where type = 'u' and name = '表名')
+SELECT name FROM syscolumns WHERE id=object_id('表名')
+SELECT name FROM syscolumns WHERE id IN (SELECT id FROM sysobjects WHERE type = 'u' AND name = '表名')
 ```
 
 ## 21. 查看与某一个表相关的视图、存储过程、函数
 ```sql
-select a.* from sysobjects a, syscomments b where a.id = b.id and b.text like '%表名%'
+SELECT a.* FROM sysobjects a, syscomments b WHERE a.id = b.id AND b.text like '%表名%'
 ```
 
 ## 22. 查看当前数据库中所有存储过程
 ```sql
-select name as 存储过程名称 from sysobjects where xtype='P'
+SELECT name AS 存储过程名称 FROM sysobjects WHERE xtype='P'
 ```
 
 ## 23. 查询用户创建的所有数据库
 ```sql
-select * from master..sysdatabases D where sid not in(select sid from master..syslogins where name='sa')
-select dbid, name AS DB_NAME from master..sysdatabases where sid <> 0x01
+SELECT * FROM master..sysdatabases D WHERE sid NOT IN(SELECT sid FROM master..syslogins WHERE name='sa')
+SELECT dbid, name AS DB_NAME FROM master..sysdatabases WHERE sid <> 0x01
 ```
 
 ## 24. 查询某一个表的字段和数据类型
 ```sql
-select column_name,data_type from information_schema.columns
-where table_name = '表名'
+SELECT column_name,data_type FROM information_schema.columns
+WHERE table_name = '表名'
 ```
 
 ## 25. 不同服务器数据库之间的数据操作
@@ -814,11 +814,11 @@ SELECT * FROM LinkName.数据库名.架构名.表名
 #### 25.3 删除链接服务器
 - 删除登录信息(或叫删除链接服务器登录名映射)
 ```sql
-EXEC sp_droplinkedsrvlogin 'LinkName',NULL
+EXEC sp_DROPlinkedsrvlogin 'LinkName',NULL
 ```
 - 删除链接服务器名称
 ```sql
-EXEC sp_dropserver 'LinkName ', 'droplogins' --如果指定droplogins，则在删除链接服务器之前要删除登录名映射
+EXEC sp_DROPserver 'LinkName ', 'DROPlogins' --如果指定DROPlogins，则在删除链接服务器之前要删除登录名映射
 ```
 #### 25.4 其它连接远程/局域网数据方法：OPENROWSET/OPENQUERY/opendatasource
 - ##### OPENROWSET方法（不需要用到创建好的链接名。如果连接的实例名不是默认的，需要在"sql服务器名或IP地址"后加上"/实例名"）
@@ -897,16 +897,16 @@ INNER JOIN 本地表 b ON a.column1 = b.column1
 
 1. 开启Ad Hoc Distributed Queries组件，在sql查询编辑器中执行如下语句：
 ```sql
-exec sp_configure 'show advanced options',1
+EXEC sp_configure 'show advanced options',1
 reconfigure
-exec sp_configure 'Ad Hoc Distributed Queries',1
+EXEC sp_configure 'Ad Hoc Distributed Queries',1
 reconfigure
 ```
 2. 关闭Ad Hoc Distributed Queries组件，在sql查询编辑器中执行如下语句：
 ```sql
-exec sp_configure 'Ad Hoc Distributed Queries',0
+EXEC sp_configure 'Ad Hoc Distributed Queries',0
 reconfigure
-exec sp_configure 'show advanced options',0
+EXEC sp_configure 'show advanced options',0
 reconfigure
 ```
 
@@ -914,15 +914,15 @@ reconfigure
 ```sql
 use 数据库名(是要删除表的所在的那个数据库的名称)
 GO
-declare @sql varchar(8000)
-while (select count(*) from sysobjects where type='U')>0
-begin
-SELECT @sql='drop table ' + name
+DECLARE @sql VARCHAR(8000)
+WHILE (SELECT COUNT(*) FROM sysobjects WHERE type='U')>0
+BEGIN
+SELECT @sql='DROP table ' + name
 FROM sysobjects
 WHERE (type = 'U')
-ORDER BY 'drop table ' + name
-exec(@sql) 
-end
+ORDER BY 'DROP table ' + name
+EXEC(@sql) 
+END
 ```
 
 ## 27. 查看数据库文件使用情况
