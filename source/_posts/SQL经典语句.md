@@ -21,7 +21,7 @@ CREATE DATABASE database-name
 
 ## 2. 删除数据库
 ```sql
-DROP database dbname
+DROP DATABASE dbname
 ```
 
 ## 3. 备份sql server
@@ -39,12 +39,12 @@ BACKUP DATABASE pubs TO testBack
 
 ## 4. 创建新表
 ```sql
-CREATE table tabname(col1 type1 [NOT null] [primary key],col2 type2 [NOT null],..)
+CREATE TABLE tabname(col1 type1 [NOT null] [primary key],col2 type2 [NOT null],..)
 ```
 根据已有的表创建新表：
 ```sql
-CREATE table tab_new like tab_old (使用旧表创建新表)
-CREATE table tab_new AS SELECT col1,col2… FROM tab_old definition only
+CREATE TABLE tab_new LIKE tab_old (使用旧表创建新表)
+CREATE TABLE tab_new AS SELECT col1,col2… FROM tab_old definition only
 ```
 
 ## 5. 删除新表
@@ -54,7 +54,7 @@ DROP TABLE tabname
 
 ## 6. 增加一个列
 ```sql
-Alter table tabname ADD column col type
+ALTER TABLE tabname ADD COLUMN col type
 ```
 > 注：列增加后将不能删除。DB2中列加上后数据类型也不能改变，唯一能改变的是增加varchar类型的长度。
 
@@ -79,11 +79,11 @@ DROP index idxname
 
 ## 9. 创建视图
 ```sql
-CREATE view viewname AS SELECT statement 
+CREATE VIEW viewname AS SELECT statement 
 ```
 删除视图
 ```sql
-DROP view viewname
+DROP VIEW viewname
 ```
 
 ## 10. 几个简单的基本sql语句
@@ -101,11 +101,11 @@ DELETE FROM table1 WHERE 范围
 ```
 更新
 ```sql
-update table1 SET field1=value1 WHERE 范围
+UPDATE table1 SET field1=value1 WHERE 范围
 ```
 查找
 ```sql
-SELECT * FROM table1 WHERE field1 like ’%value1%’
+SELECT * FROM table1 WHERE field1 LIKE ’%value1%’
 ```
 排序
 ```sql
@@ -121,7 +121,7 @@ SELECT SUM(field1) AS sumvalue FROM table1
 ```
 平均
 ```sql
-SELECT avg(field1) AS avgvalue FROM table1
+SELECT AVG(field1) AS avgvalue FROM table1
 ```
 最大
 ```sql
@@ -129,7 +129,7 @@ SELECT MAX(field1) AS maxvalue FROM table1
 ```
 最小
 ```sql
-SELECT min(field1) AS minvalue FROM table1
+SELECT MIN(field1) AS minvalue FROM table1
 ```
 
 ## 11. 几个高级查询运算词
@@ -154,7 +154,7 @@ SELECT a.a, a.b, a.c, b.c, b.d, b.f FROM a LEFT OUT JOIN b ON a.a = b.c
 
 ## 13. 分组:Group by
 一张表，一旦分组 完成后，查询后只能得到组相关的信息。
-组相关的信息：（统计信息） COUNT,SUM,MAX,min,avg 分组的标准)
+组相关的信息：（统计信息） COUNT,SUM,MAX,MIN,AVG 分组的标准)
 在SQLServer中分组时：不能以text,ntext,image类型的字段作为分组依据
 在SELECTe统计函数中的字段，不能和普通的字段放在一起；
 
@@ -169,7 +169,7 @@ sp_renamedb 'old_name', 'new_name'
 ## 16. 查询字段ID最大值的记录
 无索引
 ```sql
-SELECT time FROM table t1 WHERE NOT exists (SELECT 1 FROM table WHERE id > t1.id) 
+SELECT time FROM table t1 WHERE NOT EXISTS (SELECT 1 FROM table WHERE id > t1.id) 
 ```
 有索引
 ```sql
@@ -183,7 +183,7 @@ SELECT * FROM documentation AS A WHERE (SELECT COUNT(*) FROM documentation WHERE
 
 ## 18. 判断表中是否存在记录
 ```sql
-SELECT COUNT (*) FROM tableName WHERE conditions
+SELECT COUNT(*) FROM tableName WHERE conditions
 ```
 
 ---
@@ -246,7 +246,7 @@ SELECT * FROM table1 WHERE a [NOT] IN (‘值1’,’值2’,’值4’,’值6�
 
 ## 10. 两张关联表，删除主表中已经在副表中没有的信息 
 ```sql
-DELETE FROM table1 WHERE NOT exists ( SELECT * FROM table2 WHERE table1.field1=table2.field1 )
+DELETE FROM table1 WHERE NOT EXISTS ( SELECT * FROM table2 WHERE table1.field1=table2.field1 )
 ```
 
 ## 11. 四表联查问题
@@ -316,7 +316,7 @@ ALTER TABLE tablename
 ADD column_b int identity(1,1)	--添加一个自增列
 DELETE FROM tablename WHERE column_b NOT IN(
 SELECT MAX(column_b) FROM tablename GROUP BY column1,column2,...)
-ALTER TABLE tablename DROP column column_b
+ALTER TABLE tablename DROP COLUMN column_b
 ```
 
 ## 20. 列出数据库里所有的表名
@@ -359,16 +359,16 @@ SELECT TOP 5 * FROM (SELECT TOP 15 * FROM table ORDER BY id ASC) table_别名 OR
 #### 创建临时表
 - 方法一：
 ```sql
-CREATE table #临时表名(字段1 约束条件,
+CREATE TABLE #临时表名(字段1 约束条件,
                        字段2 约束条件,
                       .....)
-CREATE table ##临时表名(字段1 约束条件,
+CREATE TABLE ##临时表名(字段1 约束条件,
                         字段2 约束条件,
                         .....)
 ```
     例：
     ```sql
-    CREATE table #Tmp --创建临时表#Tmp
+    CREATE TABLE #Tmp --创建临时表#Tmp
     (
         ID   int IDENTITY (1,1)     NOT null, --创建列ID,并且每次新增一条记录就会加1
         WokNo                VARCHAR(50),   
@@ -389,8 +389,8 @@ SELECT * FROM ##临时表名;
 ```
 #### 删除临时表
 ```sql
-DROP table #临时表名;
-DROP table ##临时表名;
+DROP TABLE #临时表名;
+DROP TABLE ##临时表名;
 ```
 
 ## 26. 关联表更新
@@ -405,8 +405,11 @@ UPDATE tableA A INNER JOIN tableB B ON A.a = B.a SET A.b=B.d;
 
 ## 27. 查看表的所有外键关系
 ```sql
-SELECT t1.*,t2.name,t3.name FROM dbo.sysforeignkeys t1 LEFT join sysobjects t2 ON t1.fkeyid=t2.id 
-           LEFT join sysobjects t3 ON t1.rkeyid=t3.id WHERE t3.name='表名 '
+   SELECT t1.*, t2.name, t3.name 
+     FROM dbo.sysforeignkeys t1 
+LEFT JOIN sysobjects         t2 ON t1.fkeyid=t2.id 
+LEFT JOIN sysobjects         t3 ON t1.rkeyid=t3.id 
+    WHERE t3.name='表名'
 ```
 
 ## 28. 删除所有约束
@@ -424,7 +427,7 @@ WHILE(@@fetch_status=0)
         FETCH NEXT FROM c1 INTO @c1
     END
 CLOSE c1
-deallocate c1
+DEALLOCATE c1
 ```
 
 ## 29. 删除数据库所有表
@@ -432,7 +435,7 @@ deallocate c1
 DECLARE @tname VARCHAR(8000)
 SET @tname=''
 SELECT @tname=@tname + Name + ',' FROM sysobjects WHERE xtype='U'
-SELECT @tname='DROP table ' + LEFT(@tname,LEN(@tname)-1)
+SELECT @tname='DROP TABLE ' + LEFT(@tname,LEN(@tname)-1)
 EXEC(@tname)
 ```
 
@@ -489,29 +492,34 @@ INSERT 表2
 SELECT * FROM 表1 AS a WHERE NOT EXISTS(SELECT 1 FROM 表2 WHERE ID = a.ID);
 ```
 
-## 33. 判断某列中是否包含中文字符或者英文字符
+## 33. 判断某列中是否包含中文字符或者英文字符等特殊字符
+中文字符
 ```sql
 SELECT * FROM 表名 WHERE 某列 LIKE '%[吖-座]%'
+```
+英文字符
+```sql
 SELECT * FROM 表名 WHERE 某列 LIKE '%[a-z]%'
 ```
+
 
 ## 34. 行转列，将多行数据合并成一行（SQL SERVER 2005以上支持）
 例如，表Table1中有两列数据：
 
-|code       |name    |
-|-------  	|:-------|
-|AAA        |姓名1    |
-|AAA        |姓名2    |
-|AAA        |姓名3    |
-|BBB        |姓名4    |
-|BBB        |姓名5    |
+| code       | name     |
+| -----------| :--------|
+| AAA        | 姓名1    |
+| AAA        | 姓名2    |
+| AAA        | 姓名3    |
+| BBB        | 姓名4    |
+| BBB        | 姓名5    |
 
 行转列，想变成如下格式：
 
-|code       |name|
-|-------  	|:--------------|
-|AAA        |姓名1,姓名2,姓名3|
-|BBB        |姓名4,姓名5     |
+| code       | name            |
+| -----------| :---------------|
+| AAA        | 姓名1,姓名2,姓名3 |
+| BBB        | 姓名4,姓名5      |
 
 可用如下SQL实现：
 ```sql
@@ -611,7 +619,7 @@ GO
 	BEGIN -- Outer loop.
 	SELECT @Counter = 0
 	WHILE   ((@Counter < @OriginalSize / 16) AND (@Counter < 50000))
-	BEGIN -- update
+	BEGIN -- UPDATE
 	INSERT DummyTrans VALUES ('Fill Log') DELETE DummyTrans
 	SELECT @Counter = @Counter + 1
 	END
@@ -659,7 +667,7 @@ END
 FETCH NEXT FROM curObject INTO @Name, @Owner
 END
 CLOSE curObject
-deallocate curObject
+DEALLOCATE curObject
 GO
 ```
 
@@ -676,17 +684,17 @@ END
 案例：有如下表，要求就表中所有沒有及格的成绩，在每次增长0.1的基础上，使他们刚好及格:
 
 | Name 			| score |
-| -------  		| ---: |
-|Zhangshan		|80|
-|Lishi  		|59|
-|Wangwu  		|50|
-|Songquan 		|69|
+| --------------| -----:|
+| Zhangshan		| 80    |
+| Lishi  		| 59    |
+| Wangwu  		| 50    |
+| Songquan 		| 69    |
 ```sql
-WHILE((SELECT min(score) FROM tb_table)<60)
+WHILE((SELECT MIN(score) FROM tb_table)<60)
 BEGIN
-update tb_table SET score =score*1.01
+UPDATE tb_table SET score =score*1.01
 WHERE score<60
-IF (SELECT min(score) FROM tb_table)>60
+IF (SELECT MIN(score) FROM tb_table)>60
 BREAK
 ELSE
 CONTINUE
@@ -770,7 +778,7 @@ SELECT name FROM syscolumns WHERE id IN (SELECT id FROM sysobjects WHERE type = 
 
 ## 21. 查看与某一个表相关的视图、存储过程、函数
 ```sql
-SELECT a.* FROM sysobjects a, syscomments b WHERE a.id = b.id AND b.text like '%表名%'
+SELECT a.* FROM sysobjects a, syscomments b WHERE a.id = b.id AND b.text LIKE '%表名%'
 ```
 
 ## 22. 查看当前数据库中所有存储过程
@@ -917,10 +925,10 @@ GO
 DECLARE @sql VARCHAR(8000)
 WHILE (SELECT COUNT(*) FROM sysobjects WHERE type='U')>0
 BEGIN
-SELECT @sql='DROP table ' + name
+SELECT @sql='DROP TABLE ' + name
 FROM sysobjects
 WHERE (type = 'U')
-ORDER BY 'DROP table ' + name
+ORDER BY 'DROP TABLE ' + name
 EXEC(@sql) 
 END
 ```
