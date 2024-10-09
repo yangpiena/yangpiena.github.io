@@ -282,7 +282,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2024-10-08 17:31:23" itemprop="dateModified" datetime="2024-10-08T17:31:23+08:00">2024-10-08</time>
+      <time title="修改时间：2024-10-09 09:17:17" itemprop="dateModified" datetime="2024-10-09T09:17:17+08:00">2024-10-09</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -539,9 +539,9 @@
 <h2 id="33-判断某列中是否包含中文字符或者英文字符"><a href="#33-判断某列中是否包含中文字符或者英文字符" class="headerlink" title="33. 判断某列中是否包含中文字符或者英文字符"></a>33. 判断某列中是否包含中文字符或者英文字符</h2><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> <span class="operator">*</span> <span class="keyword">FROM</span> 表名 <span class="keyword">WHERE</span> 某列 <span class="keyword">LIKE</span> <span class="string">&#x27;%[吖-座]%&#x27;</span></span><br><span class="line"><span class="keyword">SELECT</span> <span class="operator">*</span> <span class="keyword">FROM</span> 表名 <span class="keyword">WHERE</span> 某列 <span class="keyword">LIKE</span> <span class="string">&#x27;%[a-z]%&#x27;</span></span><br></pre></td></tr></table></figure>
 
 <h2 id="34-行转列，将多行数据合并成一行（SQL-SERVER-2005以上支持）"><a href="#34-行转列，将多行数据合并成一行（SQL-SERVER-2005以上支持）" class="headerlink" title="34. 行转列，将多行数据合并成一行（SQL SERVER 2005以上支持）"></a>34. 行转列，将多行数据合并成一行（SQL SERVER 2005以上支持）</h2><p>例如，表Table1中有两列数据：</p>
-<p>|code       |name|<br>|——-  	|—|<br>|AAA        |姓名1|<br>|AAA        |姓名2|<br>|AAA        |姓名3|<br>|BBB        |姓名4|<br>|BBB        |姓名5|</p>
+<p>|code       |name    |<br>|——-  	|:——-|<br>|AAA        |姓名1    |<br>|AAA        |姓名2    |<br>|AAA        |姓名3    |<br>|BBB        |姓名4    |<br>|BBB        |姓名5    |</p>
 <p>行转列，想变成如下格式：</p>
-<p>|code       |name|<br>|——-  	|—|<br>|AAA        |姓名1,姓名2,姓名3|<br>|BBB        |姓名4,姓名5|</p>
+<p>|code       |name|<br>|——-  	|:————–|<br>|AAA        |姓名1,姓名2,姓名3|<br>|BBB        |姓名4,姓名5     |</p>
 <p>可用如下SQL实现：</p>
 <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">  <span class="keyword">SELECT</span> code, name <span class="operator">=</span> (STUFF((<span class="keyword">SELECT</span> <span class="string">&#x27;,&#x27;</span> <span class="operator">+</span> name </span><br><span class="line">                                <span class="keyword">FROM</span> Table1 </span><br><span class="line">                               <span class="keyword">WHERE</span> code <span class="operator">=</span> a.code <span class="keyword">FOR</span> xml PATH(<span class="string">&#x27;&#x27;</span>)),<span class="number">1</span>,<span class="number">1</span>,<span class="string">&#x27;&#x27;</span>))</span><br><span class="line">    <span class="keyword">FROM</span> Table1 a </span><br><span class="line"><span class="keyword">GROUP</span> <span class="keyword">BY</span> code</span><br></pre></td></tr></table></figure>
 
