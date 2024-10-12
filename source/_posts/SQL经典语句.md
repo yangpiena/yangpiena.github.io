@@ -402,6 +402,14 @@ MYSQL
 ```sql
 UPDATE tableA A INNER JOIN tableB B ON A.a = B.a SET A.b=B.d;
 ```
+表的字段求合等运算后更新到关联表
+```sql
+UPDATE tableA 
+   SET amount = (SELECT SUM(ISNULL(price, 0) * ISNULL(quantity, 0)) 
+                   FROM tableB
+                  WHERE tableB.fid = tableA.id)
+ WHERE name = '22';
+```
 
 ## 27. 查看表的所有外键关系
 ```sql
