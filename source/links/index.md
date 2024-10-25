@@ -30,10 +30,10 @@ description:
 
 
 # 常用
-[深言达意](https://www.shenyandayi.com "原反向词典正式升级为智能写作工具。支持筛选词语、成语、惯用语和古汉语等多类别。") | [ChatGPT OpenAI 项目汇总](https://iui.su/2920/) | [ChatGPT免费体验在线列表](https://lzw.me/x/chatgpt-sites/)  | [Free2gpt导航](https://nav1.free2gpt.xyz/)  |[AIchatOS](https://c2.binjie.fun/#/chat) | [AIchatOS](https://chat18.aichatos.xyz/) | [文心一言](https://yiyan.baidu.com/)  | [ChatGPT4](https://chatm.ninvfeng.xyz/ "用户名：yangpiena@163.com")  
+[深言达意](https://www.shenyandayi.com "原反向词典正式升级为智能写作工具。支持筛选词语、成语、惯用语和古汉语等多类别。") | [ChatGPT OpenAI 项目汇总](https://iui.su/2920/) | [ChatGPT免费体验在线列表](https://lzw.me/x/chatgpt-sites/)  | [Free2gpt导航](https://nav1.free2gpt.xyz/)  |[AIchatOS](https://c2.binjie.fun/#/chat) | [文心一言](https://yiyan.baidu.com/)  
 [大同搜索](https://datong.info/ui/index.html)  
 [百度翻译](https://fanyi.baidu.com/) | [OpenL翻译](https://openl.io/)  
-[Guidebook数字生活指南](https://nav.guidebook.top/) | [我的书签](https://it-cxy.top/)  
+[Guidebook数字生活指南](https://nav.guidebook.top/) | [我的书签](https://it-cxy.top/) | [数字素养](https://szsyw.cn/)  
 [今日热榜](https://tophub.today/) | [Hacker News](https://hackernews.cc/) | [不死鸟发布页](https://dalao.ru/) | [系统极客](https://www.sysgeek.cn/)  
 [科塔学术导航](https://site.sciping.com/) | [手机抢购网](http://www.qianggou5.com/price/) | [药房网](https://www.yaofangwang.com/) | [医学微视](https://www.mvyxws.com/) | [WikiHow](https://zh.wikihow.com/%E9%A6%96%E9%A1%B5)  
 [中国研究生招生信息网](https://yz.chsi.com.cn/) | [希赛网](https://www.educity.cn/) | [夸克网盘](https://pan.quark.cn/)
@@ -49,6 +49,7 @@ description:
 [映像讯](http://mkv.cn/) | [影视森林](http://www.549.tv/) | [免费的在线影视网站汇总](https://iao.su/531/) | [小部落](https://www.xbl100.com/)  
 [HDmoli](https://molicp.com/) | [美剧粉](http://www.mjf2020.com/) | [注释影视](https://gaze.run/) | [4kHDR世界](https://www.4khdr.cn/)  | [子夜动漫](https://www.ziyedm.com/)  | [可可影视](https://www.keke9.com/) | [可可影视](https://www.keke12.com:51111) | [可可影视](https://www.keke13.com) | [可可影视](https://www.keke14.com) | [金牌影院](https://fjvtw.com/)   
 [lemonlive](https://lemonlive.deno.dev)
+[简单TV](https://jiandantv.com/)  
 
 
 ## 游戏
@@ -68,9 +69,10 @@ description:
 [千盒工具](https://1000tool.com/) | [独特工具箱](https://www.dute.org/) | [在线工具](http://tool.lu/)  |  [OSChina开发工具](http://tool.oschina.net/) | [UU在线工具](https://uutool.cn/) |  [偷懒工具](https://toolight.cn)  
 [便民查询网](https://www.bmcx.com/) | [生成随机密码](https://suijimimashengcheng.51240.com/) | [PMD5](http://pmd5.com/#)  |  [输入让你无语的MD5](https://www.somd5.com/) | [核心价值编码器](https://sym233.github.io/core-values-encoder/)  
 [在线文件转换器](https://cn.office-converter.com/) | [在线格式转换](https://www.alltoall.net/) | [PDF派](https://www.pdfpai.com/)  
-[在线PS网页版](https://ps.gitapp.cn/) | [做好图](http://www.zuohaotu.com/)  |  [MakePic.com 图片制造](http://www.makepic.com/)  |  [removebg图片背景消除](https://www.remove.bg/ ) | [waifu2x无损放大图片](http://waifu2x.udp.jp/index.zh-CN.html) | [图片无限变大](http://bigjpg.com/zh) | [草料二维码美化器](http://mh.cli.im/) | [头像生成器](https://www.moubao.vip/)  | [pretty-snap截图美化工具](https://pretty-snap.iwhy.dev/) | [色匹网](https://www.wenziyun.cn/yanse/tupianshise)  
+[在线PS网页版](https://ps.gitapp.cn/) | [做好图](http://www.zuohaotu.com/)  |  [MakePic.com 图片制造](http://www.makepic.com/)  |  [removebg图片背景消除](https://www.remove.bg/ ) | [waifu2x无损放大图片](http://waifu2x.udp.jp/index.zh-CN.html) | [图片无限变大](http://bigjpg.com/zh) | [草料二维码美化器](http://mh.cli.im/) | [头像生成器](https://www.moubao.vip/)  | [pretty-snap截图美化工具](https://pretty-snap.iwhy.dev/) | [色匹网](https://www.wenziyun.cn/yanse/tupianshise) | [ARC动漫增强](https://arc.tencent.com/zh/ai-demos/imgRestore)  
+[快速抠图去背工具](https://iui.su/2968/)
 [小米LOGO生成器](https://mi-logo.lvwzhen.com/) | [免费logo在线制作](http://www.uugai.com/) | [Text to Logo & Favicon](https://www.logo.surf/#generate-favicon)  
-[TikTok Voice - 免费在线文字转语音](https://tiktokvoice.net/zh)
+[TikTok Voice - 免费在线文字转语音](https://tiktokvoice.net/zh) | [文字转语音](https://d1tools.com/tools/ai-tts/)  
 
 
 # 博客/社区
@@ -100,7 +102,7 @@ description:
 ## 系统/软件下载
 [IT之家](https://www.ithome.com/) | [系统之家](http://www.xitongzhijia.net/) | [系统天地](http://www.xitongtiandi.net/) | [Win10专业版官网](http://www.win10zyb.com/) | [吻妻出品专注 win10](https://iwin10.net/) | [吻妻出品专注 win7](http://www.newxitong.com/) | [HelloWindows](https://hellowindows.cn/)  
 [黑苹果乐园](https://imac.hk/) | [黑果小兵](https://blog.daliansky.net/) | [Ghost Spectre 系统](https://bbs.pcbeta.com/viewthread-1956025-1-1.html)  
-[小众软件](https://www.appinn.com/) | [zd423](http://www.zdfans.com/) | [423down](https://www.423down.com/) | [分享者](https://www.sharerw.com/) | [我爱分享网](http://www.zhanshaoyi.com/rjxz.html) | [夜雨聆风](http://www.yeyulingfeng.com/) | [金狐维护盘](http://www.jinhu.me/) | [行客工作室](http://www.runker.net/) | [软猫下载](https://www.softmall.net/) | [Puresys](https://www.puresys.net/) | [DIY博客园](https://www.diybloghome.com/)  
+[小众软件](https://www.appinn.com/) | [zd423](http://www.zdfans.com/) | [423down](https://www.423down.com/) | [分享者](https://www.sharerw.com/) | [我爱分享网](http://www.zhanshaoyi.com/rjxz.html) | [夜雨聆风](http://www.yeyulingfeng.com/) | [金狐维护盘](http://www.jinhu.me/) | [行客工作室](http://www.runker.net/) | [软猫下载](https://www.softmall.net/) | [Puresys](https://www.puresys.net/) | [DIY博客园](https://www.diybloghome.com/) | [软件鸭](https://ruanjianya.net/)  
 [浏览迷](https://liulanmi.com/) | [Chrome浏览器插件下载中心](https://www.chromefor.com/) | [万能命令](https://wannengrun.net/zh)  
 [阅读](http://www.legado.top)  
 [Greasy Fork 用户脚本](https://greasyfork.org/zh-CN) | [无限制下载器](https://greasyfork.org/zh-CN/scripts/445751-unlimited-downloader?utm_source=appinn.com)  
