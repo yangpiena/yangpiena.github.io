@@ -486,7 +486,7 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <p>以下记录一些常用的Flex控件属性，按字母排序：</p>
+          <p>以下记录一些常用的Flex控件属性，按字母排序：<br>
           <!--noindex-->
             <div class="post-button">
               <a class="btn" href="/2016/12/22/Flex%E5%B1%9E%E6%80%A7%E8%AF%B4%E6%98%8E/#more" rel="contents">
@@ -578,7 +578,7 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <p>Flex每个Scroller都有一个mouseWheelChanging方法,当滚动鼠标中轮的时候会调用，而后就可以在这个函数中进行判断，如下:</p>
+          <p>Flex每个Scroller都有一个mouseWheelChanging方法,当滚动鼠标中轮的时候会调用，而后就可以在这个函数中进行判断，如下:<br>
           <!--noindex-->
             <div class="post-button">
               <a class="btn" href="/2016/12/22/Flex%E8%AE%BE%E7%BD%AEscroller%E7%9A%84%E9%80%9F%E5%BA%A6/#more" rel="contents">
@@ -670,8 +670,7 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <p>通过LabelFunction属性实现自动生成序号。<br>定义方法：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">/**</span><br><span class="line">* 生成datagrid第一列用的序号</span><br><span class="line">*/</span><br><span class="line">private function formatIndexNumber(item:Object, colum:Object):String</span><br><span class="line">&#123;</span><br><span class="line">    return indexNumLabelFun(item, colum.mx_internal::owner);</span><br><span class="line">&#125;</span><br><span class="line"> </span><br><span class="line">public static function indexNumLabelFun(value:Object, dataGrid:Object):String</span><br><span class="line">&#123;</span><br><span class="line">   var arr: Array = dataGrid.dataProvider.source;</span><br><span class="line">   var indexNum: int = (arr.indexOf(value) + 1);            </span><br><span class="line">   return indexNum.toString();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+          <p>通过LabelFunction属性实现自动生成序号。<br>定义方法：<br><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">/**</span><br><span class="line">* 生成datagrid第一列用的序号</span><br><span class="line">*/</span><br><span class="line">private function formatIndexNumber(item:Object, colum:Object):String</span><br><span class="line">&#123;</span><br><span class="line">    return indexNumLabelFun(item, colum.mx_internal::owner);</span><br><span class="line">&#125;</span><br><span class="line"> </span><br><span class="line">public static function indexNumLabelFun(value:Object, dataGrid:Object):String</span><br><span class="line">&#123;</span><br><span class="line">   var arr: Array = dataGrid.dataProvider.source;</span><br><span class="line">   var indexNum: int = (arr.indexOf(value) + 1);            </span><br><span class="line">   return indexNum.toString();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><br>
           <!--noindex-->
             <div class="post-button">
               <a class="btn" href="/2016/12/22/Flex%E4%B9%8BdataGrid%E8%87%AA%E5%8A%A8%E7%94%9F%E6%88%90%E5%BA%8F%E5%8F%B7/#more" rel="contents">
@@ -763,7 +762,7 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <p>可参照以下实例设置：</p>
+          <p>可参照以下实例设置：<br>
           <!--noindex-->
             <div class="post-button">
               <a class="btn" href="/2016/12/22/Flex%E4%B9%8BdataGrid%E8%AE%BE%E7%BD%AE%E5%88%97%E5%AF%B9%E9%BD%90%E6%96%B9%E5%BC%8F/#more" rel="contents">
@@ -855,7 +854,7 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <p>采用Java+Flex架构，通过BlazeDS中间件技术，使服务端Java数据和客户端Flex数据进行互通时，底层数据类型是不一致的，BlazeDS对其进行了映射，具体映射关系如下：</p>
+          <p>采用Java+Flex架构，通过BlazeDS中间件技术，使服务端Java数据和客户端Flex数据进行互通时，底层数据类型是不一致的，BlazeDS对其进行了映射，具体映射关系如下：<br>
           <!--noindex-->
             <div class="post-button">
               <a class="btn" href="/2016/12/22/Java%E4%B8%8EactionScript%E7%B1%BB%E5%9E%8B%E5%AF%B9%E5%BA%94%E8%A1%A8/#more" rel="contents">
@@ -947,7 +946,7 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <p>log4j的配置方法很多，下面记录一个简单配置，以供常用：</p>
+          <p>log4j的配置方法很多，下面记录一个简单配置，以供常用：<br>
           <!--noindex-->
             <div class="post-button">
               <a class="btn" href="/2016/12/22/log4j-properties/#more" rel="contents">
@@ -1039,7 +1038,7 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <p>初始化具有2列内容的下拉框，如下实例：</p>
+          <p>初始化具有2列内容的下拉框，如下实例：<br>
           <!--noindex-->
             <div class="post-button">
               <a class="btn" href="/2016/12/22/FPSpread%E4%B9%8BfpComboAdo%E7%9A%84%E5%88%9D%E5%A7%8B%E5%8C%96/#more" rel="contents">
@@ -1131,7 +1130,7 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <p>以下记录一些常用的fpSpread控件属性，按字母排序：</p>
+          <p>以下记录一些常用的fpSpread控件属性，按字母排序：<br>
           <!--noindex-->
             <div class="post-button">
               <a class="btn" href="/2016/12/22/FPSpread%E5%B1%9E%E6%80%A7%E8%AF%B4%E6%98%8E/#more" rel="contents">

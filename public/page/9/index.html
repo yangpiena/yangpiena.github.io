@@ -303,13 +303,8 @@
     
     <div class="post-body" itemprop="articleBody">
           <h1 id="一-基础篇"><a href="#一-基础篇" class="headerlink" title="一. 基础篇"></a>一. 基础篇</h1><h2 id="1-创建数据库"><a href="#1-创建数据库" class="headerlink" title="1. 创建数据库"></a>1. 创建数据库</h2><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">CREATE</span> DATABASE database<span class="operator">-</span>name</span><br></pre></td></tr></table></figure>
-
 <h2 id="2-删除数据库"><a href="#2-删除数据库" class="headerlink" title="2. 删除数据库"></a>2. 删除数据库</h2><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">DROP</span> DATABASE dbname</span><br></pre></td></tr></table></figure>
-
-<h2 id="3-备份sql-server"><a href="#3-备份sql-server" class="headerlink" title="3. 备份sql server"></a>3. 备份sql server</h2><p>创建 备份数据的 device</p>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">USE master</span><br><span class="line"><span class="keyword">EXEC</span> sp_addumpdevice <span class="string">&#x27;disk&#x27;</span>, <span class="string">&#x27;testBack&#x27;</span>, <span class="string">&#x27;c:\mssql7backup\MyNwind_1.dat&#x27;</span></span><br></pre></td></tr></table></figure>
-<p>开始 备份</p>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">BACKUP DATABASE pubs <span class="keyword">TO</span> testBack </span><br></pre></td></tr></table></figure>
+<h2 id="3-备份sql-server"><a href="#3-备份sql-server" class="headerlink" title="3. 备份sql server"></a>3. 备份sql server</h2><p>创建 备份数据的 device<br><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">USE master</span><br><span class="line"><span class="keyword">EXEC</span> sp_addumpdevice <span class="string">&#x27;disk&#x27;</span>, <span class="string">&#x27;testBack&#x27;</span>, <span class="string">&#x27;c:\mssql7backup\MyNwind_1.dat&#x27;</span></span><br></pre></td></tr></table></figure><br>开始 备份<br><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">BACKUP DATABASE pubs <span class="keyword">TO</span> testBack </span><br></pre></td></tr></table></figure></p>
           <!--noindex-->
             <div class="post-button">
               <a class="btn" href="/2016/11/29/SQL%E7%BB%8F%E5%85%B8%E8%AF%AD%E5%8F%A5/#more" rel="contents">
@@ -587,7 +582,7 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <h2 id="exp-x2F-imp命令详解"><a href="#exp-x2F-imp命令详解" class="headerlink" title="exp&#x2F;imp命令详解"></a>exp&#x2F;imp命令详解</h2><p>exp		导出命令<br>imp		导入命令</p>
+          <h2 id="exp-imp命令详解"><a href="#exp-imp命令详解" class="headerlink" title="exp/imp命令详解"></a>exp/imp命令详解</h2><p>exp        导出命令<br>imp        导入命令</p>
           <!--noindex-->
             <div class="post-button">
               <a class="btn" href="/2016/11/29/Oracle%E4%B9%8Bimp%E5%92%8Cexp%E8%AF%AD%E5%8F%A5/#more" rel="contents">
@@ -771,9 +766,7 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <h1 id="关于SQL的常见问题解答"><a href="#关于SQL的常见问题解答" class="headerlink" title="关于SQL的常见问题解答"></a>关于SQL的常见问题解答</h1><h3 id="1-SQL语句在Access里可正常执行，但在VB程序里报“FROM子句语法错误”"><a href="#1-SQL语句在Access里可正常执行，但在VB程序里报“FROM子句语法错误”" class="headerlink" title="1. SQL语句在Access里可正常执行，但在VB程序里报“FROM子句语法错误”"></a>1. SQL语句在Access里可正常执行，但在VB程序里报“FROM子句语法错误”</h3><p>例如，报错SQL:</p>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span></span><br><span class="line">	gz,</span><br><span class="line">	yz</span><br><span class="line"><span class="keyword">FROM</span></span><br><span class="line">	(<span class="keyword">SELECT</span> <span class="keyword">DISTINCT</span> gz, yz <span class="keyword">FROM</span> dg <span class="keyword">LEFT</span> <span class="keyword">JOIN</span> dgdw <span class="keyword">ON</span> dg.dg <span class="operator">=</span> dgdw.gz <span class="keyword">WHERE</span> cpxh <span class="operator">=</span> <span class="string">&#x27;abc&#x27;</span>) <span class="keyword">AS</span> a</span><br><span class="line"><span class="keyword">ORDER</span> <span class="keyword">BY</span></span><br><span class="line">	gz;</span><br></pre></td></tr></table></figure>
-<p>在Access里执行没问题，但放到代码里就<code>FROM子句语法错误</code>。此时，只需将from子语句用[]括起来，后面跟一个.即可。<br>正确SQL如下：</p>
+          <h1 id="关于SQL的常见问题解答"><a href="#关于SQL的常见问题解答" class="headerlink" title="关于SQL的常见问题解答"></a>关于SQL的常见问题解答</h1><h3 id="1-SQL语句在Access里可正常执行，但在VB程序里报“FROM子句语法错误”"><a href="#1-SQL语句在Access里可正常执行，但在VB程序里报“FROM子句语法错误”" class="headerlink" title="1. SQL语句在Access里可正常执行，但在VB程序里报“FROM子句语法错误”"></a>1. SQL语句在Access里可正常执行，但在VB程序里报“FROM子句语法错误”</h3><p>例如，报错SQL:<br><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span></span><br><span class="line">	gz,</span><br><span class="line">	yz</span><br><span class="line"><span class="keyword">FROM</span></span><br><span class="line">	(<span class="keyword">SELECT</span> <span class="keyword">DISTINCT</span> gz, yz <span class="keyword">FROM</span> dg <span class="keyword">LEFT</span> <span class="keyword">JOIN</span> dgdw <span class="keyword">ON</span> dg.dg <span class="operator">=</span> dgdw.gz <span class="keyword">WHERE</span> cpxh <span class="operator">=</span> <span class="string">&#x27;abc&#x27;</span>) <span class="keyword">AS</span> a</span><br><span class="line"><span class="keyword">ORDER</span> <span class="keyword">BY</span></span><br><span class="line">	gz;</span><br></pre></td></tr></table></figure><br>在Access里执行没问题，但放到代码里就<code>FROM子句语法错误</code>。此时，只需将from子语句用[]括起来，后面跟一个.即可。<br>正确SQL如下：<br>
           <!--noindex-->
             <div class="post-button">
               <a class="btn" href="/2016/11/29/SQL%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98/#more" rel="contents">
@@ -959,10 +952,10 @@
     
     <div class="post-body" itemprop="articleBody">
           <ul>
-<li>去除所有空格:<br>str   &#x3D;   str.replace(&#x2F;\s+&#x2F;g,””);       </li>
-<li>去除两边空格:<br>str   &#x3D;   str.replace(&#x2F;^\s+|\s+$&#x2F;g,””);</li>
-<li>去除左空格：<br>str&#x3D;str.replace( &#x2F;^\s*&#x2F;, ‘’);</li>
-<li>去除右空格：<br>str&#x3D;str.replace(&#x2F;(\s*$)&#x2F;g, “”);</li>
+<li>去除所有空格:<br>str   =   str.replace(/\s+/g,””);       </li>
+<li>去除两边空格:<br>str   =   str.replace(/^\s+|\s+$/g,””);</li>
+<li>去除左空格：<br>str=str.replace( /^\s*/, ‘’);</li>
+<li>去除右空格：<br>str=str.replace(/(\s*$)/g, “”);</li>
 </ul>
           <!--noindex-->
             <div class="post-button">

@@ -302,7 +302,7 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <h3 id="系统盘"><a href="#系统盘" class="headerlink" title="系统盘"></a>系统盘</h3><p>类似于Windows的C盘，Linux的系统盘可用命令<code>df -l</code>查看，可以看到根路径 &#x2F; 都是位于系统盘。而&#x2F;root、&#x2F;home、&#x2F;usr就如同Windows的C盘下的C:\Windows、C:\usr这些目录。</p>
+          <h3 id="系统盘"><a href="#系统盘" class="headerlink" title="系统盘"></a>系统盘</h3><p>类似于Windows的C盘，Linux的系统盘可用命令<code>df -l</code>查看，可以看到根路径 / 都是位于系统盘。而/root、/home、/usr就如同Windows的C盘下的C:\Windows、C:\usr这些目录。</p>
           <!--noindex-->
             <div class="post-button">
               <a class="btn" href="/2017/08/10/Linux%E7%B3%BB%E7%BB%9F%E7%9B%98%E5%92%8C%E6%95%B0%E6%8D%AE%E7%9B%98/#more" rel="contents">
@@ -486,42 +486,46 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <table>
+          <div class="table-container">
+<table>
 <thead>
 <tr>
 <th>快捷键</th>
-<th align="left">说明</th>
+<th style="text-align:left">说明</th>
 </tr>
 </thead>
-<tbody><tr>
+<tbody>
+<tr>
 <td>Ctrl+X</td>
-<td align="left">删除当前行</td>
+<td style="text-align:left">删除当前行</td>
 </tr>
 <tr>
 <td>Ctrl+Shift+D</td>
-<td align="left">复制光标所在整行，插入到下一行</td>
+<td style="text-align:left">复制光标所在整行，插入到下一行</td>
 </tr>
 <tr>
 <td>Ctrl+Shift+↑</td>
-<td align="left">将光标所在行和上一行代码互换（将光标所在行插入到上一行之前）</td>
+<td style="text-align:left">将光标所在行和上一行代码互换（将光标所在行插入到上一行之前）</td>
 </tr>
 <tr>
 <td>Ctrl+Shift+↓</td>
-<td align="left">将光标所在行和下一行代码互换（将光标所在行插入到下一行之后）</td>
+<td style="text-align:left">将光标所在行和下一行代码互换（将光标所在行插入到下一行之后）</td>
 </tr>
 <tr>
 <td>Shift+鼠标右键拖动</td>
-<td align="left">列编辑模式</td>
+<td style="text-align:left">列编辑模式</td>
 </tr>
 <tr>
 <td>Ctrl+K+U</td>
-<td align="left">转换大写</td>
+<td style="text-align:left">转换大写</td>
 </tr>
 <tr>
 <td>Ctrl+K+L</td>
-<td align="left">转换小写</td>
+<td style="text-align:left">转换小写</td>
 </tr>
-</tbody></table>
+</tbody>
+</table>
+</div>
 
       
     </div>
@@ -799,10 +803,9 @@ pause
     
     
     <div class="post-body" itemprop="articleBody">
-          <h1 id="Linux"><a href="#Linux" class="headerlink" title="Linux"></a>Linux</h1><p>在&#x2F;usr&#x2F;local&#x2F;apache-tomcat-7.0.57&#x2F;bin目录下的catalina.sh中添加：</p>
+          <h1 id="Linux"><a href="#Linux" class="headerlink" title="Linux"></a>Linux</h1><p>在/usr/local/apache-tomcat-7.0.57/bin目录下的catalina.sh中添加：</p>
 <pre><code>JAVA_OPTS=&#39;-Xms512m -Xmx1024m&#39;
-</code></pre>
-<blockquote>
+</code></pre><blockquote>
 <p>-Xms：初始值<br>  -Xmx：最大值<br>  -Xmn：最小值</p>
 </blockquote>
           <!--noindex-->
@@ -901,13 +904,11 @@ pause
 SET JAVA_HOME=D:\Program Files\Java\jdk1.6.0_30
 REM 免安装的Tomcat解压后的路径
 SET CATALINA_HOME=D:\Program Files\tomcat6.0.35
-</code></pre>
-<p>如果需要使用shutdown.bat关闭服务器的话，也按照上面加入。</p>
+</code></pre><p>如果需要使用shutdown.bat关闭服务器的话，也按照上面加入。</p>
 <h3 id="1-3-这样，运行startup-bat就可以启动Tomcat，运行shutdown-bat就可以关闭服务器了。"><a href="#1-3-这样，运行startup-bat就可以启动Tomcat，运行shutdown-bat就可以关闭服务器了。" class="headerlink" title="1.3 这样，运行startup.bat就可以启动Tomcat，运行shutdown.bat就可以关闭服务器了。"></a>1.3 这样，运行startup.bat就可以启动Tomcat，运行shutdown.bat就可以关闭服务器了。</h3><h3 id="1-4-修改-conf-tomcat-users-xml文件，在-lt-tomcat-users-gt-标签内加入"><a href="#1-4-修改-conf-tomcat-users-xml文件，在-lt-tomcat-users-gt-标签内加入" class="headerlink" title="1.4 修改\conf\tomcat-users.xml文件，在&lt;tomcat-users&gt;标签内加入"></a>1.4 修改\conf\tomcat-users.xml文件，在<code>&lt;tomcat-users&gt;</code>标签内加入</h3><pre><code>&lt;role rolename=&quot;manager&quot;/&gt;
 &lt;role rolename=&quot;admin&quot;/&gt;
 &lt;user username=&quot;admin&quot; password=&quot;admin&quot; roles=&quot;admin,manager&quot;/&gt;
-</code></pre>
-<p>这样才可以使用Tomcat的管理界面。</p>
+</code></pre><p>这样才可以使用Tomcat的管理界面。</p>
           <!--noindex-->
             <div class="post-button">
               <a class="btn" href="/2016/12/28/Tomcat%E4%B8%8B%E8%BD%BD%E5%92%8C%E5%AE%89%E8%A3%85/#more" rel="contents">

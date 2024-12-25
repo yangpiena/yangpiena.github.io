@@ -33,7 +33,7 @@ description:
 [深言达意](https://www.shenyandayi.com "原反向词典正式升级为智能写作工具。支持筛选词语、成语、惯用语和古汉语等多类别。") | [ChatGPT OpenAI 项目汇总](https://iui.su/2920/) | [ChatGPT免费体验在线列表](https://lzw.me/x/chatgpt-sites/)  | [Free2gpt导航](https://nav1.free2gpt.xyz/)  |[AIchatOS](https://c2.binjie.fun/#/chat) | [文心一言](https://yiyan.baidu.com/)  
 [大同搜索](https://datong.info/ui/index.html)  
 [百度翻译](https://fanyi.baidu.com/) | [OpenL翻译](https://openl.io/)  
-[Guidebook数字生活指南](https://nav.guidebook.top/) | [我的书签](https://it-cxy.top/) | [数字素养](https://szsyw.cn/)  
+[Guidebook数字生活指南](https://nav.guidebook.top/) | [我的书签](https://it-cxy.top/) | [数字素养](https://szsyw.cn/) | [硬核指南](https://yinghezhinan.com/)  
 [今日热榜](https://tophub.today/) | [Hacker News](https://hackernews.cc/) | [不死鸟发布页](https://dalao.ru/) | [系统极客](https://www.sysgeek.cn/)  
 [科塔学术导航](https://site.sciping.com/) | [手机抢购网](http://www.qianggou5.com/price/) | [药房网](https://www.yaofangwang.com/) | [医学微视](https://www.mvyxws.com/) | [WikiHow](https://zh.wikihow.com/%E9%A6%96%E9%A1%B5)  
 [中国研究生招生信息网](https://yz.chsi.com.cn/) | [希赛网](https://www.educity.cn/) | [夸克网盘](https://pan.quark.cn/)
@@ -58,6 +58,7 @@ description:
 
 ## 美图
 [CNU视觉联盟](http://www.cnu.cc/inspirationPage/recent-0) | [360°航拍全景](https://airpano.org.cn/) | [免费版权图片搜索](https://www.logosc.cn/so/) | [极简壁纸](https://bz.zzzmh.cn/)
+[免费AI图像生成](https://muryou-aigazou.com/zh)
 
 
 # 在线工具
@@ -87,6 +88,7 @@ description:
 [中国色](http://zhongguose.com/) | [中华珍宝馆](https://ltfc.net/)  
 [优品PPT](http://www.ypppt.com)  
 [实况摄像头](https://www.skylinewebcams.com/zh/webcam/maldives/lhaviyani-atoll/kurendhoo/kuredu-island.html)
+[科学上网](https://hideip.network/)
 
 
 ## 阅读/电子书
@@ -107,6 +109,7 @@ description:
 [阅读](http://www.legado.top)  
 [Greasy Fork 用户脚本](https://greasyfork.org/zh-CN) | [无限制下载器](https://greasyfork.org/zh-CN/scripts/445751-unlimited-downloader?utm_source=appinn.com)  
 [极光VPN](https://github.com/getaurora/download)
+[IDM蓝奏云下载地址](https://ruanjianya.lanzoum.com/b02w5s0oh)
 
 ## 文章/教程
 [菜鸟教程](http://www.runoob.com/)  
