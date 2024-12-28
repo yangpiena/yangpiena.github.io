@@ -99,3 +99,14 @@ git gc --prune=now
 ```
 git gc --aggressive --prune=now
 ```
+
+## FAQ
+- git SSL certificate problem: unable to get local issuer certificate-解决问题
+> 问题描述：
+  git获取或推送项目的时候提示git SSL certificate problem: unable to get local issuer certificate
+  问题是由于没有配置信任的服务器HTTPS验证。默认，cURL被设为不信任任何CAs，就是说，它不信任任何服务器验证。
+
+**解决办法：** 
+```
+git config --global http.sslVerify false
+```

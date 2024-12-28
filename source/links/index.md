@@ -30,8 +30,8 @@ description:
 
 
 # 常用
-[深言达意](https://www.shenyandayi.com "原反向词典正式升级为智能写作工具。支持筛选词语、成语、惯用语和古汉语等多类别。") | [ChatGPT OpenAI 项目汇总](https://iui.su/2920/) | [ChatGPT免费体验在线列表](https://lzw.me/x/chatgpt-sites/)  | [Free2gpt导航](https://nav1.free2gpt.xyz/)  |[AIchatOS](https://c2.binjie.fun/#/chat) | [文心一言](https://yiyan.baidu.com/)  
-[大同搜索](https://datong.info/ui/index.html)  
+[AI网址导航](https://ai-nav.lzw.me/) | [ChatGPT OpenAI 项目汇总](https://iui.su/2920/) | [ChatGPT免费体验在线列表](https://lzw.me/x/chatgpt-sites/)  | [Free2gpt导航](https://nav1.free2gpt.xyz/) |[AIchatOS](https://chat18.aichatos58.com/#/chat) | [文心一言](https://yiyan.baidu.com/) | [智谱清言](https://chatglm.cn/main/alltoolsdetail?lang=zh) | [豆包](https://www.doubao.com/chat/)  
+[深言达意](https://www.shenyandayi.com "原反向词典正式升级为智能写作工具。支持筛选词语、成语、惯用语和古汉语等多类别。") | [大同搜索](https://datong.info/ui/index.html)  
 [百度翻译](https://fanyi.baidu.com/) | [OpenL翻译](https://openl.io/)  
 [Guidebook数字生活指南](https://nav.guidebook.top/) | [我的书签](https://it-cxy.top/) | [数字素养](https://szsyw.cn/) | [硬核指南](https://yinghezhinan.com/)  
 [今日热榜](https://tophub.today/) | [Hacker News](https://hackernews.cc/) | [不死鸟发布页](https://dalao.ru/) | [系统极客](https://www.sysgeek.cn/)  
@@ -92,7 +92,7 @@ description:
 
 
 ## 阅读/电子书
-[阅读-使用手册](https://www.yuque.com/legado/wiki) | [喵公子发布页](https://fb.miaogongzi.cc/)  
+[开源阅读](https://gedoor.github.io/) | [阅读-使用手册](https://www.yuque.com/legado/wiki) | [喵公子发布页](https://fb.miaogongzi.cc/)  
 [孔夫子旧书网](https://www.kongfz.com/)  
 [秘密花园](http://www.yini.org)    |  [全历史](https://www.allhistory.com/ " 全方位了解历史的网站，也是一个不错的网站") | [JOJO看报](https://reader.jojokanbao.cn/)  | [互联网知识地图](https://yunyinghui.feishu.cn/wiki/QrvDwaNt4icE2qkZTPSccNKInhh)   
 [鸠摩搜索](https://www.jiumodiary.com/ "电子书搜索引擎，提供各类电子书搜索下载，有多种格式")  |  [i-Book.in](https://book.tstrs.me/ " 基于索引IPFS链接的电子书搜索引擎")  |  [书单网](https://www.shudan.vip/ "电子书搜索网站，抓取第三方网站的资源，也有很多资源是通过城通网赚网盘下载")  |  [Mobilism](https://forum.mobilism.org/viewforum.php?f=19 "电子书论坛，提供英文原版电子书下载")  |  [七彩英语](http://www.qcenglish.com/ "提供PDF或TXT格式的英文原版电子书下载")  |  [好读](http://www.haodoo.net/ "多格式电子书下载网站，很老的一个站")  
