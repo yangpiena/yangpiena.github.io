@@ -43,4 +43,10 @@ $ hexo deploy
 ```
 
 More info: [Deployment](https://hexo.io/docs/deployment.html)
+
 <!--more-->
+
+### 合并执行清理、生成、发布
+```
+hexo clean && hexo g && hexo d
+```
