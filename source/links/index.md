@@ -65,7 +65,7 @@ description:
 [天气万年历](https://wannianli.tianqi.com/today/zhou/)  
 [Quick Reference](https://quickref.cn/ "为开发人员分享快速参考备忘清单【速查表】")  
 [drawio](https://app.diagrams.net/) | [draw.io](https://www.drawio.com/)  | [drawio-desktop](https://g.nite07.org/jgraph/drawio-desktop) | [百度脑图](https://naotu.baidu.com/home) | [GitMind](https://gitmind.cn/) | [ProcessOn](https://www.processon.com/) | [打字打字](https://dazidazi.com/)  
-[分享笔记](https://sharenote.app/) | [鸡毛信](https://cmd.im/) | [鸡霸图床](https://gejiba.com/) | [田字格笔顺 字帖生成器](https://lab.feifanju.com/zitie/)   
+[流光卡片](https://fireflycard.shushiai.com/zh) | [鸡毛信](https://cmd.im/) | [鸡霸图床](https://gejiba.com/) | [田字格笔顺 字帖生成器](https://lab.feifanju.com/zitie/)   
 [Ping](https://ping.eu/ping/) | [域名查询](https://lab.feifanju.com/domain-query/) | [极强检测](https://www.urlzt.com/) | [在线HTTP POST/GET接口测试工具](https://lab.feifanju.com/http/index.html) | [临时手机号](https://jiemahao.com/)  
 [千盒工具](https://1000tool.com/) | [独特工具箱](https://www.dute.org/) | [在线工具](http://tool.lu/)  |  [OSChina开发工具](http://tool.oschina.net/) | [UU在线工具](https://uutool.cn/) |  [偷懒工具](https://toolight.cn)  
 [便民查询网](https://www.bmcx.com/) | [生成随机密码](https://suijimimashengcheng.51240.com/) | [PMD5](http://pmd5.com/#)  |  [输入让你无语的MD5](https://www.somd5.com/) | [核心价值编码器](https://sym233.github.io/core-values-encoder/)  
