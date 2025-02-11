@@ -30,11 +30,11 @@ description:
 
 
 # 常用
-[AI网址导航](https://ai-nav.lzw.me/) | [ChatGPT OpenAI 项目汇总](https://iui.su/2920/) | [ChatGPT免费体验在线列表](https://lzw.me/x/chatgpt-sites/)  | [Free2gpt导航](https://nav1.free2gpt.xyz/) |[AIchatOS](https://chat18.aichatos58.com/#/chat) | [文心一言](https://yiyan.baidu.com/) | [智谱清言](https://chatglm.cn/main/alltoolsdetail?lang=zh) | [豆包](https://www.doubao.com/chat/)  
+[AI网址导航](https://ai-nav.lzw.me/) | [ChatGPT OpenAI 项目汇总](https://iui.su/2920/) | [ChatGPT免费体验在线列表](https://lzw.me/x/chatgpt-sites/)  | [Free2gpt导航](https://nav1.free2gpt.xyz/) |[AIchatOS](https://chat18.aichatos58.com/#/chat) | [文心一言](https://yiyan.baidu.com/) | [智谱清言](https://chatglm.cn/main/alltoolsdetail?lang=zh) | [豆包](https://www.doubao.com/chat/) | [DeepSeek](https://chat.deepseek.com/)  
 [深言达意](https://www.shenyandayi.com "原反向词典正式升级为智能写作工具。支持筛选词语、成语、惯用语和古汉语等多类别。") | [大同搜索](https://datong.info/ui/index.html)  
 [百度翻译](https://fanyi.baidu.com/) | [OpenL翻译](https://openl.io/)  
 [Guidebook数字生活指南](https://nav.guidebook.top/) | [我的书签](https://it-cxy.top/) | [数字素养](https://szsyw.cn/) | [硬核指南](https://yinghezhinan.com/) | [黑点工具](https://hddtool.com/)  
-[今日热榜](https://tophub.today/) | [Hacker News](https://hackernews.cc/) | [不死鸟发布页](https://dalao.ru/) | [系统极客](https://www.sysgeek.cn/)  
+[今日热榜](https://tophub.today/) | [摸摸鱼热榜](https://momoyu.cc/) | [Hacker News](https://hackernews.cc/) | [不死鸟发布页](https://dalao.ru/) | [系统极客](https://www.sysgeek.cn/)  
 [科塔学术导航](https://site.sciping.com/) | [手机抢购网](http://www.qianggou5.com/price/) | [药房网](https://www.yaofangwang.com/) | [医学微视](https://www.mvyxws.com/) | [WikiHow](https://zh.wikihow.com/%E9%A6%96%E9%A1%B5)  
 [中国研究生招生信息网](https://yz.chsi.com.cn/) | [希赛网](https://www.educity.cn/) | [夸克网盘](https://pan.quark.cn/)
 
@@ -81,7 +81,7 @@ description:
 
 
 # 资源
-[MSDN](http://msdn.itellyou.cn/?gytyzs=0z1zl)   
+[MSDN](http://msdn.itellyou.cn/?gytyzs=0z1zl) | [NEXT, ITELLYOU](https://next.itellyou.cn/)   
 [小白盘](https://www.xiaobaipan.com)  
 [商用免费字体](https://font.ittools.cc/)  
 [站长素材](https://sc.chinaz.com/) | [矢量图标库](http://www.iconfont.cn/) | [免费开源图标下载](https://iconduck.com/) | [FontAwesome图标](http://www.fontawesome.com.cn/faicons/) | [最好的12个Icon图标资源网站整理分享出来](https://blog.csdn.net/xiawj8957/article/details/45130263) | [Icones](https://icon.ittools.cc/)  
@@ -108,7 +108,7 @@ description:
 [浏览迷](https://liulanmi.com/) | [Chrome浏览器插件下载中心](https://www.chromefor.com/) | [万能命令](https://wannengrun.net/zh)  
 [阅读](http://www.legado.top)  
 [Greasy Fork 用户脚本](https://greasyfork.org/zh-CN) | [无限制下载器](https://greasyfork.org/zh-CN/scripts/445751-unlimited-downloader?utm_source=appinn.com)  
-[极光VPN](https://github.com/getaurora/download)
+[极光VPN](https://github.com/getaurora/download) | [瓦特工具箱](https://steampp.net/)  
 [IDM蓝奏云下载地址](https://ruanjianya.lanzoum.com/b02w5s0oh)
 
 ## 文章/教程
