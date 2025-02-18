@@ -30,7 +30,7 @@ description:
 
 
 # 常用
-[ChatGPT OpenAI 项目汇总](https://iui.su/2920/) | [Free2gpt导航](https://nav1.free2gpt.xyz/) | [ChatGPT免费体验在线列表](https://lzw.me/x/chatgpt-sites/) | [AI网址导航](https://ai-nav.lzw.me/) | [AIchatOS](https://chat18.aichatos58.com/#/chat) | [文心一言](https://yiyan.baidu.com/) | [智谱清言](https://chatglm.cn/main/alltoolsdetail?lang=zh) | [豆包](https://www.doubao.com/chat/) | [DeepSeek](https://chat.deepseek.com/)  
+[ChatGPT OpenAI 项目汇总](https://iui.su/2920/) | [Free2gpt导航](https://nav1.free2gpt.xyz/) | [ChatGPT免费体验在线列表](https://lzw.me/x/chatgpt-sites/) | [AI网址导航](https://ai-nav.lzw.me/) | [AIchatOS](https://chat18.aichatos58.com/#/chat) | [文心一言](https://yiyan.baidu.com/) | [智谱清言](https://chatglm.cn/main/alltoolsdetail?lang=zh) | [豆包](https://www.doubao.com/chat/) | [DeepSeek](https://chat.deepseek.com/) | [问小白](https://www.wenxiaobai.com/chat/200006)  
 [深言达意](https://www.shenyandayi.com "原反向词典正式升级为智能写作工具。支持筛选词语、成语、惯用语和古汉语等多类别。") | [大同搜索](https://datong.info/ui/index.html)  
 [百度翻译](https://fanyi.baidu.com/) | [OpenL翻译](https://openl.io/)  
 [Guidebook数字生活指南](https://nav.guidebook.top/) | [我的书签](https://it-cxy.top/) | [数字素养](https://szsyw.cn/) | [硬核指南](https://yinghezhinan.com/) | [黑点工具](https://hddtool.com/)  
