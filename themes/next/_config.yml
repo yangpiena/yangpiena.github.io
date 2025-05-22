@@ -935,7 +935,8 @@ images: images
 cursor_effect:
   enable: true
   type: text  # fireworks：礼花 | explosion：爆炸 | love：浮出爱心 | text：浮出文字
-
+  
+# 侧边栏底部音乐插件
 music:
   enable: true
   id: 6605147757

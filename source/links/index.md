@@ -34,8 +34,8 @@ description:
 [深言达意](https://www.shenyandayi.com "原反向词典正式升级为智能写作工具。支持筛选词语、成语、惯用语和古汉语等多类别。") | [大同搜索](https://datong.info/ui/index.html)  
 [百度翻译](https://fanyi.baidu.com/) | [OpenL翻译](https://openl.io/)  
 [Guidebook数字生活指南](https://nav.guidebook.top/) | [我的书签](https://it-cxy.top/) | [数字素养](https://szsyw.cn/) | [硬核指南](https://yinghezhinan.com/) | [黑点工具](https://hddtool.com/)  
-[今日热榜](https://tophub.today/) | [摸摸鱼热榜](https://momoyu.cc/) | [Hacker News](https://hackernews.cc/) | [不死鸟发布页](https://dalao.ru/) | [系统极客](https://www.sysgeek.cn/)  
-[科塔学术导航](https://site.sciping.com/) | [手机抢购网](http://www.qianggou5.com/price/) | [药房网](https://www.yaofangwang.com/) | [医学微视](https://www.mvyxws.com/) | [WikiHow](https://zh.wikihow.com/%E9%A6%96%E9%A1%B5)  
+[今日热榜](https://tophub.today/) | [摸摸鱼热榜](https://momoyu.cc/) | [不死鸟发布页](https://dalao.ru/) | [系统极客](https://www.sysgeek.cn/)  
+[手机抢购网](http://www.qianggou5.com/price/) | [药房网](https://www.yaofangwang.com/) | [医学微视](https://www.mvyxws.com/) | [WikiHow](https://zh.wikihow.com/%E9%A6%96%E9%A1%B5)  
 [中国高等教育学生信息网（学信网）](https://www.chsi.com.cn/) | [中国研究生招生信息网](https://yz.chsi.com.cn/) | [希赛网](https://www.educity.cn/) | [夸克网盘](https://pan.quark.cn/)
 
 
@@ -58,7 +58,7 @@ description:
 
 ## 美图
 [CNU视觉联盟](http://www.cnu.cc/inspirationPage/recent-0) | [360°航拍全景](https://airpano.org.cn/) | [免费版权图片搜索](https://www.logosc.cn/so/) | [极简壁纸](https://bz.zzzmh.cn/)
-[免费AI图像生成](https://muryou-aigazou.com/zh) | [Raphael AI 图像生成器](https://raphael.app/zh)  
+[百度免费AI图像生成和处理](https://image.baidu.com/) | [免费AI图像生成](https://muryou-aigazou.com/zh) | [Raphael AI 图像生成器](https://raphael.app/zh)  
 
 
 # 在线工具
@@ -84,7 +84,7 @@ description:
 [MSDN](http://msdn.itellyou.cn/?gytyzs=0z1zl) | [NEXT, ITELLYOU](https://next.itellyou.cn/)   
 [小白盘](https://www.xiaobaipan.com)  
 [商用免费字体](https://font.ittools.cc/)  
-[站长素材](https://sc.chinaz.com/) | [矢量图标库](http://www.iconfont.cn/) | [免费开源图标下载](https://iconduck.com/) | [FontAwesome图标](http://www.fontawesome.com.cn/faicons/) | [最好的12个Icon图标资源网站整理分享出来](https://blog.csdn.net/xiawj8957/article/details/45130263) | [Icones](https://icon.ittools.cc/)  
+[站长素材](https://sc.chinaz.com/) | [矢量图标库](http://www.iconfont.cn/) | [免费开源图标下载](https://iconduck.com/) | [FontAwesome图标](http://www.fontawesome.com.cn/faicons/) | [最好的12个Icon图标资源网站整理分享出来](https://blog.csdn.net/xiawj8957/article/details/45130263) | [Icones](https://icon.ittools.cc/) | [菜鸟图标](https://icon.sucai999.com/)  
 [中国色](http://zhongguose.com/) | [中华珍宝馆](https://ltfc.net/)  
 [优品PPT](http://www.ypppt.com)  
 [实况摄像头](https://www.skylinewebcams.com/zh/webcam/maldives/lhaviyani-atoll/kurendhoo/kuredu-island.html)
@@ -106,7 +106,7 @@ description:
 [黑苹果乐园](https://imac.hk/) | [黑果小兵](https://blog.daliansky.net/) | [Ghost Spectre 系统](https://bbs.pcbeta.com/viewthread-1956025-1-1.html)  
 [小众软件](https://www.appinn.com/) | [zd423](http://www.zdfans.com/) | [423down](https://www.423down.com/) | [分享者](https://www.sharerw.com/) | [我爱分享网](http://www.zhanshaoyi.com/rjxz.html) | [夜雨聆风](http://www.yeyulingfeng.com/) | [金狐维护盘](http://www.jinhu.me/) | [行客工作室](http://www.runker.net/) | [软猫下载](https://www.softmall.net/) | [Puresys](https://www.puresys.net/) | [DIY博客园](https://www.diybloghome.com/) | [软件鸭](https://ruanjianya.net/)  
 [浏览迷](https://liulanmi.com/) | [TamperMonkey TM中文网](https://www.tampermonkey.cn/) | [Chrome浏览器插件下载中心](https://www.chajian5.com/) | [万能命令](https://wannengrun.net/zh)  
-[阅读](http://www.legado.top)  
+[阅读APP](http://www.legado.top) | [MultiTTS 安卓离线语音](https://iui.su/3680/) | [阅读及TTS资源](https://www.123pan.com/s/6chuVv-yiqWd.html)  
 [Greasy Fork 用户脚本](https://greasyfork.org/zh-CN) | [无限制下载器](https://greasyfork.org/zh-CN/scripts/445751-unlimited-downloader?utm_source=appinn.com)  
 [极光VPN](https://github.com/getaurora/download) | [瓦特工具箱](https://steampp.net/)  
 [IDM蓝奏云下载地址](https://ruanjianya.lanzoum.com/b02w5s0oh)
