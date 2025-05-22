@@ -40,7 +40,7 @@ description:
 
 
 ## 音乐
-[网易云音乐](http://music.163.com) | [音乐磁场](https://www.hifini.com/) | [千千音乐](https://music.91q.com/) | [9天音乐](http://www.9sky.com/) | [百乐米](https://bailemi.com/) | [QQ音速网](https://www.qqyin.com/) | [极客音乐](https://bestgeek.org/music)  
+[网易云音乐](http://music.163.com) | [音乐磁场](https://www.hifini.com/) | [千千音乐](https://music.91q.com/) | [9天音乐](http://www.9sky.com/) | [QQ音速网](https://www.qqyin.com/) | [极客音乐](https://bestgeek.org/music)  
 [全网免费音乐搜索汇总](https://iui.su/2217/) | [昔枫音乐盒](https://mu-jie.cc/musicBox/) | [音乐榜](https://www.mp3b.com/)  
 [猫看白噪音](https://www.maokan.cc/)
 
