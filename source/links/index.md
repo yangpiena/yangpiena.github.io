@@ -31,7 +31,7 @@ description:
 
 # 常用
 [ChatGPT OpenAI 项目汇总](https://iui.su/2920/) | [Free2gpt导航](https://nav1.free2gpt.xyz/) | [ChatGPT免费体验在线列表](https://lzw.me/x/chatgpt-sites/) | [AI网址导航](https://ai-nav.lzw.me/) | [AIchatOS](https://chat18.aichatos58.com/#/chat) | [文心一言](https://yiyan.baidu.com/) | [智谱清言](https://chatglm.cn/main/alltoolsdetail?lang=zh) | [豆包](https://www.doubao.com/chat/) | [DeepSeek](https://chat.deepseek.com/) | [问小白](https://www.wenxiaobai.com/chat/200006)  
-[深言达意](https://www.shenyandayi.com "原反向词典正式升级为智能写作工具。支持筛选词语、成语、惯用语和古汉语等多类别。") | [大同搜索](https://datong.info/ui/index.html)  
+[深言达意](https://www.shenyandayi.com "原反向词典正式升级为智能写作工具。支持筛选词语、成语、惯用语和古汉语等多类别。") | [大同搜索](https://datong.info/ui/index.html) | [Libre Search](https://so.ddns-ip.net/)  
 [百度翻译](https://fanyi.baidu.com/) | [OpenL翻译](https://openl.io/)  
 [Guidebook数字生活指南](https://nav.guidebook.top/) | [我的书签](https://it-cxy.top/) | [数字素养](https://szsyw.cn/) | [硬核指南](https://yinghezhinan.com/) | [黑点工具](https://hddtool.com/)  
 [今日热榜](https://tophub.today/) | [摸摸鱼热榜](https://momoyu.cc/) | [不死鸟发布页](https://dalao.ru/) | [系统极客](https://www.sysgeek.cn/)  
@@ -40,8 +40,8 @@ description:
 
 
 ## 音乐
-[网易云音乐](http://music.163.com) | [音乐磁场](https://www.hifini.com/) | [千千音乐](https://music.91q.com/) | [9天音乐](http://www.9sky.com/) | [QQ音速网](https://www.qqyin.com/) | [极客音乐](https://bestgeek.org/music)  
-[全网免费音乐搜索汇总](https://iui.su/2217/) | [昔枫音乐盒](https://mu-jie.cc/musicBox/) | [音乐榜](https://www.mp3b.com/)  
+[网易云音乐](http://music.163.com) | [音乐磁场](https://www.hifini.com/) | [千千音乐](https://music.91q.com/) | [9天音乐](http://www.9sky.com/) | [枫叶音乐盒](https://mu-jie.cc/musicBox/) | [极客音乐](https://bestgeek.org/music)  
+[全网免费音乐搜索汇总](https://iui.su/2217/) | [音乐榜](https://www.mp3b.com/) | [铜钟音乐官网](https://tonzhon.com/)  
 [猫看白噪音](https://www.maokan.cc/)
 
 
@@ -50,6 +50,7 @@ description:
 [HDmoli](https://molicp.com/) | [美剧粉](http://www.mjf2020.com/) | [注释影视](https://gaze.run/) | [4kHDR世界](https://www.4khdr.cn/)  | [子夜动漫](https://www.ziyedm.com/)  | [可可影视](https://www.keke9.com/) | [可可影视](https://www.keke12.com:51111) | [可可影视](https://www.keke13.com) | [可可影视](https://www.keke14.com) | [金牌影院](https://fjvtw.com/)   
 [lemonlive](https://lemonlive.deno.dev)
 [简单TV](https://jiandantv.com/) | [亿苯正经的Alist库](https://pan.lm379.cn/) | [发现TV](https://faxiantv.com/)  
+[4K 指南](https://xuexizhinan.com/ "4k 电影网盘分享站")
 
 
 ## 游戏
@@ -59,6 +60,8 @@ description:
 ## 美图
 [CNU视觉联盟](http://www.cnu.cc/inspirationPage/recent-0) | [360°航拍全景](https://airpano.org.cn/) | [免费版权图片搜索](https://www.logosc.cn/so/) | [极简壁纸](https://bz.zzzmh.cn/)
 [百度免费AI图像生成和处理](https://image.baidu.com/) | [免费AI图像生成](https://muryou-aigazou.com/zh) | [Raphael AI 图像生成器](https://raphael.app/zh)  
+[Lorem Picsum](https://picsum.photos/ "免费的图片占位符生成工具网站")
+[HDRify](https://www.hdrify.com/ "上传图片，快速制作亮瞎眼的微信 HDR 头像、表情") | [旧照片修复](https://restoreoldphotos.io/)  
 
 
 # 在线工具
@@ -67,7 +70,7 @@ description:
 [draw.io](https://www.drawio.com/)  | [drawio](https://app.diagrams.net/) | [百度脑图](https://naotu.baidu.com/home) | [GitMind](https://gitmind.cn/) | [ProcessOn](https://www.processon.com/) | [打字打字](https://dazidazi.com/)  
 [流光卡片](https://fireflycard.shushiai.com/zh) | [物言卡片](https://mono.cards/zh) | [鸡毛信](https://cmd.im/) | [鸡霸图床](https://gejiba.com/) | [田字格笔顺 字帖生成器](https://lab.feifanju.com/zitie/)   
 [Ping](https://ping.eu/ping/) | [域名查询](https://lab.feifanju.com/domain-query/) | [极强检测](https://www.urlzt.com/) | [在线HTTP POST/GET接口测试工具](https://lab.feifanju.com/http/index.html) | [临时手机号](https://jiemahao.com/)  
-[千盒工具](https://1000tool.com/) | [独特工具箱](https://www.dute.org/) | [在线工具](http://tool.lu/)  |  [OSChina开发工具](http://tool.oschina.net/) | [UU在线工具](https://uutool.cn/) |  [偷懒工具](https://toolight.cn) | [极速箱](https://jisuxiang.com/)  
+[产品工具箱](https://www.y3pm.com/) | [千盒工具](https://1000tool.com/) | [独特工具箱](https://www.dute.org/) | [在线工具](http://tool.lu/)  |  [OSChina开发工具](http://tool.oschina.net/) | [UU在线工具](https://uutool.cn/) |  [偷懒工具](https://toolight.cn) | [极速箱](https://jisuxiang.com/)  
 [便民查询网](https://www.bmcx.com/) | [生成随机密码](https://suijimimashengcheng.51240.com/) | [PMD5](http://pmd5.com/#)  |  [输入让你无语的MD5](https://www.somd5.com/) | [核心价值编码器](https://sym233.github.io/core-values-encoder/)  
 [在线文件转换器](https://cn.office-converter.com/) | [在线格式转换](https://www.alltoall.net/) | [PDF派](https://www.pdfpai.com/)  
 [在线PS网页版](https://ps.gitapp.cn/) | [做好图](http://www.zuohaotu.com/)  |  [MakePic.com 图片制造](http://www.makepic.com/)  |  [removebg图片背景消除](https://www.remove.bg/ ) | [waifu2x无损放大图片](http://waifu2x.udp.jp/index.zh-CN.html) | [图片无限变大](http://bigjpg.com/zh) | [草料二维码美化器](http://mh.cli.im/) | [头像生成器](https://www.moubao.vip/)  | [pretty-snap截图美化工具](https://pretty-snap.iwhy.dev/) | [色匹网](https://www.wenziyun.cn/yanse/tupianshise) | [ARC动漫增强](https://arc.tencent.com/zh/ai-demos/imgRestore)  
@@ -100,6 +103,7 @@ description:
 [Z-Library 电子书下载](https://iui.su/380/) | [云海电子图书馆](http://www.pdfbook.cn/ "基于城通网赚网盘下载的电子书网站")  | [SaltyLeo 的书架](https://book.tstrs.me/search "在这里，收录了数以十万计的电子书，你可以轻松找到想要的任何书。")  
 [A+医学百科](http://www.a-hospital.com/ "在线医学百科全书")  
 [瑞文网教材](https://www.ruiwen.com/jiaocai/ "提供人教版、北师大、苏教版、沪教版、浙教版、鲁科版、仁爱版英语等电子课本在线阅读")   |  [人教版中小学教材](https://bp.pep.com.cn/jc/ "人民教育出版社提供的中小学教材电子版下载（转自：免费吧 &raquo; 电子书下载网站大汇总(https://www.mianfeib.me/ebook-download-website.html)）")
+[金句盲盒](http://jinju.yotooapp.com/)  
 
 
 ## 系统/软件下载
@@ -108,7 +112,7 @@ description:
 [小众软件](https://www.appinn.com/) | [zd423](http://www.zdfans.com/) | [423down](https://www.423down.com/) | [分享者](https://www.sharerw.com/) | [我爱分享网](http://www.zhanshaoyi.com/rjxz.html) | [夜雨聆风](http://www.yeyulingfeng.com/) | [金狐维护盘](http://www.jinhu.me/) | [行客工作室](http://www.runker.net/) | [软猫下载](https://www.softmall.net/) | [Puresys](https://www.puresys.net/) | [DIY博客园](https://www.diybloghome.com/) | [软件鸭](https://ruanjianya.net/)  
 [浏览迷](https://liulanmi.com/) | [TamperMonkey TM中文网](https://www.tampermonkey.cn/) | [Chrome浏览器插件下载中心](https://www.chajian5.com/) | [万能命令](https://wannengrun.net/zh)  
 [阅读APP](http://www.legado.top) | [MultiTTS 安卓离线语音](https://iui.su/3680/) | [阅读及TTS资源](https://www.123pan.com/s/6chuVv-yiqWd.html)  
-[Greasy Fork 用户脚本](https://greasyfork.org/zh-CN) | [无限制下载器](https://greasyfork.org/zh-CN/scripts/445751-unlimited-downloader?utm_source=appinn.com)  
+[Greasy Fork 用户脚本](https://greasyfork.org/zh-CN)  
 [极光VPN](https://github.com/getaurora/download) | [瓦特工具箱](https://steampp.net/)  
 [IDM蓝奏云下载地址](https://ruanjianya.lanzoum.com/b02w5s0oh)
 
@@ -172,6 +176,7 @@ description:
 
 ## AI
 [WeChatAI](https://welm.weixin.qq.com/docs/)
+[图片到提示词生成器](https://vheer.com/app/image-to-prompt)
 
 ## API
 [WxPusher](https://wxpusher.zjiecode.com/admin/main) | [XPusher](https://courier.toptopn.com/xpusher.html) | [PushHub](https://www.pushhub.cn/)  
@@ -209,6 +214,9 @@ description:
 
 ## DuiLib
 [DuiLib入门简明教程](https://blog.csdn.net/mao834099514/article/details/74837766)
+
+## DBeaver
+[官网下载](https://dbeaver.io/download/) | [山东大学镜像站下载dbeaver-ce-25.1.0](https://mirrors.sdu.edu.cn/github-release/dbeaver_dbeaver/25.1.0/dbeaver-ce-25.1.0-x86_64-setup.exe)  
 
 
 # E
@@ -264,7 +272,7 @@ description:
 
 
 ## GitHub
-[GitHub 打不开解决方案](https://iui.su/3415/) | [文件加速下载](https://dalao.ru/g/)
+[GitHub 打不开解决方案](https://iui.su/3415/)
 
 
 ## Gogs
