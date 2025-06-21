@@ -31,7 +31,7 @@ description:
 
 # 常用
 [ChatGPT OpenAI 项目汇总](https://iui.su/2920/) | [Free2gpt导航](https://nav1.free2gpt.xyz/) | [ChatGPT免费体验在线列表](https://lzw.me/x/chatgpt-sites/) | [AI网址导航](https://ai-nav.lzw.me/) | [AIchatOS](https://chat18.aichatos58.com/#/chat) | [文心一言](https://yiyan.baidu.com/) | [智谱清言](https://chatglm.cn/main/alltoolsdetail?lang=zh) | [豆包](https://www.doubao.com/chat/) | [DeepSeek](https://chat.deepseek.com/) | [问小白](https://www.wenxiaobai.com/chat/200006)  
-[深言达意](https://www.shenyandayi.com "原反向词典正式升级为智能写作工具。支持筛选词语、成语、惯用语和古汉语等多类别。") | [大同搜索](https://datong.info/ui/index.html) | [Libre Search](https://so.ddns-ip.net/)  
+[深言达意](https://www.shenyandayi.com "原反向词典正式升级为智能写作工具。支持筛选词语、成语、惯用语和古汉语等多类别。以词找句") | [大同搜索](https://datong.info/ui/index.html) | [Libre Search](https://so.ddns-ip.net/)  
 [百度翻译](https://fanyi.baidu.com/) | [OpenL翻译](https://openl.io/)  
 [Guidebook数字生活指南](https://nav.guidebook.top/) | [我的书签](https://it-cxy.top/) | [数字素养](https://szsyw.cn/) | [硬核指南](https://yinghezhinan.com/) | [黑点工具](https://hddtool.com/)  
 [今日热榜](https://tophub.today/) | [摸摸鱼热榜](https://momoyu.cc/) | [不死鸟发布页](https://dalao.ru/) | [系统极客](https://www.sysgeek.cn/)  
@@ -40,9 +40,10 @@ description:
 
 
 ## 音乐
-[网易云音乐](http://music.163.com) | [音乐磁场](https://www.hifini.com/) | [千千音乐](https://music.91q.com/) | [9天音乐](http://www.9sky.com/) | [枫叶音乐盒](https://mu-jie.cc/musicBox/) | [极客音乐](https://bestgeek.org/music)  
-[全网免费音乐搜索汇总](https://iui.su/2217/) | [音乐榜](https://www.mp3b.com/) | [铜钟音乐官网](https://tonzhon.com/)  
-[猫看白噪音](https://www.maokan.cc/)
+[网易云音乐](http://music.163.com) | [音乐磁场](https://www.hifini.com/) | [千千音乐](https://music.91q.com/) | [9天音乐](http://www.9sky.com/)
+ | [枫叶音乐盒](https://mu-jie.cc/musicBox/) | [极客音乐](https://bestgeek.org/music)  
+[全网免费音乐搜索汇总](https://iui.su/2217/) | [音乐榜](https://www.mp3b.com/) | [铜钟音乐官网](https://tonzhon.com/) | [闪闪音乐网](https://www.33ve.com/)  
+[白噪音](https://freemind.fit/)
 
 
 ## 电影
@@ -67,13 +68,21 @@ description:
 # 在线工具
 [天气万年历](https://wannianli.tianqi.com/today/zhou/)  
 [Quick Reference](https://quickref.cn/ "为开发人员分享快速参考备忘清单【速查表】")  
-[draw.io](https://www.drawio.com/)  | [drawio](https://app.diagrams.net/) | [百度脑图](https://naotu.baidu.com/home) | [GitMind](https://gitmind.cn/) | [ProcessOn](https://www.processon.com/) | [打字打字](https://dazidazi.com/)  
-[流光卡片](https://fireflycard.shushiai.com/zh) | [物言卡片](https://mono.cards/zh) | [鸡毛信](https://cmd.im/) | [鸡霸图床](https://gejiba.com/) | [田字格笔顺 字帖生成器](https://lab.feifanju.com/zitie/)   
-[Ping](https://ping.eu/ping/) | [域名查询](https://lab.feifanju.com/domain-query/) | [极强检测](https://www.urlzt.com/) | [在线HTTP POST/GET接口测试工具](https://lab.feifanju.com/http/index.html) | [临时手机号](https://jiemahao.com/)  
-[产品工具箱](https://www.y3pm.com/) | [千盒工具](https://1000tool.com/) | [独特工具箱](https://www.dute.org/) | [在线工具](http://tool.lu/)  |  [OSChina开发工具](http://tool.oschina.net/) | [UU在线工具](https://uutool.cn/) |  [偷懒工具](https://toolight.cn) | [极速箱](https://jisuxiang.com/)  
-[便民查询网](https://www.bmcx.com/) | [生成随机密码](https://suijimimashengcheng.51240.com/) | [PMD5](http://pmd5.com/#)  |  [输入让你无语的MD5](https://www.somd5.com/) | [核心价值编码器](https://sym233.github.io/core-values-encoder/)  
+[draw.io](https://www.drawio.com/)  | [drawio](https://app.diagrams.net/) | [百度脑图](https://naotu.baidu.com/home) | [GitMind](https://gitmind.cn/)
+ | [ProcessOn](https://www.processon.com/) | [打字打字](https://dazidazi.com/)  
+[流光卡片](https://fireflycard.shushiai.com/zh) | [物言卡片](https://mono.cards/zh) | [鸡毛信](https://cmd.im/) | [鸡霸图床](https://gejiba.com/)  
+[纸张打印](https://paperme.toolooz.com/) | [田字格笔顺 字帖生成器](https://lab.feifanju.com/zitie/)   
+[Ping](https://ping.eu/ping/) | [域名查询](https://lab.feifanju.com/domain-query/) | [极强检测](https://www.urlzt.com/)
+ | [在线HTTP POST/GET接口测试工具](https://lab.feifanju.com/http/index.html) | [临时手机号](https://jiemahao.com/)  
+[产品工具箱](https://www.y3pm.com/) | [千盒工具](https://1000tool.com/) | [独特工具箱](https://www.dute.org/) | [在线工具](http://tool.lu/)
+ | [OSChina开发工具](http://tool.oschina.net/) | [UU在线工具](https://uutool.cn/) |  [偷懒工具](https://toolight.cn) | [极速箱](https://jisuxiang.com/)  
+[便民查询网](https://www.bmcx.com/) | [生成随机密码](https://suijimimashengcheng.51240.com/) | [PMD5](http://pmd5.com/#)
+ | [输入让你无语的MD5](https://www.somd5.com/) | [核心价值编码器](https://sym233.github.io/core-values-encoder/)  
 [在线文件转换器](https://cn.office-converter.com/) | [在线格式转换](https://www.alltoall.net/) | [PDF派](https://www.pdfpai.com/)  
-[在线PS网页版](https://ps.gitapp.cn/) | [做好图](http://www.zuohaotu.com/)  |  [MakePic.com 图片制造](http://www.makepic.com/)  |  [removebg图片背景消除](https://www.remove.bg/ ) | [waifu2x无损放大图片](http://waifu2x.udp.jp/index.zh-CN.html) | [图片无限变大](http://bigjpg.com/zh) | [草料二维码美化器](http://mh.cli.im/) | [头像生成器](https://www.moubao.vip/)  | [pretty-snap截图美化工具](https://pretty-snap.iwhy.dev/) | [色匹网](https://www.wenziyun.cn/yanse/tupianshise) | [ARC动漫增强](https://arc.tencent.com/zh/ai-demos/imgRestore)  
+[在线PS网页版](https://ps.gitapp.cn/) | [做好图](http://www.zuohaotu.com/)  |  [MakePic.com 图片制造](http://www.makepic.com/)  |  [removebg图片背景消除](https://www.remove.bg/ )
+ | [waifu2x无损放大图片](http://waifu2x.udp.jp/index.zh-CN.html) | [图片无限变大](http://bigjpg.com/zh) | [草料二维码美化器](http://mh.cli.im/)
+ | [头像生成器](https://www.moubao.vip/)  | [pretty-snap截图美化工具](https://pretty-snap.iwhy.dev/) | [色匹网](https://www.wenziyun.cn/yanse/tupianshise)
+ | [ARC动漫增强](https://arc.tencent.com/zh/ai-demos/imgRestore)  
 [快速抠图去背工具](https://iui.su/2968/)
 [小米LOGO生成器](https://mi-logo.lvwzhen.com/) | [免费logo在线制作](http://www.uugai.com/) | [Text to Logo & Favicon](https://www.logo.surf/#generate-favicon)  
 [TikTok Voice - 免费在线文字转语音](https://tiktokvoice.net/zh) | [文字转语音](https://d1tools.com/tools/ai-tts/)  
