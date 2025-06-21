@@ -110,11 +110,10 @@ description:
 [IT之家](https://www.ithome.com/) | [系统之家](http://www.xitongzhijia.net/) | [系统天地](http://www.xitongtiandi.net/) | [Win10专业版官网](http://www.win10zyb.com/) | [吻妻出品专注 win10](https://iwin10.net/) | [吻妻出品专注 win7](http://www.newxitong.com/) | [HelloWindows](https://hellowindows.cn/)  
 [黑苹果乐园](https://imac.hk/) | [黑果小兵](https://blog.daliansky.net/) | [Ghost Spectre 系统](https://bbs.pcbeta.com/viewthread-1956025-1-1.html)  
 [小众软件](https://www.appinn.com/) | [zd423](http://www.zdfans.com/) | [423down](https://www.423down.com/) | [分享者](https://www.sharerw.com/) | [我爱分享网](http://www.zhanshaoyi.com/rjxz.html) | [夜雨聆风](http://www.yeyulingfeng.com/) | [金狐维护盘](http://www.jinhu.me/) | [行客工作室](http://www.runker.net/) | [软猫下载](https://www.softmall.net/) | [Puresys](https://www.puresys.net/) | [DIY博客园](https://www.diybloghome.com/) | [软件鸭](https://ruanjianya.net/)  
-[浏览迷](https://liulanmi.com/) | [TamperMonkey TM中文网](https://www.tampermonkey.cn/) | [Chrome浏览器插件下载中心](https://www.chajian5.com/) | [万能命令](https://wannengrun.net/zh)  
+[浏览迷](https://liulanmi.com/) | [TamperMonkey TM中文网](https://www.tampermonkey.cn/) | [Chrome浏览器插件下载中心](https://www.chajian5.com/) | [Greasy Fork 用户脚本](https://greasyfork.org/zh-CN)   
 [阅读APP](http://www.legado.top) | [MultiTTS 安卓离线语音](https://iui.su/3680/) | [阅读及TTS资源](https://www.123pan.com/s/6chuVv-yiqWd.html)  
-[Greasy Fork 用户脚本](https://greasyfork.org/zh-CN)  
 [极光VPN](https://github.com/getaurora/download) | [瓦特工具箱](https://steampp.net/)  
-[IDM蓝奏云下载地址](https://ruanjianya.lanzoum.com/b02w5s0oh)
+[IDM蓝奏云下载地址](https://ruanjianya.lanzoum.com/b02w5s0oh) | [文件加速下载](https://b.dalao.ru/g/)  
 
 ## 文章/教程
 [菜鸟教程](http://www.runoob.com/)  
