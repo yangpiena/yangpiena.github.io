@@ -58,7 +58,7 @@ description:
 
 
 ## 美图
-[CNU视觉联盟](http://www.cnu.cc/inspirationPage/recent-0) | [360°航拍全景](https://airpano.org.cn/) | [免费版权图片搜索](https://www.logosc.cn/so/) | [极简壁纸](https://bz.zzzmh.cn/)
+[CNU视觉联盟](http://www.cnu.cc/inspirationPage/recent-0) | [360°航拍全景](https://airpano.org.cn/) | [免费版权图片搜索](https://www.logosc.cn/so/) | [极简壁纸](https://bz.zzzmh.cn/) | [小羿壁纸](https://bz.xiaoyi.vc/)  
 [百度免费AI图像生成和处理](https://image.baidu.com/) | [免费AI图像生成](https://muryou-aigazou.com/zh) | [Raphael AI 图像生成器](https://raphael.app/zh)  
 [Lorem Picsum](https://picsum.photos/ "免费的图片占位符生成工具网站")
 [HDRify](https://www.hdrify.com/ "上传图片，快速制作亮瞎眼的微信 HDR 头像、表情") | [旧照片修复](https://restoreoldphotos.io/)  

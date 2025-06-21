@@ -313,15 +313,16 @@
     <div class="post-body" itemprop="articleBody">
         <p>Flash Builder 4.6免费使用具体步骤如下：</p>
 <ol>
-<li>到Adobe官网下载FlashBuilder 4.6，有简体中文版；<span id="more"></span></li>
+<li>到Adobe官网下载FlashBuilder 4.6，有简体中文版；<span id="more"></span></li>
 <li>安装时，不用序列号，直接选择安装试用版；</li>
-<li>安装完成后在安装目录下依次修改下列3个文件：<br> (1)<code>.eclipse\plugins\com.adobe.flexbuilder.project_4.6.0.328916\META-INF</code>下面的<code>MANIFEST.MF</code>修改：<br>  Bundle-Version: 0.0.0</li>
+<li>安装完成后在安装目录下依次修改下列3个文件：<br>(1)<code>.eclipse\plugins\com.adobe.flexbuilder.project_4.6.0.328916\META-INF</code>下面的<code>MANIFEST.MF</code>修改：<pre><code>  Bundle-Version: 0.0.0
+</code></pre>(2)<code>.eclipse\features\com.adobe.flexide.feature_4.6.0.328916</code>下面的<code>feature.xml</code>修改：<pre><code> &lt;plugin
+  id=&quot;com.adobe.flexbuilder.project&quot;
+  download-size=&quot;0&quot;
+  install-size=&quot;0&quot;
+  version=&quot;0.0.0&quot;/&gt;
+</code></pre>(3)<code>.eclipse\plugins\com.adobe.flexbuilder.flex_4.6.0.328916</code>下面，复制<code>config.xml</code>并重命名为<code>config_builder.xml</code>即可。</li>
 </ol>
-<p> (2)<code>.eclipse\features\com.adobe.flexide.feature_4.6.0.328916</code>下面的<code>feature.xml</code>修改：<br>        <plugin
-         id="com.adobe.flexbuilder.project"
-         download-size="0"
-         install-size="0"
-         version="0.0.0"/><br> (3)<code>.eclipse\plugins\com.adobe.flexbuilder.flex_4.6.0.328916</code>下面，复制<code>config.xml</code>并重命名为<code>config_builder.xml</code>即可。</p>
 <blockquote>
 <p>以上版本号请跟据实际版本号进行替换，修改完成之后，再启动Adobe Flash Builder 4.6，就可免费使用这款RIA工具了。</p>
 </blockquote>
