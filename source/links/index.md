@@ -36,26 +36,25 @@ description:
 | [ChatGPT免费体验在线列表](https://lzw.me/x/chatgpt-sites/) ||| [深言达意](https://www.shenyandayi.com "原反向词典正式升级为智能写作工具。支持筛选词语、成语、惯用语和古汉语等多类别。以词找句") |
 | [豆包](https://www.doubao.com/chat/) | [DeepSeek](https://chat.deepseek.com/) | [文心一言](https://yiyan.baidu.com/) | [智谱清言](https://chatglm.cn/main/alltoolsdetail?lang=zh) |
 | [Guidebook数字生活指南](https://nav.guidebook.top/) | [数字素养](https://szsyw.cn/) | [硬核指南](https://yinghezhinan.com/) | [黑点工具](https://hddtool.com/) |
-| [不死鸟发布页](https://dalao.ru/) | [今日热榜](https://tophub.today/) | [摸摸鱼热榜](https://momoyu.cc/) ||
+| [不死鸟发布页](https://dalao.ru/) || [今日热榜](https://tophub.today/) | [摸摸鱼热榜](https://momoyu.cc/) |
 
 
 ## 音乐
 | | | | |
 | ---- | ---- | ---- | ---- |
 | [网易云音乐](http://music.163.com)         | [音乐磁场](https://www.hifini.com/)    | [千千音乐](https://music.91q.com/)  | [9天音乐](http://www.9sky.com/) |
-| [枫叶音乐盒](https://mu-jie.cc/musicBox/)  | [极客音乐](https://bestgeek.org/music) | | |
+| [枫叶音乐盒](https://mu-jie.cc/musicBox/)  | [极客音乐](https://bestgeek.org/music) || [白噪音](https://freemind.fit/) |
 | [全网免费音乐搜索汇总](https://iui.su/2217/) | [音乐榜](https://www.mp3b.com/)       | [铜钟音乐官网](https://tonzhon.com/) | [闪闪音乐网](https://www.33ve.com/) |
-| [白噪音](https://freemind.fit/)            | | | |
 
 
 ## 电影
 | | | | |
 | ---- | ---- | ---- | ---- |
-| [映像讯](http://mkv.cn/) | [影视森林](http://www.549.tv/) | [免费的在线影视网站汇总](https://iao.su/531/) | [小部落](https://www.xbl100.com/) |
-| [HDmoli](https://molicp.com/) | [美剧粉](http://www.mjf2020.com/) | [注释影视](https://gaze.run/) | [4kHDR世界](https://www.4khdr.cn/)  |
+| [映像讯](http://mkv.cn/) | [影视森林](http://www.549.tv/) || [免费的在线影视网站汇总](https://iao.su/531/) |
+| [美剧粉](http://www.mjf2020.com/) | [HDmoli](https://molicp.com/) | [4kHDR世界](https://www.4khdr.cn/) | [注释影视](https://gaze.run/) |
 | [可可影视](https://www.keke9.com/) | [可可影视](https://www.keke12.com:51111) | [可可影视](https://www.keke13.com) | [可可影视](https://www.keke14.com) |
-| [lemonlive](https://lemonlive.deno.dev) | [金牌影院](https://fjvtw.com/) | [子夜动漫](https://www.ziyedm.com/) ||
-| [4K 指南](https://xuexizhinan.com/ "4k 电影网盘分享站") | [简单TV](https://jiandantv.com/) | [亿苯正经的Alist库](https://pan.lm379.cn/) | [发现TV](https://faxiantv.com/) |
+| [lemonlive](https://lemonlive.deno.dev) ||| [金牌影院](https://fjvtw.com/) |
+| [4K指南](https://xuexizhinan.com/ "4k 电影网盘分享站") | [简单TV](https://jiandantv.com/) | [发现TV](https://faxiantv.com/) | [亿苯正经的Alist库](https://pan.lm379.cn/) |
 
 
 ## 游戏
@@ -77,7 +76,7 @@ description:
 # 在线工具
 |  |  |  |  |
 | ---- | ---- | ---- | ---- |
-| [天气万年历](https://wannianli.tianqi.com/today/zhou/) | [便民查询网](https://www.bmcx.com/) ||
+| [天气万年历](https://wannianli.tianqi.com/today/zhou/) ||| [便民查询网](https://www.bmcx.com/) |
 | [极强检测](https://www.urlzt.com/) | [Ping](https://ping.eu/ping/) |||
 | [打字打字](https://dazidazi.com/) | [纸张打印](https://paperme.toolooz.com/) | [田字格笔顺 字帖生成器](https://lab.feifanju.com/zitie/) ||
 | [鸡毛信](https://cmd.im/) ||| [临时手机号](https://jiemahao.com/) |
@@ -128,10 +127,10 @@ description:
 | [菜鸟图标](https://icon.sucai999.com/) | [最好的12个Icon图标资源网站整理分享出来](https://blog.csdn.net/xiawj8957/article/details/45130263) 
 | [中国色](http://zhongguose.com/) | [色匹网](https://www.wenziyun.cn/yanse/tupianshise) |||
 | [优品PPT](http://www.ypppt.com) 
-| [小白盘](https://www.xiaobaipan.com) | [中华珍宝馆](https://ltfc.net/) | [实况摄像头](https://www.skylinewebcams.com/zh/webcam/maldives/lhaviyani-atoll/kurendhoo/kuredu-island.html) ||
+| [小白盘](https://www.xiaobaipan.com) | [中华珍宝馆](https://ltfc.net/) || [实况摄像头](https://www.skylinewebcams.com/zh/webcam/maldives/lhaviyani-atoll/kurendhoo/kuredu-island.html) |
 
 
-# 系统/软件下载
+## 系统/软件下载
 |  |  |  |  |
 | ---- | ---- | ---- | ---- |
 | [MSDN](http://msdn.itellyou.cn/?gytyzs=0z1zl) | [NEXT, ITELLYOU](https://next.itellyou.cn/) | [HelloWindows](https://hellowindows.cn/) | [IT之家](https://www.ithome.com/) |
@@ -161,14 +160,15 @@ description:
 ## 文章/教程
 |  |  |  |  |
 | ---- | ---- | ---- | ---- |
-| [菜鸟教程](http://www.runoob.com/) | [星际黑客](https://xj.hk/) | [网易邮箱配置](http://www.163mailbox.cn/client-outlook-foxmail-settings.html) | [手艺活](https://www.shouyihuo.com/) |
-| [GitHub上优秀的开源项目](http://blog.csdn.net/ren1027538427/article/details/52450294) | [2017 码云最火爆开源项目 TOP 50，你都用过哪些？](https://www.oschina.net/news/92438/2017-mayun-top-50) | [项目目录结构规范](https://segmentfault.com/a/1190000002471120) ||
-| [B/S，C/S，B/S和C/S混合模式的概念区别优缺点及前景分析](http://www.ufidawhy.com/mfufida/613.html) | [一种电子病历系统软件框架思想——B/S与C/S混合架构](http://www.hit180.com/21534.html) | [LB 负载均衡的层次结构](http://www.cnblogs.com/mindwind/p/5339657.html) | [Nginx 0.5.31 + PHP 5.2.4（FastCGI）搭建可承受3万以上并发连接数，胜过Apache 10倍的Web服务器原创](http://zyan.cc/post/297/) |
-| [好的用户界面-界面设计的一些技巧](https://www.cnblogs.com/Wayou/p/goodui.html#home) | [Flex转型Html学习随笔1——关于Html页面的div布局（上）](http://www.cnblogs.com/momoko8443/p/4302879.html) |
+| [菜鸟教程](http://www.runoob.com/) | [星际黑客](https://xj.hk/) | [手艺活](https://www.shouyihuo.com/) ||
+| [GitHub上优秀的开源项目](http://blog.csdn.net/ren1027538427/article/details/52450294) | [2017 码云最火爆开源项目 TOP 50，你都用过哪些？](https://www.oschina.net/news/92438/2017-mayun-top-50) |||
+| [B/S，C/S，B/S和C/S混合模式的概念区别优缺点及前景分析](http://www.ufidawhy.com/mfufida/613.html) | [一种电子病历系统软件框架思想——B/S与C/S混合架构](http://www.hit180.com/21534.html) | [Nginx 0.5.31 + PHP 5.2.4（FastCGI）搭建可承受3万以上并发连接数，胜过Apache 10倍的Web服务器原创](http://zyan.cc/post/297/) ||
+| [Windows桌面端(GUI)程序开发方案比较](https://www.psvmc.cn/article/2019-10-18-windows-program-develop.html) ||||
+| [项目目录结构规范](https://segmentfault.com/a/1190000002471120) | [LB 负载均衡的层次结构](http://www.cnblogs.com/mindwind/p/5339657.html) |||
 | [Linux删除乱码文件](http://www.cnblogs.com/quanweiru/p/3764003.html) | [SUSE Linux启用SSH](http://tophandxing.blog.163.com/blog/static/109714820124123438513/) | [黑苹果macOS High Sierra 10.13.6详细安装新手菜鸟教程](http://tzit.net/htmlitjs/2018-10-25/2234.html) ||
-| [Win10怎么把批处理文件固定到开始菜单](http://www.jb51.net/os/win10/483729.html) | [解决TCP/IP筛选的实用设置问题](https://jingyan.baidu.com/article/851fbc37dc1e513e1f15ab27.html) |
-| [OneAPM 工作两年总结](http://www.ituring.com.cn/article/497377) | [竞品分析－SWOT分析](https://zhuanlan.zhihu.com/p/181668340) 
-| [ffmpeg 常用命令汇总](https://blog.csdn.net/kingvon_liwei/article/details/79271361) |
+| [Win10怎么把批处理文件固定到开始菜单](http://www.jb51.net/os/win10/483729.html) | [解决TCP/IP筛选的实用设置问题](https://jingyan.baidu.com/article/851fbc37dc1e513e1f15ab27.html) |||
+| [OneAPM 工作两年总结](http://www.ituring.com.cn/article/497377) | [竞品分析－SWOT分析](https://zhuanlan.zhihu.com/p/181668340) |||
+| [网易邮箱配置](http://www.163mailbox.cn/client-outlook-foxmail-settings.html) | [ffmpeg 常用命令汇总](https://blog.csdn.net/kingvon_liwei/article/details/79271361) |||
 
 
 ## 前端/案例
@@ -176,7 +176,7 @@ description:
 | ---- | ---- | ---- | ---- |
 | [蓝蓝设计](http://www.lanlanwork.com/) | [LayUI](https://www.layui.com/) | [HeyUI](https://www.heyui.top/) | [H-ui前端框架](http://www.h-ui.net/H-ui.admin.shtml) |
 | [若依管理系统](http://www.ruoyi.vip) | [Bootstrap模板](http://www.bootstrapmb.com/) | [Android酷炫实用的开源框架（UI框架）](http://www.runoob.com/w3cnote/android-ui-framework.html) | [公司某项目前端技术积累](http://blog.csdn.net/sunyingyuan/article/details/38237139) |
-| [产品简化改版怎么做？](http://www.lanlanwork.com/blog/?post=6443) | [Windows桌面端(GUI)程序开发方案比较](https://www.psvmc.cn/article/2019-10-18-windows-program-develop.html) |  |  |
+| [产品简化改版怎么做？](http://www.lanlanwork.com/blog/?post=6443) | [好的用户界面-界面设计的一些技巧](https://www.cnblogs.com/Wayou/p/goodui.html#home) |||
 
 
 ## 数据库
@@ -187,19 +187,14 @@ description:
 | [sqlserver 发布订阅的弊端](https://blog.csdn.net/yangzhawen/article/details/8019921) | [如何在不重装服务器的情况下尝试解决sqlmaint.exe失败的问题](http://blog.csdn.net/zhaoyonghui100/article/details/8939950) | [Sql Server 2000清除日志方法介绍](https://yq.aliyun.com/ziliao/22450) |  |
 
 
-## 规则引擎
-|  |  |  |  |
-| ---- | ---- | ---- | ---- |
-| [Drools](http://www.drools.org.cn/) |  |  |  |
-
-
 ## 网盘
 |  |  |  |  |
 | ---- | ---- | ---- | ---- |
 | [百度网盘](https://pan.baidu.com) | [坚果云](https://www.jianguoyun.com/) | [夸克网盘](https://pan.quark.cn/) | [webd](https://webd.cf/) |
-| [Nextcloud](https://nextcloud.com/) | [悦库](http://www.ydisk.cn/index.html) | [Nextcloud通过不被信任的域名访问解决方法 Nextcloud 您正在访问来自不信任域名的服务器](https://blog.csdn.net/g313105910/article/details/106381380) | [nextcloud修改域名、IP或端口](https://www.cnblogs.com/mrcoolfuyu/p/13355522.html) |
-| [自建企业网盘：镜像部署与使用实战](https://www.kancloud.cn/websoft9/cloudbox-practice/647724) | [搭建自己私人网盘-Nextcloud](https://blog.csdn.net/qq_43099160/article/details/107081157) | [CentOS 7下安装Nextcloud搭建个人网盘](https://www.linuxidc.com/Linux/2018-11/155310.htm) | [openSUSE 安装LAMP记录](https://www.cnblogs.com/fsong/p/6736030.html) |
-| [【伐木厮】使用Nextcloud搭建私有云储存](https://www.bilibili.com/read/cv4853751/) | [如何安装Seafile与Nginx在openSUSE Leap 42.1](https://www.howtoing.com/how-to-install-seafile-with-nginx-on-opensuse-leap-42.1) | [zaix.ru一个俄罗斯网盘](https://zaix.ru/) |  |
+| [Nextcloud](https://nextcloud.com/) | [悦库](http://www.ydisk.cn/index.html) | [zaix.ru一个俄罗斯网盘](https://zaix.ru/) | |
+| [自建企业网盘：镜像部署与使用实战](https://www.kancloud.cn/websoft9/cloudbox-practice/647724) | [搭建自己私人网盘-Nextcloud](https://blog.csdn.net/qq_43099160/article/details/107081157) | [CentOS 7下安装Nextcloud搭建个人网盘](https://www.linuxidc.com/Linux/2018-11/155310.htm) | [【伐木厮】使用Nextcloud搭建私有云储存](https://www.bilibili.com/read/cv4853751/) |
+| [Nextcloud通过不被信任的域名访问解决方法 Nextcloud 您正在访问来自不信任域名的服务器](https://blog.csdn.net/g313105910/article/details/106381380) | [nextcloud修改域名、IP或端口](https://www.cnblogs.com/mrcoolfuyu/p/13355522.html) |||
+| [如何安装Seafile与Nginx在openSUSE Leap 42.1](https://www.howtoing.com/how-to-install-seafile-with-nginx-on-opensuse-leap-42.1) | [openSUSE 安装LAMP记录](https://www.cnblogs.com/fsong/p/6736030.html) |||
 
 
 # 民生
@@ -223,8 +218,8 @@ description:
 ## API
 |  |  |  |  |
 | ---- | ---- | ---- | ---- |
-| [WxPusher](https://wxpusher.zjiecode.com/admin/main) | [XPusher](https://courier.toptopn.com/xpusher.html) | [PushHub](https://www.pushhub.cn/) | [樱道随机图片]https://img.r10086.com/) | [3650000随机API](https://3650000.xyz/) |
-| [随机图片API](https://tuapi.eees.cc) | [SaltyLeo 的图书元数据 API](https://book-db-v1.saltyleo.com/) |  |  |
+| [WxPusher](https://wxpusher.zjiecode.com/admin/main) | [XPusher](https://courier.toptopn.com/xpusher.html) | [PushHub](https://www.pushhub.cn/) ||
+| [随机图片API](https://tuapi.eees.cc) | [樱道随机图片](https://img.r10086.com/) | [3650000随机API](https://3650000.xyz/) ||
 
 
 # B
@@ -237,7 +232,7 @@ description:
 
 # C
 
-## C#
+## C-sharp
 | 项目框架 |  |  |  |
 | ---- | ---- | ---- | ---- |
 | [C# WinForm项目三层架构简述](https://www.jianshu.com/p/7f628015a243) | [VS2010 中更改项目名称](https://blog.csdn.net/jjp837661103/article/details/23332999) | [SqlSugar4.x ORM](https://www.donet5.com/Doc/8/1163) | [SqlSugar5.x ORM](https://www.donet5.com/Home/Doc) |
@@ -288,22 +283,28 @@ description:
 
 # D
 
+## DBeaver
+|  |  |  |  |
+| ---- | ---- | ---- | ---- |
+| [官网下载](https://dbeaver.io/download/) | [山东大学镜像站下载dbeaver-ce-25.1.0](https://mirrors.sdu.edu.cn/github-release/dbeaver_dbeaver/25.1.0/dbeaver-ce-25.1.0-x86_64-setup.exe) |  |  |
+
+
 ## Docker
 |  |  |  |  |
 | ---- | ---- | ---- | ---- |
 | [服务器无法上网如何离线安装docker服务？](https://www.cnblogs.com/creamk87/p/13612510.html) | [无网络环境下安装docker容器](https://www.cnblogs.com/zhao907/p/14659020.html) |  |  |
 
 
+## Drools
+|  |  |  |  |
+| ---- | ---- | ---- | ---- |
+| [Drools](http://www.drools.org) |  |  |  |
+
+
 ## DuiLib
 |  |  |  |  |
 | ---- | ---- | ---- | ---- |
 | [DuiLib入门简明教程](https://blog.csdn.net/mao834099514/article/details/74837766) |  |  |  |
-
-
-## DBeaver
-|  |  |  |  |
-| ---- | ---- | ---- | ---- |
-| [官网下载](https://dbeaver.io/download/) | [山东大学镜像站下载dbeaver-ce-25.1.0](https://mirrors.sdu.edu.cn/github-release/dbeaver_dbeaver/25.1.0/dbeaver-ce-25.1.0-x86_64-setup.exe) |  |  |
 
 
 # E
@@ -340,7 +341,7 @@ description:
 | [Flex下载地址](http://www.adobe.com/support/flashplayer/downloads.html) | [查看浏览器FLash版本、Debug Player](http://kb2.adobe.com/cps/155/tn_15507.html) | [flex学习笔记](http://blog.csdn.net/wugouzi/article/details/5598392) | [Flex学习视频748-798](http://www.riameeting.com/node/748) |
 | [Flex成功案例](http://keren.iteye.com/blog/377733) | [中文Flex例子](http://blog.minidx.com/) | [Flex 3 advancedDataGrid的使用](http://www.cnblogs.com/xuehai/archive/2009/09/26/1574531.html) | [Flex性能优化](https://my.oschina.net/return/blog/208294#navbar-header) |
 | [Flex进阶持续学习——性能优化](http://coffeelover.iteye.com/blog/1163906) | [flex应用程序性能优化十个方法](http://www.wangqi.com/html/2010-12/12796.htm) | [Flex 中的undefined类型](http://dudong0726.iteye.com/blog/1296195) | [Flash Builder 提示与技巧](http://www.adobe.com/cn/devnet/flex/articles/tips-tricks.html) |
-| [一名优秀的Flex开发者需要知道的10样东西](http://www.cnblogs.com/kakaflex/archive/2010/12/02/1894142.html) | [Flex 3 AdvancedDataGrid的使用(三)](http://www.cnblogs.com/xuehai/archive/2009/09/26/1574533.html) |  |  |
+| [一名优秀的Flex开发者需要知道的10样东西](http://www.cnblogs.com/kakaflex/archive/2010/12/02/1894142.html) | [Flex 3 AdvancedDataGrid的使用(三)](http://www.cnblogs.com/xuehai/archive/2009/09/26/1574533.html) | [Flex转型Html学习随笔1——关于Html页面的div布局（上）](http://www.cnblogs.com/momoko8443/p/4302879.html) |  |
 
 
 ## Freemarker
@@ -380,8 +381,8 @@ description:
 ## Haproxy
 |  |  |  |  |
 | ---- | ---- | ---- | ---- |
-| [首页](https://www.haproxy.org/) | [haproxy资源](http://www.csdn.net/tag/haproxy) | [haproxy 配置 说明](http://blog.chinaunix.net/uid-24250828-id-3778032.html) | [最新版haproxy linux下的设置（haproxy-1.4.20 ）](http://blog.csdn.net/zilong00007/article/details/7450317) |
-| [HAProxy负载均衡保持客户端和服务器Session亲缘性的三种方式](http://itindex.net/blog/2012/07/24/1343118758531.html) | [Linux下HAProxy的均衡配置](http://blog.csdn.net/zilong00007/article/details/7275235) | [5月16日发布HAProxy,实现八种负载算法](http://blog.51cto.com/1234567aaa/317891) | [HAProxy](https://www.cnblogs.com/qige2017/p/7783402.html) |
+| [官网首页](https://www.haproxy.org/) | [haproxy资源](http://www.csdn.net/tag/haproxy) | [haproxy 配置 说明](http://blog.chinaunix.net/uid-24250828-id-3778032.html) | [HAProxy](https://www.cnblogs.com/qige2017/p/7783402.html) |
+| [5月16日发布HAProxy,实现八种负载算法](http://blog.51cto.com/1234567aaa/317891) | [HAProxy负载均衡保持客户端和服务器Session亲缘性的三种方式](http://itindex.net/blog/2012/07/24/1343118758531.html) | [Linux下HAProxy的均衡配置](http://blog.csdn.net/zilong00007/article/details/7275235) | [最新版haproxy linux下的设置（haproxy-1.4.20 ）](http://blog.csdn.net/zilong00007/article/details/7450317) |
 
 
 ## Hexo
@@ -408,14 +409,14 @@ description:
 | ---- | ---- | ---- | ---- |
 | [SSM框架——详细整合教程（Spring+SpringMVC+MyBatis）](http://blog.csdn.net/zhshulin/article/details/37956105) | [spring-mvc与jquery-easyui整合](http://blog.csdn.net/cfl20121314/article/details/42160035) | [SpringMVC+Hibernate +MySql+ EasyUI实现CRUD](http://my.oschina.net/xshuai/blog/345117) | [基于Spring + Spring MVC + Mybatis 高性能web构建](http://blog.csdn.net/zoutongyuan/article/details/41379851) |
 | [Maven环境搭建和介绍](http://blog.csdn.net/fengshizty/article/details/43019561) | [Maven搭建SpringMVC+Mybatis项目详解](http://doc.okbase.net/fengshizty/archive/126397.html) | [配置简单功能强大的excel工具类搞定excel导入导出工具类](http://blog.csdn.net/lk_blog/article/details/8007777) | [POI操作Excel常用方法总结 ](http://blog.csdn.net/huazhangena/article/details/7587731) |
-| [编程中国JSP教程和技术资料](http://old.bccn.net/Article/web/jsp/Index.html) | [org.apache.maven.archiver.MavenArchiver.getManifest错误](http://www.cnblogs.com/asderx/p/6541945.html) |  |  |
+| [编程中国JSP教程和技术资料](http://old.bccn.net/Article/web/jsp/Index.html) ||| [org.apache.maven.archiver.MavenArchiver.getManifest错误](http://www.cnblogs.com/asderx/p/6541945.html) |
 
 
 ## JQuery
 |  |  |  |  |
 | ---- | ---- | ---- | ---- |
-| [jQuery插件库](http://www.jq22.com/) | [36个引人注目JQuery导航菜单](http://www.cnblogs.com/ywqu/archive/2009/08/15/1546559.html) | [JQuery DrawSVG](http://leocs.me/jquery-drawsvg/) | [Datatables](https://datatables.net/download/) |
-| [jQuery - 第三方表格插件DataTables使用详解5（宽高尺寸、滚动条的设置）](https://www.hangge.com/blog/cache/detail_1986.html) | [jquery-confirm](http://craftpip.github.io/jquery-confirm/) | [jquery-confirm中文网](https://www.jquery-confirm.cn/) | [如何用纯js做一个大富翁游戏](https://www.cnblogs.com/PeggyChan/p/11075066.html) |
+| [jQuery插件库](http://www.jq22.com/) | [JQuery DrawSVG](http://leocs.me/jquery-drawsvg/) | [36个引人注目JQuery导航菜单](http://www.cnblogs.com/ywqu/archive/2009/08/15/1546559.html) | [如何用纯js做一个大富翁游戏](https://www.cnblogs.com/PeggyChan/p/11075066.html) |
+| [jquery-confirm](http://craftpip.github.io/jquery-confirm/) | [jquery-confirm中文网](https://www.jquery-confirm.cn/) | [Datatables](https://datatables.net/download/) | [jQuery - 第三方表格插件DataTables使用详解5（宽高尺寸、滚动条的设置）](https://www.hangge.com/blog/cache/detail_1986.html) |
 
 
 # K
