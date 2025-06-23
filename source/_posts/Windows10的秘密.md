@@ -16,6 +16,8 @@ C:\Users\Administrator\AppData\Local\Packages\Microsoft.Windows.ContentDeliveryM
 ```
 其中，`Administrator` 是你的用户名。打开后重命名里面的文件，增加后缀名`.jpg`，即可看见你刚刚钟意的壁纸。
 
+<!-- more -->
+
 # 设置任务栏透明效果
 1. 设置 -> 颜色 -> 打开“透明效果”开关
 2. 打开注册表，找到路径：
