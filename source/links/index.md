@@ -33,7 +33,7 @@ description:
 | | | | |
 | ---- | ---- | ---- | ---- |
 | [ChatGPT OpenAI 项目汇总](https://iui.su/2920/) | [AIchatOS](https://chat18.aichatos58.com/#/chat) | [AI网址导航](https://ai-nav.lzw.me/) | [Free2gpt导航](https://nav1.free2gpt.xyz/) |
-| [ChatGPT免费体验在线列表](https://lzw.me/x/chatgpt-sites/) ||| [深言达意](https://www.shenyandayi.com "原反向词典正式升级为智能写作工具。支持筛选词语、成语、惯用语和古汉语等多类别。以词找句") |
+| [ChatGPT免费体验在线列表](https://lzw.me/x/chatgpt-sites/) || [AI工具集官网](https://ai-bot.cn) | [深言达意](https://www.shenyandayi.com "原反向词典正式升级为智能写作工具。支持筛选词语、成语、惯用语和古汉语等多类别。以词找句") |
 | [豆包](https://www.doubao.com/chat/) | [DeepSeek](https://chat.deepseek.com/) | [文心一言](https://yiyan.baidu.com/) | [智谱清言](https://chatglm.cn/main/alltoolsdetail?lang=zh) |
 | [Guidebook数字生活指南](https://nav.guidebook.top/) | [数字素养](https://szsyw.cn/) | [硬核指南](https://yinghezhinan.com/) | [黑点工具](https://hddtool.com/) |
 | [不死鸟发布页](https://dalao.ru/) || [今日热榜](https://tophub.today/) | [摸摸鱼热榜](https://momoyu.cc/) |
@@ -127,7 +127,7 @@ description:
 | [菜鸟图标](https://icon.sucai999.com/) | [最好的12个Icon图标资源网站整理分享出来](https://blog.csdn.net/xiawj8957/article/details/45130263) 
 | [中国色](http://zhongguose.com/) | [色匹网](https://www.wenziyun.cn/yanse/tupianshise) |||
 | [优品PPT](http://www.ypppt.com) 
-| [小白盘](https://www.xiaobaipan.com) | [中华珍宝馆](https://ltfc.net/) || [实况摄像头](https://www.skylinewebcams.com/zh/webcam/maldives/lhaviyani-atoll/kurendhoo/kuredu-island.html) |
+| [UP云搜](https://www.upyunso.com/) | [小白盘](https://www.xiaobaipan.com) | [中华珍宝馆](https://ltfc.net/) | [实况摄像头](https://www.skylinewebcams.com/zh/webcam/maldives/lhaviyani-atoll/kurendhoo/kuredu-island.html) |
 
 
 ## 系统/软件下载
@@ -201,7 +201,7 @@ description:
 |  |  |  |  |
 | ---- | ---- | ---- | ---- |
 | [药房网](https://www.yaofangwang.com/) | [医学微视](https://www.mvyxws.com/) | [A+医学百科](http://www.a-hospital.com/ "在线医学百科全书") | [WikiHow](https://zh.wikihow.com/%E9%A6%96%E9%A1%B5) |
-| [中国高等教育学生信息网（学信网）](https://www.chsi.com.cn/)  | [中国研究生招生信息网](https://yz.chsi.com.cn/) | [宁夏人事考试中心](http://www.nxpta.gov.cn/) ||
+| [中国高等教育学生信息网（学信网）](https://www.chsi.com.cn/)  | [中国研究生招生信息网](https://yz.chsi.com.cn/) | [中国教育考试网](https://tdxl.neea.edu.cn/) | [宁夏人事考试中心](http://www.nxpta.gov.cn/) |
 | [中国国际人才交流基金会项目管理网站](http://exam.chinapmp.cn/) | [PMI](https://www.pmi.org/) | [希赛网](https://www.educity.cn/) |
 | [宁夏机械工程学会](http://www.nxjxgcxh.cn/)                 | [宁夏专业技术人员继续教育培训网](http://nxzj.chinahrt.com/) | [宁夏人事人才管理信息系统-职称评审](http://218.95.135.211:8005/zcps) ||
 | [利通区县域中小学招生转学服务平台](http://www.wzrxbm.cn) ||||
