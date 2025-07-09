@@ -168,3 +168,6 @@ deploy:
 - type: 'git'
   repo: https://gitee.com/yangpiena/testhexo.git
   branch: master
+- type: 'git'
+  repo: https://gitee.com/yangpiena/testhexo.git
+  branch: source
