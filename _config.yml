@@ -166,8 +166,11 @@ deploy:
   repo: https://github.com/yangpiena/yangpiena.github.io.git
   branch: master
 - type: 'git'
-  repo: https://gitee.com/yangpiena/testhexo.git
-  branch: master
+  repo: https://gitee.com/yangpiena/yangpiena.git
+  branch: source
 - type: 'git'
-  repo: https://gitee.com/yangpiena/testhexo.git
+  repo: https://e.coding.net/yangpiena/yangpiena.git
+  branch: source
+- type: 'git'
+  repo: https://github.com/yangpiena/yangpiena.github.io.git
   branch: source
