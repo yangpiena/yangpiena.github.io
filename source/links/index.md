@@ -109,7 +109,7 @@ description:
 | 转换 |  |  |  |
 | ---- | ---- | ---- | ---- |
 | [在线文件转换器](https://cn.office-converter.com/) | [在线格式转换](https://www.alltoall.net/) | [PDF派](https://www.pdfpai.com/) ||
-| [TikTok Voice - 免费在线文字转语音](https://tiktokvoice.net/zh) | [文字转语音](https://d1tools.com/tools/ai-tts/) |||
+| [tts 在线文字转语音服务](https://iui.su/368/) | [TTS Online 文本转语音](https://www.ttson.cn/) | [TTS - 文本转语音](https://www.text-to-speech.cn/) ||
 
 
 # 博客/社区
