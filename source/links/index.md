@@ -205,7 +205,7 @@ description:
 | [中国国际人才交流基金会项目管理网站](http://exam.chinapmp.cn/) | [PMI](https://www.pmi.org/) | [希赛网](https://www.educity.cn/) ||
 | [宁夏机械工程学会](http://www.nxjxgcxh.cn/)                 | [宁夏专业技术人员继续教育培训网](http://nxzj.chinahrt.com/) | [宁夏人事人才管理信息系统-职称评审](http://218.95.135.211:8005/zcps) ||
 | [利通区县域中小学招生转学服务平台](http://www.wzrxbm.cn)      ||||
-| [全国统一规范电子税务局](https://etax.ningxia.chinatax.gov.cn:8443/) ||||
+| [全国统一规范电子税务局](https://etax.ningxia.chinatax.gov.cn:8443/) | [宁夏回族自治区工业和信息化厅](https://gxt.nx.gov.cn/) |||
 
 
 # A
