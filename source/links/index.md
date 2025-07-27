@@ -33,7 +33,7 @@ description:
 | | | | |
 | ---- | ---- | ---- | ---- |
 | [ChatGPT OpenAI 项目汇总](https://iui.su/2920/) | [AIchatOS](https://chat18.aichatos58.com/#/chat) | [AI网址导航](https://ai-nav.lzw.me/) | [Free2gpt导航](https://nav1.free2gpt.xyz/) |
-| [ChatGPT免费体验在线列表](https://lzw.me/x/chatgpt-sites/) || [AI工具集官网](https://ai-bot.cn) | [深言达意](https://www.shenyandayi.com "原反向词典正式升级为智能写作工具。支持筛选词语、成语、惯用语和古汉语等多类别。以词找句") |
+| [ChatGPT免费体验在线列表](https://lzw.me/x/chatgpt-sites/) | [AI TOP100](https://www.aitop100.cn/) | [AI工具集官网](https://ai-bot.cn) | [深言达意](https://www.shenyandayi.com "原反向词典正式升级为智能写作工具。支持筛选词语、成语、惯用语和古汉语等多类别。以词找句") |
 | [豆包](https://www.doubao.com/chat/) | [DeepSeek](https://chat.deepseek.com/) | [文心一言](https://yiyan.baidu.com/) | [智谱清言](https://chatglm.cn/main/alltoolsdetail?lang=zh) |
 | [Guidebook数字生活指南](https://nav.guidebook.top/) | [数字素养](https://szsyw.cn/) | [硬核指南](https://yinghezhinan.com/) | [黑点工具](https://hddtool.com/) |
 | [不死鸟发布页](https://dalao.ru/) || [今日热榜](https://tophub.today/) | [摸摸鱼热榜](https://momoyu.cc/) |
@@ -97,7 +97,7 @@ description:
 
 | 图片 |  |  |  |
 | ---- | ---- | ---- | ---- |
-| [在线PS网页版](https://ps.gitapp.cn/) | [做好图](http://www.zuohaotu.com/) | [MakePic.com 图片制造](http://www.makepic.com/) ||
+| [在线PS网页版](https://ps.gitapp.cn/) | [做好图](http://www.zuohaotu.com/) | [MakePic.com 图片制造](http://www.makepic.com/) | [EditTools](https://edittools.org/zh-cn/image-tools)|
 | [removebg图片背景消除](https://www.remove.bg/ ) | [快速抠图去背工具](https://iui.su/2968/) | [waifu2x无损放大图片](http://waifu2x.udp.jp/index.zh-CN.html) | [图片无限变大](http://bigjpg.com/zh) |
 | [pretty-snap截图美化工具](https://pretty-snap.iwhy.dev/) ||||
 | [流光卡片](https://fireflycard.shushiai.com/zh) | [物言卡片](https://mono.cards/zh) || [草料二维码美化器](http://mh.cli.im/) |
@@ -111,6 +111,9 @@ description:
 | [在线文件转换器](https://cn.office-converter.com/) | [在线格式转换](https://www.alltoall.net/) | [PDF派](https://www.pdfpai.com/) ||
 | [tts 在线文字转语音服务](https://iui.su/368/) | [TTS Online 文本转语音](https://www.ttson.cn/) | [TTS - 文本转语音](https://www.text-to-speech.cn/) ||
 
+| 文案 |  |  |  |
+| ---- | ---- | ---- | ---- |
+| [文案生成器](https://www.gaoding.com/ai/writer/recognition) ||||
 
 # 博客/社区
 |  |  |  |  |
@@ -125,7 +128,7 @@ description:
 | [商用免费字体](https://font.ittools.cc/) ||||
 | [矢量图标库](http://www.iconfont.cn/) | [免费开源图标下载](https://iconduck.com/) | [FontAwesome图标](http://www.fontawesome.com.cn/faicons/) | [Icones](https://icon.ittools.cc/) |
 | [菜鸟图标](https://icon.sucai999.com/) | [最好的12个Icon图标资源网站整理分享出来](https://blog.csdn.net/xiawj8957/article/details/45130263) 
-| [中国色](http://zhongguose.com/) | [色匹网](https://www.wenziyun.cn/yanse/tupianshise) |||
+| [中国色](http://zhongguose.com/) | [色匹网](https://www.wenziyun.cn/yanse/tupianshise) | [RAL国际色号对照表](https://www.aode8.com/ral) ||
 | [优品PPT](http://www.ypppt.com) 
 | [UP云搜](https://www.upyunso.com/) | [小白盘](https://www.xiaobaipan.com) | [中华珍宝馆](https://ltfc.net/) | [实况摄像头](https://www.skylinewebcams.com/zh/webcam/maldives/lhaviyani-atoll/kurendhoo/kuredu-island.html) |
 
@@ -150,6 +153,7 @@ description:
 | ---- | ---- | ---- | ---- |
 | [孔夫子旧书网](https://www.kongfz.com/) 
 | [开源阅读](https://gedoor.github.io/) | [阅读-使用手册](https://www.yuque.com/legado/wiki) | [喵公子发布页](https://fb.miaogongzi.cc/) ||
+| [Reeden现代跨平台电子书阅读器](https://reeden.app/cn) | | | |
 | [全历史](https://www.allhistory.com/ " 全方位了解历史的网站，也是一个不错的网站") | [JOJO看报](https://reader.jojokanbao.cn/) | [互联网知识地图](https://yunyinghui.feishu.cn/wiki/QrvDwaNt4icE2qkZTPSccNKInhh) | [SaltyLeo 的书架](https://book.tstrs.me/search "在这里，收录了数以十万计的电子书，你可以轻松找到想要的任何书。") |
 | [鸠摩搜索](https://www.jiumodiary.com/ "电子书搜索引擎，提供各类电子书搜索下载，有多种格式") | [i-Book.in](https://book.tstrs.me/ " 基于索引IPFS链接的电子书搜索引擎") | [书单网](https://www.shudan.vip/ "电子书搜索网站，抓取第三方网站的资源，也有很多资源是通过城通网赚网盘下载") | [Z-Library 电子书下载](https://iui.su/380/) |
 | [七彩英语](http://www.qcenglish.com/ "提供PDF或TXT格式的英文原版电子书下载") | [Mobilism](https://forum.mobilism.org/viewforum.php?f=19 "电子书论坛，提供英文原版电子书下载") | [好读](http://www.haodoo.net/ "多格式电子书下载网站，很老的一个站") | [云海电子图书馆](http://www.pdfbook.cn/ "基于城通网赚网盘下载的电子书网站") |
@@ -232,6 +236,11 @@ description:
 
 
 # C
+
+## CI/CD
+|  |  |  |  |
+| ---- | ---- | ---- | ---- |
+| [LiteOps - 轻量级 CI/CD 平台](https://liteops.ext4.cn/) | | | |
 
 ## C-sharp
 | 项目框架 |  |  |  |
