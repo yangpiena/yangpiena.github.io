@@ -34,9 +34,9 @@ description:
 | ---- | ---- | ---- | ---- |
 | [ChatGPT OpenAI 项目汇总](https://iui.su/2920/) | [AIchatOS](https://chat18.aichatos58.com/#/chat) | [AI网址导航](https://ai-nav.lzw.me/) | [Free2gpt导航](https://nav1.free2gpt.xyz/) |
 | [ChatGPT免费体验在线列表](https://lzw.me/x/chatgpt-sites/) | [AI TOP100](https://www.aitop100.cn/) | [AI工具集官网](https://ai-bot.cn) | [深言达意](https://www.shenyandayi.com "原反向词典正式升级为智能写作工具。支持筛选词语、成语、惯用语和古汉语等多类别。以词找句") |
-| [豆包](https://www.doubao.com/chat/) | [DeepSeek](https://chat.deepseek.com/) | [文心一言](https://yiyan.baidu.com/) | [智谱清言](https://chatglm.cn/main/alltoolsdetail?lang=zh) |
+| [豆包](https://www.doubao.com/chat/) | [LongCat](https://longcat.chat) | [DeepSeek](https://chat.deepseek.com/) | [智谱清言](https://chatglm.cn/main/alltoolsdetail?lang=zh) |
 | [Guidebook数字生活指南](https://nav.guidebook.top/) | [数字素养](https://szsyw.cn/) | [硬核指南](https://yinghezhinan.com/) | [黑点工具](https://hddtool.com/) |
-| [不死鸟发布页](https://dalao.ru/) || [今日热榜](https://tophub.today/) | [摸摸鱼热榜](https://momoyu.cc/) |
+| [不死鸟发布页](https://dalao.ru/) | [一糖导航](https://iitang.com/) | [今日热榜](https://tophub.today/) | [摸摸鱼热榜](https://momoyu.cc/) |
 
 
 ## 音乐
@@ -109,7 +109,7 @@ description:
 | 转换 |  |  |  |
 | ---- | ---- | ---- | ---- |
 | [在线文件转换器](https://cn.office-converter.com/) | [在线格式转换](https://www.alltoall.net/) | [PDF派](https://www.pdfpai.com/) ||
-| [tts 在线文字转语音服务](https://iui.su/368/) | [TTS Online 文本转语音](https://www.ttson.cn/) | [TTS - 文本转语音](https://www.text-to-speech.cn/) ||
+| [tts 在线文字转语音服务](https://iui.su/368/) | [TTS Online 文本转语音](https://www.ttson.cn/) | [TTS - 文本转语音](https://www.text-to-speech.cn/) | [多种云音乐格式转MP3](https://openyyy.com/) |
 
 | 文案 |  |  |  |
 | ---- | ---- | ---- | ---- |

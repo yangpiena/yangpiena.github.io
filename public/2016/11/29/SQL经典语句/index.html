@@ -153,7 +153,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">96</span>
+          <span class="site-state-item-count">97</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -164,7 +164,7 @@
       </div>
       <div class="site-state-item site-state-tags">
           <a href="/tags/">
-        <span class="site-state-item-count">54</span>
+        <span class="site-state-item-count">55</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
@@ -282,7 +282,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2024-10-12 16:13:54" itemprop="dateModified" datetime="2024-10-12T16:13:54+08:00">2024-10-12</time>
+      <time title="修改时间：2025-07-29 15:38:26" itemprop="dateModified" datetime="2025-07-29T15:38:26+08:00">2025-07-29</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -593,7 +593,7 @@
 <p>可用如下SQL实现：</p>
 <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">  <span class="keyword">SELECT</span> code, name <span class="operator">=</span> (STUFF((<span class="keyword">SELECT</span> <span class="string">&#x27;,&#x27;</span> <span class="operator">+</span> name </span><br><span class="line">                                <span class="keyword">FROM</span> Table1 </span><br><span class="line">                               <span class="keyword">WHERE</span> code <span class="operator">=</span> a.code <span class="keyword">FOR</span> xml PATH(<span class="string">&#x27;&#x27;</span>)),<span class="number">1</span>,<span class="number">1</span>,<span class="string">&#x27;&#x27;</span>))</span><br><span class="line">    <span class="keyword">FROM</span> Table1 a </span><br><span class="line"><span class="keyword">GROUP</span> <span class="keyword">BY</span> code</span><br></pre></td></tr></table></figure>
 
-<h2 id="35-去除字段中空格、换行符、回车符"><a href="#35-去除字段中空格、换行符、回车符" class="headerlink" title="35. 去除字段中空格、换行符、回车符"></a>35. 去除字段中空格、换行符、回车符</h2><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">UPDATE</span> xx_sjb <span class="keyword">SET</span> sl <span class="operator">=</span> LTRIM(RTRIM(REPLACE(REPLACE(sl, <span class="type">CHAR</span>(<span class="number">10</span>), <span class="string">&#x27;&#x27;</span>), <span class="type">CHAR</span> (<span class="number">13</span>), <span class="string">&#x27;&#x27;</span>)))</span><br></pre></td></tr></table></figure>
+<h2 id="35-去除字段中空格、换行符、回车符"><a href="#35-去除字段中空格、换行符、回车符" class="headerlink" title="35. 去除字段中空格、换行符、回车符"></a>35. 去除字段中空格、换行符、回车符</h2><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">UPDATE</span> <span class="keyword">Table</span> <span class="keyword">SET</span> <span class="keyword">Column</span> <span class="operator">=</span> LTRIM(RTRIM(REPLACE(REPLACE(<span class="keyword">Column</span>, <span class="type">CHAR</span>(<span class="number">10</span>), <span class="string">&#x27;&#x27;</span>), <span class="type">CHAR</span> (<span class="number">13</span>), <span class="string">&#x27;&#x27;</span>)))</span><br></pre></td></tr></table></figure>
 
 <hr>
 <h1 id="三-技巧篇"><a href="#三-技巧篇" class="headerlink" title="三. 技巧篇"></a>三. 技巧篇</h1><h2 id="1-1-x3D-1，1-x3D-2的使用，在SQL语句组合时用的较多"><a href="#1-1-x3D-1，1-x3D-2的使用，在SQL语句组合时用的较多" class="headerlink" title="1. 1&#x3D;1，1&#x3D;2的使用，在SQL语句组合时用的较多"></a>1. 1&#x3D;1，1&#x3D;2的使用，在SQL语句组合时用的较多</h2><pre><code>“WHERE 1=1” 表示选择全部
@@ -741,9 +741,9 @@
 
 <hr>
 <h1 id="常识"><a href="#常识" class="headerlink" title="常识"></a>常识</h1><ul>
-<li>在SQL查询中，<code>FROM</code>后最多可以跟256张表或视图</li>
-<li>在SQL语句中使用<code>ORDER BY</code>查询时，先排序，后取值</li>
-<li>在SQL中，一个字段的最大容量是8000</li>
+<li>在SQL语句中 <code>FROM</code> 后最多可以跟 256 张表或视图</li>
+<li>在SQL语句中使用 <code>ORDER BY</code> 查询时，先排序后取值</li>
+<li>在SQL Server数据库表中一个字段的最大容量是 8000</li>
 </ul>
 
     </div>

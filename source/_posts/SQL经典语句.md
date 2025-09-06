@@ -540,7 +540,7 @@ GROUP BY code
 
 ## 35. 去除字段中空格、换行符、回车符
 ```sql
-UPDATE xx_sjb SET sl = LTRIM(RTRIM(REPLACE(REPLACE(sl, CHAR(10), ''), CHAR (13), '')))
+UPDATE Table SET Column = LTRIM(RTRIM(REPLACE(REPLACE(Column, CHAR(10), ''), CHAR (13), '')))
 ```
 
 ---
@@ -1005,7 +1005,7 @@ ORDER BY name
 ---
 
 # 常识
-- 在SQL查询中，`FROM`后最多可以跟256张表或视图
-- 在SQL语句中使用`ORDER BY`查询时，先排序，后取值
-- 在SQL中，一个字段的最大容量是8000
+- 在SQL语句中 `FROM` 后最多可以跟 256 张表或视图
+- 在SQL语句中使用 `ORDER BY` 查询时，先排序后取值
+- 在SQL Server数据库表中一个字段的最大容量是 8000
 
