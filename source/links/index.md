@@ -191,9 +191,10 @@ description:
 | [sqlserver 发布订阅的弊端](https://blog.csdn.net/yangzhawen/article/details/8019921) | [如何在不重装服务器的情况下尝试解决sqlmaint.exe失败的问题](http://blog.csdn.net/zhaoyonghui100/article/details/8939950) | [Sql Server 2000清除日志方法介绍](https://yq.aliyun.com/ziliao/22450) |  |
 
 
-## 网盘
+## 云服务 | 网盘
 |  |  |  |  |
 | ---- | ---- | ---- | ---- |
+| [LeanCloud](https://console.leancloud.cn/apps) | | | |
 | [百度网盘](https://pan.baidu.com) | [坚果云](https://www.jianguoyun.com/) | [夸克网盘](https://pan.quark.cn/) | [webd](https://webd.cf/) |
 | [Nextcloud](https://nextcloud.com/) | [悦库](http://www.ydisk.cn/index.html) | [zaix.ru一个俄罗斯网盘](https://zaix.ru/) | |
 | [自建企业网盘：镜像部署与使用实战](https://www.kancloud.cn/websoft9/cloudbox-practice/647724) | [搭建自己私人网盘-Nextcloud](https://blog.csdn.net/qq_43099160/article/details/107081157) | [CentOS 7下安装Nextcloud搭建个人网盘](https://www.linuxidc.com/Linux/2018-11/155310.htm) | [【伐木厮】使用Nextcloud搭建私有云储存](https://www.bilibili.com/read/cv4853751/) |
