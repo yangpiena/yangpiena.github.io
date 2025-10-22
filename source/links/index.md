@@ -35,7 +35,7 @@ description:
 | [ChatGPT OpenAI 项目汇总](https://iui.su/2920/) | [AIchatOS](https://chat18.aichatos58.com/#/chat) | [AI网址导航](https://ai-nav.lzw.me/) | [Free2gpt导航](https://nav1.free2gpt.xyz/) |
 | [ChatGPT免费体验在线列表](https://lzw.me/x/chatgpt-sites/) | [AI TOP100](https://www.aitop100.cn/) | [AI工具集官网](https://ai-bot.cn) | [深言达意](https://www.shenyandayi.com "原反向词典正式升级为智能写作工具。支持筛选词语、成语、惯用语和古汉语等多类别。以词找句") |
 | [豆包](https://www.doubao.com/chat/) | [LongCat](https://longcat.chat) | [DeepSeek](https://chat.deepseek.com/) | [智谱清言](https://chatglm.cn/main/alltoolsdetail?lang=zh) |
-| [Guidebook数字生活指南](https://nav.guidebook.top/) | [数字素养](https://szsyw.cn/) | [硬核指南](https://yinghezhinan.com/) | [黑点工具](https://hddtool.com/) |
+| [数字素养](https://szsyw.cn/) |  | [硬核指南](https://yinghezhinan.com/) | [黑点工具](https://hddtool.com/) |
 | [不死鸟发布页](https://dalao.ru/) | [一糖导航](https://iitang.com/) | [今日热榜](https://tophub.today/) | [摸摸鱼热榜](https://momoyu.cc/) |
 
 
@@ -145,7 +145,7 @@ description:
 | [浏览迷](https://liulanmi.com/) | [Chrome浏览器插件下载中心](https://www.chajian5.com/) | [Greasy Fork 用户脚本](https://greasyfork.org/zh-CN) | [TamperMonkey TM中文网](https://www.tampermonkey.cn/) |
 | [阅读APP](http://www.legado.top) | [阅读及TTS资源](https://www.123pan.com/s/6chuVv-yiqWd.html) | [MultiTTS 安卓离线语音](https://iui.su/3680/) ||
 | [科学上网](https://hideip.network/) | [极光VPN](https://github.com/getaurora/download) | [瓦特工具箱](https://steampp.net/) ||
-| [IDM蓝奏云下载地址](https://ruanjianya.lanzoum.com/b02w5s0oh) | [文件加速下载](https://b.dalao.ru/g/) |  |  |
+| [IDM蓝奏云下载地址](https://ruanjianya.lanzoum.com/b02w5s0oh) | [文件加速下载](https://b.dalao.ru/g/) | [文件下载服务](https://down.nigx.cn/) |  |
 
 
 ## 阅读/电子书
@@ -158,7 +158,7 @@ description:
 | [鸠摩搜索](https://www.jiumodiary.com/ "电子书搜索引擎，提供各类电子书搜索下载，有多种格式") | [i-Book.in](https://book.tstrs.me/ " 基于索引IPFS链接的电子书搜索引擎") | [书单网](https://www.shudan.vip/ "电子书搜索网站，抓取第三方网站的资源，也有很多资源是通过城通网赚网盘下载") | [Z-Library 电子书下载](https://iui.su/380/) |
 | [七彩英语](http://www.qcenglish.com/ "提供PDF或TXT格式的英文原版电子书下载") | [Mobilism](https://forum.mobilism.org/viewforum.php?f=19 "电子书论坛，提供英文原版电子书下载") | [好读](http://www.haodoo.net/ "多格式电子书下载网站，很老的一个站") | [云海电子图书馆](http://www.pdfbook.cn/ "基于城通网赚网盘下载的电子书网站") |
 | [瑞文网教材](https://www.ruiwen.com/jiaocai/ "提供人教版、北师大、苏教版、沪教版、浙教版、鲁科版、仁爱版英语等电子课本在线阅读") | [人教版中小学教材](https://bp.pep.com.cn/jc/ "人民教育出版社提供的中小学教材电子版下载（转自：免费吧 &raquo; 电子书下载网站大汇总(https://www.mianfeib.me/ebook-download-website.html") |||
-| [秘密花园](http://www.yini.org) | [金句盲盒](http://jinju.yotooapp.com/) |||
+| [秘密花园](http://www.yini.org) | [金句盲盒](http://jinju.yotooapp.com/) | [道德经](https://daodejing.shop/) ||
 
 
 ## 文章/教程
@@ -218,7 +218,7 @@ description:
 ## AI
 |  |  |  |  |
 | ---- | ---- | ---- | ---- |
-| [WeChatAI](https://welm.weixin.qq.com/docs/) | [图片到提示词生成器](https://vheer.com/app/image-to-prompt) |  |  |
+| [WeChatAI](https://welm.weixin.qq.com/docs/) | [图片到提示词生成器](https://vheer.com/app/image-to-prompt) | [全球首款永久免费的AI视频生成器](https://aivideomaker.ai/zh) |  |
 
 
 ## API
