@@ -306,15 +306,14 @@
     
     <div class="post-body" itemprop="articleBody">
         <h1 id="查看当前的npm镜像设置"><a href="#查看当前的npm镜像设置" class="headerlink" title="查看当前的npm镜像设置"></a>查看当前的npm镜像设置</h1><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm config list</span><br></pre></td></tr></table></figure>
-
 <span id="more"></span>
-
 <h1 id="cnpm的卸载和重新安装"><a href="#cnpm的卸载和重新安装" class="headerlink" title="cnpm的卸载和重新安装"></a>cnpm的卸载和重新安装</h1><ol>
 <li>卸载旧版本<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm uninstall -g cnpm --registry=https://registry.npmmirror.com</span><br></pre></td></tr></table></figure></li>
 <li>配置镜像源（淘宝镜像）<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm config set registry https://registry.npmmirror.com</span><br></pre></td></tr></table></figure></li>
 <li>确保node-gyp编译依赖的node源码镜像同步<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm config set disturl https://registry.npmmirror.com/dist</span><br></pre></td></tr></table></figure></li>
 <li>清除缓存<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm cache clean --force</span><br></pre></td></tr></table></figure></li>
-<li>安装新的cnpm版本<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install -g cnpm --registry=https://registry.npmmirror.com</span><br></pre></td></tr></table></figure></li>
+<li>安装新的cnpm版本<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install -g cnpm --registry=https://registry.npmmirror.com</span><br></pre></td></tr></table></figure>
+</li>
 </ol>
 <h1 id="npm升级"><a href="#npm升级" class="headerlink" title="npm升级"></a>npm升级</h1><ul>
 <li>升级到指定版本<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install npm@6.14.17</span><br></pre></td></tr></table></figure></li>
