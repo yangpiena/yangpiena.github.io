@@ -34,7 +34,7 @@ description:
 | ---- | ---- | ---- | ---- |
 | [ChatGPT OpenAI 项目汇总](https://iui.su/2920/) | [AIchatOS](https://chat18.aichatos58.com/#/chat) | [AI网址导航](https://ai-nav.lzw.me/) | [Free2gpt导航](https://nav1.free2gpt.xyz/) |
 | [ChatGPT免费体验在线列表](https://lzw.me/x/chatgpt-sites/) | [AI TOP100](https://www.aitop100.cn/) | [AI工具集官网](https://ai-bot.cn) | [深言达意](https://www.shenyandayi.com "原反向词典正式升级为智能写作工具。支持筛选词语、成语、惯用语和古汉语等多类别。以词找句") |
-| [豆包](https://www.doubao.com/chat/) | [LongCat](https://longcat.chat) | [DeepSeek](https://chat.deepseek.com/) | [智谱清言](https://chatglm.cn/main/alltoolsdetail?lang=zh) |
+| [智谱清言](https://chatglm.cn/main/alltoolsdetail?lang=zh) | [DeepSeek](https://chat.deepseek.com/) | [LongCat](https://longcat.chat) | [豆包](https://www.doubao.com/chat/) |
 | [数字素养](https://szsyw.cn/) |  | [硬核指南](https://yinghezhinan.com/) | [黑点工具](https://hddtool.com/) |
 | [不死鸟发布页](https://dalao.ru/) | [一糖导航](https://iitang.com/) | [今日热榜](https://tophub.today/) | [摸摸鱼热榜](https://momoyu.cc/) |
 
@@ -68,7 +68,7 @@ description:
 |  |  |  |  |
 | ---- | ---- | ---- | ---- |
 | [CNU视觉联盟](http://www.cnu.cc/inspirationPage/recent-0) | [360°航拍全景](https://airpano.org.cn/) | [免费版权图片搜索](https://www.logosc.cn/so/) | [极简壁纸](https://bz.zzzmh.cn/) |
-| [小羿壁纸](https://bz.xiaoyi.vc/) ||||
+| [小羿壁纸](https://bz.xiaoyi.vc/) | [大图居](https://www.datuju.com/bizhi/list_3.html) | | |
 | [百度免费AI图像生成和处理](https://image.baidu.com/) | [免费AI图像生成](https://muryou-aigazou.com/zh) | [Raphael AI 图像生成器](https://raphael.app/zh) | [Lorem Picsum](https://picsum.photos/ "免费的图片占位符生成工具网站") |
 | [HDRify](https://www.hdrify.com/ "上传图片，快速制作亮瞎眼的微信 HDR 头像、表情") | [旧照片修复](https://restoreoldphotos.io/) |||
 
@@ -156,6 +156,7 @@ description:
 | [Reeden现代跨平台电子书阅读器](https://reeden.app/cn) | | | |
 | [全历史](https://www.allhistory.com/ " 全方位了解历史的网站，也是一个不错的网站") | [JOJO看报](https://reader.jojokanbao.cn/) | [互联网知识地图](https://yunyinghui.feishu.cn/wiki/QrvDwaNt4icE2qkZTPSccNKInhh) | [SaltyLeo 的书架](https://book.tstrs.me/search "在这里，收录了数以十万计的电子书，你可以轻松找到想要的任何书。") |
 | [鸠摩搜索](https://www.jiumodiary.com/ "电子书搜索引擎，提供各类电子书搜索下载，有多种格式") | [i-Book.in](https://book.tstrs.me/ " 基于索引IPFS链接的电子书搜索引擎") | [书单网](https://www.shudan.vip/ "电子书搜索网站，抓取第三方网站的资源，也有很多资源是通过城通网赚网盘下载") | [Z-Library 电子书下载](https://iui.su/380/) |
+| [520小说网](https://www.txt520.org/) | [读书派](https://www.dushupai.com/) ||
 | [七彩英语](http://www.qcenglish.com/ "提供PDF或TXT格式的英文原版电子书下载") | [Mobilism](https://forum.mobilism.org/viewforum.php?f=19 "电子书论坛，提供英文原版电子书下载") | [好读](http://www.haodoo.net/ "多格式电子书下载网站，很老的一个站") | [云海电子图书馆](http://www.pdfbook.cn/ "基于城通网赚网盘下载的电子书网站") |
 | [瑞文网教材](https://www.ruiwen.com/jiaocai/ "提供人教版、北师大、苏教版、沪教版、浙教版、鲁科版、仁爱版英语等电子课本在线阅读") | [人教版中小学教材](https://bp.pep.com.cn/jc/ "人民教育出版社提供的中小学教材电子版下载（转自：免费吧 &raquo; 电子书下载网站大汇总(https://www.mianfeib.me/ebook-download-website.html") |||
 | [秘密花园](http://www.yini.org) | [金句盲盒](http://jinju.yotooapp.com/) | [道德经](https://daodejing.shop/) ||
