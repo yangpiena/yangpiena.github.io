@@ -53,7 +53,7 @@ description:
 | [映像讯](http://mkv.cn/) | [影视森林](http://www.549.tv/) || [免费的在线影视网站汇总](https://iao.su/531/) |
 | [美剧粉](http://www.mjf2020.com/) | [HDmoli](https://molicp.com/) | [4kHDR世界](https://www.4khdr.cn/) | [注释影视](https://gaze.run/) |
 | [可可影视](https://www.keke9.com/) | [可可影视](https://www.keke12.com:51111) | [可可影视](https://www.keke13.com) | [可可影视](https://www.keke14.com) |
-| [lemonlive](https://lemonlive.deno.dev) ||| [金牌影院](https://fjvtw.com/) |
+| [lemonlive](https://lemonlive.deno.dev) | [24 小时恐怖片直播间](http://xn--24-eo1di1mji74uznc0x5b2tjq81f.com/) || [金牌影院](https://fjvtw.com/) |
 | [4K指南](https://xuexizhinan.com/ "4k 电影网盘分享站") | [简单TV](https://jiandantv.com/) | [发现TV](https://faxiantv.com/) | [亿苯正经的Alist库](https://pan.lm379.cn/) |
 
 
@@ -70,7 +70,7 @@ description:
 | [CNU视觉联盟](http://www.cnu.cc/inspirationPage/recent-0) | [360°航拍全景](https://airpano.org.cn/) | [免费版权图片搜索](https://www.logosc.cn/so/) | [极简壁纸](https://bz.zzzmh.cn/) |
 | [小羿壁纸](https://bz.xiaoyi.vc/) | [大图居](https://www.datuju.com/bizhi/list_3.html) | | |
 | [百度免费AI图像生成和处理](https://image.baidu.com/) | [免费AI图像生成](https://muryou-aigazou.com/zh) | [Raphael AI 图像生成器](https://raphael.app/zh) | [Lorem Picsum](https://picsum.photos/ "免费的图片占位符生成工具网站") |
-| [HDRify](https://www.hdrify.com/ "上传图片，快速制作亮瞎眼的微信 HDR 头像、表情") | [旧照片修复](https://restoreoldphotos.io/) |||
+| [Collaigo拼图](https://www.collaigo.com/zh/editor "免费在线拼图工具") | [HDRify](https://www.hdrify.com/ "上传图片，快速制作亮瞎眼的微信 HDR 头像、表情") | [旧照片修复](https://restoreoldphotos.io/) | [Image Extractor](https://imageextractor.plus/ "一键提取文件和网页中的图片") |
 
 
 # 在线工具
@@ -85,7 +85,7 @@ description:
 | ---- | ---- | ---- | ---- |
 | [在线工具](http://tool.lu/) | [OSChina开发工具](http://tool.oschina.net/) | [UU在线工具](https://uutool.cn/) | [极速箱](https://jisuxiang.com/) |
 | [产品工具箱](https://www.y3pm.com/) | [千盒工具](https://1000tool.com/) | [独特工具箱](https://www.dute.org/) | [偷懒工具](https://toolight.cn) |
-| [Quick Reference](https://quickref.cn/ "为开发人员分享快速参考备忘清单【速查表】") ||||
+| [Quick Reference](https://quickref.cn/ "为开发人员分享快速参考备忘清单【速查表】") | [小鱼工具箱](https://io5.cn/) |||
 
 | 设计 |  |  |  |
 | ---- | ---- | ---- | ---- |
