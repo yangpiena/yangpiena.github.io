@@ -1,0 +1,944 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222"><meta name="generator" content="Hexo 6.3.0">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/img/avatar/ironman.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/img/avatar/favicon.ico">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdnjs.loli.net/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha256-Z1K5uhUaJXA7Ll0XrZ/0JhX4lAtZFpT6jkKrEDT0drU=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.loli.net/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"yangpiena.gitee.io","root":"/","images":"/images","scheme":"Gemini","darkmode":false,"version":"8.14.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":true,"style":"default"},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
+
+
+
+<link rel="canonical" href="https://yangpiena.gitee.io/2016/11/29/SQL%E7%BB%8F%E5%85%B8%E8%AF%AD%E5%8F%A5/">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://yangpiena.gitee.io/2016/11/29/SQL%E7%BB%8F%E5%85%B8%E8%AF%AD%E5%8F%A5/","path":"2016/11/29/SQL经典语句/","title":"SQL经典语句"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>SQL经典语句 | 昜丿捺</title>
+  
+
+
+
+
+
+
+  <script async defer data-website-id="" src=""></script>
+
+  <script defer data-domain="" src=""></script>
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">昜丿捺</p>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">没有阳光，沉默而居</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="搜索" role="button">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a></li><li class="menu-item menu-item-links"><a href="/links" rel="section"><i class="fa fa-star fa-fw"></i>收藏</a></li><li class="menu-item menu-item-photos"><a href="/photos" rel="section"><i class="fa fa-camera fa-fw"></i>相册</a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup"><div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off" maxlength="80"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close" role="button">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div class="search-result-container no-result">
+  <div class="search-result-icon">
+    <i class="fa fa-spinner fa-pulse fa-5x"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%B8%80-%E5%9F%BA%E7%A1%80%E7%AF%87"><span class="nav-number">1.</span> <span class="nav-text">一. 基础篇</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-%E5%88%9B%E5%BB%BA%E6%95%B0%E6%8D%AE%E5%BA%93"><span class="nav-number">1.1.</span> <span class="nav-text">1. 创建数据库</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-%E5%88%A0%E9%99%A4%E6%95%B0%E6%8D%AE%E5%BA%93"><span class="nav-number">1.2.</span> <span class="nav-text">2. 删除数据库</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-%E5%A4%87%E4%BB%BDsql-server"><span class="nav-number">1.3.</span> <span class="nav-text">3. 备份sql server</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-%E5%88%9B%E5%BB%BA%E6%96%B0%E8%A1%A8"><span class="nav-number">1.4.</span> <span class="nav-text">4. 创建新表</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-%E5%88%A0%E9%99%A4%E6%96%B0%E8%A1%A8"><span class="nav-number">1.5.</span> <span class="nav-text">5. 删除新表</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6-%E5%A2%9E%E5%8A%A0%E4%B8%80%E4%B8%AA%E5%88%97"><span class="nav-number">1.6.</span> <span class="nav-text">6. 增加一个列</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#7-%E6%B7%BB%E5%8A%A0%E4%B8%BB%E9%94%AE"><span class="nav-number">1.7.</span> <span class="nav-text">7. 添加主键</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#8-%E5%88%9B%E5%BB%BA%E7%B4%A2%E5%BC%95"><span class="nav-number">1.8.</span> <span class="nav-text">8. 创建索引</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#9-%E5%88%9B%E5%BB%BA%E8%A7%86%E5%9B%BE"><span class="nav-number">1.9.</span> <span class="nav-text">9. 创建视图</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#10-%E5%87%A0%E4%B8%AA%E7%AE%80%E5%8D%95%E7%9A%84%E5%9F%BA%E6%9C%ACsql%E8%AF%AD%E5%8F%A5"><span class="nav-number">1.10.</span> <span class="nav-text">10. 几个简单的基本sql语句</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#11-%E5%87%A0%E4%B8%AA%E9%AB%98%E7%BA%A7%E6%9F%A5%E8%AF%A2%E8%BF%90%E7%AE%97%E8%AF%8D"><span class="nav-number">1.11.</span> <span class="nav-text">11. 几个高级查询运算词</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#12-%E4%BD%BF%E7%94%A8%E5%A4%96%E8%BF%9E%E6%8E%A5"><span class="nav-number">1.12.</span> <span class="nav-text">12. 使用外连接</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#13-%E5%88%86%E7%BB%84-Group-by"><span class="nav-number">1.13.</span> <span class="nav-text">13. 分组:Group by</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#14-%E5%AF%B9%E6%95%B0%E6%8D%AE%E5%BA%93%E8%BF%9B%E8%A1%8C%E6%93%8D%E4%BD%9C"><span class="nav-number">1.14.</span> <span class="nav-text">14. 对数据库进行操作</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#15-%E5%A6%82%E4%BD%95%E4%BF%AE%E6%94%B9%E6%95%B0%E6%8D%AE%E5%BA%93%E7%9A%84%E5%90%8D%E7%A7%B0"><span class="nav-number">1.15.</span> <span class="nav-text">15. 如何修改数据库的名称</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#16-%E6%9F%A5%E8%AF%A2%E5%AD%97%E6%AE%B5ID%E6%9C%80%E5%A4%A7%E5%80%BC%E7%9A%84%E8%AE%B0%E5%BD%95"><span class="nav-number">1.16.</span> <span class="nav-text">16. 查询字段ID最大值的记录</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#17-%E6%9F%A5%E8%AF%A2%E6%9F%90%E4%B8%80%E5%88%97%E7%9A%84%E9%87%8D%E5%A4%8D%E9%A1%B9%E5%86%85%E5%AE%B9"><span class="nav-number">1.17.</span> <span class="nav-text">17. 查询某一列的重复项内容</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#18-%E5%88%A4%E6%96%AD%E8%A1%A8%E4%B8%AD%E6%98%AF%E5%90%A6%E5%AD%98%E5%9C%A8%E8%AE%B0%E5%BD%95"><span class="nav-number">1.18.</span> <span class="nav-text">18. 判断表中是否存在记录</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%BA%8C-%E6%8F%90%E5%8D%87%E7%AF%87"><span class="nav-number">2.</span> <span class="nav-text">二. 提升篇</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-%E5%A4%8D%E5%88%B6%E8%A1%A8-%E5%8F%AA%E5%A4%8D%E5%88%B6%E7%BB%93%E6%9E%84-%E6%BA%90%E8%A1%A8%E5%90%8D%EF%BC%9Aa-%E6%96%B0%E8%A1%A8%E5%90%8D%EF%BC%9Ab-Access%E5%8F%AF%E7%94%A8"><span class="nav-number">2.1.</span> <span class="nav-text">1. 复制表(只复制结构,源表名：a 新表名：b) (Access可用)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-%E6%8B%B7%E8%B4%9D%E8%A1%A8-%E6%8B%B7%E8%B4%9D%E6%95%B0%E6%8D%AE-%E6%BA%90%E8%A1%A8%E5%90%8D%EF%BC%9Aa-%E7%9B%AE%E6%A0%87%E8%A1%A8%E5%90%8D%EF%BC%9Ab-Access%E5%8F%AF%E7%94%A8"><span class="nav-number">2.2.</span> <span class="nav-text">2. 拷贝表(拷贝数据,源表名：a 目标表名：b) (Access可用)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-%E8%B7%A8%E6%95%B0%E6%8D%AE%E5%BA%93%E4%B9%8B%E9%97%B4%E8%A1%A8%E7%9A%84%E6%8B%B7%E8%B4%9D-%E5%85%B7%E4%BD%93%E6%95%B0%E6%8D%AE%E4%BD%BF%E7%94%A8%E7%BB%9D%E5%AF%B9%E8%B7%AF%E5%BE%84-Access%E5%8F%AF%E7%94%A8"><span class="nav-number">2.3.</span> <span class="nav-text">3. 跨数据库之间表的拷贝(具体数据使用绝对路径) (Access可用)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-%E5%AD%90%E6%9F%A5%E8%AF%A2-%E8%A1%A8%E5%90%8D1%EF%BC%9Aa-%E8%A1%A8%E5%90%8D2%EF%BC%9Ab"><span class="nav-number">2.4.</span> <span class="nav-text">4. 子查询(表名1：a 表名2：b)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-%E6%98%BE%E7%A4%BA%E6%96%87%E7%AB%A0%E3%80%81%E6%8F%90%E4%BA%A4%E4%BA%BA%E5%92%8C%E6%9C%80%E5%90%8E%E5%9B%9E%E5%A4%8D%E6%97%B6%E9%97%B4"><span class="nav-number">2.5.</span> <span class="nav-text">5. 显示文章、提交人和最后回复时间</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6-%E5%A4%96%E8%BF%9E%E6%8E%A5%E6%9F%A5%E8%AF%A2-%E8%A1%A8%E5%90%8D1%EF%BC%9Aa-%E8%A1%A8%E5%90%8D2%EF%BC%9Ab"><span class="nav-number">2.6.</span> <span class="nav-text">6. 外连接查询(表名1：a 表名2：b)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#7-%E5%9C%A8%E7%BA%BF%E8%A7%86%E5%9B%BE%E6%9F%A5%E8%AF%A2-%E8%A1%A8%E5%90%8D1%EF%BC%9Aa"><span class="nav-number">2.7.</span> <span class="nav-text">7. 在线视图查询(表名1：a )</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#8-between%E7%9A%84%E7%94%A8%E6%B3%95-between%E9%99%90%E5%88%B6%E6%9F%A5%E8%AF%A2%E6%95%B0%E6%8D%AE%E8%8C%83%E5%9B%B4%E6%97%B6%E5%8C%85%E6%8B%AC%E4%BA%86%E8%BE%B9%E7%95%8C%E5%80%BC-NOT-between%E4%B8%8D%E5%8C%85%E6%8B%AC"><span class="nav-number">2.8.</span> <span class="nav-text">8. between的用法,between限制查询数据范围时包括了边界值,NOT between不包括</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#9-IN-%E7%9A%84%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95"><span class="nav-number">2.9.</span> <span class="nav-text">9. IN 的使用方法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#10-%E4%B8%A4%E5%BC%A0%E5%85%B3%E8%81%94%E8%A1%A8%EF%BC%8C%E5%88%A0%E9%99%A4%E4%B8%BB%E8%A1%A8%E4%B8%AD%E5%B7%B2%E7%BB%8F%E5%9C%A8%E5%89%AF%E8%A1%A8%E4%B8%AD%E6%B2%A1%E6%9C%89%E7%9A%84%E4%BF%A1%E6%81%AF"><span class="nav-number">2.10.</span> <span class="nav-text">10. 两张关联表，删除主表中已经在副表中没有的信息</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#11-%E5%9B%9B%E8%A1%A8%E8%81%94%E6%9F%A5%E9%97%AE%E9%A2%98"><span class="nav-number">2.11.</span> <span class="nav-text">11. 四表联查问题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#12-%E6%97%A5%E7%A8%8B%E5%AE%89%E6%8E%92%E6%8F%90%E5%89%8D%E4%BA%94%E5%88%86%E9%92%9F%E6%8F%90%E9%86%92"><span class="nav-number">2.12.</span> <span class="nav-text">12. 日程安排提前五分钟提醒</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#13-%E4%B8%80%E6%9D%A1sql%E8%AF%AD%E5%8F%A5%E6%90%9E%E5%AE%9A%E6%95%B0%E6%8D%AE%E5%BA%93%E5%88%86%E9%A1%B5"><span class="nav-number">2.13.</span> <span class="nav-text">13. 一条sql语句搞定数据库分页</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#14-%E5%89%8D10%E6%9D%A1%E8%AE%B0%E5%BD%95"><span class="nav-number">2.14.</span> <span class="nav-text">14. 前10条记录</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#15-%E9%80%89%E6%8B%A9%E5%9C%A8%E6%AF%8F%E4%B8%80%E7%BB%84b%E5%80%BC%E7%9B%B8%E5%90%8C%E7%9A%84%E6%95%B0%E6%8D%AE%E4%B8%AD%E5%AF%B9%E5%BA%94%E7%9A%84a%E6%9C%80%E5%A4%A7%E7%9A%84%E8%AE%B0%E5%BD%95%E7%9A%84%E6%89%80%E6%9C%89%E4%BF%A1%E6%81%AF-%E7%B1%BB%E4%BC%BC%E8%BF%99%E6%A0%B7%E7%9A%84%E7%94%A8%E6%B3%95%E5%8F%AF%E4%BB%A5%E7%94%A8%E4%BA%8E%E8%AE%BA%E5%9D%9B%E6%AF%8F%E6%9C%88%E6%8E%92%E8%A1%8C%E6%A6%9C-%E6%AF%8F%E6%9C%88%E7%83%AD%E9%94%80%E4%BA%A7%E5%93%81%E5%88%86%E6%9E%90-%E6%8C%89%E7%A7%91%E7%9B%AE%E6%88%90%E7%BB%A9%E6%8E%92%E5%90%8D-%E7%AD%89%E7%AD%89"><span class="nav-number">2.15.</span> <span class="nav-text">15. 选择在每一组b值相同的数据中对应的a最大的记录的所有信息(类似这样的用法可以用于论坛每月排行榜,每月热销产品分析,按科目成绩排名,等等.)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#16-%E5%8C%85%E6%8B%AC%E6%89%80%E6%9C%89%E5%9C%A8-TableA-%E4%B8%AD%E4%BD%86%E4%B8%8D%E5%9C%A8-TableB%E5%92%8CTableC-%E4%B8%AD%E7%9A%84%E8%A1%8C%E5%B9%B6%E6%B6%88%E9%99%A4%E6%89%80%E6%9C%89%E9%87%8D%E5%A4%8D%E8%A1%8C%E8%80%8C%E6%B4%BE%E7%94%9F%E5%87%BA%E4%B8%80%E4%B8%AA%E7%BB%93%E6%9E%9C%E8%A1%A8"><span class="nav-number">2.16.</span> <span class="nav-text">16. 包括所有在 TableA 中但不在 TableB和TableC 中的行并消除所有重复行而派生出一个结果表</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#17-%E9%9A%8F%E6%9C%BA%E5%8F%96%E5%87%BA10%E6%9D%A1%E6%95%B0%E6%8D%AE"><span class="nav-number">2.17.</span> <span class="nav-text">17. 随机取出10条数据</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#18-%E9%9A%8F%E6%9C%BA%E9%80%89%E6%8B%A9%E8%AE%B0%E5%BD%95"><span class="nav-number">2.18.</span> <span class="nav-text">18. 随机选择记录</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#19-%E5%88%A0%E9%99%A4%E9%87%8D%E5%A4%8D%E8%AE%B0%E5%BD%95"><span class="nav-number">2.19.</span> <span class="nav-text">19. 删除重复记录</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#20-%E5%88%97%E5%87%BA%E6%95%B0%E6%8D%AE%E5%BA%93%E9%87%8C%E6%89%80%E6%9C%89%E7%9A%84%E8%A1%A8%E5%90%8D"><span class="nav-number">2.20.</span> <span class="nav-text">20. 列出数据库里所有的表名</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#21-%E5%88%97%E5%87%BA%E8%A1%A8%E9%87%8C%E7%9A%84%E6%89%80%E6%9C%89%E7%9A%84%E5%88%97%E5%90%8D"><span class="nav-number">2.21.</span> <span class="nav-text">21. 列出表里的所有的列名</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#22-%E5%88%97%E7%A4%BAtype%E3%80%81vender%E3%80%81pcs%E5%AD%97%E6%AE%B5%EF%BC%8C%E4%BB%A5type%E5%AD%97%E6%AE%B5%E6%8E%92%E5%88%97%EF%BC%8Ccase%E5%8F%AF%E4%BB%A5%E6%96%B9%E4%BE%BF%E5%9C%B0%E5%AE%9E%E7%8E%B0%E5%A4%9A%E9%87%8D%E9%80%89%E6%8B%A9%EF%BC%8C%E7%B1%BB%E4%BC%BCSELECT-%E4%B8%AD%E7%9A%84case%E3%80%82"><span class="nav-number">2.22.</span> <span class="nav-text">22. 列示type、vender、pcs字段，以type字段排列，case可以方便地实现多重选择，类似SELECT 中的case。</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#23-%E5%88%9D%E5%A7%8B%E5%8C%96%E8%A1%A8"><span class="nav-number">2.23.</span> <span class="nav-text">23. 初始化表</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#24-%E9%80%89%E6%8B%A9%E4%BB%8E10%E5%88%B015%E7%9A%84%E8%AE%B0%E5%BD%95"><span class="nav-number">2.24.</span> <span class="nav-text">24. 选择从10到15的记录</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#25-%E4%B8%B4%E6%97%B6%E8%A1%A8"><span class="nav-number">2.25.</span> <span class="nav-text">25. 临时表</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%88%9B%E5%BB%BA%E4%B8%B4%E6%97%B6%E8%A1%A8"><span class="nav-number">2.25.0.1.</span> <span class="nav-text">创建临时表</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%9F%A5%E8%AF%A2%E4%B8%B4%E6%97%B6%E8%A1%A8"><span class="nav-number">2.25.0.2.</span> <span class="nav-text">查询临时表</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%88%A0%E9%99%A4%E4%B8%B4%E6%97%B6%E8%A1%A8"><span class="nav-number">2.25.0.3.</span> <span class="nav-text">删除临时表</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#26-%E5%85%B3%E8%81%94%E8%A1%A8%E6%9B%B4%E6%96%B0"><span class="nav-number">2.26.</span> <span class="nav-text">26. 关联表更新</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#27-%E6%9F%A5%E7%9C%8B%E8%A1%A8%E7%9A%84%E6%89%80%E6%9C%89%E5%A4%96%E9%94%AE%E5%85%B3%E7%B3%BB"><span class="nav-number">2.27.</span> <span class="nav-text">27. 查看表的所有外键关系</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#28-%E5%88%A0%E9%99%A4%E6%89%80%E6%9C%89%E7%BA%A6%E6%9D%9F"><span class="nav-number">2.28.</span> <span class="nav-text">28. 删除所有约束</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#29-%E5%88%A0%E9%99%A4%E6%95%B0%E6%8D%AE%E5%BA%93%E6%89%80%E6%9C%89%E8%A1%A8"><span class="nav-number">2.29.</span> <span class="nav-text">29. 删除数据库所有表</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#30-%E5%88%A0%E9%99%A4%E5%A4%96%E9%94%AE%E7%BA%A6%E6%9D%9F"><span class="nav-number">2.30.</span> <span class="nav-text">30. 删除外键约束</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#31-%E6%9F%A5%E6%89%BE%E6%8C%87%E5%AE%9A%E6%95%B0%E6%8D%AE%E5%BA%93%E8%A1%A8%E7%9A%84%E5%88%97%E5%90%8D%E3%80%81%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E3%80%81%E6%95%B0%E6%8D%AE%E9%95%BF%E5%BA%A6%E3%80%81%E6%B3%A8%E9%87%8A"><span class="nav-number">2.31.</span> <span class="nav-text">31. 查找指定数据库表的列名、数据类型、数据长度、注释</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#32-%E5%90%8C%E6%AD%A5%E8%A1%A8%E6%95%B0%E6%8D%AE"><span class="nav-number">2.32.</span> <span class="nav-text">32. 同步表数据</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#33-%E5%88%A4%E6%96%AD%E6%9F%90%E5%88%97%E4%B8%AD%E6%98%AF%E5%90%A6%E5%8C%85%E5%90%AB%E4%B8%AD%E6%96%87%E5%AD%97%E7%AC%A6%E6%88%96%E8%80%85%E8%8B%B1%E6%96%87%E5%AD%97%E7%AC%A6%E7%AD%89%E7%89%B9%E6%AE%8A%E5%AD%97%E7%AC%A6"><span class="nav-number">2.33.</span> <span class="nav-text">33. 判断某列中是否包含中文字符或者英文字符等特殊字符</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#34-%E8%A1%8C%E8%BD%AC%E5%88%97%EF%BC%8C%E5%B0%86%E5%A4%9A%E8%A1%8C%E6%95%B0%E6%8D%AE%E5%90%88%E5%B9%B6%E6%88%90%E4%B8%80%E8%A1%8C%EF%BC%88SQL-SERVER-2005%E4%BB%A5%E4%B8%8A%E6%94%AF%E6%8C%81%EF%BC%89"><span class="nav-number">2.34.</span> <span class="nav-text">34. 行转列，将多行数据合并成一行（SQL SERVER 2005以上支持）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#35-%E5%8E%BB%E9%99%A4%E5%AD%97%E6%AE%B5%E4%B8%AD%E7%A9%BA%E6%A0%BC%E3%80%81%E6%8D%A2%E8%A1%8C%E7%AC%A6%E3%80%81%E5%9B%9E%E8%BD%A6%E7%AC%A6"><span class="nav-number">2.35.</span> <span class="nav-text">35. 去除字段中空格、换行符、回车符</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%B8%89-%E6%8A%80%E5%B7%A7%E7%AF%87"><span class="nav-number">3.</span> <span class="nav-text">三. 技巧篇</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-1-x3D-1%EF%BC%8C1-x3D-2%E7%9A%84%E4%BD%BF%E7%94%A8%EF%BC%8C%E5%9C%A8SQL%E8%AF%AD%E5%8F%A5%E7%BB%84%E5%90%88%E6%97%B6%E7%94%A8%E7%9A%84%E8%BE%83%E5%A4%9A"><span class="nav-number">3.1.</span> <span class="nav-text">1. 1&#x3D;1，1&#x3D;2的使用，在SQL语句组合时用的较多</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-%E6%94%B6%E7%BC%A9%E6%95%B0%E6%8D%AE%E5%BA%93"><span class="nav-number">3.2.</span> <span class="nav-text">2. 收缩数据库</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-%E5%8E%8B%E7%BC%A9%E6%95%B0%E6%8D%AE%E5%BA%93"><span class="nav-number">3.3.</span> <span class="nav-text">3. 压缩数据库</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-%E8%BD%AC%E7%A7%BB%E6%95%B0%E6%8D%AE%E5%BA%93%E7%BB%99%E6%96%B0%E7%94%A8%E6%88%B7%E4%BB%A5%E5%B7%B2%E5%AD%98%E5%9C%A8%E7%94%A8%E6%88%B7%E6%9D%83%E9%99%90"><span class="nav-number">3.4.</span> <span class="nav-text">4. 转移数据库给新用户以已存在用户权限</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-%E6%A3%80%E6%9F%A5%E5%A4%87%E4%BB%BD%E9%9B%86"><span class="nav-number">3.5.</span> <span class="nav-text">5. 检查备份集</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6-%E4%BF%AE%E5%A4%8D%E6%95%B0%E6%8D%AE%E5%BA%93"><span class="nav-number">3.6.</span> <span class="nav-text">6. 修复数据库</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#7-%E6%97%A5%E5%BF%97%E6%B8%85%E9%99%A4"><span class="nav-number">3.7.</span> <span class="nav-text">7. 日志清除</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#8-%E6%9B%B4%E6%94%B9%E6%9F%90%E4%B8%AA%E8%A1%A8"><span class="nav-number">3.8.</span> <span class="nav-text">8. 更改某个表</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#9-%E5%AD%98%E5%82%A8%E6%9B%B4%E6%94%B9%E5%85%A8%E9%83%A8%E8%A1%A8"><span class="nav-number">3.9.</span> <span class="nav-text">9. 存储更改全部表</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#10-SQL-SERVER%E4%B8%AD%E7%9B%B4%E6%8E%A5%E5%BE%AA%E7%8E%AF%E5%86%99%E5%85%A5%E6%95%B0%E6%8D%AE"><span class="nav-number">3.10.</span> <span class="nav-text">10. SQL SERVER中直接循环写入数据</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#11-%E6%9F%A5%E7%9C%8B%E6%95%B0%E6%8D%AE%E5%BA%93%E5%B1%9E%E6%80%A7"><span class="nav-number">3.11.</span> <span class="nav-text">11. 查看数据库属性</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#12-%E6%8C%89%E5%A7%93%E6%B0%8F%E7%AC%94%E7%94%BB%E6%8E%92%E5%BA%8F"><span class="nav-number">3.12.</span> <span class="nav-text">12. 按姓氏笔画排序:</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#13-%E6%95%B0%E6%8D%AE%E5%BA%93%E5%8A%A0%E5%AF%86"><span class="nav-number">3.13.</span> <span class="nav-text">13. 数据库加密:</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#14-%E5%8F%96%E5%9B%9E%E8%A1%A8%E4%B8%AD%E5%AD%97%E6%AE%B5"><span class="nav-number">3.14.</span> <span class="nav-text">14. 取回表中字段:</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#15-%E6%9F%A5%E7%9C%8B%E7%A1%AC%E7%9B%98%E5%88%86%E5%8C%BA"><span class="nav-number">3.15.</span> <span class="nav-text">15. 查看硬盘分区:</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#16-%E6%AF%94%E8%BE%83A-B%E8%A1%A8%E6%98%AF%E5%90%A6%E7%9B%B8%E7%AD%89"><span class="nav-number">3.16.</span> <span class="nav-text">16. 比较A,B表是否相等:</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#17-%E6%9D%80%E6%8E%89%E6%89%80%E6%9C%89%E7%9A%84%E4%BA%8B%E4%BB%B6%E6%8E%A2%E5%AF%9F%E5%99%A8%E8%BF%9B%E7%A8%8B"><span class="nav-number">3.17.</span> <span class="nav-text">17. 杀掉所有的事件探察器进程:</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#18-%E8%AE%B0%E5%BD%95%E6%90%9C%E7%B4%A2"><span class="nav-number">3.18.</span> <span class="nav-text">18. 记录搜索:</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#19-%E8%8E%B7%E5%8F%96%E5%BD%93%E5%89%8D%E6%95%B0%E6%8D%AE%E5%BA%93%E4%B8%AD%E7%9A%84%E6%89%80%E6%9C%89%E7%94%A8%E6%88%B7%E8%A1%A8"><span class="nav-number">3.19.</span> <span class="nav-text">19. 获取当前数据库中的所有用户表</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#20-%E8%8E%B7%E5%8F%96%E6%9F%90%E4%B8%80%E4%B8%AA%E8%A1%A8%E7%9A%84%E6%89%80%E6%9C%89%E5%AD%97%E6%AE%B5"><span class="nav-number">3.20.</span> <span class="nav-text">20. 获取某一个表的所有字段</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#21-%E6%9F%A5%E7%9C%8B%E4%B8%8E%E6%9F%90%E4%B8%80%E4%B8%AA%E8%A1%A8%E7%9B%B8%E5%85%B3%E7%9A%84%E8%A7%86%E5%9B%BE%E3%80%81%E5%AD%98%E5%82%A8%E8%BF%87%E7%A8%8B%E3%80%81%E5%87%BD%E6%95%B0"><span class="nav-number">3.21.</span> <span class="nav-text">21. 查看与某一个表相关的视图、存储过程、函数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#22-%E6%9F%A5%E7%9C%8B%E5%BD%93%E5%89%8D%E6%95%B0%E6%8D%AE%E5%BA%93%E4%B8%AD%E6%89%80%E6%9C%89%E5%AD%98%E5%82%A8%E8%BF%87%E7%A8%8B"><span class="nav-number">3.22.</span> <span class="nav-text">22. 查看当前数据库中所有存储过程</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#23-%E6%9F%A5%E8%AF%A2%E7%94%A8%E6%88%B7%E5%88%9B%E5%BB%BA%E7%9A%84%E6%89%80%E6%9C%89%E6%95%B0%E6%8D%AE%E5%BA%93"><span class="nav-number">3.23.</span> <span class="nav-text">23. 查询用户创建的所有数据库</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#24-%E6%9F%A5%E8%AF%A2%E6%9F%90%E4%B8%80%E4%B8%AA%E8%A1%A8%E7%9A%84%E5%AD%97%E6%AE%B5%E5%92%8C%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B"><span class="nav-number">3.24.</span> <span class="nav-text">24. 查询某一个表的字段和数据类型</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#25-%E4%B8%8D%E5%90%8C%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%95%B0%E6%8D%AE%E5%BA%93%E4%B9%8B%E9%97%B4%E7%9A%84%E6%95%B0%E6%8D%AE%E6%93%8D%E4%BD%9C"><span class="nav-number">3.25.</span> <span class="nav-text">25. 不同服务器数据库之间的数据操作</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#25-1-%E5%88%9B%E5%BB%BA%E9%93%BE%E6%8E%A5%E6%9C%8D%E5%8A%A1%E5%99%A8"><span class="nav-number">3.25.0.1.</span> <span class="nav-text">25.1 创建链接服务器</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#25-2-%E9%93%BE%E6%8E%A5%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%9B%B8%E5%85%B3%E6%95%B0%E6%8D%AE%E6%93%8D%E4%BD%9C"><span class="nav-number">3.25.0.2.</span> <span class="nav-text">25.2 链接服务器相关数据操作</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#25-3-%E5%88%A0%E9%99%A4%E9%93%BE%E6%8E%A5%E6%9C%8D%E5%8A%A1%E5%99%A8"><span class="nav-number">3.25.0.3.</span> <span class="nav-text">25.3 删除链接服务器</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#25-4-%E5%85%B6%E5%AE%83%E8%BF%9E%E6%8E%A5%E8%BF%9C%E7%A8%8B-x2F-%E5%B1%80%E5%9F%9F%E7%BD%91%E6%95%B0%E6%8D%AE%E6%96%B9%E6%B3%95%EF%BC%9AOPENROWSET-x2F-OPENQUERY-x2F-opendatasource"><span class="nav-number">3.25.0.4.</span> <span class="nav-text">25.4 其它连接远程&#x2F;局域网数据方法：OPENROWSET&#x2F;OPENQUERY&#x2F;opendatasource</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#OPENROWSET%E6%96%B9%E6%B3%95%EF%BC%88%E4%B8%8D%E9%9C%80%E8%A6%81%E7%94%A8%E5%88%B0%E5%88%9B%E5%BB%BA%E5%A5%BD%E7%9A%84%E9%93%BE%E6%8E%A5%E5%90%8D%E3%80%82%E5%A6%82%E6%9E%9C%E8%BF%9E%E6%8E%A5%E7%9A%84%E5%AE%9E%E4%BE%8B%E5%90%8D%E4%B8%8D%E6%98%AF%E9%BB%98%E8%AE%A4%E7%9A%84%EF%BC%8C%E9%9C%80%E8%A6%81%E5%9C%A8%E2%80%9Dsql%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%90%8D%E6%88%96IP%E5%9C%B0%E5%9D%80%E2%80%9D%E5%90%8E%E5%8A%A0%E4%B8%8A%E2%80%9D-x2F-%E5%AE%9E%E4%BE%8B%E5%90%8D%E2%80%9D%EF%BC%89"><span class="nav-number">3.25.0.4.1.</span> <span class="nav-text">OPENROWSET方法（不需要用到创建好的链接名。如果连接的实例名不是默认的，需要在”sql服务器名或IP地址”后加上”&#x2F;实例名”）</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#OPENQUERY%E6%96%B9%E6%B3%95%EF%BC%88%E9%9C%80%E8%A6%81%E5%85%88%E5%88%9B%E5%BB%BA%E4%B8%80%E4%B8%AA%E9%93%BE%E6%8E%A5%EF%BC%89"><span class="nav-number">3.25.0.4.2.</span> <span class="nav-text">OPENQUERY方法（需要先创建一个链接）</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#OPENDATASOURCE%E6%96%B9%E6%B3%95-%E4%B8%8D%E9%9C%80%E8%A6%81%E7%94%A8%E5%88%B0%E5%88%9B%E5%BB%BA%E5%A5%BD%E7%9A%84%E9%93%BE%E6%8E%A5%E5%90%8D%E3%80%82%E5%A6%82%E6%9E%9C%E8%BF%9E%E6%8E%A5%E7%9A%84%E5%AE%9E%E4%BE%8B%E5%90%8D%E4%B8%8D%E6%98%AF%E9%BB%98%E8%AE%A4%E7%9A%84%EF%BC%8C%E9%9C%80%E8%A6%81%E5%9C%A8%E2%80%9Dsql%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%90%8D%E6%88%96IP%E5%9C%B0%E5%9D%80%E2%80%9D%E5%90%8E%E5%8A%A0%E4%B8%8A%E2%80%9D-x2F-%E5%AE%9E%E4%BE%8B%E5%90%8D%E2%80%9D"><span class="nav-number">3.25.0.4.3.</span> <span class="nav-text">OPENDATASOURCE方法(不需要用到创建好的链接名。如果连接的实例名不是默认的，需要在”sql服务器名或IP地址”后加上”&#x2F;实例名”)</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#26-%E5%88%A0%E9%99%A4%E6%95%B0%E6%8D%AE%E5%BA%93%E4%B8%8B%E9%9D%A2%E7%9A%84%E6%89%80%E6%9C%89%E8%A1%A8"><span class="nav-number">3.26.</span> <span class="nav-text">26. 删除数据库下面的所有表</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#27-%E6%9F%A5%E7%9C%8B%E6%95%B0%E6%8D%AE%E5%BA%93%E6%96%87%E4%BB%B6%E4%BD%BF%E7%94%A8%E6%83%85%E5%86%B5"><span class="nav-number">3.27.</span> <span class="nav-text">27. 查看数据库文件使用情况</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#28-%E4%BF%AE%E6%94%B9sa%E7%9A%84%E5%AF%86%E7%A0%81"><span class="nav-number">3.28.</span> <span class="nav-text">28. 修改sa的密码</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#29-%E6%9F%A5%E8%AF%A2%E8%A1%A8%E7%9A%84%E7%B4%A2%E5%BC%95"><span class="nav-number">3.29.</span> <span class="nav-text">29. 查询表的索引</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#30-%E6%9F%A5%E8%AF%A2%E6%B2%A1%E6%9C%89%E7%B4%A2%E5%BC%95%E7%9A%84%E8%A1%A8"><span class="nav-number">3.30.</span> <span class="nav-text">30. 查询没有索引的表</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%B8%B8%E8%AF%86"><span class="nav-number">4.</span> <span class="nav-text">常识</span></a></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="昜丿捺"
+      src="/img/avatar/ironman.png">
+  <p class="site-author-name" itemprop="name">昜丿捺</p>
+  <div class="site-description" itemprop="description">
+    <!--  -->
+
+
+    <!-- 显示一言经典语句 -->
+    <span id="lwlhitokoto"></span>
+
+
+  </div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">97</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">2</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">55</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/yangpiena" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;yangpiena" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://yangpiena.coding.net/" title="CODING → https:&#x2F;&#x2F;yangpiena.coding.net" rel="noopener" target="_blank"><i class="fab fa-github-alt fa-fw"></i>CODING</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://gitee.com/yangpiena" title="Gitee → https:&#x2F;&#x2F;gitee.com&#x2F;yangpiena" rel="noopener" target="_blank"><i class="fab fa-glide fa-fw"></i>Gitee</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://dash.cloudflare.com/" title="Cloudflare → https:&#x2F;&#x2F;dash.cloudflare.com&#x2F;" rel="noopener" target="_blank"><i class="fa fa-cloud fa-fw"></i>Cloudflare</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://weibo.com/yangpiena" title="Weibo → https:&#x2F;&#x2F;weibo.com&#x2F;yangpiena" rel="noopener" target="_blank"><i class="fab fa-weibo fa-fw"></i>Weibo</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:yangpiena@gmail.com" title="E-Mail → mailto:yangpiena@gmail.com" rel="noopener" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+  </div>
+
+        </div>
+      </div>
+        <div class="back-to-top animated" role="button" aria-label="返回顶部">
+          <i class="fa fa-arrow-up"></i>
+          <span>0%</span>
+        </div>
+    </div>
+
+    
+    <div class="sidebar-inner sidebar-blogroll">
+      <div class="links-of-blogroll animated">
+        <div class="links-of-blogroll-title"><i class="fa fa-globe fa-fw"></i>
+          链接
+        </div>
+        <ul class="links-of-blogroll-list">
+            <li class="links-of-blogroll-item">
+              <a href="https://yangpiena.gitee.io/" title="https:&#x2F;&#x2F;yangpiena.gitee.io&#x2F;">昜丿捺（Gitee）</a>
+            </li>
+            <li class="links-of-blogroll-item">
+              <a href="https://yangpiena.github.io/" title="https:&#x2F;&#x2F;yangpiena.github.io&#x2F;" rel="noopener" target="_blank">昜丿捺（GitHub）</a>
+            </li>
+            <li class="links-of-blogroll-item">
+              <a href="http://coding-pages-bucket-407450-1059047-17379-602648-1258146968.cos-website.ap-hongkong.myqcloud.com/" title="http:&#x2F;&#x2F;coding-pages-bucket-407450-1059047-17379-602648-1258146968.cos-website.ap-hongkong.myqcloud.com&#x2F;" rel="noopener" target="_blank">昜丿捺（Coding）</a>
+            </li>
+            <li class="links-of-blogroll-item">
+              <a href="https://yangpiena.pages.dev/" title="https:&#x2F;&#x2F;yangpiena.pages.dev&#x2F;" rel="noopener" target="_blank">昜丿捺（Cloudflare）</a>
+            </li>
+        </ul>
+      </div>
+    </div>
+    
+    
+    <!-- 增加网易云音乐 -->
+        <div class="pjax">
+          <div class="sidebar-inner">
+            <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=300 src="//music.163.com/outchain/player?type=0&id=6605147757&auto=1&height=300"></iframe>
+          </div>
+        </div>
+
+
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://yangpiena.gitee.io/2016/11/29/SQL%E7%BB%8F%E5%85%B8%E8%AF%AD%E5%8F%A5/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/img/avatar/ironman.png">
+      <meta itemprop="name" content="昜丿捺">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="昜丿捺">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="SQL经典语句 | 昜丿捺">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          SQL经典语句
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2016-11-29 15:38:32" itemprop="dateCreated datePublished" datetime="2016-11-29T15:38:32+00:00">2016-11-29</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2025-11-20 07:24:07" itemprop="dateModified" datetime="2025-11-20T07:24:07+00:00">2025-11-20</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/tech-notes/" itemprop="url" rel="index"><span itemprop="name">技术</span></a>
+        </span>
+    </span>
+
+  
+    <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv">
+      <span class="post-meta-item-icon">
+        <i class="far fa-eye"></i>
+      </span>
+      <span class="post-meta-item-text">阅读次数：</span>
+      <span id="busuanzi_value_page_pv"></span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <h1 id="一-基础篇"><a href="#一-基础篇" class="headerlink" title="一. 基础篇"></a>一. 基础篇</h1><h2 id="1-创建数据库"><a href="#1-创建数据库" class="headerlink" title="1. 创建数据库"></a>1. 创建数据库</h2><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">CREATE</span> DATABASE database<span class="operator">-</span>name</span><br></pre></td></tr></table></figure>
+
+<h2 id="2-删除数据库"><a href="#2-删除数据库" class="headerlink" title="2. 删除数据库"></a>2. 删除数据库</h2><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">DROP</span> DATABASE dbname</span><br></pre></td></tr></table></figure>
+
+<h2 id="3-备份sql-server"><a href="#3-备份sql-server" class="headerlink" title="3. 备份sql server"></a>3. 备份sql server</h2><p>创建 备份数据的 device</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">USE master</span><br><span class="line"><span class="keyword">EXEC</span> sp_addumpdevice <span class="string">&#x27;disk&#x27;</span>, <span class="string">&#x27;testBack&#x27;</span>, <span class="string">&#x27;c:\mssql7backup\MyNwind_1.dat&#x27;</span></span><br></pre></td></tr></table></figure>
+<p>开始 备份</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">BACKUP DATABASE pubs <span class="keyword">TO</span> testBack </span><br></pre></td></tr></table></figure>
+
+<span id="more"></span>
+
+<h2 id="4-创建新表"><a href="#4-创建新表" class="headerlink" title="4. 创建新表"></a>4. 创建新表</h2><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">CREATE</span> <span class="keyword">TABLE</span> tabname(col1 type1 [<span class="keyword">NOT</span> <span class="keyword">null</span>] [<span class="keyword">primary</span> key],col2 type2 [<span class="keyword">NOT</span> <span class="keyword">null</span>],..)</span><br></pre></td></tr></table></figure>
+<p>根据已有的表创建新表：</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">CREATE</span> <span class="keyword">TABLE</span> tab_new <span class="keyword">LIKE</span> tab_old (使用旧表创建新表)</span><br><span class="line"><span class="keyword">CREATE</span> <span class="keyword">TABLE</span> tab_new <span class="keyword">AS</span> <span class="keyword">SELECT</span> col1,col2… <span class="keyword">FROM</span> tab_old definition <span class="keyword">only</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="5-删除新表"><a href="#5-删除新表" class="headerlink" title="5. 删除新表"></a>5. 删除新表</h2><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">DROP</span> <span class="keyword">TABLE</span> tabname</span><br></pre></td></tr></table></figure>
+
+<h2 id="6-增加一个列"><a href="#6-增加一个列" class="headerlink" title="6. 增加一个列"></a>6. 增加一个列</h2><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">ALTER</span> <span class="keyword">TABLE</span> tabname <span class="keyword">ADD</span> <span class="keyword">COLUMN</span> col type</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>注：列增加后将不能删除。DB2中列加上后数据类型也不能改变，唯一能改变的是增加varchar类型的长度。</p>
+</blockquote>
+<h2 id="7-添加主键"><a href="#7-添加主键" class="headerlink" title="7. 添加主键"></a>7. 添加主键</h2><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">ALTER</span> <span class="keyword">TABLE</span> tabname <span class="keyword">ADD</span> <span class="keyword">PRIMARY</span> KEY (col)</span><br></pre></td></tr></table></figure>
+<p>删除主键</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">ALTER</span> <span class="keyword">TABLE</span> tabname <span class="keyword">DROP</span> <span class="keyword">PRIMARY</span> KEY (col)</span><br></pre></td></tr></table></figure>
+
+<h2 id="8-创建索引"><a href="#8-创建索引" class="headerlink" title="8. 创建索引"></a>8. 创建索引</h2><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">CREATE</span> [<span class="keyword">unique</span>] index idxname <span class="keyword">ON</span> tabname(col….) </span><br></pre></td></tr></table></figure>
+<p>删除索引</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">DROP</span> index idxname</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>注：索引是不可更改的，想更改必须删除重新建。</p>
+</blockquote>
+<h2 id="9-创建视图"><a href="#9-创建视图" class="headerlink" title="9. 创建视图"></a>9. 创建视图</h2><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">CREATE</span> <span class="keyword">VIEW</span> viewname <span class="keyword">AS</span> <span class="keyword">SELECT</span> statement </span><br></pre></td></tr></table></figure>
+<p>删除视图</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">DROP</span> <span class="keyword">VIEW</span> viewname</span><br></pre></td></tr></table></figure>
+
+<h2 id="10-几个简单的基本sql语句"><a href="#10-几个简单的基本sql语句" class="headerlink" title="10. 几个简单的基本sql语句"></a>10. 几个简单的基本sql语句</h2><p>选择</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> <span class="operator">*</span> <span class="keyword">FROM</span> table1 <span class="keyword">WHERE</span> 范围</span><br></pre></td></tr></table></figure>
+<p>插入</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">INSERT</span> <span class="keyword">INTO</span> table1(field1,field2) <span class="keyword">VALUES</span>(value1,value2)</span><br></pre></td></tr></table></figure>
+<p>删除</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">DELETE</span> <span class="keyword">FROM</span> table1 <span class="keyword">WHERE</span> 范围</span><br></pre></td></tr></table></figure>
+<p>更新</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">UPDATE</span> table1 <span class="keyword">SET</span> field1<span class="operator">=</span>value1 <span class="keyword">WHERE</span> 范围</span><br></pre></td></tr></table></figure>
+<p>查找</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> <span class="operator">*</span> <span class="keyword">FROM</span> table1 <span class="keyword">WHERE</span> field1 <span class="keyword">LIKE</span> ’<span class="operator">%</span>value1<span class="operator">%</span>’</span><br></pre></td></tr></table></figure>
+<p>排序</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> <span class="operator">*</span> <span class="keyword">FROM</span> table1 <span class="keyword">ORDER</span> <span class="keyword">BY</span> field1,field2 [<span class="keyword">DESC</span>]</span><br></pre></td></tr></table></figure>
+<p>总数</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> COUNT <span class="keyword">AS</span> totalcount <span class="keyword">FROM</span> table1</span><br></pre></td></tr></table></figure>
+<p>求和</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> <span class="built_in">SUM</span>(field1) <span class="keyword">AS</span> sumvalue <span class="keyword">FROM</span> table1</span><br></pre></td></tr></table></figure>
+<p>平均</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> <span class="built_in">AVG</span>(field1) <span class="keyword">AS</span> avgvalue <span class="keyword">FROM</span> table1</span><br></pre></td></tr></table></figure>
+<p>最大</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> <span class="built_in">MAX</span>(field1) <span class="keyword">AS</span> maxvalue <span class="keyword">FROM</span> table1</span><br></pre></td></tr></table></figure>
+<p>最小</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> <span class="built_in">MIN</span>(field1) <span class="keyword">AS</span> minvalue <span class="keyword">FROM</span> table1</span><br></pre></td></tr></table></figure>
+
+<h2 id="11-几个高级查询运算词"><a href="#11-几个高级查询运算词" class="headerlink" title="11. 几个高级查询运算词"></a>11. 几个高级查询运算词</h2><ul>
+<li>A： UNION 运算符<br>UNION 运算符通过组合其他两个结果表（例如 TABLE1 和 TABLE2）并消去表中任何重复行而派生出一个结果表。当 ALL 随 UNION一起使用时（即 UNION ALL），不消除重复行。两种情况下，派生表的每一行不是来自 TABLE1 就是来自 TABLE2。 </li>
+<li>B： EXCEPT 运算符<br>EXCEPT 运算符通过包括所有在 TABLE1 中但不在 TABLE2 中的行并消除所有重复行而派生出一个结果表。当 ALL 随 EXCEPT 一起使用时 (EXCEPT ALL)，不消除重复行。 </li>
+<li>C： INTERSECT 运算符<br>INTERSECT 运算符通过只包括 TABLE1 和 TABLE2 中都有的行并消除所有重复行而派生出一个结果表。当 ALL 随 INTERSECT 一起使用时 (INTERSECT ALL)，不消除重复行。 <blockquote>
+<p>注：使用运算词的几个查询结果行必须是一致的。</p>
+</blockquote>
+</li>
+</ul>
+<h2 id="12-使用外连接"><a href="#12-使用外连接" class="headerlink" title="12. 使用外连接"></a>12. 使用外连接</h2><ul>
+<li>A. LEFT （outer） join：<br>左外连接（左连接）：结果集几包括连接表的匹配行，也包括左连接表的所有行。 <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> a.a, a.b, a.c, b.c, b.d, b.f <span class="keyword">FROM</span> a <span class="keyword">LEFT</span> <span class="keyword">OUT</span> <span class="keyword">JOIN</span> b <span class="keyword">ON</span> a.a <span class="operator">=</span> b.c</span><br></pre></td></tr></table></figure></li>
+<li>B：right （outer） join:<br>右外连接(右连接)：结果集既包括连接表的匹配连接行，也包括右连接表的所有行。 </li>
+<li>C：full&#x2F;cross （outer） join：<br>全外连接：不仅包括符号连接表的匹配行，还包括两个连接表中的所有记录。</li>
+</ul>
+<h2 id="13-分组-Group-by"><a href="#13-分组-Group-by" class="headerlink" title="13. 分组:Group by"></a>13. 分组:Group by</h2><p>一张表，一旦分组 完成后，查询后只能得到组相关的信息。<br>组相关的信息：（统计信息） COUNT,SUM,MAX,MIN,AVG 分组的标准)<br>在SQLServer中分组时：不能以text,ntext,image类型的字段作为分组依据<br>在SELECTe统计函数中的字段，不能和普通的字段放在一起；</p>
+<h2 id="14-对数据库进行操作"><a href="#14-对数据库进行操作" class="headerlink" title="14. 对数据库进行操作"></a>14. 对数据库进行操作</h2><p>分离数据库： sp_detach_db; 附加数据库：sp_attach_db 后接表明，附加需要完整的路径名</p>
+<h2 id="15-如何修改数据库的名称"><a href="#15-如何修改数据库的名称" class="headerlink" title="15. 如何修改数据库的名称"></a>15. 如何修改数据库的名称</h2><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sp_renamedb <span class="string">&#x27;old_name&#x27;</span>, <span class="string">&#x27;new_name&#x27;</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="16-查询字段ID最大值的记录"><a href="#16-查询字段ID最大值的记录" class="headerlink" title="16. 查询字段ID最大值的记录"></a>16. 查询字段ID最大值的记录</h2><p>无索引</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> <span class="type">time</span> <span class="keyword">FROM</span> <span class="keyword">table</span> t1 <span class="keyword">WHERE</span> <span class="keyword">NOT</span> <span class="keyword">EXISTS</span> (<span class="keyword">SELECT</span> <span class="number">1</span> <span class="keyword">FROM</span> <span class="keyword">table</span> <span class="keyword">WHERE</span> id <span class="operator">&gt;</span> t1.id) </span><br></pre></td></tr></table></figure>
+<p>有索引</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> <span class="type">time</span> <span class="keyword">FROM</span> <span class="keyword">table</span> <span class="keyword">WHERE</span> id <span class="keyword">IN</span> (<span class="keyword">SELECT</span> <span class="built_in">MAX</span>(id) <span class="keyword">FROM</span> <span class="keyword">table</span>)</span><br></pre></td></tr></table></figure>
+
+<h2 id="17-查询某一列的重复项内容"><a href="#17-查询某一列的重复项内容" class="headerlink" title="17. 查询某一列的重复项内容"></a>17. 查询某一列的重复项内容</h2><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> <span class="operator">*</span> <span class="keyword">FROM</span> documentation <span class="keyword">AS</span> A <span class="keyword">WHERE</span> (<span class="keyword">SELECT</span> <span class="built_in">COUNT</span>(<span class="operator">*</span>) <span class="keyword">FROM</span> documentation <span class="keyword">WHERE</span> fileName<span class="operator">=</span>A.fileName)<span class="operator">&gt;</span><span class="number">1</span> </span><br></pre></td></tr></table></figure>
+
+<h2 id="18-判断表中是否存在记录"><a href="#18-判断表中是否存在记录" class="headerlink" title="18. 判断表中是否存在记录"></a>18. 判断表中是否存在记录</h2><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> <span class="built_in">COUNT</span>(<span class="operator">*</span>) <span class="keyword">FROM</span> tableName <span class="keyword">WHERE</span> conditions</span><br></pre></td></tr></table></figure>
+
+<hr>
+<h1 id="二-提升篇"><a href="#二-提升篇" class="headerlink" title="二. 提升篇"></a>二. 提升篇</h1><h2 id="1-复制表-只复制结构-源表名：a-新表名：b-Access可用"><a href="#1-复制表-只复制结构-源表名：a-新表名：b-Access可用" class="headerlink" title="1. 复制表(只复制结构,源表名：a 新表名：b) (Access可用)"></a>1. 复制表(只复制结构,源表名：a 新表名：b) (Access可用)</h2><p>法一：</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> <span class="operator">*</span> <span class="keyword">INTO</span> b <span class="keyword">FROM</span> a <span class="keyword">WHERE</span> <span class="number">1</span><span class="operator">&lt;&gt;</span><span class="number">1</span>（仅用于SQlServer）</span><br></pre></td></tr></table></figure>
+<p>法二：</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> TOP <span class="number">0</span> <span class="operator">*</span> <span class="keyword">INTO</span> b <span class="keyword">FROM</span> a</span><br></pre></td></tr></table></figure>
+
+<h2 id="2-拷贝表-拷贝数据-源表名：a-目标表名：b-Access可用"><a href="#2-拷贝表-拷贝数据-源表名：a-目标表名：b-Access可用" class="headerlink" title="2. 拷贝表(拷贝数据,源表名：a 目标表名：b) (Access可用)"></a>2. 拷贝表(拷贝数据,源表名：a 目标表名：b) (Access可用)</h2><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">INSERT</span> <span class="keyword">INTO</span> b(a, b, c) <span class="keyword">SELECT</span> d,e,f <span class="keyword">FROM</span> b;</span><br></pre></td></tr></table></figure>
+
+<h2 id="3-跨数据库之间表的拷贝-具体数据使用绝对路径-Access可用"><a href="#3-跨数据库之间表的拷贝-具体数据使用绝对路径-Access可用" class="headerlink" title="3. 跨数据库之间表的拷贝(具体数据使用绝对路径) (Access可用)"></a>3. 跨数据库之间表的拷贝(具体数据使用绝对路径) (Access可用)</h2><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">INSERT</span> <span class="keyword">INTO</span> b(a, b, c) <span class="keyword">SELECT</span> d,e,f <span class="keyword">FROM</span> b <span class="keyword">IN</span> ‘具体数据库’ <span class="keyword">WHERE</span> 条件</span><br></pre></td></tr></table></figure>
+<p>例子：..FROM b IN ‘“&amp;Server.MapPath(“.”)&amp;”\data.mdb” &amp;”‘ WHERE..</p>
+<h2 id="4-子查询-表名1：a-表名2：b"><a href="#4-子查询-表名1：a-表名2：b" class="headerlink" title="4. 子查询(表名1：a 表名2：b)"></a>4. 子查询(表名1：a 表名2：b)</h2><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> a,b,c <span class="keyword">FROM</span> a <span class="keyword">WHERE</span> a <span class="keyword">IN</span> (<span class="keyword">SELECT</span> d <span class="keyword">FROM</span> b ) 或者: <span class="keyword">SELECT</span> a,b,c <span class="keyword">FROM</span> a <span class="keyword">WHERE</span> a <span class="keyword">IN</span> (<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>)</span><br></pre></td></tr></table></figure>
+
+<h2 id="5-显示文章、提交人和最后回复时间"><a href="#5-显示文章、提交人和最后回复时间" class="headerlink" title="5. 显示文章、提交人和最后回复时间"></a>5. 显示文章、提交人和最后回复时间</h2><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> a.title,a.username,b.adddate <span class="keyword">FROM</span> <span class="keyword">table</span> a,(<span class="keyword">SELECT</span> <span class="built_in">MAX</span>(adddate) adddate <span class="keyword">FROM</span> <span class="keyword">table</span> <span class="keyword">WHERE</span> table.title<span class="operator">=</span>a.title) b</span><br></pre></td></tr></table></figure>
+
+<h2 id="6-外连接查询-表名1：a-表名2：b"><a href="#6-外连接查询-表名1：a-表名2：b" class="headerlink" title="6. 外连接查询(表名1：a 表名2：b)"></a>6. 外连接查询(表名1：a 表名2：b)</h2><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> a.a, a.b, a.c, b.c, b.d, b.f <span class="keyword">FROM</span> a <span class="keyword">LEFT</span> <span class="keyword">OUT</span> <span class="keyword">JOIN</span> b <span class="keyword">ON</span> a.a <span class="operator">=</span> b.c</span><br></pre></td></tr></table></figure>
+
+<h2 id="7-在线视图查询-表名1：a"><a href="#7-在线视图查询-表名1：a" class="headerlink" title="7. 在线视图查询(表名1：a )"></a>7. 在线视图查询(表名1：a )</h2><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> <span class="operator">*</span> <span class="keyword">FROM</span> (<span class="keyword">SELECT</span> a,b,c <span class="keyword">FROM</span> a) T <span class="keyword">WHERE</span> t.a <span class="operator">&gt;</span> <span class="number">1</span>;</span><br></pre></td></tr></table></figure>
+
+<h2 id="8-between的用法-between限制查询数据范围时包括了边界值-NOT-between不包括"><a href="#8-between的用法-between限制查询数据范围时包括了边界值-NOT-between不包括" class="headerlink" title="8. between的用法,between限制查询数据范围时包括了边界值,NOT between不包括"></a>8. between的用法,between限制查询数据范围时包括了边界值,NOT between不包括</h2><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> <span class="operator">*</span> <span class="keyword">FROM</span> table1 <span class="keyword">WHERE</span> <span class="type">time</span> <span class="keyword">BETWEEN</span> time1 <span class="keyword">AND</span> time2</span><br></pre></td></tr></table></figure>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> a,b,c, <span class="keyword">FROM</span> table1 <span class="keyword">WHERE</span> a <span class="keyword">NOT</span> <span class="keyword">BETWEEN</span> 数值<span class="number">1</span> <span class="keyword">AND</span> 数值<span class="number">2</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="9-IN-的使用方法"><a href="#9-IN-的使用方法" class="headerlink" title="9. IN 的使用方法"></a>9. IN 的使用方法</h2><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> <span class="operator">*</span> <span class="keyword">FROM</span> table1 <span class="keyword">WHERE</span> a [<span class="keyword">NOT</span>] <span class="keyword">IN</span> (‘值<span class="number">1</span>’,’值<span class="number">2</span>’,’值<span class="number">4</span>’,’值<span class="number">6</span>’)</span><br></pre></td></tr></table></figure>
+
+<h2 id="10-两张关联表，删除主表中已经在副表中没有的信息"><a href="#10-两张关联表，删除主表中已经在副表中没有的信息" class="headerlink" title="10. 两张关联表，删除主表中已经在副表中没有的信息"></a>10. 两张关联表，删除主表中已经在副表中没有的信息</h2><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">DELETE</span> <span class="keyword">FROM</span> table1 <span class="keyword">WHERE</span> <span class="keyword">NOT</span> <span class="keyword">EXISTS</span> ( <span class="keyword">SELECT</span> <span class="operator">*</span> <span class="keyword">FROM</span> table2 <span class="keyword">WHERE</span> table1.field1<span class="operator">=</span>table2.field1 )</span><br></pre></td></tr></table></figure>
+
+<h2 id="11-四表联查问题"><a href="#11-四表联查问题" class="headerlink" title="11. 四表联查问题"></a>11. 四表联查问题</h2><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> <span class="operator">*</span> <span class="keyword">FROM</span> a <span class="keyword">LEFT</span> <span class="keyword">INNER</span> <span class="keyword">JOIN</span> b <span class="keyword">ON</span> a.a<span class="operator">=</span>b.b <span class="keyword">RIGHT</span> <span class="keyword">INNER</span> <span class="keyword">JOIN</span> c <span class="keyword">ON</span> a.a<span class="operator">=</span>c.c <span class="keyword">inner</span> <span class="keyword">join</span> d <span class="keyword">ON</span> a.a<span class="operator">=</span>d.d <span class="keyword">WHERE</span> .....</span><br></pre></td></tr></table></figure>
+
+<h2 id="12-日程安排提前五分钟提醒"><a href="#12-日程安排提前五分钟提醒" class="headerlink" title="12. 日程安排提前五分钟提醒"></a>12. 日程安排提前五分钟提醒</h2><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> <span class="operator">*</span> <span class="keyword">FROM</span> 日程安排 <span class="keyword">WHERE</span> DATEDIFF(<span class="string">&#x27;minute&#x27;</span>,f开始时间,GETDATE())<span class="operator">&gt;</span><span class="number">5</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="13-一条sql语句搞定数据库分页"><a href="#13-一条sql语句搞定数据库分页" class="headerlink" title="13. 一条sql语句搞定数据库分页"></a>13. 一条sql语句搞定数据库分页</h2><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> TOP <span class="number">10</span> b.<span class="operator">*</span> <span class="keyword">FROM</span> (<span class="keyword">SELECT</span> TOP <span class="number">20</span> 主键字段,排序字段 <span class="keyword">FROM</span> 表名 <span class="keyword">ORDER</span> <span class="keyword">BY</span> 排序字段 <span class="keyword">DESC</span>) a,表名 b <span class="keyword">WHERE</span> b.主键字段 <span class="operator">=</span> a.主键字段 <span class="keyword">ORDER</span> <span class="keyword">BY</span> a.排序字段</span><br></pre></td></tr></table></figure>
+<p>关于数据库分页：</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">DECLARE</span> <span class="variable">@start</span> <span class="type">int</span>,<span class="variable">@END</span> <span class="type">int</span></span><br><span class="line"><span class="variable">@sql</span> NVARCHAR(<span class="number">600</span>)</span><br><span class="line"><span class="keyword">SET</span> <span class="variable">@sql</span><span class="operator">=</span>’<span class="keyword">SELECT</span> TOP’<span class="operator">+</span>str(<span class="variable">@END</span><span class="operator">-</span><span class="variable">@start</span><span class="operator">+</span><span class="number">1</span>)<span class="operator">+</span>’<span class="operator">+</span><span class="keyword">FROM</span> T <span class="keyword">WHERE</span> rid <span class="keyword">NOT</span> <span class="keyword">IN</span>(<span class="keyword">SELECT</span> TOP’<span class="operator">+</span>str(<span class="variable">@str</span><span class="number">-1</span>)<span class="operator">+</span>’Rid <span class="keyword">FROM</span> T <span class="keyword">WHERE</span> Rid<span class="operator">&gt;</span><span class="number">-1</span>)’</span><br><span class="line"><span class="keyword">EXEC</span> sp_executesql <span class="variable">@sql</span></span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>注意：在top后不能直接跟一个变量，所以在实际应用中只有这样的进行特殊的处理。Rid为一个标识列，如果top后还有具体的字段，这样做是非常有好处的。因为这样可以避免 top的字段如果是逻辑索引的，查询的结果后实际表中的不一致（逻辑索引中的数据有可能和数据表中的不一致，而查询时如果处在索引则首先查询索引）</p>
+</blockquote>
+<h2 id="14-前10条记录"><a href="#14-前10条记录" class="headerlink" title="14. 前10条记录"></a>14. 前10条记录</h2><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> TOP <span class="number">10</span> <span class="operator">*</span> <span class="keyword">FROM</span> table1 <span class="keyword">WHERE</span> 范围</span><br></pre></td></tr></table></figure>
+
+<h2 id="15-选择在每一组b值相同的数据中对应的a最大的记录的所有信息-类似这样的用法可以用于论坛每月排行榜-每月热销产品分析-按科目成绩排名-等等"><a href="#15-选择在每一组b值相同的数据中对应的a最大的记录的所有信息-类似这样的用法可以用于论坛每月排行榜-每月热销产品分析-按科目成绩排名-等等" class="headerlink" title="15. 选择在每一组b值相同的数据中对应的a最大的记录的所有信息(类似这样的用法可以用于论坛每月排行榜,每月热销产品分析,按科目成绩排名,等等.)"></a>15. 选择在每一组b值相同的数据中对应的a最大的记录的所有信息(类似这样的用法可以用于论坛每月排行榜,每月热销产品分析,按科目成绩排名,等等.)</h2><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> a,b,c <span class="keyword">FROM</span> tablename ta <span class="keyword">WHERE</span> a<span class="operator">=</span>(<span class="keyword">SELECT</span> <span class="built_in">MAX</span>(a) <span class="keyword">FROM</span> tablename tb <span class="keyword">WHERE</span> tb.b<span class="operator">=</span>ta.b)</span><br></pre></td></tr></table></figure>
+
+<h2 id="16-包括所有在-TableA-中但不在-TableB和TableC-中的行并消除所有重复行而派生出一个结果表"><a href="#16-包括所有在-TableA-中但不在-TableB和TableC-中的行并消除所有重复行而派生出一个结果表" class="headerlink" title="16. 包括所有在 TableA 中但不在 TableB和TableC 中的行并消除所有重复行而派生出一个结果表"></a>16. 包括所有在 TableA 中但不在 TableB和TableC 中的行并消除所有重复行而派生出一个结果表</h2><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">(<span class="keyword">SELECT</span> a <span class="keyword">FROM</span> tableA ) <span class="keyword">except</span> (<span class="keyword">SELECT</span> a <span class="keyword">FROM</span> tableB) <span class="keyword">except</span> (<span class="keyword">SELECT</span> a <span class="keyword">FROM</span> tableC)</span><br></pre></td></tr></table></figure>
+
+<h2 id="17-随机取出10条数据"><a href="#17-随机取出10条数据" class="headerlink" title="17. 随机取出10条数据"></a>17. 随机取出10条数据</h2><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> TOP <span class="number">10</span> <span class="operator">*</span> <span class="keyword">FROM</span> tablename <span class="keyword">ORDER</span> <span class="keyword">BY</span> newid()</span><br></pre></td></tr></table></figure>
+
+<h2 id="18-随机选择记录"><a href="#18-随机选择记录" class="headerlink" title="18. 随机选择记录"></a>18. 随机选择记录</h2><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> newid()</span><br></pre></td></tr></table></figure>
+
+<h2 id="19-删除重复记录"><a href="#19-删除重复记录" class="headerlink" title="19. 删除重复记录"></a>19. 删除重复记录</h2><ul>
+<li><p>方法一：</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">DELETE</span> <span class="keyword">FROM</span> tablename <span class="keyword">WHERE</span> id <span class="keyword">NOT</span> <span class="keyword">IN</span> (<span class="keyword">SELECT</span> <span class="built_in">MAX</span>(id) <span class="keyword">FROM</span> tablename <span class="keyword">GROUP</span> <span class="keyword">BY</span> col1,col2,...)</span><br></pre></td></tr></table></figure></li>
+<li><p>方法二：</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> <span class="keyword">distinct</span> <span class="operator">*</span> <span class="keyword">INTO</span> temp <span class="keyword">FROM</span> tablename</span><br><span class="line"><span class="keyword">DELETE</span> <span class="keyword">FROM</span> tablename</span><br><span class="line"><span class="keyword">INSERT</span> <span class="keyword">INTO</span> tablename <span class="keyword">SELECT</span> <span class="operator">*</span> <span class="keyword">FROM</span> temp</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>评价： 这种操作牵连大量的数据的移动，这种做法不适合大容量的数据操作</p>
+</blockquote>
+</li>
+<li><p>方法三： 例如：在一个外部表中导入数据，由于某些原因第一次只导入了一部分，但很难判断具体位置，这样只有在下一次全部导入，这样也就产生好多重复的字段，怎样删除重复字段</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">ALTER</span> <span class="keyword">TABLE</span> tablename</span><br><span class="line"><span class="keyword">ADD</span> column_b <span class="type">int</span> <span class="keyword">identity</span>(<span class="number">1</span>,<span class="number">1</span>)	<span class="comment">--添加一个自增列</span></span><br><span class="line"><span class="keyword">DELETE</span> <span class="keyword">FROM</span> tablename <span class="keyword">WHERE</span> column_b <span class="keyword">NOT</span> <span class="keyword">IN</span>(</span><br><span class="line"><span class="keyword">SELECT</span> <span class="built_in">MAX</span>(column_b) <span class="keyword">FROM</span> tablename <span class="keyword">GROUP</span> <span class="keyword">BY</span> column1,column2,...)</span><br><span class="line"><span class="keyword">ALTER</span> <span class="keyword">TABLE</span> tablename <span class="keyword">DROP</span> <span class="keyword">COLUMN</span> column_b</span><br></pre></td></tr></table></figure></li>
+</ul>
+<h2 id="20-列出数据库里所有的表名"><a href="#20-列出数据库里所有的表名" class="headerlink" title="20. 列出数据库里所有的表名"></a>20. 列出数据库里所有的表名</h2><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> name <span class="keyword">FROM</span> sysobjects <span class="keyword">WHERE</span> type<span class="operator">=</span><span class="string">&#x27;U&#x27;</span> <span class="operator">/</span><span class="operator">/</span> U代表用户</span><br></pre></td></tr></table></figure>
+
+<h2 id="21-列出表里的所有的列名"><a href="#21-列出表里的所有的列名" class="headerlink" title="21. 列出表里的所有的列名"></a>21. 列出表里的所有的列名</h2><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> name <span class="keyword">FROM</span> syscolumns <span class="keyword">WHERE</span> id<span class="operator">=</span>object_id(<span class="string">&#x27;TableName&#x27;</span>)</span><br></pre></td></tr></table></figure>
+
+<h2 id="22-列示type、vender、pcs字段，以type字段排列，case可以方便地实现多重选择，类似SELECT-中的case。"><a href="#22-列示type、vender、pcs字段，以type字段排列，case可以方便地实现多重选择，类似SELECT-中的case。" class="headerlink" title="22. 列示type、vender、pcs字段，以type字段排列，case可以方便地实现多重选择，类似SELECT 中的case。"></a>22. 列示type、vender、pcs字段，以type字段排列，case可以方便地实现多重选择，类似SELECT 中的case。</h2><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> type,<span class="built_in">SUM</span>(<span class="keyword">case</span> vender <span class="keyword">when</span> <span class="string">&#x27;A&#x27;</span> <span class="keyword">then</span> pcs <span class="keyword">ELSE</span> <span class="number">0</span> <span class="keyword">END</span>),<span class="built_in">SUM</span>(<span class="keyword">case</span> vender <span class="keyword">when</span> <span class="string">&#x27;C&#x27;</span> <span class="keyword">then</span> pcs <span class="keyword">ELSE</span> <span class="number">0</span> <span class="keyword">END</span>),<span class="built_in">SUM</span>(<span class="keyword">case</span> vender <span class="keyword">when</span> <span class="string">&#x27;B&#x27;</span> <span class="keyword">then</span> pcs <span class="keyword">ELSE</span> <span class="number">0</span> <span class="keyword">END</span>) <span class="keyword">FROM</span> tablename <span class="keyword">GROUP</span> <span class="keyword">BY</span> type</span><br></pre></td></tr></table></figure>
+<p>显示结果：</p>
+<table>
+<thead>
+<tr>
+<th>type</th>
+<th>vender</th>
+<th>pcs</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>电脑</td>
+<td>A</td>
+<td>1</td>
+</tr>
+<tr>
+<td>电脑</td>
+<td>A</td>
+<td>1</td>
+</tr>
+<tr>
+<td>光盘</td>
+<td>B</td>
+<td>2</td>
+</tr>
+<tr>
+<td>光盘</td>
+<td>A</td>
+<td>2</td>
+</tr>
+<tr>
+<td>手机</td>
+<td>B</td>
+<td>3</td>
+</tr>
+<tr>
+<td>手机</td>
+<td>C</td>
+<td>3</td>
+</tr>
+</tbody></table>
+<h2 id="23-初始化表"><a href="#23-初始化表" class="headerlink" title="23. 初始化表"></a>23. 初始化表</h2><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">TRUNCATE</span> <span class="keyword">TABLE</span> table1</span><br></pre></td></tr></table></figure>
+
+<h2 id="24-选择从10到15的记录"><a href="#24-选择从10到15的记录" class="headerlink" title="24. 选择从10到15的记录"></a>24. 选择从10到15的记录</h2><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> TOP <span class="number">5</span> <span class="operator">*</span> <span class="keyword">FROM</span> (<span class="keyword">SELECT</span> TOP <span class="number">15</span> <span class="operator">*</span> <span class="keyword">FROM</span> <span class="keyword">table</span> <span class="keyword">ORDER</span> <span class="keyword">BY</span> id <span class="keyword">ASC</span>) table_别名 <span class="keyword">ORDER</span> <span class="keyword">BY</span> id <span class="keyword">DESC</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="25-临时表"><a href="#25-临时表" class="headerlink" title="25. 临时表"></a>25. 临时表</h2><h4 id="创建临时表"><a href="#创建临时表" class="headerlink" title="创建临时表"></a>创建临时表</h4><ul>
+<li>方法一：<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">CREATE</span> <span class="keyword">TABLE</span> #临时表名(字段<span class="number">1</span> 约束条件,</span><br><span class="line">                       字段<span class="number">2</span> 约束条件,</span><br><span class="line">                      .....)</span><br><span class="line"><span class="keyword">CREATE</span> <span class="keyword">TABLE</span> ##临时表名(字段<span class="number">1</span> 约束条件,</span><br><span class="line">                        字段<span class="number">2</span> 约束条件,</span><br><span class="line">                        .....)</span><br></pre></td></tr></table></figure>
+  例：  <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">CREATE</span> <span class="keyword">TABLE</span> #Tmp <span class="comment">--创建临时表#Tmp</span></span><br><span class="line">(</span><br><span class="line">    ID   <span class="type">int</span> <span class="keyword">IDENTITY</span> (<span class="number">1</span>,<span class="number">1</span>)     <span class="keyword">NOT</span> <span class="keyword">null</span>, <span class="comment">--创建列ID,并且每次新增一条记录就会加1</span></span><br><span class="line">    WokNo                <span class="type">VARCHAR</span>(<span class="number">50</span>),   </span><br><span class="line">    <span class="keyword">primary</span> key (ID)      <span class="comment">--定义ID为临时表#Tmp的主键      </span></span><br><span class="line">);</span><br></pre></td></tr></table></figure></li>
+<li>方法二：<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> <span class="operator">*</span> <span class="keyword">INTO</span> #临时表名 <span class="keyword">FROM</span> 你的表;</span><br><span class="line"><span class="keyword">SELECT</span> <span class="operator">*</span> <span class="keyword">INTO</span> ##临时表名 <span class="keyword">FROM</span> 你的表;</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>注：以上的#代表局部临时表，##代表全局临时表</p>
+</blockquote>
+</li>
+</ul>
+<h4 id="查询临时表"><a href="#查询临时表" class="headerlink" title="查询临时表"></a>查询临时表</h4><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> <span class="operator">*</span> <span class="keyword">FROM</span> #临时表名;</span><br><span class="line"><span class="keyword">SELECT</span> <span class="operator">*</span> <span class="keyword">FROM</span> ##临时表名;</span><br></pre></td></tr></table></figure>
+<h4 id="删除临时表"><a href="#删除临时表" class="headerlink" title="删除临时表"></a>删除临时表</h4><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">DROP</span> <span class="keyword">TABLE</span> #临时表名;</span><br><span class="line"><span class="keyword">DROP</span> <span class="keyword">TABLE</span> ##临时表名;</span><br></pre></td></tr></table></figure>
+
+<h2 id="26-关联表更新"><a href="#26-关联表更新" class="headerlink" title="26. 关联表更新"></a>26. 关联表更新</h2><p>SQL SERVER</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">UPDATE</span> A <span class="keyword">SET</span> A.b<span class="operator">=</span>B.d <span class="keyword">FROM</span> tableA A <span class="keyword">INNER</span> <span class="keyword">JOIN</span> tableB B <span class="keyword">ON</span> A.a <span class="operator">=</span> B.a;</span><br></pre></td></tr></table></figure>
+<p>MYSQL</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">UPDATE</span> tableA A <span class="keyword">INNER</span> <span class="keyword">JOIN</span> tableB B <span class="keyword">ON</span> A.a <span class="operator">=</span> B.a <span class="keyword">SET</span> A.b<span class="operator">=</span>B.d;</span><br></pre></td></tr></table></figure>
+<p>表的字段求合等运算后更新到关联表</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">UPDATE</span> tableA </span><br><span class="line">   <span class="keyword">SET</span> amount <span class="operator">=</span> (<span class="keyword">SELECT</span> <span class="built_in">SUM</span>(ISNULL(price, <span class="number">0</span>) <span class="operator">*</span> ISNULL(quantity, <span class="number">0</span>)) </span><br><span class="line">                   <span class="keyword">FROM</span> tableB</span><br><span class="line">                  <span class="keyword">WHERE</span> tableB.fid <span class="operator">=</span> tableA.id)</span><br><span class="line"> <span class="keyword">WHERE</span> name <span class="operator">=</span> <span class="string">&#x27;22&#x27;</span>;</span><br></pre></td></tr></table></figure>
+
+<h2 id="27-查看表的所有外键关系"><a href="#27-查看表的所有外键关系" class="headerlink" title="27. 查看表的所有外键关系"></a>27. 查看表的所有外键关系</h2><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">   <span class="keyword">SELECT</span> t1.<span class="operator">*</span>, t2.name, t3.name </span><br><span class="line">     <span class="keyword">FROM</span> dbo.sysforeignkeys t1 </span><br><span class="line"><span class="keyword">LEFT</span> <span class="keyword">JOIN</span> sysobjects         t2 <span class="keyword">ON</span> t1.fkeyid<span class="operator">=</span>t2.id </span><br><span class="line"><span class="keyword">LEFT</span> <span class="keyword">JOIN</span> sysobjects         t3 <span class="keyword">ON</span> t1.rkeyid<span class="operator">=</span>t3.id </span><br><span class="line">    <span class="keyword">WHERE</span> t3.name<span class="operator">=</span><span class="string">&#x27;表名&#x27;</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="28-删除所有约束"><a href="#28-删除所有约束" class="headerlink" title="28. 删除所有约束"></a>28. 删除所有约束</h2><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">DECLARE</span> c1 <span class="keyword">cursor</span> <span class="keyword">for</span></span><br><span class="line">    <span class="keyword">SELECT</span> <span class="string">&#x27;ALTER TABLE [&#x27;</span><span class="operator">+</span> object_name(parent_obj) <span class="operator">+</span> <span class="string">&#x27;] DROP constraint [&#x27;</span><span class="operator">+</span>name<span class="operator">+</span><span class="string">&#x27;]; &#x27;</span></span><br><span class="line">    <span class="keyword">FROM</span> sysobjects</span><br><span class="line">    <span class="keyword">WHERE</span> xtype <span class="operator">=</span> <span class="string">&#x27;F&#x27;</span></span><br><span class="line"><span class="keyword">OPEN</span> c1</span><br><span class="line"><span class="keyword">DECLARE</span> <span class="variable">@c1</span> <span class="type">VARCHAR</span>(<span class="number">8000</span>)</span><br><span class="line"><span class="keyword">FETCH</span> NEXT <span class="keyword">FROM</span> c1 <span class="keyword">INTO</span> <span class="variable">@c1</span></span><br><span class="line">WHILE(@<span class="variable">@fetch</span>_status<span class="operator">=</span><span class="number">0</span>)</span><br><span class="line">    <span class="keyword">BEGIN</span></span><br><span class="line">        <span class="keyword">EXEC</span>(<span class="variable">@c1</span>)</span><br><span class="line">        <span class="keyword">FETCH</span> NEXT <span class="keyword">FROM</span> c1 <span class="keyword">INTO</span> <span class="variable">@c1</span></span><br><span class="line">    <span class="keyword">END</span></span><br><span class="line"><span class="keyword">CLOSE</span> c1</span><br><span class="line"><span class="keyword">DEALLOCATE</span> c1</span><br></pre></td></tr></table></figure>
+
+<h2 id="29-删除数据库所有表"><a href="#29-删除数据库所有表" class="headerlink" title="29. 删除数据库所有表"></a>29. 删除数据库所有表</h2><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">DECLARE</span> <span class="variable">@tname</span> <span class="type">VARCHAR</span>(<span class="number">8000</span>)</span><br><span class="line"><span class="keyword">SET</span> <span class="variable">@tname</span><span class="operator">=</span><span class="string">&#x27;&#x27;</span></span><br><span class="line"><span class="keyword">SELECT</span> <span class="variable">@tname</span><span class="operator">=</span><span class="variable">@tname</span> <span class="operator">+</span> Name <span class="operator">+</span> <span class="string">&#x27;,&#x27;</span> <span class="keyword">FROM</span> sysobjects <span class="keyword">WHERE</span> xtype<span class="operator">=</span><span class="string">&#x27;U&#x27;</span></span><br><span class="line"><span class="keyword">SELECT</span> <span class="variable">@tname</span><span class="operator">=</span><span class="string">&#x27;DROP TABLE &#x27;</span> <span class="operator">+</span> <span class="keyword">LEFT</span>(<span class="variable">@tname</span>,LEN(<span class="variable">@tname</span>)<span class="number">-1</span>)</span><br><span class="line"><span class="keyword">EXEC</span>(<span class="variable">@tname</span>)</span><br></pre></td></tr></table></figure>
+
+<h2 id="30-删除外键约束"><a href="#30-删除外键约束" class="headerlink" title="30. 删除外键约束"></a>30. 删除外键约束</h2><p>得到某个表被哪些外键引用，并且显示出外键表的表名</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span></span><br><span class="line">    fk.name,</span><br><span class="line">    fk.object_id,</span><br><span class="line">    OBJECT_NAME(fk.parent_object_id) <span class="keyword">AS</span> referenceTableName</span><br><span class="line"><span class="keyword">FROM</span></span><br><span class="line">    sys.foreign_keys <span class="keyword">AS</span> fk</span><br><span class="line"><span class="keyword">JOIN</span> sys.objects <span class="keyword">AS</span> o <span class="keyword">ON</span> fk.referenced_object_id <span class="operator">=</span> o.object_id</span><br><span class="line"><span class="keyword">WHERE</span></span><br><span class="line">    o.name <span class="operator">=</span> <span class="string">&#x27;ATTACHMENTDOC&#x27;</span>;</span><br></pre></td></tr></table></figure>
+<p>通过外键表的表名和外键名称执行以下语句即可删除外键</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">ALTER</span> <span class="keyword">TABLE</span> dbo.CONTRACTINFO <span class="keyword">DROP</span> <span class="keyword">CONSTRAINT</span> FK_CONTRACTINFO_ATTACHMENTDOC</span><br></pre></td></tr></table></figure>
+
+<h2 id="31-查找指定数据库表的列名、数据类型、数据长度、注释"><a href="#31-查找指定数据库表的列名、数据类型、数据长度、注释" class="headerlink" title="31. 查找指定数据库表的列名、数据类型、数据长度、注释"></a>31. 查找指定数据库表的列名、数据类型、数据长度、注释</h2><p>SQL SERVER 2000</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">    <span class="keyword">SELECT</span> sysobjects.name <span class="keyword">AS</span> 表名, syscolumns.name <span class="keyword">AS</span> 列名, systypes.name <span class="keyword">AS</span> 数据类型, syscolumns.length <span class="keyword">AS</span> 数据长度, sysproperties.[<span class="keyword">value</span>] <span class="keyword">AS</span> 注释</span><br><span class="line">      <span class="keyword">FROM</span> sysproperties</span><br><span class="line"><span class="keyword">RIGHT</span> <span class="keyword">JOIN</span> sysobjects</span><br><span class="line"><span class="keyword">INNER</span> <span class="keyword">JOIN</span> syscolumns <span class="keyword">ON</span> sysobjects.id    <span class="operator">=</span> syscolumns.id</span><br><span class="line"><span class="keyword">INNER</span> <span class="keyword">JOIN</span> systypes   <span class="keyword">ON</span> syscolumns.xtype <span class="operator">=</span> systypes.xtype </span><br><span class="line">                      <span class="keyword">ON</span> sysproperties.id <span class="operator">=</span> syscolumns.id <span class="keyword">AND</span> sysproperties.smallid <span class="operator">=</span> syscolumns.colid</span><br><span class="line">     <span class="keyword">WHERE</span> (sysobjects.xtype <span class="operator">=</span> <span class="string">&#x27;u&#x27;</span> <span class="keyword">OR</span> sysobjects.xtype <span class="operator">=</span> <span class="string">&#x27;v&#x27;</span>)</span><br><span class="line">       <span class="keyword">AND</span> (systypes.name <span class="operator">&lt;&gt;</span> <span class="string">&#x27;sysname&#x27;</span>)</span><br><span class="line">       <span class="keyword">AND</span> sysproperties.[<span class="keyword">value</span>] <span class="keyword">IS</span> <span class="keyword">NOT</span> <span class="keyword">NULL</span> <span class="comment">--查询注释不为 NULL 的记录</span></span><br><span class="line">       <span class="keyword">AND</span> (sysobjects.name <span class="operator">=</span> <span class="string">&#x27;指定数据库表&#x27;</span>)</span><br><span class="line">  <span class="keyword">ORDER</span> <span class="keyword">BY</span> <span class="number">1</span>, <span class="number">2</span>;</span><br></pre></td></tr></table></figure>
+<p>SQL SERVER 2005及以上</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">    <span class="keyword">SELECT</span> ta.name <span class="keyword">AS</span> 表名, c.name <span class="keyword">AS</span> 列名, t.name <span class="keyword">AS</span> 数据类型, c.max_length <span class="keyword">AS</span> 数据长度, ex.[<span class="keyword">value</span>] <span class="keyword">AS</span> 注释</span><br><span class="line">      <span class="keyword">FROM</span> sys.columns               <span class="keyword">AS</span> c</span><br><span class="line"><span class="keyword">INNER</span> <span class="keyword">JOIN</span> sys.tables                <span class="keyword">AS</span> ta <span class="keyword">ON</span> c.object_id <span class="operator">=</span> ta.object_id</span><br><span class="line"> <span class="keyword">LEFT</span> <span class="keyword">JOIN</span> sys.extended_properties   <span class="keyword">AS</span> ex <span class="keyword">ON</span> ex.major_id <span class="operator">=</span> c.object_id <span class="keyword">AND</span> ex.minor_id <span class="operator">=</span> c.column_id</span><br><span class="line"><span class="keyword">INNER</span> <span class="keyword">JOIN</span> (<span class="keyword">SELECT</span> name, system_type_id</span><br><span class="line">              <span class="keyword">FROM</span> sys.types</span><br><span class="line">             <span class="keyword">WHERE</span> name <span class="operator">&lt;&gt;</span> <span class="string">&#x27;sysname&#x27;</span>) <span class="keyword">AS</span> t <span class="keyword">ON</span> c.system_type_id <span class="operator">=</span> t.system_type_id</span><br><span class="line">     <span class="keyword">WHERE</span> ta.name <span class="operator">=</span> <span class="string">&#x27;指定数据库表&#x27;</span></span><br><span class="line">       <span class="keyword">AND</span> ex.[<span class="keyword">value</span>] <span class="keyword">IS</span> <span class="keyword">NOT</span> <span class="keyword">NULL</span></span><br><span class="line">  <span class="keyword">ORDER</span> <span class="keyword">BY</span> <span class="number">1</span>, <span class="number">2</span>;</span><br></pre></td></tr></table></figure>
+
+<h2 id="32-同步表数据"><a href="#32-同步表数据" class="headerlink" title="32. 同步表数据"></a>32. 同步表数据</h2><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">INSERT</span> 表<span class="number">2</span> </span><br><span class="line"><span class="keyword">SELECT</span> <span class="operator">*</span> <span class="keyword">FROM</span> 表<span class="number">1</span> <span class="keyword">AS</span> a <span class="keyword">WHERE</span> <span class="keyword">NOT</span> <span class="keyword">EXISTS</span>(<span class="keyword">SELECT</span> <span class="number">1</span> <span class="keyword">FROM</span> 表<span class="number">2</span> <span class="keyword">WHERE</span> ID <span class="operator">=</span> a.ID);</span><br></pre></td></tr></table></figure>
+
+<h2 id="33-判断某列中是否包含中文字符或者英文字符等特殊字符"><a href="#33-判断某列中是否包含中文字符或者英文字符等特殊字符" class="headerlink" title="33. 判断某列中是否包含中文字符或者英文字符等特殊字符"></a>33. 判断某列中是否包含中文字符或者英文字符等特殊字符</h2><p>中文字符</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> <span class="operator">*</span> <span class="keyword">FROM</span> 表名 <span class="keyword">WHERE</span> 某列 <span class="keyword">LIKE</span> <span class="string">&#x27;%[吖-座]%&#x27;</span></span><br></pre></td></tr></table></figure>
+<p>英文字符</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> <span class="operator">*</span> <span class="keyword">FROM</span> 表名 <span class="keyword">WHERE</span> 某列 <span class="keyword">LIKE</span> <span class="string">&#x27;%[a-z]%&#x27;</span></span><br></pre></td></tr></table></figure>
+
+
+<h2 id="34-行转列，将多行数据合并成一行（SQL-SERVER-2005以上支持）"><a href="#34-行转列，将多行数据合并成一行（SQL-SERVER-2005以上支持）" class="headerlink" title="34. 行转列，将多行数据合并成一行（SQL SERVER 2005以上支持）"></a>34. 行转列，将多行数据合并成一行（SQL SERVER 2005以上支持）</h2><p>例如，表Table1中有两列数据：</p>
+<table>
+<thead>
+<tr>
+<th>code</th>
+<th align="left">name</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>AAA</td>
+<td align="left">姓名1</td>
+</tr>
+<tr>
+<td>AAA</td>
+<td align="left">姓名2</td>
+</tr>
+<tr>
+<td>AAA</td>
+<td align="left">姓名3</td>
+</tr>
+<tr>
+<td>BBB</td>
+<td align="left">姓名4</td>
+</tr>
+<tr>
+<td>BBB</td>
+<td align="left">姓名5</td>
+</tr>
+</tbody></table>
+<p>行转列，想变成如下格式：</p>
+<table>
+<thead>
+<tr>
+<th>code</th>
+<th align="left">name</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>AAA</td>
+<td align="left">姓名1,姓名2,姓名3</td>
+</tr>
+<tr>
+<td>BBB</td>
+<td align="left">姓名4,姓名5</td>
+</tr>
+</tbody></table>
+<p>可用如下SQL实现：</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">  <span class="keyword">SELECT</span> code, name <span class="operator">=</span> (STUFF((<span class="keyword">SELECT</span> <span class="string">&#x27;,&#x27;</span> <span class="operator">+</span> name </span><br><span class="line">                                <span class="keyword">FROM</span> Table1 </span><br><span class="line">                               <span class="keyword">WHERE</span> code <span class="operator">=</span> a.code <span class="keyword">FOR</span> xml PATH(<span class="string">&#x27;&#x27;</span>)),<span class="number">1</span>,<span class="number">1</span>,<span class="string">&#x27;&#x27;</span>))</span><br><span class="line">    <span class="keyword">FROM</span> Table1 a </span><br><span class="line"><span class="keyword">GROUP</span> <span class="keyword">BY</span> code</span><br></pre></td></tr></table></figure>
+
+<h2 id="35-去除字段中空格、换行符、回车符"><a href="#35-去除字段中空格、换行符、回车符" class="headerlink" title="35. 去除字段中空格、换行符、回车符"></a>35. 去除字段中空格、换行符、回车符</h2><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">UPDATE</span> <span class="keyword">Table</span> <span class="keyword">SET</span> <span class="keyword">Column</span> <span class="operator">=</span> LTRIM(RTRIM(REPLACE(REPLACE(<span class="keyword">Column</span>, <span class="type">CHAR</span>(<span class="number">10</span>), <span class="string">&#x27;&#x27;</span>), <span class="type">CHAR</span> (<span class="number">13</span>), <span class="string">&#x27;&#x27;</span>)))</span><br></pre></td></tr></table></figure>
+
+<hr>
+<h1 id="三-技巧篇"><a href="#三-技巧篇" class="headerlink" title="三. 技巧篇"></a>三. 技巧篇</h1><h2 id="1-1-x3D-1，1-x3D-2的使用，在SQL语句组合时用的较多"><a href="#1-1-x3D-1，1-x3D-2的使用，在SQL语句组合时用的较多" class="headerlink" title="1. 1&#x3D;1，1&#x3D;2的使用，在SQL语句组合时用的较多"></a>1. 1&#x3D;1，1&#x3D;2的使用，在SQL语句组合时用的较多</h2><pre><code>“WHERE 1=1” 表示选择全部
+“WHERE 1=2” 表示全部不选
+</code></pre>
+<h2 id="2-收缩数据库"><a href="#2-收缩数据库" class="headerlink" title="2. 收缩数据库"></a>2. 收缩数据库</h2><ul>
+<li>重建索引<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">DBCC REINDEX</span><br><span class="line">DBCC INDEXDEFRAG</span><br></pre></td></tr></table></figure></li>
+<li>收缩数据和日志<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">DBCC SHRINKDB</span><br><span class="line">DBCC SHRINKFILE</span><br></pre></td></tr></table></figure></li>
+</ul>
+<h2 id="3-压缩数据库"><a href="#3-压缩数据库" class="headerlink" title="3. 压缩数据库"></a>3. 压缩数据库</h2><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">dbcc shrinkdatabase(dbname)</span><br></pre></td></tr></table></figure>
+
+<h2 id="4-转移数据库给新用户以已存在用户权限"><a href="#4-转移数据库给新用户以已存在用户权限" class="headerlink" title="4. 转移数据库给新用户以已存在用户权限"></a>4. 转移数据库给新用户以已存在用户权限</h2><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">EXEC</span> sp_change_users_login <span class="string">&#x27;update_one&#x27;</span>,<span class="string">&#x27;newname&#x27;</span>,<span class="string">&#x27;oldname&#x27;</span></span><br><span class="line">go</span><br></pre></td></tr></table></figure>
+
+<h2 id="5-检查备份集"><a href="#5-检查备份集" class="headerlink" title="5. 检查备份集"></a>5. 检查备份集</h2><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">RESTORE VERIFYONLY <span class="keyword">FROM</span> disk<span class="operator">=</span><span class="string">&#x27;E:\dvbbs.bak&#x27;</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="6-修复数据库"><a href="#6-修复数据库" class="headerlink" title="6. 修复数据库"></a>6. 修复数据库</h2><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">ALTER</span> DATABASE [dvbbs] <span class="keyword">SET</span> SINGLE_USER</span><br><span class="line">GO</span><br><span class="line">DBCC CHECKDB(<span class="string">&#x27;dvbbs&#x27;</span>,repair_allow_data_loss) <span class="keyword">WITH</span> TABLOCK</span><br><span class="line">GO</span><br><span class="line"><span class="keyword">ALTER</span> DATABASE [dvbbs] <span class="keyword">SET</span> MULTI_USER</span><br><span class="line">GO</span><br></pre></td></tr></table></figure>
+
+<h2 id="7-日志清除"><a href="#7-日志清除" class="headerlink" title="7. 日志清除"></a>7. 日志清除</h2><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SET</span> NOCOUNT <span class="keyword">ON</span></span><br><span class="line"><span class="keyword">DECLARE</span> <span class="variable">@LogicalFileName</span> sysname,</span><br><span class="line"><span class="variable">@MaxMinutes</span> <span class="type">INT</span>,</span><br><span class="line"><span class="variable">@NewSize</span> <span class="type">INT</span></span><br><span class="line"></span><br><span class="line">USE tablename <span class="comment">-- 要操作的数据库名</span></span><br><span class="line"><span class="keyword">SELECT</span>  <span class="variable">@LogicalFileName</span> <span class="operator">=</span> <span class="string">&#x27;tablename_log&#x27;</span>, <span class="comment">-- 日志文件名</span></span><br><span class="line"><span class="variable">@MaxMinutes</span> <span class="operator">=</span> <span class="number">10</span>, <span class="comment">-- Limit ON time allowed to wrap log.</span></span><br><span class="line"><span class="variable">@NewSize</span> <span class="operator">=</span> <span class="number">1</span>  <span class="comment">-- 你想设定的日志文件的大小(M)</span></span><br><span class="line">Setup <span class="operator">/</span> initialize</span><br><span class="line"><span class="keyword">DECLARE</span> <span class="variable">@OriginalSize</span> <span class="type">int</span></span><br><span class="line"><span class="keyword">SELECT</span> <span class="variable">@OriginalSize</span> <span class="operator">=</span> size </span><br><span class="line"><span class="keyword">FROM</span> sysfiles</span><br><span class="line"><span class="keyword">WHERE</span> name <span class="operator">=</span> <span class="variable">@LogicalFileName</span></span><br><span class="line"><span class="keyword">SELECT</span> <span class="string">&#x27;Original Size of &#x27;</span> <span class="operator">+</span> db_name() <span class="operator">+</span> <span class="string">&#x27; LOG is &#x27;</span> <span class="operator">+</span> </span><br><span class="line"><span class="keyword">CONVERT</span>(<span class="type">VARCHAR</span>(<span class="number">30</span>),<span class="variable">@OriginalSize</span>) <span class="operator">+</span> <span class="string">&#x27; 8K pages or &#x27;</span> <span class="operator">+</span> </span><br><span class="line"><span class="keyword">CONVERT</span>(<span class="type">VARCHAR</span>(<span class="number">30</span>),(<span class="variable">@OriginalSize</span><span class="operator">*</span><span class="number">8</span><span class="operator">/</span><span class="number">1024</span>)) <span class="operator">+</span> <span class="string">&#x27;MB&#x27;</span></span><br><span class="line"><span class="keyword">FROM</span> sysfiles</span><br><span class="line"><span class="keyword">WHERE</span> name <span class="operator">=</span> <span class="variable">@LogicalFileName</span></span><br><span class="line"><span class="keyword">CREATE</span> <span class="keyword">TABLE</span> DummyTrans</span><br><span class="line">(DummyColumn <span class="type">char</span> (<span class="number">8000</span>) <span class="keyword">NOT</span> <span class="keyword">null</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">DECLARE</span> <span class="variable">@Counter</span>    <span class="type">INT</span>,</span><br><span class="line"><span class="variable">@StartTime</span> DATETIME,</span><br><span class="line"><span class="variable">@TruncLog</span>   <span class="type">VARCHAR</span>(<span class="number">255</span>)</span><br><span class="line"><span class="keyword">SELECT</span> <span class="variable">@StartTime</span> <span class="operator">=</span> GETDATE(),</span><br><span class="line"><span class="variable">@TruncLog</span> <span class="operator">=</span> <span class="string">&#x27;BACKUP LOG &#x27;</span> <span class="operator">+</span> db_name() <span class="operator">+</span> <span class="string">&#x27; WITH TRUNCATE_ONLY&#x27;</span></span><br><span class="line">DBCC SHRINKFILE (<span class="variable">@LogicalFileName</span>, <span class="variable">@NewSize</span>)</span><br><span class="line"><span class="keyword">EXEC</span> (<span class="variable">@TruncLog</span>)</span><br><span class="line"><span class="comment">-- Wrap the log IF necessary.</span></span><br><span class="line">WHILE <span class="variable">@MaxMinutes</span> <span class="operator">&gt;</span> DATEDIFF (mi, <span class="variable">@StartTime</span>, GETDATE()) <span class="comment">-- time has NOT expired</span></span><br><span class="line"><span class="keyword">AND</span> <span class="variable">@OriginalSize</span> <span class="operator">=</span> (<span class="keyword">SELECT</span> size <span class="keyword">FROM</span> sysfiles <span class="keyword">WHERE</span> name <span class="operator">=</span> <span class="variable">@LogicalFileName</span>)  </span><br><span class="line"><span class="keyword">AND</span> (<span class="variable">@OriginalSize</span> <span class="operator">*</span> <span class="number">8</span> <span class="operator">/</span><span class="number">1024</span>) <span class="operator">&gt;</span> <span class="variable">@NewSize</span>  </span><br><span class="line"><span class="keyword">BEGIN</span> <span class="comment">-- Outer loop.</span></span><br><span class="line"><span class="keyword">SELECT</span> <span class="variable">@Counter</span> <span class="operator">=</span> <span class="number">0</span></span><br><span class="line">WHILE   ((<span class="variable">@Counter</span> <span class="operator">&lt;</span> <span class="variable">@OriginalSize</span> <span class="operator">/</span> <span class="number">16</span>) <span class="keyword">AND</span> (<span class="variable">@Counter</span> <span class="operator">&lt;</span> <span class="number">50000</span>))</span><br><span class="line"><span class="keyword">BEGIN</span> <span class="comment">-- UPDATE</span></span><br><span class="line"><span class="keyword">INSERT</span> DummyTrans <span class="keyword">VALUES</span> (<span class="string">&#x27;Fill Log&#x27;</span>) <span class="keyword">DELETE</span> DummyTrans</span><br><span class="line"><span class="keyword">SELECT</span> <span class="variable">@Counter</span> <span class="operator">=</span> <span class="variable">@Counter</span> <span class="operator">+</span> <span class="number">1</span></span><br><span class="line"><span class="keyword">END</span></span><br><span class="line"><span class="keyword">EXEC</span> (<span class="variable">@TruncLog</span>)  </span><br><span class="line"><span class="keyword">END</span></span><br><span class="line"><span class="keyword">SELECT</span> <span class="string">&#x27;Final Size of &#x27;</span> <span class="operator">+</span> db_name() <span class="operator">+</span> <span class="string">&#x27; LOG is &#x27;</span> <span class="operator">+</span></span><br><span class="line"><span class="keyword">CONVERT</span>(<span class="type">VARCHAR</span>(<span class="number">30</span>),size) <span class="operator">+</span> <span class="string">&#x27; 8K pages or &#x27;</span> <span class="operator">+</span> </span><br><span class="line"><span class="keyword">CONVERT</span>(<span class="type">VARCHAR</span>(<span class="number">30</span>),(size<span class="operator">*</span><span class="number">8</span><span class="operator">/</span><span class="number">1024</span>)) <span class="operator">+</span> <span class="string">&#x27;MB&#x27;</span></span><br><span class="line"><span class="keyword">FROM</span> sysfiles </span><br><span class="line"><span class="keyword">WHERE</span> name <span class="operator">=</span> <span class="variable">@LogicalFileName</span></span><br><span class="line"><span class="keyword">DROP</span> <span class="keyword">TABLE</span> DummyTrans</span><br><span class="line"><span class="keyword">SET</span> NOCOUNT OFF</span><br></pre></td></tr></table></figure>
+
+<h2 id="8-更改某个表"><a href="#8-更改某个表" class="headerlink" title="8. 更改某个表"></a>8. 更改某个表</h2><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">EXEC</span> sp_changeobjectowner <span class="string">&#x27;tablename&#x27;</span>,<span class="string">&#x27;dbo&#x27;</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="9-存储更改全部表"><a href="#9-存储更改全部表" class="headerlink" title="9. 存储更改全部表"></a>9. 存储更改全部表</h2><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">CREATE</span> <span class="keyword">PROCEDURE</span> dbo.User_ChangeObjectOwnerBatch</span><br><span class="line"><span class="variable">@OldOwner</span> <span class="keyword">AS</span> NVARCHAR(<span class="number">128</span>),</span><br><span class="line"><span class="variable">@NewOwner</span> <span class="keyword">AS</span> NVARCHAR(<span class="number">128</span>)</span><br><span class="line"><span class="keyword">AS</span></span><br><span class="line"><span class="keyword">DECLARE</span> <span class="variable">@Name</span>    <span class="keyword">AS</span> NVARCHAR(<span class="number">128</span>)</span><br><span class="line"><span class="keyword">DECLARE</span> <span class="variable">@Owner</span>   <span class="keyword">AS</span> NVARCHAR(<span class="number">128</span>)</span><br><span class="line"><span class="keyword">DECLARE</span> <span class="variable">@OwnerName</span>   <span class="keyword">AS</span> NVARCHAR(<span class="number">128</span>)</span><br><span class="line"><span class="keyword">DECLARE</span> curObject <span class="keyword">CURSOR</span> <span class="keyword">FOR</span> </span><br><span class="line"><span class="keyword">SELECT</span> <span class="string">&#x27;Name&#x27;</span>    <span class="operator">=</span> name,</span><br><span class="line">   <span class="string">&#x27;Owner&#x27;</span>    <span class="operator">=</span> user_name(uid)</span><br><span class="line"><span class="keyword">FROM</span> sysobjects</span><br><span class="line"><span class="keyword">WHERE</span> user_name(uid)<span class="operator">=</span><span class="variable">@OldOwner</span></span><br><span class="line"><span class="keyword">ORDER</span> <span class="keyword">BY</span> name</span><br><span class="line"><span class="keyword">OPEN</span>   curObject</span><br><span class="line"><span class="keyword">FETCH</span> NEXT <span class="keyword">FROM</span> curObject <span class="keyword">INTO</span> <span class="variable">@Name</span>, <span class="variable">@Owner</span></span><br><span class="line">WHILE(@<span class="variable">@FETCH</span>_STATUS<span class="operator">=</span><span class="number">0</span>)</span><br><span class="line"><span class="keyword">BEGIN</span>     </span><br><span class="line">IF <span class="variable">@Owner</span><span class="operator">=</span><span class="variable">@OldOwner</span> </span><br><span class="line"><span class="keyword">BEGIN</span></span><br><span class="line">   <span class="keyword">SET</span> <span class="variable">@OwnerName</span> <span class="operator">=</span> <span class="variable">@OldOwner</span> <span class="operator">+</span> <span class="string">&#x27;.&#x27;</span> <span class="operator">+</span> rtrim(<span class="variable">@Name</span>)</span><br><span class="line">   <span class="keyword">EXEC</span> sp_changeobjectowner <span class="variable">@OwnerName</span>, <span class="variable">@NewOwner</span></span><br><span class="line"><span class="keyword">END</span></span><br><span class="line"><span class="comment">-- SELECT @name,@NewOwner,@OldOwner</span></span><br><span class="line"><span class="keyword">FETCH</span> NEXT <span class="keyword">FROM</span> curObject <span class="keyword">INTO</span> <span class="variable">@Name</span>, <span class="variable">@Owner</span></span><br><span class="line"><span class="keyword">END</span></span><br><span class="line"><span class="keyword">CLOSE</span> curObject</span><br><span class="line"><span class="keyword">DEALLOCATE</span> curObject</span><br><span class="line">GO</span><br></pre></td></tr></table></figure>
+
+<h2 id="10-SQL-SERVER中直接循环写入数据"><a href="#10-SQL-SERVER中直接循环写入数据" class="headerlink" title="10. SQL SERVER中直接循环写入数据"></a>10. SQL SERVER中直接循环写入数据</h2><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">DECLARE</span> <span class="variable">@i</span> <span class="type">int</span></span><br><span class="line"><span class="keyword">SET</span> <span class="variable">@i</span><span class="operator">=</span><span class="number">1</span></span><br><span class="line">WHILE <span class="variable">@i</span><span class="operator">&lt;</span><span class="number">30</span></span><br><span class="line"><span class="keyword">BEGIN</span></span><br><span class="line"><span class="keyword">INSERT</span> <span class="keyword">INTO</span> test (userid) <span class="keyword">VALUES</span>(<span class="variable">@i</span>)</span><br><span class="line"><span class="keyword">SET</span> <span class="variable">@i</span><span class="operator">=</span><span class="variable">@i</span><span class="operator">+</span><span class="number">1</span></span><br><span class="line"><span class="keyword">END</span></span><br></pre></td></tr></table></figure>
+<p>案例：有如下表，要求就表中所有沒有及格的成绩，在每次增长0.1的基础上，使他们刚好及格:</p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th align="right">score</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Zhangshan</td>
+<td align="right">80</td>
+</tr>
+<tr>
+<td>Lishi</td>
+<td align="right">59</td>
+</tr>
+<tr>
+<td>Wangwu</td>
+<td align="right">50</td>
+</tr>
+<tr>
+<td>Songquan</td>
+<td align="right">69</td>
+</tr>
+</tbody></table>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">WHILE((<span class="keyword">SELECT</span> <span class="built_in">MIN</span>(score) <span class="keyword">FROM</span> tb_table)<span class="operator">&lt;</span><span class="number">60</span>)</span><br><span class="line"><span class="keyword">BEGIN</span></span><br><span class="line"><span class="keyword">UPDATE</span> tb_table <span class="keyword">SET</span> score <span class="operator">=</span>score<span class="operator">*</span><span class="number">1.01</span></span><br><span class="line"><span class="keyword">WHERE</span> score<span class="operator">&lt;</span><span class="number">60</span></span><br><span class="line">IF (<span class="keyword">SELECT</span> <span class="built_in">MIN</span>(score) <span class="keyword">FROM</span> tb_table)<span class="operator">&gt;</span><span class="number">60</span></span><br><span class="line">BREAK</span><br><span class="line"><span class="keyword">ELSE</span></span><br><span class="line">CONTINUE</span><br><span class="line"><span class="keyword">END</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="11-查看数据库属性"><a href="#11-查看数据库属性" class="headerlink" title="11. 查看数据库属性"></a>11. 查看数据库属性</h2><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sp_helpdb 数据库名</span><br></pre></td></tr></table></figure>
+
+<h2 id="12-按姓氏笔画排序"><a href="#12-按姓氏笔画排序" class="headerlink" title="12. 按姓氏笔画排序:"></a>12. 按姓氏笔画排序:</h2><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> <span class="operator">*</span> <span class="keyword">FROM</span> TableName <span class="keyword">ORDER</span> <span class="keyword">BY</span> CustomerName <span class="keyword">Collate</span> Chinese_PRC_Stroke_ci_as <span class="operator">/</span><span class="operator">/</span>从少到多</span><br></pre></td></tr></table></figure>
+
+<h2 id="13-数据库加密"><a href="#13-数据库加密" class="headerlink" title="13. 数据库加密:"></a>13. 数据库加密:</h2><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> encrypt(<span class="string">&#x27;原始密码&#x27;</span>)</span><br><span class="line"><span class="keyword">SELECT</span> pwdencrypt(<span class="string">&#x27;原始密码&#x27;</span>)</span><br><span class="line"><span class="keyword">SELECT</span> pwdcompare(<span class="string">&#x27;原始密码&#x27;</span>,<span class="string">&#x27;加密后密码&#x27;</span>) <span class="operator">=</span> <span class="number">1</span><span class="comment">--相同；否则不相同 encrypt(&#x27;原始密码&#x27;)</span></span><br><span class="line"><span class="keyword">SELECT</span> pwdencrypt(<span class="string">&#x27;原始密码&#x27;</span>)</span><br><span class="line"><span class="keyword">SELECT</span> pwdcompare(<span class="string">&#x27;原始密码&#x27;</span>,<span class="string">&#x27;加密后密码&#x27;</span>) <span class="operator">=</span> <span class="number">1</span><span class="comment">--相同；否则不相同</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="14-取回表中字段"><a href="#14-取回表中字段" class="headerlink" title="14. 取回表中字段:"></a>14. 取回表中字段:</h2><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">DECLARE</span> <span class="variable">@list</span> <span class="type">VARCHAR</span>(<span class="number">1000</span>),</span><br><span class="line"><span class="variable">@sql</span> NVARCHAR(<span class="number">1000</span>) </span><br><span class="line"><span class="keyword">SELECT</span> <span class="variable">@list</span><span class="operator">=</span><span class="variable">@list</span><span class="operator">+</span><span class="string">&#x27;,&#x27;</span><span class="operator">+</span>b.name <span class="keyword">FROM</span> sysobjects a,syscolumns b <span class="keyword">WHERE</span> a.id<span class="operator">=</span>b.id <span class="keyword">AND</span> a.name<span class="operator">=</span><span class="string">&#x27;表A&#x27;</span></span><br><span class="line"><span class="keyword">SET</span> <span class="variable">@sql</span><span class="operator">=</span><span class="string">&#x27;SELECT &#x27;</span><span class="operator">+</span><span class="keyword">right</span>(<span class="variable">@list</span>,LEN(<span class="variable">@list</span>)<span class="number">-1</span>)<span class="operator">+</span><span class="string">&#x27; FROM 表A&#x27;</span> </span><br><span class="line"><span class="keyword">EXEC</span> (<span class="variable">@sql</span>)</span><br></pre></td></tr></table></figure>
+
+<h2 id="15-查看硬盘分区"><a href="#15-查看硬盘分区" class="headerlink" title="15. 查看硬盘分区:"></a>15. 查看硬盘分区:</h2><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">EXEC</span> master..xp_fixeddrives</span><br></pre></td></tr></table></figure>
+
+<h2 id="16-比较A-B表是否相等"><a href="#16-比较A-B表是否相等" class="headerlink" title="16. 比较A,B表是否相等:"></a>16. 比较A,B表是否相等:</h2><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">IF (<span class="keyword">SELECT</span> checksum_agg(binary_checksum(<span class="operator">*</span>)) <span class="keyword">FROM</span> A)</span><br><span class="line">     <span class="operator">=</span></span><br><span class="line">    (<span class="keyword">SELECT</span> checksum_agg(binary_checksum(<span class="operator">*</span>)) <span class="keyword">FROM</span> B)</span><br><span class="line">PRINT <span class="string">&#x27;相等&#x27;</span></span><br><span class="line"><span class="keyword">ELSE</span></span><br><span class="line">PRINT <span class="string">&#x27;不相等&#x27;</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="17-杀掉所有的事件探察器进程"><a href="#17-杀掉所有的事件探察器进程" class="headerlink" title="17. 杀掉所有的事件探察器进程:"></a>17. 杀掉所有的事件探察器进程:</h2><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">DECLARE</span> hcforeach <span class="keyword">CURSOR</span> <span class="keyword">GLOBAL</span> <span class="keyword">FOR</span> <span class="keyword">SELECT</span> <span class="string">&#x27;kill &#x27;</span><span class="operator">+</span>RTRIM(spid) <span class="keyword">FROM</span> master.dbo.sysprocesses</span><br><span class="line"><span class="keyword">WHERE</span> program_name <span class="keyword">IN</span>(<span class="string">&#x27;SQL profiler&#x27;</span>,N<span class="string">&#x27;SQL 事件探查器&#x27;</span>)</span><br><span class="line"><span class="keyword">EXEC</span> sp_msforeach_worker <span class="string">&#x27;?&#x27;</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="18-记录搜索"><a href="#18-记录搜索" class="headerlink" title="18. 记录搜索:"></a>18. 记录搜索:</h2><ul>
+<li>开头到N条记录<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> TOP N <span class="operator">*</span> <span class="keyword">FROM</span> 表</span><br></pre></td></tr></table></figure></li>
+<li>N到M条记录(要有主索引ID)<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> TOP M<span class="operator">-</span>N <span class="operator">*</span> <span class="keyword">FROM</span> 表 <span class="keyword">WHERE</span> ID <span class="keyword">IN</span> (<span class="keyword">SELECT</span> TOP M ID <span class="keyword">FROM</span> 表) <span class="keyword">ORDER</span> <span class="keyword">BY</span> ID <span class="keyword">DESC</span></span><br></pre></td></tr></table></figure></li>
+<li>N到结尾记录<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> TOP N <span class="operator">*</span> <span class="keyword">FROM</span> 表 <span class="keyword">ORDER</span> <span class="keyword">BY</span> ID <span class="keyword">DESC</span></span><br></pre></td></tr></table></figure></li>
+</ul>
+<h2 id="19-获取当前数据库中的所有用户表"><a href="#19-获取当前数据库中的所有用户表" class="headerlink" title="19. 获取当前数据库中的所有用户表"></a>19. 获取当前数据库中的所有用户表</h2><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> name <span class="keyword">FROM</span> sysobjects <span class="keyword">WHERE</span> xtype<span class="operator">=</span><span class="string">&#x27;u&#x27;</span> <span class="keyword">AND</span> status<span class="operator">&gt;=</span><span class="number">0</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="20-获取某一个表的所有字段"><a href="#20-获取某一个表的所有字段" class="headerlink" title="20. 获取某一个表的所有字段"></a>20. 获取某一个表的所有字段</h2><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> name <span class="keyword">FROM</span> syscolumns <span class="keyword">WHERE</span> id<span class="operator">=</span>object_id(<span class="string">&#x27;表名&#x27;</span>)</span><br><span class="line"><span class="keyword">SELECT</span> name <span class="keyword">FROM</span> syscolumns <span class="keyword">WHERE</span> id <span class="keyword">IN</span> (<span class="keyword">SELECT</span> id <span class="keyword">FROM</span> sysobjects <span class="keyword">WHERE</span> type <span class="operator">=</span> <span class="string">&#x27;u&#x27;</span> <span class="keyword">AND</span> name <span class="operator">=</span> <span class="string">&#x27;表名&#x27;</span>)</span><br></pre></td></tr></table></figure>
+
+<h2 id="21-查看与某一个表相关的视图、存储过程、函数"><a href="#21-查看与某一个表相关的视图、存储过程、函数" class="headerlink" title="21. 查看与某一个表相关的视图、存储过程、函数"></a>21. 查看与某一个表相关的视图、存储过程、函数</h2><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> a.<span class="operator">*</span> <span class="keyword">FROM</span> sysobjects a, syscomments b <span class="keyword">WHERE</span> a.id <span class="operator">=</span> b.id <span class="keyword">AND</span> b.text <span class="keyword">LIKE</span> <span class="string">&#x27;%表名%&#x27;</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="22-查看当前数据库中所有存储过程"><a href="#22-查看当前数据库中所有存储过程" class="headerlink" title="22. 查看当前数据库中所有存储过程"></a>22. 查看当前数据库中所有存储过程</h2><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> name <span class="keyword">AS</span> 存储过程名称 <span class="keyword">FROM</span> sysobjects <span class="keyword">WHERE</span> xtype<span class="operator">=</span><span class="string">&#x27;P&#x27;</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="23-查询用户创建的所有数据库"><a href="#23-查询用户创建的所有数据库" class="headerlink" title="23. 查询用户创建的所有数据库"></a>23. 查询用户创建的所有数据库</h2><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> <span class="operator">*</span> <span class="keyword">FROM</span> master..sysdatabases D <span class="keyword">WHERE</span> sid <span class="keyword">NOT</span> <span class="keyword">IN</span>(<span class="keyword">SELECT</span> sid <span class="keyword">FROM</span> master..syslogins <span class="keyword">WHERE</span> name<span class="operator">=</span><span class="string">&#x27;sa&#x27;</span>)</span><br><span class="line"><span class="keyword">SELECT</span> dbid, name <span class="keyword">AS</span> DB_NAME <span class="keyword">FROM</span> master..sysdatabases <span class="keyword">WHERE</span> sid <span class="operator">&lt;&gt;</span> <span class="number">0x01</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="24-查询某一个表的字段和数据类型"><a href="#24-查询某一个表的字段和数据类型" class="headerlink" title="24. 查询某一个表的字段和数据类型"></a>24. 查询某一个表的字段和数据类型</h2><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> column_name,data_type <span class="keyword">FROM</span> information_schema.columns</span><br><span class="line"><span class="keyword">WHERE</span> table_name <span class="operator">=</span> <span class="string">&#x27;表名&#x27;</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="25-不同服务器数据库之间的数据操作"><a href="#25-不同服务器数据库之间的数据操作" class="headerlink" title="25. 不同服务器数据库之间的数据操作"></a>25. 不同服务器数据库之间的数据操作</h2><h4 id="25-1-创建链接服务器"><a href="#25-1-创建链接服务器" class="headerlink" title="25.1 创建链接服务器"></a>25.1 创建链接服务器</h4><ul>
+<li>创建一个链接名<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">EXEC</span> sp_addlinkedserver <span class="string">&#x27;LinkName &#x27;</span>, <span class="string">&#x27; &#x27;</span>, <span class="string">&#x27;SQLOLEDB &#x27;</span>, <span class="string">&#x27;远程服务器名或IP地址 &#x27;</span> <span class="comment">--有自定义实例名时要加上&quot;/实例名&quot;</span></span><br></pre></td></tr></table></figure></li>
+<li>创建登录信息（或叫创建链接服务器登录名映射）（只需选择一种方式即可）<ul>
+<li>以windows认证的方式登录  <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">EXEC</span> sp_addlinkedsrvlogin <span class="string">&#x27;LinkName&#x27;</span>  <span class="comment">--或EXEC sp_addlinkedsrvlogin &#x27;LinkName&#x27;,&#x27;true&#x27;</span></span><br></pre></td></tr></table></figure></li>
+<li>以SQL认证的方式登录  <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">EXEC</span> sp_addlinkedsrvlogin <span class="string">&#x27;LinkName &#x27;</span>, <span class="string">&#x27;false &#x27;</span>,<span class="keyword">null</span>, <span class="string">&#x27;用户名 &#x27;</span>, <span class="string">&#x27;密码 &#x27;</span></span><br></pre></td></tr></table></figure></li>
+</ul>
+</li>
+</ul>
+<h4 id="25-2-链接服务器相关数据操作"><a href="#25-2-链接服务器相关数据操作" class="headerlink" title="25.2 链接服务器相关数据操作"></a>25.2 链接服务器相关数据操作</h4><ul>
+<li>查询示例<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> <span class="operator">*</span> <span class="keyword">FROM</span> LinkName.数据库名.架构名.表名</span><br></pre></td></tr></table></figure></li>
+</ul>
+<h4 id="25-3-删除链接服务器"><a href="#25-3-删除链接服务器" class="headerlink" title="25.3 删除链接服务器"></a>25.3 删除链接服务器</h4><ul>
+<li>删除登录信息(或叫删除链接服务器登录名映射)<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">EXEC</span> sp_DROPlinkedsrvlogin <span class="string">&#x27;LinkName&#x27;</span>,<span class="keyword">NULL</span></span><br></pre></td></tr></table></figure></li>
+<li>删除链接服务器名称<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">EXEC</span> sp_DROPserver <span class="string">&#x27;LinkName &#x27;</span>, <span class="string">&#x27;DROPlogins&#x27;</span> <span class="comment">--如果指定DROPlogins，则在删除链接服务器之前要删除登录名映射</span></span><br></pre></td></tr></table></figure></li>
+</ul>
+<h4 id="25-4-其它连接远程-x2F-局域网数据方法：OPENROWSET-x2F-OPENQUERY-x2F-opendatasource"><a href="#25-4-其它连接远程-x2F-局域网数据方法：OPENROWSET-x2F-OPENQUERY-x2F-opendatasource" class="headerlink" title="25.4 其它连接远程&#x2F;局域网数据方法：OPENROWSET&#x2F;OPENQUERY&#x2F;opendatasource"></a>25.4 其它连接远程&#x2F;局域网数据方法：OPENROWSET&#x2F;OPENQUERY&#x2F;opendatasource</h4><ul>
+<li><h5 id="OPENROWSET方法（不需要用到创建好的链接名。如果连接的实例名不是默认的，需要在”sql服务器名或IP地址”后加上”-x2F-实例名”）"><a href="#OPENROWSET方法（不需要用到创建好的链接名。如果连接的实例名不是默认的，需要在”sql服务器名或IP地址”后加上”-x2F-实例名”）" class="headerlink" title="OPENROWSET方法（不需要用到创建好的链接名。如果连接的实例名不是默认的，需要在”sql服务器名或IP地址”后加上”&#x2F;实例名”）"></a>OPENROWSET方法（不需要用到创建好的链接名。如果连接的实例名不是默认的，需要在”sql服务器名或IP地址”后加上”&#x2F;实例名”）</h5><ul>
+<li>查询示例<ul>
+<li>Windows认证方式查询(以下方法之一即可)  <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> <span class="operator">*</span> <span class="keyword">FROM</span> OPENROWSET(<span class="string">&#x27;SQLOLEDB&#x27;</span>, <span class="string">&#x27;server=sql服务器名或IP地址;Trusted_Connection=yes&#x27;</span>,数据库名.架构名.表名)</span><br><span class="line"><span class="keyword">SELECT</span> <span class="operator">*</span> <span class="keyword">FROM</span> OPENROWSET(<span class="string">&#x27;SQLNCLI&#x27;</span>, <span class="string">&#x27;server=sql服务器名或IP地址;Trusted_Connection=yes&#x27;</span>,数据库名.架构名.表名)</span><br><span class="line"><span class="keyword">SELECT</span> <span class="operator">*</span> <span class="keyword">FROM</span> OPENROWSET(<span class="string">&#x27;SQLOLEDB&#x27;</span>, <span class="string">&#x27;server=sql服务器名或IP地址;Trusted_Connection=yes&#x27;</span>,<span class="string">&#x27;SELECT * FROM 数据库名.架构名.表名&#x27;</span>)</span><br><span class="line"><span class="keyword">SELECT</span> <span class="operator">*</span> <span class="keyword">FROM</span> OPENROWSET(<span class="string">&#x27;SQLNCLI&#x27;</span>, <span class="string">&#x27;server=sql服务器名或IP地址;Trusted_Connection=yes&#x27;</span>,<span class="string">&#x27;SELECT * FROM 数据库名.架构名.表名&#x27;</span>)</span><br></pre></td></tr></table></figure></li>
+<li>SQL认证方式查询(以下方法之一即可)  <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> <span class="operator">*</span> <span class="keyword">FROM</span> OPENROWSET(<span class="string">&#x27;SQLOLEDB&#x27;</span>, <span class="string">&#x27;server=sql服务器名或IP地址;uid=用户名;pwd=密码&#x27;</span>,数据库名.架构名.表名)</span><br><span class="line"><span class="keyword">SELECT</span> <span class="operator">*</span> <span class="keyword">FROM</span> OPENROWSET(<span class="string">&#x27;SQLNCLI&#x27;</span>, <span class="string">&#x27;server=sql服务器名或IP地址;uid=用户名;pwd=密码&#x27;</span>,数据库名.架构名.表名)</span><br><span class="line"><span class="keyword">SELECT</span> <span class="operator">*</span> <span class="keyword">FROM</span> OPENROWSET(<span class="string">&#x27;SQLOLEDB&#x27;</span>, <span class="string">&#x27;server=sql服务器名或IP地址;uid=用户名;pwd=密码&#x27;</span>,<span class="string">&#x27;SELECT * FROM 数据库名.架构名.表名&#x27;</span>)</span><br><span class="line"><span class="keyword">SELECT</span> <span class="operator">*</span> <span class="keyword">FROM</span> OPENROWSET(<span class="string">&#x27;SQLNCLI&#x27;</span>, <span class="string">&#x27;server=sql服务器名或IP地址;uid=用户名;pwd=密码&#x27;</span>,<span class="string">&#x27;SELECT * FROM 数据库名.架构名.表名&#x27;</span>)</span><br><span class="line"><span class="keyword">SELECT</span> <span class="operator">*</span> <span class="keyword">FROM</span> OPENROWSET(<span class="string">&#x27;SQLOLEDB&#x27;</span>, <span class="string">&#x27;sql服务器名&#x27;</span>;<span class="string">&#x27;用户名&#x27;</span>;<span class="string">&#x27;密码&#x27;</span>,数据库名.架构名.表名)</span><br><span class="line"><span class="keyword">SELECT</span> <span class="operator">*</span> <span class="keyword">FROM</span> OPENROWSET(<span class="string">&#x27;SQLNCLI&#x27;</span>, <span class="string">&#x27;sql服务器名&#x27;</span>;<span class="string">&#x27;用户名&#x27;</span>;<span class="string">&#x27;密码&#x27;</span>,数据库名.架构名.表名)</span><br><span class="line"><span class="keyword">SELECT</span> <span class="operator">*</span> <span class="keyword">FROM</span> OPENROWSET(<span class="string">&#x27;SQLOLEDB&#x27;</span>, <span class="string">&#x27;sql服务器名&#x27;</span>;<span class="string">&#x27;用户名&#x27;</span>;<span class="string">&#x27;密码&#x27;</span>,<span class="string">&#x27;SELECT * FROM 数据库名.架构名.表名&#x27;</span>)</span><br><span class="line"><span class="keyword">SELECT</span> <span class="operator">*</span> <span class="keyword">FROM</span> OPENROWSET(<span class="string">&#x27;SQLNCLI&#x27;</span>, <span class="string">&#x27;sql服务器名&#x27;</span>;<span class="string">&#x27;用户名&#x27;</span>; <span class="string">&#x27;密码&#x27;</span>,<span class="string">&#x27;SELECT * FROM 数据库名.架构名.表名&#x27;</span>)</span><br></pre></td></tr></table></figure></li>
+</ul>
+</li>
+<li>生成本地表  <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> <span class="operator">*</span> <span class="keyword">INTO</span> 表 <span class="keyword">FROM</span> openrowset( <span class="string">&#x27;SQLOLEDB &#x27;</span>, <span class="string">&#x27;sql服务器名 &#x27;</span>; <span class="string">&#x27;用户名 &#x27;</span>; <span class="string">&#x27;密码 &#x27;</span>,数据库名.dbo.表名)</span><br></pre></td></tr></table></figure></li>
+<li>把本地表导入远程表  <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">INSERT</span> OPENROWSET(<span class="string">&#x27;SQLOLEDB&#x27;</span>, <span class="string">&#x27;server=sql服务器名或IP地址;uid=用户名;pwd=密码&#x27;</span>,数据库名.架构名.表名)</span><br><span class="line">   <span class="keyword">SELECT</span> <span class="operator">*</span> <span class="keyword">FROM</span> 本地表</span><br></pre></td></tr></table></figure></li>
+<li>关联更新本地表  <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">	<span class="keyword">UPDATE</span> b</span><br><span class="line">	   <span class="keyword">SET</span> b.列A <span class="operator">=</span> a.列A</span><br><span class="line">	  <span class="keyword">FROM</span> OPENROWSET( <span class="string">&#x27;SQLOLEDB &#x27;</span>, <span class="string">&#x27;sql服务器名 &#x27;</span>; <span class="string">&#x27;用户名 &#x27;</span>; <span class="string">&#x27;密码 &#x27;</span>,数据库名.dbo.表名) <span class="keyword">AS</span> a</span><br><span class="line"><span class="keyword">INNER</span> <span class="keyword">JOIN</span> 本地表 b <span class="keyword">ON</span> a.column1 <span class="operator">=</span> b.column1</span><br></pre></td></tr></table></figure></li>
+</ul>
+</li>
+<li><h5 id="OPENQUERY方法（需要先创建一个链接）"><a href="#OPENQUERY方法（需要先创建一个链接）" class="headerlink" title="OPENQUERY方法（需要先创建一个链接）"></a>OPENQUERY方法（需要先创建一个链接）</h5><ul>
+<li>查询示例  <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> <span class="operator">*</span> <span class="keyword">FROM</span> OPENQUERY(LinkName,<span class="string">&#x27;SELECT * FROM 数据库名.架构名.表名&#x27;</span>)</span><br></pre></td></tr></table></figure></li>
+<li>把本地表导入远程表  <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">INSERT</span> OPENQUERY(LinkName, <span class="string">&#x27;SELECT *  FROM 数据库名.架构名.表名&#x27;</span>) <span class="keyword">SELECT</span> <span class="operator">*</span> <span class="keyword">FROM</span> 本地表</span><br></pre></td></tr></table></figure></li>
+<li>关联更新本地表  <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">	<span class="keyword">UPDATE</span> b</span><br><span class="line">	   <span class="keyword">SET</span> b.列A <span class="operator">=</span> a.列A</span><br><span class="line">	  <span class="keyword">FROM</span> OPENQUERY(ITSV, <span class="string">&#x27;SELECT * FROM 数据库.dbo.表名 &#x27;</span>) <span class="keyword">AS</span> a</span><br><span class="line"><span class="keyword">INNER</span> <span class="keyword">JOIN</span> 本地表 b <span class="keyword">ON</span> a.column1 <span class="operator">=</span> b.column1</span><br></pre></td></tr></table></figure></li>
+</ul>
+</li>
+<li><h5 id="OPENDATASOURCE方法-不需要用到创建好的链接名。如果连接的实例名不是默认的，需要在”sql服务器名或IP地址”后加上”-x2F-实例名”"><a href="#OPENDATASOURCE方法-不需要用到创建好的链接名。如果连接的实例名不是默认的，需要在”sql服务器名或IP地址”后加上”-x2F-实例名”" class="headerlink" title="OPENDATASOURCE方法(不需要用到创建好的链接名。如果连接的实例名不是默认的，需要在”sql服务器名或IP地址”后加上”&#x2F;实例名”)"></a>OPENDATASOURCE方法(不需要用到创建好的链接名。如果连接的实例名不是默认的，需要在”sql服务器名或IP地址”后加上”&#x2F;实例名”)</h5><ul>
+<li>查询示例<ul>
+<li>Windows认证方式查询(以下方法之一即可)  <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> <span class="operator">*</span> <span class="keyword">FROM</span> OPENDATASOURCE(<span class="string">&#x27;SQLOLEDB&#x27;</span>, <span class="string">&#x27;server=sql服务器名或IP地址;Trusted_Connection=yes&#x27;</span>).数据库名.架构名.表名</span><br><span class="line"><span class="keyword">SELECT</span> <span class="operator">*</span> <span class="keyword">FROM</span> OPENDATASOURCE(<span class="string">&#x27;SQLNCLI&#x27;</span>, <span class="string">&#x27;server=sql服务器名或IP地址;Trusted_Connection=yes&#x27;</span>).数据库名.架构名.表名</span><br></pre></td></tr></table></figure></li>
+<li>SQL认证方式查询(以下方法之一即可)  <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> <span class="operator">*</span> <span class="keyword">FROM</span> OPENDATASOURCE(<span class="string">&#x27;SQLOLEDB&#x27;</span>, <span class="string">&#x27;server=sql服务器名或IP地址;uid=用户名;pwd=密码&#x27;</span>).数据库名.架构名.表名</span><br><span class="line"><span class="keyword">SELECT</span> <span class="operator">*</span> <span class="keyword">FROM</span> OPENDATASOURCE(<span class="string">&#x27;SQLNCLI&#x27;</span>, <span class="string">&#x27;server=sql服务器名或IP地址;uid=用户名;pwd=密码&#x27;</span>).数据库名.架构名.表名</span><br><span class="line"><span class="keyword">SELECT</span> <span class="operator">*</span> <span class="keyword">FROM</span> OPENDATASOURCE(<span class="string">&#x27;SQLOLEDB&#x27;</span>, <span class="string">&#x27;Data Source=sql服务器名或IP地址;uid=用户名;pwd=密码&#x27;</span>).数据库名.架构名.表名</span><br><span class="line"><span class="keyword">SELECT</span> <span class="operator">*</span> <span class="keyword">FROM</span> OPENDATASOURCE(<span class="string">&#x27;SQLNCLI&#x27;</span>, <span class="string">&#x27;Data Source=sql服务器名或IP地址;uid=用户名;pwd=密码&#x27;</span>).数据库名.架构名.表名</span><br></pre></td></tr></table></figure></li>
+</ul>
+</li>
+<li>导入示例  <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">INSERT</span> OPENDATASOURCE(<span class="string">&#x27;SQLOLEDB&#x27;</span>, <span class="string">&#x27;server=sql服务器名或IP地址;uid=用户名;pwd=密码&#x27;</span>).数据库名.架构名.表名</span><br><span class="line"><span class="keyword">SELECT</span> <span class="operator">*</span> <span class="keyword">FROM</span> 本地表</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>如果出现如下错误：SQL Server 阻止了对组件“Ad Hoc Distributed Queries”的STATEMENT“OpenRowset&#x2F;OpenDatasource”的访问，因为此组件已作为此服务器安全配置的一部分而被关闭。系统管理员可以通过使用 sp_configure 启用“Ad Hoc Distributed Queries”。有关启用“Ad Hoc Distributed Queries”<br>则解决办法是参照下面命令：</p>
+</blockquote>
+</li>
+</ul>
+</li>
+</ul>
+<ol>
+<li>开启Ad Hoc Distributed Queries组件，在sql查询编辑器中执行如下语句：<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">EXEC</span> sp_configure <span class="string">&#x27;show advanced options&#x27;</span>,<span class="number">1</span></span><br><span class="line">reconfigure</span><br><span class="line"><span class="keyword">EXEC</span> sp_configure <span class="string">&#x27;Ad Hoc Distributed Queries&#x27;</span>,<span class="number">1</span></span><br><span class="line">reconfigure</span><br></pre></td></tr></table></figure></li>
+<li>关闭Ad Hoc Distributed Queries组件，在sql查询编辑器中执行如下语句：<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">EXEC</span> sp_configure <span class="string">&#x27;Ad Hoc Distributed Queries&#x27;</span>,<span class="number">0</span></span><br><span class="line">reconfigure</span><br><span class="line"><span class="keyword">EXEC</span> sp_configure <span class="string">&#x27;show advanced options&#x27;</span>,<span class="number">0</span></span><br><span class="line">reconfigure</span><br></pre></td></tr></table></figure></li>
+</ol>
+<h2 id="26-删除数据库下面的所有表"><a href="#26-删除数据库下面的所有表" class="headerlink" title="26. 删除数据库下面的所有表"></a>26. 删除数据库下面的所有表</h2><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">use 数据库名(是要删除表的所在的那个数据库的名称)</span><br><span class="line">GO</span><br><span class="line"><span class="keyword">DECLARE</span> <span class="variable">@sql</span> <span class="type">VARCHAR</span>(<span class="number">8000</span>)</span><br><span class="line">WHILE (<span class="keyword">SELECT</span> <span class="built_in">COUNT</span>(<span class="operator">*</span>) <span class="keyword">FROM</span> sysobjects <span class="keyword">WHERE</span> type<span class="operator">=</span><span class="string">&#x27;U&#x27;</span>)<span class="operator">&gt;</span><span class="number">0</span></span><br><span class="line"><span class="keyword">BEGIN</span></span><br><span class="line"><span class="keyword">SELECT</span> <span class="variable">@sql</span><span class="operator">=</span><span class="string">&#x27;DROP TABLE &#x27;</span> <span class="operator">+</span> name</span><br><span class="line"><span class="keyword">FROM</span> sysobjects</span><br><span class="line"><span class="keyword">WHERE</span> (type <span class="operator">=</span> <span class="string">&#x27;U&#x27;</span>)</span><br><span class="line"><span class="keyword">ORDER</span> <span class="keyword">BY</span> <span class="string">&#x27;DROP TABLE &#x27;</span> <span class="operator">+</span> name</span><br><span class="line"><span class="keyword">EXEC</span>(<span class="variable">@sql</span>) </span><br><span class="line"><span class="keyword">END</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="27-查看数据库文件使用情况"><a href="#27-查看数据库文件使用情况" class="headerlink" title="27. 查看数据库文件使用情况"></a>27. 查看数据库文件使用情况</h2><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span>  A.name                                                     <span class="keyword">AS</span> &quot;逻辑名称&quot;</span><br><span class="line">       ,<span class="keyword">CONVERT</span>(<span class="type">FLOAT</span> ,A.size)             <span class="operator">*</span> (<span class="number">8192.0</span><span class="operator">/</span><span class="number">1024.0</span>)<span class="operator">/</span><span class="number">1024</span>  <span class="keyword">AS</span> &quot;已用大小MB&quot;</span><br><span class="line">       ,<span class="keyword">CONVERT</span>(<span class="type">FLOAT</span> ,A.maxSize <span class="operator">-</span> A.size) <span class="operator">*</span> (<span class="number">8192.0</span><span class="operator">/</span><span class="number">1024.0</span>)<span class="operator">/</span><span class="number">1024</span>  <span class="keyword">AS</span> &quot;可用大小MB&quot;</span><br><span class="line">       ,<span class="keyword">CONVERT</span>(<span class="type">FLOAT</span> ,A.maxSize)          <span class="operator">*</span> (<span class="number">8192.0</span><span class="operator">/</span><span class="number">1024.0</span>)<span class="operator">/</span><span class="number">1024</span>  <span class="keyword">AS</span> &quot;分配大小MB&quot;</span><br><span class="line">       ,A.fileName                                                 <span class="keyword">AS</span> &quot;文件路径&quot;</span><br><span class="line">       ,(</span><br><span class="line">         <span class="keyword">SELECT</span>  SA.groupName</span><br><span class="line">           <span class="keyword">FROM</span>  SysFileGroups  SA</span><br><span class="line">          <span class="keyword">WHERE</span>  SA.groupID <span class="operator">=</span> A.groupID</span><br><span class="line">        )                                                          <span class="keyword">AS</span> &quot;文件组&quot;</span><br><span class="line">       ,<span class="keyword">CASE</span> <span class="keyword">WHEN</span> A.status <span class="operator">=</span> <span class="number">1081346</span> <span class="keyword">THEN</span> <span class="string">&#x27;磁盘文件&#x27;</span>               </span><br><span class="line">             <span class="keyword">WHEN</span> A.status <span class="operator">=</span> <span class="number">1081410</span> <span class="keyword">THEN</span> <span class="string">&#x27;日志设备&#x27;</span></span><br><span class="line">             <span class="keyword">ELSE</span> <span class="keyword">CONVERT</span>(<span class="type">VARCHAR</span> ,A.status) <span class="keyword">END</span>                   <span class="keyword">AS</span> &quot;文件类型&quot;</span><br><span class="line">  <span class="keyword">FROM</span>  SysFiles  A</span><br></pre></td></tr></table></figure>
+
+<h2 id="28-修改sa的密码"><a href="#28-修改sa的密码" class="headerlink" title="28. 修改sa的密码"></a>28. 修改sa的密码</h2><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">EXEC</span> sp_password <span class="string">&#x27;OldPassword&#x27;</span>,<span class="string">&#x27;NewPassword&#x27;</span>,<span class="string">&#x27;sa&#x27;</span>;</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>不知道OldPassword时，可用NULL代替。</p>
+</blockquote>
+<h2 id="29-查询表的索引"><a href="#29-查询表的索引" class="headerlink" title="29. 查询表的索引"></a>29. 查询表的索引</h2><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">  <span class="keyword">SELECT</span> 表名 <span class="operator">=</span> c.name,</span><br><span class="line">         索引名称 <span class="operator">=</span> a.name,</span><br><span class="line">         索引字段名 <span class="operator">=</span> d.name,</span><br><span class="line">         索引字段位置 <span class="operator">=</span> d.colid,</span><br><span class="line">         c.status</span><br><span class="line">    <span class="keyword">FROM</span> sysindexes   a</span><br><span class="line">    <span class="keyword">JOIN</span> sysindexkeys b <span class="keyword">ON</span> a.id <span class="operator">=</span> b.id <span class="keyword">AND</span> a.indid <span class="operator">=</span> b.indid</span><br><span class="line">    <span class="keyword">JOIN</span> sysobjects   c <span class="keyword">ON</span> b.id <span class="operator">=</span> c.id</span><br><span class="line">    <span class="keyword">JOIN</span> syscolumns   d <span class="keyword">ON</span> b.id <span class="operator">=</span> d.id <span class="keyword">AND</span> b.colid <span class="operator">=</span> d.colid</span><br><span class="line">   <span class="keyword">WHERE</span> a.indid <span class="keyword">NOT</span> <span class="keyword">IN</span> (<span class="number">0</span>, <span class="number">255</span>)</span><br><span class="line">     <span class="keyword">AND</span> c.xtype <span class="operator">=</span> <span class="string">&#x27;U&#x27;</span></span><br><span class="line">  <span class="comment">-- AND c.status &gt; 0 --查所有用户表</span></span><br><span class="line">     <span class="keyword">AND</span> c.name <span class="operator">=</span> <span class="string">&#x27;order&#x27;</span> <span class="comment">--查指定表</span></span><br><span class="line"><span class="keyword">ORDER</span> <span class="keyword">BY</span> c.name,a.name,d.name;</span><br></pre></td></tr></table></figure>
+
+<h2 id="30-查询没有索引的表"><a href="#30-查询没有索引的表" class="headerlink" title="30. 查询没有索引的表"></a>30. 查询没有索引的表</h2><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">  <span class="keyword">SELECT</span> <span class="operator">*</span></span><br><span class="line">    <span class="keyword">FROM</span> sysobjects</span><br><span class="line">   <span class="keyword">WHERE</span> xtype <span class="operator">=</span> <span class="string">&#x27;U&#x27;</span></span><br><span class="line">     <span class="keyword">AND</span> name <span class="keyword">NOT</span> <span class="keyword">IN</span> (</span><br><span class="line">	       <span class="keyword">SELECT</span> c.name</span><br><span class="line">	         <span class="keyword">FROM</span> sysindexes   a</span><br><span class="line">	         <span class="keyword">JOIN</span> sysindexkeys b <span class="keyword">ON</span> a.id <span class="operator">=</span> b.id <span class="keyword">AND</span> a.indid <span class="operator">=</span> b.indid</span><br><span class="line">	         <span class="keyword">JOIN</span> sysobjects   c <span class="keyword">ON</span> b.id <span class="operator">=</span> c.id</span><br><span class="line">	         <span class="keyword">JOIN</span> syscolumns   d <span class="keyword">ON</span> b.id <span class="operator">=</span> d.id <span class="keyword">AND</span> b.colid <span class="operator">=</span> d.colid</span><br><span class="line">	        <span class="keyword">WHERE</span> a.indid <span class="keyword">NOT</span> <span class="keyword">IN</span> (<span class="number">0</span>, <span class="number">255</span>)</span><br><span class="line">	          <span class="keyword">AND</span> c.xtype <span class="operator">=</span> <span class="string">&#x27;U&#x27;</span></span><br><span class="line">            <span class="comment">--AND c.status &gt; 0 --查所有用户表</span></span><br><span class="line">	        <span class="comment">--AND c.name = &#x27;order&#x27; --查指定表</span></span><br><span class="line">         )</span><br><span class="line"><span class="keyword">ORDER</span> <span class="keyword">BY</span> name</span><br></pre></td></tr></table></figure>
+
+<hr>
+<h1 id="常识"><a href="#常识" class="headerlink" title="常识"></a>常识</h1><ul>
+<li>在SQL语句中 <code>FROM</code> 后最多可以跟 256 张表或视图</li>
+<li>在SQL语句中使用 <code>ORDER BY</code> 查询时，先排序后取值</li>
+<li>在SQL Server数据库表中一个字段的最大容量是 8000</li>
+</ul>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="reward-container">
+  <div><div style="color: #FC6423">-------------------本文结束 <i class="fa fa-paw"></i> 感谢您的阅读-------------------</div></div>
+  <button>
+    赞赏
+  </button>
+  <div class="post-reward">
+      <div>
+        <img src="/img/YPN_wechatpay-32x32.png" alt="昜丿捺 微信">
+        <span>微信</span>
+      </div>
+      <div>
+        <img src="/img/YPN_alipay-32x32.jpg" alt="昜丿捺 支付宝">
+        <span>支付宝</span>
+      </div>
+
+  </div>
+</div>
+
+          
+
+<div class="post-copyright">
+<ul>
+  <li class="post-copyright-author">
+      <strong>原作者： </strong>昜丿捺
+  </li>
+  <li class="post-copyright-link">
+      <strong>本文链接：</strong>
+      <a href="https://yangpiena.gitee.io/2016/11/29/SQL%E7%BB%8F%E5%85%B8%E8%AF%AD%E5%8F%A5/" title="SQL经典语句">https://yangpiena.gitee.io/2016/11/29/SQL经典语句/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+          <div class="post-tags">
+              <a href="/tags/sql/" rel="tag"># sql</a>
+              <a href="/tags/%E7%BB%8F%E5%85%B8%E8%AF%AD%E5%8F%A5/" rel="tag"># 经典语句</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2016/11/29/SQL%E8%8E%B7%E5%8F%96%E5%AD%97%E7%AC%A6%E4%B8%B2%E6%9C%80%E5%90%8E%E5%87%BA%E7%8E%B0%E7%9A%84%E4%BD%8D%E7%BD%AE/" rel="prev" title="SQL获取字符串最后出现的位置">
+                  <i class="fa fa-chevron-left"></i> SQL获取字符串最后出现的位置
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/2016/12/22/FPSpread%E5%B1%9E%E6%80%A7%E8%AF%B4%E6%98%8E/" rel="next" title="fpSpread属性说明">
+                  fpSpread属性说明 <i class="fa fa-chevron-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 
+  <span itemprop="copyrightYear">2025</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">昜丿捺</span>
+</div>
+<div class="busuanzi-count">
+    <span class="post-meta-item" id="busuanzi_container_site_uv">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="总访客量">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="总访问量">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+
+<!-- 增加网站运行时间-->
+<div id="days"></div>
+<script>
+    function show_date_time(){
+        window.setTimeout("show_date_time()", 1000);
+        BirthDay=new Date("11/09/2016 00:00:00");
+        today=new Date();
+        timeold=(today.getTime()-BirthDay.getTime());
+        sectimeold=timeold/1000
+        secondsold=Math.floor(sectimeold);
+        msPerDay=24*60*60*1000
+        e_daysold=timeold/msPerDay
+        daysold=Math.floor(e_daysold);
+        e_hrsold=(e_daysold-daysold)*24;
+        hrsold=setzero(Math.floor(e_hrsold));
+        e_minsold=(e_hrsold-hrsold)*60;
+        minsold=setzero(Math.floor((e_hrsold-hrsold)*60));
+        seconds=setzero(Math.floor((e_minsold-minsold)*60));
+        document.getElementById('days').innerHTML="网站已运行 "+daysold+" 天 "+hrsold+" 小时 "+minsold+" 分 "+seconds+" 秒";
+    }
+    function setzero(i) {
+        if (i<10) {
+            i="0" + i
+        };
+        return i;
+    }
+    show_date_time();
+</script>
+
+
+    </div>
+  </footer>
+
+  
+  <div class="reading-progress-bar"></div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+  
+  <script src="https://cdnjs.loli.net/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.loli.net/ajax/libs/next-theme-pjax/0.6.0/pjax.min.js" integrity="sha256-vxLn1tSKWD4dqbMRyv940UYw4sXgMtYcK6reefzZrao=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/next-boot.js"></script><script src="/js/pjax.js"></script>
+
+  <script src="https://cdnjs.loli.net/ajax/libs/hexo-generator-searchdb/1.4.1/search.js" integrity="sha256-1kfA5uHPf65M5cphT2dvymhkuyHPQp5A53EGZOnOLmc=" crossorigin="anonymous"></script>
+<script src="/js/third-party/search/local-search.js"></script>
+
+
+
+
+
+  
+  <script data-pjax async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+
+  
+
+  <script class="next-config" data-name="enableMath" type="application/json">true</script><script class="next-config" data-name="mathjax" type="application/json">{"enable":true,"tags":"none","js":{"url":"https://cdnjs.loli.net/ajax/libs/mathjax/3.2.2/es5/tex-mml-chtml.js","integrity":"sha256-MASABpB4tYktI2Oitl4t+78w/lyA+D7b/s9GEP0JOGI="}}</script>
+<script src="/js/third-party/math/mathjax.js"></script>
+
+
+<script type="text/javascript" src="/js/ypn.js/jquery-1.11.3.min.js"></script>
+
+<!-- 页面鼠标单击效果 -->
+    <script type="text/javascript" src="/js/ypn.js/text.js"></script>
+
+<!-- 动态线条背景 -->
+<script type="text/javascript" color="235,178,178" opacity='0.7' zIndex="-2" count="100" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js"></script>
+
+<!-- 收藏页输入框特效 -->
+<script src="/js/ypn.js/activate-power-mode.js"></script>
+<script>
+  POWERMODE.colorful = true;  // 控制开启/开启礼花特效  
+  POWERMODE.shake    = false; // 控制开启/关闭屏幕震动特效  
+  document.body.addEventListener('input', POWERMODE);
+</script>
+
+<!-- 收藏页搜索按钮动作 -->
+<script type="text/javascript" src="/js/ypn.js/searchButton.js"></script>
+
+<!-- 页签标题崩溃欺骗 -->
+<script type="text/javascript" src="/js/ypn.js/crash-cheat.js"></script>
+
+<!-- 一言 -->
+<script type="text/javascript" src="/js/ypn.js/yiYanJingDianYuJu.js"></script>
+
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"log":false,"model":{"jsonPath":"/live2dw/assets/hijiki.model.json"},"display":{"position":"left","vOffset":-80},"mobile":{"show":false}});</script></body>
+</html>
