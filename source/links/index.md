@@ -53,7 +53,7 @@ description:
 | [映像讯](http://mkv.cn/) | [影视森林](http://www.549.tv/) || [免费的在线影视网站汇总](https://iao.su/531/) |
 | [美剧粉](http://www.mjf2020.com/) | [HDmoli](https://molicp.com/) | [4kHDR世界](https://www.4khdr.cn/) | [注释影视](https://gaze.run/) |
 | [可可影视](https://www.keke9.com/) | [可可影视](https://www.keke12.com:51111) | [可可影视](https://www.keke13.com) | [可可影视](https://www.keke14.com) |
-| [lemonlive](https://lemonlive.deno.dev) | [24 小时恐怖片直播间](http://xn--24-eo1di1mji74uznc0x5b2tjq81f.com/) || [金牌影院](https://fjvtw.com/) |
+| [lemonlive](https://lemonlive.deno.dev) | [24 小时恐怖片直播间](http://xn--24-eo1di1mji74uznc0x5b2tjq81f.com/) | [柯南导航页](https://20s.top/) | [金牌影院](https://fjvtw.com/) |
 | [4K指南](https://xuexizhinan.com/ "4k 电影网盘分享站") | [简单TV](https://jiandantv.com/) | [发现TV](https://faxiantv.com/) | [亿苯正经的Alist库](https://pan.lm379.cn/) |
 
 
@@ -219,7 +219,9 @@ description:
 ## AI
 |  |  |  |  |
 | ---- | ---- | ---- | ---- |
-| [WeChatAI](https://welm.weixin.qq.com/docs/) | [图片到提示词生成器](https://vheer.com/app/image-to-prompt) | [全球首款永久免费的AI视频生成器](https://aivideomaker.ai/zh) |  |
+| [WeChatAI](https://welm.weixin.qq.com/docs/) |  |  |  |
+| [OpenNana提示词图库](https://opennana.com/awesome-prompt-gallery/) | [图片到提示词生成器](https://vheer.com/app/image-to-prompt) |  |  |
+| [全球首款永久免费的AI视频生成器](https://aivideomaker.ai/zh) |  |  |  |
 
 
 ## API
