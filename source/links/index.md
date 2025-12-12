@@ -25,7 +25,10 @@ description:
 <!-- YPN Add 2020-02-29 新增滚动新闻 -->
 <div>
 	<p align="center" style="margin-top: -18px;margin-left: 0">
-	<iframe frameborder="0" width="100%" height="210" scrolling="yes" src="https://www.jin10.com/example/jin10.com.html?fontSize=14px&theme=white"></iframe>
+	<!-- 金十数据 -->
+	<!-- <iframe frameborder="0" width="100%" height="210" scrolling="yes" src="https://www.jin10.com/example/jin10.com.html?fontSize=14px&theme=white"></iframe> -->
+	<!-- 华尔街见闻快讯 -->
+    <iframe frameborder="0" width="1000" height="350" scrolling="yes" src="https://wallstreetcn.com/live/global#page-livenews"></iframe>
 </div>
 
 
