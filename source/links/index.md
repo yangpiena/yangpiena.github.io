@@ -53,7 +53,7 @@ description:
 ## 电影
 | | | | |
 | ---- | ---- | ---- | ---- |
-| [映像讯](http://mkv.cn/) | [影视森林](http://www.549.tv/) || [免费的在线影视网站汇总](https://iao.su/531/) |
+| [映像讯](http://mkv.cn/) | [影视森林](http://www.549.tv/) | [甲方导航](https://jiafangbb.com/tv) | [免费的在线影视网站汇总](https://iao.su/531/) |
 | [美剧粉](http://www.mjf2020.com/) | [HDmoli](https://molicp.com/) | [4kHDR世界](https://www.4khdr.cn/) | [注释影视](https://gaze.run/) |
 | [可可影视](https://www.keke9.com/) | [可可影视](https://www.keke12.com:51111) | [可可影视](https://www.keke13.com) | [可可影视](https://www.keke14.com) |
 | [lemonlive](https://lemonlive.deno.dev) | [24 小时恐怖片直播间](http://xn--24-eo1di1mji74uznc0x5b2tjq81f.com/) | [柯南导航页](https://20s.top/) | [金牌影院](https://fjvtw.com/) |
@@ -158,11 +158,11 @@ description:
 | [开源阅读](https://gedoor.github.io/) | [阅读-使用手册](https://www.yuque.com/legado/wiki) | [喵公子发布页](https://fb.miaogongzi.cc/) ||
 | [Reeden现代跨平台电子书阅读器](https://reeden.app/cn) | | | |
 | [全历史](https://www.allhistory.com/ " 全方位了解历史的网站，也是一个不错的网站") | [JOJO看报](https://reader.jojokanbao.cn/) | [互联网知识地图](https://yunyinghui.feishu.cn/wiki/QrvDwaNt4icE2qkZTPSccNKInhh) | [SaltyLeo 的书架](https://book.tstrs.me/search "在这里，收录了数以十万计的电子书，你可以轻松找到想要的任何书。") |
-| [鸠摩搜索](https://www.jiumodiary.com/ "电子书搜索引擎，提供各类电子书搜索下载，有多种格式") | [i-Book.in](https://book.tstrs.me/ " 基于索引IPFS链接的电子书搜索引擎") | [书单网](https://www.shudan.vip/ "电子书搜索网站，抓取第三方网站的资源，也有很多资源是通过城通网赚网盘下载") | [Z-Library 电子书下载](https://iui.su/380/) |
+| [鸠摩搜索](https://www.jiumodiary.com/ "电子书搜索引擎，提供各类电子书搜索下载，有多种格式") |  |  | [Z-Library 电子书下载](https://iui.su/380/) |
 | [520小说网](https://www.txt520.org/) | [读书派](https://www.dushupai.com/) ||
-| [七彩英语](http://www.qcenglish.com/ "提供PDF或TXT格式的英文原版电子书下载") | [Mobilism](https://forum.mobilism.org/viewforum.php?f=19 "电子书论坛，提供英文原版电子书下载") | [好读](http://www.haodoo.net/ "多格式电子书下载网站，很老的一个站") | [云海电子图书馆](http://www.pdfbook.cn/ "基于城通网赚网盘下载的电子书网站") |
+| [七彩英语](http://www.qcenglish.com/ "提供PDF或TXT格式的英文原版电子书下载") |  |  |  |
 | [瑞文网教材](https://www.ruiwen.com/jiaocai/ "提供人教版、北师大、苏教版、沪教版、浙教版、鲁科版、仁爱版英语等电子课本在线阅读") | [人教版中小学教材](https://bp.pep.com.cn/jc/ "人民教育出版社提供的中小学教材电子版下载（转自：免费吧 &raquo; 电子书下载网站大汇总(https://www.mianfeib.me/ebook-download-website.html") |||
-| [秘密花园](http://www.yini.org) | [金句盲盒](http://jinju.yotooapp.com/) | [道德经](https://daodejing.shop/) ||
+| [秘密花园](http://www.yini.org) | [金句盲盒](http://jinju.yotooapp.com/) | [道德经](https://daodejing.shop/) | [豆瓣读书](https://book.douban.com/) |
 
 
 ## 文章/教程
