@@ -58,6 +58,7 @@ description:
 | [可可影视](https://www.keke9.com/) | [可可影视](https://www.keke12.com:51111) | [可可影视](https://www.keke13.com) | [可可影视](https://www.keke14.com) |
 | [lemonlive](https://lemonlive.deno.dev) | [24 小时恐怖片直播间](http://xn--24-eo1di1mji74uznc0x5b2tjq81f.com/) | [柯南导航页](https://20s.top/) | [金牌影院](https://fjvtw.com/) |
 | [4K指南](https://xuexizhinan.com/ "4k 电影网盘分享站") | [简单TV](https://jiandantv.com/) | [发现TV](https://faxiantv.com/) | [亿苯正经的Alist库](https://pan.lm379.cn/) |
+| [嘀嗒影视](https://www.didahd.pro/) ||||
 
 
 ## 游戏
@@ -79,10 +80,10 @@ description:
 # 在线工具
 |  |  |  |  |
 | ---- | ---- | ---- | ---- |
-| [天气万年历](https://wannianli.tianqi.com/today/zhou/) ||| [便民查询网](https://www.bmcx.com/) |
+| [天气万年历](https://wannianli.tianqi.com/today/zhou/) | [高德地图Web版](https://ditu.amap.com/) || [便民查询网](https://www.bmcx.com/) |
 | [极强检测](https://www.urlzt.com/) | [Ping](https://ping.eu/ping/) |||
 | [打字打字](https://dazidazi.com/) | [纸张打印](https://paperme.toolooz.com/) | [田字格笔顺 字帖生成器](https://lab.feifanju.com/zitie/) ||
-| [鸡毛信](https://cmd.im/) ||| [临时手机号](https://jiemahao.com/) |
+| [鸡毛信](https://cmd.im/) | [文件快递柜](https://temp.youloge.com/) || [临时手机号](https://jiemahao.com/) |
 
 | IT工具箱 |  |  |  |
 | ---- | ---- | ---- | ---- |
@@ -111,17 +112,19 @@ description:
 
 | 转换 |  |  |  |
 | ---- | ---- | ---- | ---- |
-| [在线文件转换器](https://cn.office-converter.com/) | [在线格式转换](https://www.alltoall.net/) | [PDF派](https://www.pdfpai.com/) ||
+| [在线文件转换器](https://cn.office-converter.com/) | [在线格式转换](https://www.alltoall.net/) | [PDF派](https://www.pdfpai.com/) | [PDFuck](https://pdfuck.com/zh "免费在线PDF工具") |
 | [tts 在线文字转语音服务](https://iui.su/368/) | [TTS Online 文本转语音](https://www.ttson.cn/) | [TTS - 文本转语音](https://www.text-to-speech.cn/) | [多种云音乐格式转MP3](https://openyyy.com/) |
+| [在线视频压缩](https://videocompressors.com/zh) ||||
 
 | 文案 |  |  |  |
 | ---- | ---- | ---- | ---- |
-| [文案生成器](https://www.gaoding.com/ai/writer/recognition) ||||
+| [文案生成器](https://www.gaoding.com/ai/writer/recognition) | [即时数字标牌](https://led.run) |||
 
 # 博客/社区
 |  |  |  |  |
 | ---- | ---- | ---- | ---- |
-| [博客园](http://www.cnblogs.com/cmt/) | [OSCHINA](http://www.oschina.net/) | [zzy.my](http://zzy.my) ||
+| [博客园](http://www.cnblogs.com/cmt/) | [OSCHINA](http://www.oschina.net/) | [zzy.my](http://zzy.my) | [UTC+8 Times](https://utc8times.elsetech.app/) |
+| [DeepSoga社区](https://www.deepsoga.com/) ||||
 
 
 # 资源
