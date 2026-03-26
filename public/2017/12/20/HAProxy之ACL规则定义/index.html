@@ -313,14 +313,13 @@
     <div class="post-body" itemprop="articleBody">
         <p>HAProxy的ACL具有很强大的功能，能够定义三到七层的规则。ACL的作用，就是为了匹配一些特别的请求，然后对其进行修改或者分发到不同的服务器组中。<br>HAProxy的ACL用于实现基于请求报文的首部、响应报文的内容或 其它的环境状态信息来做出转发决策，这大大增强了其配置弹性。 其配置法则通常分为两步，首先去定义ACL，即定义一个测试条件 ，而后在条件得到满足时执行某特定的动作，如阻止请求或转发至 某特定的后端。</p>
 <span id="more"></span>
-
 <hr>
 <h3 id="ACL规则定义"><a href="#ACL规则定义" class="headerlink" title="ACL规则定义"></a>ACL规则定义</h3><p>格式：<code>acl &lt;aclname&gt; &lt;criterion&gt; [flags] [operator] [&lt;value&gt;]</code></p>
 <p><code>&lt;aclname&gt;</code>：ACL名称，区分字符大小写，且其只能包含大小写字母、数字、-(连接线)、_(下划线)、.(点号)和:(冒号)；haproxy中，acl可以重名，这可以把多个测试条件定义为一个共同的acl；<br><code>&lt;criterion&gt;</code>：测试标准，即对什么信息发起测试；测试方式可以由[flags]指定的标志进行调整；而有些测试标准也可以需要为其在<code>&lt;value&gt;</code>之前指定一个操作符[operator]；<br><code>[flags]</code>：目前haproxy的acl支持的标志位有3个：</p>
 <ul>
 <li>-i：不区分中模式字符的大小写；</li>
 <li>-f：从指定的文件中加载模式；</li>
-<li>–：标志符的强制结束标记，在模式中的字符串像标记符时使用；</li>
+<li>—：标志符的强制结束标记，在模式中的字符串像标记符时使用；</li>
 </ul>
 <p><code>&lt;value&gt;</code>：acl测试条件支持的值有以下4类：</p>
 <ul>
@@ -337,28 +336,49 @@
 <li><strong>基于七层协议（http）规则acl测试标准</strong></li>
 </ul>
 <ol>
-<li><p>method <code>&lt;string&gt;</code><br>测试HTTP请求报文中请求类型。<br>例如： 利用method来实现前段读写分离：<br> acl  read method GET<br> acl  read method HEAD<br> acl write method PUT<br> acl write method POST<br> use_backend imgservers if read<br> use_backend uploadservers if write</p>
-</li>
-<li><p>path_beg <code>&lt;string&gt;</code> ||url_beg<br>用于测试请求的URL是否以指定的模式开头;下面的例子用于测试URL是否以 &#x2F;static、&#x2F;images、&#x2F;javascript或&#x2F;stylesheets头。<br>例如：利用path_beg实现以&#x2F;static &#x2F;images开头的请求转交到 static server上：<br> acl url_static path_beg -i &#x2F;static &#x2F;images<br> use_backend static if url_static </p>
-</li>
-<li><p>path_end <code>&lt;string&gt;</code> || url_reg<br>用于测试请求的URL是否以<string>指定的模式结尾。例如，下面的例子用户测试URL是否以jpg、gif、png、css或js结尾<br>例如：利用path_end实现以.jpg .gif .png .css等结尾的格式的请求转交到 static server上：<br> acl url_static path_end -i .jpg .gif .png .css .js .html<br> use_backend static if url_static</p>
-</li>
-<li><p>hdr_beg <code>&lt;string&gt;</code><br>用于测试请求报文的指定首部的开头部分是否符合<string>指定的模式。<br>例如：当request header中的host前缀部分匹配到lvs.test.net.:8080则将请求转给后端backend定义的 is_lvs3上<br> acl is_lvs3 hdr_beg(host) -i lvs3.test.net:8080<br> use_backend lvs3 if is_lvs3 </p>
-</li>
-<li><p>hdr_end <code>&lt;string&gt;</code><br>用于测试请求报文的指定首部的结尾部分是否符合<string>指定的模式<br>例如：当request header中的host后缀部分匹配到lvs3.test.net.:8080则将请求转给后端backend定义的 is_lvs2上<br> acl is_lvs3 hdr_end(host) -i lvs3.test.net:8080<br> use_backend lvs3 if is_lvs2 </p>
-</li>
-<li><p>hdr <code>&lt;string&gt;</code><br>用于测试请求报文中的所有首部或指定首部信息是否满足指定的条件；指定首部时， 其名称不区分大小写， 且在括号中“（）”不能有任何多余的空白字符。测试服务器端的响应报文时可以使用shdr()。<br>例如 当用户访问172.16.1.100时，重定向到<a target="_blank" rel="noopener" href="http://www.afwing.com/">http://www.afwing.com</a><br> acl  dstipaddr  hdr(Host) 172.16.1.100<br> redirect  location   <a target="_blank" rel="noopener" href="http://www.afwing.com/">http://www.afwing.com</a> if  dstipaddr</p>
-</li>
-<li><p>hdr_reg <code>&lt;string&gt;</code><br>如果请求的域名满足正则表达式，返回true， -i是忽略大小写<br> acl denali_policy hdr_reg(host) -i ^(<a target="_blank" rel="noopener" href="http://www.inbank.com|image.inbank.com)$/">www.inbank.com|image.inbank.com)$</a></p>
-</li>
-<li><p>hdr_dom <code>&lt;string&gt;</code><br>如果请求域名满足<a target="_blank" rel="noopener" href="http://www.inbank.com,返回true,/">www.inbank.com，返回true，</a> -i是忽略大小写<br> acl tm_policy hdr_dom(host) -i <a target="_blank" rel="noopener" href="http://www.inbank.com/">www.inbank.com</a></p>
-</li>
-<li><p>url_sub<br>在请求url中包含sip_apiname&#x3D;，则此控制策略返回true，否则为false<br> acl invalid_req url_sub -i sip_apiname&#x3D;#定义一个名为invalid_req的策略</p>
-</li>
-<li><p>url_dir<br>在请求url中存在timetask作为部分地址路径，则此控制策略返回true，否则返回false<br>acl timetask_req url_dir -i timetask</p>
-</li>
-<li><p>hdr_cnt <code>&lt;string&gt;</code><br>当请求的header中Content-length等于0时，返回true<br>acl missing_cl hdr_cnt(Content-length) eq 0</p>
-</li>
+<li><p>method <code>&lt;string&gt;</code><br>测试HTTP请求报文中请求类型。<br>例如： 利用method来实现前段读写分离：</p>
+<pre><code> acl  read method GET
+ acl  read method HEAD
+ acl write method PUT
+ acl write method POST
+ use_backend imgservers if read
+ use_backend uploadservers if write
+</code></pre></li>
+<li><p>path_beg <code>&lt;string&gt;</code> ||url_beg<br>用于测试请求的URL是否以指定的模式开头;下面的例子用于测试URL是否以 /static、/images、/javascript或/stylesheets头。<br>例如：利用path_beg实现以/static /images开头的请求转交到 static server上：</p>
+<pre><code> acl url_static path_beg -i /static /images 
+ use_backend static if url_static 
+</code></pre></li>
+<li><p>path_end <code>&lt;string&gt;</code> || url_reg<br>用于测试请求的URL是否以<string>指定的模式结尾。例如，下面的例子用户测试URL是否以jpg、gif、png、css或js结尾<br>例如：利用path_end实现以.jpg .gif .png .css等结尾的格式的请求转交到 static server上：</p>
+<pre><code> acl url_static path_end -i .jpg .gif .png .css .js .html
+ use_backend static if url_static
+</code></pre></li>
+<li><p>hdr_beg <code>&lt;string&gt;</code><br>用于测试请求报文的指定首部的开头部分是否符合<string>指定的模式。<br>例如：当request header中的host前缀部分匹配到lvs.test.net.:8080则将请求转给后端backend定义的 is_lvs3上</p>
+<pre><code> acl is_lvs3 hdr_beg(host) -i lvs3.test.net:8080  
+ use_backend lvs3 if is_lvs3 
+</code></pre></li>
+<li><p>hdr_end <code>&lt;string&gt;</code><br>用于测试请求报文的指定首部的结尾部分是否符合<string>指定的模式<br>例如：当request header中的host后缀部分匹配到lvs3.test.net.:8080则将请求转给后端backend定义的 is_lvs2上</p>
+<pre><code> acl is_lvs3 hdr_end(host) -i lvs3.test.net:8080  
+ use_backend lvs3 if is_lvs2 
+</code></pre></li>
+<li><p>hdr <code>&lt;string&gt;</code><br>用于测试请求报文中的所有首部或指定首部信息是否满足指定的条件；指定首部时， 其名称不区分大小写， 且在括号中“（）”不能有任何多余的空白字符。测试服务器端的响应报文时可以使用shdr()。<br>例如 当用户访问172.16.1.100时，重定向到<a target="_blank" rel="noopener" href="http://www.afwing.com">http://www.afwing.com</a></p>
+<pre><code> acl  dstipaddr  hdr(Host) 172.16.1.100
+ redirect  location   http://www.afwing.com if  dstipaddr
+</code></pre></li>
+<li><p>hdr_reg <code>&lt;string&gt;</code><br>如果请求的域名满足正则表达式，返回true， -i是忽略大小写</p>
+<pre><code> acl denali_policy hdr_reg(host) -i ^(www.inbank.com|image.inbank.com)$
+</code></pre></li>
+<li><p>hdr_dom <code>&lt;string&gt;</code><br>如果请求域名满足www.inbank.com，返回true， -i是忽略大小写</p>
+<pre><code> acl tm_policy hdr_dom(host) -i www.inbank.com
+</code></pre></li>
+<li><p>url_sub<br>在请求url中包含sip_apiname=，则此控制策略返回true，否则为false</p>
+<pre><code> acl invalid_req url_sub -i sip_apiname=#定义一个名为invalid_req的策略
+</code></pre></li>
+<li><p>url_dir<br>在请求url中存在timetask作为部分地址路径，则此控制策略返回true，否则返回false</p>
+<pre><code>acl timetask_req url_dir -i timetask
+</code></pre></li>
+<li><p>hdr_cnt <code>&lt;string&gt;</code><br>当请求的header中Content-length等于0时，返回true</p>
+<pre><code>acl missing_cl hdr_cnt(Content-length) eq 0
+</code></pre></li>
 </ol>
 <ul>
 <li><strong>基于四层协议（ip）规则acl测试标准</strong></li>
@@ -366,38 +386,56 @@
 <ol>
 <li><p>dst和dst_port<br>定义访问地址为目标地址或目标端口的acl规则</p>
 </li>
-<li><p>src和src_port<br>定义访问地址为源地址或源端口的acl规则<br>例如： 允许10.0.0.0&#x2F;24的用户访问，其他用户将禁止<br> acl net10  src  10.0.0.0&#x2F;24<br> tcp-request content  accept  if  net10<br> tcp-request  content  reject<br> tcp-request content accept [ {if | unless} ]<br> Accept a connection if&#x2F;unless a content inspection condition is matched</p>
-</li>
+<li><p>src和src_port<br>定义访问地址为源地址或源端口的acl规则<br>例如： 允许10.0.0.0/24的用户访问，其他用户将禁止</p>
+<pre><code> acl net10  src  10.0.0.0/24
+ tcp-request content  accept  if  net10
+ tcp-request  content  reject
+ tcp-request content accept [ &#123;if | unless&#125; ]
+ Accept a connection if/unless a content inspection condition is matched
+</code></pre></li>
 </ol>
 <hr>
 <h3 id="ACL规则引用"><a href="#ACL规则引用" class="headerlink" title="ACL规则引用"></a>ACL规则引用</h3><p>当定义好了ACL后我们可以利用“use_backend” 参数来引用acl规则，如果需要引用多个acl时，只需要依次在后面添加相关acl ，也可以 匹配多个acl，如下示例：</p>
 <ol>
-<li><p>正常写法：<br> use_backend static if url_static</p>
+<li><p>正常写法：</p>
+<pre><code> use_backend static if url_static
+</code></pre></li>
+<li><p>或者写法：</p>
+<pre><code> use_backend backend1 if aclA || aclB 
+ use_backend backend1 if aclA || !aclC
+</code></pre><p>注意上面“||”也可以使用or来表示</p>
 </li>
-<li><p>或者写法：<br> use_backend backend1 if aclA || aclB<br> use_backend backend1 if aclA || !aclC</p>
-</li>
-</ol>
-<p>注意上面“||”也可以使用or来表示</p>
-<ol start="3">
-<li><p>非（不符合）写法：<br> use_backend backend1 if aclA !aclB<br> use_backend backend1 if aclA !aclB !aclC</p>
-</li>
-<li><p>与（and）写法：<br> use_backend backend1 if aclA !aclB<br> use_backend backend1 if aclA !aclB !aclC</p>
-</li>
+<li><p>非（不符合）写法：</p>
+<pre><code> use_backend backend1 if aclA !aclB 
+ use_backend backend1 if aclA !aclB !aclC
+</code></pre></li>
+<li><p>与（and）写法：</p>
+<pre><code> use_backend backend1 if aclA !aclB 
+ use_backend backend1 if aclA !aclB !aclC
+</code></pre></li>
 </ol>
 <hr>
 <h6 id="常见应用实例"><a href="#常见应用实例" class="headerlink" title="常见应用实例"></a>常见应用实例</h6><ol>
-<li><p>当请求中header中Content-length等于0，阻止请求返回403<br> block if missing_cl</p>
-</li>
-<li><p>block表示阻止请求，返回403错误，当前表示如果不满足策略invalid_req，或者满足策略timetask_req，则阻止请求。<br> block if !invalid_req || timetask_req</p>
-</li>
-<li><p>当满足denali_policy的策略时，使用denali_server的backend<br> use_backend denali_server if denali_policy</p>
-</li>
-<li><p>当满足tm_policy的策略时，使用tm_server的backend<br> use_backend tm_server if tm_policy</p>
-</li>
-<li><p>reqisetbe关键字定义，根据定义的关键字选择backend<br> reqisetbe ^Host:\ img dynamic<br> reqisetbe ^[^\ ]*\ &#x2F;(img|css)&#x2F; dynamic<br> reqisetbe ^[^\ ]*\ &#x2F;admin&#x2F;stats stats</p>
-</li>
-<li><p>以上都不满足的时候使用默认mms_server的backend<br> default_backend mms</p>
-</li>
+<li><p>当请求中header中Content-length等于0，阻止请求返回403</p>
+<pre><code> block if missing_cl
+</code></pre></li>
+<li><p>block表示阻止请求，返回403错误，当前表示如果不满足策略invalid_req，或者满足策略timetask_req，则阻止请求。</p>
+<pre><code> block if !invalid_req || timetask_req
+</code></pre></li>
+<li><p>当满足denali_policy的策略时，使用denali_server的backend</p>
+<pre><code> use_backend denali_server if denali_policy
+</code></pre></li>
+<li><p>当满足tm_policy的策略时，使用tm_server的backend</p>
+<pre><code> use_backend tm_server if tm_policy
+</code></pre></li>
+<li><p>reqisetbe关键字定义，根据定义的关键字选择backend</p>
+<pre><code> reqisetbe ^Host:\ img dynamic
+ reqisetbe ^[^\ ]\*\ /(img|css)/ dynamic
+ reqisetbe ^[^\ ]\*\ /admin/stats stats
+</code></pre></li>
+<li><p>以上都不满足的时候使用默认mms_server的backend</p>
+<pre><code> default_backend mms
+</code></pre></li>
 <li><p>利用acl实现页面动静分离;</p>
 <pre><code> frontend webservs
           bind            *:80
@@ -412,9 +450,8 @@
          server  node1 192.168.1.111:80 check maxconn 3000
  backend dynamic
          balance roundrobin
-         server  node2 192.168.1.112:80 check maxconn 1000
-</code></pre>
-</li>
+         server  node2 192.168.1.112:80 check maxconn 1000  
+</code></pre></li>
 </ol>
 
     </div>

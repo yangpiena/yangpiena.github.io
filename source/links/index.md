@@ -225,7 +225,7 @@ description:
 ## AI
 |  |  |  |  |
 | ---- | ---- | ---- | ---- |
-| [WeChatAI](https://welm.weixin.qq.com/docs/) |  |  |  |
+| [WeChatAI](https://welm.weixin.qq.com/docs/) | [U-Claw 虾盘](https://www.u-claw.org/) |  |  |
 | [OpenNana提示词图库](https://opennana.com/awesome-prompt-gallery/) | [图片到提示词生成器](https://vheer.com/app/image-to-prompt) |  |  |
 | [全球首款永久免费的AI视频生成器](https://aivideomaker.ai/zh) |  |  |  |
 
