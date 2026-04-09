@@ -316,9 +316,13 @@
 <p>记录查询结果的fileid值，在第2、3步要使用</p>
 </blockquote>
 <span id="more"></span>
+
 <h4 id="2-收缩数据库"><a href="#2-收缩数据库" class="headerlink" title="2. 收缩数据库"></a>2. 收缩数据库</h4><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">DBCC SHRINKDATABASE(<span class="string">&#x27;数据库名&#x27;</span>);</span><br></pre></td></tr></table></figure>
+
 <h4 id="3-收缩日志文件，第一个参数为fileid的值，0表示收缩到初始大小"><a href="#3-收缩日志文件，第一个参数为fileid的值，0表示收缩到初始大小" class="headerlink" title="3. 收缩日志文件，第一个参数为fileid的值，0表示收缩到初始大小"></a>3. 收缩日志文件，第一个参数为fileid的值，0表示收缩到初始大小</h4><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">DBCC SHRINKFILE(<span class="number">2</span>,<span class="number">0</span>);</span><br></pre></td></tr></table></figure>
+
 <h4 id="4-收缩数据文件，第一个参数为fileid的值，0表示收缩到初始大小"><a href="#4-收缩数据文件，第一个参数为fileid的值，0表示收缩到初始大小" class="headerlink" title="4. 收缩数据文件，第一个参数为fileid的值，0表示收缩到初始大小"></a>4. 收缩数据文件，第一个参数为fileid的值，0表示收缩到初始大小</h4><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">DBCC SHRINKFILE(<span class="number">1</span>,<span class="number">0</span>);</span><br></pre></td></tr></table></figure>
+
 <h4 id="5-执行更新操作"><a href="#5-执行更新操作" class="headerlink" title="5. 执行更新操作"></a>5. 执行更新操作</h4><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">DBCC UPDATEUSAGE(<span class="number">0</span>);</span><br></pre></td></tr></table></figure>
     </div>
 
