@@ -37,7 +37,7 @@ description:
 | ---- | ---- | ---- | ---- |
 | [ChatGPT OpenAI 项目汇总](https://iui.su/2920/) | [AIchatOS](https://chat18.aichatos58.com/#/chat) | [AI网址导航](https://ai-nav.lzw.me/) | [Free2gpt导航](https://nav1.free2gpt.xyz/) |
 | [ChatGPT免费体验在线列表](https://lzw.me/x/chatgpt-sites/) | [AI TOP100](https://www.aitop100.cn/) | [AI工具集官网](https://ai-bot.cn) | [深言达意](https://www.shenyandayi.com "原反向词典正式升级为智能写作工具。支持筛选词语、成语、惯用语和古汉语等多类别。以词找句") |
-| [智谱清言](https://chatglm.cn/main/alltoolsdetail?lang=zh) | [DeepSeek](https://chat.deepseek.com/) | [LongCat](https://longcat.chat) | [豆包](https://www.doubao.com/chat/) |
+| [DeepSeek](https://chat.deepseek.com/) | [豆包](https://www.doubao.com/chat/) | [千问](https://www.qianwen.com/) | [智谱清言](https://chatglm.cn/main/alltoolsdetail?lang=zh) |
 | [数字素养](https://szsyw.cn/) |  | [硬核指南](https://yinghezhinan.com/) | [黑点工具](https://hddtool.com/) |
 | [不死鸟发布页](https://dalao.ru/) | [一糖导航](https://iitang.com/) | [今日热榜](https://tophub.today/) | [摸摸鱼热榜](https://momoyu.cc/) |
 
