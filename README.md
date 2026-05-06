@@ -1,4 +1,4 @@
-- [昜丿捺 Github](https://yangpiena.github.io/)
+# [昜丿捺 Github](https://yangpiena.github.io/)
 
 - [昜丿捺 Gitee](https://yangpiena.gitee.io/)
 
