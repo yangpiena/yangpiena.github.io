@@ -349,7 +349,7 @@
 </li>
 <li><p>hdr <code>&lt;string&gt;</code><br>用于测试请求报文中的所有首部或指定首部信息是否满足指定的条件；指定首部时， 其名称不区分大小写， 且在括号中“（）”不能有任何多余的空白字符。测试服务器端的响应报文时可以使用shdr()。<br>例如 当用户访问172.16.1.100时，重定向到<a target="_blank" rel="noopener" href="http://www.afwing.com/">http://www.afwing.com</a><br> acl  dstipaddr  hdr(Host) 172.16.1.100<br> redirect  location   <a target="_blank" rel="noopener" href="http://www.afwing.com/">http://www.afwing.com</a> if  dstipaddr</p>
 </li>
-<li><p>hdr_reg <code>&lt;string&gt;</code><br>如果请求的域名满足正则表达式，返回true， -i是忽略大小写<br> acl denali_policy hdr_reg(host) -i ^(<a target="_blank" rel="noopener" href="http://www.inbank.com|image.inbank.com)$/">www.inbank.com|image.inbank.com)$</a></p>
+<li><p>hdr_reg <code>&lt;string&gt;</code><br>如果请求的域名满足正则表达式，返回true， -i是忽略大小写<br> acl denali_policy hdr_reg(host) -i ^(<a href="http://www.inbank.com|image.inbank.com)$">www.inbank.com|image.inbank.com)$</a></p>
 </li>
 <li><p>hdr_dom <code>&lt;string&gt;</code><br>如果请求域名满足<a target="_blank" rel="noopener" href="http://www.inbank.com,返回true,/">www.inbank.com，返回true，</a> -i是忽略大小写<br> acl tm_policy hdr_dom(host) -i <a target="_blank" rel="noopener" href="http://www.inbank.com/">www.inbank.com</a></p>
 </li>
