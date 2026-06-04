@@ -216,7 +216,7 @@ description:
 | [中国高等教育学生信息网（学信网）](https://www.chsi.com.cn/)  | [中国研究生招生信息网](https://yz.chsi.com.cn/) | [中国教育考试网](https://tdxl.neea.edu.cn/) | [宁夏人事考试中心](http://www.nxpta.gov.cn/) |
 | [中国国际人才交流基金会项目管理网站](http://exam.chinapmp.cn/) | [PMI](https://www.pmi.org/) | [希赛网](https://www.educity.cn/) ||
 | [宁夏机械工程学会](http://www.nxjxgcxh.cn/)                 | [宁夏专业技术人员继续教育培训网](http://nxzj.chinahrt.com/) | [宁夏人事人才管理信息系统-职称评审](http://218.95.135.211:8005/zcps) ||
-| [利通区县域中小学招生转学服务平台](http://www.wzrxbm.cn)      ||||
+| [利通区县域中小学招生转学服务平台](http://www.wzrxbm.cn)      | [宁夏中小学（幼儿园）招生入学平台](https://nxzs.nxeduyun.cn/governance-web) |||
 | [全国统一规范电子税务局](https://etax.ningxia.chinatax.gov.cn:8443/) | [宁夏回族自治区工业和信息化厅](https://gxt.nx.gov.cn/) |||
 
 

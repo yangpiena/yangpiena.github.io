@@ -216,3 +216,16 @@ ps -ef|grep nginx
 > 从容停止 kill -QUIT 主进程号
 快速停止 kill -TERM 主进程号
 强制停止 kill -9 nginx
+
+
+# 查看 Nginx 当前正在加载的配置
+```bash
+nginx -t
+```
+输出示例：
+```bash
+nginx: the configuration file /etc/nginx/nginx.conf syntax is ok
+nginx: configuration file /etc/nginx/nginx.conf test is successful
+```
+> /etc/nginx/nginx.conf = 当前运行生效主配置
+
