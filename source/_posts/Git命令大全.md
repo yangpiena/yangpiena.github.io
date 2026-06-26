@@ -13,6 +13,7 @@ description:
 <!-- more -->
 ![Git常用命令速查表](/img/screenshots/Git常用命令速查表.jpg)
 
+
 ## git常识
 - Git专用名词
 ```
@@ -23,7 +24,9 @@ Remote：       远程仓库
 branch:        分支
 ```
 
+
 ## git常用命令
+
 ### 添加当前目录的所有文件到暂存区
 ```
 git add .
@@ -40,6 +43,7 @@ git push [remote] [branch]
 
 
 ## git其它命令
+
 ### 强行推送当前分支到远程仓库，即使有冲突
 ```
 git push [remote] --force
@@ -99,6 +103,38 @@ git gc --prune=now
 ```
 git gc --aggressive --prune=now
 ```
+
+### 删除分支
+1. 删除远程分支
+```
+git push origin --delete test
+```
+2. 删除本地分支
+```
+git branch -D test
+```
+3. 清理本地远程追踪缓存
+```
+git fetch -p
+```
+
+### 重命名分支
+```
+git checkout 旧分支
+```
+```
+git branch -m 新分支
+```
+```
+git push origin -u 新分支
+```
+```
+git push origin --delete 旧分支
+```
+```
+git fetch -p
+```
+
 
 ## FAQ
 - git SSL certificate problem: unable to get local issuer certificate-解决问题
