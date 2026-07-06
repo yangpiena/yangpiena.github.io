@@ -84,6 +84,7 @@ description:
 | [极强检测](https://www.urlzt.com/) | [Ping](https://ping.eu/ping/) |||
 | [打字打字](https://dazidazi.com/) | [纸张打印](https://paperme.toolooz.com/) | [田字格笔顺 字帖生成器](https://lab.feifanju.com/zitie/) ||
 | [鸡毛信](https://cmd.im/) | [文件快递柜](https://temp.youloge.com/) || [临时手机号](https://jiemahao.com/) |
+| [计算器3000](https://jsq3000.com/) ||||
 
 | IT工具箱 |  |  |  |
 | ---- | ---- | ---- | ---- |
@@ -110,11 +111,14 @@ description:
 | ---- | ---- | ---- | ---- |
 | [小米LOGO生成器](https://mi-logo.lvwzhen.com/) | [免费logo在线制作](http://www.uugai.com/) | [Text to Logo & Favicon](https://www.logo.surf/#generate-favicon) | [头像生成器](https://www.moubao.vip/)|
 
+| 视频 |  |  |  |
+| ---- | ---- | ---- | ---- |
+| [免费视频工具](https://artplayer.org/zh-CN/tools/) | [在线视频压缩](https://videocompressors.com/zh) |  |  |
+
 | 转换 |  |  |  |
 | ---- | ---- | ---- | ---- |
 | [在线文件转换器](https://cn.office-converter.com/) | [在线格式转换](https://www.alltoall.net/) | [PDF派](https://www.pdfpai.com/) | [PDFuck](https://pdfuck.com/zh "免费在线PDF工具") |
 | [tts 在线文字转语音服务](https://iui.su/368/) | [TTS Online 文本转语音](https://www.ttson.cn/) | [TTS - 文本转语音](https://www.text-to-speech.cn/) | [多种云音乐格式转MP3](https://openyyy.com/) |
-| [在线视频压缩](https://videocompressors.com/zh) ||||
 
 | 文案 |  |  |  |
 | ---- | ---- | ---- | ---- |
@@ -180,6 +184,7 @@ description:
 | [Win10怎么把批处理文件固定到开始菜单](http://www.jb51.net/os/win10/483729.html) | [解决TCP/IP筛选的实用设置问题](https://jingyan.baidu.com/article/851fbc37dc1e513e1f15ab27.html) |||
 | [OneAPM 工作两年总结](http://www.ituring.com.cn/article/497377) | [竞品分析－SWOT分析](https://zhuanlan.zhihu.com/p/181668340) |||
 | [网易邮箱配置](http://www.163mailbox.cn/client-outlook-foxmail-settings.html) | [ffmpeg 常用命令汇总](https://blog.csdn.net/kingvon_liwei/article/details/79271361) |||
+| [读懂巴菲特](https://buffett.lazyso.com/) ||||
 
 
 ## 前端/案例
