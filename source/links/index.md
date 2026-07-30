@@ -40,6 +40,7 @@ description:
 | [DeepSeek](https://chat.deepseek.com/) | [豆包](https://www.doubao.com/chat/) | [千问](https://www.qianwen.com/) | [智谱清言](https://chatglm.cn/main/alltoolsdetail?lang=zh) |
 | [数字素养](https://szsyw.cn/) |  | [硬核指南](https://yinghezhinan.com/) | [黑点工具](https://hddtool.com/) |
 | [不死鸟发布页](https://dalao.ru/) | [一糖导航](https://iitang.com/) | [今日热榜](https://tophub.today/) | [摸摸鱼热榜](https://momoyu.cc/) |
+| [今日热榜](https://top.goodssoft.com/daily?type=hot) ||||
 
 
 ## 音乐
@@ -80,7 +81,7 @@ description:
 # 在线工具
 |  |  |  |  |
 | ---- | ---- | ---- | ---- |
-| [天气万年历](https://wannianli.tianqi.com/today/zhou/) | [高德地图Web版](https://ditu.amap.com/) || [便民查询网](https://www.bmcx.com/) |
+| [天气万年历](https://wannianli.tianqi.com/today/zhou/) | [高德地图Web版](https://ditu.amap.com/) | [中国天气地图](https://cnweathermap.com/) | [便民查询网](https://www.bmcx.com/) |
 | [极强检测](https://www.urlzt.com/) | [Ping](https://ping.eu/ping/) |||
 | [打字打字](https://dazidazi.com/) | [纸张打印](https://paperme.toolooz.com/) | [田字格笔顺 字帖生成器](https://lab.feifanju.com/zitie/) ||
 | [鸡毛信](https://cmd.im/) | [文件快递柜](https://temp.youloge.com/) || [临时手机号](https://jiemahao.com/) |
@@ -90,7 +91,7 @@ description:
 | ---- | ---- | ---- | ---- |
 | [在线工具](http://tool.lu/) | [OSChina开发工具](http://tool.oschina.net/) | [UU在线工具](https://uutool.cn/) | [极速箱](https://jisuxiang.com/) |
 | [产品工具箱](https://www.y3pm.com/) | [千盒工具](https://1000tool.com/) | [独特工具箱](https://www.dute.org/) | [偷懒工具](https://toolight.cn) |
-| [Quick Reference](https://quickref.cn/ "为开发人员分享快速参考备忘清单【速查表】") | [小鱼工具箱](https://io5.cn/) |||
+| [Quick Reference](https://quickref.cn/ "为开发人员分享快速参考备忘清单【速查表】") | [小鱼工具箱](https://io5.cn/) | [星贝工具箱](https://www.tools.goodssoft.com/) ||
 
 | 设计 |  |  |  |
 | ---- | ---- | ---- | ---- |
@@ -151,9 +152,10 @@ description:
 | [吻妻出品专注 win10](https://iwin10.net/) | [吻妻出品专注 win7](http://www.newxitong.com/) | [黑苹果乐园](https://imac.hk/) | [黑果小兵](https://blog.daliansky.net/) |
 | [小众软件](https://www.appinn.com/) | [zd423](http://www.zdfans.com/) | [423down](https://www.423down.com/) | [金狐维护盘](http://www.jinhu.me/) |
 | [夜雨聆风](http://www.yeyulingfeng.com/) | [分享者](https://www.sharerw.com/) | [我爱分享网](http://www.zhanshaoyi.com/rjxz.html) | [行客工作室](http://www.runker.net/) |
-| [软猫下载](https://www.softmall.net/) | [软件鸭](https://ruanjianya.net/) | [Puresys](https://www.puresys.net/) |
+| [软猫下载](https://www.softmall.net/) | [软件鸭](https://ruanjianya.net/) | [Puresys](https://www.puresys.net/) | [六一库](https://www.61ku.com/software) |
 | [浏览迷](https://liulanmi.com/) | [Chrome浏览器插件下载中心](https://www.chajian5.com/) | [Greasy Fork 用户脚本](https://greasyfork.org/zh-CN) | [TamperMonkey TM中文网](https://www.tampermonkey.cn/) |
 | [阅读APP](http://www.legado.top) | [阅读及TTS资源](https://www.123pan.com/s/6chuVv-yiqWd.html) | [MultiTTS 安卓离线语音](https://iui.su/3680/) ||
+| [聚合 TvBox 全链路资源](https://www.yxzhi.com/tvbox) "电视Tv观影指南" ||||
 | [科学上网](https://hideip.network/) | [极光VPN](https://github.com/getaurora/download) | [瓦特工具箱](https://steampp.net/) ||
 | [IDM蓝奏云下载地址](https://ruanjianya.lanzoum.com/b02w5s0oh) | [文件加速下载](https://b.dalao.ru/g/) | [文件下载服务](https://down.nigx.cn/) |  |
 
