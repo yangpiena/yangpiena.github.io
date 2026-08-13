@@ -18,7 +18,7 @@ jobs:
       - name: Install Dependencies
         run: |
           npm install -g hexo-cli
-          npm install  # 确保 package.json 含 hexo-theme-next 依赖
+          npm install  # 主题来自 themes/next 目录，无需 hexo-theme-next 依赖
       - name: Build Hexo Site
         run: hexo clean && hexo generate
       - name: Deploy to GitHub Pages

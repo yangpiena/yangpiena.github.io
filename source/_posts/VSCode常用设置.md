@@ -8,6 +8,7 @@ authorDesc:
 tags: [VSCode]
 description: VSCode常用设置
 ---
+
 ## 设置背景
 1. 准备好背景图片 `vscode-background.jpg` ，放入安装目录 `C:\Program Files\Microsoft VS Code\resources\app\out\vs\workbench` 下。
 2. 打开文件 `C:\Program Files\Microsoft VS Code\resources\app\out\vs\workbench\workbench.desktop.main.css` ，在最后面（Ctrl + End）添加以下内容并保存。
@@ -26,3 +27,11 @@ description: VSCode常用设置
 }
 ```
 3. 重启VSCode后生效。
+
+
+## 清理 Java 语言服务缓存
+Ctrl+Shift+P → `Java: Clean Java Language Server Workspace` → 确认清理
+
+
+## 重启 VS Code
+Ctrl+Shift+P → `Developer: Reload Window`（或者直接关了重开）
