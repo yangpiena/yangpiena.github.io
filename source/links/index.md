@@ -168,7 +168,7 @@ description:
 | [Z-Library发布页](https://zlibrary.me/)      | [SaltyLeo 的书架](https://book.tstrs.me/search) | [读书派](https://www.dushupai.com/)               | [豆瓣读书](https://book.douban.com/) |
 | [520小说网](https://www.txt520.org/)         | [七彩英语](http://www.qcenglish.com/)           |
 | [瑞文网教材](https://www.ruiwen.com/jiaocai/) | [人教版中小学教材](https://bp.pep.com.cn/jc/)    | | |
-| [秘密花园](http://www.yini.org)              | [金句盲盒](http://jinju.yotooapp.com/)          | | |
+| [赛博禅师](https://askamonk.online/)         | [秘密花园](http://www.yini.org)                 | [金句盲盒](http://jinju.yotooapp.com/)          | |
 
 
 ## 文章/教程
@@ -229,7 +229,7 @@ description:
 ## AI
 |     |     |     |     |
 | --- | --- | --- | --- |
-| [WeChatAI](https://welm.weixin.qq.com/docs/)                     | [U-Claw 虾盘](https://www.u-claw.org/)                    | | |
+| [WeChatAI](https://welm.weixin.qq.com/docs/)                     | [U-Claw 虾盘](https://www.u-claw.org/)                    | [DeepSeek Harness](https://dsh.deepseek404.com/tutorial/index.php) | |
 | [OpenNana提示词图库](https://opennana.com/awesome-prompt-gallery/) | [图片到提示词生成器](https://vheer.com/app/image-to-prompt) | | |
 | [全球首款永久免费的AI视频生成器](https://aivideomaker.ai/zh)          | | | |
 
@@ -239,6 +239,7 @@ description:
 | --- | --- | --- | --- |
 | [WxPusher](https://wxpusher.zjiecode.com/admin/main) | [XPusher](https://courier.toptopn.com/xpusher.html) | [PushHub](https://www.pushhub.cn/)    | |
 | [随机图片API](https://tuapi.eees.cc)                  | [樱道随机图片](https://img.r10086.com/)               | [3650000随机API](https://3650000.xyz/) | |
+| [浏览器安全检测](https://ismybrowsersafe.org/)         | | | |
 
 
 # B

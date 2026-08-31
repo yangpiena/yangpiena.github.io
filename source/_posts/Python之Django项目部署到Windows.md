@@ -108,7 +108,7 @@ pip --default-timeout=100 install -r requirements.txt
 ```
 > - 也可指定资源镜像安装：
 ```python
-pip --default-timeout=100 install requirements.txt -i http://pypi.douban.com/simple/ --trusted-host pypi.douban.com
+pip --default-timeout=100 install -r requirements.txt -i https://pypi.tuna.tsinghua.edu.cn/simple --trusted-host pypi.tuna.tsinghua.edu.cn
 ```
 > - 如果上面那个豆瓣资源依然不快，可以换成下面的国内镜像网站。
 清华：https://pypi.tuna.tsinghua.edu.cn/simple 阿里云：http://mirrors.aliyun.com/pypi/simple/
