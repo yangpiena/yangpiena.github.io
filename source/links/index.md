@@ -127,8 +127,8 @@ description:
 # 博客/社区
 |     |     |     |     |
 | --- | --- | --- | --- |
-| [博客园](http://www.cnblogs.com/cmt/)     | [OSCHINA](http://www.oschina.net/) | [zzy.my](http://zzy.my) | [UTC+8 Times](https://utc8times.elsetech.app/) |
-| [DeepSoga社区](https://www.deepsoga.com/) | | | |
+| [博客园](http://www.cnblogs.com/cmt/)     | [OSCHINA](http://www.oschina.net/)             | [稀土掘金](https://juejin.cn/) |  |
+| [DeepSoga社区](https://www.deepsoga.com/) | [UTC+8 Times](https://utc8times.elsetech.app/) | | |
 
 
 # 资源
@@ -164,7 +164,7 @@ description:
 | --- | --- | --- | --- |
 | [孔夫子旧书网](https://www.kongfz.com/)       | | | |
 | [Reeden阅读器](https://reeden.app/cn)        | [开源阅读](https://gedoor.github.io/)           | [阅读-使用手册](https://www.yuque.com/legado/wiki) | [喵公子发布页](https://fb.miaogongzi.cc/) |
-| [全历史](https://www.allhistory.com/)        | [JOJO看报](https://reader.jojokanbao.cn/)       | [互联网知识地图](https://yunyinghui.feishu.cn/wiki/QrvDwaNt4icE2qkZTPSccNKInhh) | |
+| [全历史](https://www.allhistory.com/)        | [古韵书阁](https://oldbook.space/)              | [JOJO看报](https://reader.jojokanbao.cn/)         | [互联网知识地图](https://yunyinghui.feishu.cn/wiki/QrvDwaNt4icE2qkZTPSccNKInhh) |
 | [Z-Library发布页](https://zlibrary.me/)      | [SaltyLeo 的书架](https://book.tstrs.me/search) | [读书派](https://www.dushupai.com/)               | [豆瓣读书](https://book.douban.com/) |
 | [520小说网](https://www.txt520.org/)         | [七彩英语](http://www.qcenglish.com/)           |
 | [瑞文网教材](https://www.ruiwen.com/jiaocai/) | [人教版中小学教材](https://bp.pep.com.cn/jc/)    | | |
