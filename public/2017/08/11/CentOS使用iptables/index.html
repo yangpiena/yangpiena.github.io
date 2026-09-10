@@ -315,18 +315,9 @@
 <h5 id="2-对iptables服务进行保存"><a href="#2-对iptables服务进行保存" class="headerlink" title="2. 对iptables服务进行保存"></a>2. 对iptables服务进行保存</h5><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">service iptables save</span><br></pre></td></tr></table></figure>
 <h5 id="3-重启iptables服务"><a href="#3-重启iptables服务" class="headerlink" title="3. 重启iptables服务"></a>3. 重启iptables服务</h5><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">service iptables restart</span><br></pre></td></tr></table></figure>
 <span id="more"></span>
-
 <hr>
-<h3 id="CentOS-7-x"><a href="#CentOS-7-x" class="headerlink" title="CentOS 7.x"></a>CentOS 7.x</h3><h5 id="1-关闭firewall"><a href="#1-关闭firewall" class="headerlink" title="1. 关闭firewall"></a>1. 关闭firewall</h5><p>停止firewall服务：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">systemctl stop firewalld.service</span><br></pre></td></tr></table></figure>
-<p>禁止firewall开机启动：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">systemctl disable firewalld.service</span><br></pre></td></tr></table></figure>
-
-<h5 id="2-安装iptables防火墙"><a href="#2-安装iptables防火墙" class="headerlink" title="2. 安装iptables防火墙"></a>2. 安装iptables防火墙</h5><p>执行yum命令安装：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum install iptables-services</span><br></pre></td></tr></table></figure>
-<p>编辑防火墙配置文件：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vi /etc/sysconfig/iptables</span><br></pre></td></tr></table></figure>
-<p>在配置文件中加入以下内容后，保存并退出：</p>
+<h3 id="CentOS-7-x"><a href="#CentOS-7-x" class="headerlink" title="CentOS 7.x"></a>CentOS 7.x</h3><h5 id="1-关闭firewall"><a href="#1-关闭firewall" class="headerlink" title="1. 关闭firewall"></a>1. 关闭firewall</h5><p>停止firewall服务：<br><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">systemctl stop firewalld.service</span><br></pre></td></tr></table></figure><br>禁止firewall开机启动：<br><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">systemctl disable firewalld.service</span><br></pre></td></tr></table></figure></p>
+<h5 id="2-安装iptables防火墙"><a href="#2-安装iptables防火墙" class="headerlink" title="2. 安装iptables防火墙"></a>2. 安装iptables防火墙</h5><p>执行yum命令安装：<br><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum install iptables-services</span><br></pre></td></tr></table></figure><br>编辑防火墙配置文件：<br><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vi /etc/sysconfig/iptables</span><br></pre></td></tr></table></figure><br>在配置文件中加入以下内容后，保存并退出：</p>
 <pre><code># sample configuration for iptables service
 # you can edit this manually or use system-config-firewall
 # please do not ask us to add additional ports/services to this default configuration
@@ -347,15 +338,9 @@
 -A INPUT -j REJECT --reject-with icmp-host-prohibited
 -A FORWARD -j REJECT --reject-with icmp-host-prohibited
 COMMIT
-</code></pre>
-<p>最后重启防火墙使配置生效</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">systemctl restart iptables.service</span><br></pre></td></tr></table></figure>
-
+</code></pre><p>最后重启防火墙使配置生效<br><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">systemctl restart iptables.service</span><br></pre></td></tr></table></figure></p>
 <h5 id="3-设置防火墙开机启动"><a href="#3-设置防火墙开机启动" class="headerlink" title="3. 设置防火墙开机启动"></a>3. 设置防火墙开机启动</h5><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">systemctl enable iptables.service</span><br></pre></td></tr></table></figure>
-
-<h5 id="4-关闭SELinux"><a href="#4-关闭SELinux" class="headerlink" title="4. 关闭SELinux"></a>4. 关闭SELinux</h5><p>编辑SELinux的配置文件：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vi /etc/selinux/config</span><br></pre></td></tr></table></figure>
-<p>如下图，注释掉<code>SELINUX=enforcing</code>和<code>SELINUXTYPE=targeted</code>。</p>
+<h5 id="4-关闭SELinux"><a href="#4-关闭SELinux" class="headerlink" title="4. 关闭SELinux"></a>4. 关闭SELinux</h5><p>编辑SELinux的配置文件：<br><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vi /etc/selinux/config</span><br></pre></td></tr></table></figure><br>如下图，注释掉<code>SELINUX=enforcing</code>和<code>SELINUXTYPE=targeted</code>。</p>
 <pre><code># This file controls the state of SELinux on the system.
 # SELINUX= can take one of these three values:
 #     enforcing - SELinux security policy is enforced.
@@ -367,9 +352,8 @@ SELINUX=disabled
 #     minimum - Modification of targeted policy. Only selected processes are protected.
 #     mls - Multi Level Security protection.
 #SELINUXTYPE=targeted
-</code></pre>
-<p>最后执行以下命令，使配置立即生效</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">setenforce 0</span><br></pre></td></tr></table></figure>
+</code></pre><p>最后执行以下命令，使配置立即生效<br><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">setenforce 0</span><br></pre></td></tr></table></figure></p>
+
     </div>
 
     

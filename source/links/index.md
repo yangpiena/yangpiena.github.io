@@ -39,7 +39,7 @@ description:
 | [AI人工智能网站](https://chatgpt-sites.lzw.me/)  | [AI TOP100](https://www.aitop100.cn/) | [AI工具集](https://ai-bot.cn)    | [深言达意](https://www.shenyandayi.com "找词找句")          |
 | [DeepSeek](https://chat.deepseek.com/)         | [豆包](https://www.doubao.com/chat/)  | [千问](https://www.qianwen.com/) | [智谱清言](https://chatglm.cn/main/alltoolsdetail?lang=zh) |
 | [数字素养](https://szsyw.cn/)                   | [黑点工具](https://hddtool.com/)       | [一糖导航](https://iitang.com/)   | [硬核指南](https://yinghezhinan.com/)                      |
-| [不死鸟发布页](https://dalao.ru/)                | [今日热榜](https://tophub.today/)      | [摸摸鱼热榜](https://momoyu.cc/)  | [今日热榜](https://top.goodssoft.com/daily?type=hot)       |
+| [不死鸟发布页](https://dalao.ru/)                | [今日热榜](https://tophub.today/)      | [摸摸鱼热榜](https://momoyu.cc/)  | |
 
 
 ## 音乐

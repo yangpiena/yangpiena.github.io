@@ -312,9 +312,7 @@
     
     <div class="post-body" itemprop="articleBody">
         <h3 id="CentOS下实现脚本启动和关闭"><a href="#CentOS下实现脚本启动和关闭" class="headerlink" title="CentOS下实现脚本启动和关闭"></a>CentOS下实现脚本启动和关闭</h3><h4 id="1-编写启动脚本"><a href="#1-编写启动脚本" class="headerlink" title="1. 编写启动脚本"></a>1. 编写启动脚本</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vi /etc/rc.d/init.d/haproxy</span><br></pre></td></tr></table></figure>
-
 <span id="more"></span>
-
 <p>本身不存在此文件，使用以上命令，进入vi编辑器，再使用命令保存退出即可新建此文件。<br>打开文件haproxy，贴入如下内容：</p>
 <pre><code>#!/bin/sh
 #chkconfig: 2345 10 90
@@ -453,20 +451,28 @@ case &quot;$1&quot; in
     echo $&quot;Usage: $BASENAME &#123;start|stop|restart|reload|condrestart|status|check&#125;&quot;
     exit 1
 esac
- 
-exit $?
-</code></pre>
-<p>如果安装路径有变动，则只需修改上面的<code>BIN=/usr/local/haproxy/sbin/haproxy</code>和<code>CFG=/usr/local/haproxy/haproxy.cfg</code>即可。</p>
-<h4 id="2-脚本随系统自启动"><a href="#2-脚本随系统自启动" class="headerlink" title="2. 脚本随系统自启动"></a>2. 脚本随系统自启动</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">chmod 755 /etc/rc.d/init.d/haproxy  # 添加执行属性</span><br><span class="line">chkconfig --add haproxy            # 添加服务</span><br><span class="line">chkconfig haproxy on</span><br></pre></td></tr></table></figure>
-<p>如果出现结果： <em>service haproxy does not support chkconfig</em><br>解决办法是在 <strong>&#x2F;etc&#x2F;rc.d&#x2F;init.d&#x2F;haproxy</strong> 中添加下面两句到 <strong>#!&#x2F;bin&#x2F;bash</strong> 之后:<br>    #chkconfig: 2345 10 90<br>    #description:haproxy<br>—-其中2345是默认启动级别，级别有0-6共7个级别。<br>—-等级0表示：表示关机<br>—-等级1表示：单用户模式<br>—-等级2表示：无网络连接的多用户命令行模式<br>—-等级3表示：有网络连接的多用户命令行模式<br>—-等级4表示：不可用<br>—-等级5表示：带图形界面的多用户模式<br>—-等级6表示：重新启动<br>—-10是启动优先级，90是停机优先级，优先级范围是0-100，数字越大，优先级越低。</p>
-<blockquote>
-<p>添加后效果如下：<br>    [root@Linux-xx ~]# cat &#x2F;etc&#x2F;rc.d&#x2F;init.d&#x2F;haproxy<br>    #!&#x2F;bin&#x2F;bash<br>    #chkconfig: 2345 10 90<br>    #description:haproxy<br>    BASE_DIR&#x3D;”&#x2F;usr&#x2F;local&#x2F;haproxy”<br>    ARGV&#x3D;”$@”<br>    start()<br>    …<br>    …</p>
-</blockquote>
-<h4 id="3-启动与关闭"><a href="#3-启动与关闭" class="headerlink" title="3. 启动与关闭"></a>3. 启动与关闭</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">service haproxy start</span><br><span class="line">service haproxy stop</span><br></pre></td></tr></table></figure>
 
+exit $?
+</code></pre><p>如果安装路径有变动，则只需修改上面的<code>BIN=/usr/local/haproxy/sbin/haproxy</code>和<code>CFG=/usr/local/haproxy/haproxy.cfg</code>即可。</p>
+<h4 id="2-脚本随系统自启动"><a href="#2-脚本随系统自启动" class="headerlink" title="2. 脚本随系统自启动"></a>2. 脚本随系统自启动</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">chmod 755 /etc/rc.d/init.d/haproxy  # 添加执行属性</span><br><span class="line">chkconfig --add haproxy            # 添加服务</span><br><span class="line">chkconfig haproxy on</span><br></pre></td></tr></table></figure>
+<p>如果出现结果： <em>service haproxy does not support chkconfig</em><br>解决办法是在 <strong>/etc/rc.d/init.d/haproxy</strong> 中添加下面两句到 <strong>#!/bin/bash</strong> 之后:</p>
+<pre><code>#chkconfig: 2345 10 90
+#description:haproxy
+</code></pre><p>——其中2345是默认启动级别，级别有0-6共7个级别。<br>——等级0表示：表示关机<br>——等级1表示：单用户模式<br>——等级2表示：无网络连接的多用户命令行模式<br>——等级3表示：有网络连接的多用户命令行模式<br>——等级4表示：不可用<br>——等级5表示：带图形界面的多用户模式<br>——等级6表示：重新启动<br>——10是启动优先级，90是停机优先级，优先级范围是0-100，数字越大，优先级越低。</p>
+<blockquote>
+<p>添加后效果如下：<br>    [root@Linux-xx ~]# cat /etc/rc.d/init.d/haproxy</p>
+<pre><code>#!/bin/bash
+#chkconfig: 2345 10 90
+#description:haproxy
+BASE_DIR=&quot;/usr/local/haproxy&quot;
+ARGV=&quot;$@&quot;  
+start()
+...
+...
+</code></pre></blockquote>
+<h4 id="3-启动与关闭"><a href="#3-启动与关闭" class="headerlink" title="3. 启动与关闭"></a>3. 启动与关闭</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">service haproxy start</span><br><span class="line">service haproxy stop</span><br></pre></td></tr></table></figure>
 <hr>
 <h3 id="Suse-Linux-Enterprise-12下实现脚本启动和关闭"><a href="#Suse-Linux-Enterprise-12下实现脚本启动和关闭" class="headerlink" title="Suse Linux Enterprise 12下实现脚本启动和关闭"></a>Suse Linux Enterprise 12下实现脚本启动和关闭</h3><h4 id="1-在-目录下，执行下面命令"><a href="#1-在-目录下，执行下面命令" class="headerlink" title="1. 在~目录下，执行下面命令"></a>1. 在~目录下，执行下面命令</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vim .profile</span><br></pre></td></tr></table></figure>
-
 <h4 id="2-在-profile文件中定义HAPROXY-HOME变量，并将变量追加到PATH后面，效果如下："><a href="#2-在-profile文件中定义HAPROXY-HOME变量，并将变量追加到PATH后面，效果如下：" class="headerlink" title="2. 在.profile文件中定义HAPROXY_HOME变量，并将变量追加到PATH后面，效果如下："></a>2. 在.profile文件中定义HAPROXY_HOME变量，并将变量追加到PATH后面，效果如下：</h4><pre><code>    # .profile
 
     # Get the aliases and functions
@@ -481,10 +487,8 @@ exit $?
 
     export HAPROXY_HOME
     export PATH
-</code></pre>
-<p>保存并退出。</p>
+</code></pre><p>保存并退出。</p>
 <h4 id="3-执行下面命令，使立即生效"><a href="#3-执行下面命令，使立即生效" class="headerlink" title="3. 执行下面命令，使立即生效"></a>3. 执行下面命令，使立即生效</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">source ~/.profile</span><br></pre></td></tr></table></figure>
-
 <h4 id="4-执行下面命令，在HAPROXY-HOME目录下创建脚本文件，"><a href="#4-执行下面命令，在HAPROXY-HOME目录下创建脚本文件，" class="headerlink" title="4. 执行下面命令，在HAPROXY_HOME目录下创建脚本文件，"></a>4. 执行下面命令，在HAPROXY_HOME目录下创建脚本文件，</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vim /usr/local/haproxy/haproxy</span><br></pre></td></tr></table></figure>
 <p>在文件中写入如下代码，保存并退出。</p>
 <pre><code>#!/bin/bash
@@ -503,23 +507,12 @@ fi
 if [ &quot;$1&quot;x = &quot;log&quot;x ]; then
   tail -f /usr/local/haproxy/logs/haproxy.pid -n 1000
 fi
-</code></pre>
-<h4 id="5-给文件添加权限，使脚本文件可以执行，命令为"><a href="#5-给文件添加权限，使脚本文件可以执行，命令为" class="headerlink" title="5. 给文件添加权限，使脚本文件可以执行，命令为"></a>5. 给文件添加权限，使脚本文件可以执行，命令为</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">chmod 755 /usr/local/haproxy/haproxy</span><br></pre></td></tr></table></figure>
-
-<h4 id="6-最后，执行下面命令可启动、关闭haproxy或查看日志"><a href="#6-最后，执行下面命令可启动、关闭haproxy或查看日志" class="headerlink" title="6. 最后，执行下面命令可启动、关闭haproxy或查看日志"></a>6. 最后，执行下面命令可启动、关闭haproxy或查看日志</h4><p>启动：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">haproxy start</span><br></pre></td></tr></table></figure>
-<p>关闭：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">haproxy stop</span><br></pre></td></tr></table></figure>
-<p>查看日志：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">haproxy log</span><br></pre></td></tr></table></figure>
-<p>检查haprxy进程：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">haproxy check</span><br></pre></td></tr></table></figure>
-
+</code></pre><h4 id="5-给文件添加权限，使脚本文件可以执行，命令为"><a href="#5-给文件添加权限，使脚本文件可以执行，命令为" class="headerlink" title="5. 给文件添加权限，使脚本文件可以执行，命令为"></a>5. 给文件添加权限，使脚本文件可以执行，命令为</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">chmod 755 /usr/local/haproxy/haproxy</span><br></pre></td></tr></table></figure>
+<h4 id="6-最后，执行下面命令可启动、关闭haproxy或查看日志"><a href="#6-最后，执行下面命令可启动、关闭haproxy或查看日志" class="headerlink" title="6. 最后，执行下面命令可启动、关闭haproxy或查看日志"></a>6. 最后，执行下面命令可启动、关闭haproxy或查看日志</h4><p>启动：<br><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">haproxy start</span><br></pre></td></tr></table></figure><br>关闭：<br><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">haproxy stop</span><br></pre></td></tr></table></figure><br>查看日志：<br><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">haproxy log</span><br></pre></td></tr></table></figure><br>检查haprxy进程：<br><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">haproxy check</span><br></pre></td></tr></table></figure></p>
 <h4 id="7-随系统自启动"><a href="#7-随系统自启动" class="headerlink" title="7. 随系统自启动"></a>7. 随系统自启动</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vim /etc/init.d/boot.local</span><br></pre></td></tr></table></figure>
 <p>加入以下内容，保存退出后生效。</p>
 <pre><code>/usr/local/haproxy/sbin/haproxy -f /usr/local/haproxy/haproxy.cfg
 </code></pre>
-
     </div>
 
     
