@@ -58,7 +58,7 @@ description:
 | [可可影视](https://www.keke9.com/)       | [可可影视](https://www.keke12.com:51111)                            | [可可影视](https://www.keke13.com)   | [可可影视](https://www.keke14.com)       |
 | [lemonlive](https://lemonlive.deno.dev) | [24 小时恐怖片直播间](http://xn--24-eo1di1mji74uznc0x5b2tjq81f.com/) | [柯南导航页](https://20s.top/)        | [金牌影院](https://fjvtw.com/)           |
 | [4K指南](https://xuexizhinan.com/)       | [简单TV](https://jiandantv.com/)                                   | [发现TV](https://faxiantv.com/)      | [亿苯正经的Alist库](https://pan.lm379.cn/) |
-| [嘀嗒影视](https://www.didahd.pro/)      | | | |
+| [嘀嗒影视](https://www.didahd.pro/)      | [美剧2046](https://www.mj2046.cc/) | | |
 
 
 ## 游戏
@@ -136,8 +136,8 @@ description:
 | --- | --- | --- | --- |
 | [站长素材](https://sc.chinaz.com/)      | | | |
 | [商用免费字体](https://font.ittools.cc/) | | | |
-| [矢量图标库](http://www.iconfont.cn/)   | [免费开源图标下载](https://iconduck.com/)                                                       | [FontAwesome图标](http://www.fontawesome.com.cn/faicons/) | [Icones](https://icon.ittools.cc/)                                                                      |
-| [菜鸟图标](https://icon.sucai999.com/)  | [最好的12个Icon图标资源网站整理分享出来](https://blog.csdn.net/xiawj8957/article/details/45130263) | | |
+| [矢量图标库](http://www.iconfont.cn/)   | [免费开源图标下载](https://iconduck.com/)                                                       | [FontAwesome图标](http://www.fontawesome.com.cn/faicons/) | [Icones](https://icon.ittools.cc/) |
+| [菜鸟图标](https://icon.sucai999.com/)  | [最好的12个Icon图标资源网站整理分享出来](https://blog.csdn.net/xiawj8957/article/details/45130263) | [IconPark](https://iconpark.oceanengine.com/home) | |
 | [中国色](http://zhongguose.com/)        | [色匹网](https://www.wenziyun.cn/yanse/tupianshise)                                           | [RAL国际色号对照表](https://www.aode8.com/ral) | |
 | [优品PPT](http://www.ypppt.com)         | | | |
 | [UP云搜](https://www.upyunso.com/)      | [小白盘](https://www.xiaobaipan.com)                                                          | [中华珍宝馆](https://ltfc.net/) | [实况摄像头](https://www.skylinewebcams.com/zh/webcam/maldives/lhaviyani-atoll/kurendhoo/kuredu-island.html) |
@@ -157,6 +157,7 @@ description:
 | [聚合 TvBox 全链路资源](https://www.yxzhi.com/tvbox)          | | | |
 | [科学上网](https://hideip.network/)                          | [极光VPN](https://github.com/getaurora/download)           | [瓦特工具箱](https://steampp.net/)                  | |
 | [IDM蓝奏云下载地址](https://ruanjianya.lanzoum.com/b02w5s0oh) | [文件加速下载](https://b.dalao.ru/g/)                       | [文件下载服务](https://down.nigx.cn/)                | |
+| [开源项目推荐与自托管社区](https://zendot.org/)                | | | |
 
 
 ## 阅读/电子书
@@ -229,7 +230,7 @@ description:
 ## AI
 |     |     |     |     |
 | --- | --- | --- | --- |
-| [WeChatAI](https://welm.weixin.qq.com/docs/)                     | [U-Claw 虾盘](https://www.u-claw.org/)                    | [DeepSeek Harness](https://dsh.deepseek404.com/tutorial/index.php) | |
+| [WeChatAI](https://welm.weixin.qq.com/docs/)                     | | | |
 | [OpenNana提示词图库](https://opennana.com/awesome-prompt-gallery/) | [图片到提示词生成器](https://vheer.com/app/image-to-prompt) | | |
 | [全球首款永久免费的AI视频生成器](https://aivideomaker.ai/zh)          | | | |
 
@@ -312,6 +313,14 @@ description:
 |     |     |     |     |
 | --- | --- | --- | --- |
 | [官网下载](https://dbeaver.io/download/) | [山东大学镜像站下载dbeaver-ce-25.1.0](https://mirrors.sdu.edu.cn/github-release/dbeaver_dbeaver/25.1.0/dbeaver-ce-25.1.0-x86_64-setup.exe) | | |
+
+
+## DeepSeek
+|     |     |     |     |
+| --- | --- | --- | --- |
+| [DeepSeek Harness](https://www.deepseek.com/harness) | [DeepSeek Harness 教程](https://dsh.deepseek404.com/tutorial/index.php) | [DeepSeek Harness的2万字保姆级教程](https://juejin.cn/post/7673390412729614390) | |
+| [DeepSeek Harness 值得安装的 15 款插件](https://juejin.cn/post/7675273747710001206) | | | |
+| [MOVO](https://www.himovo.com/) | | | |
 
 
 ## Docker
