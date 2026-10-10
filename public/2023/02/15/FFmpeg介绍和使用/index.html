@@ -314,7 +314,9 @@
 <li>分辨率：-s 输出文件的分辨率；</li>
 <li>帧率：-r 输出文件的帧率值</li>
 </ul>
-<p>常用压缩命令：<br><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ffmpeg.exe -i test.mp4 -b:v 500k -r 25 -s 720x480 output.mkv</span><br></pre></td></tr></table></figure><br>分辨率可以根据目标视频的尺寸等比进行设置。</p>
+<p>常用压缩命令：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ffmpeg.exe -i test.mp4 -b:v 500k -r 25 -s 720x480 output.mkv</span><br></pre></td></tr></table></figure>
+<p>分辨率可以根据目标视频的尺寸等比进行设置。</p>
 <blockquote>
 <p>Xabe.FFmpeg是一个ffmpeg第三方封装，它提供了ffmpeg的下载、管理以及ffmpeg.exe的详细封装操作，使ffmpeg的操作更加简洁。<br>通过Nuget包引用后（只支持.net 4.6.1及以上），调用await FFmpeg.GetLatestVersion(FFmpegVersion.Full); 即可获取相应的版本。</p>
 </blockquote>

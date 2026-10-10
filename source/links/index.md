@@ -84,7 +84,7 @@ description:
 | [极强检测](https://www.urlzt.com/)                    | [Ping](https://ping.eu/ping/)           | | |
 | [打字打字](https://dazidazi.com/)                     | [纸张打印](https://paperme.toolooz.com/) | [田字格笔顺 字帖生成器](https://lab.feifanju.com/zitie/) | |
 | [鸡毛信](https://cmd.im/)                             | [文件快递柜](https://temp.youloge.com/)  | | [临时手机号](https://jiemahao.com/) |
-| [计算器3000](https://jsq3000.com/)                    | | | |
+| [计算器3000](https://jsq3000.com/)                    | [365 Tools](https://365-tools.cn) | | |
 
 | IT工具箱 | | | |
 | --- | --- | --- | --- |
@@ -123,6 +123,7 @@ description:
 | 文案 | | | |
 | --- | --- | --- | --- |
 | [文案生成器](https://www.gaoding.com/ai/writer/recognition) | [即时数字标牌](https://led.run) | | |
+
 
 # 博客/社区
 |     |     |     |     |
@@ -232,7 +233,7 @@ description:
 | --- | --- | --- | --- |
 | [WeChatAI](https://welm.weixin.qq.com/docs/)                     | | | |
 | [OpenNana提示词图库](https://opennana.com/awesome-prompt-gallery/) | [图片到提示词生成器](https://vheer.com/app/image-to-prompt) | | |
-| [全球首款永久免费的AI视频生成器](https://aivideomaker.ai/zh)          | | | |
+| [全球首款永久免费的AI视频生成器](https://aivideomaker.ai/zh)          | [椒图AI](https://www.jiaotuai.cn) | | |
 
 
 ## API

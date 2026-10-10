@@ -313,22 +313,27 @@
     <div class="post-body" itemprop="articleBody">
         <h3 id="HAProxy下载"><a href="#HAProxy下载" class="headerlink" title="HAProxy下载"></a>HAProxy下载</h3><p><a target="_blank" rel="noopener" href="https://www.haproxy.org/">官网下载</a><br><a target="_blank" rel="noopener" href="https://fossies.org/linux/misc/">Fossies下载</a><br><a target="_blank" rel="noopener" href="http://cbonte.github.io/haproxy-dconv/">官方文档</a></p>
 <span id="more"></span>
+
 <hr>
-<h3 id="HAProxy安装"><a href="#HAProxy安装" class="headerlink" title="HAProxy安装"></a>HAProxy安装</h3><h4 id="1-Linux下"><a href="#1-Linux下" class="headerlink" title="1. Linux下"></a>1. Linux下</h4><h5 id="1-1-下载"><a href="#1-1-下载" class="headerlink" title="1.1 下载"></a>1.1 下载</h5><p>进入下载目录，使用wget下载，如果已离线下载成功，则跳过该步，直接上传安装包到下载目录即可<br><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cd /usr/download/</span><br><span class="line">wget http://fossies.org/linux/misc/haproxy-1.8.1.tar.gz</span><br></pre></td></tr></table></figure></p>
+<h3 id="HAProxy安装"><a href="#HAProxy安装" class="headerlink" title="HAProxy安装"></a>HAProxy安装</h3><h4 id="1-Linux下"><a href="#1-Linux下" class="headerlink" title="1. Linux下"></a>1. Linux下</h4><h5 id="1-1-下载"><a href="#1-1-下载" class="headerlink" title="1.1 下载"></a>1.1 下载</h5><p>进入下载目录，使用wget下载，如果已离线下载成功，则跳过该步，直接上传安装包到下载目录即可</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cd /usr/download/</span><br><span class="line">wget http://fossies.org/linux/misc/haproxy-1.8.1.tar.gz</span><br></pre></td></tr></table></figure>
+
 <h5 id="1-2-解压"><a href="#1-2-解压" class="headerlink" title="1.2 解压"></a>1.2 解压</h5><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tar -zxvf haproxy-1.8.1.tar.gz</span><br></pre></td></tr></table></figure>
 <h5 id="1-3-安装"><a href="#1-3-安装" class="headerlink" title="1.3 安装"></a>1.3 安装</h5><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">cd haproxy-1.8.1</span><br><span class="line">make TARGET=linux26 ARCH=x86_64 PREFIX=/usr/local/haproxy</span><br><span class="line">make install PREFIX=/usr/local/haproxy</span><br></pre></td></tr></table></figure>
-<p>参数说明:<br><strong>TARGET=linux26</strong>            # 指定对目标操作系统在编译的时候进行优化，可选择如下值之一：Generic, linux22, linux24, linux24e, linux26, solaris, freebsd, openbsd, Cygwin, custom。如果不确定目标系统，可以保留默认值generic。使用<code>uname -r</code>可查看内核，如：2.6.32-642.11.1.el6.x86_64，此时该参数就为linux26。<br><strong>ARCH=x86_64</strong>               # 系统位数。指定ARCH值可强制编译生成针对一个特定系统架构的程序。通常用于在一个系统架构的平台上生成针对另一个不同架构平台的程序，比如在一个64位架构的目标系统上编译生成一个32位的程序。当前可选的值有：x86_64, i386, i486, i586, i686。<br>注：若选择上述其中的一个值，”-m32”或”-m64”会被添加到CFLAGS和LDFLAGS选项中。<br><strong>PREFIX=/usr/local/haprpxy</strong> # 指定安装目录，默认为/usr/local，其他诸如文档之类的文件将会在PREFIX指定的相应目录下。例如/usr/local/haprpxy为haprpxy的安装路径。</p>
+<p>参数说明:<br><strong>TARGET&#x3D;linux26</strong>            # 指定对目标操作系统在编译的时候进行优化，可选择如下值之一：Generic, linux22, linux24, linux24e, linux26, solaris, freebsd, openbsd, Cygwin, custom。如果不确定目标系统，可以保留默认值generic。使用<code>uname -r</code>可查看内核，如：2.6.32-642.11.1.el6.x86_64，此时该参数就为linux26。<br><strong>ARCH&#x3D;x86_64</strong>               # 系统位数。指定ARCH值可强制编译生成针对一个特定系统架构的程序。通常用于在一个系统架构的平台上生成针对另一个不同架构平台的程序，比如在一个64位架构的目标系统上编译生成一个32位的程序。当前可选的值有：x86_64, i386, i486, i586, i686。<br>注：若选择上述其中的一个值，”-m32”或”-m64”会被添加到CFLAGS和LDFLAGS选项中。<br><strong>PREFIX&#x3D;&#x2F;usr&#x2F;local&#x2F;haprpxy</strong> # 指定安装目录，默认为&#x2F;usr&#x2F;local，其他诸如文档之类的文件将会在PREFIX指定的相应目录下。例如&#x2F;usr&#x2F;local&#x2F;haprpxy为haprpxy的安装路径。</p>
 <blockquote>
 <p>CentOS中无法使用make、make install命令，提示：make: command not found，此时需在线安装make和gcc。</p>
 <ul>
 <li>安装make<br>yum -y install gcc automake autoconf libtool make</li>
 <li>安装gcc<br>yum install gcc gcc-c++</li>
 </ul>
-<p>SUSE Linux Enterprise Server 12安装gcc<br>安装命令：zypper install gcc<br>如果出现如下错误：<br>Failed to mount cd:///?devices=/dev/disk/by-id/ata-VMware_Virtual_IDE_CDROM_Drive_10000000000000000001 on /var/adm/mount/AP_0x63by2U: Mounting media failed (mount: no medium found on /dev/sr0)<br>意思就是要插入DVD，此时，如果是虚拟机，则选择编辑设置，指定系统的ISO镜像，然后勾选已连接，问题就解决了。</p>
+<p>SUSE Linux Enterprise Server 12安装gcc<br>安装命令：zypper install gcc<br>如果出现如下错误：<br>Failed to mount cd:&#x2F;&#x2F;&#x2F;?devices&#x3D;&#x2F;dev&#x2F;disk&#x2F;by-id&#x2F;ata-VMware_Virtual_IDE_CDROM_Drive_10000000000000000001 on &#x2F;var&#x2F;adm&#x2F;mount&#x2F;AP_0x63by2U: Mounting media failed (mount: no medium found on &#x2F;dev&#x2F;sr0)<br>意思就是要插入DVD，此时，如果是虚拟机，则选择编辑设置，指定系统的ISO镜像，然后勾选已连接，问题就解决了。</p>
 </blockquote>
 <h4 id="2-Windows下"><a href="#2-Windows下" class="headerlink" title="2. Windows下"></a>2. Windows下</h4><p><em>暂无</em></p>
 <hr>
-<h3 id="HAProxy配置"><a href="#HAProxy配置" class="headerlink" title="HAProxy配置"></a>HAProxy配置</h3><p>安装完毕后，进入安装目录修改配置文件，默认情况下安装目录里是没有.cfg配置文件的，可以回到安装文件目录下，将examples下的haproxy.cfg拷贝到usr/local/haproxy下。<br><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vi /usr/local/haproxy/haproxy.cfg</span><br></pre></td></tr></table></figure><br>粘贴如下内容至haproxy.cfg</p>
+<h3 id="HAProxy配置"><a href="#HAProxy配置" class="headerlink" title="HAProxy配置"></a>HAProxy配置</h3><p>安装完毕后，进入安装目录修改配置文件，默认情况下安装目录里是没有.cfg配置文件的，可以回到安装文件目录下，将examples下的haproxy.cfg拷贝到usr&#x2F;local&#x2F;haproxy下。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vi /usr/local/haproxy/haproxy.cfg</span><br></pre></td></tr></table></figure>
+<p>粘贴如下内容至haproxy.cfg</p>
 <pre><code>###################### 全局配置 ######################
 global
        log     127.0.0.1 local0                    # 日志输出配置，所有日志记录在本机，通过local0输出
@@ -382,22 +387,26 @@ errorfile 500 /usr/local/haproxy/errorfiles/500.http
 errorfile 502 /usr/local/haproxy/errorfiles/502.http
 errorfile 503 /usr/local/haproxy/errorfiles/503.http
 errorfile 504 /usr/local/haproxy/errorfiles/504.http
-</code></pre><h6 id="实现日志记录"><a href="#实现日志记录" class="headerlink" title="实现日志记录"></a>实现日志记录</h6><p>haproxy配置文件中默认定义了log 127.0.0.1 local0，说明日志将被记录在本机的local0设施中。<br>修改rsyslog配置文件：<code>vim /etc/rsyslog.conf</code></p>
+</code></pre>
+<h6 id="实现日志记录"><a href="#实现日志记录" class="headerlink" title="实现日志记录"></a>实现日志记录</h6><p>haproxy配置文件中默认定义了log 127.0.0.1 local0，说明日志将被记录在本机的local0设施中。<br>修改rsyslog配置文件：<code>vim /etc/rsyslog.conf</code></p>
 <pre><code># Provides UDP syslog reception
 $ModLoad imudp      #取消注释
 $UDPServerRun 514   #取消注释
 local0.*            /usr/local/haproxy/logs/haproxy.log
 # 指定设备local0日志存放位置
-</code></pre><p>修改rsyslog配置文件：<code>vim /etc/sysconfig/rsyslog</code></p>
+</code></pre>
+<p>修改rsyslog配置文件：<code>vim /etc/sysconfig/rsyslog</code></p>
 <pre><code>SYSLOGD_OPTIONS=&quot;-r -m 0&quot;
 service syslog restart
-</code></pre><p>haproxy的日志信息也可以设置存放在专门的日志服务器中。</p>
+</code></pre>
+<p>haproxy的日志信息也可以设置存放在专门的日志服务器中。</p>
 <hr>
 <h3 id="HAProxy启动"><a href="#HAProxy启动" class="headerlink" title="HAProxy启动"></a>HAProxy启动</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/usr/local/haproxy/sbin/haproxy -f /usr/local/haproxy/haproxy.cfg</span><br></pre></td></tr></table></figure>
 <p>检查是否启动：</p>
 <pre><code>[root@Linux-xx ~]# ps -e|grep haproxy
  1221 ?        00:01:32 haproxy
-</code></pre><p>看到上面结果，表明haproxy已经正常启动了。</p>
+</code></pre>
+<p>看到上面结果，表明haproxy已经正常启动了。</p>
 <hr>
 <h3 id="HAProxy查看状态"><a href="#HAProxy查看状态" class="headerlink" title="HAProxy查看状态"></a>HAProxy查看状态</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">http://localhost:8888/stats</span><br></pre></td></tr></table></figure>
 <p>参数说明：<br><strong>8888</strong>  即haproxy配置文件中的监听端口<br><strong>stats</strong> 即haproxy配置文件中的监听名称</p>
@@ -409,8 +418,7 @@ service syslog restart
 <h4 id="1-开启端口（以80端口为例）"><a href="#1-开启端口（以80端口为例）" class="headerlink" title="1. 开启端口（以80端口为例）"></a>1. 开启端口（以80端口为例）</h4><ul>
 <li>方法一：<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">/sbin/iptables -I INPUT -p tcp --dport 80 -j ACCEPT   ## 写入修改 </span><br><span class="line">/etc/init.d/iptables save                             ## 保存修改 </span><br><span class="line">service iptables restart                              ## 重启防火墙，使修改生效</span><br></pre></td></tr></table></figure></li>
 <li>方法二：<br>  先打开配置文件<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vi /etc/sysconfig/iptables</span><br></pre></td></tr></table></figure>
-  再加入下面内容<pre><code>  -A INPUT -p tcp -m state --state NEW -m tcp --dport 80 -j ACCEPT
-</code></pre>  最后，重启防火墙或重启计算机，修改完成。<blockquote>
+  再加入下面内容<br>  -A INPUT -p tcp -m state –state NEW -m tcp –dport 80 -j ACCEPT<br>  最后，重启防火墙或重启计算机，修改完成。<blockquote>
 <p>修改防火墙时注意最好留下VNC和SSH的管理端口。</p>
 </blockquote>
 </li>
@@ -418,12 +426,14 @@ service syslog restart
 <h4 id="2-关闭端口"><a href="#2-关闭端口" class="headerlink" title="2. 关闭端口"></a>2. 关闭端口</h4><ul>
 <li>方法一：<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">/sbin/iptables -I INPUT -p tcp --dport 80 -j DROP   ## 写入修改 </span><br><span class="line">/etc/init.d/iptables save                           ## 保存修改 </span><br><span class="line">service iptables restart                            ## 重启防火墙，使修改生效</span><br></pre></td></tr></table></figure></li>
 <li>方法二：<br>  先打开配置文件<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vi /etc/sysconfig/iptables</span><br></pre></td></tr></table></figure>
-  再加入下面内容<pre><code>  -A INPUT -p tcp -m state --state NEW -m tcp --dport 80 -j DROP
-</code></pre>  最后重启防火墙或重启计算机，修改完成。</li>
+  再加入下面内容<br>  -A INPUT -p tcp -m state –state NEW -m tcp –dport 80 -j DROP<br>  最后重启防火墙或重启计算机，修改完成。</li>
 </ul>
 <h4 id="3-查看端口状态"><a href="#3-查看端口状态" class="headerlink" title="3. 查看端口状态"></a>3. 查看端口状态</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/etc/init.d/iptables status</span><br></pre></td></tr></table></figure>
+
 <h4 id="4-临时性完全关闭防火墙，可以不重启计算机"><a href="#4-临时性完全关闭防火墙，可以不重启计算机" class="headerlink" title="4. 临时性完全关闭防火墙，可以不重启计算机"></a>4. 临时性完全关闭防火墙，可以不重启计算机</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">#/etc/init.d/iptables status                ## 查看防火墙状态</span><br><span class="line">#/etc/init.d/iptable stop                   ## 本次关闭防火墙</span><br><span class="line">#/etc/init.d/iptable restart                ## 重启防火墙</span><br></pre></td></tr></table></figure>
+
 <h4 id="5-永久性关闭防火墙"><a href="#5-永久性关闭防火墙" class="headerlink" title="5. 永久性关闭防火墙"></a>5. 永久性关闭防火墙</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">#chkconfig --level 35 iptables off          ## 注意中间的是两个英式小短线；重启</span><br></pre></td></tr></table></figure>
+
 <h4 id="6-CentOS的iptables示例"><a href="#6-CentOS的iptables示例" class="headerlink" title="6. CentOS的iptables示例"></a>6. CentOS的iptables示例</h4><pre><code># Firewall configuration written by system-config-securitylevel
 # Manual customization of this file is not recommended.*filter
 :INPUT ACCEPT [0:0]
@@ -445,7 +455,8 @@ service syslog restart
 -A RH-Firewall-1-INPUT -m state –state NEW -m tcp -p tcp –dport 443 -j ACCEPT
 -A RH-Firewall-1-INPUT -j REJECT –reject-with icmp-host-prohibited
 COMMIT
-</code></pre><p>要根据具体需求修改此文件，如不希望开放80端口提供web服务，那么应相应地删除80所在一行即可。全部修改完后重启iptables，之后使用命令<code>iptables -L</code>可验证一下是否规则都已经生效，至此完成防火墙设置修改。</p>
+</code></pre>
+<p>要根据具体需求修改此文件，如不希望开放80端口提供web服务，那么应相应地删除80所在一行即可。全部修改完后重启iptables，之后使用命令<code>iptables -L</code>可验证一下是否规则都已经生效，至此完成防火墙设置修改。</p>
 <hr>
 <h3 id="HAProxy关闭"><a href="#HAProxy关闭" class="headerlink" title="HAProxy关闭"></a>HAProxy关闭</h3><p>直接kill pid即可。</p>
 <h3 id="HAProxy脚本启动和关闭"><a href="#HAProxy脚本启动和关闭" class="headerlink" title="HAProxy脚本启动和关闭"></a><a target="_blank" rel="noopener" href="http://yangpiena.coding.me/2018/02/01/%E3%80%90HAProxy%E3%80%91%E8%84%9A%E6%9C%AC%E5%90%AF%E5%8A%A8%E5%92%8C%E5%85%B3%E9%97%AD/">HAProxy脚本启动和关闭</a></h3>
