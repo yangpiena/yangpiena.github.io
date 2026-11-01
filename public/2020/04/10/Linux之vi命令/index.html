@@ -311,534 +311,531 @@
     
     
     <div class="post-body" itemprop="articleBody">
-        <h1 id="vi全屏幕编辑器"><a href="#vi全屏幕编辑器" class="headerlink" title="vi全屏幕编辑器"></a>vi全屏幕编辑器</h1><p><img src="/img/screenshots/vi键盘图.png" alt="vi键盘图"></p>
+        <h1 id="vi全屏幕编辑器"><a href="#vi全屏幕编辑器" class="headerlink" title="vi全屏幕编辑器"></a>vi全屏幕编辑器</h1><p><img src="/img/screenshots/vi%E9%94%AE%E7%9B%98%E5%9B%BE.png" alt="vi键盘图"></p>
 <span id="more"></span>
+
 <p>vi(Visual)是以视觉为导向的全屏幕编辑器、共分为三种方式（mode):</p>
 <ul>
 <li>command方式：<br>任何输入都会作为编辑命令，而不会出现在屏幕上，若输入错误则有“岬”的声音；任何输入都引起立即反映。</li>
 <li>insert方式：<br>任何输入的数据都置于编辑寄存器。在command方式下输入（I,a,A等）,可进入insert方式，insert方式下按ESC，可跳回command方式。</li>
-<li>escape方式：<br>以“：”或者“/”为前导的指令，出现在屏幕的最下一行，任何输入都被当成特别指令。</li>
+<li>escape方式：<br>以“：”或者“&#x2F;”为前导的指令，出现在屏幕的最下一行，任何输入都被当成特别指令。</li>
 </ul>
-<div class="table-container">
 <table>
 <thead>
 <tr>
 <th>命令</th>
-<th style="text-align:left">说明</th>
+<th align="left">说明</th>
 </tr>
 </thead>
-<tbody>
-<tr>
+<tbody><tr>
 <td><strong>进入vi</strong></td>
-<td style="text-align:left"></td>
+<td align="left"></td>
 </tr>
 <tr>
 <td>vi filename</td>
-<td style="text-align:left">打开或新建文件，并将光标置于第一行首</td>
+<td align="left">打开或新建文件，并将光标置于第一行首</td>
 </tr>
 <tr>
 <td>vi +n filename</td>
-<td style="text-align:left">打开文件，并将光标置于第n行首</td>
+<td align="left">打开文件，并将光标置于第n行首</td>
 </tr>
 <tr>
 <td>vi + filename</td>
-<td style="text-align:left">打开文件，并将光标置于最后一行首</td>
+<td align="left">打开文件，并将光标置于最后一行首</td>
 </tr>
 <tr>
-<td>vi +/pattern filename</td>
-<td style="text-align:left">打开文件，并将光标置于第一个与pattern匹配的串处</td>
+<td>vi +&#x2F;pattern filename</td>
+<td align="left">打开文件，并将光标置于第一个与pattern匹配的串处</td>
 </tr>
 <tr>
 <td>vi -r filename</td>
-<td style="text-align:left">在上次正用vi编辑时发生系统崩溃，恢复filename</td>
+<td align="left">在上次正用vi编辑时发生系统崩溃，恢复filename</td>
 </tr>
 <tr>
 <td>vi filename….filename</td>
-<td style="text-align:left">打开多个文件，依次进行编辑</td>
+<td align="left">打开多个文件，依次进行编辑</td>
 </tr>
 <tr>
 <td>vi filename(s) </td>
-<td style="text-align:left">进入vi并且将各指定文件列入名单内，第一个文件先读入</td>
+<td align="left">进入vi并且将各指定文件列入名单内，第一个文件先读入</td>
 </tr>
 <tr>
 <td>vedit</td>
-<td style="text-align:left">进入vi并且在输入方式时会在状态行显示“INSERT MODE”</td>
+<td align="left">进入vi并且在输入方式时会在状态行显示“INSERT MODE”</td>
 </tr>
 <tr>
 <td><strong>编辑数个文件（利用vi filename(s))进入vi后）</strong></td>
-<td style="text-align:left"></td>
+<td align="left"></td>
 </tr>
 <tr>
 <td>:args </td>
-<td style="text-align:left">显示编辑名单中的各个文件名</td>
+<td align="left">显示编辑名单中的各个文件名</td>
 </tr>
 <tr>
 <td>:n</td>
-<td style="text-align:left">读入编辑名单中的下一个文件</td>
+<td align="left">读入编辑名单中的下一个文件</td>
 </tr>
 <tr>
 <td>:rew</td>
-<td style="text-align:left">读入编辑名单中的第一个文件</td>
+<td align="left">读入编辑名单中的第一个文件</td>
 </tr>
 <tr>
 <td>:e# </td>
-<td style="text-align:left">读入编辑名单内的前一个文件</td>
+<td align="left">读入编辑名单内的前一个文件</td>
 </tr>
 <tr>
 <td>:e file </td>
-<td style="text-align:left">读入另一个文件进vi(此文件可不在编辑名单内）,若原文件经修改还没有存档，则应先以: w 存档</td>
+<td align="left">读入另一个文件进vi(此文件可不在编辑名单内）,若原文件经修改还没有存档，则应先以: w 存档</td>
 </tr>
 <tr>
 <td>:e! file</td>
-<td style="text-align:left">强迫读入另一个文件进入vi，原文件不作存档动作</td>
+<td align="left">强迫读入另一个文件进入vi，原文件不作存档动作</td>
 </tr>
 <tr>
 <td><strong>保存退出</strong></td>
-<td style="text-align:left"></td>
+<td align="left"></td>
 </tr>
 <tr>
 <td>:</td>
-<td style="text-align:left">进入Last line mode</td>
+<td align="left">进入Last line mode</td>
 </tr>
 <tr>
 <td>w</td>
-<td style="text-align:left">保存当前文件</td>
+<td align="left">保存当前文件</td>
 </tr>
 <tr>
-<td>w /tmp1</td>
-<td style="text-align:left">另存为/tmp1</td>
+<td>w &#x2F;tmp1</td>
+<td align="left">另存为&#x2F;tmp1</td>
 </tr>
 <tr>
-<td>20,59w /tmp1</td>
-<td style="text-align:left">仅将20-59行之间的内存另存为/tmp1</td>
+<td>20,59w &#x2F;tmp1</td>
+<td align="left">仅将20-59行之间的内存另存为&#x2F;tmp1</td>
 </tr>
 <tr>
 <td>x 或 wq</td>
-<td style="text-align:left">保存并退出</td>
+<td align="left">保存并退出</td>
 </tr>
 <tr>
 <td>q</td>
-<td style="text-align:left">退出vi</td>
+<td align="left">退出vi</td>
 </tr>
 <tr>
 <td>q!</td>
-<td style="text-align:left">退出不保存</td>
+<td align="left">退出不保存</td>
 </tr>
 <tr>
 <td>!command</td>
-<td style="text-align:left">执行shell命令command</td>
+<td align="left">执行shell命令command</td>
 </tr>
 <tr>
 <td>n1,n2 w !command</td>
-<td style="text-align:left">将文件中n1行至n2行的内容作为command的输入并执行之，若不指定n1，n2，则表示将整个文件内容作为command的输入</td>
+<td align="left">将文件中n1行至n2行的内容作为command的输入并执行之，若不指定n1，n2，则表示将整个文件内容作为command的输入</td>
 </tr>
 <tr>
 <td>r !command</td>
-<td style="text-align:left">将命令command的输出结果放到当前行</td>
+<td align="left">将命令command的输出结果放到当前行</td>
 </tr>
 <tr>
 <td>w !sudo tee %</td>
-<td style="text-align:left">保存没权限时，可获取权限再保存</td>
+<td align="left">保存没权限时，可获取权限再保存</td>
 </tr>
 <tr>
 <td><strong>光标移动</strong></td>
-<td style="text-align:left"></td>
+<td align="left"></td>
 </tr>
 <tr>
 <td>h</td>
-<td style="text-align:left">光标左移一个字符</td>
+<td align="left">光标左移一个字符</td>
 </tr>
 <tr>
 <td>Backspace</td>
-<td style="text-align:left">光标左移一个字符</td>
+<td align="left">光标左移一个字符</td>
 </tr>
 <tr>
 <td>l</td>
-<td style="text-align:left">光标右移一个字符</td>
+<td align="left">光标右移一个字符</td>
 </tr>
 <tr>
 <td>spac</td>
-<td style="text-align:left">光标右移一个字符</td>
+<td align="left">光标右移一个字符</td>
 </tr>
 <tr>
 <td>k 或 Ctrl+p</td>
-<td style="text-align:left">光标上移一行</td>
+<td align="left">光标上移一行</td>
 </tr>
 <tr>
 <td>j 或 Ctrl+n</td>
-<td style="text-align:left">光标下移一行</td>
+<td align="left">光标下移一行</td>
 </tr>
 <tr>
 <td>Enter</td>
-<td style="text-align:left">光标下移一行</td>
+<td align="left">光标下移一行</td>
 </tr>
 <tr>
 <td>w 或 W</td>
-<td style="text-align:left">光标右移一个字至字首</td>
+<td align="left">光标右移一个字至字首</td>
 </tr>
 <tr>
 <td>b 或 B</td>
-<td style="text-align:left">光标左移一个字至字首</td>
+<td align="left">光标左移一个字至字首</td>
 </tr>
 <tr>
 <td>e 或 E</td>
-<td style="text-align:left">光标右移一个字至字尾</td>
+<td align="left">光标右移一个字至字尾</td>
 </tr>
 <tr>
 <td>)</td>
-<td style="text-align:left">光标移至句尾</td>
+<td align="left">光标移至句尾</td>
 </tr>
 <tr>
 <td>(</td>
-<td style="text-align:left">光标移至句首</td>
+<td align="left">光标移至句首</td>
 </tr>
 <tr>
 <td>}</td>
-<td style="text-align:left">光标移至段落开头</td>
+<td align="left">光标移至段落开头</td>
 </tr>
 <tr>
 <td>{</td>
-<td style="text-align:left">光标移至段落结尾</td>
+<td align="left">光标移至段落结尾</td>
 </tr>
 <tr>
 <td>nG</td>
-<td style="text-align:left">光标移至第n行首</td>
+<td align="left">光标移至第n行首</td>
 </tr>
 <tr>
 <td>n+</td>
-<td style="text-align:left">光标下移n行</td>
+<td align="left">光标下移n行</td>
 </tr>
 <tr>
 <td>n-</td>
-<td style="text-align:left">光标上移n行</td>
+<td align="left">光标上移n行</td>
 </tr>
 <tr>
 <td>n$</td>
-<td style="text-align:left">光标移至第n行尾</td>
+<td align="left">光标移至第n行尾</td>
 </tr>
 <tr>
 <td>H</td>
-<td style="text-align:left">光标移至屏幕顶行</td>
+<td align="left">光标移至屏幕顶行</td>
 </tr>
 <tr>
 <td>M</td>
-<td style="text-align:left">光标移至屏幕中间行</td>
+<td align="left">光标移至屏幕中间行</td>
 </tr>
 <tr>
 <td>L</td>
-<td style="text-align:left">光标移至屏幕最后行</td>
+<td align="left">光标移至屏幕最后行</td>
 </tr>
 <tr>
 <td>0</td>
-<td style="text-align:left">（注意是数字零）光标移至当前行首</td>
+<td align="left">（注意是数字零）光标移至当前行首</td>
 </tr>
 <tr>
 <td>$</td>
-<td style="text-align:left">光标移至当前行尾</td>
+<td align="left">光标移至当前行尾</td>
 </tr>
 <tr>
 <td><strong>屏幕翻滚</strong></td>
-<td style="text-align:left"></td>
+<td align="left"></td>
 </tr>
 <tr>
 <td>Ctrl+u</td>
-<td style="text-align:left">向文件首翻半屏</td>
+<td align="left">向文件首翻半屏</td>
 </tr>
 <tr>
 <td>Ctrl+d</td>
-<td style="text-align:left">向文件尾翻半屏</td>
+<td align="left">向文件尾翻半屏</td>
 </tr>
 <tr>
 <td>Ctrl+f</td>
-<td style="text-align:left">向文件尾翻一屏</td>
+<td align="left">向文件尾翻一屏</td>
 </tr>
 <tr>
 <td>Ctrl+b</td>
-<td style="text-align:left">向文件首翻一屏</td>
+<td align="left">向文件首翻一屏</td>
 </tr>
 <tr>
 <td>nz</td>
-<td style="text-align:left">将第n行滚至屏幕顶部，不指定n时将当前行滚至屏幕顶部</td>
+<td align="left">将第n行滚至屏幕顶部，不指定n时将当前行滚至屏幕顶部</td>
 </tr>
 <tr>
 <td><strong>插入</strong></td>
-<td style="text-align:left"></td>
+<td align="left"></td>
 </tr>
 <tr>
 <td>i</td>
-<td style="text-align:left">在光标前</td>
+<td align="left">在光标前</td>
 </tr>
 <tr>
 <td>I</td>
-<td style="text-align:left">在当前行首</td>
+<td align="left">在当前行首</td>
 </tr>
 <tr>
 <td>a</td>
-<td style="text-align:left">光标后</td>
+<td align="left">光标后</td>
 </tr>
 <tr>
 <td>A</td>
-<td style="text-align:left">在当前行尾</td>
+<td align="left">在当前行尾</td>
 </tr>
 <tr>
 <td>o</td>
-<td style="text-align:left">在当前行之下新开一行</td>
+<td align="left">在当前行之下新开一行</td>
 </tr>
 <tr>
 <td>O</td>
-<td style="text-align:left">在当前行之上新开一行</td>
+<td align="left">在当前行之上新开一行</td>
 </tr>
 <tr>
 <td>r</td>
-<td style="text-align:left">替换当前字符</td>
+<td align="left">替换当前字符</td>
 </tr>
 <tr>
 <td>R</td>
-<td style="text-align:left">替换当前字符及其后的字符，直至按ESC键</td>
+<td align="left">替换当前字符及其后的字符，直至按ESC键</td>
 </tr>
 <tr>
 <td>s</td>
-<td style="text-align:left">从当前光标位置处开始，以输入的文本替代指定数目的字符</td>
+<td align="left">从当前光标位置处开始，以输入的文本替代指定数目的字符</td>
 </tr>
 <tr>
 <td>S</td>
-<td style="text-align:left">删除指定数目的行，并以所输入文本代替之</td>
+<td align="left">删除指定数目的行，并以所输入文本代替之</td>
 </tr>
 <tr>
 <td>ncw 或 nCW</td>
-<td style="text-align:left">修改指定数目的字</td>
+<td align="left">修改指定数目的字</td>
 </tr>
 <tr>
 <td>nCC</td>
-<td style="text-align:left">修改指定数目的行</td>
+<td align="left">修改指定数目的行</td>
 </tr>
 <tr>
 <td><strong>删除</strong></td>
-<td style="text-align:left"></td>
+<td align="left"></td>
 </tr>
 <tr>
 <td>ndw 或 ndW</td>
-<td style="text-align:left">删除光标处开始及其后的n-1个字</td>
+<td align="left">删除光标处开始及其后的n-1个字</td>
 </tr>
 <tr>
 <td>do</td>
-<td style="text-align:left">删至行首</td>
+<td align="left">删至行首</td>
 </tr>
 <tr>
 <td>d$</td>
-<td style="text-align:left">删至行尾</td>
+<td align="left">删至行尾</td>
 </tr>
 <tr>
 <td>ndd</td>
-<td style="text-align:left">删除当前行及其后n-1行</td>
+<td align="left">删除当前行及其后n-1行</td>
 </tr>
 <tr>
 <td>x 或 X</td>
-<td style="text-align:left">删除一个字符，x删除光标后的，而X删除光标前的</td>
+<td align="left">删除一个字符，x删除光标后的，而X删除光标前的</td>
 </tr>
 <tr>
 <td>Ctrl+u</td>
-<td style="text-align:left">删除输入方式下所输入的文本</td>
+<td align="left">删除输入方式下所输入的文本</td>
 </tr>
 <tr>
 <td>n1,n2 d</td>
-<td style="text-align:left">将n1行到n2行之间的内容删除</td>
+<td align="left">将n1行到n2行之间的内容删除</td>
 </tr>
 <tr>
 <td>%d</td>
-<td style="text-align:left">删除全部内容</td>
+<td align="left">删除全部内容</td>
 </tr>
 <tr>
 <td>1,$d</td>
-<td style="text-align:left">删除全部内容</td>
+<td align="left">删除全部内容</td>
 </tr>
 <tr>
 <td><strong>复制粘贴、剪切、移动</strong></td>
-<td style="text-align:left"></td>
+<td align="left"></td>
 </tr>
 <tr>
 <td>yy</td>
-<td style="text-align:left">复制当前行</td>
+<td align="left">复制当前行</td>
 </tr>
 <tr>
 <td>nyy</td>
-<td style="text-align:left">复制当前行开始的n行</td>
+<td align="left">复制当前行开始的n行</td>
 </tr>
 <tr>
 <td>先按 v 然后方向键选择区域，按 y 复制选中行</td>
-<td style="text-align:left">复制选中行</td>
+<td align="left">复制选中行</td>
 </tr>
 <tr>
 <td>dd</td>
-<td style="text-align:left">剪切当前行</td>
+<td align="left">剪切当前行</td>
 </tr>
 <tr>
 <td>p（小）</td>
-<td style="text-align:left">在当前光标处下面粘贴内容。</td>
+<td align="left">在当前光标处下面粘贴内容。</td>
 </tr>
 <tr>
 <td>P（大）</td>
-<td style="text-align:left">在当前光标处上面粘贴内容</td>
+<td align="left">在当前光标处上面粘贴内容</td>
 </tr>
 <tr>
 <td>n1,n2 co n3</td>
-<td style="text-align:left">将n1行到n2行之间的内容拷贝到第n3行下</td>
+<td align="left">将n1行到n2行之间的内容拷贝到第n3行下</td>
 </tr>
 <tr>
 <td>n1,n2 m n3</td>
-<td style="text-align:left">将n1行到n2行之间的内容移至到第n3行下</td>
+<td align="left">将n1行到n2行之间的内容移至到第n3行下</td>
 </tr>
 <tr>
 <td>u</td>
-<td style="text-align:left">撤销上一步的操作</td>
+<td align="left">撤销上一步的操作</td>
 </tr>
 <tr>
 <td>Ctrl+r</td>
-<td style="text-align:left">恢复上一步被撤销的操作</td>
+<td align="left">恢复上一步被撤销的操作</td>
 </tr>
 <tr>
 <td><strong>搜索（查找）</strong></td>
-<td style="text-align:left"></td>
+<td align="left"></td>
 </tr>
 <tr>
-<td>/abc</td>
-<td style="text-align:left">从光标开始处向文件尾搜索abc</td>
+<td>&#x2F;abc</td>
+<td align="left">从光标开始处向文件尾搜索abc</td>
 </tr>
 <tr>
 <td>?abc</td>
-<td style="text-align:left">从光标开始处向文件首搜索abc</td>
+<td align="left">从光标开始处向文件首搜索abc</td>
 </tr>
 <tr>
-<td>/\/abc</td>
-<td style="text-align:left">从光标开始处向文件尾搜索/abc，其中\/是转义</td>
+<td>&#x2F;/abc</td>
+<td align="left">从光标开始处向文件尾搜索&#x2F;abc，其中/是转义</td>
 </tr>
 <tr>
 <td>n</td>
-<td style="text-align:left">在同一方向重复上一次搜索命令</td>
+<td align="left">在同一方向重复上一次搜索命令</td>
 </tr>
 <tr>
 <td>N</td>
-<td style="text-align:left">在反方向上重复上一次搜索命令</td>
+<td align="left">在反方向上重复上一次搜索命令</td>
 </tr>
 <tr>
 <td><strong>替换</strong></td>
-<td style="text-align:left"></td>
+<td align="left"></td>
 </tr>
 <tr>
-<td>s/vivian/sky/</td>
-<td style="text-align:left">替换当前行第一个 vivian 为 sky</td>
+<td>s&#x2F;vivian&#x2F;sky&#x2F;</td>
+<td align="left">替换当前行第一个 vivian 为 sky</td>
 </tr>
 <tr>
-<td>s/vivian/sky/g</td>
-<td style="text-align:left">替换当前行所有 vivian 为 sky</td>
+<td>s&#x2F;vivian&#x2F;sky&#x2F;g</td>
+<td align="left">替换当前行所有 vivian 为 sky</td>
 </tr>
 <tr>
-<td>n,$s/vivian/sky/</td>
-<td style="text-align:left">替换第 n 行开始到最后一行中每一行的第一个 vivian 为 sky</td>
+<td>n,$s&#x2F;vivian&#x2F;sky&#x2F;</td>
+<td align="left">替换第 n 行开始到最后一行中每一行的第一个 vivian 为 sky</td>
 </tr>
 <tr>
-<td>n,$s/vivian/sky/g</td>
-<td style="text-align:left">替换第 n 行开始到最后一行中每一行所有 vivian 为sky</td>
+<td>n,$s&#x2F;vivian&#x2F;sky&#x2F;g</td>
+<td align="left">替换第 n 行开始到最后一行中每一行所有 vivian 为sky</td>
 </tr>
 <tr>
-<td>%s/vivian/sky/g</td>
-<td style="text-align:left">（等同于 g/vivian/s//sky/） 替换每一行的每一个 vivian 为 sky</td>
+<td>%s&#x2F;vivian&#x2F;sky&#x2F;g</td>
+<td align="left">（等同于 g&#x2F;vivian&#x2F;s&#x2F;&#x2F;sky&#x2F;） 替换每一行的每一个 vivian 为 sky</td>
 </tr>
 <tr>
-<td>s#vivian/#sky/#</td>
-<td style="text-align:left">替换当前行第一个 vivian/ 为 sky/（可以使用 #或+作为分隔符，此时中间出现的 / 不会作为分隔符）</td>
+<td>s#vivian&#x2F;#sky&#x2F;#</td>
+<td align="left">替换当前行第一个 vivian&#x2F; 为 sky&#x2F;（可以使用 #或+作为分隔符，此时中间出现的 &#x2F; 不会作为分隔符）</td>
 </tr>
 <tr>
-<td>s/p1/p2/g</td>
-<td style="text-align:left">将当前行中所有p1均用p2替代</td>
+<td>s&#x2F;p1&#x2F;p2&#x2F;g</td>
+<td align="left">将当前行中所有p1均用p2替代</td>
 </tr>
 <tr>
-<td>n1,n2s/p1/p2/g</td>
-<td style="text-align:left">将第n1至n2行中所有p1均用p2替代</td>
+<td>n1,n2s&#x2F;p1&#x2F;p2&#x2F;g</td>
+<td align="left">将第n1至n2行中所有p1均用p2替代</td>
 </tr>
 <tr>
-<td>g/p1/s//p2/g</td>
-<td style="text-align:left">将文件中所有p1均用p2替换</td>
+<td>g&#x2F;p1&#x2F;s&#x2F;&#x2F;p2&#x2F;g</td>
+<td align="left">将文件中所有p1均用p2替换</td>
 </tr>
 <tr>
 <td><strong>寄存器</strong></td>
-<td style="text-align:left"></td>
+<td align="left"></td>
 </tr>
 <tr>
 <td>“?nyy</td>
-<td style="text-align:left">将当前行及其下n行的内容保存到寄存器？中，其中?为一个字母，n为一个数字</td>
+<td align="left">将当前行及其下n行的内容保存到寄存器？中，其中?为一个字母，n为一个数字</td>
 </tr>
 <tr>
 <td>“?nyw</td>
-<td style="text-align:left">将当前行及其下n个字保存到寄存器？中，其中?为一个字母，n为一个数字</td>
+<td align="left">将当前行及其下n个字保存到寄存器？中，其中?为一个字母，n为一个数字</td>
 </tr>
 <tr>
 <td>“?nyl</td>
-<td style="text-align:left">将当前行及其下n个字符保存到寄存器？中，其中?为一个字母，n为一个数字</td>
+<td align="left">将当前行及其下n个字符保存到寄存器？中，其中?为一个字母，n为一个数字</td>
 </tr>
 <tr>
 <td>“?p</td>
-<td style="text-align:left">取出寄存器？中的内容并将其放到光标位置处。这里？可以是一个字母，也可以是一个数字</td>
+<td align="left">取出寄存器？中的内容并将其放到光标位置处。这里？可以是一个字母，也可以是一个数字</td>
 </tr>
 <tr>
 <td>ndd</td>
-<td style="text-align:left">将当前行及其下共n行文本删除，并将所删内容放到1号删除寄存器中。</td>
+<td align="left">将当前行及其下共n行文本删除，并将所删内容放到1号删除寄存器中。</td>
 </tr>
 <tr>
 <td><strong>选项设置</strong></td>
-<td style="text-align:left"></td>
+<td align="left"></td>
 </tr>
 <tr>
 <td>set number</td>
-<td style="text-align:left">显示行号</td>
+<td align="left">显示行号</td>
 </tr>
 <tr>
 <td>set number!</td>
-<td style="text-align:left">不显示行号，其它选项同理加！号</td>
+<td align="left">不显示行号，其它选项同理加！号</td>
 </tr>
 <tr>
 <td>set all</td>
-<td style="text-align:left">列出所有选项设置情况</td>
+<td align="left">列出所有选项设置情况</td>
 </tr>
 <tr>
 <td>set term</td>
-<td style="text-align:left">设置终端类型</td>
+<td align="left">设置终端类型</td>
 </tr>
 <tr>
 <td>set ignorance</td>
-<td style="text-align:left">在搜索中忽略大小写</td>
+<td align="left">在搜索中忽略大小写</td>
 </tr>
 <tr>
 <td>set list</td>
-<td style="text-align:left">显示制表位(Ctrl+I)和行尾标志（$)</td>
+<td align="left">显示制表位(Ctrl+I)和行尾标志（$)</td>
 </tr>
 <tr>
 <td>set report</td>
-<td style="text-align:left">显示由面向行的命令修改过的数目</td>
+<td align="left">显示由面向行的命令修改过的数目</td>
 </tr>
 <tr>
 <td>set terse</td>
-<td style="text-align:left">显示简短的警告信息</td>
+<td align="left">显示简短的警告信息</td>
 </tr>
 <tr>
 <td>set warn</td>
-<td style="text-align:left">在转到别的文件时若没保存当前文件则显示NO write信息</td>
+<td align="left">在转到别的文件时若没保存当前文件则显示NO write信息</td>
 </tr>
 <tr>
 <td>set nomagic</td>
-<td style="text-align:left">允许在搜索模式中，使用前面不带“\”的特殊字符</td>
+<td align="left">允许在搜索模式中，使用前面不带“\”的特殊字符</td>
 </tr>
 <tr>
 <td>set nowrapscan</td>
-<td style="text-align:left">禁止vi在搜索到达文件两端时，又从另一端开始</td>
+<td align="left">禁止vi在搜索到达文件两端时，又从另一端开始</td>
 </tr>
 <tr>
 <td>set mesg</td>
-<td style="text-align:left">允许vi显示其他用户用write写到自己终端上的信息</td>
+<td align="left">允许vi显示其他用户用write写到自己终端上的信息</td>
 </tr>
-</tbody>
-</table>
-</div>
+</tbody></table>
 
     </div>
 
