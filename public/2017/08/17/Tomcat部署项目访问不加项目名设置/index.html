@@ -313,21 +313,31 @@
         <ol>
 <li><p>打开conf目录下server.xml；</p>
 </li>
-<li><p>在Host内添加如下Context，其中docBase改为自己的项目路径即可。<br> <Context path="" docBase="/usr/tomcat/webapps/xxExpert" reloadable="false" /></p>
+<li><p>在Host内添加如下Context，其中docBase改为自己的项目路径即可。</p>
+<pre><code> &lt;Context path=&quot;&quot; docBase=&quot;/usr/tomcat/webapps/xxExpert&quot; reloadable=&quot;false&quot; /&gt;
+</code></pre><span id="more"></span>
 </li>
-</ol>
-<span id="more"></span>
+<li><p>添加后效果如下：</p>
+<pre><code> &lt;Host name=&quot;localhost&quot;  appBase=&quot;webapps&quot;
+     unpackWARs=&quot;true&quot; autoDeploy=&quot;true&quot;&gt;
 
-<ol start="3">
-<li>添加后效果如下：<br> <Host name="localhost"  appBase="webapps"
-     unpackWARs="true" autoDeploy="true"><br><br>     <!-- SingleSignOn valve, share authentication between web applications
-          Documentation at: /docs/config/valve.html --><br>     <!--
-     <Valve className="org.apache.catalina.authenticator.SingleSignOn" />
-     --><br><br>     <!-- Access log processes all example.
+     &lt;!-- SingleSignOn valve, share authentication between web applications
+          Documentation at: /docs/config/valve.html --&gt;
+     &lt;!--
+     &lt;Valve className=&quot;org.apache.catalina.authenticator.SingleSignOn&quot; /&gt;
+     --&gt;
+
+     &lt;!-- Access log processes all example.
           Documentation at: /docs/config/valve.html
-          Note: The pattern used is equivalent to using pattern="common" --><br>     <Valve className="org.apache.catalina.valves.AccessLogValve" directory="logs"
-            prefix="localhost_access_log." suffix=".txt"
-            pattern="%h %l %u %t &quot;%r&quot; %s %b" /><br><br>     <Context path="" docBase="/usr/tomcat/webapps/testProject" reloadable="false" /><br><br> </Host></li>
+          Note: The pattern used is equivalent to using pattern=&quot;common&quot; --&gt;
+     &lt;Valve className=&quot;org.apache.catalina.valves.AccessLogValve&quot; directory=&quot;logs&quot;
+            prefix=&quot;localhost_access_log.&quot; suffix=&quot;.txt&quot;
+            pattern=&quot;%h %l %u %t &amp;quot;%r&amp;quot; %s %b&quot; /&gt;
+
+     &lt;Context path=&quot;&quot; docBase=&quot;/usr/tomcat/webapps/testProject&quot; reloadable=&quot;false&quot; /&gt;
+
+ &lt;/Host&gt;
+</code></pre></li>
 </ol>
 
     </div>

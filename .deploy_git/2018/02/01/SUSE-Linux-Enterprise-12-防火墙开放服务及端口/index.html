@@ -21,11 +21,11 @@
 
 
 
-<link rel="canonical" href="https://yangpiena.gitee.io/2018/02/01/SUSE-Linux-Enterprise-12-%E9%98%B2%E7%81%AB%E5%A2%99%E5%BC%80%E6%94%BE%E6%9C%8D%E5%8A%A1%E5%8F%8A%E7%AB%AF%E5%8F%A3/">
+<link rel="canonical" href="https://yangpiena.gitee.io/2018/02/01/Suse-Linux-Enterprise-12-%E9%98%B2%E7%81%AB%E5%A2%99%E5%BC%80%E6%94%BE%E6%9C%8D%E5%8A%A1%E5%8F%8A%E7%AB%AF%E5%8F%A3/">
 
 
 
-<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://yangpiena.gitee.io/2018/02/01/SUSE-Linux-Enterprise-12-%E9%98%B2%E7%81%AB%E5%A2%99%E5%BC%80%E6%94%BE%E6%9C%8D%E5%8A%A1%E5%8F%8A%E7%AB%AF%E5%8F%A3/","path":"2018/02/01/SUSE-Linux-Enterprise-12-防火墙开放服务及端口/","title":"SUSE Linux Enterprise 12 防火墙开放服务及端口"}</script>
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://yangpiena.gitee.io/2018/02/01/Suse-Linux-Enterprise-12-%E9%98%B2%E7%81%AB%E5%A2%99%E5%BC%80%E6%94%BE%E6%9C%8D%E5%8A%A1%E5%8F%8A%E7%AB%AF%E5%8F%A3/","path":"2018/02/01/Suse-Linux-Enterprise-12-防火墙开放服务及端口/","title":"SUSE Linux Enterprise 12 防火墙开放服务及端口"}</script>
 
 <script class="next-config" data-name="calendar" type="application/json">""</script>
 <title>SUSE Linux Enterprise 12 防火墙开放服务及端口 | 昜丿捺</title>
@@ -246,7 +246,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://yangpiena.gitee.io/2018/02/01/SUSE-Linux-Enterprise-12-%E9%98%B2%E7%81%AB%E5%A2%99%E5%BC%80%E6%94%BE%E6%9C%8D%E5%8A%A1%E5%8F%8A%E7%AB%AF%E5%8F%A3/">
+    <link itemprop="mainEntityOfPage" href="https://yangpiena.gitee.io/2018/02/01/Suse-Linux-Enterprise-12-%E9%98%B2%E7%81%AB%E5%A2%99%E5%BC%80%E6%94%BE%E6%9C%8D%E5%8A%A1%E5%8F%8A%E7%AB%AF%E5%8F%A3/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/img/avatar/ironman.png">
@@ -312,17 +312,14 @@
     
     <div class="post-body" itemprop="articleBody">
         <h1 id="一、图形化界面方式"><a href="#一、图形化界面方式" class="headerlink" title="一、图形化界面方式"></a>一、图形化界面方式</h1><h2 id="1-使用以下命令进入防火墙"><a href="#1-使用以下命令进入防火墙" class="headerlink" title="1. 使用以下命令进入防火墙"></a>1. 使用以下命令进入防火墙</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo yast2</span><br></pre></td></tr></table></figure>
-<p>然后选择Security and Users -&gt; Firewall，或用下面命令直接进入Firewall</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yast2 firewall</span><br></pre></td></tr></table></figure>
-
+<p>然后选择Security and Users -&gt; Firewall，或用下面命令直接进入Firewall<br><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yast2 firewall</span><br></pre></td></tr></table></figure></p>
 <span id="more"></span>
-
 <h2 id="2-开放服务"><a href="#2-开放服务" class="headerlink" title="2. 开放服务"></a>2. 开放服务</h2><p>选择Allowed Services -&gt; Add，可以添加如ssh, http, https等服务。</p>
 <h2 id="3-开放端口"><a href="#3-开放端口" class="headerlink" title="3. 开放端口"></a>3. 开放端口</h2><p>选择右下角的Advanced…，然后填写要开放的端口，多个端口之间用空格隔开。</p>
 <h2 id="4-保存设置重启防火墙使生效"><a href="#4-保存设置重启防火墙使生效" class="headerlink" title="4. 保存设置重启防火墙使生效"></a>4. 保存设置重启防火墙使生效</h2><p>选择Save Settings and Restart Firewall Now即可。</p>
 <hr>
 <h1 id="二、命令方式"><a href="#二、命令方式" class="headerlink" title="二、命令方式"></a>二、命令方式</h1><h2 id="1-修改防火墙配置"><a href="#1-修改防火墙配置" class="headerlink" title="1. 修改防火墙配置"></a>1. 修改防火墙配置</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vim /etc/sysconfig/SuSEfirewall2</span><br></pre></td></tr></table></figure>
-<p>在文件中找到FW_SERVICES_EXT_TCP，在其后面加上服务名或者是服务对应的端口，如SSH,FW_SERVICES_EXT_TCP&#x3D;”ssh” 或 FW_SERVICES_EXT_TCP&#x3D;”22″<br>如果要开放多个端口则为 FW_SERVICES_EXT_TCP&#x3D;”22 80 8090″<br>最后，保存退出。</p>
+<p>在文件中找到FW_SERVICES_EXT_TCP，在其后面加上服务名或者是服务对应的端口，如SSH,FW_SERVICES_EXT_TCP=”ssh” 或 FW_SERVICES_EXT_TCP=”22″<br>如果要开放多个端口则为 FW_SERVICES_EXT_TCP=”22 80 8090″<br>最后，保存退出。</p>
 <h2 id="2-重启防火墙使生效"><a href="#2-重启防火墙使生效" class="headerlink" title="2. 重启防火墙使生效"></a>2. 重启防火墙使生效</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">rcSuSEfirewall2 restart</span><br></pre></td></tr></table></figure>
 <h2 id="3-查看防火墙状态"><a href="#3-查看防火墙状态" class="headerlink" title="3. 查看防火墙状态"></a>3. 查看防火墙状态</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">rcSuSEfirewall2 status</span><br></pre></td></tr></table></figure>
 <h2 id="4-关闭防火墙"><a href="#4-关闭防火墙" class="headerlink" title="4. 关闭防火墙"></a>4. 关闭防火墙</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">systemctl stop SuSEfirewall2.service</span><br></pre></td></tr></table></figure>
@@ -363,7 +360,7 @@
   </li>
   <li class="post-copyright-link">
       <strong>本文链接：</strong>
-      <a href="https://yangpiena.gitee.io/2018/02/01/SUSE-Linux-Enterprise-12-%E9%98%B2%E7%81%AB%E5%A2%99%E5%BC%80%E6%94%BE%E6%9C%8D%E5%8A%A1%E5%8F%8A%E7%AB%AF%E5%8F%A3/" title="SUSE Linux Enterprise 12 防火墙开放服务及端口">https://yangpiena.gitee.io/2018/02/01/SUSE-Linux-Enterprise-12-防火墙开放服务及端口/</a>
+      <a href="https://yangpiena.gitee.io/2018/02/01/Suse-Linux-Enterprise-12-%E9%98%B2%E7%81%AB%E5%A2%99%E5%BC%80%E6%94%BE%E6%9C%8D%E5%8A%A1%E5%8F%8A%E7%AB%AF%E5%8F%A3/" title="SUSE Linux Enterprise 12 防火墙开放服务及端口">https://yangpiena.gitee.io/2018/02/01/Suse-Linux-Enterprise-12-防火墙开放服务及端口/</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！

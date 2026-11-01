@@ -312,8 +312,6 @@
     
     <div class="post-body" itemprop="articleBody">
         <h2 id="Windows平台"><a href="#Windows平台" class="headerlink" title="Windows平台"></a>Windows平台</h2><h3 id="Git官网下载"><a href="#Git官网下载" class="headerlink" title="Git官网下载"></a>Git<a target="_blank" rel="noopener" href="https://www.git-scm.com/download/">官网下载</a></h3><span id="more"></span>
-
-
 <hr>
 <h2 id="Linux平台"><a href="#Linux平台" class="headerlink" title="Linux平台"></a>Linux平台</h2><h3 id="一-源码安装（以SUSE-Linux-12为例）"><a href="#一-源码安装（以SUSE-Linux-12为例）" class="headerlink" title="一. 源码安装（以SUSE Linux 12为例）"></a>一. 源码安装（以SUSE Linux 12为例）</h3><h4 id="1-源码下载"><a href="#1-源码下载" class="headerlink" title="1. 源码下载"></a>1. <a target="_blank" rel="noopener" href="https://github.com/git/git/releases">源码下载</a></h4><h4 id="2-编译安装"><a href="#2-编译安装" class="headerlink" title="2. 编译安装"></a>2. 编译安装</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">tar -zxf git-2.20.1.tar.gz </span><br><span class="line">cd git-2.20.1/</span><br><span class="line">make configure</span><br><span class="line">./configure --prefix=/usr/local</span><br><span class="line">make all doc info</span><br><span class="line">sudo make install install-doc install-html install-info</span><br></pre></td></tr></table></figure>
 <p>执行命令：<code>make all doc info</code> 报如下错误：</p>
@@ -327,13 +325,9 @@ cache.h:20:18: fatal error: zlib.h: No such file or directory
 compilation terminated.
 Makefile:2302: recipe for target &#39;fuzz-pack-headers.o&#39; failed
 make: *** [fuzz-pack-headers.o] Error 1
-</code></pre>
-<p>原因是需要安装依赖包：<a target="_blank" rel="noopener" href="http://rpm.pbone.net/index.php3/stat/4/idpl/30389149/dir/opensuse/com/zlib-devel-1.2.8-5.22.x86_64.rpm.html">zlib-devel</a></p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">rpm -ivh zlib-devel-1.2.8-5.22.x86_64.rpm</span><br></pre></td></tr></table></figure>
-<p>之后便可继续安装了。</p>
+</code></pre><p>原因是需要安装依赖包：<a target="_blank" rel="noopener" href="http://rpm.pbone.net/index.php3/stat/4/idpl/30389149/dir/opensuse/com/zlib-devel-1.2.8-5.22.x86_64.rpm.html">zlib-devel</a><br><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">rpm -ivh zlib-devel-1.2.8-5.22.x86_64.rpm</span><br></pre></td></tr></table></figure><br>之后便可继续安装了。</p>
 <h4 id="3-执行命令：git-version，得到如下结果表示安装成功。"><a href="#3-执行命令：git-version，得到如下结果表示安装成功。" class="headerlink" title="3. 执行命令：git --version，得到如下结果表示安装成功。"></a>3. 执行命令：<code>git --version</code>，得到如下结果表示安装成功。</h4><pre><code>git version 2.20.1
 </code></pre>
-
     </div>
 
     

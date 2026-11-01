@@ -311,32 +311,27 @@
     
     
     <div class="post-body" itemprop="articleBody">
-        <h1 id="Linux"><a href="#Linux" class="headerlink" title="Linux"></a>Linux</h1><p>在&#x2F;usr&#x2F;local&#x2F;apache-tomcat-7.0.57&#x2F;bin目录下的catalina.sh中添加：</p>
+        <h1 id="Linux"><a href="#Linux" class="headerlink" title="Linux"></a>Linux</h1><p>在/usr/local/apache-tomcat-7.0.57/bin目录下的catalina.sh中添加：</p>
 <pre><code>JAVA_OPTS=&#39;-Xms512m -Xmx1024m&#39;
-</code></pre>
-<blockquote>
+</code></pre><blockquote>
 <p>-Xms：初始值<br>  -Xmx：最大值<br>  -Xmn：最小值</p>
 </blockquote>
 <span id="more"></span>
 <h1 id="Windows"><a href="#Windows" class="headerlink" title="Windows"></a>Windows</h1><ul>
 <li><p>若使用startup.bat启动tomcat，则在C:\apache-tomcat-7.0.57\bin\catalina.bat最前面加入：</p>
 <pre><code>set JAVA_OPTS=-Xms512m -Xmx1024m
-</code></pre>
-</li>
-<li><p>而如果利用windows的系统服务启动tomcat服务，那上面的设置就不生效了，windows服务执行的是bin&#x2F;tomcat.exe。他读取注册表中的值，而不是catalina.bat的设置。</p>
-<p><strong>解决办法：</strong></p>
+</code></pre></li>
+<li><p>而如果利用windows的系统服务启动tomcat服务，那上面的设置就不生效了，windows服务执行的是bin/tomcat.exe。他读取注册表中的值，而不是catalina.bat的设置。</p>
+<p><strong>解决办法：</strong><br>修改注册表HKEY_LOCAL_MACHINE/SOFTWARE/Apache Software Foundation/Tomcat Service Manager/Tomcat5/Parameters/JavaOptions</p>
+<p>原值为</p>
+<pre><code>    -Dcatalina.home=&quot;C:/ApacheGroup/Tomcat 5.0&quot;
+    -Djava.endorsed.dirs=&quot;C:/ApacheGroup/Tomcat 5.0/common/  endorsed&quot;
+    -Xrs
+</code></pre><p>在最后加入</p>
+<pre><code>    -Xms300m -Xmx350m  
+</code></pre><p>退出注册表，重起tomcat服务，设置生效。</p>
 </li>
 </ul>
-<p>修改注册表HKEY_LOCAL_MACHINE&#x2F;SOFTWARE&#x2F;Apache Software Foundation&#x2F;Tomcat Service Manager&#x2F;Tomcat5&#x2F;Parameters&#x2F;JavaOptions</p>
-<p>  原值为</p>
-<pre><code>      -Dcatalina.home=&quot;C:/ApacheGroup/Tomcat 5.0&quot;
-      -Djava.endorsed.dirs=&quot;C:/ApacheGroup/Tomcat 5.0/common/  endorsed&quot;
-      -Xrs
-</code></pre>
-<p>  在最后加入</p>
-<pre><code>      -Xms300m -Xmx350m  
-</code></pre>
-<p>  退出注册表，重起tomcat服务，设置生效。</p>
 
     </div>
 

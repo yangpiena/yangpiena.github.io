@@ -45,7 +45,7 @@ description:
 ## 音乐
 |     |     |     |     |
 | --- | --- | --- | --- |
-| [网易云音乐](http://music.163.com)         | [音乐磁场](https://www.hifini.com/)    | [千千音乐](https://music.91q.com/)  | [9天音乐](http://www.9sky.com/)    |
+| [网易云音乐](http://music.163.com)         | | [千千音乐](https://music.91q.com/)  | [9天音乐](http://www.9sky.com/)    |
 | [枫叶音乐盒](https://mu-jie.cc/musicBox/)  | [极客音乐](https://bestgeek.org/music) |                                    | [白噪音](https://freemind.fit/)    |
 | [全网免费音乐搜索汇总](https://iui.su/2217/) | [音乐榜](https://www.mp3b.com/)       | [铜钟音乐官网](https://tonzhon.com/) | [闪闪音乐网](https://www.33ve.com/) |
 
@@ -149,8 +149,8 @@ description:
 | --- | --- | --- | --- |
 | [MSDN](http://msdn.itellyou.cn/?gytyzs=0z1zl)              | [NEXT, ITELLYOU](https://next.itellyou.cn/)               | [HelloWindows](https://hellowindows.cn/)          | [IT之家](https://www.ithome.com/)                    |
 | [Win10专业版官网](http://www.win10zyb.com/)                  | [系统之家](http://www.xitongzhijia.net/)                   | [系统天地](http://www.xitongtiandi.net/)            | [系统极客](https://www.sysgeek.cn/)                    |
-| [吻妻出品专注 win10](https://iwin10.net/)                    | [吻妻出品专注 win7](http://www.newxitong.com/)              | [黑苹果乐园](https://imac.hk/)                      | [黑果小兵](https://blog.daliansky.net/)                |
-| [小众软件](https://www.appinn.com/)                          | [zd423](http://www.zdfans.com/)                           | [423down](https://www.423down.com/)               | [金狐维护盘](http://www.jinhu.me/)                      |
+| [吻妻出品专注 Win11](https://iwin11.cn)                      | [吻妻出品专注 win7](http://www.newxitong.com/)              | [黑苹果乐园](https://imac.hk/)                      | [黑果小兵](https://blog.daliansky.net/)                |
+| [小众软件](https://www.appinn.com/)                          | [423down](https://www.423down.com/)                      | [金狐维护盘](http://www.jinhu.me/)                   | |
 | [夜雨聆风](http://www.yeyulingfeng.com/)                     | [分享者](https://www.sharerw.com/)                         | [我爱分享网](http://www.zhanshaoyi.com/rjxz.html)   | [行客工作室](http://www.runker.net/)                    |
 | [软猫下载](https://www.softmall.net/)                        | [软件鸭](https://ruanjianya.net/)                          | [Puresys](https://www.puresys.net/)                | [六一库](https://www.61ku.com/software)               |
 | [浏览迷](https://liulanmi.com/)                             | [Chrome浏览器插件下载中心](https://www.chajian5.com/)        | [Greasy Fork 用户脚本](https://greasyfork.org/zh-CN) | [TamperMonkey TM中文网](https://www.tampermonkey.cn/) |
