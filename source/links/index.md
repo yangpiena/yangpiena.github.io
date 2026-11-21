@@ -45,7 +45,7 @@ description:
 ## 音乐
 |     |     |     |     |
 | --- | --- | --- | --- |
-| [网易云音乐](http://music.163.com)         | | [千千音乐](https://music.91q.com/)  | [9天音乐](http://www.9sky.com/)    |
+| [网易云音乐](http://music.163.com)         | [明明音乐](https://music.lzmhhh.com) | [千千音乐](https://music.91q.com/)  | [9天音乐](http://www.9sky.com/)    |
 | [枫叶音乐盒](https://mu-jie.cc/musicBox/)  | [极客音乐](https://bestgeek.org/music) |                                    | [白噪音](https://freemind.fit/)    |
 | [全网免费音乐搜索汇总](https://iui.su/2217/) | [音乐榜](https://www.mp3b.com/)       | [铜钟音乐官网](https://tonzhon.com/) | [闪闪音乐网](https://www.33ve.com/) |
 
@@ -109,7 +109,7 @@ description:
 
 | LOGO | | | |
 | --- | --- | --- | --- |
-| [小米LOGO生成器](https://mi-logo.lvwzhen.com/) | [免费logo在线制作](http://www.uugai.com/) | [Text to Logo & Favicon](https://www.logo.surf/#generate-favicon) | [头像生成器](https://www.moubao.vip/) |
+|   | [免费logo在线制作](http://www.uugai.com/) | [Text to Logo & Favicon](https://www.logo.surf/#generate-favicon) | [头像生成器](https://www.moubao.vip/) |
 
 | 视频 | | | |
 | --- | --- | --- | --- |
